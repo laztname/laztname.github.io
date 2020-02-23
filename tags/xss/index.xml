@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XSS on Ardi Jonias Fortuna # potato</title>
+    <link>https://potato.id/tags/xss/</link>
+    <description>Recent content in XSS on Ardi Jonias Fortuna # potato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Wed, 27 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://potato.id/tags/xss/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mengenal Lebih Dekat, DOM Based XSS</title>
+      <link>https://potato.id/posts/dom-based-xss/</link>
+      <pubDate>Wed, 27 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/posts/dom-based-xss/</guid>
+      <description>Sebelum menuju bahasan DOM XSS, kita kenalan dulu yuk sama DOM, apasih DOM itu?, jarum?
+DOM adalah singkatan dari Document Object Model, yang maksudnya adalah struktur hirarki pada document html, jadi dalam kode html ada sebuah silsilah keluarga
+untuk XSS bisa dibaca di sini
+Nah pada kasus DOM Based XSS ini, payload XSS akan merubah isi html melalui DOM ini????
+Contoh: DVWA, DOM XSS, Level:Low
+Ada fitur pilih bahasa, kita cek scriptnya yuk</description>
+    </item>
+    
+    <item>
+      <title>XSS Prevention</title>
+      <link>https://potato.id/posts/xss-prevention/</link>
+      <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/posts/xss-prevention/</guid>
+      <description>setelah sedikit membahas XSS di sini, ya meskipun agak ngawur saatnya kita bahas cara mencegah bug ini ada pada web kita
+XSS bisa berjalan / dijalankan karena tag &amp;lt;script&amp;gt; yang lepas dan berjalan / terender oleh browser maka dari itu kita manipulasi browser agar tidak menjalankan tag html yang di input kan user, eitsss kita ga akan bongkar-bongkar browser kok, cuman sedikit permainan sebelum input user di munculkan pada website</description>
+    </item>
+    
+    <item>
+      <title>Apakah XSS Itu Berbahaya ?</title>
+      <link>https://potato.id/posts/apakah-xss-itu-berbahaya/</link>
+      <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/posts/apakah-xss-itu-berbahaya/</guid>
+      <description>Dari hasil menyimak di beberapa group IT yang saya ikuti banyak sekali yang bertanya-tanya, Apakah XSS itu berbahaya?, Cara upload webshell lewat XSS itu gimana ya gan?, Laporan Bug XSS-ku kok engga ditanggepi sih? Apa karena XSS itu gak berbahaya ya?, Apa karena admin webnya udah anu ?, Ya kurang lebih begitulah pertanyaan yang mencuat, Mari kita bahas bareng-bareng gimana sih karakteristik XSS itu,
+Cross-site scripting is a type of computer security vulnerability typically found in web applications.</description>
+    </item>
+    
+  </channel>
+</rss>

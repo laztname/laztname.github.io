@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reversing on Ardi Jonias Fortuna # potato</title>
+    <link>https://potato.id/categories/reversing/</link>
+    <description>Recent content in Reversing on Ardi Jonias Fortuna # potato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Thu, 03 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://potato.id/categories/reversing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Solution for Surabaya Hacker Link Challenges</title>
+      <link>https://potato.id/posts/solution-for-surabaya-hacker-link-challenges/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/posts/solution-for-surabaya-hacker-link-challenges/</guid>
+      <description>Well, postingan ini dibuat karena challenges Surabaya Hacker Link telah diupdate dan ada salah seorang yang penasaran dengan challenges ini namun belum solved dan menyarankan agar dibuatkan video cara menyelesaikannya, ya namun ga bisa buat video ya tulisan aja deh, updated challenges
+  Disana dijelaskan bahwa kita harus menyelamatkan website si jhon ini lalu kita akan diberikan link group telegram (flag)
+tampilan awal
+  Kita akses web si jhon ini</description>
+    </item>
+    
+    <item>
+      <title>Penyelesaian Untuk Web &#39;Simple&#39; Challenges</title>
+      <link>https://potato.id/posts/solution-for-my-simple-web-challenges/</link>
+      <pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/posts/solution-for-my-simple-web-challenges/</guid>
+      <description>Pra Kata Sebelumnya terima kasih buat slashroot ctf karena tanpa slashroot ctf mungkin saya tidak bisa memprovide challenges ini melalui dewaweb.com, Terima kasih buat teman-teman yang sudah meluangkan waktunya untuk challenges &amp;lsquo;simple&amp;rsquo; ini,
+Kata clue &amp;ldquo;recon, tools, sign-in, submit&amp;rdquo;
+recon ini sangat mudah, sebenarnya tidak perlu menggunakan tools atau scanner, banyak kok website yang masih menyimpan sesuatu yang penting itu pada comment html
+terlihat jelas ada info bahwa git repositori (/.</description>
+    </item>
+    
+  </channel>
+</rss>

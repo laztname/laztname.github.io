@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Ardi Jonias Fortuna # potato</title>
+    <link>https://potato.id/tags/</link>
+    <description>Recent content in Tags on Ardi Jonias Fortuna # potato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Mon, 11 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://potato.id/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fail2ban</title>
+      <link>https://potato.id/tags/fail2ban/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/fail2ban/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Intrusion Prevention System</title>
+      <link>https://potato.id/tags/intrusion-prevention-system/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/intrusion-prevention-system/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Telegram bot</title>
+      <link>https://potato.id/tags/telegram-bot/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/telegram-bot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Wordpress</title>
+      <link>https://potato.id/tags/wordpress/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/wordpress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Zimbra mail server</title>
+      <link>https://potato.id/tags/zimbra-mail-server/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/zimbra-mail-server/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Challenges</title>
+      <link>https://potato.id/tags/challenges/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/challenges/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>dvcs-ripper</title>
+      <link>https://potato.id/tags/dvcs-ripper/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/dvcs-ripper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://potato.id/tags/git/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gitdumper</title>
+      <link>https://potato.id/tags/gitdumper/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/gitdumper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Githack</title>
+      <link>https://potato.id/tags/githack/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/githack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RCE</title>
+      <link>https://potato.id/tags/rce/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/rce/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Surabaya Hacker Link</title>
+      <link>https://potato.id/tags/surabaya-hacker-link/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/surabaya-hacker-link/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Write Up</title>
+      <link>https://potato.id/tags/write-up/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/write-up/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Incident Response</title>
+      <link>https://potato.id/tags/incident-response/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/incident-response/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>File Upload</title>
+      <link>https://potato.id/tags/file-upload/</link>
+      <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/file-upload/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LFI</title>
+      <link>https://potato.id/tags/lfi/</link>
+      <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/lfi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>XSS</title>
+      <link>https://potato.id/tags/xss/</link>
+      <pubDate>Wed, 27 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/xss/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SQLI</title>
+      <link>https://potato.id/tags/sqli/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/sqli/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

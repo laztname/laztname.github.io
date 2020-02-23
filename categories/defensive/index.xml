@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Defensive on Ardi Jonias Fortuna # potato</title>
+    <link>https://potato.id/categories/defensive/</link>
+    <description>Recent content in Defensive on Ardi Jonias Fortuna # potato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Mon, 11 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://potato.id/categories/defensive/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Harderning Server with Fail2ban and Reporting to Telegram</title>
+      <link>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</guid>
+      <description>Setelah cukup sibuk sehingga tidak sempat membuat challenges dan menuliskan bagaimana cara menyelesaikan challenges tersebut pada blog ini, kali ini kita akan membahas sedikit tentang fail2ban dan cara melakukan konfigurasinya
+Umumnya fail2ban digunakan untuk melakukan ban terhadap IP yang gagal melakukan authentikasi sebanyak batas maksimal yang disebutkan pada konfigurasi dan IPS ini sangat ampuh mencekal serangan yang akan terjadi pada server, seperti serangan bruteforce pada port ssh (22), ftp (21), smtp (25) dsb, bahkan serangan lainnya yang melalui web server (80/443), lalu sebelum mengetahui bagaimana konfigurasi fail2ban kita akan belajar sedikit tentang bagaimana fail2ban bekerja.</description>
+    </item>
+    
+    <item>
+      <title>Websitemu di Hack?, Lakukan hal berikut</title>
+      <link>https://potato.id/posts/my-website-hacked-now-what/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/posts/my-website-hacked-now-what/</guid>
+      <description>Di dalam group Telegram Surabaya Hacker Link saya dan @ytyao sering membuat challenges seperti web hacking, reversing dan lain sebagainya, namun pada challenges sebelumnya ada sedikit insiden, yaitu web di hack (well memang sih web dibuat sedemikian rupa untuk di hack), namun si hacker ini melakukan sabun masal alias menghapus semua file dan folder yang ada. Namun dari hal tersebut saya mendapatkan ilmu baru yaitu penanganan setelah insiden atau istilah kerennya Incident Response</description>
+    </item>
+    
+    <item>
+      <title>XSS Prevention</title>
+      <link>https://potato.id/posts/xss-prevention/</link>
+      <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/posts/xss-prevention/</guid>
+      <description>setelah sedikit membahas XSS di sini, ya meskipun agak ngawur saatnya kita bahas cara mencegah bug ini ada pada web kita
+XSS bisa berjalan / dijalankan karena tag &amp;lt;script&amp;gt; yang lepas dan berjalan / terender oleh browser maka dari itu kita manipulasi browser agar tidak menjalankan tag html yang di input kan user, eitsss kita ga akan bongkar-bongkar browser kok, cuman sedikit permainan sebelum input user di munculkan pada website</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wordpress on Ardi Jonias Fortuna # potato</title>
+    <link>https://potato.id/tags/wordpress/</link>
+    <description>Recent content in Wordpress on Ardi Jonias Fortuna # potato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Mon, 11 Nov 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://potato.id/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Harderning Server with Fail2ban and Reporting to Telegram</title>
+      <link>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</guid>
+      <description>Setelah cukup sibuk sehingga tidak sempat membuat challenges dan menuliskan bagaimana cara menyelesaikan challenges tersebut pada blog ini, kali ini kita akan membahas sedikit tentang fail2ban dan cara melakukan konfigurasinya
+Umumnya fail2ban digunakan untuk melakukan ban terhadap IP yang gagal melakukan authentikasi sebanyak batas maksimal yang disebutkan pada konfigurasi dan IPS ini sangat ampuh mencekal serangan yang akan terjadi pada server, seperti serangan bruteforce pada port ssh (22), ftp (21), smtp (25) dsb, bahkan serangan lainnya yang melalui web server (80/443), lalu sebelum mengetahui bagaimana konfigurasi fail2ban kita akan belajar sedikit tentang bagaimana fail2ban bekerja.</description>
+    </item>
+    
+  </channel>
+</rss>
