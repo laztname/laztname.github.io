@@ -243,7 +243,7 @@ systemctl enable fail2ban
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># from</span> 
 Fail2Ban” | /usr/sbin/sendmail -f &lt;sender&gt; &lt;dest&gt;
 <span style="color:#75715e"># to</span>
-Fail2Ban<span style="color:#e6db74">&#34;</span><span style="color:#e6db74"> | /opt/zimbra/postfix/sbin/sendmail -f &lt;sender&gt; &lt;dest&gt;
+Fail2Ban<span style="color:#e6db74">&#34; | /opt/zimbra/postfix/sbin/sendmail -f &lt;sender&gt; &lt;dest&gt;
 </span></code></pre></div><p>jika ingin menggunakan telegram sebagai notifikasinya maka buat file <code>/etc/fail2ban/action.d/telegram.conf</code>
 dengan isi:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># Fail2Ban configuration file</span>
@@ -298,7 +298,7 @@ init <span style="color:#f92672">=</span> <span style="color:#ae81ff">123</span>
 
 <span style="color:#75715e"># Display usage information</span>
 <span style="color:#66d9ef">function</span> show_usage <span style="color:#f92672">{</span>
-  echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Usage: </span>$0<span style="color:#e6db74"> action &lt;ip&gt;</span><span style="color:#e6db74">&#34;</span>
+  echo <span style="color:#e6db74">&#34;Usage: </span>$0<span style="color:#e6db74"> action &lt;ip&gt;&#34;</span>
   echo <span style="color:#e6db74">&#34;Where action start, stop, ban, unban&#34;</span>
   echo <span style="color:#e6db74">&#34;and IP is optional passed to ban, unban&#34;</span>
   exit
@@ -308,7 +308,7 @@ init <span style="color:#f92672">=</span> <span style="color:#ae81ff">123</span>
 <span style="color:#66d9ef">function</span> send_msg <span style="color:#f92672">{</span>
   apiToken<span style="color:#f92672">=</span>&lt;YOUR_TELEGRAM_BOT_TOKEN_ID&gt;
   chatId<span style="color:#f92672">=</span>&lt;YOUR_CHAT_ID&gt;                  
-  url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">https://api.telegram.org/bot</span>$apiToken<span style="color:#e6db74">/sendMessage</span><span style="color:#e6db74">&#34;</span>
+  url<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://api.telegram.org/bot</span>$apiToken<span style="color:#e6db74">/sendMessage&#34;</span>
   curl -s -X POST $url -d chat_id<span style="color:#f92672">=</span>$chatId -d text<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>
   exit
 <span style="color:#f92672">}</span>
@@ -329,11 +329,11 @@ init <span style="color:#f92672">=</span> <span style="color:#ae81ff">123</span>
   msg<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Fail2ban+just+stoped.&#39;</span>
   send_msg $msg
 <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;ban&#39;</span> <span style="color:#f92672">]</span>
-<span style="color:#66d9ef">then</span>  msg<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span><span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span> !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Fail2ban+just+banned+</span>$2<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">||</span> echo <span style="color:#e6db74">&#39;Fail2ban+just+banned+an+ip.&#39;</span> <span style="color:#66d9ef">)</span>
+<span style="color:#66d9ef">then</span>  msg<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span><span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span> !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;Fail2ban+just+banned+</span>$2<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">||</span> echo <span style="color:#e6db74">&#39;Fail2ban+just+banned+an+ip.&#39;</span> <span style="color:#66d9ef">)</span>
   send_msg $msg
 <span style="color:#66d9ef">elif</span> <span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;unban&#39;</span> <span style="color:#f92672">]</span>
 <span style="color:#66d9ef">then</span>
-  msg<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span><span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span> !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Fail2ban+just+unbanned+</span>$2<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">||</span> echo <span style="color:#e6db74">&#34;Fail2ban+just+unbanned+an+ip.&#34;</span> <span style="color:#66d9ef">)</span>
+  msg<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span><span style="color:#f92672">[</span> <span style="color:#e6db74">&#34;</span>$2<span style="color:#e6db74">&#34;</span> !<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> echo <span style="color:#e6db74">&#34;Fail2ban+just+unbanned+</span>$2<span style="color:#e6db74">&#34;</span> <span style="color:#f92672">||</span> echo <span style="color:#e6db74">&#34;Fail2ban+just+unbanned+an+ip.&#34;</span> <span style="color:#66d9ef">)</span>
   send_msg $msg
 <span style="color:#66d9ef">else</span>
   show_usage
@@ -422,7 +422,15 @@ failregex <span style="color:#f92672">=</span> ^&lt;HOST&gt;.*<span style="color
 		<input class="widget-search__submit" type="submit" value="Search">
 		<input type="hidden" name="sitesearch" value="https://potato.id/" />
 	</form>
+</div><div class="widget-recent widget">
+	<h4 class="widget__title">Information</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><img class="widget__link" src="/img/home.jpg"></img></li>
+		</ul>
+	</div>
 </div>
+
 <div class="widget-recent widget">
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
@@ -454,6 +462,7 @@ failregex <span style="color:#f92672">=</span> ^&lt;HOST&gt;.*<span style="color
 		</ul>
 	</div>
 </div>
+
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
@@ -462,7 +471,7 @@ failregex <span style="color:#f92672">=</span> ^&lt;HOST&gt;.*<span style="color
 		<a class="widget-taglist__link widget__link btn" href="/tags/fail2ban/" title="Fail2ban">Fail2ban (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/file-upload/" title="File Upload">File Upload (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/git/" title="Git">Git (3)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/gitdumper/" title="gitdumper">gitdumper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitdumper/" title="Gitdumper">Gitdumper (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/githack/" title="Githack">Githack (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/incident-response/" title="Incident Response">Incident Response (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/intrusion-prevention-system/" title="Intrusion Prevention System">Intrusion Prevention System (1)</a>
