@@ -4,12 +4,57 @@
   
   <url>
     <loc>https://potato.id/</loc>
-    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://potato.id/categories/</loc>
-    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://potato.id/tags/challenges/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://potato.id/categories/offensive/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://potato.id/posts/solution-for-shl-challenges-heaven-vm/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://potato.id/posts/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://potato.id/tags/surabaya-hacker-link/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://potato.id/tags/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://potato.id/tags/virtual-machine/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://potato.id/categories/web-hacking/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://potato.id/tags/write-up/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -33,16 +78,6 @@
   </url>
   
   <url>
-    <loc>https://potato.id/posts/</loc>
-    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/</loc>
-    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://potato.id/tags/telegram-bot/</loc>
     <lastmod>2019-11-11T00:00:00+00:00</lastmod>
   </url>
@@ -55,11 +90,6 @@
   <url>
     <loc>https://potato.id/tags/zimbra-mail-server/</loc>
     <lastmod>2019-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/challenges/</loc>
-    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -93,21 +123,6 @@
   </url>
   
   <url>
-    <loc>https://potato.id/tags/surabaya-hacker-link/</loc>
-    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/categories/web-hacking/</loc>
-    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/write-up/</loc>
-    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://potato.id/tags/incident-response/</loc>
     <lastmod>2019-08-01T00:00:00+00:00</lastmod>
   </url>
@@ -124,11 +139,6 @@
   
   <url>
     <loc>https://potato.id/tags/lfi/</loc>
-    <lastmod>2019-05-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/categories/offensive/</loc>
     <lastmod>2019-05-09T00:00:00+00:00</lastmod>
   </url>
   

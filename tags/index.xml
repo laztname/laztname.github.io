@@ -6,10 +6,46 @@
     <description>Recent content in Tags on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 11 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://potato.id/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Challenges</title>
+      <link>https://potato.id/tags/challenges/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/challenges/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Surabaya Hacker Link</title>
+      <link>https://potato.id/tags/surabaya-hacker-link/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/surabaya-hacker-link/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Virtual Machine</title>
+      <link>https://potato.id/tags/virtual-machine/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/virtual-machine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Write Up</title>
+      <link>https://potato.id/tags/write-up/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/write-up/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Fail2ban</title>
@@ -57,15 +93,6 @@
     </item>
     
     <item>
-      <title>Challenges</title>
-      <link>https://potato.id/tags/challenges/</link>
-      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://potato.id/tags/challenges/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>dvcs-ripper</title>
       <link>https://potato.id/tags/dvcs-ripper/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
@@ -107,24 +134,6 @@
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://potato.id/tags/rce/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Surabaya Hacker Link</title>
-      <link>https://potato.id/tags/surabaya-hacker-link/</link>
-      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://potato.id/tags/surabaya-hacker-link/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Write Up</title>
-      <link>https://potato.id/tags/write-up/</link>
-      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://potato.id/tags/write-up/</guid>
       <description></description>
     </item>
     

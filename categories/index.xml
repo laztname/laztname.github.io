@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 11 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://potato.id/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Offensive</title>
+      <link>https://potato.id/categories/offensive/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/categories/offensive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Hacking</title>
+      <link>https://potato.id/categories/web-hacking/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/categories/web-hacking/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Defensive</title>
@@ -17,24 +35,6 @@
       <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://potato.id/categories/defensive/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Web Hacking</title>
-      <link>https://potato.id/categories/web-hacking/</link>
-      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://potato.id/categories/web-hacking/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Offensive</title>
-      <link>https://potato.id/categories/offensive/</link>
-      <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://potato.id/categories/offensive/</guid>
       <description></description>
     </item>
     
