@@ -6,10 +6,20 @@
     <description>Recent content in Challenges on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Fri, 17 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 22 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://potato.id/tags/challenges/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Penyelesaian Challenges Malang Hacker Link</title>
+      <link>https://potato.id/posts/solution-for-mhl-challenges/</link>
+      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/posts/solution-for-mhl-challenges/</guid>
+      <description>Setelah lama tidak membuat challenges karena waktu senggang yang makin dikit karena tugas yang makin banyak dan menumpuk karena tidak segera dikerjakan, akhirnya dapat info challenges dari temen di group telegram, challenges ini merupakan challenges buatan dari komunitas lain yaitu Malang Hacker Link, challengesnya cukup unik dan menyenangkan untuk dikerjakan karena ilmu perdukunan tidak perlu digunakan.
+Langsung saja dari informasi tersebut langsung buka linknya dan didapatkan form dengan isian first dan last name karena belum menjelajah dan mendapatkan clue, kita mencoba menggunakan fitur ini untuk mengetahui output dari aplikasi web ini, untuk isian firstname diisikan abc dan untuk lastname dengan def</description>
+    </item>
     
     <item>
       <title>Penyelesaian Challenges Surabaya Hacker Link VM Heaven</title>

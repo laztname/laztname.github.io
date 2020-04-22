@@ -4,31 +4,56 @@
   
   <url>
     <loc>https://potato.id/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://potato.id/categories/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://potato.id/tags/challenges/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://potato.id/tags/malang-hacker-link/</loc>
+    <lastmod>2020-04-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://potato.id/categories/offensive/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+    <lastmod>2020-04-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://potato.id/posts/solution-for-shl-challenges-heaven-vm/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+    <loc>https://potato.id/posts/solution-for-mhl-challenges/</loc>
+    <lastmod>2020-04-22T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://potato.id/posts/</loc>
+    <lastmod>2020-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://potato.id/tags/</loc>
+    <lastmod>2020-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://potato.id/categories/web-hacking/</loc>
+    <lastmod>2020-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://potato.id/tags/write-up/</loc>
+    <lastmod>2020-04-22T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://potato.id/posts/solution-for-shl-challenges-heaven-vm/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,22 +63,7 @@
   </url>
   
   <url>
-    <loc>https://potato.id/tags/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://potato.id/tags/virtual-machine/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/categories/web-hacking/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/write-up/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
   </url>
   
