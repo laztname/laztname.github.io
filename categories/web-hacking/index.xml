@@ -27,7 +27,7 @@ Langsung saja dari informasi tersebut langsung buka linknya dan didapatkan form 
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://potato.id/posts/solution-for-shl-challenges-heaven-vm/</guid>
-      <description>Karena mesin ini sudah ditarik karena sudah dirasa tidak relevan untuk sebuah challeges maka dari itu saya membuat penyelesaian bagaimana menyelesaikan mesin vm heaven dari Surabaya Hacker Link ini.
+      <description>Karena mesin ini sudah ditarik dan sudah dirasa tidak relevan untuk sebuah challenges, maka dari itu saya membuat penyelesaian bagaimana menyelesaikan mesin vm heaven dari Surabaya Hacker Link.
 Sebenarnya untuk menyelesaikan challenges ini hampir tidak dibutuhkan tools hacking khusus seperti sqlmap ataupun metasploit karena challenges ini sangat mudah, tidak diperlukan pengetahuan khusus tentang hacking. cukup terbiasa dengan sistem operasi GNU/Linux dan pengetahuan mendasar tentang bagaimana melakukan pwning (owning) terhadap mesin maka VM dapat diselesaikan dengan mudah.</description>
     </item>
     

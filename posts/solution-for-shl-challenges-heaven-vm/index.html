@@ -103,12 +103,12 @@ if (!doNotTrack) {
 		<figure class="post__thumbnail">
 			<img src="/img/heaven/ssh-adam.png" alt="Penyelesaian Challenges Surabaya Hacker Link VM Heaven">
 		</figure><div class="content post__content clearfix">
-			<p>Karena mesin ini sudah ditarik karena sudah dirasa tidak relevan untuk sebuah challeges maka dari itu saya membuat penyelesaian bagaimana menyelesaikan mesin vm heaven dari Surabaya Hacker Link ini.</p>
+			<p>Karena mesin ini sudah ditarik dan sudah dirasa tidak relevan untuk sebuah challenges, maka dari itu saya membuat penyelesaian bagaimana menyelesaikan mesin vm heaven dari Surabaya Hacker Link.</p>
 <p>Sebenarnya untuk menyelesaikan challenges ini hampir tidak dibutuhkan tools hacking khusus seperti sqlmap ataupun metasploit karena challenges ini sangat mudah, tidak diperlukan pengetahuan khusus tentang hacking. cukup terbiasa dengan sistem operasi GNU/Linux dan pengetahuan mendasar tentang bagaimana melakukan pwning (owning) terhadap mesin maka VM dapat diselesaikan dengan mudah.</p>
-<p>Tulisan ini saya dedikasikan untuk teman-teman yang masih merasakan kesusahan untuk menyelesaikan VM ini, maka dari itu penjelasan tentang VM ini cukup panjang.</p>
-<p>Pertama tidak akan dibahas bagaimana melakukan import VM pada Virtualbox / VMware karena hal tersebut sudah dijelaskan pada forum Surabaya Hacker Link itu sendri, maka saya asumsikan vm sudah di-import dan dijalan kan.</p>
+<p>Tulisan ini saya dedikasikan untuk teman-teman yang masih merasakan kesusahan untuk menyelesaikan VM ini, karenanya penjelasan tentang challenges VM ini cukup panjang.</p>
+<p>Pertama tidak akan dibahas bagaimana melakukan import VM pada Virtualbox / VMware karena hal tersebut sudah dijelaskan pada forum Surabaya Hacker Link itu sendri, maka saya asumsikan vm sudah di-import dan dijalankan.</p>
 <p><img src="/img/heaven/vm-running.png" alt="VM Berjalan"></p>
-<p>Setelah VM berjalan, kita biarkan saja console tersebut karena tidak ada credentials yang diberikan untuk masuk kedalam VM itu sendiri, oleh karenanya kita mencari jalan masuk lain yaitu melalui service yang berjalan pada VM tersebut. Untuk mengetahui VM tersebut memiliki service apa saja kita perlu informasi mengenai IP VM dengan cara melakukan scanning menggunakan NMAP terhadap block IP yang dimiliki laptop dan mencari service dengan port 80 / webservice.</p>
+<p>Setelah VM berjalan, kita biarkan saja console tersebut karena tidak ada credentials yang diberikan untuk masuk kedalam VM itu, langsung saja kita mencari jalan masuk lain yaitu melalui service yang berjalan pada VM tersebut. Untuk mengetahui VM tersebut memiliki service apa saja kita perlu informasi mengenai IP VM dengan cara melakukan scanning menggunakan NMAP terhadap block IP yang dimiliki laptop dan mencari service dengan port 80 / webservice.</p>
 <p><img src="/img/heaven/search-ip.png" alt="Mencari IP"></p>
 <p>IP sudah ditemukan, mengikuti apa yang tertulis di forum, kita perlu melakukan pengecekan apakah IP yang ditemukan sudah benar atau tidak dengan membuka service tersebut dan memastikan gambar yang muncul sudah sama seperti yang ada pada forum.</p>
 <p><img src="/img/heaven/index.png" alt="Tampilan Awal"></p>
@@ -116,9 +116,9 @@ if (!doNotTrack) {
 <p><img src="/img/heaven/view-source.png" alt="Check Source"></p>
 <p>Namun sayangnya tidak ada sesuatu yang menarik terhadap tampilan web ini, hanya sebuah tag img saja tanpa format html yang baik dan benar. Karena tidak ada sesuatu yang menarik, kembali pada forum dan dijelaskan bahwa kita perlu sebuah directory finder tool dengan wordlist yang umum. Karena sudah terbiasa dengan <a href="https://github.com/ffuf/ffuf">ffuf</a>, saya lebih memilih tools tersebut untuk melakukan tugas directory search ini.</p>
 <p><img src="/img/heaven/ffuf.png" alt="Fuzzing Folder"></p>
-<p>Setelah melakukan finding directory, ditemukan beberapa file dan folder yang cukup menarik, yaitu phpinfo.php dan folder uploads, untuk folder manual sendiri sepertinya itu ada folder bawaan dari apache tentang manual book web service apache itu sendiri. Langsung saja dibuka file dan folder tersebut.</p>
-<p><img src="/img/heaven/phpinfo.png" alt="File phpinfo.php"></p>
-<p>Untuk file phpinfo.php sendiri sepertinya file ini menjalankan fungsi php bernama phpinfo, sama seperti nama filenya. sepertinya developernya lupa untuk menghapus file ini. Umumnya phpinfo dijalankan untuk mengetahui apakah engine php pada server sudah berjalan atau tidak dan beberpa pengecekan informasi penting lainnya seperti lokasi document_root dan sebagainya. Namun pada file ini kurang ada yang menarik, kita lanjutkan ke folder uploads</p>
+<p>Setelah melakukan finding directory, ditemukan beberapa file dan folder yang cukup menarik, yaitu info.php dan folder uploads, untuk folder manual sendiri sepertinya itu adalah folder bawaan dari apache tentang manual book web service apache itu sendiri. Langsung saja dibuka file dan folder tersebut.</p>
+<p><img src="/img/heaven/phpinfo.png" alt="File info.php"></p>
+<p>Untuk file info.php sendiri sepertinya file ini menjalankan fungsi php bernama phpinfo, sama seperti nama filenya. sepertinya developernya lupa untuk menghapus file ini. Umumnya phpinfo dijalankan untuk mengetahui apakah engine php pada server sudah berjalan atau tidak dan beberpa pengecekan informasi penting lainnya seperti lokasi document_root dan sebagainya. Namun pada file ini kurang ada yang menarik, kita lanjutkan ke folder uploads</p>
 <p><img src="/img/heaven/uploads-directory-listing.png" alt="Uploads Directory"></p>
 <p>Pada folder upload terlihat bahwa fungsi directory listing tidak dimatikan oleh developer hal ini menyebabkan folder yang tidak mempunyai file bernama index.html / index.php akan menampilkan seluruh isi file yang ada pada folder itu. pada folder / directory ini terdapat 2 file yang menarik, bisa dilihat sendiri nama-nama filenya apa. Kita baca readme.txt dulu.</p>
 <p><img src="/img/heaven/shell-explanation.png" alt="Shell Readme"></p>
@@ -153,7 +153,7 @@ if (!doNotTrack) {
 <p>Adam sangat spesial, dia dapat menjalankan 2 command dengan sudo tanpa harus menuliskan password. command tersebut adalah python dan /tmp/get_root.py, karena get_root.py tidak ada kita coba sudo pyton dan ternyata command berjalan dengan baik, langsung saja kita melakukan spawn shell melalui python menggunakan module pty.</p>
 <p><img src="/img/heaven/rooted.png" alt="rooted"></p>
 <p>Well done, user root didapatkan dengan kata lain challenges ini selesai dan kamu berhasil melakukan pengambil alihan VM Heaven ini.</p>
-<p>Sebenarnya terdapat beberapa hal yang ketinggalan saat menyelesaikan challenges ini, yaitu port ssh yang tidak discan secara menyeluruh dan penggunaan service ftp dan ssh. namun hal tersebut saya lampirkan di bawah ini</p>
+<p>Sebenarnya terdapat beberapa hal yang ketinggalan saat menyelesaikan challenges ini, yaitu port ssh yang tidak discan karena pada saat melakukan scanning tidak dilakukan scan secara menyeluruh sert penggunaan service ftp dan ssh. namun hal tersebut saya lampirkan di bawah ini</p>
 <p><img src="/img/heaven/nmap-all-port.png" alt="nmap all port"><br>
 Penggunaan command nmap untuk melakukan scanning terhadap serluruh port dan sercara agresif sehingga didapatkannya service ssh dan ftp pada custom port dan terlihatnya file rahasia.txt</p>
 <p><img src="/img/heaven/ftp-command.png" alt="ftp command"><br>

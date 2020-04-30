@@ -107,29 +107,29 @@ if (!doNotTrack) {
 <p>Langsung saja dari informasi tersebut langsung buka linknya dan didapatkan form dengan isian first dan last name karena belum menjelajah dan mendapatkan clue, kita mencoba menggunakan fitur ini untuk mengetahui output dari aplikasi web ini, untuk isian firstname diisikan abc dan untuk lastname dengan def</p>
 <p><img src="/img/mhl/first-test.png" alt="buka challenges"></p>
 <p>Ternyata output dari webapp ini cukup unik, setiap inputan yang dimasukan akan ditampilkan dalam format ascii art berwarna, dari sini mulai mencoba mencari celah yang dapat dilakukan.</p>
-<p><img src="/img/mhl/output.png" alt=""></p>
+<p><img src="/img/mhl/output.png" alt="Tampilan Awal"></p>
 <p>Karena hanya program dengan output ascii art disini kita tidak perlu berfikir jauh untuk mengasumsikan kemungkinan celah keamanan pada webapp ini. Untuk SQL Injection tidak mungkin karena sepertinya tidak tersimpan pada database namun tidak menutup kemungkinan juga, untuk XSS juga tidak mungkin karena output dari hasil input menjadi ascii art. Dari sini mulai berfikir bahwa web ini memiliki vulnerability SSTI karena kemungkinan ada templating yang digunakan untuk menampilkan ascii art tersebut, langsung saja dicoba menggunakan payload umum yaitu <code>{{7 * 7}}</code> jika output menjadi <code>49</code> maka sudah terlihat jelas bahwa webapp tersebut rentan terhadap SSTI</p>
-<p><img src="/img/mhl/ssti-test.png" alt=""></p>
+<p><img src="/img/mhl/ssti-test.png" alt="Testing SSTI Vulnerability"></p>
 <p>Namun output yang diharapkan tidak tampil dan malah isi file yang ada pada directory tersebut, terlihat ada file chall.py sepertinya source code dari webapp ini dan solver.txt yang mana adalah tujuan akhir untuk dituliskan nama pada file tersebut.</p>
-<p><img src="/img/mhl/chall-solver.png" alt=""></p>
+<p><img src="/img/mhl/chall-solver.png" alt="Output of SSTI Test"></p>
 <p>Kita buka file chall.py dan mendapatkan source code dari webapp tersebut, waktunya baca-baca kode dan mencari sesuatu yang menarik.</p>
-<p><img src="/img/mhl/source.png" alt=""></p>
+<p><img src="/img/mhl/source.png" alt="Source Code"></p>
 <p>Karena inputan kita diproses maka baiknya memahami bagaimana input data tersebut diproses, pada fungsi <code>parse_POST</code> dan <code>do_POST</code> inputan diproses pada kedua fungsi tersebut, nampaknya ada sesuatu yang menarik dari isi fungsi <code>do_POST</code>, ada command shell yang tidak asing terlihat yaitu toilet, command untuk mempercantik output terminal dengan ascii art. Sepertinya webapp ini menjalankan shell untuk memproses data dari input user, untuk meyakinkan diri kita lihat fungsi-fungsi lainnya.</p>
-<p><img src="/img/mhl/postdata.png" alt=""><br>
-<img src="/img/mhl/shell_exec.png" alt=""></p>
+<p><img src="/img/mhl/postdata.png" alt="Fungsi POST Data"><br>
+<img src="/img/mhl/shell_exec.png" alt="Fungsi Shell"></p>
 <p>Ternyata dugaan benar, pada fungsi <code>hav()</code> webapp ini menjalankan shell bash pada proses bisnisnya. Berdasarkan dari fungsi <code>do_POST</code> maka dapat disimpulkan bahwa webapp ini akan menjalankan command shell <code>echo &lt;input_data&gt; | toilet --html --metal</code>, karena sudah cukup familiar dengan command shell waktunya memanggil command shell lainnya dengan merubah input data menjadi payload sederhana, yaitu shell exec pada bash. dapat dijalankan dengan</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">$(</span>command_here<span style="color:#66d9ef">)</span>
 </code></pre></div><p>atau</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#e6db74">`</span>command_here<span style="color:#e6db74">`</span>
-</code></pre></div><p><img src="/img/mhl/check-rce.png" alt=""></p>
+</code></pre></div><p><img src="/img/mhl/check-rce.png" alt="RCE Test"></p>
 <p>Kita lakukan pengetesan dengan isian data <code>$(whoami)</code></p>
-<p><img src="/img/mhl/whoami-response.png" alt=""></p>
+<p><img src="/img/mhl/whoami-response.png" alt="RCE Response"></p>
 <p>Server merespon dan terlihat id dari user kita adalah root, waw. Dengan ini kita sudah dapat melakukan full compromised terhadap server, namun perlu diingat tujuan kita adalah menuliskan nama pada solver.txt</p>
-<p><img src="/img/mhl/write-name.png" alt=""></p>
+<p><img src="/img/mhl/write-name.png" alt="Write Name"></p>
 <p>Menjalankan command untuk write name</p>
-<p><img src="/img/mhl/response.png" alt=""></p>
+<p><img src="/img/mhl/response.png" alt="Response of Write Command"></p>
 <p>Response dari command tersebut kosong, lalu kita check isi solver.txt apakah berubah atau tidak.</p>
-<p><img src="/img/mhl/solver.txt.png" alt=""></p>
+<p><img src="/img/mhl/solver.txt.png" alt="Solver List"></p>
 <p>Okay mission complete.</p>
 <p>Lalu bagaimana biar webapp ini lebih secure ? tulis jawaban kalian di komentar.</p>
 <p>See you on the next challenges.</p>
