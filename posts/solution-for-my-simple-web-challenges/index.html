@@ -36,6 +36,18 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	<script>
+	var OneSignal = window.OneSignal || [];
+	OneSignal.push(function() {
+		OneSignal.init({
+			appId: "6a6c99a5-9957-48e6-a3be-0d88a9b5850b",
+				notifyButton: {
+					enable: true,
+				},
+			});
+		});
+	</script>
     <script data-ad-client="ca-pub-1926937123072670" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	
 </head>
 <body class="body">
@@ -101,34 +113,34 @@ if (!doNotTrack) {
 </div></div>
 		</header>
 		<figure class="post__thumbnail">
-			<img src="/img/simplewebchall/solverlist.png" alt="Penyelesaian Untuk Web &#39;Simple&#39; Challenges">
+			<img src="/img/simplewebchall/solverlist.webp" alt="Penyelesaian Untuk Web &#39;Simple&#39; Challenges">
 		</figure><div class="content post__content clearfix">
-			<p><img src="/img/simplewebchall/solverlist.png" alt=""></p>
+			<p><img src="/img/simplewebchall/solverlist.webp" alt=""></p>
 <h2 id="pra-kata">Pra Kata</h2>
 <p>Sebelumnya terima kasih buat slashroot ctf karena tanpa slashroot ctf mungkin saya tidak bisa memprovide challenges ini melalui dewaweb.com, Terima kasih buat teman-teman yang sudah meluangkan waktunya untuk challenges &lsquo;simple&rsquo; ini,</p>
 <h2 id="kata">Kata</h2>
 <p>clue &ldquo;recon, tools, sign-in, submit&rdquo;</p>
 <p>recon ini sangat mudah, sebenarnya tidak perlu menggunakan tools atau scanner, banyak kok website yang masih menyimpan sesuatu yang penting itu pada comment html</p>
-<p><img src="/img/simplewebchall/htmlcomment.png" alt=""><br>
+<p><img src="/img/simplewebchall/htmlcomment.webp" alt=""><br>
 terlihat jelas ada info bahwa git repositori (/.git/) dipindahkan pada /git/ kita coba akses dulu</p>
-<p><img src="/img/simplewebchall/image-2.png" alt=""><br>
+<p><img src="/img/simplewebchall/image-2.webp" alt=""><br>
 forbidden belum berarti file tidak ada (404-not_found)</p>
 <p>karena ini litespeed maka defaultnya directory listing pada web server ini dimatikan sama seperti web server sebelah (baca: ya itulah <!-- raw HTML omitted -->nging<!-- raw HTML omitted --> nginx), kita cek apakah benar git repo ada pada direktori tersebut?, temen-temen pasti hafal bagaimana file yang pasti ada pada folder git repo, yup bener, /git/config, /git/description, /git/HEAD, dsb. lalu kita coba request salah satu</p>
-<p><img src="/img/simplewebchall/image-5.png" alt=""><br>
+<p><img src="/img/simplewebchall/image-5.webp" alt=""><br>
 dan ternyata benar</p>
 <p>Yeay git repo memang berada pada direktori tersebut,<!-- raw HTML omitted -->Karena kita tidak bisa melihat isi direktori dan terlalu menyusahkan untuk merequest satu per satu file yang ada pada git repository (ya meski ada salah satu player yang melakukan request secara <!-- raw HTML omitted -->auto<!-- raw HTML omitted --> manual), maka dari itu kita menggunakan tools (<a href="https://github.com/kost/dvcs-ripper">https://github.com/kost/dvcs-ripper</a>)</p>
-<p><img src="/img/simplewebchall/image-3.png" alt=""><br>
+<p><img src="/img/simplewebchall/image-3.webp" alt=""><br>
 tunggu sampai selesai</p>
 <p>Dan kita berhasil mengambil source code pada web tersebut</p>
-<p><img src="/img/simplewebchall/image-4.png" alt=""><br>
+<p><img src="/img/simplewebchall/image-4.webp" alt=""><br>
 ternyata ada commit login function</p>
 <p>Ternyata ada file login.php pada folder admin, jadi requestnya seperti ini, challshl.com/admin/login.php, Waktunya baca-baca <!-- raw HTML omitted -->bad<!-- raw HTML omitted --> kode<!-- raw HTML omitted -->ternyata ada dua jenis post data yang diambil yaitu sign-in, dan sign-up,</p>
-<p><img src="/img/simplewebchall/image-6.png" alt=""><br>
+<p><img src="/img/simplewebchall/image-6.webp" alt=""><br>
 isi file login.php</p>
 <p>karena pengecekan hanya post signin atau signup, kita rubah aja input data kita yang semula signin menjadi signup</p>
-<p><img src="/img/simplewebchall/image-7.png" alt=""><br>
+<p><img src="/img/simplewebchall/image-7.webp" alt=""><br>
 submit dan seharusnya kita dapat pop-up berhasil mendaftar namun tidak muncul (it&rsquo;s okay), kita coba untuk login dengan data username dan password yang sudah kita set sebelumnya</p>
-<p><img src="/img/simplewebchall/image-8.png" alt=""><br>
+<p><img src="/img/simplewebchall/image-8.webp" alt=""><br>
 logged in :3</p>
 <p>Kita berhasil masuk, dan klik submit maka nickname username kita telah masuk ke solver list</p>
 <h2 id="pasca-kata">Pasca-Kata</h2>
@@ -163,7 +175,7 @@ perasaan iki kadang jare sayang yo ra sayang :v
 
 <div class="authorbox clearfix">
 	<figure class="authorbox__avatar">
-		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
 		<span class="authorbox__name">About Ardi Jonias Fortuna</span>

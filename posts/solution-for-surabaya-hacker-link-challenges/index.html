@@ -42,6 +42,18 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	<script>
+	var OneSignal = window.OneSignal || [];
+	OneSignal.push(function() {
+		OneSignal.init({
+			appId: "6a6c99a5-9957-48e6-a3be-0d88a9b5850b",
+				notifyButton: {
+					enable: true,
+				},
+			});
+		});
+	</script>
     <script data-ad-client="ca-pub-1926937123072670" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	
 </head>
 <body class="body">
@@ -107,30 +119,30 @@ if (!doNotTrack) {
 </div></div>
 		</header>
 		<figure class="post__thumbnail">
-			<img src="/img/link.png" alt="Solution for Surabaya Hacker Link Challenges">
+			<img src="/img/link.webp" alt="Solution for Surabaya Hacker Link Challenges">
 		</figure><div class="content post__content clearfix">
-			<p><img src="/img/login.png" alt=""></p>
+			<p><img src="/img/login.webp" alt=""></p>
 <p>Well, postingan ini dibuat karena challenges Surabaya Hacker Link telah diupdate dan ada salah seorang yang penasaran dengan challenges ini namun belum solved dan menyarankan agar dibuatkan video cara menyelesaikannya, ya namun ga bisa buat video ya tulisan aja deh,
 <a href="https://forum.surabayahackerlink.org/d/3142-update-challenges-shl">updated challenges</a></p>
 <ol>
 <li>
 <p>Disana dijelaskan bahwa kita harus menyelamatkan website si jhon ini lalu kita akan diberikan link group telegram (flag)<br>
-<img src="/img/awal.png" alt="awal"><br>
+<img src="/img/awal.webp" alt="awal"><br>
 tampilan awal</p>
 </li>
 <li>
 <p>Kita akses web si jhon ini<br>
-<img src="/img/Screenshot_2018-12-25%20HACKED%20.png" alt="hacked"><br>
+<img src="/img/Screenshot_2018-12-25%20HACKED%20.webp" alt="hacked"><br>
 website di deface ternyata</p>
 </li>
 <li>
 <p>Seperti biasa, gunakan <code>view-source:</code> atau ctrl+u untuk melihat apakah ada sesuatu yang tidak ditampilkan pada browser<br>
-<img src="/img/view-source.png" alt="html comment"><br>
+<img src="/img/view-source.webp" alt="html comment"><br>
 ternyata ada comment html dari hacker jahad tersebut</p>
 </li>
 <li>
 <p>Kita menemukan info bahwa ada file index.php.txt<br>
-<img src="/img/backup.png" alt=""><br>
+<img src="/img/backup.webp" alt=""><br>
 yang merupakan backup file index.php yang asli<br>
 dan ada pesan tersirat bahwa celah pada area administrasi, dari kata administrasi, kita dapat memahami bahwa kemungkinan pada dashboard admin,</p>
 </li>
@@ -143,10 +155,10 @@ dan ada pesan tersirat bahwa celah pada area administrasi, dari kata administras
 <li>Dan berhasil</li>
 </ol>
 <pre><code>challenges.surabayahackerlink.org/web/admin
-</code></pre><p><img src="/img/login.png" alt=""><br>
+</code></pre><p><img src="/img/login.webp" alt=""><br>
 ternyata ada form login</p>
 <p>Kita menemukan form login, lalu coba default admin:admin, namun gagal, mungkin guessed password bukan bug ya, lanjut coba input petik</p>
-<p><img src="/img/error.png" alt=""></p>
+<p><img src="/img/error.webp" alt=""></p>
 <ol start="6">
 <li>
 <p>ada pesan query error nih<br>
@@ -154,7 +166,7 @@ Berarti kemungkinan ini bisa di lakukan sql injection, yaudah kita coba payload-
 </li>
 <li>
 <p>Yeay kita berhasil masuk<br>
-<img src="/img/Screenshot_2018-12-25%20Admin%20Page%20SHL.png" alt=""><br>
+<img src="/img/Screenshot_2018-12-25%20Admin%20Page%20SHL.webp" alt=""><br>
 masuk ke dashboard admin</p>
 </li>
 <li>
@@ -162,7 +174,7 @@ masuk ke dashboard admin</p>
 </li>
 <li>
 <p>Kita coba fitur yang ada dulu<br>
-<img src="/img/Screenshot_2018-12-25%20Admin%20Page%20SHL%281%29.png" alt=""><br>
+<img src="/img/Screenshot_2018-12-25%20Admin%20Page%20SHL%281%29.webp" alt=""><br>
 ternyata disimpan sebagai file, bukan di database<br>
 dari sini kita bisa mengangan-angan untuk menimpa file hacked by hacked by tadi dengan file baru, tapi setelah dicoba ternyata file kita hanya disimpan pada direktori <code>/web/admin/artikel/&lt;disini&gt;</code>, hhmmm..</p>
 </li>
@@ -171,8 +183,8 @@ dari sini kita bisa mengangan-angan untuk menimpa file hacked by hacked by tadi 
 </li>
 <li>
 <p>Namun kita harus mundur 2 directory, payload final menjadi <code>../../index.php</code> dan isi artikelnya adalah file backup yang sebelumnnya ditemukan tadi
-<img src="/img/submit.png" alt=""><br>
-<img src="/img/Screenshot_2018-12-25%20Admin%20Page%20SHL%282%29.png" alt=""><br>
+<img src="/img/submit.webp" alt=""><br>
+<img src="/img/Screenshot_2018-12-25%20Admin%20Page%20SHL%282%29.webp" alt=""><br>
 yeay file index yang lama sudah tertimpa</p>
 </li>
 <li>
@@ -180,28 +192,28 @@ yeay file index yang lama sudah tertimpa</p>
 </li>
 <li>
 <p>Kita cek dulu arsitektur file dan stripnya, lalu kita coba run<br>
-<img src="/img/rev.png" alt=""><br>
+<img src="/img/rev.webp" alt=""><br>
 ternyata 32-bit, not stripped dan gagal dengan angka kesayangan 1337</p>
 </li>
 <li>
 <p>Tanpa ribet kita buka aja pake ida lalu lihat pseudocode
-<img src="/img/ida.png" alt=""><br>
+<img src="/img/ida.webp" alt=""><br>
 ya kurang lebih begitulah source asli dari file ELF yang didapatkan tadi<br>
 Bisa dipahami bahwa ELF tersebut membaca input user (<code>scanf</code> dengan hasil input user diasumsikan sebgai var v5), dan ada pengecekan jika var v5 = 3987 maka akan melakukan print selamat bla bla dan jika tidak maka keluar anda kurang beruntung</p>
 </li>
 <li>
 <p>Rerun lagi file ELF tadi dan memasukan angka kesayangan dengan 3987
-<img src="/img/dapet-key.png" alt=""><br>
+<img src="/img/dapet-key.webp" alt=""><br>
 berhasil<br>
 kita mendapatkan sebuah key 5736** dan link</p>
 </li>
 <li>
 <p>Akses link tersebut<br>
-<img src="/img/key.png" alt=""></p>
+<img src="/img/key.webp" alt=""></p>
 </li>
 <li>
 <p>Masukan key 5736**<br>
-<img src="/img/link.png" alt=""></p>
+<img src="/img/link.webp" alt=""></p>
 </li>
 <li>
 <p>Selamat kita dah dapat flagnya (Link Group), but keep it secret</p>
@@ -228,7 +240,7 @@ kita mendapatkan sebuah key 5736** dan link</p>
 
 <div class="authorbox clearfix">
 	<figure class="authorbox__avatar">
-		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
 		<span class="authorbox__name">About Ardi Jonias Fortuna</span>

@@ -36,6 +36,18 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	<script>
+	var OneSignal = window.OneSignal || [];
+	OneSignal.push(function() {
+		OneSignal.init({
+			appId: "6a6c99a5-9957-48e6-a3be-0d88a9b5850b",
+				notifyButton: {
+					enable: true,
+				},
+			});
+		});
+	</script>
     <script data-ad-client="ca-pub-1926937123072670" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	
 </head>
 <body class="body">
@@ -101,7 +113,7 @@ if (!doNotTrack) {
 </div></div>
 		</header>
 		<figure class="post__thumbnail">
-			<img src="/img/shell-xrdp.png" alt="SQL Injection Into XRDP Account Take Over">
+			<img src="/img/shell-xrdp.webp" alt="SQL Injection Into XRDP Account Take Over">
 		</figure><div class="content post__content clearfix">
 			<p>Well mungkin judulnya agak <em><strong>click bait</strong></em> sql injection sendiri tidak bisa melakukan injeksi sampai ke xrdp xD</p>
 <p>Sebenarnya tujuan awal cuman ingin download anime di moesubs.com sih, namu saat membuka webnya ada url yang sangat pantas untuk dicurigai yaitu<br>
@@ -120,7 +132,7 @@ yaudah deh coba cek pake <code>'</code> dan hasilnya web tersebut error, setelah
 <pre><code>id=.591'union select 1,version(),3,4,5,user(),7,8,9,10,11,12,13 --+-
 </code></pre><p>terkejut melihat user yang dipake adalah <code>root@localhost</code>, langsung load file /etc/passwd</p>
 <pre><code>id=.591’union select 1,version(),3,4,5,load_file('/etc/passwd'),7,8,9,10,11,12,13 --+-
-</code></pre><p><img src="/img/etc-passwd-moesubs.png" alt=""><br>
+</code></pre><p><img src="/img/etc-passwd-moesubs.webp" alt=""><br>
 langsung coba lagi lebih jauh yaitu shell uploading, namun sepertinya 100% gagal karena user www-data tidak memiliki own ke folder yang bisa diakses melalui port 80</p>
 <p>yaudah recon-recon lagi, coba cek ke file config /etc/httpd/conf/httpd.conf menemukan beberapa infomasi yang bisa digali lebih dalam lagi yaitu lokasi direktori web dan sebuah IP, skip dulu simpan saja dulu,</p>
 <p>dan melakukan DIOS di SQL injection tadi, lalu menemukan beberapa table db dari wordpress (terlihat dari prefix wp_),</p>
@@ -128,11 +140,11 @@ langsung coba lagi lebih jauh yaitu shell uploading, namun sepertinya 100% gagal
 <p>Setelah satu persatu di akeses, ada 1 yang terlihat sebagai wordpress (terbukti pada ekstensi wappalyzer dan file-file umum wordpress seperti wp-login.php, /wp-includes/, dll) lalu akses config wordpress tersebut melalui load_file</p>
 <pre><code>id=591’union select 1,version(),3,4,5,load_file(/dir/dir/dir/wp-config.php),7,8,9,10,11,12,13 --+-
 </code></pre><p>dan terlihatlah config wordpress tadi</p>
-<p><img src="/img/config-wordpress.png" alt=""></p>
+<p><img src="/img/config-wordpress.webp" alt=""></p>
 <p>wah user root, coba ah konek pakai adminer, dan hasilnya nihil (diblok).</p>
 <p>Kembali lagi ke port scanning dan menemukan port 3389, konek pakai rdesktop, login satu per satu user yang ada di /etc/passwd lalu password menggunakan db password yang telah ditemukan di atas, coba satu persatu dan masuk nih :3<br>
-<img src="/img/logged-in-xrdp.png" alt=""><br>
-<img src="/img/shell-xrdp.png" alt=""></p>
+<img src="/img/logged-in-xrdp.webp" alt=""><br>
+<img src="/img/shell-xrdp.webp" alt=""></p>
 <p>coba sudo, ehhh ternyata ga ada sudo &gt;.&lt;
 yaudah segini udah cukup, lalu balik ke moesubs.com cari kontak yang bisa dihubungi (ada email), laporkan, kirim lagi engga sampai 4 jam udah dibales, dan tanggapannya juga baik :)</p>
 <p>bug udah di patch, password udah diganti, config udah dibenerin, ijin untuk publikasi bug dikasih, reward ? ga seberapa kok (ongkos ngopi), kalo di hackerone / bugcrowd pasti besar nih wkwkwkwkwk.</p>
@@ -158,7 +170,7 @@ yaudah segini udah cukup, lalu balik ke moesubs.com cari kontak yang bisa dihubu
 
 <div class="authorbox clearfix">
 	<figure class="authorbox__avatar">
-		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
 		<span class="authorbox__name">About Ardi Jonias Fortuna</span>

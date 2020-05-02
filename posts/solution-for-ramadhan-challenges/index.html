@@ -36,6 +36,18 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	<script>
+	var OneSignal = window.OneSignal || [];
+	OneSignal.push(function() {
+		OneSignal.init({
+			appId: "6a6c99a5-9957-48e6-a3be-0d88a9b5850b",
+				notifyButton: {
+					enable: true,
+				},
+			});
+		});
+	</script>
     <script data-ad-client="ca-pub-1926937123072670" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	
 </head>
 <body class="body">
@@ -101,14 +113,14 @@ if (!doNotTrack) {
 </div></div>
 		</header>
 		<figure class="post__thumbnail">
-			<img src="/img/ramadhan/0.png" alt="Solution for Ramadhan Challenges">
+			<img src="/img/ramadhan/0.webp" alt="Solution for Ramadhan Challenges">
 		</figure><div class="content post__content clearfix">
 			<p>Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di <a href="https://stts.edu">STTS</a>, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui <code>/self/proc/environ</code> dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.<br>
 <!-- raw HTML omitted --><br>
-<img src="/img/ramadhan/1.png" alt="tampilan awal"><br>
+<img src="/img/ramadhan/1.webp" alt="tampilan awal"><br>
 Di atas adalah tampilan ketika membaca lorem ipsum, terlihat pada url ada parameter / index page dengan value loremipusm.html, hal ini pun berlaku ketika membaca twice<br>
 <!-- raw HTML omitted --><br>
-<img src="/img/ramadhan/2.png" alt="membaca /etc/passwd"><br>
+<img src="/img/ramadhan/2.webp" alt="membaca /etc/passwd"><br>
 Kita coba langsung untuk membaca file /etc/passwd, dan berhasil. Terlihat jelas bahwa value parameter page langsung di include, kurang lebih source code seperti ini</p>
 <pre><code>&lt;?php
 ...
@@ -118,36 +130,36 @@ if($_GET['page']) {
 ...
 </code></pre><p>Terlihat dari error message ketika merubah value dari index page ke value yang tidak valid, setelah mencoba banyak cara untuk mendapatkan akses seperti RFI (Remote File Inclusion), Wrapper dan lain sebagainya, hasilnya gagal total, hal ini gagal karena ada kata &lsquo;article&rsquo; di depan sebelum input parameter page, yang menyebabkan tidak bisa melakukan RFI dan wrapper <br>
 <!-- raw HTML omitted --><br>
-<img src="/img/ramadhan/3.png" alt="isi dari robots.txt"><br>
+<img src="/img/ramadhan/3.webp" alt="isi dari robots.txt"><br>
 Membuka terminal dan melakukan pencarian folder lain menggunakan gobuster dan wordlist common web files, dan menemukan files robots.txt dan directory uploads, pada file robots.txt terdapat Disallow: uploads/, kita langsung ke diretory tersebut dan mendapatkan form upload<br>
 <!-- raw HTML omitted --><br>
-<img src="/img/ramadhan/4.png" alt="file too big"><br>
+<img src="/img/ramadhan/4.webp" alt="file too big"><br>
 Lansung aja mengupload webshell php, namun gagal karena file terlalu besar</p>
-<p><img src="/img/ramadhan/5.png" alt="php one line web shell"><br>
+<p><img src="/img/ramadhan/5.webp" alt="php one line web shell"><br>
 Ganti ke one liner php web shell, biar file size makin kecil</p>
-<p><img src="/img/ramadhan/10.png" alt="file name alredy exist"><br>
+<p><img src="/img/ramadhan/10.webp" alt="file name alredy exist"><br>
 Tapi gagal karena nama file sama dengan nama file sebelumnya, yaudah rubah lagi</p>
-<p><img src="/img/ramadhan/6.png" alt="rename"></p>
-<p><img src="/img/ramadhan/7.png" alt="upload"><br>
+<p><img src="/img/ramadhan/6.webp" alt="rename"></p>
+<p><img src="/img/ramadhan/7.webp" alt="upload"><br>
 Namun gagal lagi karena file type (php) tidak dijinkan, lalu mencoba beberapa teknik bypass file type upload, tapi tidak ada yang berhasil. Sedikit mentok dan pusing, membuat file test.txt dengan isi kosong untuk melakukan pengecekan apakah file upload berjalan dengan baik atau tidak</p>
-<p><img src="/img/ramadhan/8.png" alt="upload berhasil"><br>
+<p><img src="/img/ramadhan/8.webp" alt="upload berhasil"><br>
 File test.txt kosongan tadi berhasil di upload</p>
-<p><img src="/img/ramadhan/9.png" alt="cek file terupload"><br>
+<p><img src="/img/ramadhan/9.webp" alt="cek file terupload"><br>
 Lalu mencoba mengakses di server, dan ternyata beneran berhasil di upload</p>
 <p>Dari sini terlihat bahwa web ini memiliki kerentanan LFI dan ada fitur upload namun hanya file txt saja dan ukuran file cukup kecil, karena di LFI menggunakan fungsi include yang dimana ketika file yang di-include-kan mengandung tag php maka file tersebut akan dijalankan sebagai php, maka dari itu kita menggabungakan LFI dengan file upload tadi, dengan cara mengupload simple php backdoor dalam bentuk txt, dan memanggil file tersebut melalui LFI.</p>
-<p><img src="/img/ramadhan/12.png" alt="simple php web shell"><br>
+<p><img src="/img/ramadhan/12.webp" alt="simple php web shell"><br>
 Di atas adalah file shell yang akan diupload, namun ketika diupload, gagal</p>
-<p><img src="/img/ramadhan/11.png" alt="terdeteksi sebagai virus"><br>
+<p><img src="/img/ramadhan/11.webp" alt="terdeteksi sebagai virus"><br>
 File terdeteksi sebagai virus, setelah ditelusuri ternyata pada uploader ini melakukan pengecekan apakah file yang diupload mengandung kata php dan nama-nama fungsi shell exec lainnya,</p>
-<p><img src="/img/ramadhan/14.png" alt="improvement web shell"><br>
+<p><img src="/img/ramadhan/14.webp" alt="improvement web shell"><br>
 Setelah mencari tahu di google, ternyata php bisa berjalan dengan tag <code>&lt;?=</code> dan <code>`</code> sebagai fungsi shell exec tanpa harus memanggil nama fungsi, setelah di upload dan berhasil (yeayy), kita langsung panggil file ini dengan LFI pada loremipsum atau twice</p>
-<p><img src="/img/ramadhan/15.png" alt="running"><br>
+<p><img src="/img/ramadhan/15.webp" alt="running"><br>
 File berjalan namun tidak ada interaksi karena memerlukan param / index <code>c</code></p>
-<p><img src="/img/ramadhan/16.png" alt="berhasil"><br>
+<p><img src="/img/ramadhan/16.webp" alt="berhasil"><br>
 Langsung tambahkan param / index <code>c</code> dan berhasil</p>
-<p><img src="/img/ramadhan/17.png" alt="writing nickname to solver.txt"><br>
+<p><img src="/img/ramadhan/17.webp" alt="writing nickname to solver.txt"><br>
 Write nick to solver.txt <code>echo &quot;nick&quot; &gt;&gt; solver.txt</code></p>
-<p><img src="/img/ramadhan/18.png" alt="nick written"><br>
+<p><img src="/img/ramadhan/18.webp" alt="nick written"><br>
 Nick tertulis :3</p>
 <p>Namun ketika challenges ini dikerjakan oleh teman-teman yang ada pada group SHL, cukup menarik, karena banyak yang tidak menggunakan <code>`</code> untuk menulis nick, ada yang melalui command php files, dan beberapa trik evasion agar file txt tidak terdeteksi sebagai malware/virus ketika di upload seperti berikut</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?</span><span style="color:#f92672">=@</span>$_GET[<span style="color:#a6e22e">a</span>]($_GET[<span style="color:#a6e22e">b</span>])<span style="color:#75715e">?&gt;</span>
@@ -201,7 +213,7 @@ dan jika kalian ingin melihat versi video tentang challenges ini, kalian dapat m
 
 <div class="authorbox clearfix">
 	<figure class="authorbox__avatar">
-		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
 		<span class="authorbox__name">About Ardi Jonias Fortuna</span>

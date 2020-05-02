@@ -36,6 +36,18 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	<script>
+	var OneSignal = window.OneSignal || [];
+	OneSignal.push(function() {
+		OneSignal.init({
+			appId: "6a6c99a5-9957-48e6-a3be-0d88a9b5850b",
+				notifyButton: {
+					enable: true,
+				},
+			});
+		});
+	</script>
     <script data-ad-client="ca-pub-1926937123072670" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	
 </head>
 <body class="body">
@@ -101,7 +113,7 @@ if (!doNotTrack) {
 </div></div>
 		</header>
 		<figure class="post__thumbnail">
-			<img src="/img/fail2ban/thumb.png" alt="Harderning Server with Fail2ban and Reporting to Telegram">
+			<img src="/img/fail2ban/thumb.webp" alt="Harderning Server with Fail2ban and Reporting to Telegram">
 		</figure><div class="content post__content clearfix">
 			<!-- raw HTML omitted -->
 <p>Setelah cukup sibuk sehingga tidak sempat membuat challenges dan menuliskan bagaimana cara menyelesaikan challenges tersebut pada blog ini, kali ini kita akan membahas sedikit tentang fail2ban dan cara melakukan konfigurasinya</p>
@@ -373,7 +385,7 @@ failregex <span style="color:#f92672">=</span> ^&lt;HOST&gt;.*<span style="color
 
 <div class="authorbox clearfix">
 	<figure class="authorbox__avatar">
-		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
 		<span class="authorbox__name">About Ardi Jonias Fortuna</span>

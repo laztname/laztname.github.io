@@ -36,6 +36,18 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
+	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+	<script>
+	var OneSignal = window.OneSignal || [];
+	OneSignal.push(function() {
+		OneSignal.init({
+			appId: "6a6c99a5-9957-48e6-a3be-0d88a9b5850b",
+				notifyButton: {
+					enable: true,
+				},
+			});
+		});
+	</script>
     <script data-ad-client="ca-pub-1926937123072670" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>	
 </head>
 <body class="body">
@@ -101,7 +113,7 @@ if (!doNotTrack) {
 </div></div>
 		</header>
 		<figure class="post__thumbnail">
-			<img src="/img/git/banner.png" alt="Hey I Found Git Repository">
+			<img src="/img/git/banner.webp" alt="Hey I Found Git Repository">
 		</figure><div class="content post__content clearfix">
 			<h2 id="prakata">PRAKATA</h2>
 <p>Hanya sebuah catatan kecil ketika menemukan sebuah git repository yang terekspose pada sebuah website</p>
@@ -115,21 +127,21 @@ Sangat mudah, hanya perlu melakukan request kepada file-file default git, jika t
 <li>
 <p>Melakukan cloning pada git repository<br>
 Jika directory listing dinyalakan, cukup menggunakan <code>wget -r target.xyz/.git/</code><br>
-<a href="https://asciinema.org/a/rQjyDJhqAPNPqIjFXNnuerUkd"><img src="https://asciinema.org/a/rQjyDJhqAPNPqIjFXNnuerUkd.png" alt="asciicast"></a><br>
+<a href="https://asciinema.org/a/rQjyDJhqAPNPqIjFXNnuerUkd"><img src="https://asciinema.org/a/rQjyDJhqAPNPqIjFXNnuerUkd.webp" alt="asciicast"></a><br>
 Jika directory listing dimatikan, gunakan bantuan tools dari <a href="http://github.com/kost/dvcs-ripper">dvcs-ripper</a>, <a href="https://github.com/lijiejie/GitHack/">GitHack</a>, <a href="https://github.com/internetwache/GitTools/blob/master/Dumper/gitdumper.sh">gitdumper.sh</a>.<br>
 <code>rip-git -v -u &quot;target.xyz/.git&quot;</code><br>
-<a href="https://asciinema.org/a/Q24ntUkC0ywymWCHqx9jrlT80"><img src="https://asciinema.org/a/Q24ntUkC0ywymWCHqx9jrlT80.png" alt="asciicast"></a><br>
+<a href="https://asciinema.org/a/Q24ntUkC0ywymWCHqx9jrlT80"><img src="https://asciinema.org/a/Q24ntUkC0ywymWCHqx9jrlT80.webp" alt="asciicast"></a><br>
 <code>python2 GitHack.py http://target.xyz/.git/</code><br>
-<a href="https://asciinema.org/a/BrQPQfIwZHeYntoGVtRv16Vaw"><img src="https://asciinema.org/a/BrQPQfIwZHeYntoGVtRv16Vaw.png" alt="asciicast"></a><br>
+<a href="https://asciinema.org/a/BrQPQfIwZHeYntoGVtRv16Vaw"><img src="https://asciinema.org/a/BrQPQfIwZHeYntoGVtRv16Vaw.webp" alt="asciicast"></a><br>
 <code>bash gitdumper.sh http://target.xyz/.git/ dump-git</code><br>
-<a href="https://asciinema.org/a/0Gq4SJWmeEKSWScjMTzeiEson"><img src="https://asciinema.org/a/0Gq4SJWmeEKSWScjMTzeiEson.png" alt="asciicast"></a></p>
+<a href="https://asciinema.org/a/0Gq4SJWmeEKSWScjMTzeiEson"><img src="https://asciinema.org/a/0Gq4SJWmeEKSWScjMTzeiEson.webp" alt="asciicast"></a></p>
 </li>
 <li>
 <p>Melakukan checkout atau ekstrasi source code dari git repository<br>
 Beberapa tools sudah otomatis melakukan ekstrasi source code dari git repo, namun jika tidak secara otomatis melakukan ekstrasi source kita bisa melakukannya secara manual pertama melakukan checking hash terdapat file git yang telah terdownload, <code>git fsck</code> lalu melanjutkan dengan, <code>git reset --hard HEAD</code></p>
 </li>
 </ol>
-<p><img src="/img/git/git-fsck-and-reset.png" alt=""></p>
+<p><img src="/img/git/git-fsck-and-reset.webp" alt=""></p>
 <h2 id="pascakata">PASCAKATA</h2>
 <p>And source code sudah terambil<br>
 Thanks, semoga catatan ini berguna bagi kalian, jika ada tambahan atau koreksi silahkan taruh pada section comment :D</p>
@@ -153,7 +165,7 @@ Thanks, semoga catatan ini berguna bagi kalian, jika ada tambahan atau koreksi s
 
 <div class="authorbox clearfix">
 	<figure class="authorbox__avatar">
-		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
 		<span class="authorbox__name">About Ardi Jonias Fortuna</span>
