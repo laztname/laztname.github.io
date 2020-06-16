@@ -4,46 +4,56 @@
   
   <url>
     <loc>https://potato.id/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://potato.id/categories/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://potato.id/tags/challenges/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://potato.id/categories/offensive/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://potato.id/posts/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://potato.id/posts/retas-io-zombie-vm-write-up/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+    <loc>https://potato.id/tags/retas-labs/</loc>
+    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://potato.id/posts/retas-io-hellbound-vm-write-up/</loc>
+    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://potato.id/tags/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://potato.id/categories/web-hacking/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://potato.id/tags/write-up/</loc>
+    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://potato.id/posts/retas-io-zombie-vm-write-up/</loc>
     <lastmod>2020-05-25T00:00:00+00:00</lastmod>
   </url>
   
