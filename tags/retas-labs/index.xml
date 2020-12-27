@@ -6,11 +6,7 @@
     <description>Recent content in Retas Labs on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 15 Jun 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://potato.id/tags/retas-labs/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Mon, 15 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/retas-labs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Retas.io Hellbound VM Write-up</title>
       <link>https://potato.id/posts/retas-io-hellbound-vm-write-up/</link>
