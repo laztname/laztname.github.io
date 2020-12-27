@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on Ardi Jonias Fortuna # potato</title>
+    <link>https://potato.id/categories/development/</link>
+    <description>Recent content in Development on Ardi Jonias Fortuna # potato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Manajemen Job dan Shortcut pada Terminal</title>
+      <link>https://potato.id/posts/bash-job-management-and-shortcut/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/posts/bash-job-management-and-shortcut/</guid>
+      <description>Mungkin kita sering ketika sedang berurusan dengan terminal kita diminta untuk kerja cepat, hal ini sudah dibantu dengan bash-completion yang membuat kita dapat mengetikan command secara otomatis dengan menekan tombol [TAB] sebanyak 2 kali, tapi pada umumnya terminal memiliki shortcuts yang membantu kita bisa bekerja dengan linux secara mudah dan cepat, berikut adalah list umum shortcut pada terminal, list ini saya ambil dari academy hack the box.
+Completion
+[TAB] - Inisiasi auto completion command</description>
+    </item>
+    
+  </channel>
+</rss>

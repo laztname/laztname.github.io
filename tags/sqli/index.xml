@@ -6,11 +6,7 @@
     <description>Recent content in SQLI on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Fri, 25 Jan 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://potato.id/tags/sqli/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 25 Jan 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/sqli/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SQL Injection Into XRDP Account Take Over</title>
       <link>https://potato.id/posts/sql-injection-into-xrdp-account-take-over/</link>
