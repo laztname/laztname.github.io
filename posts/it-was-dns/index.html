@@ -109,7 +109,7 @@ if (!doNotTrack) {
 <p>Oleh karena itu saya melakukan trace respon DNS server pada domain monev.spbe.go.id menggunakan dig, akan tetapi test yang dilakukan ini saya coba beberapa kali dan mendapatkan 2 hasil yang berbeda</p>
 <p><img src="/img/dns/03-dig-1.jpeg" alt="dig-1"></p>
 <p>Pada percobaan awal server merespon dengan IP 61.8.65.103 dimana ip tersebut merupakan IP yang sama dengan yang diakses oleh user tadi dan server tidak merespon dengan baik</p>
-<p><img src="/img/dns/04-dns-2.jpeg" alt="dig-2"></p>
+<p><img src="/img/dns/04-dig-2.jpeg" alt="dig-2"></p>
 <p>Setelah dilakukan percobaan sebanyak 3-5 kali, dns server merespon dengan IP yang berbeda yaitu 202.152.8.36, dari hasil ini dilakukan test koneksi ke 2 IP tersebut pada port 80 dan 443 dan memberikan hasil bahwa pada ip 61.8.65.103 sudah tidak terdapat service http/s bahkan host tersebut sudah mati sedangkan pada IP 202.152.8.36 memberikan respon koneksi berhasil</p>
 <p><img src="/img/dns/05-test-open-port.jpeg" alt="test-open-port"></p>
 <p>dari hasil ini sudah kami duga bahwa terdapat masalah konfigurasi DNS server pada nameserver domain spbe.go.id, ternyata pada hasil whatsmydns.net ns server untuk domain spbe.go.id mendapati 2 respon yang berbeda dan hasil intodns.com juga memberikan bahwa terdapat 4 nameserver untuk domain spbe.go.id</p>
