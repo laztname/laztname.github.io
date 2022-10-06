@@ -15,8 +15,9 @@
       <guid>https://potato.id/posts/solution-for-qr-generator-challenges/</guid>
       <description>Diberikan Challenges
 Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.
-  Pengecekan Source Code
-Sebelum kita coba fitur dari web ini, kita cek source code-nya, apakah ada yang mencurigakan atau comment info dari pembuat Ternyata tidak ada apa-apa selain comment default dari bootstrap</description>
+Pengecekan Source Code
+Sebelum kita coba fitur dari web ini, kita cek source code-nya, apakah ada yang mencurigakan atau comment info dari pembuat Ternyata tidak ada apa-apa selain comment default dari bootstrap
+Mencoba Fitur</description>
     </item>
     
     <item>

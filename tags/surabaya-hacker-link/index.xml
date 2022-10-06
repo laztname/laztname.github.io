@@ -25,8 +25,9 @@ Sebenarnya untuk menyelesaikan challenges ini hampir tidak dibutuhkan tools hack
       <guid>https://potato.id/posts/solution-for-qr-generator-challenges/</guid>
       <description>Diberikan Challenges
 Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.
-  Pengecekan Source Code
-Sebelum kita coba fitur dari web ini, kita cek source code-nya, apakah ada yang mencurigakan atau comment info dari pembuat Ternyata tidak ada apa-apa selain comment default dari bootstrap</description>
+Pengecekan Source Code
+Sebelum kita coba fitur dari web ini, kita cek source code-nya, apakah ada yang mencurigakan atau comment info dari pembuat Ternyata tidak ada apa-apa selain comment default dari bootstrap
+Mencoba Fitur</description>
     </item>
     
     <item>
@@ -45,9 +46,10 @@ Sebelum kita coba fitur dari web ini, kita cek source code-nya, apakah ada yang 
       
       <guid>https://potato.id/posts/solution-for-surabaya-hacker-link-challenges/</guid>
       <description>Well, postingan ini dibuat karena challenges Surabaya Hacker Link telah diupdate dan ada salah seorang yang penasaran dengan challenges ini namun belum solved dan menyarankan agar dibuatkan video cara menyelesaikannya, ya namun ga bisa buat video ya tulisan aja deh, updated challenges
-  Disana dijelaskan bahwa kita harus menyelamatkan website si jhon ini lalu kita akan diberikan link group telegram (flag)
+Disana dijelaskan bahwa kita harus menyelamatkan website si jhon ini lalu kita akan diberikan link group telegram (flag)
 tampilan awal
-  Kita akses web si jhon ini</description>
+Kita akses web si jhon ini
+website di deface ternyata</description>
     </item>
     
     <item>

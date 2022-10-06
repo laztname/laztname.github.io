@@ -6,7 +6,16 @@
     <description>Recent content in Tags on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Write Up</title>
+      <link>https://potato.id/tags/write-up/</link>
+      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/tags/write-up/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Terminal</title>
       <link>https://potato.id/tags/terminal/</link>
@@ -31,15 +40,6 @@
       <pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate>
       
       <guid>https://potato.id/tags/retas-labs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Write Up</title>
-      <link>https://potato.id/tags/write-up/</link>
-      <pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://potato.id/tags/write-up/</guid>
       <description></description>
     </item>
     

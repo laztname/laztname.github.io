@@ -6,7 +6,16 @@
     <description>Recent content in Write Up on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 15 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/write-up/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/write-up/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Yes, It was DNS!</title>
+      <link>https://potato.id/posts/it-was-dns/</link>
+      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/posts/it-was-dns/</guid>
+      <description>It was DNS Seperti yang kita tau, DNS atau Domain Name Server adalah service yang bertugas untuk melakukan translate nama domain menjadi IP sehingga user tidak perlu mengingat IP yang cukup ribet/njelimet jika diingat satu-satu, maka dari itu DNS menjadi salah satu service yang cukup krusial dan harus di konfigurasi dengan baik, jika tidak maka dapat berdampak pada domain yang kita miliki akan susah atau bahkan tidak dapat diakses oleh user</description>
+    </item>
+    
     <item>
       <title>Retas.io Hellbound VM Write-up</title>
       <link>https://potato.id/posts/retas-io-hellbound-vm-write-up/</link>
@@ -54,8 +63,9 @@ Sebenarnya untuk menyelesaikan challenges ini hampir tidak dibutuhkan tools hack
       <guid>https://potato.id/posts/solution-for-qr-generator-challenges/</guid>
       <description>Diberikan Challenges
 Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.
-  Pengecekan Source Code
-Sebelum kita coba fitur dari web ini, kita cek source code-nya, apakah ada yang mencurigakan atau comment info dari pembuat Ternyata tidak ada apa-apa selain comment default dari bootstrap</description>
+Pengecekan Source Code
+Sebelum kita coba fitur dari web ini, kita cek source code-nya, apakah ada yang mencurigakan atau comment info dari pembuat Ternyata tidak ada apa-apa selain comment default dari bootstrap
+Mencoba Fitur</description>
     </item>
     
     <item>
@@ -86,9 +96,10 @@ yaudah deh coba cek pake &#39; dan hasilnya web tersebut error, setelah error me
       
       <guid>https://potato.id/posts/solution-for-surabaya-hacker-link-challenges/</guid>
       <description>Well, postingan ini dibuat karena challenges Surabaya Hacker Link telah diupdate dan ada salah seorang yang penasaran dengan challenges ini namun belum solved dan menyarankan agar dibuatkan video cara menyelesaikannya, ya namun ga bisa buat video ya tulisan aja deh, updated challenges
-  Disana dijelaskan bahwa kita harus menyelamatkan website si jhon ini lalu kita akan diberikan link group telegram (flag)
+Disana dijelaskan bahwa kita harus menyelamatkan website si jhon ini lalu kita akan diberikan link group telegram (flag)
 tampilan awal
-  Kita akses web si jhon ini</description>
+Kita akses web si jhon ini
+website di deface ternyata</description>
     </item>
     
     <item>
