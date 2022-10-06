@@ -6,7 +6,17 @@
     <description>Recent content in Development on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Yes, It was DNS!</title>
+      <link>https://potato.id/posts/it-was-dns/</link>
+      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/posts/it-was-dns/</guid>
+      <description>Seperti yang kita tau, DNS atau Domain Name Server adalah service yang bertugas untuk melakukan translate nama domain menjadi IP sehingga user tidak perlu mengingat IP yang cukup ribet/njelimet jika diingat satu-satu, maka dari itu DNS menjadi salah satu service yang cukup krusial dan harus di konfigurasi dengan baik, jika tidak maka dapat berdampak pada domain yang kita miliki akan susah atau bahkan tidak dapat diakses oleh user
+Sebagai contoh, beberapa waktu lalu ada rekan kerja yang komplain ke tim infrastruktur karena tidak bisa membuka web monev.</description>
+    </item>
+    
     <item>
       <title>Manajemen Job dan Shortcut pada Terminal</title>
       <link>https://potato.id/posts/bash-job-management-and-shortcut/</link>

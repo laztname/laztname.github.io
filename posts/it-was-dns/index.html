@@ -92,37 +92,37 @@ if (!doNotTrack) {
 			<h1 class="post__title">Yes, It was DNS!</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-10-06T00:00:00Z">06-10-2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-hacking/" rel="category">Web Hacking</a>, <a class="meta__link" href="/categories/offensive/" rel="category">Offensive</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-10-06T00:00:00Z">06-10-2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/development/" rel="category">Development</a>
 	</span>
 </div></div>
 		</header>
 		<figure class="post__thumbnail">
-			<img src="/img/heaven/ssh-adam.webp" alt="Yes, It was DNS!">
+			<img src="/img/dns/04-dns-2.jpeg" alt="Yes, It was DNS!">
 		</figure><div class="content post__content clearfix">
-			<h1 id="it-was-dns">It was DNS</h1>
-<p>Seperti yang kita tau, DNS atau Domain Name Server adalah service yang bertugas untuk melakukan translate nama domain menjadi IP sehingga user tidak perlu mengingat IP yang cukup ribet/njelimet jika diingat satu-satu, maka dari itu DNS menjadi salah satu service yang cukup krusial dan harus di konfigurasi dengan baik, jika tidak maka dapat berdampak pada domain yang kita miliki akan susah atau bahkan tidak dapat diakses oleh user</p>
+			<p>Seperti yang kita tau, DNS atau Domain Name Server adalah service yang bertugas untuk melakukan translate nama domain menjadi IP sehingga user tidak perlu mengingat IP yang cukup ribet/njelimet jika diingat satu-satu, maka dari itu DNS menjadi salah satu service yang cukup krusial dan harus di konfigurasi dengan baik, jika tidak maka dapat berdampak pada domain yang kita miliki akan susah atau bahkan tidak dapat diakses oleh user</p>
 <p>Sebagai contoh, beberapa waktu lalu ada rekan kerja yang komplain ke tim infrastruktur karena tidak bisa membuka web monev.spbe.go.id, singkat cerita saya meminta informasi kepada user tersebut untuk mendapatkan informasi tambahan seperti hasil trace dan screenshot error ketika membuka web yang dimaksud</p>
-<p><img src="C:%5CUsers%5CJonias%20Fortuna%5CDownloads%5CWhatsApp%20Image%202022-10-03%20at%2010.41.31%20AM(1).jpeg" alt="WhatsApp Image 2022-10-03 at 10.41.31 AM(1).jpeg"></p>
+<p><img src="/img/dns/01-tracert.jpeg" alt="tracert"></p>
 <p>Bisa dilihat hasil trace route menampilkan RTO / server tidak merespon, dari hasil traceroute ini juga kita bisa lihat bahwa server yang dituju memiliki alamat IP 61.8.65.103</p>
-<p><img src="C:%5CUsers%5CJonias%20Fortuna%5CDownloads%5CWhatsApp%20Image%202022-10-03%20at%2010.40.35%20AM.jpeg" alt="WhatsApp Image 2022-10-03 at 10.40.35 AM.jpeg"></p>
+<p><img src="/img/dns/02-browser.jpeg" alt="browser-error"></p>
 <p>User juga memberikan hasil ketika website diakses menggunakan browser dan dapat dilihat browser menampilkan error ERR_CONNECTION_RESET yang mana terjadi masalah koneksi antara client dan server</p>
 <p>Dari hasil tersebut muncul keanehan, karena pada komputer yang kami pakai tidak ada masalah ketika mengakses web tersebut sedangkan untuk koneksi internet masih dalam satu lingkup jaringan yang sama</p>
 <p>Oleh karena itu saya melakukan trace respon DNS server pada domain monev.spbe.go.id menggunakan dig, akan tetapi test yang dilakukan ini saya coba beberapa kali dan mendapatkan 2 hasil yang berbeda</p>
-<!-- raw HTML omitted -->
-<p>Pada percobaan awal server merespon dengan IP 61.8.65.103 dimana ip tersebut merupakan IP yang sama dengan yang diakses oleh user tadi dan server tidak merespon dengan baik<!-- raw HTML omitted --></p>
+<p><img src="/img/dns/03-dig-1.jpeg" alt="dig-1"></p>
+<p>Pada percobaan awal server merespon dengan IP 61.8.65.103 dimana ip tersebut merupakan IP yang sama dengan yang diakses oleh user tadi dan server tidak merespon dengan baik</p>
+<p><img src="/img/dns/04-dns-2.jpeg" alt="dig-2"></p>
 <p>Setelah dilakukan percobaan sebanyak 3-5 kali, dns server merespon dengan IP yang berbeda yaitu 202.152.8.36, dari hasil ini dilakukan test koneksi ke 2 IP tersebut pada port 80 dan 443 dan memberikan hasil bahwa pada ip 61.8.65.103 sudah tidak terdapat service http/s bahkan host tersebut sudah mati sedangkan pada IP 202.152.8.36 memberikan respon koneksi berhasil</p>
-<!-- raw HTML omitted -->
+<p><img src="/img/dns/05-test-open-port.jpeg" alt="test-open-port"></p>
 <p>dari hasil ini sudah kami duga bahwa terdapat masalah konfigurasi DNS server pada nameserver domain spbe.go.id, ternyata pada hasil whatsmydns.net ns server untuk domain spbe.go.id mendapati 2 respon yang berbeda dan hasil intodns.com juga memberikan bahwa terdapat 4 nameserver untuk domain spbe.go.id</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p><img src="/img/dns/06-whatsmydns.jpeg" alt="whatsmydns.net"></p>
+<p><img src="/img/dns/07-intodns.png" alt="intodns"></p>
 <p>Dimana pada nameserver dengan IP 103.18.117.9 (nscpl6.layanan.go.id / nscpl5.layanan.go.id) memberikan respon records dns monev.spbe.go.id dengan IP 61.8.65.103 sedangkan nameserver dengan IP 45.126.56.48 (ns2.spbe.go.id) dan IP 203.119.112.48 (ns1.spbe.go.id) memberikan respon dengan IP 202.152.8.36</p>
-<!-- raw HTML omitted -->
+<p><img src="/img/dns/08-test-dig.png" alt="testdig"></p>
 <p>Hal ini menjadi masalah utama kenapa domain monev.spbe.go.id tidak dapat diakses oleh user kami, pada hasil dari intodns.com juga menyebutkan bahwa SOA pada nameserver yang terdaftar tidak sinkron dan menyebabkan adanya 2 respon yang berbeda untuk domain monev.spbe.go.id</p>
-<!-- raw HTML omitted -->
+<p><img src="/img/dns/09-intodns-soa.png" alt="intodns-soa"></p>
 <p>Sebagai solusi permasalahan ini adalah melakukan penghapusan nameserver nscpl6.layanan.go.id dan nscpl5.layanan.go.id pada domain spbe.go.id atau melakukan sinkronisasi pada nameserver yang telat update agar dns server merespon data yang sama, karena hal tersebut diluar kendali tim maka solusi tersebut tidak dapat dilakukan</p>
 <p>solusi paling simpel adalah menambahkan records yang benar pada data /etc/hosts pada komputer user, tapi karena user yang cukup banyak dan akan merepotkan jika menambahkan satu-satu</p>
 <p>saya sarankan untuk melakukan spoofing domain tersebut pada local dns recursive server agar mengarah pada IP yang seharusnya yaitu 202.152.8.36</p>
-<!-- raw HTML omitted -->
+<p><img src="/img/dns/10-spoof-dns.jpeg" alt="spoof-dns"></p>
 <p>Konfigurasi yang tidak tepat terhadap service yang krusial memang memberikan dampak yang cukup besar, maka dari itu best practices adalah solusi yang tepat agar konfigurasi yang diterapkan tidak membawa masalah-masalah lainnya</p>
 
 		</div>

@@ -6,16 +6,7 @@
     <description>Recent content in Offensive on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Thu, 06 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/categories/offensive/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Yes, It was DNS!</title>
-      <link>https://potato.id/posts/it-was-dns/</link>
-      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://potato.id/posts/it-was-dns/</guid>
-      <description>It was DNS Seperti yang kita tau, DNS atau Domain Name Server adalah service yang bertugas untuk melakukan translate nama domain menjadi IP sehingga user tidak perlu mengingat IP yang cukup ribet/njelimet jika diingat satu-satu, maka dari itu DNS menjadi salah satu service yang cukup krusial dan harus di konfigurasi dengan baik, jika tidak maka dapat berdampak pada domain yang kita miliki akan susah atau bahkan tidak dapat diakses oleh user</description>
-    </item>
-    
+    <lastBuildDate>Mon, 15 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/categories/offensive/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Retas.io Hellbound VM Write-up</title>
       <link>https://potato.id/posts/retas-io-hellbound-vm-write-up/</link>
