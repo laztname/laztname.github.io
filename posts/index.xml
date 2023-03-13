@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Thu, 06 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 28 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lesson Learned from Ransomware</title>
+      <link>https://potato.id/posts/lesson-learned-from-ransomware/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/posts/lesson-learned-from-ransomware/</guid>
+      <description>Ransomware Ransomware merupakan salah satu jenis malware (malicious software) yang akan melakukan enkripsi terhadap file-file korban sehingga korban kehilangan akses terhadap data-data file yang dimiliki, malware ini akan melakukan dekripsi terhadap file-file tersebut jika tebusan / bayaran telah dibayar oleh korban namun tidak ada jaminan semua data tersebut dapat kembali serta jika korban tidak melakukan tebusan beberapa jenis ransomware akan mengekspos file-file korban ke internet, ransomware sendiri menyebarkan diri melalui installer palsu, phishing, exploit kit, remote desktop dsb</description>
+    </item>
+    
     <item>
       <title>Yes, It was DNS!</title>
       <link>https://potato.id/posts/it-was-dns/</link>
@@ -83,11 +92,10 @@ Umumnya fail2ban digunakan untuk melakukan ban terhadap IP yang gagal melakukan 
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://potato.id/posts/solution-for-qr-generator-challenges/</guid>
-      <description>Diberikan Challenges
+      <description>Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana, Challenges ini bertemakan QR Code Generator, namun letak vulnerability-nya tidak pada QR Code tersebut, lalu berikut adalah cara sederhana menyelesaikannya
+Diberikan Challenges
 Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.
-Pengecekan Source Code
-Sebelum kita coba fitur dari web ini, kita cek source code-nya, apakah ada yang mencurigakan atau comment info dari pembuat Ternyata tidak ada apa-apa selain comment default dari bootstrap
-Mencoba Fitur</description>
+Pengecekan Source Code</description>
     </item>
     
     <item>

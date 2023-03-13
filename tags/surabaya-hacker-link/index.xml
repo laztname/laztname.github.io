@@ -23,11 +23,10 @@ Sebenarnya untuk menyelesaikan challenges ini hampir tidak dibutuhkan tools hack
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://potato.id/posts/solution-for-qr-generator-challenges/</guid>
-      <description>Diberikan Challenges
+      <description>Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana, Challenges ini bertemakan QR Code Generator, namun letak vulnerability-nya tidak pada QR Code tersebut, lalu berikut adalah cara sederhana menyelesaikannya
+Diberikan Challenges
 Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.
-Pengecekan Source Code
-Sebelum kita coba fitur dari web ini, kita cek source code-nya, apakah ada yang mencurigakan atau comment info dari pembuat Ternyata tidak ada apa-apa selain comment default dari bootstrap
-Mencoba Fitur</description>
+Pengecekan Source Code</description>
     </item>
     
     <item>

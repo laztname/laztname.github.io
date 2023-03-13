@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="id-ID">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,16 +14,18 @@
 <meta property="article:published_time" content="2019-02-27T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-02-27T00:00:00+00:00" />
 
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mengenal Lebih Dekat, DOM Based XSS"/>
 <meta name="twitter:description" content="Pengenalan DOM Based XSS, bagaimana cara kerjanya dan pencegahannya"/>
 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/custom.css">
+
 	<link rel="shortcut icon" href="/favicon.ico">
 		
 <script type="application/javascript">
@@ -37,7 +39,7 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670" crossorigin="anonymous"></script>
+    <script data-ad-client="ca-pub-1926937123072670" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body class="body">
 	<div id="loading"></div>
@@ -95,7 +97,8 @@ if (!doNotTrack) {
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-02-27T00:00:00Z">27-02-2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-hacking/" rel="category">Web Hacking</a>
 	</span>
 </div></div>
-		</header><div class="content post__content clearfix">
+		</header>
+		<div class="content post__content clearfix">
 			<p>Sebelum menuju bahasan DOM XSS, kita kenalan dulu yuk sama DOM, apasih DOM itu?, <del>jarum?</del></p>
 <p>DOM adalah singkatan dari Document Object Model, yang maksudnya adalah struktur hirarki pada document html, jadi dalam kode html ada sebuah silsilah keluarga</p>
 <p>untuk XSS bisa dibaca di <a href="/posts/apakah-xss-itu-berbahaya">sini</a></p>
@@ -148,7 +151,7 @@ lalu menuliskannya kedalam document html pada tag option, dan menuliskan tag opt
 		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
-		<span class="authorbox__name">About Ardi Jonias Fortuna</span>
+		<span class="authorbox__name">About map[Name:Ardi Jonias Fortuna]</span>
 	</div>
 	<div class="authorbox__description">
 		Roses are red, violets are blue. There is nothing can&rsquo;t to do
@@ -169,10 +172,13 @@ lalu menuliskannya kedalam document html pada tag option, dan menuliskan tag opt
 		</a>
 	</div>
 </nav>
-
-
-<section class="comments">
-	<div id="disqus_thread"></div>
+<div id="disqus-container">
+  
+  
+    <button id="disqus-button" onclick="showComments()">Show comments</button>
+    <div id="disqus-comments">
+      
+        <div id="disqus_thread"></div>
 <script type="application/javascript">
     window.disqus_config = function () {
     
@@ -192,17 +198,19 @@ lalu menuliskannya kedalam document html pada tag option, dan menuliskan tag opt
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-
+      
+    </div>
+  
+</div>
 
 			</div>
 			<aside class="sidebar sidebar--left"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
 		</label>
 		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="https://potato.id/" />
+		<input type="hidden" name="sitesearch" value="https://potato.id/">
 	</form>
 </div><div class="widget-recent widget">
 	<h4 class="widget__title">Information</h4>
@@ -217,11 +225,11 @@ lalu menuliskannya kedalam document html pada tag option, dan menuliskan tag opt
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/lesson-learned-from-ransomware/">Lesson Learned from Ransomware</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/it-was-dns/">Yes, It was DNS!</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/bash-job-management-and-shortcut/">Manajemen Job dan Shortcut pada Terminal</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/retas-io-hellbound-vm-write-up/">Retas.io Hellbound VM Write-up</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/retas-io-zombie-vm-write-up/">Retas.io Zombie VM Write-up</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/solution-for-mhl-challenges/">Penyelesaian Challenges Malang Hacker Link</a></li>
 		</ul>
 	</div>
 </div>
@@ -230,20 +238,15 @@ lalu menuliskannya kedalam document html pada tag option, dan menuliskan tag opt
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/defensive/">Defensive</a>
-			</li>
+				<a class="widget__link" href="/categories/defensive/">Defensive</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/development/">Development</a>
-			</li>
+				<a class="widget__link" href="/categories/development/">Development</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/offensive/">Offensive</a>
-			</li>
+				<a class="widget__link" href="/categories/offensive/">Offensive</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/reversing/">Reversing</a>
-			</li>
+				<a class="widget__link" href="/categories/reversing/">Reversing</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/web-hacking/">Web Hacking</a>
-			</li>
+				<a class="widget__link" href="/categories/web-hacking/">Web Hacking</a></li>
 		</ul>
 	</div>
 </div>
@@ -270,12 +273,11 @@ lalu menuliskannya kedalam document html pada tag option, dan menuliskan tag opt
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (10)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (11)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra mail server">Zimbra mail server (1)</a>
 	</div>
 </div>
-
 <div class="widget-social widget">
 	<h4 class="widget-social__title widget__title">Social</h4>
 	<div class="widget-social__content widget__content">
@@ -319,7 +321,7 @@ lalu menuliskannya kedalam document html pada tag option, dan menuliskan tag opt
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2022 Ardi Jonias Fortuna.
+			&copy; 2023 Ardi Jonias Fortuna.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>

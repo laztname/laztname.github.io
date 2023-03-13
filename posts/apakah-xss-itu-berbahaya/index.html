@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="id-ID">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,16 +14,18 @@
 <meta property="article:published_time" content="2018-12-20T00:00:00+00:00" />
 <meta property="article:modified_time" content="2018-12-20T00:00:00+00:00" />
 
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Apakah XSS Itu Berbahaya ?"/>
 <meta name="twitter:description" content="Sedikit pembahasan tentang cross site scripting mulai dari reflected, stored hingga upload webshell melalui xss, serta pembahasan apakah xss itu berbahaya"/>
 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/custom.css">
+
 	<link rel="shortcut icon" href="/favicon.ico">
 		
 <script type="application/javascript">
@@ -37,7 +39,7 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670" crossorigin="anonymous"></script>
+    <script data-ad-client="ca-pub-1926937123072670" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body class="body">
 	<div id="loading"></div>
@@ -95,17 +97,18 @@ if (!doNotTrack) {
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-12-20T00:00:00Z">20-12-2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-hacking/" rel="category">Web Hacking</a>
 	</span>
 </div></div>
-		</header><div class="content post__content clearfix">
+		</header>
+		<div class="content post__content clearfix">
 			<p>Dari hasil menyimak di beberapa group IT yang saya ikuti banyak sekali yang bertanya-tanya, Apakah XSS itu berbahaya?,  Cara upload webshell lewat XSS itu gimana ya gan?, Laporan Bug XSS-ku kok engga ditanggepi sih? Apa karena XSS itu gak berbahaya ya?, <del>Apa karena admin webnya udah anu ?</del>, Ya kurang lebih begitulah pertanyaan yang mencuat, Mari kita bahas bareng-bareng gimana sih karakteristik XSS itu,</p>
 <p>Cross-site scripting is a type of computer security vulnerability typically found in web applications. XSS enables attackers to inject client side scripts into web pages viewed by other users. A cross-site scripting vulnerability may be used by attackers to bypass access controls such as the same-origin policy. &ndash;Wikipedia&ndash;</p>
-<p>Dalam bahasa indonesianya kurang lebih jadi gini, pada celah keamanan XSS penyerang dapat memasukan atau menginputkan tag html yang dirender oleh client (web browser), nah pada tag html ini ada bahasa yang bisa dijalankan yaitu javascript (tag &lt;script&gt;), jadi kebanyakan payload untuk XSS adalah bahasa javascript (check -&gt; <!-- raw HTML omitted --><a href="https://www.xss-payloads.com">www.xss-payloads.com</a><!-- raw HTML omitted -->), jika tidak bisa menjalankan javascript namun html tag tetap berhasil dirender maka bug termasuk ke dalam HTML Injection</p>
+<p>Dalam bahasa indonesianya kurang lebih jadi gini, pada celah keamanan XSS penyerang dapat memasukan atau menginputkan tag html yang dirender oleh client (web browser), nah pada tag html ini ada bahasa yang bisa dijalankan yaitu javascript (tag &lt;script&gt;), jadi kebanyakan payload untuk XSS adalah bahasa javascript (check -&gt; <a href="www.xss-payloads.com">www.xss-payloads.com</a>), jika tidak bisa menjalankan javascript namun html tag tetap berhasil dirender maka bug termasuk ke dalam HTML Injection</p>
 <p>Lalu Apakah XSS itu berbahaya?, Jawabannya adalah Tergantung, <del>iya kek perasaanku :(</del> jika XSS tersebut hanyalah sebuah self-XSS yang maksudnya adalah XSS tersebut hanya valid terhadap user kita sendiri dan tidak mempunyai impact ke user lain, maka bisa dibilang XSS tersebut tidak valid, Nah jika XSS tersebut reflected atau stored apalagi bisa sampai untuk steal cookie maka XSS tersebut cukup berbahaya, kenapa?</p>
-<p>Jika reflected pada parameter get (contoh pada fitur search yang menggunakan method get -&gt; <code>web.com/?cari=&lt;script&gt;alert(1337)&lt;/script&gt;</code>,  maka dalam hal ini bisa digunakan sebagai scam, contoh: kita alurkan seperti ini penyerang membuat payload javascript untuk mendirect ke web yang telah dibuat sedimikian serupa untuk melakukan scamming, atau membuat form palsu yang mengoverlay halaman asli dan mengirimkan input data dari form palsu tadi ke server penyerang, kurang lebih seperti itu atau sedikit social engineering -&gt; (<!-- raw HTML omitted --><a href="https://github.com/laztname/xss">https://github.com/laztname/xss</a><!-- raw HTML omitted -->)</p>
+<p>Jika reflected pada parameter get (contoh pada fitur search yang menggunakan method get -&gt; <code>web.com/?cari=&lt;script&gt;alert(1337)&lt;/script&gt;</code>,  maka dalam hal ini bisa digunakan sebagai scam, contoh: kita alurkan seperti ini penyerang membuat payload javascript untuk mendirect ke web yang telah dibuat sedimikian serupa untuk melakukan scamming, atau membuat form palsu yang mengoverlay halaman asli dan mengirimkan input data dari form palsu tadi ke server penyerang, kurang lebih seperti itu atau sedikit social engineering -&gt; <a href="https://github.com/laztname/xss">https://github.com/laztname/xss</a></p>
 <p>Jika stored maka payload XSS kita yang sekrip sekrip itu tadi bakal disimpan pada database, lalu jika pada page lain website menampilkan data payload tadi maka XSS tersebut akan berjalan dengan asumsi website rentan terhadap XSS, oleh karena itu dampak buruk untuk Stored XSS ini adalah penyerang dapat mencuri cookie user lain, nah karena penyerang dapet cookies maka si penyerang ini dapat melakukan cookie poisoning, yang berdampak penyerang dapat masuk sebagai user lain tanpa harus mengetahui username atau password tersebut</p>
 <p>Bisa ngga upload webshell melalui XSS? bisa!, namun alurnya begini, contoh penyerang menemukan celah XSS pada fitur kontak-admin, penyerang mengirimkan payload XSS untuk mencuri kue kering admin, mengirimkan cookies ke server penyerang, dan melakukan cookie poisoning, berhasil masuk sebagai admin, nah tinggal recon aja mungkin nemu fitur upload file yang tidak terfilter dengan baik</p>
 <p>Lalu kenapa kok Bug XSS jarang ditanggepi? <del>karena kamu kurang ganteng</del> mungkin sih laporan yang kamu buat belum bisa memberikan gambaran ke admin/developer bagaimana berbahayanya XSS itu, kalo bisa dalam laporan vulnerability itu di beri cara untuk mereprocodure, dampak (ini yang sangat penting), lalu rekomendasi yang harus dilakukan, banyak kok writeup laporan vulnerability yang mungkin bisa kamu gunakan sebagai referensi</p>
-<p>Mungkin ini saja sih tanggapan dari seorang yang mengandalkan keberuntungan ini, jika ada salah kata atau apalah, mohon dikoreksi, kita sama-sama belajar kok ;) <!-- raw HTML omitted -->ccciiieeeeee<!-- raw HTML omitted --></p>
-<p><!-- raw HTML omitted -->yes there in no image for this article<!-- raw HTML omitted --><!-- raw HTML omitted --><br>
+<p>Mungkin ini saja sih tanggapan dari seorang yang mengandalkan keberuntungan ini, jika ada salah kata atau apalah, mohon dikoreksi, kita sama-sama belajar kok ;) <del>ccciiieeeeee</del></p>
+<p><del>yes there in no image for this article</del> <br>
 untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-prevention">sini</a></p>
 
 		</div>
@@ -128,7 +131,7 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
-		<span class="authorbox__name">About Ardi Jonias Fortuna</span>
+		<span class="authorbox__name">About map[Name:Ardi Jonias Fortuna]</span>
 	</div>
 	<div class="authorbox__description">
 		Roses are red, violets are blue. There is nothing can&rsquo;t to do
@@ -143,10 +146,13 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 		</a>
 	</div>
 </nav>
-
-
-<section class="comments">
-	<div id="disqus_thread"></div>
+<div id="disqus-container">
+  
+  
+    <button id="disqus-button" onclick="showComments()">Show comments</button>
+    <div id="disqus-comments">
+      
+        <div id="disqus_thread"></div>
 <script type="application/javascript">
     window.disqus_config = function () {
     
@@ -166,17 +172,19 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-
+      
+    </div>
+  
+</div>
 
 			</div>
 			<aside class="sidebar sidebar--left"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
 		</label>
 		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="https://potato.id/" />
+		<input type="hidden" name="sitesearch" value="https://potato.id/">
 	</form>
 </div><div class="widget-recent widget">
 	<h4 class="widget__title">Information</h4>
@@ -191,11 +199,11 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/lesson-learned-from-ransomware/">Lesson Learned from Ransomware</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/it-was-dns/">Yes, It was DNS!</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/bash-job-management-and-shortcut/">Manajemen Job dan Shortcut pada Terminal</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/retas-io-hellbound-vm-write-up/">Retas.io Hellbound VM Write-up</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/retas-io-zombie-vm-write-up/">Retas.io Zombie VM Write-up</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/solution-for-mhl-challenges/">Penyelesaian Challenges Malang Hacker Link</a></li>
 		</ul>
 	</div>
 </div>
@@ -204,20 +212,15 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/defensive/">Defensive</a>
-			</li>
+				<a class="widget__link" href="/categories/defensive/">Defensive</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/development/">Development</a>
-			</li>
+				<a class="widget__link" href="/categories/development/">Development</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/offensive/">Offensive</a>
-			</li>
+				<a class="widget__link" href="/categories/offensive/">Offensive</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/reversing/">Reversing</a>
-			</li>
+				<a class="widget__link" href="/categories/reversing/">Reversing</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/web-hacking/">Web Hacking</a>
-			</li>
+				<a class="widget__link" href="/categories/web-hacking/">Web Hacking</a></li>
 		</ul>
 	</div>
 </div>
@@ -244,12 +247,11 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (10)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (11)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra mail server">Zimbra mail server (1)</a>
 	</div>
 </div>
-
 <div class="widget-social widget">
 	<h4 class="widget-social__title widget__title">Social</h4>
 	<div class="widget-social__content widget__content">
@@ -293,7 +295,7 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2022 Ardi Jonias Fortuna.
+			&copy; 2023 Ardi Jonias Fortuna.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>

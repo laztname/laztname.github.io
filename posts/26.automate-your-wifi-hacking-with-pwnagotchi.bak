@@ -1,0 +1,44 @@
++++
+date = "2021-12-22"
+title = "Automate wifi hacking with 'AI'"
+slug = "automate-wifi-hacking-with-ai"
+description = ""
+thumbnail = ""
+categories = [
+	]
+
+tags = [
+	]
++++
+
+0. Intro
+1. Instalasi
+2. Konfigurasi
+3. Pwn
+
+Tidak bisa dipungkiri pada proses hacking anatomy gaining access merupakan fase yang sangat sulit karena pada fase tersebut kita harus mendapatkan akses pada target, dalam red teaming fase gaining access merupakan hal yang menarik karena umumnya red team akan mencoba melakukan banyak cara untuk mendapatkan akses pada sebuah mesin, hal ini tentunya termasuk akses ke dalam jaringan yang akan di pentest dan cukup menarik karena banyak cara untuk mendapatkan akses dan memasang backdoor di dalam mesin yang ada pada jaringan target, salah satunya koneksi wireless yang sangat mudah ditemui pada beberapa titik yang ada di lapangan, namun tidak mungkin juga kita harus wira-wiri membawa laptop sambil menjalankan aircrack-ng untuk melakukan dump handshakes dan deauth.
+
+Maka dari itu pwnagotchi merupakan salah satu solusi untuk mengumpulkan handshakes wifi secara otomatis dengan bantuan "AI"
+
+Wi-Fi hacking sendiri merupakan kebutuhan dari red teaming untuk mendapatkan akses jaringan yang ada pada sebuah organisasi, umumnya wifi hacking akan membutuhkan waktu menyesuaikan dengan jarak AP, banyaknya client, serta perlindungan yang digunakan oleh AP itu sendiri
+metode paling umum untuk melakukan hacking wifi adalah menggunakan bruteforce handshake wifi, namun pada prakteknya mendapatkan handshake cukup sulit dikarenakan jarak serta ribetnya untuk melakukan deauth dan monitoring
+PwnagotchiPwnagotchi adalah sebuah iot yang dikembangkan oleh evilsocket, tentunya dapat digunakan untuk mendapatkan handshake dengan mudah dan dapat dikostumisasi dengan plugin untuk langsung mengupload handshake tersebut pada situs seperti wpa-sec.stanev.org menggunakan api
+
+untuk membangun sebuah pwnagotchi diperlukan device berikut
+raspi 0 w
+sd-card
+cable usb data
+power bank
+
+optional device
+e-ink paper monitor
+ups-lite/pengganti powerbank
+
+Konfigurasi yang perlu dilakukan sebelum diaktifkan, perlu dilakukan flash firmware pwnagotchi pada sdcard,
+download firmware + verifikasi checksum.
+flash image menggunakan balenaEtcher
+inisiasi konfigurasi config.toml
+first boot
+
+koneksi ke pwnagotchi
+kabel / bt

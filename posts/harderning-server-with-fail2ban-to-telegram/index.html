@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="id-ID">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,16 +14,18 @@
 <meta property="article:published_time" content="2019-11-11T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-11-11T00:00:00+00:00" />
 
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Harderning Server with Fail2ban and Reporting to Telegram"/>
 <meta name="twitter:description" content="Melakukan konfigurasi fail2ban untuk mail server zimbra dan wordpress cms kemudian melakukan notifikasi melalui bot telegram ketika fail2ban melakukan aksi"/>
 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/custom.css">
+
 	<link rel="shortcut icon" href="/favicon.ico">
 		
 <script type="application/javascript">
@@ -37,7 +39,7 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670" crossorigin="anonymous"></script>
+    <script data-ad-client="ca-pub-1926937123072670" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body class="body">
 	<div id="loading"></div>
@@ -96,10 +98,13 @@ if (!doNotTrack) {
 	</span>
 </div></div>
 		</header>
-		<figure class="post__thumbnail">
-			<img src="/img/fail2ban/thumb.webp" alt="Harderning Server with Fail2ban and Reporting to Telegram">
-		</figure><div class="content post__content clearfix">
-			<!-- raw HTML omitted -->
+		
+	<figure class="post__thumbnail thumbnail">
+		
+		<img class="thumbnail__image" src="/img/fail2ban/thumb.webp" alt="Harderning Server with Fail2ban and Reporting to Telegram">
+		
+	</figure><div class="content post__content clearfix">
+			<p><img src="/img/fail2ban/thumb.webp" alt="fail2ban-logs"></p>
 <p>Setelah cukup sibuk sehingga tidak sempat membuat challenges dan menuliskan bagaimana cara menyelesaikan challenges tersebut pada blog ini, kali ini kita akan membahas sedikit tentang fail2ban dan cara melakukan konfigurasinya</p>
 <p>Umumnya fail2ban digunakan untuk melakukan ban terhadap IP yang gagal melakukan authentikasi sebanyak batas maksimal yang disebutkan pada konfigurasi dan IPS ini sangat ampuh mencekal serangan yang akan terjadi pada server, seperti serangan bruteforce pada port ssh (22), ftp (21), smtp (25) dsb, bahkan serangan lainnya yang melalui web server (80/443), lalu sebelum mengetahui bagaimana konfigurasi fail2ban kita akan belajar sedikit tentang bagaimana fail2ban bekerja.</p>
 <p>Pada halaman websitenya (<a href="https://www.fail2ban.org">https://www.fail2ban.org</a>) disebutkan bahwa fail2ban melakukan scanning terhadap file log (seperti /var/log/apache/access.log) dan melakukan ban terhadap IP yang melakukan kegiatan janggal seperti login berulang dalam waktu yang singkat (bruteforce), kesalahan password, dann kegiatan eksploitasi lainnya. Fail2ban umumnya menggunakan firewall (iptables) untuk melakukan update rule firewall (melakukan ban).<br>
@@ -377,7 +382,7 @@ dengan isi:</p>
 		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
-		<span class="authorbox__name">About Ardi Jonias Fortuna</span>
+		<span class="authorbox__name">About map[Name:Ardi Jonias Fortuna]</span>
 	</div>
 	<div class="authorbox__description">
 		Roses are red, violets are blue. There is nothing can&rsquo;t to do
@@ -398,10 +403,13 @@ dengan isi:</p>
 		</a>
 	</div>
 </nav>
-
-
-<section class="comments">
-	<div id="disqus_thread"></div>
+<div id="disqus-container">
+  
+  
+    <button id="disqus-button" onclick="showComments()">Show comments</button>
+    <div id="disqus-comments">
+      
+        <div id="disqus_thread"></div>
 <script type="application/javascript">
     window.disqus_config = function () {
     
@@ -421,17 +429,19 @@ dengan isi:</p>
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-
+      
+    </div>
+  
+</div>
 
 			</div>
 			<aside class="sidebar sidebar--left"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
 		</label>
 		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="https://potato.id/" />
+		<input type="hidden" name="sitesearch" value="https://potato.id/">
 	</form>
 </div><div class="widget-recent widget">
 	<h4 class="widget__title">Information</h4>
@@ -446,11 +456,11 @@ dengan isi:</p>
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/lesson-learned-from-ransomware/">Lesson Learned from Ransomware</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/it-was-dns/">Yes, It was DNS!</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/bash-job-management-and-shortcut/">Manajemen Job dan Shortcut pada Terminal</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/retas-io-hellbound-vm-write-up/">Retas.io Hellbound VM Write-up</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/retas-io-zombie-vm-write-up/">Retas.io Zombie VM Write-up</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/solution-for-mhl-challenges/">Penyelesaian Challenges Malang Hacker Link</a></li>
 		</ul>
 	</div>
 </div>
@@ -459,20 +469,15 @@ dengan isi:</p>
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/defensive/">Defensive</a>
-			</li>
+				<a class="widget__link" href="/categories/defensive/">Defensive</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/development/">Development</a>
-			</li>
+				<a class="widget__link" href="/categories/development/">Development</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/offensive/">Offensive</a>
-			</li>
+				<a class="widget__link" href="/categories/offensive/">Offensive</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/reversing/">Reversing</a>
-			</li>
+				<a class="widget__link" href="/categories/reversing/">Reversing</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/web-hacking/">Web Hacking</a>
-			</li>
+				<a class="widget__link" href="/categories/web-hacking/">Web Hacking</a></li>
 		</ul>
 	</div>
 </div>
@@ -499,12 +504,11 @@ dengan isi:</p>
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (10)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (11)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra mail server">Zimbra mail server (1)</a>
 	</div>
 </div>
-
 <div class="widget-social widget">
 	<h4 class="widget-social__title widget__title">Social</h4>
 	<div class="widget-social__content widget__content">
@@ -548,7 +552,7 @@ dengan isi:</p>
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2022 Ardi Jonias Fortuna.
+			&copy; 2023 Ardi Jonias Fortuna.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>

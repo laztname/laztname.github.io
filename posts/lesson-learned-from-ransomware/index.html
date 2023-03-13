@@ -4,17 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Tags - Ardi Jonias Fortuna # potato</title>
+	<title>Lesson Learned from Ransomware - Ardi Jonias Fortuna # potato</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="">
-		<meta property="og:title" content="Tags" />
-<meta property="og:description" content="Ardi Jonias Fortuna&#39;s personal website." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://potato.id/tags/" />
+	<meta name="description" content="Lesson learned dari serangan ransomware serta beberapa hal yang dapat dilakukan untuk mengurangi scope serangan dari ransomware">
+		<meta property="og:title" content="Lesson Learned from Ransomware" />
+<meta property="og:description" content="Lesson learned dari serangan ransomware serta beberapa hal yang dapat dilakukan untuk mengurangi scope serangan dari ransomware" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://potato.id/posts/lesson-learned-from-ransomware/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-02-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-02-28T00:00:00+00:00" />
 
 		<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content="Ardi Jonias Fortuna&#39;s personal website."/>
+<meta name="twitter:title" content="Lesson Learned from Ransomware"/>
+<meta name="twitter:description" content="Lesson learned dari serangan ransomware serta beberapa hal yang dapat dilakukan untuk mengurangi scope serangan dari ransomware"/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -23,7 +25,6 @@
 
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/custom.css">
-	<link rel="alternate" type="application/rss+xml" href="/tags/index.xml" title="Ardi Jonias Fortuna # potato">
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
@@ -87,50 +88,123 @@ if (!doNotTrack) {
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main list" role="main">
-	<header class="main__header">
-		<h1 class="main__title">Tags</h1>
-	</header><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/tags/xss/" rel="bookmark">
-			XSS
-			</a>
-		</h2>
-		<div class="list__meta meta">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Lesson Learned from Ransomware</h1>
+			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-02-27T00:00:00Z">27-02-2019</time></div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-02-28T00:00:00Z">28-02-2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/development/" rel="category">Development</a>
+	</span>
+</div></div>
+		</header>
 		
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/tags/sqli/" rel="bookmark">
-			SQLI
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-01-25T00:00:00Z">25-01-2019</time></div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
+	<figure class="post__thumbnail thumbnail">
 		
-	</div>
-</article>
+		<img class="thumbnail__image" src="/img/ransomware/locked-computer.webp" alt="Lesson Learned from Ransomware">
+		
+	</figure><div class="content post__content clearfix">
+			<h2 id="ransomware">Ransomware</h2>
+<p>Ransomware merupakan salah satu jenis malware (malicious software) yang akan melakukan enkripsi terhadap file-file korban sehingga korban kehilangan akses terhadap data-data file yang dimiliki, malware ini akan melakukan dekripsi terhadap file-file tersebut jika tebusan / bayaran telah dibayar oleh korban namun tidak ada jaminan semua data tersebut dapat kembali serta jika korban tidak melakukan tebusan beberapa jenis ransomware akan mengekspos file-file korban ke internet, ransomware sendiri menyebarkan diri melalui installer palsu, phishing, exploit kit, remote desktop dsb</p>
+<p>Agar data kita lebih aman lagi dan terhindar dari serangan ransomware ini berikut adalah <em>lesson learned</em> yang dapat penulis simpulkan berdasarkan beberapa kasus yang penulis alami serta dari pengalaman teman penulis yang telah menjadi korban serangan ransomware</p>
+<h3 id="1-siapapun-dapat-menjadi-korban-ransomware">1. Siapapun dapat menjadi korban ransomware</h3>
+<ul>
+<li>siapapun bisa jadi korban, tidak menutup dari jenis organisasi/perusahaan apa saja dan dari background personal apapun, berikut adalah <a href="https://www.ransomware.live/#/allposts">daftar korban ransomware</a> yang tercatat oleh ransomware.live, dapat dilihat dari daftar tersebut jika banyak ragam jenis organisasi atau perusahaan yang telah menjadi korban dari serangan siber ini hal ini juga tidak menutup fakta bahwa ransomware juga menargetkan personal juga, maka dari itu kita harus lebih aware lagi terhadap cara-cara umum ransomware ini tersebar dan melakukan backup secara rutin terhadap data-data penting kita.</li>
+</ul>
+<h3 id="2-investing-in-security-process--instead-of-product-care-the-data-more-">2. Investing in security process ( instead of product, care the data more )</h3>
+<ul>
+<li>there is no silver bullet, tidak ada kartu as untuk menangani serangan ransomware, perlu membuat planning yang matang.</li>
+<li>lebih fokus ke keamanan data / informasi, jangan hanya bergantung pada security device seperti firewall / edr, serangan ransomware sendiri juga dapat mengelabuhi perimeter keamanan tersebut.</li>
+<li>melakukan security awareness secara berkala kepada karyawan ( pelatihan / ujian ), pada perusahaan yang telah menggunakan sebagian besar teknologi pada sistem kerja karywannya maka perlu dilakukan security awareness secara berkala agar karaawan tidak menjadi korban dan berdampak pada sisi perusahaan.</li>
+<li>update security newsletter, selalu update tentang keamananan informasi agar tidak ketinggalan jika terdapat jenis serangan baru yang diguanakan oleh threat actor sehingga dapat dihindari lebih dini.</li>
+</ul>
+<h3 id="3-defining-assets-before-securing--internet-facing-services-">3. Defining assets before securing ( Internet-facing services )</h3>
+<ul>
+<li>melakukan pendataan terhadap services dan device yang dapat diakses di internet secara langsung dan melakukan penjadwalan assessment secara berkala serta melakukan mitigasi terhadap temuan tersebut (yes, ini akan sedikit makan waktu).</li>
+<li>jika kita mempunyai managed service maka kita juga harus mempunyai data terkait data-data versi dan patches yang telah diinstall pada managed service.</li>
+</ul>
+<h3 id="4-having-a-backup-plan-for-any-atttack--business-continuity-">4. Having a backup plan for any atttack ( business continuity )</h3>
+<ul>
+<li>pembuatan BCP / business continuity plan yang matang, sesuai dan sudah diuji.</li>
+<li>uji coba dan validasi BCP yang telah dibuat</li>
+</ul>
+<h3 id="5-your-backup-might-not-work">5. Your backup might not work</h3>
+<ul>
+<li>memiliki setidaknya 1 air-gapped backup, beberapa serangan ransomware juga menyerang server backup korban sehingga korban tidak dapat melakukan resotrasi data-data yang telah dibackup sebelumnya, maka dari itu kita juga perlu mempunyai backup sendiri dan bersifat air-gapped / tidak terhubung oleh internet seperti hdd extrernal backup dsb</li>
+<li>validasi backup, cek ulang selalu data backup anda, pastikan metode backup yang digunakan tepat dan sesuai dengan kebutuhan</li>
+<li>uji coba dan validasi dari hasil backup-restore, jangan lupa lakukan percobaan recovery terhadap data-data yang telah dibackup, untuk menghindari kemungkinan lainnya yang tidak diinginkan seperti gagal restore karena data corrupted</li>
+</ul>
+<h2 id="kesimpulan">Kesimpulan</h2>
+<p>Ransomware akhir-akhir ini menjadi masalah dalam keamanan siber, setiap individu dan organisasi harus mengambil langkah secepatnya untuk menghindari dari serangan tersebut, lesson learned yang telah dibuat telah mencakupi backup-recovery, cybersecurity awareness dan assets+patch management, dengan mengimplementasikan hal-hal tersebut setiap individu dan organisasi dapat mengurangi resiko terhadap serangan ransomware maupun serangan siber lainnya, tulisan ini hanya sebagai review saja dari penulis, jika ada kekurangan mungkin bisa ditambahkan pada kolom komentar, TIA.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/write-up/" rel="tag">Write Up</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
 </main>
 
-<div class="pagination">
-	<a class="pagination__item pagination__item--prev btn" href="/tags/page/2/">«</a>
-	<span class="pagination__item pagination__item--current">3/3</span>
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About map[Name:Ardi Jonias Fortuna]</span>
+	</div>
+	<div class="authorbox__description">
+		Roses are red, violets are blue. There is nothing can&rsquo;t to do
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/it-was-dns/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Yes, It was DNS!</p>
+		</a>
+	</div>
+</nav>
+<div id="disqus-container">
+  
+  
+    <button id="disqus-button" onclick="showComments()">Show comments</button>
+    <div id="disqus-comments">
+      
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "potato-baked" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    </div>
+  
 </div>
 
 			</div>
-			
-<aside class="sidebar sidebar--left"><div class="widget-search widget">
+			<aside class="sidebar sidebar--left"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<label>
 			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">

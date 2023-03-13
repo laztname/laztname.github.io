@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="id-ID">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,16 +14,18 @@
 <meta property="article:published_time" content="2018-12-21T00:00:00+00:00" />
 <meta property="article:modified_time" content="2018-12-21T00:00:00+00:00" />
 
-
 		<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Penyelesaian Untuk Web &#39;Simple&#39; Challenges"/>
 <meta name="twitter:description" content="Write up challenges dari Surabaya Hacker Link, simple web challenges"/>
 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/custom.css">
+
 	<link rel="shortcut icon" href="/favicon.ico">
 		
 <script type="application/javascript">
@@ -37,7 +39,7 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670" crossorigin="anonymous"></script>
+    <script data-ad-client="ca-pub-1926937123072670" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body class="body">
 	<div id="loading"></div>
@@ -96,9 +98,12 @@ if (!doNotTrack) {
 	</span>
 </div></div>
 		</header>
-		<figure class="post__thumbnail">
-			<img src="/img/simplewebchall/solverlist.webp" alt="Penyelesaian Untuk Web &#39;Simple&#39; Challenges">
-		</figure><div class="content post__content clearfix">
+		
+	<figure class="post__thumbnail thumbnail">
+		
+		<img class="thumbnail__image" src="/img/simplewebchall/solverlist.webp" alt="Penyelesaian Untuk Web &#39;Simple&#39; Challenges">
+		
+	</figure><div class="content post__content clearfix">
 			<p><img src="/img/simplewebchall/solverlist.webp" alt=""></p>
 <h2 id="pra-kata">Pra Kata</h2>
 <p>Sebelumnya terima kasih buat slashroot ctf karena tanpa slashroot ctf mungkin saya tidak bisa memprovide challenges ini melalui dewaweb.com, Terima kasih buat teman-teman yang sudah meluangkan waktunya untuk challenges &lsquo;simple&rsquo; ini,</p>
@@ -109,16 +114,18 @@ if (!doNotTrack) {
 terlihat jelas ada info bahwa git repositori (/.git/) dipindahkan pada /git/ kita coba akses dulu</p>
 <p><img src="/img/simplewebchall/image-2.webp" alt=""><br>
 forbidden belum berarti file tidak ada (404-not_found)</p>
-<p>karena ini litespeed maka defaultnya directory listing pada web server ini dimatikan sama seperti web server sebelah (baca: ya itulah <!-- raw HTML omitted -->nging<!-- raw HTML omitted --> nginx), kita cek apakah benar git repo ada pada direktori tersebut?, temen-temen pasti hafal bagaimana file yang pasti ada pada folder git repo, yup bener, /git/config, /git/description, /git/HEAD, dsb. lalu kita coba request salah satu</p>
+<p>karena ini litespeed maka defaultnya directory listing pada web server ini dimatikan sama seperti web server sebelah (baca: ya itulah <del>nging</del> nginx), kita cek apakah benar git repo ada pada direktori tersebut?, temen-temen pasti hafal bagaimana file yang pasti ada pada folder git repo, yup bener, /git/config, /git/description, /git/HEAD, dsb. lalu kita coba request salah satu</p>
 <p><img src="/img/simplewebchall/image-5.webp" alt=""><br>
 dan ternyata benar</p>
-<p>Yeay git repo memang berada pada direktori tersebut,<!-- raw HTML omitted -->Karena kita tidak bisa melihat isi direktori dan terlalu menyusahkan untuk merequest satu per satu file yang ada pada git repository (ya meski ada salah satu player yang melakukan request secara <!-- raw HTML omitted -->auto<!-- raw HTML omitted --> manual), maka dari itu kita menggunakan tools (<a href="https://github.com/kost/dvcs-ripper">https://github.com/kost/dvcs-ripper</a>)</p>
+<p>Yeay git repo memang berada pada direktori tersebut,<br>
+Karena kita tidak bisa melihat isi direktori dan terlalu menyusahkan untuk merequest satu per satu file yang ada pada git repository (ya meski ada salah satu player yang melakukan request secara <del>auto</del> manual), maka dari itu kita menggunakan tools (<a href="https://github.com/kost/dvcs-ripper">https://github.com/kost/dvcs-ripper</a>)</p>
 <p><img src="/img/simplewebchall/image-3.webp" alt=""><br>
 tunggu sampai selesai</p>
 <p>Dan kita berhasil mengambil source code pada web tersebut</p>
 <p><img src="/img/simplewebchall/image-4.webp" alt=""><br>
 ternyata ada commit login function</p>
-<p>Ternyata ada file login.php pada folder admin, jadi requestnya seperti ini, challshl.com/admin/login.php, Waktunya baca-baca <!-- raw HTML omitted -->bad<!-- raw HTML omitted --> kode<!-- raw HTML omitted -->ternyata ada dua jenis post data yang diambil yaitu sign-in, dan sign-up,</p>
+<p>Ternyata ada file login.php pada folder admin, jadi requestnya seperti ini, challshl.com/admin/login.php, Waktunya baca-baca <del>bad</del> kode<br>
+ternyata ada dua jenis post data yang diambil yaitu sign-in, dan sign-up,</p>
 <p><img src="/img/simplewebchall/image-6.webp" alt=""><br>
 isi file login.php</p>
 <p>karena pengecekan hanya post signin atau signup, kita rubah aja input data kita yang semula signin menjadi signup</p>
@@ -176,7 +183,7 @@ perasaan iki kadang jare sayang yo ra sayang :v
 		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
-		<span class="authorbox__name">About Ardi Jonias Fortuna</span>
+		<span class="authorbox__name">About map[Name:Ardi Jonias Fortuna]</span>
 	</div>
 	<div class="authorbox__description">
 		Roses are red, violets are blue. There is nothing can&rsquo;t to do
@@ -197,10 +204,13 @@ perasaan iki kadang jare sayang yo ra sayang :v
 		</a>
 	</div>
 </nav>
-
-
-<section class="comments">
-	<div id="disqus_thread"></div>
+<div id="disqus-container">
+  
+  
+    <button id="disqus-button" onclick="showComments()">Show comments</button>
+    <div id="disqus-comments">
+      
+        <div id="disqus_thread"></div>
 <script type="application/javascript">
     window.disqus_config = function () {
     
@@ -220,17 +230,19 @@ perasaan iki kadang jare sayang yo ra sayang :v
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</section>
-
+      
+    </div>
+  
+</div>
 
 			</div>
 			<aside class="sidebar sidebar--left"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
 		</label>
 		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="https://potato.id/" />
+		<input type="hidden" name="sitesearch" value="https://potato.id/">
 	</form>
 </div><div class="widget-recent widget">
 	<h4 class="widget__title">Information</h4>
@@ -245,11 +257,11 @@ perasaan iki kadang jare sayang yo ra sayang :v
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/lesson-learned-from-ransomware/">Lesson Learned from Ransomware</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/it-was-dns/">Yes, It was DNS!</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/bash-job-management-and-shortcut/">Manajemen Job dan Shortcut pada Terminal</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/retas-io-hellbound-vm-write-up/">Retas.io Hellbound VM Write-up</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/retas-io-zombie-vm-write-up/">Retas.io Zombie VM Write-up</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/solution-for-mhl-challenges/">Penyelesaian Challenges Malang Hacker Link</a></li>
 		</ul>
 	</div>
 </div>
@@ -258,20 +270,15 @@ perasaan iki kadang jare sayang yo ra sayang :v
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/defensive/">Defensive</a>
-			</li>
+				<a class="widget__link" href="/categories/defensive/">Defensive</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/development/">Development</a>
-			</li>
+				<a class="widget__link" href="/categories/development/">Development</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/offensive/">Offensive</a>
-			</li>
+				<a class="widget__link" href="/categories/offensive/">Offensive</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/reversing/">Reversing</a>
-			</li>
+				<a class="widget__link" href="/categories/reversing/">Reversing</a></li>
 			<li class="widget__item">
-				<a class="widget__link" href="/categories/web-hacking/">Web Hacking</a>
-			</li>
+				<a class="widget__link" href="/categories/web-hacking/">Web Hacking</a></li>
 		</ul>
 	</div>
 </div>
@@ -298,12 +305,11 @@ perasaan iki kadang jare sayang yo ra sayang :v
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (10)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (11)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra mail server">Zimbra mail server (1)</a>
 	</div>
 </div>
-
 <div class="widget-social widget">
 	<h4 class="widget-social__title widget__title">Social</h4>
 	<div class="widget-social__content widget__content">
@@ -347,7 +353,7 @@ perasaan iki kadang jare sayang yo ra sayang :v
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2022 Ardi Jonias Fortuna.
+			&copy; 2023 Ardi Jonias Fortuna.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>
