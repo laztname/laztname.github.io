@@ -6,7 +6,11 @@
     <description>Recent content in Surabaya Hacker Link on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Fri, 17 Apr 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/surabaya-hacker-link/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://potato.id/tags/surabaya-hacker-link/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Penyelesaian Challenges Surabaya Hacker Link VM Heaven</title>
       <link>https://potato.id/posts/solution-for-shl-challenges-heaven-vm/</link>
@@ -24,9 +28,9 @@ Sebenarnya untuk menyelesaikan challenges ini hampir tidak dibutuhkan tools hack
       
       <guid>https://potato.id/posts/solution-for-qr-generator-challenges/</guid>
       <description>Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana, Challenges ini bertemakan QR Code Generator, namun letak vulnerability-nya tidak pada QR Code tersebut, lalu berikut adalah cara sederhana menyelesaikannya
-Diberikan Challenges
+  Diberikan Challenges
 Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.
-Pengecekan Source Code</description>
+  Pengecekan Source Code</description>
     </item>
     
     <item>
@@ -45,10 +49,9 @@ Pengecekan Source Code</description>
       
       <guid>https://potato.id/posts/solution-for-surabaya-hacker-link-challenges/</guid>
       <description>Well, postingan ini dibuat karena challenges Surabaya Hacker Link telah diupdate dan ada salah seorang yang penasaran dengan challenges ini namun belum solved dan menyarankan agar dibuatkan video cara menyelesaikannya, ya namun ga bisa buat video ya tulisan aja deh, updated challenges
-Disana dijelaskan bahwa kita harus menyelamatkan website si jhon ini lalu kita akan diberikan link group telegram (flag)
+  Disana dijelaskan bahwa kita harus menyelamatkan website si jhon ini lalu kita akan diberikan link group telegram (flag)
 tampilan awal
-Kita akses web si jhon ini
-website di deface ternyata</description>
+  Kita akses web si jhon ini</description>
     </item>
     
     <item>

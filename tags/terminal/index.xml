@@ -6,7 +6,11 @@
     <description>Recent content in Terminal on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://potato.id/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Manajemen Job dan Shortcut pada Terminal</title>
       <link>https://potato.id/posts/bash-job-management-and-shortcut/</link>

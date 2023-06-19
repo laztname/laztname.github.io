@@ -10,7 +10,7 @@
 		<meta property="og:title" content="Penyelesaian Challenges Malang Hacker Link" />
 <meta property="og:description" content="Write up challenges dari Malang Hacker Link" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://potato.id/posts/solution-for-mhl-challenges/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://potato.id/posts/solution-for-mhl-challenges/" />
 <meta property="article:published_time" content="2020-04-22T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-04-22T00:00:00+00:00" />
 
@@ -39,7 +39,7 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-    <script data-ad-client="ca-pub-1926937123072670" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670" crossorigin="anonymous"></script>
 </head>
 <body class="body">
 	<div id="loading"></div>
@@ -119,10 +119,10 @@ if (!doNotTrack) {
 <p><img src="/img/mhl/postdata.webp" alt="Fungsi POST Data"><br>
 <img src="/img/mhl/shell_exec.webp" alt="Fungsi Shell"></p>
 <p>Ternyata dugaan benar, pada fungsi <code>hav()</code> webapp ini menjalankan shell bash pada proses bisnisnya. Berdasarkan dari fungsi <code>do_POST</code> maka dapat disimpulkan bahwa webapp ini akan menjalankan command shell <code>echo &lt;input_data&gt; | toilet --html --metal</code>, karena sudah cukup familiar dengan command shell waktunya memanggil command shell lainnya dengan merubah input data menjadi payload sederhana, yaitu shell exec pada bash. dapat dijalankan dengan</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#66d9ef">$(</span>command_here<span style="color:#66d9ef">)</span>
-</span></span></code></pre></div><p>atau</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span><span style="color:#e6db74">`</span>command_here<span style="color:#e6db74">`</span>
-</span></span></code></pre></div><p><img src="/img/mhl/check-rce.webp" alt="RCE Test"></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">$(</span>command_here<span style="color:#66d9ef">)</span>
+</code></pre></div><p>atau</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#e6db74">`</span>command_here<span style="color:#e6db74">`</span>
+</code></pre></div><p><img src="/img/mhl/check-rce.webp" alt="RCE Test"></p>
 <p>Kita lakukan pengetesan dengan isian data <code>$(whoami)</code></p>
 <p><img src="/img/mhl/whoami-response.webp" alt="RCE Response"></p>
 <p>Server merespon dan terlihat id dari user kita adalah root, waw. Dengan ini kita sudah dapat melakukan full compromised terhadap server, namun perlu diingat tujuan kita adalah menuliskan nama pada solver.txt</p>
@@ -167,6 +167,16 @@ if (!doNotTrack) {
 		Roses are red, violets are blue. There is nothing can&rsquo;t to do
 	</div>
 </div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-1926937123072670"
+     data-ad-slot="1889468337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 
 <nav class="pager flex">
@@ -191,7 +201,7 @@ if (!doNotTrack) {
       
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    window.disqus_config = function () {
+    var disqus_config = function () {
     
     
     

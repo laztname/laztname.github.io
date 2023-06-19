@@ -10,7 +10,7 @@
 		<meta property="og:title" content="XSS Prevention" />
 <meta property="og:description" content="Pencegahan serangan Cross-site scripting atau XSS pada web native php" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://potato.id/posts/xss-prevention/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://potato.id/posts/xss-prevention/" />
 <meta property="article:published_time" content="2019-02-21T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-02-21T00:00:00+00:00" />
 
@@ -39,7 +39,7 @@ if (!doNotTrack) {
 </script>
 <script async src='https://www.google-analytics.com/analytics.js'></script>
 
-    <script data-ad-client="ca-pub-1926937123072670" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670" crossorigin="anonymous"></script>
 </head>
 <body class="body">
 	<div id="loading"></div>
@@ -102,32 +102,32 @@ if (!doNotTrack) {
 			<p>setelah sedikit membahas XSS di <a href="/posts/apakah-xss-itu-berbahaya">sini</a>, ya meskipun agak ngawur saatnya kita bahas cara mencegah bug ini ada pada web kita</p>
 <p>XSS bisa berjalan / dijalankan karena tag <code>&lt;script&gt;</code> yang lepas dan berjalan / terender oleh browser maka dari itu kita manipulasi browser agar tidak menjalankan tag html yang di <em><strong>input</strong></em> kan user, eitsss kita ga akan bongkar-bongkar browser kok, cuman sedikit permainan sebelum input user di munculkan pada website</p>
 <p>example:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> $_GET[<span style="color:#e6db74">&#39;q&#39;</span>];
-</span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span></code></pre></div><p>input : <code>&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;</code><br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">echo</span> $_GET[<span style="color:#e6db74">&#39;q&#39;</span>];
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>input : <code>&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;</code><br>
 output:	<code>&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;</code> //pop up XSS akan muncul<br>
 untuk preventionnya kita bisa pake beberapa fungsi php yang sudah ada</p>
 <hr>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">strip_tags</span>($_GET[<span style="color:#e6db74">&#39;q&#39;</span>]);
-</span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span></code></pre></div><p>input : <code>&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;</code><br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">echo</span> <span style="color:#a6e22e">strip_tags</span>($_GET[<span style="color:#e6db74">&#39;q&#39;</span>]);
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>input : <code>&lt;script&gt;alert(&quot;XSS&quot;)&lt;/script&gt;</code><br>
 output:	<code>alert(&quot;XSS&quot;)</code> //tag html akan dihilangkan<br>
 namun kode diatas masih kurang untuk mengatasi xss ini, mengapa ?</p>
 <hr>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;&lt;input type=&#34;text&#34; value=&#34;&#39;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">strip_tags</span>($_GET[<span style="color:#e6db74">&#39;q&#39;</span>])<span style="color:#f92672">.</span><span style="color:#e6db74">&#39;&#34;&gt;&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span></code></pre></div><p>input : <code>&quot; onmouseover=&quot;alert('XSS')</code><br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;&lt;input type=&#34;text&#34; value=&#34;&#39;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">strip_tags</span>($_GET[<span style="color:#e6db74">&#39;q&#39;</span>])<span style="color:#f92672">.</span><span style="color:#e6db74">&#39;&#34;&gt;&#39;</span>;
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>input : <code>&quot; onmouseover=&quot;alert('XSS')</code><br>
 output: <code>&lt;input type=&quot;text&quot; value=&quot;&quot; onmouseover=&quot;alert('XSS')&quot;&gt;</code><br>
 dengan input diatas maka ketika mouse menghover ke input text pop up XSS akan muncul<br>
 lalu bagaimana agar tidak terkena macam-macam bypass seperti ini ?</p>
 <hr>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;&lt;input type=&#34;text&#34; value=&#34;&#39;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">htmlentities</span>(<span style="color:#a6e22e">strip_tags</span>($_GET[<span style="color:#e6db74">&#39;q&#39;</span>]))<span style="color:#f92672">.</span><span style="color:#e6db74">&#39;&#34;&gt;&#39;</span>;
-</span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
-</span></span></span></code></pre></div><p>input : <code>&quot; onmouseover=&quot;alert('XSS')</code><br>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#39;&lt;input type=&#34;text&#34; value=&#34;&#39;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">htmlentities</span>(<span style="color:#a6e22e">strip_tags</span>($_GET[<span style="color:#e6db74">&#39;q&#39;</span>]))<span style="color:#f92672">.</span><span style="color:#e6db74">&#39;&#34;&gt;&#39;</span>;
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div><p>input : <code>&quot; onmouseover=&quot;alert('XSS')</code><br>
 output:	<code>&lt;input type=&quot;text&quot; value=&quot;&amp;quot; onmouseover=&amp;quot;alert(1)&quot;&gt;</code> //tanda petik berubah menjadi <code>&amp;quot;</code></p>
 <p>well menurut saya dengan menggunakan kedua fungsi tersebut sudah cukup untuk mencegah terjadinya XSS pada website, namun jika pada kolom pencarian memang memerlukan tanda &lt; dan &gt; kita bisa menggunakan preg_replace() untuk menghapus semua kata yang mengandung unsur XSS, seperti script, javascript, onerror, onmouseover, onload dsb</p>
 <p>bagaimana menurutmu ? apakah kamu memiliki cara lain untuk menghindari XSS ini ? silahkan share di kolom komentar</p>
@@ -158,6 +158,16 @@ output:	<code>&lt;input type=&quot;text&quot; value=&quot;&amp;quot; onmouseover
 		Roses are red, violets are blue. There is nothing can&rsquo;t to do
 	</div>
 </div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-1926937123072670"
+     data-ad-slot="1889468337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 
 <nav class="pager flex">
@@ -182,7 +192,7 @@ output:	<code>&lt;input type=&quot;text&quot; value=&quot;&amp;quot; onmouseover
       
         <div id="disqus_thread"></div>
 <script type="application/javascript">
-    window.disqus_config = function () {
+    var disqus_config = function () {
     
     
     

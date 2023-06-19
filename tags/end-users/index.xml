@@ -6,7 +6,11 @@
     <description>Recent content in end-users on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Sat, 20 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/end-users/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 20 May 2023 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://potato.id/tags/end-users/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Secure Surfing Practice</title>
       <link>https://potato.id/posts/secure-surfing-practice/</link>
