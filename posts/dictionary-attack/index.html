@@ -4,18 +4,21 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Write Up - Ardi Jonias Fortuna # potato</title>
+	<title>Dictionary Attack - Ardi Jonias Fortuna # potato</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="Write Up" />
-<meta property="og:description" content="Ardi Jonias Fortuna&#39;s personal website." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://potato.id/tags/write-up/" />
-<meta property="og:updated_time" content="2023-08-28T00:00:00+00:00" />
+		<meta property="og:title" content="Dictionary Attack" />
+<meta property="og:description" content="Memahami apa itu Dictionary Attack Dictionary attack merupakan salah satu teknik penyerangan yang umum digunakan dalam hacking / pentesting, serangan ini menggunakan sebuah kumpulan password (wordlist) yang umum digunakan ataupun password yang sudah bocor di Internet (seperti rockyou.txt, ignis dsb) tentunya.
+Perbedaan serangan bruteforce dan dictionary attack ini adalah penggunaan wordlist / kumpulan password, pada serangan bruteforce attack umumnya akan menebak seluruh kombinasi karakter yang ada dan tentunya lebih banyak memakan waktu lama, serangan dictionary attack sendiri juga membutuhkan cukup waktu tergantung dengan kompleksitas password yang digunakan oleh user, bagus / tidaknya wordlist yang digunakan serta response time server." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://potato.id/posts/dictionary-attack/" />
+<meta property="article:published_time" content="2023-08-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-28T00:00:00+00:00" />
 
 		<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Write Up"/>
-<meta name="twitter:description" content="Ardi Jonias Fortuna&#39;s personal website."/>
+<meta name="twitter:title" content="Dictionary Attack"/>
+<meta name="twitter:description" content="Memahami apa itu Dictionary Attack Dictionary attack merupakan salah satu teknik penyerangan yang umum digunakan dalam hacking / pentesting, serangan ini menggunakan sebuah kumpulan password (wordlist) yang umum digunakan ataupun password yang sudah bocor di Internet (seperti rockyou.txt, ignis dsb) tentunya.
+Perbedaan serangan bruteforce dan dictionary attack ini adalah penggunaan wordlist / kumpulan password, pada serangan bruteforce attack umumnya akan menebak seluruh kombinasi karakter yang ada dan tentunya lebih banyak memakan waktu lama, serangan dictionary attack sendiri juga membutuhkan cukup waktu tergantung dengan kompleksitas password yang digunakan oleh user, bagus / tidaknya wordlist yang digunakan serta response time server."/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -24,7 +27,6 @@
 
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/custom.css">
-	<link rel="alternate" type="application/rss+xml" href="/tags/write-up/index.xml" title="Ardi Jonias Fortuna # potato">
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
@@ -84,129 +86,124 @@
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main list" role="main">
-	<header class="main__header">
-		<h1 class="main__title">Write Up</h1>
-	</header><article class="list__item post">
-	
-	<figure class="list__thumbnail thumbnail">
-		<a class="thumbnail__link" href="/posts/solution-for-ramadhan-challenges/">
-		<img class="thumbnail__image" src="/img/ramadhan/0.webp" alt="Solution for Ramadhan Challenges">
-		</a>
-	</figure>
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/solution-for-ramadhan-challenges/" rel="bookmark">
-			Solution for Ramadhan Challenges
-			</a>
-		</h2>
-		<div class="list__meta meta">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Dictionary Attack</h1>
+			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-05-09T00:00:00Z">09-05-2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-hacking/" rel="category">Web Hacking</a>, <a class="meta__link" href="/categories/offensive/" rel="category">Offensive</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-08-28T00:00:00Z">28-08-2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/development/" rel="category">Development</a>
 	</span>
 </div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di STTS, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui /self/proc/environ dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/solution-for-ramadhan-challenges/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<figure class="list__thumbnail thumbnail">
-		<a class="thumbnail__link" href="/posts/sql-injection-into-xrdp-account-take-over/">
-		<img class="thumbnail__image" src="/img/shell-xrdp.webp" alt="SQL Injection Into XRDP Account Take Over">
-		</a>
-	</figure>
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/sql-injection-into-xrdp-account-take-over/" rel="bookmark">
-			SQL Injection Into XRDP Account Take Over
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-01-25T00:00:00Z">25-01-2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-hacking/" rel="category">Web Hacking</a>, <a class="meta__link" href="/categories/offensive/" rel="category">Offensive</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Well mungkin judulnya agak click bait sql injection sendiri tidak bisa melakukan injeksi sampai ke xrdp xD
-Sebenarnya tujuan awal cuman ingin download anime di moesubs.com sih, namu saat membuka webnya ada url yang sangat pantas untuk dicurigai yaitu
-https://moesubs.com/?hal=dlrilisan&amp;id=591
-yaudah deh coba cek pake ' dan hasilnya web tersebut error, setelah error melakukan balancing pakai comment SQL --+- hasilnya web balik jadi normal lagi, oke lanjut ke order by
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/sql-injection-into-xrdp-account-take-over/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<figure class="list__thumbnail thumbnail">
-		<a class="thumbnail__link" href="/posts/solution-for-surabaya-hacker-link-challenges/">
-		<img class="thumbnail__image" src="/img/link.webp" alt="Solution for Surabaya Hacker Link Challenges">
-		</a>
-	</figure>
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/solution-for-surabaya-hacker-link-challenges/" rel="bookmark">
-			Solution for Surabaya Hacker Link Challenges
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-01-03T00:00:00Z">03-01-2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-hacking/" rel="category">Web Hacking</a>, <a class="meta__link" href="/categories/reversing/" rel="category">Reversing</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Well, postingan ini dibuat karena challenges Surabaya Hacker Link telah diupdate dan ada salah seorang yang penasaran dengan challenges ini namun belum solved dan menyarankan agar dibuatkan video cara menyelesaikannya, ya namun ga bisa buat video ya tulisan aja deh, updated challenges
-  Disana dijelaskan bahwa kita harus menyelamatkan website si jhon ini lalu kita akan diberikan link group telegram (flag)
-tampilan awal
-  Kita akses web si jhon ini
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/solution-for-surabaya-hacker-link-challenges/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<figure class="list__thumbnail thumbnail">
-		<a class="thumbnail__link" href="/posts/solution-for-my-simple-web-challenges/">
-		<img class="thumbnail__image" src="/img/simplewebchall/solverlist.webp" alt="Penyelesaian Untuk Web &#39;Simple&#39; Challenges">
-		</a>
-	</figure>
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/solution-for-my-simple-web-challenges/" rel="bookmark">
-			Penyelesaian Untuk Web &#39;Simple&#39; Challenges
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-12-21T00:00:00Z">21-12-2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-hacking/" rel="category">Web Hacking</a>, <a class="meta__link" href="/categories/reversing/" rel="category">Reversing</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Pra Kata Sebelumnya terima kasih buat slashroot ctf karena tanpa slashroot ctf mungkin saya tidak bisa memprovide challenges ini melalui dewaweb.com, Terima kasih buat teman-teman yang sudah meluangkan waktunya untuk challenges &lsquo;simple&rsquo; ini,
-Kata clue &ldquo;recon, tools, sign-in, submit&rdquo;
-recon ini sangat mudah, sebenarnya tidak perlu menggunakan tools atau scanner, banyak kok website yang masih menyimpan sesuatu yang penting itu pada comment html
-terlihat jelas ada info bahwa git repositori (/.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/solution-for-my-simple-web-challenges/">Read more…</a>
-	</div>
-</article>
+		</header>
+		
+	<figure class="post__thumbnail thumbnail">
+		
+		<img class="thumbnail__image" src="/img/dict-attack.png" alt="Dictionary Attack">
+		
+	</figure><div class="content post__content clearfix">
+			<h2 id="memahami-apa-itu-dictionary-attack">Memahami apa itu Dictionary Attack</h2>
+<p>Dictionary attack merupakan salah satu teknik penyerangan yang umum digunakan dalam hacking / pentesting, serangan ini menggunakan sebuah kumpulan password (wordlist) yang umum digunakan ataupun password yang sudah bocor di Internet (seperti rockyou.txt, ignis dsb) tentunya.</p>
+<p>Perbedaan serangan bruteforce dan dictionary attack ini adalah penggunaan wordlist / kumpulan password, pada serangan bruteforce attack umumnya akan menebak seluruh kombinasi karakter yang ada dan tentunya lebih banyak memakan waktu lama, serangan dictionary attack sendiri juga membutuhkan cukup waktu tergantung dengan kompleksitas password yang digunakan oleh user, bagus / tidaknya wordlist yang digunakan serta response time server.</p>
+<p>Dictionary attack umumnya menyerang password-protected access seperti pada fitur login aplikasi web, login dengan menggunakan protokol ssh ataupun mencoba melakukan crack terhadap hash yang didapatkan sebelumnya.</p>
+<h2 id="menjadi-aman">Menjadi Aman</h2>
+<p>agar terhindar dari resiko serangan ini, kita dapat menerapkan beberapa hal berikut sehingga akun / akses yang dimiliki tetap aman</p>
+<h3 id="1-strong-password">1. Strong Password</h3>
+<p>Tambahkan kombinasi angka, huruf kapital dan karakter special agar password tidak mudah ditebak tentunya dengan tidak berulang atau secara urut seperti 123, !@#, ASD serta pastikan password yang dibuat memiliki minimal 14 karakter</p>
+<h3 id="2-never-use-the-same-password-again">2. Never use the same Password Again</h3>
+<p>Jangan gunakan password yang sama lagi karena terdapat serangan lain yaitu Credential Stuffing secara simplenya menggunakan informasi username dan password yang telah bocor di internet dan mencobanya pada platform lain</p>
+<h3 id="3-use-password-manager">3. Use Password Manager</h3>
+<p>Manusia cukup mudah ditebak, susah membuat sesuatu yang random dan mudah diingat maka dari itu gunakan password manager saja, tentunya harus menggunakan password manager yang terpecaya atau self-host aja</p>
+<h3 id="4-use-multi-factor-authentication">4. Use Multi Factor Authentication</h3>
+<p>Jika aplikasi yang kita gunakan terdapat fitur MFA lebih baik digunakan saja sehingga ketika password kita bocor maka penyerang masih perlu memasukan faktor lain tersebut sebelum dapat mengakses akun kita</p>
+<h2 id="as-developers">As Developers</h2>
+<p>Sebagai seorang pengembang aplikasi, kita juga dapat menerapkan hal-hal berikut agar user dan aplikasi yang dikembangkan tetap aman dari percobaan serangan ini.</p>
+<h3 id="1-force-user-to-use-strong-password-policy">1. Force User to Use Strong Password Policy</h3>
+<p>Pastikan pada saat user pertama kali melakukan pendaftaran / login pada waktu pertama, paksa user untuk mengganti / menggunakan password dengan policy yang kuat seperti minimal 14 karakter dengan minimal 1 huruf kecil, 1 huruf besar, 1 angka dan 1 karakter spesial</p>
+<h3 id="2-blocking-mechanism">2. Blocking Mechanism</h3>
+<p>Kita juga bisa menerapkan blocking mechanism untuk melakukan blockir / disable account secara sementara ketika terdapat percobaan masuk dengan volume yang cukup besar seperti salah 3 x maka user akan dinonaktifkan / ip akan di block adapun yang menggunakan rate limit pada fitur login sehingga percobaan serangan ini akan dapat ditangkal sementara</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Dictionary attack masih menjadi ancaman terhadap serangan terhadap akses / kredentials kita maka dari itu kita perlu membuat password yang unik, kuat dan tidak digunakan secara berulang serta menerapkan multi factor authentication, ingat password masih menjadi satu-satunya metode authentikasi yang paling umum digunakan maka jika password kita lemah akan berujung pada hilangnya / disalahgunakannya akses kita</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/write-up/" rel="tag">Write Up</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
 </main>
 
-<div class="pagination">
-	<a class="pagination__item pagination__item--prev btn" href="/tags/write-up/">«</a>
-	<span class="pagination__item pagination__item--current">2/2</span>
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Ardi Jonias Fortuna</span>
+	</div>
+	<div class="authorbox__description">
+		Roses are red, violets are blue. There is nothing can&rsquo;t to do
+	</div>
 </div>
 
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/malwared-ads/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Iklan yang menarik atau mencurigakan ?</p>
+		</a>
+	</div>
+</nav>
+<div id="disqus-container">
+  
+  
+    <button id="disqus-button" onclick="showComments()">Show comments</button>
+    <div id="disqus-comments">
+      
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "potato-baked" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      
+    </div>
+  
+</div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="autorelaxed"
+     data-ad-client="ca-pub-1926937123072670"
+     data-ad-slot="1889468337"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 			</div>
-			
-<aside class="sidebar sidebar--left"><div class="widget-search widget">
+			<aside class="sidebar sidebar--left"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<label>
 			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">

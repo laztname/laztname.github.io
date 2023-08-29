@@ -4,17 +4,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Write Up - Ardi Jonias Fortuna # potato</title>
+	<title>Posts - Ardi Jonias Fortuna # potato</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="Write Up" />
+		<meta property="og:title" content="Posts" />
 <meta property="og:description" content="Ardi Jonias Fortuna&#39;s personal website." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://potato.id/tags/write-up/" />
+<meta property="og:url" content="https://potato.id/posts/" />
 <meta property="og:updated_time" content="2023-08-28T00:00:00+00:00" />
 
 		<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Write Up"/>
+<meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="Ardi Jonias Fortuna&#39;s personal website."/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +24,7 @@
 
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/custom.css">
-	<link rel="alternate" type="application/rss+xml" href="/tags/write-up/index.xml" title="Ardi Jonias Fortuna # potato">
+	<link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="Ardi Jonias Fortuna # potato">
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
@@ -86,122 +86,34 @@
 			
 <main class="main list" role="main">
 	<header class="main__header">
-		<h1 class="main__title">Write Up</h1>
+		<h1 class="main__title">Posts</h1>
 	</header><article class="list__item post">
 	
-	<figure class="list__thumbnail thumbnail">
-		<a class="thumbnail__link" href="/posts/solution-for-ramadhan-challenges/">
-		<img class="thumbnail__image" src="/img/ramadhan/0.webp" alt="Solution for Ramadhan Challenges">
-		</a>
-	</figure>
 	<header class="list__header">
 		<h2 class="list__title post__title">
-			<a href="/posts/solution-for-ramadhan-challenges/" rel="bookmark">
-			Solution for Ramadhan Challenges
+			<a href="/posts/apakah-xss-itu-berbahaya/" rel="bookmark">
+			Apakah XSS Itu Berbahaya ?
 			</a>
 		</h2>
 		<div class="list__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-05-09T00:00:00Z">09-05-2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-hacking/" rel="category">Web Hacking</a>, <a class="meta__link" href="/categories/offensive/" rel="category">Offensive</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-12-20T00:00:00Z">20-12-2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-hacking/" rel="category">Web Hacking</a>
 	</span>
 </div></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di STTS, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui /self/proc/environ dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.
+		Dari hasil menyimak di beberapa group IT yang saya ikuti banyak sekali yang bertanya-tanya, Apakah XSS itu berbahaya?, Cara upload webshell lewat XSS itu gimana ya gan?, Laporan Bug XSS-ku kok engga ditanggepi sih? Apa karena XSS itu gak berbahaya ya?, Apa karena admin webnya udah anu ?, Ya kurang lebih begitulah pertanyaan yang mencuat, Mari kita bahas bareng-bareng gimana sih karakteristik XSS itu,
+Cross-site scripting is a type of computer security vulnerability typically found in web applications.
 	</div>
 	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/solution-for-ramadhan-challenges/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<figure class="list__thumbnail thumbnail">
-		<a class="thumbnail__link" href="/posts/sql-injection-into-xrdp-account-take-over/">
-		<img class="thumbnail__image" src="/img/shell-xrdp.webp" alt="SQL Injection Into XRDP Account Take Over">
-		</a>
-	</figure>
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/sql-injection-into-xrdp-account-take-over/" rel="bookmark">
-			SQL Injection Into XRDP Account Take Over
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-01-25T00:00:00Z">25-01-2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-hacking/" rel="category">Web Hacking</a>, <a class="meta__link" href="/categories/offensive/" rel="category">Offensive</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Well mungkin judulnya agak click bait sql injection sendiri tidak bisa melakukan injeksi sampai ke xrdp xD
-Sebenarnya tujuan awal cuman ingin download anime di moesubs.com sih, namu saat membuka webnya ada url yang sangat pantas untuk dicurigai yaitu
-https://moesubs.com/?hal=dlrilisan&amp;id=591
-yaudah deh coba cek pake ' dan hasilnya web tersebut error, setelah error melakukan balancing pakai comment SQL --+- hasilnya web balik jadi normal lagi, oke lanjut ke order by
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/sql-injection-into-xrdp-account-take-over/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<figure class="list__thumbnail thumbnail">
-		<a class="thumbnail__link" href="/posts/solution-for-surabaya-hacker-link-challenges/">
-		<img class="thumbnail__image" src="/img/link.webp" alt="Solution for Surabaya Hacker Link Challenges">
-		</a>
-	</figure>
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/solution-for-surabaya-hacker-link-challenges/" rel="bookmark">
-			Solution for Surabaya Hacker Link Challenges
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-01-03T00:00:00Z">03-01-2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-hacking/" rel="category">Web Hacking</a>, <a class="meta__link" href="/categories/reversing/" rel="category">Reversing</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Well, postingan ini dibuat karena challenges Surabaya Hacker Link telah diupdate dan ada salah seorang yang penasaran dengan challenges ini namun belum solved dan menyarankan agar dibuatkan video cara menyelesaikannya, ya namun ga bisa buat video ya tulisan aja deh, updated challenges
-  Disana dijelaskan bahwa kita harus menyelamatkan website si jhon ini lalu kita akan diberikan link group telegram (flag)
-tampilan awal
-  Kita akses web si jhon ini
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/solution-for-surabaya-hacker-link-challenges/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<figure class="list__thumbnail thumbnail">
-		<a class="thumbnail__link" href="/posts/solution-for-my-simple-web-challenges/">
-		<img class="thumbnail__image" src="/img/simplewebchall/solverlist.webp" alt="Penyelesaian Untuk Web &#39;Simple&#39; Challenges">
-		</a>
-	</figure>
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/solution-for-my-simple-web-challenges/" rel="bookmark">
-			Penyelesaian Untuk Web &#39;Simple&#39; Challenges
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-12-21T00:00:00Z">21-12-2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-hacking/" rel="category">Web Hacking</a>, <a class="meta__link" href="/categories/reversing/" rel="category">Reversing</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Pra Kata Sebelumnya terima kasih buat slashroot ctf karena tanpa slashroot ctf mungkin saya tidak bisa memprovide challenges ini melalui dewaweb.com, Terima kasih buat teman-teman yang sudah meluangkan waktunya untuk challenges &lsquo;simple&rsquo; ini,
-Kata clue &ldquo;recon, tools, sign-in, submit&rdquo;
-recon ini sangat mudah, sebenarnya tidak perlu menggunakan tools atau scanner, banyak kok website yang masih menyimpan sesuatu yang penting itu pada comment html
-terlihat jelas ada info bahwa git repositori (/.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/solution-for-my-simple-web-challenges/">Read more…</a>
+		<a class="list__footer-readmore btn" href="/posts/apakah-xss-itu-berbahaya/">Read more…</a>
 	</div>
 </article>
 </main>
 
 <div class="pagination">
-	<a class="pagination__item pagination__item--prev btn" href="/tags/write-up/">«</a>
-	<span class="pagination__item pagination__item--current">2/2</span>
+	<a class="pagination__item pagination__item--prev btn" href="/posts/page/2/">«</a>
+	<span class="pagination__item pagination__item--current">3/3</span>
 </div>
 
 			</div>

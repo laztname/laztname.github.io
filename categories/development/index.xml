@@ -6,10 +6,20 @@
     <description>Recent content in Development on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Sat, 15 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Aug 2023 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://potato.id/categories/development/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Dictionary Attack</title>
+      <link>https://potato.id/posts/dictionary-attack/</link>
+      <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://potato.id/posts/dictionary-attack/</guid>
+      <description>Memahami apa itu Dictionary Attack Dictionary attack merupakan salah satu teknik penyerangan yang umum digunakan dalam hacking / pentesting, serangan ini menggunakan sebuah kumpulan password (wordlist) yang umum digunakan ataupun password yang sudah bocor di Internet (seperti rockyou.txt, ignis dsb) tentunya.
+Perbedaan serangan bruteforce dan dictionary attack ini adalah penggunaan wordlist / kumpulan password, pada serangan bruteforce attack umumnya akan menebak seluruh kombinasi karakter yang ada dan tentunya lebih banyak memakan waktu lama, serangan dictionary attack sendiri juga membutuhkan cukup waktu tergantung dengan kompleksitas password yang digunakan oleh user, bagus / tidaknya wordlist yang digunakan serta response time server.</description>
+    </item>
     
     <item>
       <title>Iklan yang menarik atau mencurigakan ?</title>
