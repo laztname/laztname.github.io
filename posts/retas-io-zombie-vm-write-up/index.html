@@ -11,12 +11,12 @@
 <meta property="og:description" content="Retas.io merupakan sebuah perusahaan dari PT. Solusi Siber Teknologi yang menawarkan berbagai produk berupa jasa keamanan mulai dari Vulnerability Assesment, Penetration Testing hingga kebutuhan khusus lainnya yang berkaitan dengan IT dan keamanannya.
 Baru-baru ini retas.io meluncurkan sebuah produk baru berupa labs yang berguna untuk membantu para player baru yang terjun ke dunia Infosec, labs ini sendiri mirip-mirip hackthebox, dengan menggunakan vpn kita diharuskan menyelesaikan tantangan yang diberikan dengan pengetahuan dan kemampuan IT para player, tidak hanya itu mereka juga akan merilis kampus retas yang bertujuan memberikan pendidikan / pelatihan untuk terjun di dunia Infosec, namun pada saat tulisan ini dibuat fitur tersebut masih dalam proses pengerjaan, langsung saja berikut adalah write-up dari Challenges VM Zombie yang ada pada labs retas." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://potato.id/posts/retas-io-zombie-vm-write-up/" />
+<meta property="og:url" content="https://potato.id/posts/retas-io-zombie-vm-write-up/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-05-25T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-05-25T00:00:00+00:00" />
 
-		<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Retas.io Zombie VM Write-up"/>
+
+		<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Retas.io Zombie VM Write-up"/>
 <meta name="twitter:description" content="Retas.io merupakan sebuah perusahaan dari PT. Solusi Siber Teknologi yang menawarkan berbagai produk berupa jasa keamanan mulai dari Vulnerability Assesment, Penetration Testing hingga kebutuhan khusus lainnya yang berkaitan dengan IT dan keamanannya.
 Baru-baru ini retas.io meluncurkan sebuah produk baru berupa labs yang berguna untuk membantu para player baru yang terjun ke dunia Infosec, labs ini sendiri mirip-mirip hackthebox, dengan menggunakan vpn kita diharuskan menyelesaikan tantangan yang diberikan dengan pengetahuan dan kemampuan IT para player, tidak hanya itu mereka juga akan merilis kampus retas yang bertujuan memberikan pendidikan / pelatihan untuk terjun di dunia Infosec, namun pada saat tulisan ini dibuat fitur tersebut masih dalam proses pengerjaan, langsung saja berikut adalah write-up dari Challenges VM Zombie yang ada pada labs retas."/>
 
@@ -131,25 +131,25 @@ Baru-baru ini retas.io meluncurkan sebuah produk baru berupa labs yang berguna u
 <img src="/img/zombie/init-lxd.webp" alt="lxd-init"></p>
 <p>karena server zombie berada di safe enviorment dan tidak mendapatkan koneksi internet maka dari itu kita membuild image lxd alpine di localmachine kita</p>
 <p><img src="/img/zombie/build-image.webp" alt="build image"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone  https://github.com/saghul/lxd-alpine-builder.git
-cd lxd-alpine-builder
-./build-alpine
-</code></pre></div><p>Kita check apakah build sudah berhasil atau tidak, terdapat file tar.gz yang menunjukan bahwa file tersebut merupakan file hasil build tadi dengan kata lain sukses build.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone  https://github.com/saghul/lxd-alpine-builder.git
+</span></span><span style="display:flex;"><span>cd lxd-alpine-builder
+</span></span><span style="display:flex;"><span>./build-alpine
+</span></span></code></pre></div><p>Kita check apakah build sudah berhasil atau tidak, terdapat file tar.gz yang menunjukan bahwa file tersebut merupakan file hasil build tadi dengan kata lain sukses build.</p>
 <p><img src="/img/zombie/check-build.webp" alt="check build"></p>
 <p>Lalu kita transfer ke machine zombie, bisa dengan scp ataupun wget dengan cara membuka http.server</p>
 <p><img src="/img/zombie/download-alpine.webp" alt="transfer to machine"></p>
 <p>Melakukan import image yang telah didownload sebelumnya.</p>
 <p><img src="/img/zombie/import-lxc.webp" alt="import lxc"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lxc image import ./apline-v3.10-x86_64-20191008_1227.tar.gz --alias myimage
-lxc image list
-</code></pre></div><h2 id="get-root-and-root-flag">Get root and root flag</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lxc image import ./apline-v3.10-x86_64-20191008_1227.tar.gz --alias myimage
+</span></span><span style="display:flex;"><span>lxc image list
+</span></span></code></pre></div><h2 id="get-root-and-root-flag">Get root and root flag</h2>
 <p><img src="/img/zombie/root.webp" alt="root"></p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">lxc init myimage ignite -c security.privileged<span style="color:#f92672">=</span>true
-lxc config device add ignite mydevice disk source<span style="color:#f92672">=</span>/ path<span style="color:#f92672">=</span>/mnt/root recursive<span style="color:#f92672">=</span>true
-lxc start ignite
-lxc exec ignite /bin/sh
-id
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>lxc init myimage ignite -c security.privileged<span style="color:#f92672">=</span>true
+</span></span><span style="display:flex;"><span>lxc config device add ignite mydevice disk source<span style="color:#f92672">=</span>/ path<span style="color:#f92672">=</span>/mnt/root recursive<span style="color:#f92672">=</span>true
+</span></span><span style="display:flex;"><span>lxc start ignite
+</span></span><span style="display:flex;"><span>lxc exec ignite /bin/sh
+</span></span><span style="display:flex;"><span>id
+</span></span></code></pre></div>
 		</div>
 		<footer class="post__footer">
 			
@@ -205,8 +205,8 @@ id
     <div id="disqus-comments">
       
         <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+<script>
+    window.disqus_config = function () {
     
     
     
@@ -261,11 +261,11 @@ id
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/apakah-xss-itu-berbahaya/">Apakah XSS Itu Berbahaya ?</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/malwared-ads-continued/">Iklan yang menarik atau mencurigakan lanjutan</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/dictionary-attack/">Dictionary Attack</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/malwared-ads/">Iklan yang menarik atau mencurigakan ?</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/secure-surfing-practice/">Secure Surfing Practice</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/lesson-learned-from-ransomware/">Lesson Learned from Ransomware</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/it-was-dns/">Yes, It was DNS!</a></li>
 		</ul>
 	</div>
 </div>
@@ -311,7 +311,7 @@ id
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (14)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (17)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra mail server">Zimbra mail server (1)</a>
 	</div>
@@ -359,7 +359,7 @@ id
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2023 Ardi Jonias Fortuna.
+			&copy; 2024 Ardi Jonias Fortuna.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>

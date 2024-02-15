@@ -10,12 +10,12 @@
 		<meta property="og:title" content="Hey I Found Git Repository" />
 <meta property="og:description" content="Hanya sebuah catatan kecil ketika menemukan sebuah git repository yang terekspose pada sebuah website" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://potato.id/posts/hey-i-found-git-repository/" />
+<meta property="og:url" content="https://potato.id/posts/hey-i-found-git-repository/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2018-12-31T00:00:00+00:00" />
 <meta property="article:modified_time" content="2018-12-31T00:00:00+00:00" />
 
-		<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Hey I Found Git Repository"/>
+
+		<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Hey I Found Git Repository"/>
 <meta name="twitter:description" content="Hanya sebuah catatan kecil ketika menemukan sebuah git repository yang terekspose pada sebuah website"/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -112,25 +112,25 @@ Sangat mudah, hanya perlu melakukan request kepada file-file default git, jika t
 <li>
 <p>Melakukan cloning pada git repository<br>
 Jika directory listing dinyalakan, cukup menggunakan <code>wget -r target.xyz/.git/</code><br>
-<a href="https://asciinema.org/a/rQjyDJhqAPNPqIjFXNnuerUkd"><img src="https://asciinema.org/a/rQjyDJhqAPNPqIjFXNnuerUkd.webp" alt="asciicast"></a><br>
+<a href="https://asciinema.org/a/rQjyDJhqAPNPqIjFXNnuerUkd"><img src="https://asciinema.org/a/rQjyDJhqAPNPqIjFXNnuerUkd.svg" alt="asciicast"></a><br>
 Jika directory listing dimatikan, gunakan bantuan tools dari <a href="http://github.com/kost/dvcs-ripper">dvcs-ripper</a>, <a href="https://github.com/lijiejie/GitHack/">GitHack</a>, <a href="https://github.com/internetwache/GitTools/blob/master/Dumper/gitdumper.sh">gitdumper.sh</a>.<br>
 <code>rip-git -v -u &quot;target.xyz/.git&quot;</code><br>
-<a href="https://asciinema.org/a/Q24ntUkC0ywymWCHqx9jrlT80"><img src="https://asciinema.org/a/Q24ntUkC0ywymWCHqx9jrlT80.webp" alt="asciicast"></a><br>
+<a href="https://asciinema.org/a/Q24ntUkC0ywymWCHqx9jrlT80"><img src="https://asciinema.org/a/Q24ntUkC0ywymWCHqx9jrlT80.svg" alt="asciicast"></a><br>
 <code>python2 GitHack.py http://target.xyz/.git/</code><br>
-<a href="https://asciinema.org/a/BrQPQfIwZHeYntoGVtRv16Vaw"><img src="https://asciinema.org/a/BrQPQfIwZHeYntoGVtRv16Vaw.webp" alt="asciicast"></a><br>
+<a href="https://asciinema.org/a/BrQPQfIwZHeYntoGVtRv16Vaw"><img src="https://asciinema.org/a/BrQPQfIwZHeYntoGVtRv16Vaw.svg" alt="asciicast"></a><br>
 <code>bash gitdumper.sh http://target.xyz/.git/ dump-git</code><br>
-<a href="https://asciinema.org/a/0Gq4SJWmeEKSWScjMTzeiEson"><img src="https://asciinema.org/a/0Gq4SJWmeEKSWScjMTzeiEson.webp" alt="asciicast"></a></p>
+<a href="https://asciinema.org/a/0Gq4SJWmeEKSWScjMTzeiEson"><img src="https://asciinema.org/a/0Gq4SJWmeEKSWScjMTzeiEson.svg" alt="asciicast"></a></p>
 </li>
 <li>
 <p>Melakukan checkout atau ekstrasi source code dari git repository<br>
 Beberapa tools sudah otomatis melakukan ekstrasi source code dari git repo, namun jika tidak secara otomatis melakukan ekstrasi source kita bisa melakukannya secara manual pertama melakukan checking hash terdapat file git yang telah terdownload, <code>git fsck</code> lalu melanjutkan dengan, <code>git reset --hard HEAD</code></p>
 </li>
 </ol>
-<p><img src="/img/git/git-fsck-and-reset.webp" alt=""></p>
+<p><img src="/img/git/git-fsck-and-reset.webp" alt="git fsck and reset hard head"></p>
 <h2 id="pascakata">PASCAKATA</h2>
 <p>And source code sudah terambil<br>
 Thanks, semoga catatan ini berguna bagi kalian, jika ada tambahan atau koreksi silahkan taruh pada section comment :D</p>
-<p>-fin</p>
+<p>-Fin</p>
 
 		</div>
 		<footer class="post__footer">
@@ -190,8 +190,8 @@ Thanks, semoga catatan ini berguna bagi kalian, jika ada tambahan atau koreksi s
     <div id="disqus-comments">
       
         <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+<script>
+    window.disqus_config = function () {
     
     
     
@@ -246,11 +246,11 @@ Thanks, semoga catatan ini berguna bagi kalian, jika ada tambahan atau koreksi s
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/apakah-xss-itu-berbahaya/">Apakah XSS Itu Berbahaya ?</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/malwared-ads-continued/">Iklan yang menarik atau mencurigakan lanjutan</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/dictionary-attack/">Dictionary Attack</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/malwared-ads/">Iklan yang menarik atau mencurigakan ?</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/secure-surfing-practice/">Secure Surfing Practice</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/lesson-learned-from-ransomware/">Lesson Learned from Ransomware</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/it-was-dns/">Yes, It was DNS!</a></li>
 		</ul>
 	</div>
 </div>
@@ -296,7 +296,7 @@ Thanks, semoga catatan ini berguna bagi kalian, jika ada tambahan atau koreksi s
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (14)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (17)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra mail server">Zimbra mail server (1)</a>
 	</div>
@@ -344,7 +344,7 @@ Thanks, semoga catatan ini berguna bagi kalian, jika ada tambahan atau koreksi s
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2023 Ardi Jonias Fortuna.
+			&copy; 2024 Ardi Jonias Fortuna.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>

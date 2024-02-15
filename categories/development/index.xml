@@ -6,70 +6,56 @@
     <description>Recent content in Development on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 28 Aug 2023 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://potato.id/categories/development/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Iklan yang menarik atau mencurigakan lanjutan</title>
+      <link>https://potato.id/posts/malwared-ads-continued/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/malwared-ads-continued/</guid>
+      <description>Setelah menulis tentang iklan malware yang menggunakan umpan pancing Google Bard, sekarang ada iklan malware lagi yang sedikit berbeda, baik dari jenis umpannya dan malware yang dikirimkan, iklan ini tentang custom taskbar untuk windows agar terlihat lebih cantik, namun sebenarnya file yang di download nanti adalah malware dan tidak ada instalasi taskbar custom seperti yang diiklankan, lalu file yang di-download oleh user melakukan instalasi apa ? tentunya malware, untuk jelasnya kurang lebih ini yang dijalankan oleh si installer tadi</description>
+    </item>
     <item>
       <title>Dictionary Attack</title>
       <link>https://potato.id/posts/dictionary-attack/</link>
       <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://potato.id/posts/dictionary-attack/</guid>
-      <description>Memahami apa itu Dictionary Attack Dictionary attack merupakan salah satu teknik penyerangan yang umum digunakan dalam hacking / pentesting, serangan ini menggunakan sebuah kumpulan password (wordlist) yang umum digunakan ataupun password yang sudah bocor di Internet (seperti rockyou.txt, ignis dsb) tentunya.
-Perbedaan serangan bruteforce dan dictionary attack ini adalah penggunaan wordlist / kumpulan password, pada serangan bruteforce attack umumnya akan menebak seluruh kombinasi karakter yang ada dan tentunya lebih banyak memakan waktu lama, serangan dictionary attack sendiri juga membutuhkan cukup waktu tergantung dengan kompleksitas password yang digunakan oleh user, bagus / tidaknya wordlist yang digunakan serta response time server.</description>
+      <description>Memahami apa itu Dictionary Attack Dictionary attack merupakan salah satu teknik penyerangan yang umum digunakan dalam hacking / pentesting, serangan ini menggunakan sebuah kumpulan password (wordlist) yang umum digunakan ataupun password yang sudah bocor di Internet (seperti rockyou.txt, ignis dsb) tentunya.&#xA;Perbedaan serangan bruteforce dan dictionary attack ini adalah penggunaan wordlist / kumpulan password, pada serangan bruteforce attack umumnya akan menebak seluruh kombinasi karakter yang ada dan tentunya lebih banyak memakan waktu lama, serangan dictionary attack sendiri juga membutuhkan cukup waktu tergantung dengan kompleksitas password yang digunakan oleh user, bagus / tidaknya wordlist yang digunakan serta response time server.</description>
     </item>
-    
     <item>
       <title>Iklan yang menarik atau mencurigakan ?</title>
       <link>https://potato.id/posts/malwared-ads/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://potato.id/posts/malwared-ads/</guid>
-      <description>Pada bulan Juni kemarin, tepatnya tanggal 14 lagi scroll fb dan nemu iklan yang menarik tentang AI buatan google si Bard ini, tapi hal yang bikin menarik dari iklan tersebut adalah kolom komentarnya, langsung cek komen
-lha kok yang komentar akun yang centang biru semua, lha kok ada politisi Indonesia yang ikutan komen ? apa hubungannya politik dengan si google bard ini ? lalu komentar yang ada pada post tersebut juga menunjukan sentimen yang positif</description>
+      <description>Pada bulan Juni kemarin, tepatnya tanggal 14 lagi scroll fb dan nemu iklan yang menarik tentang AI buatan google si Bard ini, tapi hal yang bikin menarik dari iklan tersebut adalah kolom komentarnya, langsung cek komen&#xA;lha kok yang komentar akun yang centang biru semua, lha kok ada politisi Indonesia yang ikutan komen ? apa hubungannya politik dengan si google bard ini ? lalu komentar yang ada pada post tersebut juga menunjukan sentimen yang positif</description>
     </item>
-    
     <item>
       <title>Secure Surfing Practice</title>
       <link>https://potato.id/posts/secure-surfing-practice/</link>
       <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://potato.id/posts/secure-surfing-practice/</guid>
-      <description>Internet menjadi bagian penting dalam kehidupan sehari-hari, paling umum internet digunakan sebagai media sumber informasi dan hiburan. Namun, penggunaan internet yang tidak bijak dan baik dapat membahayakan keamanan data dan privasi. Berikut adalah beberapa langkah yang dapat diikuti agar tetap aman saat ber-internet:
-Menambahkan web proctection Install Malwarebytes Browser Guard Extension pada Browser yang digunakan, dengan ini malwarebytes akan melakukan aksi block ketika kita secara tidak sadar membuka sebuah website yang mencurigakan maupun website yang terindikasi malware / trojan</description>
+      <description>Internet menjadi bagian penting dalam kehidupan sehari-hari, paling umum internet digunakan sebagai media sumber informasi dan hiburan. Namun, penggunaan internet yang tidak bijak dan baik dapat membahayakan keamanan data dan privasi. Berikut adalah beberapa langkah yang dapat diikuti agar tetap aman saat ber-internet:&#xA;Menambahkan web proctection Install Malwarebytes Browser Guard Extension pada Browser yang digunakan, dengan ini malwarebytes akan melakukan aksi block ketika kita secara tidak sadar membuka sebuah website yang mencurigakan maupun website yang terindikasi malware / trojan</description>
     </item>
-    
     <item>
       <title>Lesson Learned from Ransomware</title>
       <link>https://potato.id/posts/lesson-learned-from-ransomware/</link>
       <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://potato.id/posts/lesson-learned-from-ransomware/</guid>
       <description>Ransomware Ransomware merupakan salah satu jenis malware (malicious software) yang akan melakukan enkripsi terhadap file-file korban sehingga korban kehilangan akses terhadap data-data file yang dimiliki, malware ini akan melakukan dekripsi terhadap file-file tersebut jika tebusan / bayaran telah dibayar oleh korban namun tidak ada jaminan semua data tersebut dapat kembali serta jika korban tidak melakukan tebusan beberapa jenis ransomware akan mengekspos file-file korban ke internet, ransomware sendiri menyebarkan diri melalui installer palsu, phishing, exploit kit, remote desktop dsb</description>
     </item>
-    
     <item>
       <title>Yes, It was DNS!</title>
       <link>https://potato.id/posts/it-was-dns/</link>
       <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://potato.id/posts/it-was-dns/</guid>
-      <description>Seperti yang kita tau, DNS atau Domain Name Server adalah service yang bertugas untuk melakukan translate nama domain menjadi IP sehingga user tidak perlu mengingat IP yang cukup ribet/njelimet jika diingat satu-satu, maka dari itu DNS menjadi salah satu service yang cukup krusial dan harus di konfigurasi dengan baik, jika tidak maka dapat berdampak pada domain yang kita miliki akan susah atau bahkan tidak dapat diakses oleh user
-Sebagai contoh, beberapa waktu lalu ada rekan kerja yang komplain ke tim infrastruktur karena tidak bisa membuka web monev.</description>
+      <description>Seperti yang kita tau, DNS atau Domain Name Server adalah service yang bertugas untuk melakukan translate nama domain menjadi IP sehingga user tidak perlu mengingat IP yang cukup ribet/njelimet jika diingat satu-satu, maka dari itu DNS menjadi salah satu service yang cukup krusial dan harus di konfigurasi dengan baik, jika tidak maka dapat berdampak pada domain yang kita miliki akan susah atau bahkan tidak dapat diakses oleh user&#xA;Sebagai contoh, beberapa waktu lalu ada rekan kerja yang komplain ke tim infrastruktur karena tidak bisa membuka web monev.</description>
     </item>
-    
     <item>
       <title>Manajemen Job dan Shortcut pada Terminal</title>
       <link>https://potato.id/posts/bash-job-management-and-shortcut/</link>
       <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://potato.id/posts/bash-job-management-and-shortcut/</guid>
-      <description>Mungkin kita sering ketika sedang berurusan dengan terminal kita diminta untuk kerja cepat, hal ini sudah dibantu dengan bash-completion yang membuat kita dapat mengetikan command secara otomatis dengan menekan tombol [TAB] sebanyak 2 kali, tapi pada umumnya terminal memiliki shortcuts yang membantu kita bisa bekerja dengan linux secara mudah dan cepat, berikut adalah list umum shortcut pada terminal, list ini saya ambil dari academy hack the box.
-Completion
-[TAB] - Inisiasi auto completion command</description>
+      <description>Mungkin kita sering ketika sedang berurusan dengan terminal kita diminta untuk kerja cepat, hal ini sudah dibantu dengan bash-completion yang membuat kita dapat mengetikan command secara otomatis dengan menekan tombol [TAB] sebanyak 2 kali, tapi pada umumnya terminal memiliki shortcuts yang membantu kita bisa bekerja dengan linux secara mudah dan cepat, berikut adalah list umum shortcut pada terminal, list ini saya ambil dari academy hack the box.&#xA;Auto Completion&#xA;[TAB] - Inisiasi auto completion command</description>
     </item>
-    
   </channel>
 </rss>

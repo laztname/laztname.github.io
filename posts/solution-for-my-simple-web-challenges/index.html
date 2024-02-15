@@ -10,12 +10,12 @@
 		<meta property="og:title" content="Penyelesaian Untuk Web &#39;Simple&#39; Challenges" />
 <meta property="og:description" content="Write up challenges dari Surabaya Hacker Link, simple web challenges" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://potato.id/posts/solution-for-my-simple-web-challenges/" />
+<meta property="og:url" content="https://potato.id/posts/solution-for-my-simple-web-challenges/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2018-12-21T00:00:00+00:00" />
 <meta property="article:modified_time" content="2018-12-21T00:00:00+00:00" />
 
-		<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Penyelesaian Untuk Web &#39;Simple&#39; Challenges"/>
+
+		<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Penyelesaian Untuk Web &#39;Simple&#39; Challenges"/>
 <meta name="twitter:description" content="Write up challenges dari Surabaya Hacker Link, simple web challenges"/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -100,46 +100,52 @@
 		<img class="thumbnail__image" src="/img/simplewebchall/solverlist.webp" alt="Penyelesaian Untuk Web &#39;Simple&#39; Challenges">
 		
 	</figure><div class="content post__content clearfix">
-			<p><img src="/img/simplewebchall/solverlist.webp" alt=""></p>
-<h2 id="pra-kata">Pra Kata</h2>
-<p>Sebelumnya terima kasih buat slashroot ctf karena tanpa slashroot ctf mungkin saya tidak bisa memprovide challenges ini melalui dewaweb.com, Terima kasih buat teman-teman yang sudah meluangkan waktunya untuk challenges &lsquo;simple&rsquo; ini,</p>
+			<h2 id="pra-kata">Pra Kata</h2>
+<p>Sebelumnya terima kasih buat <a href="https://ctf.slashrootctf.id/">slashroot ctf</a> karena tanpa slashroot ctf mungkin saya tidak bisa memprovide challenges ini melalui dewaweb.com, Terima kasih buat teman-teman yang sudah meluangkan waktunya untuk challenges &lsquo;simple&rsquo; ini,</p>
 <h2 id="kata">Kata</h2>
 <p>clue &ldquo;recon, tools, sign-in, submit&rdquo;</p>
 <p>recon ini sangat mudah, sebenarnya tidak perlu menggunakan tools atau scanner, banyak kok website yang masih menyimpan sesuatu yang penting itu pada comment html</p>
-<p><img src="/img/simplewebchall/htmlcomment.webp" alt=""><br>
-terlihat jelas ada info bahwa git repositori (/.git/) dipindahkan pada /git/ kita coba akses dulu</p>
-<p><img src="/img/simplewebchall/image-2.webp" alt=""><br>
-forbidden belum berarti file tidak ada (404-not_found)</p>
-<p>karena ini litespeed maka defaultnya directory listing pada web server ini dimatikan sama seperti web server sebelah (baca: ya itulah <del>nging</del> nginx), kita cek apakah benar git repo ada pada direktori tersebut?, temen-temen pasti hafal bagaimana file yang pasti ada pada folder git repo, yup bener, /git/config, /git/description, /git/HEAD, dsb. lalu kita coba request salah satu</p>
-<p><img src="/img/simplewebchall/image-5.webp" alt=""><br>
-dan ternyata benar</p>
-<p>Yeay git repo memang berada pada direktori tersebut,<br>
-Karena kita tidak bisa melihat isi direktori dan terlalu menyusahkan untuk merequest satu per satu file yang ada pada git repository (ya meski ada salah satu player yang melakukan request secara <del>auto</del> manual), maka dari itu kita menggunakan tools (<a href="https://github.com/kost/dvcs-ripper">https://github.com/kost/dvcs-ripper</a>)</p>
-<p><img src="/img/simplewebchall/image-3.webp" alt=""><br>
-tunggu sampai selesai</p>
-<p>Dan kita berhasil mengambil source code pada web tersebut</p>
-<p><img src="/img/simplewebchall/image-4.webp" alt=""><br>
+<p><img src="/img/simplewebchall/htmlcomment.webp" alt="html comment sensitive information"><br>
+terlihat jelas ada info bahwa git repositori (/.git/) dipindahkan pada direktori /git/ kita coba akses dulu</p>
+<p><img src="/img/simplewebchall/image-2.webp" alt="litespeed 403 forbidden"><br>
+namun ketika diakses server menampilkan halaman forbidden, namun belum berarti file atau direktori yang diakses tidak ada, jika tidak ada maka respon yang diberikan seharusnya adalah 404 Not Found</p>
+<p>karena web server yang digunakan oleh ini adalah litespeed maka defaultnya directory listing pada web server dimatikan sama seperti web server sebelah (baca: ya itulah <del>nging</del> nginx), kita cek apakah benar git repo ada pada direktori tersebut?, temen-temen pasti hafal bagaimana struktur file yang pasti ada pada folder git repo, yup bener, pasti ada</p>
+<ul>
+<li>/git/config</li>
+<li>/git/description</li>
+<li>/git/HEAD</li>
+<li>dsb</li>
+</ul>
+<p>lalu kita coba request salah satu file common yang ada pada direktori git</p>
+<p><img src="/img/simplewebchall/image-5.webp" alt="config pop up download"><br>
+dan ternyata benar, muncul pop up confirm download file config dari isi direktori git</p>
+<p>Yeay git repo memang berada pada direktori tersebut.<br>
+Karena kita tidak bisa melihat isi direktori dan terlalu menyusahkan untuk merequest satu per satu file yang ada pada git repository (ya meski ada salah satu player yang melakukan request secara <del>auto</del> manual), maka dari itu kita menggunakan tool <a href="https://github.com/kost/dvcs-ripper">dvcs-ripper</a> (baca: <a href="/posts/hey-i-found-git-repository/">cara dump exposed git repository</a>)</p>
+<p><img src="/img/simplewebchall/image-3.webp" alt="rip-git command dump"><br>
+tunggu sampai dump file git-nya selesai</p>
+<p>Dan kita berhasil mengambil source code pada web tersebut
+<img src="/img/simplewebchall/image-4.webp" alt="git log output"><br>
 ternyata ada commit login function</p>
-<p>Ternyata ada file login.php pada folder admin, jadi requestnya seperti ini, challshl.com/admin/login.php, Waktunya baca-baca <del>bad</del> kode<br>
-ternyata ada dua jenis post data yang diambil yaitu sign-in, dan sign-up,</p>
-<p><img src="/img/simplewebchall/image-6.webp" alt=""><br>
+<p>Ternyata ada file login.php pada folder admin, jadi requestnya seperti ke challshl.com/admin/login.php, Waktunya baca-baca <del>bad</del> kode<br>
+ternyata ada dua jenis post data yang diambil yaitu sign-in, dan sign-up.
+<img src="/img/simplewebchall/image-6.webp" alt="login.php source code"><br>
 isi file login.php</p>
-<p>karena pengecekan hanya post signin atau signup, kita rubah aja input data kita yang semula signin menjadi signup</p>
-<p><img src="/img/simplewebchall/image-7.webp" alt=""><br>
-submit dan seharusnya kita dapat pop-up berhasil mendaftar namun tidak muncul (it&rsquo;s okay), kita coba untuk login dengan data username dan password yang sudah kita set sebelumnya</p>
-<p><img src="/img/simplewebchall/image-8.webp" alt=""><br>
-logged in :3</p>
-<p>Kita berhasil masuk, dan klik submit maka nickname username kita telah masuk ke solver list</p>
+<p>karena pengecekan hanya post signin atau signup, kita rubah aja input data kita yang semula signin menjadi signup
+<img src="/img/simplewebchall/image-7.webp" alt="inspect element to manual change post data value"><br>
+submit dan seharusnya kita dapat pop-up berhasil mendaftar namun tidak muncul (it&rsquo;s okay), langsung saja kita coba untuk login dengan data username dan password yang sudah kita set sebelumnya</p>
+<p><img src="/img/simplewebchall/image-8.webp" alt="yeay logged in"><br>
+logged in :3<br>
+Kita berhasil masuk, dan klik submit maka nickname username kita telah masuk ke solver list</p>
 <h2 id="pasca-kata">Pasca-Kata</h2>
-<p>Side story: challenges berdasarkan <a href="https://github.com/laztname/SVWA">SVWA</a>, yang dilakukan perubahan oleh beberapa teman saya, ketika sedang memaintenis kode yang telah dirubah, terlihat sedikit kejanggalan yaitu form sign-up telah dihapus yang hanya meninggalkan form sign-in namun fungsi untuk sign-up masih ada dan karena penasaran saya coba untuk melakukan eksploitasi dan berhasil, maka dari itu jadilah challenges ini, thanks berad untuk @Ytyao yang berhasil first blood,  mengingatkan tentang EAR yang ada pada /admin/ dan</p>
-<pre><code>Korea, [20.12.18 06:50]
+<p>Side story: challenges berdasarkan <a href="https://github.com/laztname/SVWA">SVWA</a>, yang dilakukan perubahan oleh beberapa teman saya, ketika sedang memaintenis kode yang telah dirubah, terlihat sedikit kejanggalan yaitu form sign-up telah dihapus yang hanya meninggalkan form sign-in namun fungsi untuk sign-up masih ada dan karena penasaran saya coba untuk melakukan eksploitasi dan berhasil, maka dari itu jadilah challenges ini, thanks berad untuk @Ytyao yang berhasil first blood dan mengingatkan tentang EAR (Execution After Redirect) yang ada pada /admin/ dan</p>
+<pre tabindex="0"><code>Korea, [20.12.18 06:50]
 ngoding jangan pakai perasaan
 ngarai
 pekok,
 ngae logika
 perasaan iki kadang jare sayang yo ra sayang :v
 </code></pre><p>See you on next challenges<br>
-- fin</p>
+- Fin</p>
 
 		</div>
 		<footer class="post__footer">
@@ -188,12 +194,6 @@ perasaan iki kadang jare sayang yo ra sayang :v
 
 
 <nav class="pager flex">
-	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/posts/apakah-xss-itu-berbahaya/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">Apakah XSS Itu Berbahaya ?</p>
-		</a>
-	</div>
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/posts/hey-i-found-git-repository/" rel="next">
 			<span class="pager__subtitle">Next&thinsp;»</span>
@@ -208,8 +208,8 @@ perasaan iki kadang jare sayang yo ra sayang :v
     <div id="disqus-comments">
       
         <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+<script>
+    window.disqus_config = function () {
     
     
     
@@ -264,11 +264,11 @@ perasaan iki kadang jare sayang yo ra sayang :v
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/apakah-xss-itu-berbahaya/">Apakah XSS Itu Berbahaya ?</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/malwared-ads-continued/">Iklan yang menarik atau mencurigakan lanjutan</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/dictionary-attack/">Dictionary Attack</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/malwared-ads/">Iklan yang menarik atau mencurigakan ?</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/secure-surfing-practice/">Secure Surfing Practice</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/lesson-learned-from-ransomware/">Lesson Learned from Ransomware</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/it-was-dns/">Yes, It was DNS!</a></li>
 		</ul>
 	</div>
 </div>
@@ -314,7 +314,7 @@ perasaan iki kadang jare sayang yo ra sayang :v
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (14)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (17)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra mail server">Zimbra mail server (1)</a>
 	</div>
@@ -362,7 +362,7 @@ perasaan iki kadang jare sayang yo ra sayang :v
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2023 Ardi Jonias Fortuna.
+			&copy; 2024 Ardi Jonias Fortuna.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>

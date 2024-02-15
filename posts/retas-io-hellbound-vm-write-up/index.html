@@ -10,12 +10,12 @@
 		<meta property="og:title" content="Retas.io Hellbound VM Write-up" />
 <meta property="og:description" content="Langsung saja to the point, mesin ini susah titik. Dari awal launching labs sudah ada 3 mesin yaitu Zombie, Hellbound dan Anonymouz maka mesin inillah yang menurut saya cukup hard karena ya mungkin kurangnya pengalaman dalam bereksploitasi dan feeling yang kuat. Hingga write up ini ditulis penulis juga masih belum mendapatkan flag root user, masih nyetuck di www-data. Beruntung saja user flag readable sama si www-data dengan ini sudah bisa submit flag user." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://potato.id/posts/retas-io-hellbound-vm-write-up/" />
+<meta property="og:url" content="https://potato.id/posts/retas-io-hellbound-vm-write-up/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-06-15T00:00:00+00:00" />
 <meta property="article:modified_time" content="2020-06-15T00:00:00+00:00" />
 
-		<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Retas.io Hellbound VM Write-up"/>
+
+		<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Retas.io Hellbound VM Write-up"/>
 <meta name="twitter:description" content="Langsung saja to the point, mesin ini susah titik. Dari awal launching labs sudah ada 3 mesin yaitu Zombie, Hellbound dan Anonymouz maka mesin inillah yang menurut saya cukup hard karena ya mungkin kurangnya pengalaman dalam bereksploitasi dan feeling yang kuat. Hingga write up ini ditulis penulis juga masih belum mendapatkan flag root user, masih nyetuck di www-data. Beruntung saja user flag readable sama si www-data dengan ini sudah bisa submit flag user."/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,27 +103,42 @@
 			<p>Langsung saja to the point, mesin ini susah titik. Dari awal launching labs sudah ada 3 mesin yaitu Zombie, Hellbound dan Anonymouz maka mesin inillah yang menurut saya cukup hard karena ya mungkin kurangnya pengalaman dalam bereksploitasi dan feeling yang kuat. Hingga write up ini ditulis penulis juga masih belum mendapatkan flag root user, masih nyetuck di www-data. Beruntung saja user flag readable sama si www-data dengan ini sudah bisa submit flag user.</p>
 <p>Seperti biasa kita melakukan koneksi pada akun openvpn kita, starting our hacking machine dan mulai menyerang IP si Hellbound.</p>
 <p>Pada hasil nmap cukup meresahkan karena yang terbuka hanya ada 1 port saja yaitu port 80 / service web saja, tidak seperti pada mesin-mesin sebelumnya yang pernah saya kerjakan minimal ada 2 port, umumnya port 22 dan 80 yang terbuka.</p>
+<p><img src="/img/hellbound/nmap-response-hellbound.webp" alt="nmap hellbound result"></p>
 <p>Langsung saja kita buka port web service tersebut dan jangan lupa lakukan dirsearch / fuzzing untuk mencari informasi lainnya yang kemungkinan bisa didapatkan.</p>
 <p>Pada saat dibuka tidak ada respons sama sekali, hanya tulisan forbidden / dilarang, lalu kita tunggu saja hasil fuzzing untuk mendapatkan directory umum yang kemungkinan bisa dieksploitasi.</p>
+<p><img src="/img/hellbound/fuzzing-result.webp" alt="fuzzing result"></p>
 <p>Dari hasil fuzzing terdapat 2 directory yaitu login (hmm sepertinya menarik), dan member. Untuk hasil lainnya didapatkan 2 file dari configurasi server yaitu composer.json dan composer.lock (sepertinya tidak menarik).</p>
+<p><img src="/img/hellbound/composer-json.webp" alt="composer file"></p>
 <p>Ketika kita membuka directory login sesuai dengan namanya kita diberikan sebuah form untuk login kesebuah aplikasi web, tapi disini kita tidak mendapatkan informasi credential untuk digunakan masuk, lalu untuk directory member kita akan di-redirect ke directory login, di sini sudah mencoba beberapa cara yang sepertinya berhasil seperti no-redirect, bruteforce, default user pass, SQL-Injection bypass login dkk namun hasilnya nihil, oke kita nyetuck lagi.</p>
+<p><img src="/img/hellbound/login-page.webp" alt="login page"></p>
 <p>Seperti biasa jika nyetuck kita kembali ke tahap awal apakah ada yang tertinggal atau tidak, ternyata jika kita membuka file composer.json kita mendapatkan sedikit informasi mengenai website ini dan benar saja kita mengetahui jika web ini menggunakan mongodb sebagai backend databasenya (saya menarik kata-kata sebelumnya yang tidak menarik tadi, lol.). Oke wait, sepertinya ada exploit yang dapat digunakan, yup benar mongodb adalah nosql dan pada nosql sendiri dikenal ada sebuah injeksi kurang lebih sama seperti SQL injection namun karena pada mongodb maka namanya adalah NoSQL Injection, saya menggunakan resource dari internet ini sebagai panduan untuk melakukan exploitasi.</p>
+<p><img src="/img/hellbound/no-sql-injection.webp" alt="no sql injection"></p>
 <p>Dan benar saja kita dapat masuk tanpa harus mengetahui username / password pada aplikasi web dengan menggunkan NoSQL Injection. Dengan menggunakan credentials yang tidak valid serta sedikit merubah request ke server.</p>
+<p><img src="/img/hellbound/member-index.webp" alt="logged in as member"></p>
 <p>Dari sini kita sudah bisa masuk ke dalam webapp dan pada halaman tersebut tidak ada yang menarik selain form untuk melakukan comment. Sampai sini stuck kembali, kita rehat dan mengerjakan VM lainnya karena memang sudah bener-bener mentok mau gimana lagi, di sini saya mulai membuat sebuah solver untuk mendapatkan username dan password dari webapp ini dengan bash, namun setelah 2 hari-an bikin ternyata credentials yang ditemukan tidak berguna pada langkah selanjutnya, untuk solvernya bisa dilihat di sini jika timbul rasa penasaran.</p>
 <p>Setelah beberapa hari saya mengirimkan support kepada pihak retas untuk minta clue pada challenges VM ini dan mendapatkan clue berupa “Ada admin yang mengecek web tersebut”</p>
+<p><img src="/img/hellbound/clue-pertama.webp" alt="first clue"></p>
 <p>Dari sini langsung kepikiran XSS namun ketika memasukan tag-tag yang umum dipakai untuk XSS ternyata diblock, di sini saya mulai spend waktu yang cukup lama untuk mencari bagaimana melakukan XSS stored pada web ini, karena XSS ini tidak reflected maka saya mencari tag apa yang dapat dipakai, dimulai dengan mencari tag html yang dapat dipakai sepertinya adalah langkah yang baik. Dengan sedikit otomasi saya membuat one liner untuk list tag yang dapat dipakai.</p>
 <p>File list sendiri berisikan tag-tag yang ada pada html, saya mendapatkannya melalui website portswigger</p>
+<p><img src="/img/hellbound/possible-tag.webp" alt="testing for unfiltered html tag"></p>
 <p>Dari hasil tersebut terdapat tag-tag html yang dapat digunakan, langsung saja kita coba satu persatu payload pada web portswigger dengan tag yang dapat dipakai, serta jangan lupa rubah payload untuk mengakses port local machine kita. Setelah beberapa lama payload berikut dapat digunakan.</p>
 <p>Dan kita mendapatkan hasil berupa request http dari server.</p>
+<p><img src="/img/hellbound/xss-response.webp" alt="xss callback"></p>
 <p>Dari sini kita dapat membuat payload XSS untuk melakukan hal lain pada user yang tanpa sengaja membuka payload kita. Seperti pada umumnya kita mencoba melakukan steal cookie, namun hasilnya nihil tidak ada cookie yang dapat didapatkan serta kembali pada hasil request dari server bahwa dashboard berada pada port 8080 namun pada port 8080 sendiri tidak dapat diakses dari luar, di sini saya mengalami stuck yang sangat lama sekali dan berfikiran untuk berhenti bermain di mesin ini. Setelah beberapa minggu akhirnya tanya lagi tentang clue pada admin Instagram retasidn dan saatnya membuat payload lain.</p>
+<p><img src="/img/hellbound/clue-kedua.webp" alt="second clue"></p>
 <p>Setelah mencoba menggunakan BeEF untuk mendapatkan akses tunnel proxy terhadap user yang menjalankan script BeEF yang berujung gagal karena request akan terputus setelah 3-5 detik, kita mencari informasi lainnya untuk melakukan sejenis tunneling dengan XSS atau melakuakn explorasi web terhadap client yang menjalankan payload XSS tersebut dan mendapatkan cara berikut yaitu menggunakan XMLHttpRequest</p>
 <p>Lalu membuat payload seperti ini.</p>
+<p><img src="/img/hellbound/xss-payload.webp" alt="generate xss payload"></p>
 <p>Isi dari file get.php, atau payload yang melakukan XMLHttpRequest ke halaman index dan melemparkan hasil dari request tersebut ke local port machine kita di port 8000</p>
 <p>Pada local machine kita jangan lupa melakukan listen terhadap port 8000 agar hasil request index.php pada dashboard admin di port 8080 dan ketika dijalankan kita mendapatkan informasi berikut.</p>
 <p>Kita sudah mendapatkan isi dari index pada dashboard admin, karena pada dikirim ke url maka isinya ter-encode dengan urlencode, lanjut decode dan analisa.</p>
+<p><img src="/img/hellbound/dashboard-index.webp" alt="dashboard admin page"></p>
 <p>Dari hasil sedikit analisa, file index.php mempunyai GET request dengan parameter ping untuk melakukan ping pada suatu host, sepertinya ini bisa dilakukan command injection, saatnya kita coba menjalankan command-command umum pada linux server. Tentunya sama seperti XSS tadi, kita melakukan open port untuk menerima hasil dari response command injection yang dijalankan, jika terdapat balasan dari server berarti command tersebut berjalan dengan baik. Sebagai referensi, berikut adalah resource yang cukup menarik untuk mencoba beragam jenis payload command injection.</p>
-<p>Dari sini terbukti bahwa kita dapat melakukan command injection menggunakan pipe (|) dilanjutkan dengan command yang akan dilakukan, kebeteulan karena wget dapat dijalankan, saya mendownload sebuah script untuk menjalankan reverse shell dengan menggunakan command yang ada, generate melalui shell now sh, lalu simpan dilocal, pada command injection kita lakukan download file tersebut dan menjalankannya dengan bash.</p>
+<p><img src="/img/hellbound/check-wget.webp" alt="pipe rce"></p>
+<p>Dari sini terbukti bahwa kita dapat melakukan command injection menggunakan pipe (|) dilanjutkan dengan command yang akan dilakukan, kebetulan karena wget dapat dijalankan, saya mendownload sebuah script untuk menjalankan reverse shell dengan menggunakan command yang ada, generate melalui shell now sh, lalu simpan dilocal, pada command injection kita lakukan download file tersebut dan menjalankannya dengan bash.</p>
+<p><img src="/img/hellbound/reverse-shell.webp" alt="reverse shell xss"></p>
 <p>Setelah mendapatkan reverse shell dan saatnya kita baca flag di homedirnya user joko, untungnya flagnya readable oleh www-data sehingga cukup melegakan setelah perjalanan panjang untuk mendapatkan shell dari server, selanjutnya kita melakukan rooting. namun untuk saat ini saya rehat bentar dari mesin ini karena memang effort yang digunakan cukup banyak dan ribet.</p>
+<p><img src="/img/hellbound/user-flaggggggggs.webp" alt="user flag"></p>
 <p>To be continued</p>
 
 		</div>
@@ -181,8 +196,8 @@
     <div id="disqus-comments">
       
         <div id="disqus_thread"></div>
-<script type="application/javascript">
-    var disqus_config = function () {
+<script>
+    window.disqus_config = function () {
     
     
     
@@ -237,11 +252,11 @@
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/apakah-xss-itu-berbahaya/">Apakah XSS Itu Berbahaya ?</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/malwared-ads-continued/">Iklan yang menarik atau mencurigakan lanjutan</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/dictionary-attack/">Dictionary Attack</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/malwared-ads/">Iklan yang menarik atau mencurigakan ?</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/secure-surfing-practice/">Secure Surfing Practice</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/lesson-learned-from-ransomware/">Lesson Learned from Ransomware</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/it-was-dns/">Yes, It was DNS!</a></li>
 		</ul>
 	</div>
 </div>
@@ -287,7 +302,7 @@
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (14)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (17)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra mail server">Zimbra mail server (1)</a>
 	</div>
@@ -335,7 +350,7 @@
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2023 Ardi Jonias Fortuna.
+			&copy; 2024 Ardi Jonias Fortuna.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>

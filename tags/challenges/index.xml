@@ -7,93 +7,62 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
     <lastBuildDate>Mon, 15 Jun 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://potato.id/tags/challenges/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <atom:link href="https://potato.id/tags/challenges/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Retas.io Hellbound VM Write-up</title>
       <link>https://potato.id/posts/retas-io-hellbound-vm-write-up/</link>
       <pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://potato.id/posts/retas-io-hellbound-vm-write-up/</guid>
       <description>Langsung saja to the point, mesin ini susah titik. Dari awal launching labs sudah ada 3 mesin yaitu Zombie, Hellbound dan Anonymouz maka mesin inillah yang menurut saya cukup hard karena ya mungkin kurangnya pengalaman dalam bereksploitasi dan feeling yang kuat. Hingga write up ini ditulis penulis juga masih belum mendapatkan flag root user, masih nyetuck di www-data. Beruntung saja user flag readable sama si www-data dengan ini sudah bisa submit flag user.</description>
     </item>
-    
     <item>
       <title>Retas.io Zombie VM Write-up</title>
       <link>https://potato.id/posts/retas-io-zombie-vm-write-up/</link>
       <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://potato.id/posts/retas-io-zombie-vm-write-up/</guid>
-      <description>Retas.io merupakan sebuah perusahaan dari PT. Solusi Siber Teknologi yang menawarkan berbagai produk berupa jasa keamanan mulai dari Vulnerability Assesment, Penetration Testing hingga kebutuhan khusus lainnya yang berkaitan dengan IT dan keamanannya.
-Baru-baru ini retas.io meluncurkan sebuah produk baru berupa labs yang berguna untuk membantu para player baru yang terjun ke dunia Infosec, labs ini sendiri mirip-mirip hackthebox, dengan menggunakan vpn kita diharuskan menyelesaikan tantangan yang diberikan dengan pengetahuan dan kemampuan IT para player, tidak hanya itu mereka juga akan merilis kampus retas yang bertujuan memberikan pendidikan / pelatihan untuk terjun di dunia Infosec, namun pada saat tulisan ini dibuat fitur tersebut masih dalam proses pengerjaan, langsung saja berikut adalah write-up dari Challenges VM Zombie yang ada pada labs retas.</description>
+      <description>Retas.io merupakan sebuah perusahaan dari PT. Solusi Siber Teknologi yang menawarkan berbagai produk berupa jasa keamanan mulai dari Vulnerability Assesment, Penetration Testing hingga kebutuhan khusus lainnya yang berkaitan dengan IT dan keamanannya.&#xA;Baru-baru ini retas.io meluncurkan sebuah produk baru berupa labs yang berguna untuk membantu para player baru yang terjun ke dunia Infosec, labs ini sendiri mirip-mirip hackthebox, dengan menggunakan vpn kita diharuskan menyelesaikan tantangan yang diberikan dengan pengetahuan dan kemampuan IT para player, tidak hanya itu mereka juga akan merilis kampus retas yang bertujuan memberikan pendidikan / pelatihan untuk terjun di dunia Infosec, namun pada saat tulisan ini dibuat fitur tersebut masih dalam proses pengerjaan, langsung saja berikut adalah write-up dari Challenges VM Zombie yang ada pada labs retas.</description>
     </item>
-    
     <item>
       <title>Penyelesaian Challenges Malang Hacker Link</title>
       <link>https://potato.id/posts/solution-for-mhl-challenges/</link>
       <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://potato.id/posts/solution-for-mhl-challenges/</guid>
-      <description>Setelah lama tidak membuat challenges karena waktu senggang yang makin dikit karena tugas yang makin banyak dan menumpuk karena tidak segera dikerjakan, akhirnya dapat info challenges dari temen di group telegram, challenges ini merupakan challenges buatan dari komunitas lain yaitu Malang Hacker Link, challengesnya cukup unik dan menyenangkan untuk dikerjakan karena ilmu perdukunan tidak perlu digunakan.
-Langsung saja dari informasi tersebut langsung buka linknya dan didapatkan form dengan isian first dan last name karena belum menjelajah dan mendapatkan clue, kita mencoba menggunakan fitur ini untuk mengetahui output dari aplikasi web ini, untuk isian firstname diisikan abc dan untuk lastname dengan def</description>
+      <description>Setelah lama tidak membuat challenges karena waktu senggang yang makin dikit karena tugas yang makin banyak dan menumpuk karena tidak segera dikerjakan, akhirnya dapat info challenges dari temen di group telegram, challenges ini merupakan challenges buatan dari komunitas lain yaitu Malang Hacker Link, challengesnya cukup unik dan menyenangkan untuk dikerjakan karena ilmu perdukunan tidak perlu digunakan.&#xA;Langsung saja dari informasi tersebut langsung buka linknya dan didapatkan form dengan isian first dan last name karena belum menjelajah dan mendapatkan clue, kita mencoba menggunakan fitur ini untuk mengetahui output dari aplikasi web ini, untuk isian firstname diisikan abc dan untuk lastname dengan def</description>
     </item>
-    
     <item>
       <title>Penyelesaian Challenges Surabaya Hacker Link VM Heaven</title>
       <link>https://potato.id/posts/solution-for-shl-challenges-heaven-vm/</link>
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://potato.id/posts/solution-for-shl-challenges-heaven-vm/</guid>
-      <description>Karena mesin ini sudah ditarik dan sudah dirasa tidak relevan untuk sebuah challenges, maka dari itu saya membuat penyelesaian bagaimana menyelesaikan mesin vm heaven dari Surabaya Hacker Link.
-Sebenarnya untuk menyelesaikan challenges ini hampir tidak dibutuhkan tools hacking khusus seperti sqlmap ataupun metasploit karena challenges ini sangat mudah, tidak diperlukan pengetahuan khusus tentang hacking. cukup terbiasa dengan sistem operasi GNU/Linux dan pengetahuan mendasar tentang bagaimana melakukan pwning (owning) terhadap mesin maka VM dapat diselesaikan dengan mudah.</description>
+      <description>Karena mesin ini sudah ditarik dan sudah dirasa tidak relevan untuk sebuah challenges, maka dari itu saya membuat penyelesaian bagaimana menyelesaikan mesin vm heaven dari Surabaya Hacker Link.&#xA;Sebenarnya untuk menyelesaikan challenges ini hampir tidak dibutuhkan tools hacking khusus seperti sqlmap ataupun metasploit karena challenges ini sangat mudah, tidak diperlukan pengetahuan khusus tentang hacking. cukup terbiasa dengan sistem operasi GNU/Linux dan pengetahuan mendasar tentang bagaimana melakukan pwning (owning) terhadap mesin maka VM dapat diselesaikan dengan mudah.</description>
     </item>
-    
     <item>
       <title>Solution for QR Generator Challenges</title>
       <link>https://potato.id/posts/solution-for-qr-generator-challenges/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://potato.id/posts/solution-for-qr-generator-challenges/</guid>
-      <description>Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana, Challenges ini bertemakan QR Code Generator, namun letak vulnerability-nya tidak pada QR Code tersebut, lalu berikut adalah cara sederhana menyelesaikannya
-  Diberikan Challenges
-Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.
-  Pengecekan Source Code</description>
+      <description>Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana, Challenges ini bertemakan QR Code Generator, namun letak vulnerability-nya tidak pada QR Code tersebut, lalu berikut adalah cara sederhana menyelesaikannya&#xA;Diberikan Challenges&#xA;Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.&#xA;Pengecekan Source Code</description>
     </item>
-    
     <item>
       <title>Solution for Ramadhan Challenges</title>
       <link>https://potato.id/posts/solution-for-ramadhan-challenges/</link>
       <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://potato.id/posts/solution-for-ramadhan-challenges/</guid>
       <description>Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di STTS, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui /self/proc/environ dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.</description>
     </item>
-    
     <item>
       <title>Solution for Surabaya Hacker Link Challenges</title>
       <link>https://potato.id/posts/solution-for-surabaya-hacker-link-challenges/</link>
       <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://potato.id/posts/solution-for-surabaya-hacker-link-challenges/</guid>
-      <description>Well, postingan ini dibuat karena challenges Surabaya Hacker Link telah diupdate dan ada salah seorang yang penasaran dengan challenges ini namun belum solved dan menyarankan agar dibuatkan video cara menyelesaikannya, ya namun ga bisa buat video ya tulisan aja deh, updated challenges
-  Disana dijelaskan bahwa kita harus menyelamatkan website si jhon ini lalu kita akan diberikan link group telegram (flag)
-tampilan awal
-  Kita akses web si jhon ini</description>
+      <description>Well, postingan ini dibuat karena challenges Surabaya Hacker Link telah diupdate dan ada banyak orang yang penasaran dengan challenges ini namun belum solved dan menyarankan agar dibuatkan video cara menyelesaikannya, ya namun ga bisa buat video ya buat tulisan aja deh, updated challenges&#xA;Disana dijelaskan bahwa kita harus menyelamatkan website si jhon ini lalu kita akan diberikan link group telegram (flag)&#xA;tampilan awal halaman challenges shl&#xA;Pertama-tama kita coba akses web si jhon ini website-nya di deface ternyata</description>
     </item>
-    
     <item>
       <title>Penyelesaian Untuk Web &#39;Simple&#39; Challenges</title>
       <link>https://potato.id/posts/solution-for-my-simple-web-challenges/</link>
       <pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://potato.id/posts/solution-for-my-simple-web-challenges/</guid>
-      <description>Pra Kata Sebelumnya terima kasih buat slashroot ctf karena tanpa slashroot ctf mungkin saya tidak bisa memprovide challenges ini melalui dewaweb.com, Terima kasih buat teman-teman yang sudah meluangkan waktunya untuk challenges &amp;lsquo;simple&amp;rsquo; ini,
-Kata clue &amp;ldquo;recon, tools, sign-in, submit&amp;rdquo;
-recon ini sangat mudah, sebenarnya tidak perlu menggunakan tools atau scanner, banyak kok website yang masih menyimpan sesuatu yang penting itu pada comment html
-terlihat jelas ada info bahwa git repositori (/.</description>
+      <description>Pra Kata Sebelumnya terima kasih buat slashroot ctf karena tanpa slashroot ctf mungkin saya tidak bisa memprovide challenges ini melalui dewaweb.com, Terima kasih buat teman-teman yang sudah meluangkan waktunya untuk challenges &amp;lsquo;simple&amp;rsquo; ini,&#xA;Kata clue &amp;ldquo;recon, tools, sign-in, submit&amp;rdquo;&#xA;recon ini sangat mudah, sebenarnya tidak perlu menggunakan tools atau scanner, banyak kok website yang masih menyimpan sesuatu yang penting itu pada comment html&#xA;terlihat jelas ada info bahwa git repositori (/.</description>
     </item>
-    
   </channel>
 </rss>

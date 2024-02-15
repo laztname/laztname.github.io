@@ -1,283 +1,177 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>https://potato.id/</loc>
-    <lastmod>2023-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/categories/</loc>
-    <lastmod>2023-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/categories/development/</loc>
-    <lastmod>2023-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/dictionary-attack/</loc>
-    <lastmod>2023-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/</loc>
-    <lastmod>2023-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/</loc>
-    <lastmod>2023-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/write-up/</loc>
-    <lastmod>2023-08-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/malwared-ads/</loc>
-    <lastmod>2023-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/end-users/</loc>
-    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/internet/</loc>
-    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/secure-surfing-practice/</loc>
-    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/lesson-learned-from-ransomware/</loc>
-    <lastmod>2023-02-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/it-was-dns/</loc>
-    <lastmod>2022-10-06T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/bash-job-management-and-shortcut/</loc>
-    <lastmod>2020-08-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/terminal/</loc>
-    <lastmod>2020-08-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/challenges/</loc>
-    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/categories/offensive/</loc>
-    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/retas-labs/</loc>
-    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/retas-io-hellbound-vm-write-up/</loc>
-    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/categories/web-hacking/</loc>
-    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/retas-io-zombie-vm-write-up/</loc>
-    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/malang-hacker-link/</loc>
-    <lastmod>2020-04-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/solution-for-mhl-challenges/</loc>
-    <lastmod>2020-04-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/solution-for-shl-challenges-heaven-vm/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/surabaya-hacker-link/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/virtual-machine/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/categories/defensive/</loc>
-    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/fail2ban/</loc>
-    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</loc>
-    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/intrusion-prevention-system/</loc>
-    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/telegram-bot/</loc>
-    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/wordpress/</loc>
-    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/zimbra-mail-server/</loc>
-    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/dvcs-ripper/</loc>
-    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/git/</loc>
-    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/gitdumper/</loc>
-    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/githack/</loc>
-    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/rce/</loc>
-    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/solution-for-qr-generator-challenges/</loc>
-    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/incident-response/</loc>
-    <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/my-website-hacked-now-what/</loc>
-    <lastmod>2019-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/file-upload/</loc>
-    <lastmod>2019-05-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/lfi/</loc>
-    <lastmod>2019-05-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/solution-for-ramadhan-challenges/</loc>
-    <lastmod>2019-05-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/dom-based-xss/</loc>
-    <lastmod>2019-02-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/xss/</loc>
-    <lastmod>2019-02-27T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/xss-prevention/</loc>
-    <lastmod>2019-02-21T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/sql-injection-into-xrdp-account-take-over/</loc>
-    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/tags/sqli/</loc>
-    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/categories/reversing/</loc>
-    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/solution-for-surabaya-hacker-link-challenges/</loc>
-    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/hey-i-found-git-repository/</loc>
-    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://potato.id/posts/solution-for-my-simple-web-challenges/</loc>
-    <lastmod>2018-12-21T00:00:00+00:00</lastmod>
-  </url>
-  
   <url>
     <loc>https://potato.id/posts/apakah-xss-itu-berbahaya/</loc>
-    <lastmod>2018-12-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2024-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/</loc>
+    <lastmod>2024-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/categories/</loc>
+    <lastmod>2024-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/</loc>
+    <lastmod>2024-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/</loc>
+    <lastmod>2024-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/categories/web-hacking/</loc>
+    <lastmod>2024-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/write-up/</loc>
+    <lastmod>2024-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/xss/</loc>
+    <lastmod>2024-02-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/categories/development/</loc>
+    <lastmod>2023-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/malwared-ads-continued/</loc>
+    <lastmod>2023-08-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/dictionary-attack/</loc>
+    <lastmod>2023-08-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/malwared-ads/</loc>
+    <lastmod>2023-07-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/end-users/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/internet/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/secure-surfing-practice/</loc>
+    <lastmod>2023-05-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/lesson-learned-from-ransomware/</loc>
+    <lastmod>2023-02-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/it-was-dns/</loc>
+    <lastmod>2022-10-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/bash-job-management-and-shortcut/</loc>
+    <lastmod>2020-08-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/terminal/</loc>
+    <lastmod>2020-08-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/challenges/</loc>
+    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/categories/offensive/</loc>
+    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/retas-labs/</loc>
+    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/retas-io-hellbound-vm-write-up/</loc>
+    <lastmod>2020-06-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/retas-io-zombie-vm-write-up/</loc>
+    <lastmod>2020-05-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/malang-hacker-link/</loc>
+    <lastmod>2020-04-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/solution-for-mhl-challenges/</loc>
+    <lastmod>2020-04-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/solution-for-shl-challenges-heaven-vm/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/surabaya-hacker-link/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/virtual-machine/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/categories/defensive/</loc>
+    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/fail2ban/</loc>
+    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</loc>
+    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/intrusion-prevention-system/</loc>
+    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/telegram-bot/</loc>
+    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/wordpress/</loc>
+    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/zimbra-mail-server/</loc>
+    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/dvcs-ripper/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/git/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/gitdumper/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/githack/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/menulis-laporan-bug/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/rce/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/solution-for-qr-generator-challenges/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/incident-response/</loc>
+    <lastmod>2019-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/my-website-hacked-now-what/</loc>
+    <lastmod>2019-08-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/file-upload/</loc>
+    <lastmod>2019-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/lfi/</loc>
+    <lastmod>2019-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/solution-for-ramadhan-challenges/</loc>
+    <lastmod>2019-05-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/dom-based-xss/</loc>
+    <lastmod>2019-02-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/xss-prevention/</loc>
+    <lastmod>2019-02-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/sql-injection-into-xrdp-account-take-over/</loc>
+    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/sqli/</loc>
+    <lastmod>2019-01-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/categories/reversing/</loc>
+    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/solution-for-surabaya-hacker-link-challenges/</loc>
+    <lastmod>2019-01-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/hey-i-found-git-repository/</loc>
+    <lastmod>2018-12-31T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/solution-for-my-simple-web-challenges/</loc>
+    <lastmod>2018-12-21T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://potato.id/about/</loc>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://potato.id/contact/</loc>
   </url>
-  
 </urlset>
