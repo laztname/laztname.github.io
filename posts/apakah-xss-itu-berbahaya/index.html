@@ -105,7 +105,7 @@
 <h2 id="reflected-xss">Reflected XSS</h2>
 <p>Jika reflected pada parameter get (contoh pada fitur search yang menggunakan method get</p>
 <pre tabindex="0"><code>web.com/?cari=&lt;script&gt;alert(1337)&lt;/script&gt;
-</code></pre><p>maka dalam hal ini bisa digunakan sebagai scam, contoh: kita alurkan seperti ini, penyerang membuat payload javascript untuk mendirect ke web yang telah dibuat sedimikian serupa untuk melakukan scamming, atau membuat form palsu yang mengoverlay halaman asli dan mengirimkan input data dari form palsu tadi ke server penyerang, kurang lebih seperti itu atau ditambah sedikit social engineering -&gt; <a href="https://github.com/laztname/xss">https://github.com/laztname/xss</a></p>
+</code></pre><p>maka dalam hal ini bisa digunakan sebagai scam, contoh: kita alurkan seperti ini, penyerang membuat payload javascript untuk mendirect ke web yang telah dibuat sedimikian serupa untuk melakukan scamming, atau membuat form palsu yang mengoverlay halaman asli dan mengirimkan input data dari form palsu tadi ke server penyerang, kurang lebih seperti itu atau ditambah sedikit social engineering -&gt; <a href="https://github.com/laztname/xss/">https://github.com/laztname/xss</a></p>
 <h2 id="stored-xss">Stored XSS</h2>
 <p>Jika stored maka payload XSS kita yang sekrip sekrip itu tadi bakal disimpan pada database, lalu pada page lain website menampilkan data payload tadi, maka XSS tersebut akan berjalan dengan asumsi website rentan terhadap XSS, oleh karena itu dampak buruk untuk Stored XSS/Overlay ini adalah penyerang dapat mencuri cookie user lain, nah karena penyerang dapet cookies maka si penyerang ini dapat melakukan cookie hijacking, yang berdampak penyerang dapat masuk sebagai user lain tanpa harus mengetahui username atau password tersebut</p>
 <h2 id="other-question">Other Question</h2>
@@ -121,7 +121,7 @@
 <p>Lalu kenapa kok Bug XSS jarang ditanggepi? <del>karena kamu kurang ganteng</del> mungkin sih laporan yang kamu buat belum bisa memberikan gambaran ke admin/developer bagaimana berbahayanya XSS itu, kalo bisa dalam laporan vulnerability itu di beri cara untuk mereprocodure, menjelaskan detail terhadap dampak (ini yang sangat penting), lalu rekomendasi yang harus dilakukan, banyak kok writeup laporan vulnerability yang mungkin bisa kamu gunakan sebagai referensi</p>
 <p>Mungkin ini saja sih tanggapan dari seorang yang mengandalkan keberuntungan ini, jika ada salah kata atau apalah, mohon dikoreksi, kita sama-sama belajar kok ;) <del>ccciiieeeeee</del></p>
 <p><del>yes there in no image for this article</del> <br>
-untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-prevention">sini</a></p>
+untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-prevention/">sini</a></p>
 <p>Changelog:<br>
 2018-12-20 - First write<br>
 2024-02-11 - Minor change markdown</p>
