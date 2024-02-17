@@ -6,15 +6,8 @@
     <description>Recent content in Write Up on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Sun, 11 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/tags/write-up/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Apakah XSS Itu Berbahaya ?</title>
-      <link>https://potato.id/posts/apakah-xss-itu-berbahaya/</link>
-      <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/apakah-xss-itu-berbahaya/</guid>
-      <description>Background Dari hasil menyimak di beberapa group IT yang saya ikuti banyak sekali yang bertanya-tanya, Apakah XSS itu berbahaya?, Cara upload webshell lewat XSS itu gimana ya gan?, Laporan Bug XSS-ku kok engga ditanggepi sih? Apa karena XSS itu gak berbahaya ya?, Apa karena admin webnya udah anu ?, Ya kurang lebih begitulah pertanyaan yang mencuat, Mari kita bahas bareng-bareng gimana sih karakteristik XSS itu,&#xA;Definition Cross-site scripting is a type of computer security vulnerability typically found in web applications.</description>
-    </item>
     <item>
       <title>Iklan yang menarik atau mencurigakan lanjutan</title>
       <link>https://potato.id/posts/malwared-ads-continued/</link>
@@ -86,6 +79,13 @@
       <description>Karena mesin ini sudah ditarik dan sudah dirasa tidak relevan untuk sebuah challenges, maka dari itu saya membuat penyelesaian bagaimana menyelesaikan mesin vm heaven dari Surabaya Hacker Link.&#xA;Sebenarnya untuk menyelesaikan challenges ini hampir tidak dibutuhkan tools hacking khusus seperti sqlmap ataupun metasploit karena challenges ini sangat mudah, tidak diperlukan pengetahuan khusus tentang hacking. cukup terbiasa dengan sistem operasi GNU/Linux dan pengetahuan mendasar tentang bagaimana melakukan pwning (owning) terhadap mesin maka VM dapat diselesaikan dengan mudah.</description>
     </item>
     <item>
+      <title>Solution for Inclusion Challenges</title>
+      <link>https://potato.id/posts/solution-for-inclusion-challenges/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/solution-for-inclusion-challenges/</guid>
+      <description>Seperti biasa di group Surabaya Hacker Link terdapat beragam challenges, tidak hanya dari staff admin saja yang membuat, namun ada member yang mempunyai challenges dan saya ikut membantu deploy soal challenges tersebut, tidak hanya men-deploy tapi tentunya ikut mencoba challenges tersebut :3&#xA;Tanpa basa-basi langsung akses challenges tersebut berada di challshl.com&#xA;Karena ikut campur saat deploy, jadi saya sedikit tahu dimana bug dari challenges tersebut berada, istilah kerennya white-box pentest untuk pentest dengan membaca source code dari website tersebut *cmiiw</description>
+    </item>
+    <item>
       <title>Menulis Laporan Vulnerability Findings dengan Baik</title>
       <link>https://potato.id/posts/menulis-laporan-bug/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
@@ -126,6 +126,13 @@
       <pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate>
       <guid>https://potato.id/posts/solution-for-my-simple-web-challenges/</guid>
       <description>Pra Kata Sebelumnya terima kasih buat slashroot ctf karena tanpa slashroot ctf mungkin saya tidak bisa memprovide challenges ini melalui dewaweb.com, Terima kasih buat teman-teman yang sudah meluangkan waktunya untuk challenges &amp;lsquo;simple&amp;rsquo; ini,&#xA;Kata clue &amp;ldquo;recon, tools, sign-in, submit&amp;rdquo;&#xA;recon ini sangat mudah, sebenarnya tidak perlu menggunakan tools atau scanner, banyak kok website yang masih menyimpan sesuatu yang penting itu pada comment html&#xA;terlihat jelas ada info bahwa git repositori (/.</description>
+    </item>
+    <item>
+      <title>Apakah XSS Itu Berbahaya ?</title>
+      <link>https://potato.id/posts/apakah-xss-itu-berbahaya/</link>
+      <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/apakah-xss-itu-berbahaya/</guid>
+      <description>Background Dari hasil menyimak di beberapa group IT yang saya ikuti banyak sekali yang bertanya-tanya, Apakah XSS itu berbahaya?, Cara upload webshell lewat XSS itu gimana ya gan?, Laporan Bug XSS-ku kok engga ditanggepi sih? Apa karena XSS itu gak berbahaya ya?, Apa karena admin webnya udah anu ?, Ya kurang lebih begitulah pertanyaan yang mencuat, Mari kita bahas bareng-bareng gimana sih karakteristik XSS itu,&#xA;Definition Cross-site scripting is a type of computer security vulnerability typically found in web applications.</description>
     </item>
   </channel>
 </rss>

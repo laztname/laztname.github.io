@@ -6,20 +6,13 @@
     <description>Recent content in Tags on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Sun, 11 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Write Up</title>
       <link>https://potato.id/tags/write-up/</link>
-      <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://potato.id/tags/write-up/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>XSS</title>
-      <link>https://potato.id/tags/xss/</link>
-      <pubDate>Sun, 11 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/tags/xss/</guid>
       <description></description>
     </item>
     <item>
@@ -114,6 +107,13 @@
       <description></description>
     </item>
     <item>
+      <title>LFI</title>
+      <link>https://potato.id/tags/lfi/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/tags/lfi/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>dvcs-ripper</title>
       <link>https://potato.id/tags/dvcs-ripper/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
@@ -163,10 +163,10 @@
       <description></description>
     </item>
     <item>
-      <title>LFI</title>
-      <link>https://potato.id/tags/lfi/</link>
-      <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/tags/lfi/</guid>
+      <title>XSS</title>
+      <link>https://potato.id/tags/xss/</link>
+      <pubDate>Wed, 27 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/tags/xss/</guid>
       <description></description>
     </item>
     <item>
