@@ -22,6 +22,79 @@
     y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   })(window, document, "clarity", "script", "ii5leisvaz");
 </script>
+<style>
+/* Anti AdBlock By FESAone.com */
+.FESAoneAdBlock {
+background-color: rgba(0,0,0,.50);
+position: fixed;
+z-index: 999;
+}
+.FESAoneAdBlock img {
+height: 7rem;
+width: 7rem;
+}
+
+.adblock-outer {
+margin: auto;
+max-height: 90vh;
+max-width: 640px;
+padding: 2rem;
+position: absolute;
+}
+.adblock-inner {
+background-color: #f4f4f4;
+border-radius: 4px;
+overflow: auto;
+padding: 2rem;
+}
+.FESAoneAdBlock, .adblock-outer {
+bottom: 0;
+left: 0;
+right: 0;
+top: 0;
+}
+.adblock-outer, .adblock-inner {
+align-items: center;
+display: flex;
+display: inline-flex;
+}
+.adblock-wrapper {
+margin-left: 1rem;
+}
+.adblock-title {
+font-size: 2rem;
+font-weight: bolder;
+line-height: 2.5rem;
+font-family: system-ui;
+}
+.adblock-text {
+margin-top: 1rem;
+font-family: system-ui;
+}
+@media screen and (max-width: 640px) {
+.adblock-outer {
+max-width: 90vw;
+}
+.FESAoneAdBlock img {
+height: 5rem;
+width: 5rem;
+}
+.adblock-title {
+font-size: 1.75rem;
+line-height: 2rem;
+}
+}
+@media screen and (max-width: 480px) {
+.adblock-inner {
+flex-direction: column;
+}
+.adblock-wrapper {
+margin-left: 0;
+margin-top: 1rem;
+text-align: center;
+}
+}
+</style>
 
         <style>
             .staticrypt-hr {
@@ -163,11 +236,12 @@
 
         <div id="staticrypt_content" class="staticrypt-content hidden">
             <div class="staticrypt-page">
-                <div class="staticrypt-form">
+                <div class="staticrypt-form" id="forms">
                     <div class="staticrypt-instructions">
                         <p class="staticrypt-title">Download Indonesian Wordlist</p>
                         <p>Contain ~280.000 Indonesian Password</p>
 			<p>Get Password: <a href="/posts/dictionary-attack/" target="_blank">here</a></p>
+        		<p id="timeLeft">Wait after: 10 seconds</p>
                     </div>
 
                     <hr class="staticrypt-hr" />
@@ -178,7 +252,7 @@
                             type="password"
                             name="password"
                             placeholder="Password"
-                            autofocus
+			    disabled="disabled"
                         />
 
                         <label id="staticrypt-remember-label" class="staticrypt-remember hidden">
@@ -186,7 +260,7 @@
                             Remember me
                         </label>
 
-                        <input type="submit" class="staticrypt-decrypt-button" value="OPEN" />
+                        <input type="submit" class="staticrypt-decrypt-button" value="OPEN"/>
                     </form>
                 </div>
             </div>
@@ -817,7 +891,6 @@ exports.init = init;
                     // hide loading screen
                     document.getElementById("staticrypt_loading").classList.add("hidden");
                     document.getElementById("staticrypt_content").classList.remove("hidden");
-                    document.getElementById("staticrypt-password").focus();
 
                     // show the remember me checkbox
                     if (isRememberEnabled) {
@@ -840,6 +913,50 @@ exports.init = init;
                 }
             });
         </script>
+<script> //<![CDATA[
+(function FESAoneAdBlock() {
+let adPub = '1926937123072670',
+adTitle = 'Disable AdBlock!',
+adText = 'We rely on advertisements to keep the site running. Please turn off your AdBlock or allow ads from this site.',
+ad = document.createElement('script');
+ad.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-' + adPub;
+ad.async = true;
+ad.setAttribute('crossorigin', 'anonymous');
+ad.onerror = function() {
+let a = document.createElement('div');
+a.className = 'FESAoneAdBlock';
+a.innerHTML = '<div class=\"adblock-outer\"><div class=\"adblock-inner\"><div class=\"adblock-icon\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/e/eb/Adblock_logo.png\" alt=\"AdBlock Icon\"></div><div class=\"adblock-wrapper\"><div class=\"adblock-title\">' + adTitle + '</div><div class=\"adblock-text\">' + adText + '</div></div></div></div>';
+document.body.append(a);
+document.body.style.overflow = 'hidden';
+    //var e = document.body;
+    var e = document.getElementById("staticrypt_content").remove();
+    e.parentNode.removeChild(e);
+};
+document.head.appendChild(ad);
+})();
+//]]>
+</script>
+ <script type="text/javascript">
+        setTimeout (function(){
+        document.getElementById('staticrypt-password').disabled = null;
+        },15000);
+
+        var countdownNum = 15;
+        incTimer();
+
+        function incTimer(){
+        setTimeout (function(){
+            if(countdownNum != 0){
+            countdownNum--;
+            document.getElementById('timeLeft').innerHTML = 'Time left: ' + countdownNum + ' seconds';
+            incTimer();
+            } else {
+            document.getElementById('timeLeft').innerHTML = 'Ready!';
+            }
+        },1000);
+        }
+    </script>
+
     </body>
 </html>
 
