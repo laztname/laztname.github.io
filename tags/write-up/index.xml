@@ -6,8 +6,15 @@
     <description>Recent content in Write Up on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Tue, 29 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/tags/write-up/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hacking Phishing-as-a-Service</title>
+      <link>https://potato.id/posts/hacking-phishing-as-a-service/</link>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/hacking-phishing-as-a-service/</guid>
+      <description>Phishing ADS&#xA;Saya muak terhadap iklan yang bertebar ketika membuka reels di facebook, selain iklan malware, iklan judol, banyak juga iklan phishing game (Free Fire, Mobile Legends) dan juga iklan yang mengundang untuk join ke group 18+ karena pastinya iklan-iklan tersebut adalah iklan yang hanya menginginkan credentials akun social media kita dan pastinya dapat merugikan diri kita sendiri.&#xA;Phishing atau password fishing sendiri adalah salah satu cara yang banyak digunakan oleh Threat actor untuk mendapatkan akses / credentials terhadap salah satu service seperti akses ke sosial media (Facebook, TikTok, Instagram, WhatApp, dll) setelah mendapatkan akses ke service tersebut umumnya akun kita akan digunakan untuk hal-hal merugikan lainnya.</description>
+    </item>
     <item>
       <title>Iklan yang menarik atau mencurigakan lanjutan</title>
       <link>https://potato.id/posts/malwared-ads-continued/</link>

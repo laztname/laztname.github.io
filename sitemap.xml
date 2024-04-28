@@ -3,24 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://potato.id/</loc>
-    <lastmod>2023-08-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://potato.id/categories/</loc>
-    <lastmod>2023-08-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://potato.id/categories/development/</loc>
-    <lastmod>2023-08-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://potato.id/posts/malwared-ads-continued/</loc>
-    <lastmod>2023-08-29T00:00:00+00:00</lastmod>
+    <lastmod>2025-10-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/posts/</loc>
-    <lastmod>2023-08-29T00:00:00+00:00</lastmod>
+    <lastmod>2025-10-25T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/categories/</loc>
+    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/categories/development/</loc>
+    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/hacking-phishing-as-a-service/</loc>
+    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/tags/</loc>
-    <lastmod>2023-08-29T00:00:00+00:00</lastmod>
+    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/tags/write-up/</loc>
+    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/malwared-ads-continued/</loc>
     <lastmod>2023-08-29T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/posts/dictionary-attack/</loc>
