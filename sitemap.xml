@@ -179,5 +179,7 @@
     <loc>https://potato.id/about/</loc>
   </url><url>
     <loc>https://potato.id/contact/</loc>
+  </url><url>
+    <loc>https://potato.id/privacy-policy/</loc>
   </url>
 </urlset>

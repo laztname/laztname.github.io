@@ -197,5 +197,12 @@
       <guid>https://potato.id/contact/</guid>
       <description>Stay in Touch with Me :) Email: jonias@potato.id GPG Public Key: Here Telegram: Here Github: Here RSS: index.xml </description>
     </item>
+    <item>
+      <title>Privacy Policy for Potato.id</title>
+      <link>https://potato.id/privacy-policy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/privacy-policy/</guid>
+      <description>At Potato, accessible from potato.id, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Potato and how we use it.&#xA;If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.&#xA;Log Files Potato follows a standard procedure of using log files. These files log visitors when they visit websites.</description>
+    </item>
   </channel>
 </rss>
