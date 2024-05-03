@@ -2,213 +2,213 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ardi Jonias Fortuna # potato</title>
-    <link>http://192.168.1.163:1313/</link>
+    <link>https://potato.id/</link>
     <description>Recent content on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
     <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://192.168.1.163:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://potato.id/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Update Newsfeed RSS to Discord</title>
-      <link>http://192.168.1.163:1313/posts/update-newsfeed-rss-to-discord-webhook/</link>
+      <link>https://potato.id/posts/update-newsfeed-rss-to-discord-webhook/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/update-newsfeed-rss-to-discord-webhook/</guid>
+      <guid>https://potato.id/posts/update-newsfeed-rss-to-discord-webhook/</guid>
       <description>As a Cybersecurity worker, we must stay up-to-date with any news, alerts, advisories and others also in the IT field everything is new and growing so fast, especially in cybersecurity&#xA;To fill this gap I use a RSS aggregator to send the latest update from my favorite blog/news to notify me&#xA;If you join SHL Discord you’ll be familiar with feeds and feeds-ransom text channel, this is how I configure it</description>
     </item>
     <item>
       <title>Hacking Phishing-as-a-Service</title>
-      <link>http://192.168.1.163:1313/posts/hacking-phishing-as-a-service/</link>
+      <link>https://potato.id/posts/hacking-phishing-as-a-service/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/hacking-phishing-as-a-service/</guid>
+      <guid>https://potato.id/posts/hacking-phishing-as-a-service/</guid>
       <description>You may have just clicked on a Phishing Ad Saya muak terhadap iklan yang bertebar ketika membuka reels di facebook, selain iklan malware, iklan judol, banyak juga iklan phishing game (Free Fire, Mobile Legends) dan juga iklan yang mengundang untuk join ke group 18+ karena pastinya iklan-iklan tersebut adalah iklan yang hanya menginginkan credentials akun social media kita dan pastinya dapat merugikan diri kita sendiri.&#xA;Phishing atau password fishing sendiri adalah salah satu cara yang banyak digunakan oleh Threat actor untuk mendapatkan akses / credentials terhadap salah satu service seperti akses ke sosial media (Facebook, TikTok, Instagram, WhatApp, dll) setelah mendapatkan akses ke service tersebut umumnya akun kita akan digunakan untuk hal-hal merugikan lainnya.</description>
     </item>
     <item>
       <title>Iklan yang menarik atau mencurigakan lanjutan</title>
-      <link>http://192.168.1.163:1313/posts/malwared-ads-continued/</link>
+      <link>https://potato.id/posts/malwared-ads-continued/</link>
       <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/malwared-ads-continued/</guid>
+      <guid>https://potato.id/posts/malwared-ads-continued/</guid>
       <description>Setelah menulis tentang iklan malware yang menggunakan umpan pancing Google Bard, sekarang ada iklan malware lagi yang sedikit berbeda, baik dari jenis umpannya dan malware yang dikirimkan, iklan ini tentang custom taskbar untuk windows agar terlihat lebih cantik, namun sebenarnya file yang di download nanti adalah malware dan tidak ada instalasi taskbar custom seperti yang diiklankan, lalu file yang di-download oleh user melakukan instalasi apa ? tentunya malware, untuk jelasnya kurang lebih ini yang dijalankan oleh si installer tadi</description>
     </item>
     <item>
       <title>Dictionary Attack</title>
-      <link>http://192.168.1.163:1313/posts/dictionary-attack/</link>
+      <link>https://potato.id/posts/dictionary-attack/</link>
       <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/dictionary-attack/</guid>
+      <guid>https://potato.id/posts/dictionary-attack/</guid>
       <description>Memahami apa itu Dictionary Attack Dictionary attack merupakan salah satu teknik penyerangan yang umum digunakan dalam hacking / pentesting, serangan ini menggunakan sebuah kumpulan password (wordlist) yang umum digunakan ataupun password yang sudah bocor di Internet (seperti rockyou.txt, ignis dsb) tentunya.&#xA;Perbedaan serangan bruteforce dan dictionary attack ini adalah penggunaan wordlist / kumpulan password, pada serangan bruteforce attack umumnya akan menebak seluruh kombinasi karakter yang ada dan tentunya lebih banyak memakan waktu lama, serangan dictionary attack sendiri juga membutuhkan cukup waktu tergantung dengan kompleksitas password yang digunakan oleh user, bagus / tidaknya wordlist yang digunakan serta response time server.</description>
     </item>
     <item>
       <title>Iklan yang menarik atau mencurigakan ?</title>
-      <link>http://192.168.1.163:1313/posts/malwared-ads/</link>
+      <link>https://potato.id/posts/malwared-ads/</link>
       <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/malwared-ads/</guid>
+      <guid>https://potato.id/posts/malwared-ads/</guid>
       <description>Pada bulan Juni kemarin, tepatnya tanggal 14 lagi scroll fb dan nemu iklan yang menarik tentang AI buatan google si Bard ini, tapi hal yang bikin menarik dari iklan tersebut adalah kolom komentarnya, langsung cek komen&#xA;lha kok yang komentar akun yang centang biru semua, lha kok ada politisi Indonesia yang ikutan komen ? apa hubungannya politik dengan si google bard ini ? lalu komentar yang ada pada post tersebut juga menunjukan sentimen yang positif</description>
     </item>
     <item>
       <title>Secure Surfing Practice</title>
-      <link>http://192.168.1.163:1313/posts/secure-surfing-practice/</link>
+      <link>https://potato.id/posts/secure-surfing-practice/</link>
       <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/secure-surfing-practice/</guid>
+      <guid>https://potato.id/posts/secure-surfing-practice/</guid>
       <description>Internet menjadi bagian penting dalam kehidupan sehari-hari, paling umum internet digunakan sebagai media sumber informasi dan hiburan. Namun, penggunaan internet yang tidak bijak dan baik dapat membahayakan keamanan data dan privasi. Berikut adalah beberapa langkah yang dapat diikuti agar tetap aman saat ber-internet:&#xA;Menambahkan web proctection Install Malwarebytes Browser Guard Extension pada Browser yang digunakan, dengan ini malwarebytes akan melakukan aksi block ketika kita secara tidak sadar membuka sebuah website yang mencurigakan maupun website yang terindikasi malware / trojan</description>
     </item>
     <item>
       <title>Lesson Learned from Ransomware</title>
-      <link>http://192.168.1.163:1313/posts/lesson-learned-from-ransomware/</link>
+      <link>https://potato.id/posts/lesson-learned-from-ransomware/</link>
       <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/lesson-learned-from-ransomware/</guid>
+      <guid>https://potato.id/posts/lesson-learned-from-ransomware/</guid>
       <description>Ransomware Ransomware merupakan salah satu jenis malware (malicious software) yang akan melakukan enkripsi terhadap file-file korban sehingga korban kehilangan akses terhadap data-data file yang dimiliki, malware ini akan melakukan dekripsi terhadap file-file tersebut jika tebusan / bayaran telah dibayar oleh korban namun tidak ada jaminan semua data tersebut dapat kembali serta jika korban tidak melakukan tebusan beberapa jenis ransomware akan mengekspos file-file korban ke internet, ransomware sendiri menyebarkan diri melalui installer palsu, phishing, exploit kit, remote desktop dsb</description>
     </item>
     <item>
       <title>Yes, It was DNS!</title>
-      <link>http://192.168.1.163:1313/posts/it-was-dns/</link>
+      <link>https://potato.id/posts/it-was-dns/</link>
       <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/it-was-dns/</guid>
+      <guid>https://potato.id/posts/it-was-dns/</guid>
       <description>Seperti yang kita tau, DNS atau Domain Name Server adalah service yang bertugas untuk melakukan translate nama domain menjadi IP sehingga user tidak perlu mengingat IP yang cukup ribet/njelimet jika diingat satu-satu, maka dari itu DNS menjadi salah satu service yang cukup krusial dan harus di konfigurasi dengan baik, jika tidak maka dapat berdampak pada domain yang kita miliki akan susah atau bahkan tidak dapat diakses oleh user&#xA;Sebagai contoh, beberapa waktu lalu ada rekan kerja yang komplain ke tim infrastruktur karena tidak bisa membuka web monev.</description>
     </item>
     <item>
       <title>Manajemen Job dan Shortcut pada Terminal</title>
-      <link>http://192.168.1.163:1313/posts/bash-job-management-and-shortcut/</link>
+      <link>https://potato.id/posts/bash-job-management-and-shortcut/</link>
       <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/bash-job-management-and-shortcut/</guid>
+      <guid>https://potato.id/posts/bash-job-management-and-shortcut/</guid>
       <description>Mungkin kita sering ketika sedang berurusan dengan terminal kita diminta untuk kerja cepat, hal ini sudah dibantu dengan bash-completion yang membuat kita dapat mengetikan command secara otomatis dengan menekan tombol [TAB] sebanyak 2 kali, tapi pada umumnya terminal memiliki shortcuts yang membantu kita bisa bekerja dengan linux secara mudah dan cepat, berikut adalah list umum shortcut pada terminal, list ini saya ambil dari academy hack the box.&#xA;Auto Completion&#xA;[TAB] - Inisiasi auto completion command</description>
     </item>
     <item>
       <title>Retas.io Hellbound VM Write-up</title>
-      <link>http://192.168.1.163:1313/posts/retas-io-hellbound-vm-write-up/</link>
+      <link>https://potato.id/posts/retas-io-hellbound-vm-write-up/</link>
       <pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/retas-io-hellbound-vm-write-up/</guid>
+      <guid>https://potato.id/posts/retas-io-hellbound-vm-write-up/</guid>
       <description>Langsung saja to the point, mesin ini susah titik. Dari awal launching labs sudah ada 3 mesin yaitu Zombie, Hellbound dan Anonymouz maka mesin inillah yang menurut saya cukup hard karena ya mungkin kurangnya pengalaman dalam bereksploitasi dan feeling yang kuat. Hingga write up ini ditulis penulis juga masih belum mendapatkan flag root user, masih nyetuck di www-data. Beruntung saja user flag readable sama si www-data dengan ini sudah bisa submit flag user.</description>
     </item>
     <item>
       <title>Retas.io Zombie VM Write-up</title>
-      <link>http://192.168.1.163:1313/posts/retas-io-zombie-vm-write-up/</link>
+      <link>https://potato.id/posts/retas-io-zombie-vm-write-up/</link>
       <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/retas-io-zombie-vm-write-up/</guid>
+      <guid>https://potato.id/posts/retas-io-zombie-vm-write-up/</guid>
       <description>Retas.io merupakan sebuah perusahaan dari PT. Solusi Siber Teknologi yang menawarkan berbagai produk berupa jasa keamanan mulai dari Vulnerability Assesment, Penetration Testing hingga kebutuhan khusus lainnya yang berkaitan dengan IT dan keamanannya.&#xA;Baru-baru ini retas.io meluncurkan sebuah produk baru berupa labs yang berguna untuk membantu para player baru yang terjun ke dunia Infosec, labs ini sendiri mirip-mirip hackthebox, dengan menggunakan vpn kita diharuskan menyelesaikan tantangan yang diberikan dengan pengetahuan dan kemampuan IT para player, tidak hanya itu mereka juga akan merilis kampus retas yang bertujuan memberikan pendidikan / pelatihan untuk terjun di dunia Infosec, namun pada saat tulisan ini dibuat fitur tersebut masih dalam proses pengerjaan, langsung saja berikut adalah write-up dari Challenges VM Zombie yang ada pada labs retas.</description>
     </item>
     <item>
       <title>Penyelesaian Challenges Malang Hacker Link</title>
-      <link>http://192.168.1.163:1313/posts/solution-for-mhl-challenges/</link>
+      <link>https://potato.id/posts/solution-for-mhl-challenges/</link>
       <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/solution-for-mhl-challenges/</guid>
+      <guid>https://potato.id/posts/solution-for-mhl-challenges/</guid>
       <description>Setelah lama tidak membuat challenges karena waktu senggang yang makin dikit karena tugas yang makin banyak dan menumpuk karena tidak segera dikerjakan, akhirnya dapat info challenges dari temen di group telegram, challenges ini merupakan challenges buatan dari komunitas lain yaitu Malang Hacker Link, challengesnya cukup unik dan menyenangkan untuk dikerjakan karena ilmu perdukunan tidak perlu digunakan.&#xA;Langsung saja dari informasi tersebut langsung buka linknya dan didapatkan form dengan isian first dan last name karena belum menjelajah dan mendapatkan clue, kita mencoba menggunakan fitur ini untuk mengetahui output dari aplikasi web ini, untuk isian firstname diisikan abc dan untuk lastname dengan def</description>
     </item>
     <item>
       <title>Penyelesaian Challenges Surabaya Hacker Link VM Heaven</title>
-      <link>http://192.168.1.163:1313/posts/solution-for-shl-challenges-heaven-vm/</link>
+      <link>https://potato.id/posts/solution-for-shl-challenges-heaven-vm/</link>
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/solution-for-shl-challenges-heaven-vm/</guid>
+      <guid>https://potato.id/posts/solution-for-shl-challenges-heaven-vm/</guid>
       <description>Karena mesin ini sudah ditarik dan sudah dirasa tidak relevan untuk sebuah challenges, maka dari itu saya membuat penyelesaian bagaimana menyelesaikan mesin vm heaven dari Surabaya Hacker Link.&#xA;Sebenarnya untuk menyelesaikan challenges ini hampir tidak dibutuhkan tools hacking khusus seperti sqlmap ataupun metasploit karena challenges ini sangat mudah, tidak diperlukan pengetahuan khusus tentang hacking. cukup terbiasa dengan sistem operasi GNU/Linux dan pengetahuan mendasar tentang bagaimana melakukan pwning (owning) terhadap mesin maka VM dapat diselesaikan dengan mudah.</description>
     </item>
     <item>
       <title>Harderning Server with Fail2ban and Reporting to Telegram</title>
-      <link>http://192.168.1.163:1313/posts/harderning-server-with-fail2ban-to-telegram/</link>
+      <link>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</link>
       <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/harderning-server-with-fail2ban-to-telegram/</guid>
+      <guid>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</guid>
       <description>Setelah cukup sibuk sehingga tidak sempat membuat challenges dan menuliskan bagaimana cara menyelesaikan challenges tersebut pada blog ini, kali ini kita akan membahas sedikit tentang fail2ban dan cara melakukan konfigurasinya&#xA;Umumnya fail2ban digunakan untuk melakukan ban terhadap IP yang gagal melakukan authentikasi sebanyak batas maksimal yang disebutkan pada konfigurasi dan IPS ini sangat ampuh mencekal serangan yang akan terjadi pada server, seperti serangan bruteforce pada port ssh (22), ftp (21), smtp (25) dsb, bahkan serangan lainnya yang melalui web server (80/443), lalu sebelum mengetahui bagaimana konfigurasi fail2ban kita akan belajar sedikit tentang bagaimana fail2ban bekerja.</description>
     </item>
     <item>
       <title>Solution for Inclusion Challenges</title>
-      <link>http://192.168.1.163:1313/posts/solution-for-inclusion-challenges/</link>
+      <link>https://potato.id/posts/solution-for-inclusion-challenges/</link>
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/solution-for-inclusion-challenges/</guid>
+      <guid>https://potato.id/posts/solution-for-inclusion-challenges/</guid>
       <description>Seperti biasa di group Surabaya Hacker Link terdapat beragam challenges, tidak hanya dari staff admin saja yang membuat, namun ada member yang mempunyai challenges dan saya ikut membantu deploy soal challenges tersebut, tidak hanya men-deploy tapi tentunya ikut mencoba challenges tersebut :3&#xA;Tanpa basa-basi langsung akses challenges tersebut berada di challshl.com&#xA;Karena ikut campur saat deploy, jadi saya sedikit tahu dimana bug dari challenges tersebut berada, istilah kerennya white-box pentest untuk pentest dengan membaca source code dari website tersebut *cmiiw</description>
     </item>
     <item>
       <title>Menulis Laporan Vulnerability Findings dengan Baik</title>
-      <link>http://192.168.1.163:1313/posts/menulis-laporan-bug/</link>
+      <link>https://potato.id/posts/menulis-laporan-bug/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/menulis-laporan-bug/</guid>
+      <guid>https://potato.id/posts/menulis-laporan-bug/</guid>
       <description>Sebelumnya saya ucapkan selamat hari raya idul fitri 1440 H, mohon maaf lahir dan batin.&#xA;Tidak ada yang sempurna di dunia ini, begitupun tulisan ini.&#xA;Semenjak ada program dari BSSN yang berjudul V2DP atau Voluntary Vulnerability Disclosure Program, banyak sekali yang bertanya di forum diskusi maupun grup sosial media tentang bagimana menulis laporan bug yang telah ditemukan dengan baik.&#xA;Sedikit tips dari saya untuk menulis laporan dengan baik&#xA;Berikanlah judul yang sesuai.</description>
     </item>
     <item>
       <title>Solution for QR Generator Challenges</title>
-      <link>http://192.168.1.163:1313/posts/solution-for-qr-generator-challenges/</link>
+      <link>https://potato.id/posts/solution-for-qr-generator-challenges/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/solution-for-qr-generator-challenges/</guid>
+      <guid>https://potato.id/posts/solution-for-qr-generator-challenges/</guid>
       <description>Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana, Challenges ini bertemakan QR Code Generator, namun letak vulnerability-nya tidak pada QR Code tersebut, lalu berikut adalah cara sederhana menyelesaikannya&#xA;Diberikan Challenges&#xA;Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.&#xA;Pengecekan Source Code</description>
     </item>
     <item>
       <title>Websitemu di Hack?, Lakukan hal berikut</title>
-      <link>http://192.168.1.163:1313/posts/my-website-hacked-now-what/</link>
+      <link>https://potato.id/posts/my-website-hacked-now-what/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/my-website-hacked-now-what/</guid>
+      <guid>https://potato.id/posts/my-website-hacked-now-what/</guid>
       <description>Di dalam group Telegram Surabaya Hacker Link saya dan @ytyao sering membuat challenges seperti web hacking, reversing dan lain sebagainya, namun pada challenges sebelumnya ada sedikit insiden, yaitu web di hack (well memang sih web dibuat sedemikian rupa untuk di hack), namun si hacker ini melakukan sabun masal alias menghapus semua file dan folder yang ada. Namun dari hal tersebut saya mendapatkan ilmu baru yaitu penanganan setelah insiden atau istilah kerennya Incident Response</description>
     </item>
     <item>
       <title>Solution for Ramadhan Challenges</title>
-      <link>http://192.168.1.163:1313/posts/solution-for-ramadhan-challenges/</link>
+      <link>https://potato.id/posts/solution-for-ramadhan-challenges/</link>
       <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/solution-for-ramadhan-challenges/</guid>
+      <guid>https://potato.id/posts/solution-for-ramadhan-challenges/</guid>
       <description>Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di STTS, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui /self/proc/environ dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.</description>
     </item>
     <item>
       <title>Mengenal Lebih Dekat, DOM Based XSS</title>
-      <link>http://192.168.1.163:1313/posts/dom-based-xss/</link>
+      <link>https://potato.id/posts/dom-based-xss/</link>
       <pubDate>Wed, 27 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/dom-based-xss/</guid>
+      <guid>https://potato.id/posts/dom-based-xss/</guid>
       <description>Sebelum menuju bahasan DOM XSS, kita kenalan dulu yuk sama DOM, apasih DOM itu?, jarum?&#xA;DOM adalah singkatan dari Document Object Model, yang maksudnya adalah struktur hirarki pada document html, jadi dalam kode html ada sebuah silsilah keluarga&#xA;untuk XSS bisa dibaca di sini&#xA;Nah pada kasus DOM Based XSS ini, payload XSS akan merubah isi html melalui DOM ini????&#xA;Contoh: DVWA, DOM XSS, Level:Low&#xA;Ada fitur pilih bahasa, kita cek scriptnya yuk</description>
     </item>
     <item>
       <title>XSS Prevention</title>
-      <link>http://192.168.1.163:1313/posts/xss-prevention/</link>
+      <link>https://potato.id/posts/xss-prevention/</link>
       <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/xss-prevention/</guid>
+      <guid>https://potato.id/posts/xss-prevention/</guid>
       <description>setelah sedikit membahas XSS di sini, ya meskipun agak ngawur saatnya kita bahas cara mencegah bug ini ada pada web kita&#xA;XSS bisa berjalan / dijalankan karena tag &amp;lt;script&amp;gt; yang lepas dan berjalan / terender oleh browser maka dari itu kita manipulasi browser agar tidak menjalankan tag html yang di input kan user, eitsss kita ga akan bongkar-bongkar browser kok, cuman sedikit permainan sebelum input user di munculkan pada website</description>
     </item>
     <item>
       <title>SQL Injection Into XRDP Account Take Over</title>
-      <link>http://192.168.1.163:1313/posts/sql-injection-into-xrdp-account-take-over/</link>
+      <link>https://potato.id/posts/sql-injection-into-xrdp-account-take-over/</link>
       <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/sql-injection-into-xrdp-account-take-over/</guid>
+      <guid>https://potato.id/posts/sql-injection-into-xrdp-account-take-over/</guid>
       <description>Well mungkin judulnya agak click bait sql injection sendiri tidak bisa melakukan injeksi sampai ke RDP Account Take Over xD&#xA;Sebenarnya tujuan awal cuman ingin download anime di moesubs.com sih, namu saat membuka webnya ada url yang sangat pantas untuk dicurigai yaitu&#xA;https://moesubs.com/?hal=dlrilisan&amp;amp;id=591&#xA;yaudah deh coba cek pake &#39; dan hasilnya web tersebut error, setelah error melakukan balancing pakai comment SQL --+- hasilnya web balik jadi normal lagi, oke lanjut ke order by</description>
     </item>
     <item>
       <title>Solution for Surabaya Hacker Link Challenges</title>
-      <link>http://192.168.1.163:1313/posts/solution-for-surabaya-hacker-link-challenges/</link>
+      <link>https://potato.id/posts/solution-for-surabaya-hacker-link-challenges/</link>
       <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/solution-for-surabaya-hacker-link-challenges/</guid>
+      <guid>https://potato.id/posts/solution-for-surabaya-hacker-link-challenges/</guid>
       <description>Well, postingan ini dibuat karena challenges Surabaya Hacker Link telah diupdate dan ada banyak orang yang penasaran dengan challenges ini namun belum solved dan menyarankan agar dibuatkan video cara menyelesaikannya, ya namun ga bisa buat video ya buat tulisan aja deh, updated challenges&#xA;Disana dijelaskan bahwa kita harus menyelamatkan website si jhon ini lalu kita akan diberikan link group telegram (flag)&#xA;tampilan awal halaman challenges shl&#xA;Pertama-tama kita coba akses web si jhon ini website-nya di deface ternyata</description>
     </item>
     <item>
       <title>Hey I Found Git Repository</title>
-      <link>http://192.168.1.163:1313/posts/hey-i-found-git-repository/</link>
+      <link>https://potato.id/posts/hey-i-found-git-repository/</link>
       <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/hey-i-found-git-repository/</guid>
+      <guid>https://potato.id/posts/hey-i-found-git-repository/</guid>
       <description>PRAKATA Hanya sebuah catatan kecil ketika menemukan sebuah git repository yang terekspose pada sebuah website&#xA;KATA Git adalah version control system yang digunakan para developer untuk mengembangkan software secara bersama-bersama. Fungsi utama git yaitu mengatur versi dari source code program anda dengan mengasih tanda baris dan code mana yang ditambah atau diganti. Git akan membuat sebuah dotfiles (.git), yang berisikan semua datanya termasuk source code yang sudah di commit, maka dari itu lebih baik git repository lebih baik dirouting atau ditutup aksesnya dari luar, kenapa ?</description>
     </item>
     <item>
       <title>Penyelesaian Untuk Web &#39;Simple&#39; Challenges</title>
-      <link>http://192.168.1.163:1313/posts/solution-for-my-simple-web-challenges/</link>
+      <link>https://potato.id/posts/solution-for-my-simple-web-challenges/</link>
       <pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/solution-for-my-simple-web-challenges/</guid>
+      <guid>https://potato.id/posts/solution-for-my-simple-web-challenges/</guid>
       <description>Pra Kata Sebelumnya terima kasih buat slashroot ctf karena tanpa slashroot ctf mungkin saya tidak bisa memprovide challenges ini melalui dewaweb.com, Terima kasih buat teman-teman yang sudah meluangkan waktunya untuk challenges &amp;lsquo;simple&amp;rsquo; ini,&#xA;Kata clue &amp;ldquo;recon, tools, sign-in, submit&amp;rdquo;&#xA;recon ini sangat mudah, sebenarnya tidak perlu menggunakan tools atau scanner, banyak kok website yang masih menyimpan sesuatu yang penting itu pada comment html&#xA;terlihat jelas ada info bahwa git repositori (/.</description>
     </item>
     <item>
       <title>Apakah XSS Itu Berbahaya ?</title>
-      <link>http://192.168.1.163:1313/posts/apakah-xss-itu-berbahaya/</link>
+      <link>https://potato.id/posts/apakah-xss-itu-berbahaya/</link>
       <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/posts/apakah-xss-itu-berbahaya/</guid>
+      <guid>https://potato.id/posts/apakah-xss-itu-berbahaya/</guid>
       <description>Background Dari hasil menyimak di beberapa group IT yang saya ikuti banyak sekali yang bertanya-tanya, Apakah XSS itu berbahaya?, Cara upload webshell lewat XSS itu gimana ya gan?, Laporan Bug XSS-ku kok engga ditanggepi sih? Apa karena XSS itu gak berbahaya ya?, Apa karena admin webnya udah anu ?, Ya kurang lebih begitulah pertanyaan yang mencuat, Mari kita bahas bareng-bareng gimana sih karakteristik XSS itu,&#xA;Definition Cross-site scripting is a type of computer security vulnerability typically found in web applications.</description>
     </item>
     <item>
       <title>About Me</title>
-      <link>http://192.168.1.163:1313/about/</link>
+      <link>https://potato.id/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/about/</guid>
+      <guid>https://potato.id/about/</guid>
       <description>Hello there, my name is Ardi Jonias Fortuna, you can call me Jonias but some people call me Jo, it&amp;rsquo;s OK. I am interested in Information Technology, there I know that we have to create a secure system from anyone or any hacker cannot access because of the security, that&amp;rsquo;s the way I learned some cyber security besides my studies, then I joined a non-profit community called Surabaya Hacker Link. I am lucky to know them because I learned something new about security from the community.</description>
     </item>
     <item>
       <title>Contact</title>
-      <link>http://192.168.1.163:1313/contact/</link>
+      <link>https://potato.id/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/contact/</guid>
+      <guid>https://potato.id/contact/</guid>
       <description>Stay in Touch with Me :) Email: jonias@potato.id GPG Public Key: Here Telegram: Here Github: Here RSS: index.xml </description>
     </item>
     <item>
       <title>Privacy Policy for Potato.id</title>
-      <link>http://192.168.1.163:1313/privacy-policy/</link>
+      <link>https://potato.id/privacy-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://192.168.1.163:1313/privacy-policy/</guid>
+      <guid>https://potato.id/privacy-policy/</guid>
       <description>At Potato, accessible from potato.id, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Potato and how we use it.&#xA;If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.&#xA;Log Files Potato follows a standard procedure of using log files. These files log visitors when they visit websites.</description>
     </item>
   </channel>
