@@ -95,6 +95,27 @@
 		<h1 class="main__title">Posts</h1>
 	</header><article class="list__item post">
 	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/xss-prevention/" rel="bookmark">
+			XSS Prevention
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-02-21T00:00:00Z">21-02-2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-hacking/" rel="category">Web Hacking</a>, <a class="meta__link" href="/categories/defensive/" rel="category">Defensive</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		setelah sedikit membahas XSS di sini, ya meskipun agak ngawur saatnya kita bahas cara mencegah bug ini ada pada web kita
+XSS bisa berjalan / dijalankan karena tag &lt;script&gt; yang lepas dan berjalan / terender oleh browser maka dari itu kita manipulasi browser agar tidak menjalankan tag html yang di input kan user, eitsss kita ga akan bongkar-bongkar browser kok, cuman sedikit permainan sebelum input user di munculkan pada website
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/xss-prevention/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	
 	<figure class="list__thumbnail thumbnail">
 		<a class="thumbnail__link" href="/posts/sql-injection-into-xrdp-account-take-over/">
 		<img class="thumbnail__image" src="/img/logged-in-xrdp.webp" alt="SQL Injection Into XRDP Account Take Over">
@@ -255,11 +276,11 @@ Definition Cross-site scripting is a type of computer security vulnerability typ
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/update-newsfeed-rss-to-discord-webhook/">Update Newsfeed RSS to Discord</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/hacking-phishing-as-a-service/">Hacking Phishing-as-a-Service</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/malwared-ads-continued/">Iklan yang menarik atau mencurigakan lanjutan</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/dictionary-attack/">Dictionary Attack</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/malwared-ads/">Iklan yang menarik atau mencurigakan ?</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/secure-surfing-practice/">Secure Surfing Practice</a></li>
 		</ul>
 	</div>
 </div>
@@ -285,6 +306,7 @@ Definition Cross-site scripting is a type of computer security vulnerability typ
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/end-users/" title="End-Users">End-Users (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/fail2ban/" title="Fail2ban">Fail2ban (1)</a>
@@ -305,7 +327,7 @@ Definition Cross-site scripting is a type of computer security vulnerability typ
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (19)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (20)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
 	</div>

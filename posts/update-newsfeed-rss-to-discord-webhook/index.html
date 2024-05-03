@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="no-js" lang="id-ID">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,12 +10,12 @@
 		<meta property="og:title" content="Update Newsfeed RSS to Discord" />
 <meta property="og:description" content="Get latest update from RSS News to your Discord Webhook or others" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://192.168.1.163:1313/posts/update-newsfeed-rss-to-discord-webhook/" /><meta property="og:image" content="http://192.168.1.163:1313/img/feedpushr/discord-feeds.png" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2024-04-23T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-04-23T00:00:00+00:00" />
+<meta property="og:url" content="https://potato.id/posts/update-newsfeed-rss-to-discord-webhook/" /><meta property="og:image" content="https://potato.id/img/feedpushr/discord-feeds.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-05-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-05-01T00:00:00+00:00" />
 
 		<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="http://192.168.1.163:1313/img/feedpushr/discord-feeds.png" /><meta name="twitter:title" content="Update Newsfeed RSS to Discord"/>
+<meta name="twitter:image" content="https://potato.id/img/feedpushr/discord-feeds.png" /><meta name="twitter:title" content="Update Newsfeed RSS to Discord"/>
 <meta name="twitter:description" content="Get latest update from RSS News to your Discord Webhook or others"/>
 
 	<link rel="me" href="https://infosec.exchange/@laztname">
@@ -28,6 +28,7 @@
 	<link rel="stylesheet" href="/css/custom.css">
 
 	<link rel="shortcut icon" href="/favicon.ico">
+		
 <script type="text/javascript">
   (function(c,l,a,r,i,t,y){
     c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -97,7 +98,7 @@
 			<h1 class="post__title">Update Newsfeed RSS to Discord</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2024-04-23T00:00:00Z">23-04-2024</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/development/" rel="category">Development</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2024-05-01T00:00:00Z">01-05-2024</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/development/" rel="category">Development</a>
 	</span>
 </div></div>
 		</header>
@@ -107,29 +108,29 @@
 		<img class="thumbnail__image" src="/img/feedpushr/discord-feeds.png" alt="Update Newsfeed RSS to Discord">
 		
 	</figure><div class="content post__content clearfix">
-			<p>As a Cybersecurity worker we must keep stay up-to-date with any news, alert, advisory and others
-also in the IT fields everything is new and growing so fast especially in cyber security</p>
-<p>To fill this gap I using a RSS agregator to send the latest update from my fav blog / news to inform me</p>
-<p>If you join SHL Discord you&rsquo;ll familiar with feeds and feeds-ransom text channel, this is how I configure it</p>
-<p><img src="/img/feedpushr/github-feedpushr.png" alt="feedpushr-repository">
-I am using feedpushr to run all the activties, thanks to ncarlier you can check the repository <a href="https://github.com/ncarlier/feedpushr">here</a>, you can directly run the container on your vps with docker / portainer, for this example I&rsquo;m using Portainer</p>
-<p><img src="/img/feedpushr/container-setting.png" alt="container-environment">
-I use this ENV configuration due the default feedpushr request is too short and sometime resulting ban my IP to crawl again, so you can configure as your preferences
-<img src="/img/feedpushr/rss-list.png" alt="rss-list">
-This is the list of rss that already running on my container, for add new we can use the + button up right but if you want using mine you can get it here
-<img src="/img/feedpushr/rss-add.png" alt="rss-add-new">
-You must add the title name can be the site name, the url of the rss file, and tags (optional) after that you can save all the field and hit the toggle to enable to crawl to the new rss that just registered
-<img src="/img/feedpushr/rss-output.png" alt="rss-output"><br>
-In the output setting we can add new, using the same + button on the top right
-<img src="/img/feedpushr/set-output.png" alt="output setting">
-The Feedpushr itself has a variety of output, but for Discord or other webhook we can use the http output
-<img src="/img/feedpushr/output-discord.png" alt="output discord">
-Based on the repository we can use field Title, Link and Description to show as summary, here I use truncate to only show 400 char of the description due to max input from Discord webhook
-<img src="/img/feedpushr/discord-feeds.png" alt="discord"><br>
-And the new notification will be shown on your Discord</p>
-<p>For now I only find a bug in RSS source that including new line (ex: The Hacker News) in their Description field, this will make the http request send to Discord webhook becomes broken and return 400, for the fix we can lowering the number of truncate, if you need further assistance how to deploy or found any bug we can discuss it here</p>
-<p>How do you do to stay update with latest cybersecurity news ? did you use the same way ?
-Cya</p>
+			<p>need link to download new list</p>
+<p>As a Cybersecurity worker, we must stay up-to-date with any news, alerts, advisories and others also in the IT field everything is new and growing so fast, especially in cybersecurity</p>
+<p>To fill this gap I use a RSS aggregator to send the latest update from my favorite blog/news to notify me</p>
+<p>If you join SHL Discord you’ll be familiar with feeds and feeds-ransom text channel, this is how I configure it</p>
+<p><img src="/img/feedpushr/github-feedpushr.png" alt="feedpushr-repository"></p>
+<p>I am using feedpushr to run all the activities, thanks to ncarlier you can check the repository <a href="https://github.com/ncarlier/feedpushr">here</a> and you can directly run the container on your VPS with Docker / Portainer for this example I’m using Portainer</p>
+<p><img src="/img/feedpushr/container-setting.png" alt="container-environment"></p>
+<p>I use this ENV configuration due the default feedpushr request is too  short and sometimes resulting ban my IP from crawling again, so you can  configure your preferences</p>
+<p><img src="/img/feedpushr/rss-list.png" alt="rss-list"></p>
+<p>This is the list of RSS that already running on my container, to add new we can use the + button up right but if you want using mine you can download it <a href="/feedpushr.opml">here</a></p>
+<p><img src="/img/feedpushr/rss-add.png" alt="rss-add-new"></p>
+<p>You must add the title name can be the site name, the URL of the RSS file, and tags (optional) after that you can save all the fields and hit the toggle to enable crawl for the new RSS that just registered</p>
+<p><img src="/img/feedpushr/rss-output.png" alt="rss-output"></p>
+<p>In the output setting, we can add new using the same + button on the top right</p>
+<p><img src="/img/feedpushr/set-output.png" alt="output setting"></p>
+<p>The Feedpushr itself has a variety of output, but for Discord or other webhook we can use the HTTP output</p>
+<p><img src="/img/feedpushr/output-discord.png" alt="output discord"></p>
+<p>Based on the repository we can use fields Title, Link and Description  to show as summary, here I use truncate to only show 400 chars of the description due to max input from Discord webhook</p>
+<p><img src="/img/feedpushr/discord-feeds.png" alt="discord"></p>
+<p>And the new notification will be shown on your Discord</p>
+<p>For now, I only found a bug in the RSS source that includes a new line in their Description field (ex:  The Hacker News), this will make the HTTP request send to Discord webhook become broken and return 400, for the  fix we can lowering the number of truncate, if you need further  assistance how to deploy or found any bug we can discuss it here</p>
+<p>What do you do to keep stay updated with the latest cybersecurity news? did you use the same way?</p>
+<p>Cya</p>
 
 		</div>
 		<footer class="post__footer">
@@ -139,6 +140,9 @@ Cya</p>
 	<ul class="tags__list">
 		<li class="tags__item">
 			<a class="tags__link btn" href="/tags/write-up/" rel="tag">Write Up</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/docker/" rel="tag">Docker</a>
 		</li>
 	</ul>
 </div>
@@ -204,7 +208,7 @@ Cya</p>
 			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
 		</label>
 		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="http://192.168.1.163:1313/">
+		<input type="hidden" name="sitesearch" value="https://potato.id/">
 	</form>
 </div><div class="widget-recent widget">
 	<h4 class="widget__title">Information</h4>
@@ -249,6 +253,7 @@ Cya</p>
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/end-users/" title="End-Users">End-Users (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/fail2ban/" title="Fail2ban">Fail2ban (1)</a>

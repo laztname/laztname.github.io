@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Ardi Jonias Fortuna # potato</title>
+    <link>https://potato.id/tags/docker/</link>
+    <description>Recent content in Docker on Ardi Jonias Fortuna # potato</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update Newsfeed RSS to Discord</title>
+      <link>https://potato.id/posts/update-newsfeed-rss-to-discord-webhook/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/update-newsfeed-rss-to-discord-webhook/</guid>
+      <description>need link to download new list&#xA;As a Cybersecurity worker, we must stay up-to-date with any news, alerts, advisories and others also in the IT field everything is new and growing so fast, especially in cybersecurity&#xA;To fill this gap I use a RSS aggregator to send the latest update from my favorite blog/news to notify me&#xA;If you join SHL Discord you’ll be familiar with feeds and feeds-ransom text channel, this is how I configure it</description>
+    </item>
+  </channel>
+</rss>

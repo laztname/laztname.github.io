@@ -6,8 +6,15 @@
     <description>Recent content in Write Up on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 18 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/tags/write-up/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update Newsfeed RSS to Discord</title>
+      <link>https://potato.id/posts/update-newsfeed-rss-to-discord-webhook/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/update-newsfeed-rss-to-discord-webhook/</guid>
+      <description>need link to download new list&#xA;As a Cybersecurity worker, we must stay up-to-date with any news, alerts, advisories and others also in the IT field everything is new and growing so fast, especially in cybersecurity&#xA;To fill this gap I use a RSS aggregator to send the latest update from my favorite blog/news to notify me&#xA;If you join SHL Discord you’ll be familiar with feeds and feeds-ransom text channel, this is how I configure it</description>
+    </item>
     <item>
       <title>Hacking Phishing-as-a-Service</title>
       <link>https://potato.id/posts/hacking-phishing-as-a-service/</link>
