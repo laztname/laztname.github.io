@@ -105,9 +105,10 @@
 		
 	<figure class="post__thumbnail thumbnail">
 		
-		<img class="thumbnail__image" src="/img/ramadhan/0.webp" alt="Solution for Ramadhan Challenges">
+		<img class="thumbnail__image" src="/img/ramadhan/0.webp" alt="Solution for Ramadhan Challenges" loading="lazy">
 		
-	</figure><div class="content post__content clearfix">
+	</figure>
+<div class="content post__content clearfix">
 			<p>Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di <a href="https://stts.edu">STTS</a>, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui <code>/self/proc/environ</code> dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.</p>
 <p><img src="/img/ramadhan/1.webp" alt="tampilan awal"><br>
 Di atas adalah tampilan ketika membaca lorem ipsum, terlihat pada url ada parameter / index page dengan value loremipusm.html, hal ini pun berlaku ketika membaca twice</p>
