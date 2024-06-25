@@ -240,8 +240,8 @@ text-align: center;
                     <div class="staticrypt-instructions">
                         <p class="staticrypt-title">Download Indonesian Wordlist</p>
                         <p>Contain ~280.000 Indonesian Password</p>
-			<p>Get Password: <a href="/posts/dictionary-attack/">here</a></p>
-        		<p id="timeLeft">Please wait 10 seconds</p>
+			<p>Get Password: <a href="/posts/dictionary-attack/" target="_blank">here</a></p>
+        		<p id="timeLeft">Wait after: 10 seconds</p>
                     </div>
 
                     <hr class="staticrypt-hr" />
@@ -947,7 +947,7 @@ document.head.appendChild(ad);
         setTimeout (function(){
             if(countdownNum != 0){
             countdownNum--;
-            document.getElementById('timeLeft').innerHTML = 'Please wait ' + countdownNum + ' seconds';
+            document.getElementById('timeLeft').innerHTML = 'Time left: ' + countdownNum + ' seconds';
             incTimer();
             } else {
             document.getElementById('timeLeft').innerHTML = 'Ready!';

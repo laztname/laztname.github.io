@@ -4,10 +4,24 @@
     <title>Write Up on Ardi Jonias Fortuna # potato</title>
     <link>https://potato.id/tags/write-up/</link>
     <description>Recent content in Write Up on Ardi Jonias Fortuna # potato</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>id-ID</language>
-    <lastBuildDate>Wed, 01 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/tags/write-up/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>There is no way it&#39;s DNS</title>
+      <link>https://potato.id/posts/there-is-no-way-it-is-dns/</link>
+      <pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/there-is-no-way-it-is-dns/</guid>
+      <description>Preambule Beberapa waktu lalu di kantor sedikit ramai terkait kebijakan baru di Pemerintah Provinsi DKI Jakarta terkait penonaktifan KTP Jakarta yang sudah tidak berdomisili di Jakarta, beberapa rekan kantor terkena hal tersebut, sontak rekan kerja yang lain dan masih ber-KTP Jakarta segera melakukan pemeriksaan terhadap NIK mereka masing-masing,&#xA;Namun seperti yang kita tau tidak sedikit kita dari masyarakat yang mendapatkan pengalaman buruk terkait akses digital pada Pemerintahan entah keluhan lola (loading lama alias lemot) hingga tidak bisa diakses sama sekali dan tentu saja rekan kerjaku juga merasakan hal tersebut serta terdapat keanehan ketika web yang dimaksud akan diakses kadang bisa kadang tampil maintenance, entah tidak ada angin ataupun badai terbesit dipikiranku adalah &amp;ldquo;ini pasti DNS-nya&amp;rdquo;</description>
+    </item>
+    <item>
+      <title>Moving From Disqus to Giscus with Hugo SSG</title>
+      <link>https://potato.id/posts/moving-from-disqus-to-giscus-with-hugo-ssg/</link>
+      <pubDate>Sat, 18 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/moving-from-disqus-to-giscus-with-hugo-ssg/</guid>
+      <description>Goodbye Discus, Hello Giscus Setelah sekian lama menggunakan Disqus sebagai platform komentar atau biasa disebut sebagai Comment-as-a-service, akhirnya web ini beralih ke giscus setelah pertimbangan dengan platform komentar yang sama-sama menggunakan github yaitu utterances&#xA;Starting Dari awal buat web ini bingung mau pake metode komen apa, karena web ini adalah SSG (Static Site Generator) yang mana tidak ada koneksi database maka diperlukan platofrm komentar pihak ketiga adalah pilihan, sebelumnya di Hugo secara default sudah ada template untuk komentar mengunakan Disqus, maka terpilihnya Disqus sebagai platform komentar yang digunakan oleh blog ini, akan tetapi hal ini membuat web menjadi lebih berat karena banyak assets dan script yang harus diload oleh Disqus, setelah beberapa waktu akhirnya kepikiran untuk membuat CSS + JS sederhana agar komentar akan muncul ketika button tampilkan komentar ditekan, tapi menurutku sendiri hal ini malah membuat sedikit orang yang tertarik untuk melakukan komentar</description>
+    </item>
     <item>
       <title>Update Newsfeed RSS to Discord</title>
       <link>https://potato.id/posts/update-newsfeed-rss-to-discord-webhook/</link>
