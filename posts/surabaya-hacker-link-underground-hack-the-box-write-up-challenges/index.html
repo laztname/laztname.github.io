@@ -10,7 +10,7 @@
 		<meta property="og:url" content="https://potato.id/posts/surabaya-hacker-link-underground-hack-the-box-write-up-challenges/">
   <meta property="og:site_name" content="Ardi Jonias Fortuna # potato">
   <meta property="og:title" content="Surabaya Hacker Link Underground Write Up">
-  <meta property="og:description" content="Challenges Information Ini adalah write-up challenges dari Surabaya Hacker Link untuk mesin Underground, mesin ini saya buat sendiri dengan menggunakan salah satu Vulnerable Web yang biasa SHL gunakan untuk demo session dengan beberapa vulnerability yang telah diperbaiki agar challenges ini sedikit menarik.
+  <meta property="og:description" content="Challenges Information Ini adalah write-up challenges dari Surabaya Hacker Link untuk mesin Underground, mesin ini dibuat dengan menggunakan salah satu Vulnerable Web yang biasa SHL gunakan untuk demo session dengan beberapa vulnerability yang telah diperbaiki agar challenges ini sedikit menarik.
 Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges baru pengganti Heaven (Write-up Heaven VM ada di sini) informasi pada forum saya rasa cukup jelas seperti jangan merusak, jangan spoil, take the root and read root.">
   <meta property="og:locale" content="id_ID">
   <meta property="og:type" content="article">
@@ -20,11 +20,13 @@ Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges bar
     <meta property="article:tag" content="Write Up">
     <meta property="article:tag" content="Challenges">
     <meta property="article:tag" content="Surabaya Hacker Link">
+    <meta property="og:image" content="https://potato.id/img/shl-underground/challenges-information.png">
 
 		
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://potato.id/img/shl-underground/challenges-information.png">
   <meta name="twitter:title" content="Surabaya Hacker Link Underground Write Up">
-  <meta name="twitter:description" content="Challenges Information Ini adalah write-up challenges dari Surabaya Hacker Link untuk mesin Underground, mesin ini saya buat sendiri dengan menggunakan salah satu Vulnerable Web yang biasa SHL gunakan untuk demo session dengan beberapa vulnerability yang telah diperbaiki agar challenges ini sedikit menarik.
+  <meta name="twitter:description" content="Challenges Information Ini adalah write-up challenges dari Surabaya Hacker Link untuk mesin Underground, mesin ini dibuat dengan menggunakan salah satu Vulnerable Web yang biasa SHL gunakan untuk demo session dengan beberapa vulnerability yang telah diperbaiki agar challenges ini sedikit menarik.
 Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges baru pengganti Heaven (Write-up Heaven VM ada di sini) informasi pada forum saya rasa cukup jelas seperti jangan merusak, jangan spoil, take the root and read root.">
 
 	<link rel="me" href="https://infosec.exchange/@laztname">
@@ -115,28 +117,119 @@ Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges bar
 </div></div>
 		</header>
 		
+	<figure class="post__thumbnail thumbnail">
+		
+		<img class="thumbnail__image" src="/img/shl-underground/challenges-information.png" alt="Surabaya Hacker Link Underground Write Up" loading="lazy">
+		
+	</figure>
 <div class="content post__content clearfix">
 			<h2 id="challenges-information">Challenges Information</h2>
-<p>Ini adalah write-up challenges dari Surabaya Hacker Link untuk mesin Underground, mesin ini saya buat sendiri dengan menggunakan salah satu Vulnerable Web yang biasa SHL gunakan untuk demo session dengan beberapa vulnerability yang telah diperbaiki agar challenges ini sedikit menarik.</p>
+<p>Ini adalah write-up challenges dari Surabaya Hacker Link untuk mesin Underground, mesin ini dibuat dengan menggunakan salah satu Vulnerable Web yang biasa SHL gunakan untuk demo session dengan beberapa vulnerability yang telah diperbaiki agar challenges ini sedikit menarik.</p>
 <h2 id="challenges">Challenges</h2>
-<p>Pada web <a href="https://forum.surabayahackerlink.org/d/3462-new-challenges-underground">Forum Surabaya Hacker Link</a> terdapat informasi challenges baru pengganti Heaven (Write-up Heaven VM ada di <a href="/posts/solution-for-shl-challenges-heaven-vm/">sini</a>) informasi pada forum saya rasa cukup jelas seperti jangan merusak, jangan spoil, take the root and read root.txt, di sini saya menggunakan IP 110.93.14.30</p>
+<p>Pada web <a href="https://forum.surabayahackerlink.org/d/3462-new-challenges-underground">Forum Surabaya Hacker Link</a> terdapat informasi challenges baru pengganti Heaven (<a href="/posts/solution-for-shl-challenges-heaven-vm/">Write-up Heaven VM ada di sini</a>) informasi pada forum saya rasa cukup jelas seperti jangan merusak, jangan spoil, take the root and read root.txt, di sini saya menggunakan IP 110.93.14.30
+<img src="/img/shl-underground/nginx-default.png" alt="default nginx page">
+ketika kita mengakses IP tersebut hanya terdapat halaman default dari nginx dan tidak ada informasi lainnya yang bisa digunakan untuk melakukan step selanjutanya sehingga kita perlu melakukan gathering information mendalam</p>
 <h2 id="information-gathering-and-reconnaisance">Information Gathering and Reconnaisance</h2>
-<p>Seperti biasa pada tahap ini kita mencoba mencari tahu informasi dari IP tersebut seperti mencari port dengan nmap, fuzzing directory dan file serta cek robots.txt</p>
-<p>Hasil Nmap menampilkan bahwa terdapat x port yang terbuka dengan port x, x, x</p>
-<p>Hasil Fuzzing menunjukan bawah terdapat file x,x,x</p>
-<p>Berdasarkan informasi readme.txt tersebut kita coba mencari tau apa itu SVWA dan menemukan 2 Repository berikut, dengan informasi ini kita mencoba mengakses direcotry SVWA/svwa dengan harapan sesuai dengan informasi yang disampaikan pada readme.txt</p>
+<p>Seperti biasa pada tahap ini kita mencoba mencari tahu informasi lebih dari IP tersebut seperti mencari port dengan nmap, fuzzing directory dan file yang memungkinkan kita menemukan endpoint lain</p>
+<p><img src="/img/shl-underground/nmap-result.png" alt="nmap result">
+Hasil Nmap menampilkan bahwa terdapat 3 port yang terbuka yaitu port 80 yang menjalankan web service nginx seperti pada informasi sebelumnya, port 2222 yang menjalankan service ssh dan port 31337 yang juga menjalankan ssh service</p>
+<p>Untuk fuzzing disini menggunakan FFUF dengan wordlist dirb dan dirsearch yang ada pada kali linux</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ffuf -w /usr/share/wordlists/dirb/big.txt -u http://110.93.14.30/FUZZ
+</span></span></code></pre></div><p>Hasil Fuzzing menunjukan bahwa terdapat file index.html, info.php dan robots.txt
+<img src="/img/shl-underground/ffuf.png" alt="ffuf command">
+<img src="/img/shl-underground/ffuf-result.png" alt="ffuf result">
+<img src="/img/shl-underground/phpinfo.png" alt="phpinfo file">
+Pada file phpinfo.php menampilkan output dari fungsi phpinfo() sehingga kita bisa pahami bahwa mesin ini menjalankan php</p>
+<p><img src="/img/shl-underground/robots-txt.png" alt="robots txt file"><br>
+Pada file robots.txt yang umum digunakan untuk mengatur search engine crawler terdapat disallow pada file x.txt, disini kita coba akses file x.txt juga</p>
+<p><img src="/img/shl-underground/x-txt.png" alt="x txt file">
+Pada file x.txt hanya ada umpatan dan sedikit clue untuk menggunakan open source web vulnerability scanner, di sini langsung kepikiran nikto, kita coba scan juga menggunakan nikto</p>
+<p>Hasil Nikto sebagai berikut
+<img src="/img/shl-underground/nikto-result.png" alt="nikto result">
+Terdapat readme.txt yang tidak terdeteksi ketika dilakukan fuzzing, ini umum terjadi karena wordlist yang kita gunakan kurang</p>
+<p><img src="/img/shl-underground/readme-txt.png" alt="readme txt file">
+Di dalam file readme.txt menjelaskan bahwa pada server ini terdapat aplikasi SVWA yang telah di-patch untuk beberapa vulnerability-nya, berdasarkan informasi tersebut kita coba mencoba mengakses direcotry SVWA/svwa dari web service dengan harapan sesuai dengan informasi yang disampaikan pada readme.txt</p>
+<p><img src="/img/shl-underground/svwa-home.png" alt="H3llcome">
+Dan ternyata dugaan benar, terdapat aplikasi SVWA yang terinstall pada server, dengan ini kita bisa melanjutkan ke tahap selanjutnya</p>
 <h2 id="exploitation">Exploitation</h2>
-<p>Setelah mendapatkan tampilan h3llcome, maka di sini kita bisa langsung mencoba fitur web dan mencari exploit yang bisa digunakan, pada challenges ini terdapat beberapa cara untuk exploitasi untuk mendapatkan credentials dari low user</p>
+<p>Setelah mendapatkan tampilan h3llcome, maka di sini kita bisa langsung mencoba fitur yang ada pada web ini dan mencari exploit yang bisa digunakan untuk mendapatkan akses ke dalam server, pada challenges ini terdapat beberapa cara untuk exploitasi untuk mendapatkan credentials dari low user</p>
 <h3 id="exploit-1-sql-injection-to-write-webshell-excellent">Exploit 1 SQL Injection to Write Webshell (Excellent)</h3>
-<h3 id="exploit-2-local-file-inclusion-from-access-log-good">Exploit 2 Local File Inclusion from Access Log (Good)</h3>
-<h3 id="exploit-3-local-file-inclution-from-image-upload-excellent">Exploit 3 Local File Inclution from Image Upload (Excellent)</h3>
-<h3 id="exploit-4-sql-injection-to-read-koneksiphp--etc-passwd-good">Exploit 4 SQL Injection to Read koneksi.php + etc passwd (Good)</h3>
-<p>Dengan informasi username password pada koneksi.php maka kita akan mencoba melakukan login pada service lain dengan credentials tersebut, seperti pada hasil recon sebelumnya bahwa terdapat port x,x kita akan coba satu-satu
-ssh to human</p>
+<p><img src="/img/shl-underground/read-article.png" alt="">
+Pada halaman awal terdapat list artikel yang ada pada website yang bisa kita baca, ketika kita membuka salah satu artikel tersebut kita akan diarahkan pada file read.php, pada file ini terdapat celah sql injection dikarenakan pada parameter id tidak di validasi dengan baik sehingga dapat digunakan oleh penyerang untuk melakukan kontrol query dan mengambil data lain yang ada pada database
+Berikut adalah payload yang kita gunakan untuk melakukan sql injection dengan union based untuk memunculkan user yang digunakan saat ini data database yang digunakan</p>
+<pre tabindex="0"><code>http://110.93.14.30/svwa/read.php?id=&#39;1&#39; union select 1,concat(user(),0x3a,database()),3,4--+-
+</code></pre><p><img src="/img/shl-underground/sql-injection-user-db.png" alt="extract username and database"></p>
+<p>setelah berhasil mengetahui user dan database yang digunakan, kita akan mencoba melakukan checking, apakah user saat ini memiliki privileges files, seperti yang kita tahu kita dapat melakukan upload webshell menggunakan sql injection dengan syarat user saat ini memiliki privileges files dan memiliki permission pada directory yang dapat diakses melalui service web
+<img src="/img/shl-underground/file-priv-check.png" alt="sql injection privileges check">
+pada halaman website menampilkan Y dengan arti kita memiliki privileges file, maka dari itu kita dapat mencoba untuk melakukan write file, namun kondisi saat ini kita tidak tahu path file web server, kembali pada hasil sebelumnya terdapat file phpinfo.php yang juga menampilkan path lokasi path webserver
+<img src="/img/shl-underground/phpinfo-document-root.png" alt="document root from phpinfo">
+dengan ini kita dapat mengetahui lokai document root dari web server, maka dari itu kita akan coba untuk melakukan write ke directory /webroot dengan nama hehe.php dan isi yang memanggil fungsi phpinfo, hal ini dilakukan sebagai test juga apakah permission pada webroot bisa diwrite oleh sql atau tidak, berikut adalah payload yang digunakan untuk write webshell pada document root server dengan memanfaatkan privileges file pada sql injection</p>
+<pre tabindex="0"><code>http://110.93.14.30/svwa/read.php?id=&#39;1&#39; union select 1,&#34;&lt;?php phpinfo(); ?&gt;&#34;,3,4 into outfile &#34;/webroot/hehe.php&#34;--+-
+</code></pre><p><img src="/img/shl-underground/sql-injection-into-out-file-phpinfo-test.png" alt="write php info to document root">
+setelah kita menjalankan payload tersebut, pada web tidak akan tampil apapun sehingga perlu dilakukan validasi manual dengan cara mengakses langsung file hehe.php
+<img src="/img/shl-underground/phpinfo-from-sql-injection-write.png" alt="phpinfo running well">
+ketika kita akses file hehe.php muncul php information dari fungsi phpinfo, dengan ini bisa kita simpulkan bahwa kita dapat melakukan write pada document root
+tanpa nunggu lama kita langsung upload saja webshell dengan cara ini</p>
+<pre tabindex="0"><code>http://110.93.14.30/svwa/read.php?id=&#39;-1&#39;union select 1,&#34;&lt;?php system($_GET[&#39;p&#39;]); ?&gt;&#34;,3,4 into outfile &#34;/webroot/hehex.php&#34;--+-
+</code></pre><p><img src="/img/shl-underground/sql-injection-write-webshell.png" alt="sql-injection-upload-web-shell">
+seperti sebelumnya, tidak ada yang tampil pada halaman webnya ketika kita jalankan, langsung saja akses webshell yang telah ditulis
+<img src="/img/shl-underground/webshell-sql-injection.png" alt="remote code execution from sql injection">
+dan kita berhasil menjalankan command pada server, di sini kita coba cek id, whoami dan uname -a</p>
+<h3 id="exploit-2-local-file-inclution-php-wrapper-good">Exploit 2 Local File Inclution PHP wrapper (Good)</h3>
+<p>Pada exploit ini kita membutuhkan akses ke dalam panel aplikasi web, maka dari itu kita buat user dulu dari fitur login yang ada pada aplikasi
+<img src="/img/shl-underground/create-user.png" alt="create user on svwa">
+setelah berhasil membuat user kita langsung saja login
+<img src="/img/shl-underground/user-logged-in.png" alt="possible local file inclusion">
+setelah masuk ke dalam panel, bisa dilihat pada URL bahwa halaman panel ini memanggil file page.php, dengan ini kita bisa mencoba untuk melakukan local file inclusion dengan merubah file page.php dengan /etc/paswd seperti yang kita tahu /etc/passwd merupakan file yang ada pada sistem operasi linux yang memuat data user yang ada pada sistem
+<img src="/img/shl-underground/lfi-etc-passwd.png" alt="local-file-inclusion-read-etc-passwd">
+ketika dirubah, muncul data dari /etc/passwd dengan ini bisa kita pahami bahwa rentan terhadap local file inclusion, kita coba beberapa payload lfi seperti PHP Wrapper, RFI, LFI, pada saat dicoba payload PHP Wrapper untuk membaca file index.php dan melakukan encode base64</p>
+<pre tabindex="0"><code>http://110.93.14.30/svwa/admin/index.php?file=php://filter/convert.base64-encode/resource=index.php
+</code></pre><p><img src="/img/shl-underground/lfi-php-phar-read-index-php.png" alt="decode base64 cyberchef">
+dengan ini kita bisa melihat source code index.php yang ada pada server, pada source tersebut terlihat ada pemanggilan terhadap file db/koneksi.php, kita coba lihat isi file tersebut
+<img src="/img/shl-underground/source-base64-lfi-phar.png" alt="read db koneksi.php from lfi"></p>
+<pre tabindex="0"><code>http://110.93.14.30/svwa/admin/index.php?file=php://filter/convert.base64-encode/resource=../db/koneksi.php
+</code></pre><p><img src="/img/shl-underground/lfi-php-phar-read-koneksi-db-base64.png" alt="LFI responses">
+<img src="/img/shl-underground/lfi-php-phar-read-koneksi-db.png" alt="LFI read database connection">
+dan kita berhasil mendapatkan credentials database</p>
+<h3 id="exploit-3-local-file-inclusion-from-access-log-bad">Exploit 3 Local File Inclusion from Access Log (Bad)</h3>
+<p>Untuk exploit ini mirip dengan cara sebelumnya, yaitu mengexplorasi celah local file inlcusion, di sini kita dapat melakukan inclusion terhadap file access log web server
+<img src="/img/shl-underground/lfi-read-web-access-log.png" alt="LFI read web access log">
+dengan ini penyerang dapat melakukan poisoning terhadap access log server untuk menjalankan malicious file seperti webshell, kita langsung melakukan request ke server dengan nama user agent yang berisi webshell php, karena jika webshell ditulis pada url field akan terjadi encoding di karakter special sehingga kita menggunakan field user agent yang tidak ada encoding untuk karakter special, jangan lupa escape $ karena pada terminal akan dianggap sebagai variable
+<img src="/img/shl-underground/curl-user-agent-web-shell.png" alt="curl php webshell user agent">
+setelah melakukan request tersebut kita coba mengakses kembali LFI yang memuat isi file access log webserver yang ditambah parameter lain untuk menjalankan command
+<img src="/img/shl-underground/web-shell-from-access-log.png" alt="webshell from access log">
+kita berhasil menjalankan command, exploit ini tidak direkomendasikan karena ketika kita panggil isi access log akan muncul banyak data sehingga perlu dilakukan filtering serta butuh waktu dan resource yang besar saat ditampilkan pada browser</p>
+<h3 id="exploit-4-local-file-inclution-from-image-upload-excellent">Exploit 4 Local File Inclution from Image Upload (Excellent)</h3>
+<p>Untuk exploit ini masih mirip dengan cara sebelumnya, yaitu mengexplorasi celah local file inlcusion, di sini kita dapat melakukan inclusion terhadap file gambar yang kita unggah melalui fitur upload foto yang ada pada halaman utama setelah melakukan autentikasi
+<img src="/img/shl-underground/user-logged-in.png" alt="Upload Feature">
+di sini kita membuat file webshell php, namun untuk tipe filenya kita rubah menjadi png seperti shell.php ke shell.png
+<img src="/img/shl-underground/txt-in-png.png" alt="upload webshell rename to png">
+file berhasil diunggah namun browser tidak menapilkan data, kita langsung saja panggil file tersebut melalui file inclusion sebelumnya
+<img src="/img/shl-underground/webshell-from-local-file-inclusion.png" alt="web shell from access log local file inclusion">
+kita berhasil menjalankan command server</p>
+<h3 id="exploit-5-sql-injection-to-read-koneksiphp--etc-passwd-good">Exploit 5 SQL Injection to Read koneksi.php + etc passwd (Good)</h3>
+<p>untuk exploit ini seperti pada exploit pada nomor 1, yaitu sql injection namun karena kita mendapatkan privileges file, kita dapat membaca file index.php dari
+<img src="/img/shl-underground/sql-injection-load-file-db-koneksi-php.png" alt="sql injection read db koneksi.php"></p>
+<p>Setelah mendapatkan access melalui salah satu dari 5 cara tersebut kita bisa memanfaakan informasi dari koneksi.php dan /etc/passwd, dengan ini kita tahu bahwa pada sistem terdaftar user human dan pada database terdapat kredential human, mesikpun 2 hal tersebut merupakan service yang berbeda namun hal ini sering dilakukan oleh manusia karena ga mau ribet dengan password maka password disamakan, pada case ini kita mencoba peruntungan dengan memanfaatkan human error ini</p>
+<p>Dengan informasi username password pada koneksi.php maka kita akan mencoba melakukan login pada service lain yang telah ditemukan melalui nmap sebelumnya dengan credentials tersebut, pada hasil recon sebelumnya bahwa terdapat port x,x kita akan coba satu-satu
+ssh to human
+<img src="/img/shl-underground/ssh-to-human.png" alt="ssh to human from reused cred"></p>
 <h2 id="privileges-escalation">Privileges Escalation</h2>
+<p>Setelah mendapatkan akses human kita dapat langsung mencari cara untuk melakukan privileges escalation / menaikan hak akses kita ke hak akses yang lebih tinggi, pada challenges ini tidak dipungkiri bahwa priveleges escalationnya sangat kurang hanya dengan membaca file xxx</p>
 <p>files with human accessible
-Setelah mendapatkan akses human kita dapat langsung mencari cara untuk melakukan privileges escalation / menaikan hak akses kita ke hak akses yang lebih tinggi, pada challenges ini tidak dipungkiri bahwa priveleges escalationnya sangat kurang hanya dengan membaca file xxx</p>
-<p>ssh to root</p>
+<img src="/img/shl-underground/find-writeable-directory.png" alt="find writeable directory">
+<img src="/img/shl-underground/ssh-key-from-backup-file.png" alt="ssh key from backup file">
+ssh to root
+<img src="/img/shl-underground/ssh-to-root-from-server.png" alt="ssh to root from server">
+<img src="/img/shl-underground/ssh-to-root-from-local.png" alt="ssh to root from kali">
+<img src="/img/shl-underground/read-root-txt.png" alt="read root.txt"></p>
+<h3 id="for-fun-vulnerability">For Fun Vulnerability</h3>
+<h4 id="xss">XSS</h4>
+<p><img src="/img/shl-underground/xss-fun.png" alt="xss for fun"></p>
+<h4 id="execution-after-redirect">Execution After Redirect</h4>
+<p><img src="/img/shl-underground/possible-execution-after-redirect.png" alt="redirect header with server body response">
+<img src="/img/shl-underground/match-replace-burp-header.png" alt="match and replace burp">
+<img src="/img/shl-underground/dashboard-with-ear.png" alt="logged in"></p>
 
 		</div>
 		<footer class="post__footer">
@@ -189,12 +282,6 @@ Setelah mendapatkan akses human kita dapat langsung mencari cara untuk melakukan
 			<p class="pager__title">There is no way it&#39;s DNS</p>
 		</a>
 	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/posts/moving-from-disqus-to-giscus-with-hugo-ssg/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">Moving From Disqus to Giscus with Hugo SSG</p>
-		</a>
-	</div>
 </nav>
 <div id="disqus-container">
 	<script src="https://giscus.app/client.js"
@@ -238,9 +325,9 @@ Setelah mendapatkan akses human kita dapat langsung mencari cara untuk melakukan
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/posts/moving-from-disqus-to-giscus-with-hugo-ssg/">Moving From Disqus to Giscus with Hugo SSG</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/surabaya-hacker-link-underground-hack-the-box-write-up-challenges/">Surabaya Hacker Link Underground Write Up</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/there-is-no-way-it-is-dns/">There is no way it&#39;s DNS</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/moving-from-disqus-to-giscus-with-hugo-ssg/">Moving From Disqus to Giscus with Hugo SSG</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/update-newsfeed-rss-to-discord-webhook/">Update Newsfeed RSS to Discord</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/hacking-phishing-as-a-service/">Hacking Phishing-as-a-Service</a></li>
 		</ul>
@@ -268,7 +355,7 @@ Setelah mendapatkan akses human kita dapat langsung mencari cara untuk melakukan
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (9)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/dns/" title="DNS">DNS (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/dns/" title="DNS">DNS (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/end-users/" title="End-Users">End-Users (1)</a>
