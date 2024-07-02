@@ -185,51 +185,63 @@ setelah masuk ke dalam panel, bisa dilihat pada URL bahwa halaman panel ini mema
 ketika dirubah, muncul data dari /etc/passwd dengan ini bisa kita pahami bahwa rentan terhadap local file inclusion, kita coba beberapa payload lfi seperti PHP Wrapper, RFI, LFI, pada saat dicoba payload PHP Wrapper untuk membaca file index.php dan melakukan encode base64</p>
 <pre tabindex="0"><code>http://110.93.14.30/svwa/admin/index.php?file=php://filter/convert.base64-encode/resource=index.php
 </code></pre><p><img src="/img/shl-underground/lfi-php-phar-read-index-php.png" alt="decode base64 cyberchef">
-dengan ini kita bisa melihat source code index.php yang ada pada server, pada source tersebut terlihat ada pemanggilan terhadap file db/koneksi.php, kita coba lihat isi file tersebut
+dengan ini kita bisa melihat source code index.php yang ada pada server namun source tersebut diencode menggunakan base64, kita coba decode menggunakan cyberchef
 <img src="/img/shl-underground/source-base64-lfi-phar.png" alt="read db koneksi.php from lfi"></p>
 <pre tabindex="0"><code>http://110.93.14.30/svwa/admin/index.php?file=php://filter/convert.base64-encode/resource=../db/koneksi.php
-</code></pre><p><img src="/img/shl-underground/lfi-php-phar-read-koneksi-db-base64.png" alt="LFI responses">
+</code></pre><p>pada source tersebut terlihat ada pemanggilan terhadap file db/koneksi.php, kita coba lihat isi file tersebut
+<img src="/img/shl-underground/lfi-php-phar-read-koneksi-db-base64.png" alt="LFI responses">
 <img src="/img/shl-underground/lfi-php-phar-read-koneksi-db.png" alt="LFI read database connection">
-dan kita berhasil mendapatkan credentials database</p>
+dan kita berhasil mendapatkan credentials database yang bisa digunakan untuk credentials spraying</p>
 <h3 id="exploit-3-local-file-inclusion-from-access-log-bad">Exploit 3 Local File Inclusion from Access Log (Bad)</h3>
 <p>Untuk exploit ini mirip dengan cara sebelumnya, yaitu mengexplorasi celah local file inlcusion, di sini kita dapat melakukan inclusion terhadap file access log web server
 <img src="/img/shl-underground/lfi-read-web-access-log.png" alt="LFI read web access log">
-dengan ini penyerang dapat melakukan poisoning terhadap access log server untuk menjalankan malicious file seperti webshell, kita langsung melakukan request ke server dengan nama user agent yang berisi webshell php, karena jika webshell ditulis pada url field akan terjadi encoding di karakter special sehingga kita menggunakan field user agent yang tidak ada encoding untuk karakter special, jangan lupa escape $ karena pada terminal akan dianggap sebagai variable
+dengan ini penyerang dapat melakukan poisoning terhadap access log server untuk menjalankan malicious script seperti webshell, kita langsung melakukan request ke server dengan nama user agent yang berisi webshell php, karena jika webshell ditulis pada url field akan terjadi encoding di karakter special sehingga kita menggunakan field user agent yang tidak ada encoding untuk karakter special, jangan lupa escape $ karena pada terminal akan dianggap sebagai variable
 <img src="/img/shl-underground/curl-user-agent-web-shell.png" alt="curl php webshell user agent">
-setelah melakukan request tersebut kita coba mengakses kembali LFI yang memuat isi file access log webserver yang ditambah parameter lain untuk menjalankan command
+setelah melakukan request tersebut kita coba mengakses kembali LFI yang memuat isi file access log webserver dan ditambah parameter yang digunakan untuk menjalankan command melalui webshell
 <img src="/img/shl-underground/web-shell-from-access-log.png" alt="webshell from access log">
 kita berhasil menjalankan command, exploit ini tidak direkomendasikan karena ketika kita panggil isi access log akan muncul banyak data sehingga perlu dilakukan filtering serta butuh waktu dan resource yang besar saat ditampilkan pada browser</p>
 <h3 id="exploit-4-local-file-inclution-from-image-upload-excellent">Exploit 4 Local File Inclution from Image Upload (Excellent)</h3>
-<p>Untuk exploit ini masih mirip dengan cara sebelumnya, yaitu mengexplorasi celah local file inlcusion, di sini kita dapat melakukan inclusion terhadap file gambar yang kita unggah melalui fitur upload foto yang ada pada halaman utama setelah melakukan autentikasi
+<p>Untuk exploit ini masih mirip dengan cara sebelumnya, yaitu mengexplorasi celah local file inclusion lagi, di sini kita dapat melakukan inclusion terhadap file gambar yang kita unggah melalui fitur upload foto yang ada pada halaman utama setelah melakukan autentikasi
 <img src="/img/shl-underground/user-logged-in.png" alt="Upload Feature">
-di sini kita membuat file webshell php, namun untuk tipe filenya kita rubah menjadi png seperti shell.php ke shell.png
+di sini kita membuat file webshell php, namun untuk tipe filenya kita rubah menjadi png seperti shell.php ke shell.png dan langsung saja kita upload
 <img src="/img/shl-underground/txt-in-png.png" alt="upload webshell rename to png">
-file berhasil diunggah namun browser tidak menapilkan data, kita langsung saja panggil file tersebut melalui file inclusion sebelumnya
+file berhasil diunggah namun browser tidak menapilkan data karena memang isi dari file tersebut bukanlah data gambar melainkan webshell, kita langsung saja panggil file tersebut melalui file inclusion sebelumnya
 <img src="/img/shl-underground/webshell-from-local-file-inclusion.png" alt="web shell from access log local file inclusion">
-kita berhasil menjalankan command server</p>
+kita berhasil menjalankan command server dengan memanggil parameter yang digunakan untuk menjalankan command</p>
 <h3 id="exploit-5-sql-injection-to-read-koneksiphp--etc-passwd-good">Exploit 5 SQL Injection to Read koneksi.php + etc passwd (Good)</h3>
-<p>untuk exploit ini seperti pada exploit pada nomor 1, yaitu sql injection namun karena kita mendapatkan privileges file, kita dapat membaca file index.php dari
+<p>Untuk exploit ini seperti pada exploit pada nomor 1, yaitu sql injection namun karena kita mendapatkan privileges file, kita dapat membaca file index.php dari document root yang didapatkan informasinya melalui phpinfo.php dan dengan itu kita bisa membaca dan mengetahui lokasi koneksi database aplikasi
 <img src="/img/shl-underground/sql-injection-load-file-db-koneksi-php.png" alt="sql injection read db koneksi.php"></p>
-<p>Setelah mendapatkan access melalui salah satu dari 5 cara tersebut kita bisa memanfaakan informasi dari koneksi.php dan /etc/passwd, dengan ini kita tahu bahwa pada sistem terdaftar user human dan pada database terdapat kredential human, mesikpun 2 hal tersebut merupakan service yang berbeda namun hal ini sering dilakukan oleh manusia karena ga mau ribet dengan password maka password disamakan, pada case ini kita mencoba peruntungan dengan memanfaatkan human error ini</p>
-<p>Dengan informasi username password pada koneksi.php maka kita akan mencoba melakukan login pada service lain yang telah ditemukan melalui nmap sebelumnya dengan credentials tersebut, pada hasil recon sebelumnya bahwa terdapat port x,x kita akan coba satu-satu
+<p>Setelah mendapatkan access melalui salah satu dari 5 cara tersebut kita bisa memanfaakan informasi dari koneksi.php dan /etc/passwd, dengan ini kita tahu bahwa pada sistem terdaftar user human pada /etc/passwd dan pada service database lalu terdapat kredential human pada file koneksi.php, mesikpun 2 hal tersebut merupakan service yang berbeda namun hal ini sering dilakukan oleh manusia yang ga mau ribet dengan password maka password disamakan, pada case ini kita mencoba peruntungan dengan memanfaatkan human error ini</p>
+<p>maka kita akan mencoba melakukan login pada service lain yang telah ditemukan melalui nmap sebelumnya dengan credentials dari koneksi.php, hasil recon sebelumnya menunjukan bahwa terdapat port 22 dan 2222 kita akan coba satu-satu
 ssh to human
 <img src="/img/shl-underground/ssh-to-human.png" alt="ssh to human from reused cred"></p>
 <h2 id="privileges-escalation">Privileges Escalation</h2>
-<p>Setelah mendapatkan akses human kita dapat langsung mencari cara untuk melakukan privileges escalation / menaikan hak akses kita ke hak akses yang lebih tinggi, pada challenges ini tidak dipungkiri bahwa priveleges escalationnya sangat kurang hanya dengan membaca file xxx</p>
-<p>files with human accessible
+<p>Setelah mendapatkan akses human kita dapat langsung mencari cara untuk melakukan privileges escalation / menaikan hak akses kita ke hak akses yang lebih tinggi, pada challenges ini tidak dipungkiri bahwa privilges escalation-nya sangat kurang, hanya dengan membaca file backup ssh kita sudah bisa masuk sebagai root, karena kita tidak tau lokasi file backupnya kita bisa menggunakan cheatsheet dari blog.g0tm1lk.com untuk mencari informasi yang bisa digunakan untuk melakukan privileges escalation</p>
+<p>pada saat mencari writetable directory, kita menemukan sebuah directory yang tidak umum pada /var/backup/, berdasarkan nama directorynya kita bisa asumsikan bahwa file-file yang ada pada directory tersebut merupakan isi .ssh dari user root server
 <img src="/img/shl-underground/find-writeable-directory.png" alt="find writeable directory">
+ternyata isi dari authorized_keys merupakan id_rsa.pub itu sendiri, sedangkan id_rsa adalah private key dari id_rsa.pub, bisa kita simpulkan bahwa user root dapat melakukan ssh ke dalam server dengan menggunakan private key tersebut, langsung saja kita ssh sebagai root dengan menggunakan private key tersebut
 <img src="/img/shl-underground/ssh-key-from-backup-file.png" alt="ssh key from backup file">
-ssh to root
-<img src="/img/shl-underground/ssh-to-root-from-server.png" alt="ssh to root from server">
+berikut adalah cara untuk ssh langsung dari server</p>
+<pre tabindex="0"><code>ssh -i id_rsa root@localhost
+</code></pre><p><img src="/img/shl-underground/ssh-to-root-from-server.png" alt="ssh to root from server">
+dan kita berhasil untuk mendapatkan akses root dari challenges ini, untuk koneksi ssh ke root serndiri bisa juga dilakukan dengan cara lain, yaitu meng-copy isi dari id_rsa ke local machine kita dan merubah permissionnya menjadi 400 karena id_rsa tidak akan bisa digunakan jika permissionnya terlalu terbuka
 <img src="/img/shl-underground/ssh-to-root-from-local.png" alt="ssh to root from kali">
-<img src="/img/shl-underground/read-root-txt.png" alt="read root.txt"></p>
+dan kita coba intip isi dari root.txt
+<img src="/img/shl-underground/read-root-txt.png" alt="read root.txt">
+<em>Challenges Completed</em></p>
 <h3 id="for-fun-vulnerability">For Fun Vulnerability</h3>
+<p>dari 5 exploit sebelumnya, sebenarnya ada beberapa vulnerability lain yang bisa ditemukan, namun vulnerability ini tidak bisa digunakan untuk melanjutkan perjalanan pwning machine ini</p>
 <h4 id="xss">XSS</h4>
-<p><img src="/img/shl-underground/xss-fun.png" alt="xss for fun"></p>
+<p><img src="/img/shl-underground/xss-fun.png" alt="xss for fun">
+XSS for fun</p>
 <h4 id="execution-after-redirect">Execution After Redirect</h4>
-<p><img src="/img/shl-underground/possible-execution-after-redirect.png" alt="redirect header with server body response">
+<p>Pada halaman admin, ketika kita lakukan intercept menggunakan burp suite, server memberikan respon header Location: login.php dimana kita akan dilakukan redirect ke halaman login, namun body pada response server tersebut tampil, dengan informasi ini kita coba untuk menampilkan isi dari body tersebut ke browser dengan menghilangkan aksi redirect menggunakan burp suite proxy match and replace
+<img src="/img/shl-underground/possible-execution-after-redirect.png" alt="redirect header with server body response">
+konfigurasi burp suite response header match and replace to blank
 <img src="/img/shl-underground/match-replace-burp-header.png" alt="match and replace burp">
+saat kita akses kembali halaman admin, maka pada browser akan muncul dashboard yang akan tampil ketika kita sudah melakukan authentication dengan benar, namun pada dashboard ini tidak ada fitur yang bisa digunakan karena aplikasi web tidak dapat mengetahui sesi user / akses role user yang kita gunakan
 <img src="/img/shl-underground/dashboard-with-ear.png" alt="logged in"></p>
+<p>fin.</p>
 
 		</div>
 		<footer class="post__footer">
