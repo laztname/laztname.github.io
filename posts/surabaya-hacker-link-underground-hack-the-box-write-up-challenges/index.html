@@ -132,7 +132,7 @@ ketika kita mengakses IP tersebut hanya terdapat halaman default dari nginx dan 
 <h2 id="information-gathering-and-reconnaisance">Information Gathering and Reconnaisance</h2>
 <p>Seperti biasa pada tahap ini kita mencoba mencari tahu informasi lebih dari IP tersebut seperti mencari port dengan nmap, fuzzing directory dan file yang memungkinkan kita menemukan endpoint lain</p>
 <p><img src="/img/shl-underground/nmap-result.png" alt="nmap result">
-Hasil Nmap menampilkan bahwa terdapat 3 port yang terbuka yaitu port 80 yang menjalankan web service nginx seperti pada informasi sebelumnya, port 2222 yang menjalankan service ssh dan port 31337 yang juga menjalankan ssh service</p>
+Hasil Nmap menampilkan bahwa terdapat 3 port yang terbuka yaitu port 80 yang menjalankan web service nginx seperti pada informasi sebelumnya, port 2222 dan port 31337 yang menjalankan ssh service</p>
 <p>Untuk fuzzing disini menggunakan FFUF dengan wordlist dirb dan dirsearch yang ada pada kali linux</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ffuf -w /usr/share/wordlists/dirb/big.txt -u http://110.93.14.30/FUZZ
 </span></span></code></pre></div><p>Hasil Fuzzing menunjukan bahwa terdapat file index.html, info.php dan robots.txt
@@ -149,18 +149,20 @@ Pada file x.txt hanya ada umpatan dan sedikit clue untuk menggunakan open source
 Terdapat readme.txt yang tidak terdeteksi ketika dilakukan fuzzing, ini umum terjadi karena wordlist yang kita gunakan kurang</p>
 <p><img src="/img/shl-underground/readme-txt.png" alt="readme txt file">
 Di dalam file readme.txt menjelaskan bahwa pada server ini terdapat aplikasi SVWA yang telah di-patch untuk beberapa vulnerability-nya, berdasarkan informasi tersebut kita coba mencoba mengakses direcotry SVWA/svwa dari web service dengan harapan sesuai dengan informasi yang disampaikan pada readme.txt</p>
-<p><img src="/img/shl-underground/svwa-home.png" alt="H3llcome">
+<pre tabindex="0"><code>http://110.93.14.30/svwa/
+</code></pre><p><img src="/img/shl-underground/svwa-home.png" alt="H3llcome">
 Dan ternyata dugaan benar, terdapat aplikasi SVWA yang terinstall pada server, dengan ini kita bisa melanjutkan ke tahap selanjutnya</p>
 <h2 id="exploitation">Exploitation</h2>
 <p>Setelah mendapatkan tampilan h3llcome, maka di sini kita bisa langsung mencoba fitur yang ada pada web ini dan mencari exploit yang bisa digunakan untuk mendapatkan akses ke dalam server, pada challenges ini terdapat beberapa cara untuk exploitasi untuk mendapatkan credentials dari low user</p>
 <h3 id="exploit-1-sql-injection-to-write-webshell-excellent">Exploit 1 SQL Injection to Write Webshell (Excellent)</h3>
-<p><img src="/img/shl-underground/read-article.png" alt="">
+<p><img src="/img/shl-underground/read-article.png" alt="read acticle feature">
 Pada halaman awal terdapat list artikel yang ada pada website yang bisa kita baca, ketika kita membuka salah satu artikel tersebut kita akan diarahkan pada file read.php, pada file ini terdapat celah sql injection dikarenakan pada parameter id tidak di validasi dengan baik sehingga dapat digunakan oleh penyerang untuk melakukan kontrol query dan mengambil data lain yang ada pada database
 Berikut adalah payload yang kita gunakan untuk melakukan sql injection dengan union based untuk memunculkan user yang digunakan saat ini data database yang digunakan</p>
 <pre tabindex="0"><code>http://110.93.14.30/svwa/read.php?id=&#39;1&#39; union select 1,concat(user(),0x3a,database()),3,4--+-
-</code></pre><p><img src="/img/shl-underground/sql-injection-user-db.png" alt="extract username and database"></p>
-<p>setelah berhasil mengetahui user dan database yang digunakan, kita akan mencoba melakukan checking, apakah user saat ini memiliki privileges files, seperti yang kita tahu kita dapat melakukan upload webshell menggunakan sql injection dengan syarat user saat ini memiliki privileges files dan memiliki permission pada directory yang dapat diakses melalui service web
-<img src="/img/shl-underground/file-priv-check.png" alt="sql injection privileges check">
+</code></pre><p><img src="/img/shl-underground/sql-injection-user-db.png" alt="extract username and database">
+setelah berhasil mengetahui user dan database yang digunakan, kita akan mencoba melakukan checking, apakah user saat ini memiliki privileges file, seperti yang kita tahu kita dapat melakukan upload webshell menggunakan sql injection dengan syarat user saat ini memiliki privileges files dan memiliki permission pada directory yang dapat diakses melalui service web</p>
+<pre tabindex="0"><code>http://110.93.14.30/svwa/read.php?id=&#39;1&#39; union select 1,file_priv,3,4 from mysql.user--+-
+</code></pre><p><img src="/img/shl-underground/file-priv-check.png" alt="sql injection privileges check">
 pada halaman website menampilkan Y dengan arti kita memiliki privileges file, maka dari itu kita dapat mencoba untuk melakukan write file, namun kondisi saat ini kita tidak tahu path file web server, kembali pada hasil sebelumnya terdapat file phpinfo.php yang juga menampilkan path lokasi path webserver
 <img src="/img/shl-underground/phpinfo-document-root.png" alt="document root from phpinfo">
 dengan ini kita dapat mengetahui lokai document root dari web server, maka dari itu kita akan coba untuk melakukan write ke directory /webroot dengan nama hehe.php dan isi yang memanggil fungsi phpinfo, hal ini dilakukan sebagai test juga apakah permission pada webroot bisa diwrite oleh sql atau tidak, berikut adalah payload yang digunakan untuk write webshell pada document root server dengan memanfaatkan privileges file pada sql injection</p>
@@ -186,14 +188,14 @@ ketika dirubah, muncul data dari /etc/passwd dengan ini bisa kita pahami bahwa r
 <pre tabindex="0"><code>http://110.93.14.30/svwa/admin/index.php?file=php://filter/convert.base64-encode/resource=index.php
 </code></pre><p><img src="/img/shl-underground/lfi-php-phar-read-index-php.png" alt="decode base64 cyberchef">
 dengan ini kita bisa melihat source code index.php yang ada pada server namun source tersebut diencode menggunakan base64, kita coba decode menggunakan cyberchef
-<img src="/img/shl-underground/source-base64-lfi-phar.png" alt="read db koneksi.php from lfi"></p>
+<img src="/img/shl-underground/source-base64-lfi-phar.png" alt="read db koneksi.php from lfi">
+pada source tersebut terlihat ada pemanggilan terhadap file db/koneksi.php, kita coba lihat isi file tersebut</p>
 <pre tabindex="0"><code>http://110.93.14.30/svwa/admin/index.php?file=php://filter/convert.base64-encode/resource=../db/koneksi.php
-</code></pre><p>pada source tersebut terlihat ada pemanggilan terhadap file db/koneksi.php, kita coba lihat isi file tersebut
-<img src="/img/shl-underground/lfi-php-phar-read-koneksi-db-base64.png" alt="LFI responses">
+</code></pre><p><img src="/img/shl-underground/lfi-php-phar-read-koneksi-db-base64.png" alt="LFI responses">
 <img src="/img/shl-underground/lfi-php-phar-read-koneksi-db.png" alt="LFI read database connection">
-dan kita berhasil mendapatkan credentials database yang bisa digunakan untuk credentials spraying</p>
-<h3 id="exploit-3-local-file-inclusion-from-access-log-bad">Exploit 3 Local File Inclusion from Access Log (Bad)</h3>
-<p>Untuk exploit ini mirip dengan cara sebelumnya, yaitu mengexplorasi celah local file inlcusion, di sini kita dapat melakukan inclusion terhadap file access log web server
+dan kita berhasil mendapatkan credentials database yang bisa digunakan untuk spraying pada service yang lain</p>
+<h3 id="exploit-3-local-file-inclusion-access-log-poisoning-bad">Exploit 3 Local File Inclusion Access Log Poisoning (Bad)</h3>
+<p>Untuk exploit ini mirip dengan cara sebelumnya, yaitu mengexplorasi celah local file inlcusion, di sini kita akan melakukan inclusion terhadap file access log web server
 <img src="/img/shl-underground/lfi-read-web-access-log.png" alt="LFI read web access log">
 dengan ini penyerang dapat melakukan poisoning terhadap access log server untuk menjalankan malicious script seperti webshell, kita langsung melakukan request ke server dengan nama user agent yang berisi webshell php, karena jika webshell ditulis pada url field akan terjadi encoding di karakter special sehingga kita menggunakan field user agent yang tidak ada encoding untuk karakter special, jangan lupa escape $ karena pada terminal akan dianggap sebagai variable
 <img src="/img/shl-underground/curl-user-agent-web-shell.png" alt="curl php webshell user agent">
@@ -205,7 +207,7 @@ kita berhasil menjalankan command, exploit ini tidak direkomendasikan karena ket
 <img src="/img/shl-underground/user-logged-in.png" alt="Upload Feature">
 di sini kita membuat file webshell php, namun untuk tipe filenya kita rubah menjadi png seperti shell.php ke shell.png dan langsung saja kita upload
 <img src="/img/shl-underground/txt-in-png.png" alt="upload webshell rename to png">
-file berhasil diunggah namun browser tidak menapilkan data karena memang isi dari file tersebut bukanlah data gambar melainkan webshell, kita langsung saja panggil file tersebut melalui file inclusion sebelumnya
+file berhasil diunggah namun browser tidak menampilkan data karena memang isi dari file tersebut bukanlah data gambar melainkan script webshell php, kita langsung saja panggil file tersebut melalui file inclusion sebelumnya
 <img src="/img/shl-underground/webshell-from-local-file-inclusion.png" alt="web shell from access log local file inclusion">
 kita berhasil menjalankan command server dengan memanggil parameter yang digunakan untuk menjalankan command</p>
 <h3 id="exploit-5-sql-injection-to-read-koneksiphp--etc-passwd-good">Exploit 5 SQL Injection to Read koneksi.php + etc passwd (Good)</h3>
@@ -213,14 +215,15 @@ kita berhasil menjalankan command server dengan memanggil parameter yang digunak
 <img src="/img/shl-underground/sql-injection-load-file-db-koneksi-php.png" alt="sql injection read db koneksi.php"></p>
 <p>Setelah mendapatkan access melalui salah satu dari 5 cara tersebut kita bisa memanfaakan informasi dari koneksi.php dan /etc/passwd, dengan ini kita tahu bahwa pada sistem terdaftar user human pada /etc/passwd dan pada service database lalu terdapat kredential human pada file koneksi.php, mesikpun 2 hal tersebut merupakan service yang berbeda namun hal ini sering dilakukan oleh manusia yang ga mau ribet dengan password maka password disamakan, pada case ini kita mencoba peruntungan dengan memanfaatkan human error ini</p>
 <p>maka kita akan mencoba melakukan login pada service lain yang telah ditemukan melalui nmap sebelumnya dengan credentials dari koneksi.php, hasil recon sebelumnya menunjukan bahwa terdapat port 22 dan 2222 kita akan coba satu-satu
-ssh to human
-<img src="/img/shl-underground/ssh-to-human.png" alt="ssh to human from reused cred"></p>
+<img src="/img/shl-underground/ssh-to-human.png" alt="ssh to human from reused cred">
+dan kita berhasil masuk sebagai human dengan ssh port 2222
+Human Pwned</p>
 <h2 id="privileges-escalation">Privileges Escalation</h2>
-<p>Setelah mendapatkan akses human kita dapat langsung mencari cara untuk melakukan privileges escalation / menaikan hak akses kita ke hak akses yang lebih tinggi, pada challenges ini tidak dipungkiri bahwa privilges escalation-nya sangat kurang, hanya dengan membaca file backup ssh kita sudah bisa masuk sebagai root, karena kita tidak tau lokasi file backupnya kita bisa menggunakan cheatsheet dari blog.g0tm1lk.com untuk mencari informasi yang bisa digunakan untuk melakukan privileges escalation</p>
+<p>Setelah mendapatkan akses human kita dapat langsung mencari cara untuk melakukan privileges escalation / menaikan hak akses kita ke hak akses yang lebih tinggi, pada challenges ini tidak dipungkiri bahwa privilges escalation-nya sangat kurang, hanya dengan membaca file backup ssh kita sudah bisa masuk sebagai root, karena kita tidak tau lokasi file backupnya kita bisa menggunakan cheatsheet dari g0tm1lk untuk mencari informasi yang bisa digunakan untuk melakukan privileges escalation</p>
 <p>pada saat mencari writetable directory, kita menemukan sebuah directory yang tidak umum pada /var/backup/, berdasarkan nama directorynya kita bisa asumsikan bahwa file-file yang ada pada directory tersebut merupakan isi .ssh dari user root server
 <img src="/img/shl-underground/find-writeable-directory.png" alt="find writeable directory">
-ternyata isi dari authorized_keys merupakan id_rsa.pub itu sendiri, sedangkan id_rsa adalah private key dari id_rsa.pub, bisa kita simpulkan bahwa user root dapat melakukan ssh ke dalam server dengan menggunakan private key tersebut, langsung saja kita ssh sebagai root dengan menggunakan private key tersebut
-<img src="/img/shl-underground/ssh-key-from-backup-file.png" alt="ssh key from backup file">
+ternyata isi dari authorized_keys merupakan id_rsa.pub itu sendiri, sedangkan id_rsa adalah private key dari id_rsa.pub, bisa kita simpulkan bahwa user root dapat melakukan ssh ke dalam server dengan menggunakan private key tersebut, langsung saja kita ssh sebagai root dengan menggunakan private key tersebut<br>
+<img src="/img/shl-underground/ssh-key-from-backup-file.png" alt="ssh key from backup file"><br>
 berikut adalah cara untuk ssh langsung dari server</p>
 <pre tabindex="0"><code>ssh -i id_rsa root@localhost
 </code></pre><p><img src="/img/shl-underground/ssh-to-root-from-server.png" alt="ssh to root from server">
@@ -228,7 +231,7 @@ dan kita berhasil untuk mendapatkan akses root dari challenges ini, untuk koneks
 <img src="/img/shl-underground/ssh-to-root-from-local.png" alt="ssh to root from kali">
 dan kita coba intip isi dari root.txt
 <img src="/img/shl-underground/read-root-txt.png" alt="read root.txt">
-<em>Challenges Completed</em></p>
+<strong>Challenges Completed</strong></p>
 <h3 id="for-fun-vulnerability">For Fun Vulnerability</h3>
 <p>dari 5 exploit sebelumnya, sebenarnya ada beberapa vulnerability lain yang bisa ditemukan, namun vulnerability ini tidak bisa digunakan untuk melanjutkan perjalanan pwning machine ini</p>
 <h4 id="xss">XSS</h4>
