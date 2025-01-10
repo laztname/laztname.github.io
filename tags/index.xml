@@ -6,8 +6,29 @@
     <description>Recent content in Tags on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo</generator>
     <language>id-ID</language>
-    <lastBuildDate>Thu, 13 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>End-Users</title>
+      <link>https://potato.id/tags/end-users/</link>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/tags/end-users/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Internet</title>
+      <link>https://potato.id/tags/internet/</link>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/tags/internet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Write Up</title>
+      <link>https://potato.id/tags/write-up/</link>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/tags/write-up/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Challenges</title>
       <link>https://potato.id/tags/challenges/</link>
@@ -23,13 +44,6 @@
       <description></description>
     </item>
     <item>
-      <title>Write Up</title>
-      <link>https://potato.id/tags/write-up/</link>
-      <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/tags/write-up/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>DNS</title>
       <link>https://potato.id/tags/dns/</link>
       <pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate>
@@ -41,20 +55,6 @@
       <link>https://potato.id/tags/docker/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
       <guid>https://potato.id/tags/docker/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>End-Users</title>
-      <link>https://potato.id/tags/end-users/</link>
-      <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/tags/end-users/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Internet</title>
-      <link>https://potato.id/tags/internet/</link>
-      <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/tags/internet/</guid>
       <description></description>
     </item>
     <item>

@@ -32,9 +32,6 @@
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
-  
-
-
 <script type="text/javascript">
   (function(c,l,a,r,i,t,y){
     c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -92,6 +89,7 @@
 	</ul>
 </nav>
 
+
         </div>
 </header>
 
@@ -102,6 +100,33 @@
 	<header class="main__header">
 		<h1 class="main__title">Write Up</h1>
 	</header><article class="list__item post">
+	
+	<figure class="list__thumbnail thumbnail">
+		<a class="thumbnail__link" href="/posts/lesson-learned-from-ransomware/">
+		<img class="thumbnail__image" src="/img/ransomware/locked-computer.webp" alt="Lesson Learned from Ransomware" loading="lazy">
+		</a>
+	</figure>
+
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/lesson-learned-from-ransomware/" rel="bookmark">
+			Lesson Learned from Ransomware
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-02-28T00:00:00Z">28-02-2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/development/" rel="category">Development</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Ransomware Ransomware merupakan salah satu jenis malware (malicious software) yang akan melakukan enkripsi terhadap file-file korban sehingga korban kehilangan akses terhadap data-data file yang dimiliki, malware ini akan melakukan dekripsi terhadap file-file tersebut jika tebusan / bayaran telah dibayar oleh korban namun tidak ada jaminan semua data tersebut dapat kembali serta jika korban tidak melakukan tebusan beberapa jenis ransomware akan mengekspos file-file korban ke internet, ransomware …
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/lesson-learned-from-ransomware/">Read more…</a>
+	</div>
+</article>
+<article class="list__item post">
 	
 	<figure class="list__thumbnail thumbnail">
 		<a class="thumbnail__link" href="/posts/it-was-dns/">
@@ -123,12 +148,13 @@
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		Seperti yang kita tau, DNS atau Domain Name Server adalah service yang bertugas untuk melakukan translate nama domain menjadi IP sehingga user tidak perlu mengingat IP yang cukup ribet/njelimet jika diingat satu-satu, maka dari itu DNS menjadi salah satu service yang cukup krusial dan harus di konfigurasi dengan baik, jika tidak maka dapat berdampak pada domain yang kita miliki akan susah atau bahkan tidak dapat diakses oleh user
-Sebagai contoh, beberapa waktu lalu ada rekan kerja yang komplain ke tim infrastruktur karena tidak bisa membuka web monev.
+Sebagai contoh, beberapa waktu lalu ada rekan kerja yang komplain …
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/it-was-dns/">Read more…</a>
 	</div>
-</article><article class="list__item post">
+</article>
+<article class="list__item post">
 	
 	<figure class="list__thumbnail thumbnail">
 		<a class="thumbnail__link" href="/posts/retas-io-hellbound-vm-write-up/">
@@ -150,11 +176,13 @@ Sebagai contoh, beberapa waktu lalu ada rekan kerja yang komplain ke tim infrast
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		Langsung saja to the point, mesin ini susah titik. Dari awal launching labs sudah ada 3 mesin yaitu Zombie, Hellbound dan Anonymouz maka mesin inillah yang menurut saya cukup hard karena ya mungkin kurangnya pengalaman dalam bereksploitasi dan feeling yang kuat. Hingga write up ini ditulis penulis juga masih belum mendapatkan flag root user, masih nyetuck di www-data. Beruntung saja user flag readable sama si www-data dengan ini sudah bisa submit flag user.
+
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/retas-io-hellbound-vm-write-up/">Read more…</a>
 	</div>
-</article><article class="list__item post">
+</article>
+<article class="list__item post">
 	
 	<figure class="list__thumbnail thumbnail">
 		<a class="thumbnail__link" href="/posts/retas-io-zombie-vm-write-up/">
@@ -176,12 +204,13 @@ Sebagai contoh, beberapa waktu lalu ada rekan kerja yang komplain ke tim infrast
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		Retas.io merupakan sebuah perusahaan dari PT. Solusi Siber Teknologi yang menawarkan berbagai produk berupa jasa keamanan mulai dari Vulnerability Assesment, Penetration Testing hingga kebutuhan khusus lainnya yang berkaitan dengan IT dan keamanannya.
-Baru-baru ini retas.io meluncurkan sebuah produk baru berupa labs yang berguna untuk membantu para player baru yang terjun ke dunia Infosec, labs ini sendiri mirip-mirip hackthebox, dengan menggunakan vpn kita diharuskan menyelesaikan tantangan yang diberikan dengan pengetahuan dan kemampuan IT para player, tidak hanya itu mereka juga akan merilis kampus retas yang bertujuan memberikan pendidikan / pelatihan untuk terjun di dunia Infosec, namun pada saat tulisan ini dibuat fitur tersebut masih dalam proses pengerjaan, langsung saja berikut adalah write-up dari Challenges VM Zombie yang ada pada labs retas.
+Baru-baru ini retas.io meluncurkan sebuah produk baru berupa labs yang berguna untuk membantu para player baru yang terjun ke dunia Infosec, labs ini sendiri mirip-mirip hackthebox, dengan menggunakan vpn kita diharuskan menyelesaikan tantangan …
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/retas-io-zombie-vm-write-up/">Read more…</a>
 	</div>
-</article><article class="list__item post">
+</article>
+<article class="list__item post">
 	
 	<figure class="list__thumbnail thumbnail">
 		<a class="thumbnail__link" href="/posts/solution-for-mhl-challenges/">
@@ -203,12 +232,13 @@ Baru-baru ini retas.io meluncurkan sebuah produk baru berupa labs yang berguna u
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		Setelah lama tidak membuat challenges karena waktu senggang yang makin dikit karena tugas yang makin banyak dan menumpuk karena tidak segera dikerjakan, akhirnya dapat info challenges dari temen di group telegram, challenges ini merupakan challenges buatan dari komunitas lain yaitu Malang Hacker Link, challengesnya cukup unik dan menyenangkan untuk dikerjakan karena ilmu perdukunan tidak perlu digunakan.
-Langsung saja dari informasi tersebut langsung buka linknya dan didapatkan form dengan isian first dan last name karena belum menjelajah dan mendapatkan clue, kita mencoba menggunakan fitur ini untuk mengetahui output dari aplikasi web ini, untuk isian firstname diisikan abc dan untuk lastname dengan def
+Langsung saja dari informasi tersebut langsung buka linknya dan didapatkan form dengan isian …
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/solution-for-mhl-challenges/">Read more…</a>
 	</div>
-</article><article class="list__item post">
+</article>
+<article class="list__item post">
 	
 	<figure class="list__thumbnail thumbnail">
 		<a class="thumbnail__link" href="/posts/solution-for-shl-challenges-heaven-vm/">
@@ -230,12 +260,13 @@ Langsung saja dari informasi tersebut langsung buka linknya dan didapatkan form 
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		Karena mesin ini sudah ditarik dan sudah dirasa tidak relevan untuk sebuah challenges, maka dari itu saya membuat penyelesaian bagaimana menyelesaikan mesin vm heaven dari Surabaya Hacker Link.
-Sebenarnya untuk menyelesaikan challenges ini hampir tidak dibutuhkan tools hacking khusus seperti sqlmap ataupun metasploit karena challenges ini sangat mudah, tidak diperlukan pengetahuan khusus tentang hacking. cukup terbiasa dengan sistem operasi GNU/Linux dan pengetahuan mendasar tentang bagaimana melakukan pwning (owning) terhadap mesin maka VM dapat diselesaikan dengan mudah.
+Sebenarnya untuk menyelesaikan challenges ini hampir tidak dibutuhkan tools hacking khusus seperti sqlmap ataupun metasploit karena challenges ini sangat mudah, tidak diperlukan pengetahuan khusus tentang hacking. cukup terbiasa dengan sistem operasi GNU/Linux dan pengetahuan mendasar tentang bagaimana …
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/solution-for-shl-challenges-heaven-vm/">Read more…</a>
 	</div>
-</article><article class="list__item post">
+</article>
+<article class="list__item post">
 	
 	<figure class="list__thumbnail thumbnail">
 		<a class="thumbnail__link" href="/posts/solution-for-inclusion-challenges/">
@@ -258,12 +289,13 @@ Sebenarnya untuk menyelesaikan challenges ini hampir tidak dibutuhkan tools hack
 	<div class="content list__excerpt post__content clearfix">
 		Seperti biasa di group Surabaya Hacker Link terdapat beragam challenges, tidak hanya dari staff admin saja yang membuat, namun ada member yang mempunyai challenges dan saya ikut membantu deploy soal challenges tersebut, tidak hanya men-deploy tapi tentunya ikut mencoba challenges tersebut :3
 Tanpa basa-basi langsung akses challenges tersebut berada di challshl.com
-Karena ikut campur saat deploy, jadi saya sedikit tahu dimana bug dari challenges tersebut berada, istilah kerennya white-box pentest untuk pentest dengan membaca source code dari website tersebut *cmiiw
+Karena ikut campur saat deploy, jadi saya sedikit tahu dimana bug dari challenges tersebut berada, istilah kerennya white-box pentest …
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/solution-for-inclusion-challenges/">Read more…</a>
 	</div>
-</article><article class="list__item post">
+</article>
+<article class="list__item post">
 	
 	<figure class="list__thumbnail thumbnail">
 		<a class="thumbnail__link" href="/posts/menulis-laporan-bug/">
@@ -288,12 +320,13 @@ Karena ikut campur saat deploy, jadi saya sedikit tahu dimana bug dari challenge
 Tidak ada yang sempurna di dunia ini, begitupun tulisan ini.
 Semenjak ada program dari BSSN yang berjudul V2DP atau Voluntary Vulnerability Disclosure Program, banyak sekali yang bertanya di forum diskusi maupun grup sosial media tentang bagimana menulis laporan bug yang telah ditemukan dengan baik.
 Sedikit tips dari saya untuk menulis laporan dengan baik
-Berikanlah judul yang sesuai.
+Berikanlah judul yang sesuai. Judul merupakan tulisan …
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/menulis-laporan-bug/">Read more…</a>
 	</div>
-</article><article class="list__item post">
+</article>
+<article class="list__item post">
 	
 	<figure class="list__thumbnail thumbnail">
 		<a class="thumbnail__link" href="/posts/solution-for-qr-generator-challenges/">
@@ -316,13 +349,13 @@ Berikanlah judul yang sesuai.
 	<div class="content list__excerpt post__content clearfix">
 		Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana, Challenges ini bertemakan QR Code Generator, namun letak vulnerability-nya tidak pada QR Code tersebut, lalu berikut adalah cara sederhana menyelesaikannya
 Diberikan Challenges
-Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.
-Pengecekan Source Code
+Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram. …
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/solution-for-qr-generator-challenges/">Read more…</a>
 	</div>
-</article><article class="list__item post">
+</article>
+<article class="list__item post">
 	
 	<figure class="list__thumbnail thumbnail">
 		<a class="thumbnail__link" href="/posts/solution-for-ramadhan-challenges/">
@@ -344,40 +377,13 @@ Pengecekan Source Code
 	</header>
 	<div class="content list__excerpt post__content clearfix">
 		Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di STTS, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui /self/proc/environ dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.
+
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/posts/solution-for-ramadhan-challenges/">Read more…</a>
 	</div>
-</article><article class="list__item post">
-	
-	<figure class="list__thumbnail thumbnail">
-		<a class="thumbnail__link" href="/posts/sql-injection-into-xrdp-account-take-over/">
-		<img class="thumbnail__image" src="/img/logged-in-xrdp.webp" alt="SQL Injection Into XRDP Account Take Over" loading="lazy">
-		</a>
-	</figure>
-
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/sql-injection-into-xrdp-account-take-over/" rel="bookmark">
-			SQL Injection Into XRDP Account Take Over
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-01-25T00:00:00Z">25-01-2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-hacking/" rel="category">Web Hacking</a>, <a class="meta__link" href="/categories/offensive/" rel="category">Offensive</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Well mungkin judulnya agak click bait sql injection sendiri tidak bisa melakukan injeksi sampai ke RDP Account Take Over xD
-Sebenarnya tujuan awal cuman ingin download anime di moesubs.com sih, namu saat membuka webnya ada url yang sangat pantas untuk dicurigai yaitu
-https://moesubs.com/?hal=dlrilisan&amp;id=591
-yaudah deh coba cek pake ' dan hasilnya web tersebut error, setelah error melakukan balancing pakai comment SQL --+- hasilnya web balik jadi normal lagi, oke lanjut ke order by
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/sql-injection-into-xrdp-account-take-over/">Read more…</a>
-	</div>
 </article>
+
 </main>
 
 <div class="pagination">
@@ -409,11 +415,11 @@ yaudah deh coba cek pake ' dan hasilnya web tersebut error, setelah error melaku
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/infostealer-spreading-through-fake-google-recaptcha/">Infostealer Spreading Through Fake Google reCAPTCHA</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/surabaya-hacker-link-underground-hack-the-box-write-up-challenges/">Surabaya Hacker Link Underground Write Up</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/there-is-no-way-it-is-dns/">There is no way it&#39;s DNS</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/moving-from-disqus-to-giscus-with-hugo-ssg/">Moving From Disqus to Giscus with Hugo SSG</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/update-newsfeed-rss-to-discord-webhook/">Update Newsfeed RSS to Discord</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/hacking-phishing-as-a-service/">Hacking Phishing-as-a-Service</a></li>
 		</ul>
 	</div>
 </div>
@@ -442,14 +448,14 @@ yaudah deh coba cek pake ' dan hasilnya web tersebut error, setelah error melaku
 		<a class="widget-taglist__link widget__link btn" href="/tags/dns/" title="DNS">DNS (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/end-users/" title="End-Users">End-Users (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/end-users/" title="End-Users">End-Users (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/fail2ban/" title="Fail2ban">Fail2ban (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/file-upload/" title="File Upload">File Upload (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/git/" title="Git">Git (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/gitdumper/" title="Gitdumper">Gitdumper (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/githack/" title="Githack">Githack (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/incident-response/" title="Incident Response">Incident Response (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/intrusion-prevention-system/" title="Intrusion Prevention System">Intrusion Prevention System (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/lfi/" title="LFI">LFI (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
@@ -461,7 +467,7 @@ yaudah deh coba cek pake ' dan hasilnya web tersebut error, setelah error melaku
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (23)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (24)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
 	</div>
@@ -509,7 +515,7 @@ yaudah deh coba cek pake ' dan hasilnya web tersebut error, setelah error melaku
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2024 Ardi Jonias Fortuna.
+			&copy; 2025 Ardi Jonias Fortuna.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>

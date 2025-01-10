@@ -6,35 +6,42 @@
     <description>Recent content in Defensive on Ardi Jonias Fortuna # potato</description>
     <generator>Hugo</generator>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 11 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/categories/defensive/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Infostealer Spreading Through Fake Google reCAPTCHA</title>
+      <link>https://potato.id/posts/infostealer-spreading-through-fake-google-recaptcha/</link>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/infostealer-spreading-through-fake-google-recaptcha/</guid>
+      <description>&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;&#xA;&lt;p&gt;Desember ini saya mendapatkan sebuah notifikasi dari sebuah group Facebook yang saya ikuti, dalam post tersebut (sekarang di hapus) berisi sebuah screenshot seperti gambar di atas, lengkap dengan caption: &lt;em&gt;&amp;lsquo;Apakah ini berbahaya atau nggak? Kok captchanya aneh.&amp;rsquo;&amp;quot;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;dalam komentar tersebut Thread Starter menambahkan sebuah screenshot gambar lain yang berisi text yang harus dipaste ke program run.exe seperti berikut&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://potato.id/img/infostealer/2.png&#34; alt=&#34;isi clipboard setelah mengakses website&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Jelas sekali bahwa ini sebuah malware. mshta itu file bawaan Windows yang fungsinya untuk menjalankan command dari aplikasi HTA di environment Windows dan sering sekali dipakai oleh threat actors sebagai salah satu teknik serangan mereka &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Harderning Server with Fail2ban and Reporting to Telegram</title>
       <link>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</link>
       <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
       <guid>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</guid>
-      <description>Setelah cukup sibuk sehingga tidak sempat membuat challenges dan menuliskan bagaimana cara menyelesaikan challenges tersebut pada blog ini, kali ini kita akan membahas sedikit tentang fail2ban dan cara melakukan konfigurasinya&#xA;Umumnya fail2ban digunakan untuk melakukan ban terhadap IP yang gagal melakukan authentikasi sebanyak batas maksimal yang disebutkan pada konfigurasi dan IPS ini sangat ampuh mencekal serangan yang akan terjadi pada server, seperti serangan bruteforce pada port ssh (22), ftp (21), smtp (25) dsb, bahkan serangan lainnya yang melalui web server (80/443), lalu sebelum mengetahui bagaimana konfigurasi fail2ban kita akan belajar sedikit tentang bagaimana fail2ban bekerja.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;https://potato.id/img/fail2ban/thumb.webp&#34; alt=&#34;fail2ban-logs&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Setelah cukup sibuk sehingga tidak sempat membuat challenges dan menuliskan bagaimana cara menyelesaikan challenges tersebut pada blog ini, kali ini kita akan membahas sedikit tentang fail2ban dan cara melakukan konfigurasinya&lt;/p&gt;&#xA;&lt;p&gt;Umumnya fail2ban digunakan untuk melakukan ban terhadap IP yang gagal melakukan authentikasi sebanyak batas maksimal yang disebutkan pada konfigurasi dan IPS ini sangat ampuh mencekal serangan yang akan terjadi pada server, seperti serangan bruteforce pada port ssh (22), ftp (21), smtp (25) dsb, bahkan serangan lainnya yang melalui web server (80/443), lalu sebelum mengetahui bagaimana konfigurasi fail2ban kita akan belajar sedikit tentang bagaimana fail2ban bekerja.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Menulis Laporan Vulnerability Findings dengan Baik</title>
       <link>https://potato.id/posts/menulis-laporan-bug/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
       <guid>https://potato.id/posts/menulis-laporan-bug/</guid>
-      <description>Sebelumnya saya ucapkan selamat hari raya idul fitri 1440 H, mohon maaf lahir dan batin.&#xA;Tidak ada yang sempurna di dunia ini, begitupun tulisan ini.&#xA;Semenjak ada program dari BSSN yang berjudul V2DP atau Voluntary Vulnerability Disclosure Program, banyak sekali yang bertanya di forum diskusi maupun grup sosial media tentang bagimana menulis laporan bug yang telah ditemukan dengan baik.&#xA;Sedikit tips dari saya untuk menulis laporan dengan baik&#xA;Berikanlah judul yang sesuai.</description>
+      <description>&lt;p&gt;Sebelumnya saya ucapkan selamat hari raya idul fitri 1440 H, mohon maaf lahir dan batin.&lt;br&gt;&#xA;Tidak ada yang sempurna di dunia ini, begitupun tulisan ini.&lt;/p&gt;&#xA;&lt;p&gt;Semenjak ada program dari BSSN yang berjudul V2DP atau Voluntary Vulnerability Disclosure Program, banyak sekali yang bertanya di forum diskusi maupun grup sosial media tentang bagimana menulis laporan bug yang telah ditemukan dengan baik.&lt;br&gt;&#xA;Sedikit tips dari saya untuk menulis laporan dengan baik&lt;/p&gt;&#xA;&lt;h3 id=&#34;berikanlah-judul-yang-sesuai&#34;&gt;Berikanlah judul yang sesuai.&lt;/h3&gt;&#xA;&lt;p&gt;Judul merupakan tulisan yang dibaca pertama kali, maka dari itu tuliskan judul yang mewakilkan seluruh temuan yang telah ditemukan, contoh Stored XSS in Contact Admin, Unrestricted File Upload on Profile Picture Feature, dsb.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Websitemu di Hack?, Lakukan hal berikut</title>
       <link>https://potato.id/posts/my-website-hacked-now-what/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
       <guid>https://potato.id/posts/my-website-hacked-now-what/</guid>
-      <description>Di dalam group Telegram Surabaya Hacker Link saya dan @ytyao sering membuat challenges seperti web hacking, reversing dan lain sebagainya, namun pada challenges sebelumnya ada sedikit insiden, yaitu web di hack (well memang sih web dibuat sedemikian rupa untuk di hack), namun si hacker ini melakukan sabun masal alias menghapus semua file dan folder yang ada. Namun dari hal tersebut saya mendapatkan ilmu baru yaitu penanganan setelah insiden atau istilah kerennya Incident Response</description>
+      <description>&lt;p&gt;Di dalam group Telegram Surabaya Hacker Link saya dan &lt;code&gt;@ytyao&lt;/code&gt; sering membuat challenges seperti web hacking, reversing dan lain sebagainya, namun pada challenges sebelumnya ada sedikit insiden, yaitu web di hack (well memang sih web dibuat sedemikian rupa untuk di hack), namun si hacker ini melakukan sabun masal alias menghapus semua file dan folder yang ada. Namun dari hal tersebut saya mendapatkan ilmu baru yaitu penanganan setelah insiden atau istilah kerennya Incident Response&lt;/p&gt;</description>
     </item>
     <item>
       <title>XSS Prevention</title>
       <link>https://potato.id/posts/xss-prevention/</link>
       <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
       <guid>https://potato.id/posts/xss-prevention/</guid>
-      <description>setelah sedikit membahas XSS di sini, ya meskipun agak ngawur saatnya kita bahas cara mencegah bug ini ada pada web kita&#xA;XSS bisa berjalan / dijalankan karena tag &amp;lt;script&amp;gt; yang lepas dan berjalan / terender oleh browser maka dari itu kita manipulasi browser agar tidak menjalankan tag html yang di input kan user, eitsss kita ga akan bongkar-bongkar browser kok, cuman sedikit permainan sebelum input user di munculkan pada website</description>
+      <description>&lt;p&gt;setelah sedikit membahas XSS di &lt;a href=&#34;https://potato.id/posts/apakah-xss-itu-berbahaya/&#34;&gt;sini&lt;/a&gt;, ya meskipun agak ngawur saatnya kita bahas cara mencegah bug ini ada pada web kita&lt;/p&gt;&#xA;&lt;p&gt;XSS bisa berjalan / dijalankan karena tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; yang lepas dan berjalan / terender oleh browser maka dari itu kita manipulasi browser agar tidak menjalankan tag html yang di &lt;em&gt;&lt;strong&gt;input&lt;/strong&gt;&lt;/em&gt; kan user, eitsss kita ga akan bongkar-bongkar browser kok, cuman sedikit permainan sebelum input user di munculkan pada website&lt;/p&gt;&#xA;&lt;p&gt;example:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

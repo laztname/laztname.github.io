@@ -13,7 +13,7 @@
   <meta property="og:title" content="Surabaya Hacker Link Underground Write Up">
   <meta property="og:description" content="Information
 Challenges Information Ini adalah write-up challenges dari Surabaya Hacker Link untuk mesin Underground, mesin ini dibuat dengan menggunakan salah satu Vulnerable Web yang biasa SHL gunakan untuk demo session dengan beberapa vulnerability yang telah diperbaiki agar challenges ini sedikit menarik.
-Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges baru pengganti Heaven (Write-up Heaven VM ada di sini) informasi pada forum saya rasa cukup jelas seperti jangan merusak, jangan spoil, take the root and read root.">
+Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges baru pengganti Heaven (Write-up Heaven VM ada di sini) informasi pada forum saya rasa cukup jelas seperti jangan merusak, jangan spoil, take the root and read root.txt, di sini saya menggunakan IP 110.93.14.30 ketika kita mengakses IP tersebut hanya terdapat halaman default dari nginx dan tidak ada informasi lainnya yang bisa digunakan untuk melakukan step selanjutanya sehingga kita perlu melakukan gathering information mendalam">
   <meta property="og:locale" content="id_ID">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -30,7 +30,7 @@ Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges bar
   <meta name="twitter:title" content="Surabaya Hacker Link Underground Write Up">
   <meta name="twitter:description" content="Information
 Challenges Information Ini adalah write-up challenges dari Surabaya Hacker Link untuk mesin Underground, mesin ini dibuat dengan menggunakan salah satu Vulnerable Web yang biasa SHL gunakan untuk demo session dengan beberapa vulnerability yang telah diperbaiki agar challenges ini sedikit menarik.
-Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges baru pengganti Heaven (Write-up Heaven VM ada di sini) informasi pada forum saya rasa cukup jelas seperti jangan merusak, jangan spoil, take the root and read root.">
+Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges baru pengganti Heaven (Write-up Heaven VM ada di sini) informasi pada forum saya rasa cukup jelas seperti jangan merusak, jangan spoil, take the root and read root.txt, di sini saya menggunakan IP 110.93.14.30 ketika kita mengakses IP tersebut hanya terdapat halaman default dari nginx dan tidak ada informasi lainnya yang bisa digunakan untuk melakukan step selanjutanya sehingga kita perlu melakukan gathering information mendalam">
 
 	<link rel="me" href="https://infosec.exchange/@laztname">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,9 +43,6 @@ Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges bar
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
-  
-
-
 <script type="text/javascript">
   (function(c,l,a,r,i,t,y){
     c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -102,6 +99,7 @@ Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges bar
 		</li>
 	</ul>
 </nav>
+
 
         </div>
 </header>
@@ -306,6 +304,12 @@ saat kita akses kembali halaman admin, maka pada browser akan muncul dashboard y
 			<p class="pager__title">There is no way it&#39;s DNS</p>
 		</a>
 	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/infostealer-spreading-through-fake-google-recaptcha/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Infostealer Spreading Through Fake Google reCAPTCHA</p>
+		</a>
+	</div>
 </nav>
 <div id="disqus-container">
 	<script src="https://giscus.app/client.js"
@@ -349,11 +353,11 @@ saat kita akses kembali halaman admin, maka pada browser akan muncul dashboard y
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/infostealer-spreading-through-fake-google-recaptcha/">Infostealer Spreading Through Fake Google reCAPTCHA</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/surabaya-hacker-link-underground-hack-the-box-write-up-challenges/">Surabaya Hacker Link Underground Write Up</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/there-is-no-way-it-is-dns/">There is no way it&#39;s DNS</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/moving-from-disqus-to-giscus-with-hugo-ssg/">Moving From Disqus to Giscus with Hugo SSG</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/update-newsfeed-rss-to-discord-webhook/">Update Newsfeed RSS to Discord</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/hacking-phishing-as-a-service/">Hacking Phishing-as-a-Service</a></li>
 		</ul>
 	</div>
 </div>
@@ -382,14 +386,14 @@ saat kita akses kembali halaman admin, maka pada browser akan muncul dashboard y
 		<a class="widget-taglist__link widget__link btn" href="/tags/dns/" title="DNS">DNS (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/end-users/" title="End-Users">End-Users (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/end-users/" title="End-Users">End-Users (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/fail2ban/" title="Fail2ban">Fail2ban (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/file-upload/" title="File Upload">File Upload (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/git/" title="Git">Git (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/gitdumper/" title="Gitdumper">Gitdumper (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/githack/" title="Githack">Githack (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/incident-response/" title="Incident Response">Incident Response (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/intrusion-prevention-system/" title="Intrusion Prevention System">Intrusion Prevention System (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/lfi/" title="LFI">LFI (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
@@ -401,7 +405,7 @@ saat kita akses kembali halaman admin, maka pada browser akan muncul dashboard y
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (23)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (24)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
 	</div>
@@ -449,7 +453,7 @@ saat kita akses kembali halaman admin, maka pada browser akan muncul dashboard y
 	<div class="container footer__container flex">
 		
 		<div class="footer__copyright">
-			&copy; 2024 Ardi Jonias Fortuna.
+			&copy; 2025 Ardi Jonias Fortuna.
 			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
 		</div>
 	</div>

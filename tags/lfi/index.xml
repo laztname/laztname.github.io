@@ -13,14 +13,14 @@
       <link>https://potato.id/posts/solution-for-inclusion-challenges/</link>
       <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
       <guid>https://potato.id/posts/solution-for-inclusion-challenges/</guid>
-      <description>Seperti biasa di group Surabaya Hacker Link terdapat beragam challenges, tidak hanya dari staff admin saja yang membuat, namun ada member yang mempunyai challenges dan saya ikut membantu deploy soal challenges tersebut, tidak hanya men-deploy tapi tentunya ikut mencoba challenges tersebut :3&#xA;Tanpa basa-basi langsung akses challenges tersebut berada di challshl.com&#xA;Karena ikut campur saat deploy, jadi saya sedikit tahu dimana bug dari challenges tersebut berada, istilah kerennya white-box pentest untuk pentest dengan membaca source code dari website tersebut *cmiiw</description>
+      <description>&lt;p&gt;Seperti biasa di group Surabaya Hacker Link terdapat beragam challenges, tidak hanya dari staff admin saja yang membuat, namun ada member yang mempunyai challenges dan saya ikut membantu deploy soal challenges tersebut, tidak hanya men-deploy tapi tentunya ikut mencoba challenges tersebut :3&lt;/p&gt;&#xA;&lt;p&gt;Tanpa basa-basi langsung akses challenges tersebut berada di challshl.com&lt;/p&gt;&#xA;&lt;p&gt;Karena ikut campur saat deploy, jadi saya sedikit tahu dimana bug dari challenges tersebut berada, istilah kerennya white-box pentest untuk pentest dengan membaca source code dari website tersebut *cmiiw&lt;/p&gt;</description>
     </item>
     <item>
       <title>Solution for Ramadhan Challenges</title>
       <link>https://potato.id/posts/solution-for-ramadhan-challenges/</link>
       <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
       <guid>https://potato.id/posts/solution-for-ramadhan-challenges/</guid>
-      <description>Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di STTS, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui /self/proc/environ dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.</description>
+      <description>&lt;p&gt;Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di &lt;a href=&#34;https://stts.edu&#34;&gt;STTS&lt;/a&gt;, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui &lt;code&gt;/self/proc/environ&lt;/code&gt; dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

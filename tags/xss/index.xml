@@ -13,21 +13,21 @@
       <link>https://potato.id/posts/dom-based-xss/</link>
       <pubDate>Wed, 27 Feb 2019 00:00:00 +0000</pubDate>
       <guid>https://potato.id/posts/dom-based-xss/</guid>
-      <description>Sebelum menuju bahasan DOM XSS, kita kenalan dulu yuk sama DOM, apasih DOM itu?, jarum?&#xA;DOM adalah singkatan dari Document Object Model, yang maksudnya adalah struktur hirarki pada document html, jadi dalam kode html ada sebuah silsilah keluarga&#xA;untuk XSS bisa dibaca di sini&#xA;Nah pada kasus DOM Based XSS ini, payload XSS akan merubah isi html melalui DOM ini????&#xA;Contoh: DVWA, DOM XSS, Level:Low&#xA;Ada fitur pilih bahasa, kita cek scriptnya yuk</description>
+      <description>&lt;p&gt;Sebelum menuju bahasan DOM XSS, kita kenalan dulu yuk sama DOM, apasih DOM itu?, &lt;del&gt;jarum?&lt;/del&gt;&lt;/p&gt;&#xA;&lt;p&gt;DOM adalah singkatan dari Document Object Model, yang maksudnya adalah struktur hirarki pada document html, jadi dalam kode html ada sebuah silsilah keluarga&lt;/p&gt;&#xA;&lt;p&gt;untuk XSS bisa dibaca di &lt;a href=&#34;https://potato.id/posts/apakah-xss-itu-berbahaya/&#34;&gt;sini&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;Nah pada kasus DOM Based XSS ini, payload XSS akan merubah isi html melalui DOM ini????&lt;/p&gt;&#xA;&lt;p&gt;Contoh:&#xA;DVWA, DOM XSS, Level:Low&lt;/p&gt;&#xA;&lt;p&gt;Ada fitur pilih bahasa, kita cek scriptnya yuk&lt;/p&gt;</description>
     </item>
     <item>
       <title>XSS Prevention</title>
       <link>https://potato.id/posts/xss-prevention/</link>
       <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
       <guid>https://potato.id/posts/xss-prevention/</guid>
-      <description>setelah sedikit membahas XSS di sini, ya meskipun agak ngawur saatnya kita bahas cara mencegah bug ini ada pada web kita&#xA;XSS bisa berjalan / dijalankan karena tag &amp;lt;script&amp;gt; yang lepas dan berjalan / terender oleh browser maka dari itu kita manipulasi browser agar tidak menjalankan tag html yang di input kan user, eitsss kita ga akan bongkar-bongkar browser kok, cuman sedikit permainan sebelum input user di munculkan pada website</description>
+      <description>&lt;p&gt;setelah sedikit membahas XSS di &lt;a href=&#34;https://potato.id/posts/apakah-xss-itu-berbahaya/&#34;&gt;sini&lt;/a&gt;, ya meskipun agak ngawur saatnya kita bahas cara mencegah bug ini ada pada web kita&lt;/p&gt;&#xA;&lt;p&gt;XSS bisa berjalan / dijalankan karena tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; yang lepas dan berjalan / terender oleh browser maka dari itu kita manipulasi browser agar tidak menjalankan tag html yang di &lt;em&gt;&lt;strong&gt;input&lt;/strong&gt;&lt;/em&gt; kan user, eitsss kita ga akan bongkar-bongkar browser kok, cuman sedikit permainan sebelum input user di munculkan pada website&lt;/p&gt;&#xA;&lt;p&gt;example:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Apakah XSS Itu Berbahaya ?</title>
       <link>https://potato.id/posts/apakah-xss-itu-berbahaya/</link>
       <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
       <guid>https://potato.id/posts/apakah-xss-itu-berbahaya/</guid>
-      <description>Background Dari hasil menyimak di beberapa group IT yang saya ikuti banyak sekali yang bertanya-tanya, Apakah XSS itu berbahaya?, Cara upload webshell lewat XSS itu gimana ya gan?, Laporan Bug XSS-ku kok engga ditanggepi sih? Apa karena XSS itu gak berbahaya ya?, Apa karena admin webnya udah anu ?, Ya kurang lebih begitulah pertanyaan yang mencuat, Mari kita bahas bareng-bareng gimana sih karakteristik XSS itu,&#xA;Definition Cross-site scripting is a type of computer security vulnerability typically found in web applications.</description>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;Dari hasil menyimak di beberapa group IT yang saya ikuti banyak sekali yang bertanya-tanya, Apakah XSS itu berbahaya?,  Cara upload webshell lewat XSS itu gimana ya gan?, Laporan Bug XSS-ku kok engga ditanggepi sih? Apa karena XSS itu gak berbahaya ya?, &lt;del&gt;Apa karena admin webnya udah anu ?&lt;/del&gt;, Ya kurang lebih begitulah pertanyaan yang mencuat, Mari kita bahas bareng-bareng gimana sih karakteristik XSS itu,&lt;/p&gt;&#xA;&lt;h2 id=&#34;definition&#34;&gt;Definition&lt;/h2&gt;&#xA;&lt;p&gt;Cross-site scripting is a type of computer security vulnerability typically found in web applications. XSS enables attackers to inject client side scripts into web pages viewed by other users. A cross-site scripting vulnerability may be used by attackers to bypass access controls such as the same-origin policy. &amp;ndash;Wikipedia&amp;ndash;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -13,14 +13,14 @@
       <link>https://potato.id/posts/solution-for-qr-generator-challenges/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
       <guid>https://potato.id/posts/solution-for-qr-generator-challenges/</guid>
-      <description>Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana, Challenges ini bertemakan QR Code Generator, namun letak vulnerability-nya tidak pada QR Code tersebut, lalu berikut adalah cara sederhana menyelesaikannya&#xA;Diberikan Challenges&#xA;Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.&#xA;Pengecekan Source Code</description>
+      <description>&lt;p&gt;Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana,&#xA;Challenges ini bertemakan QR Code Generator, namun letak vulnerability-nya tidak pada QR Code tersebut, lalu berikut adalah cara sederhana menyelesaikannya&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Diberikan Challenges&lt;br&gt;&#xA;&lt;img src=&#34;https://potato.id/img/qr/challenges.webp&#34; alt=&#34;telegram&#34;&gt;&lt;br&gt;&#xA;Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Pengecekan Source Code&lt;br&gt;&#xA;&lt;img src=&#34;https://potato.id/img/qr/source.webp&#34; alt=&#34;source-code&#34;&gt;&lt;br&gt;&#xA;Sebelum kita coba fitur dari web ini, kita cek source code-nya, apakah ada yang mencurigakan atau comment info dari pembuat Ternyata tidak ada apa-apa selain comment default dari bootstrap&lt;/p&gt;</description>
     </item>
     <item>
       <title>Solution for Ramadhan Challenges</title>
       <link>https://potato.id/posts/solution-for-ramadhan-challenges/</link>
       <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
       <guid>https://potato.id/posts/solution-for-ramadhan-challenges/</guid>
-      <description>Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di STTS, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui /self/proc/environ dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.</description>
+      <description>&lt;p&gt;Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di &lt;a href=&#34;https://stts.edu&#34;&gt;STTS&lt;/a&gt;, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui &lt;code&gt;/self/proc/environ&lt;/code&gt; dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
