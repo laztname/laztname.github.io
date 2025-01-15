@@ -127,32 +127,332 @@ Jelas sekali bahwa ini sebuah malware. mshta itu file bawaan Windows yang fungsi
 			<h2 id="the-beginning">The Beginning</h2>
 <p>Desember ini saya mendapatkan sebuah notifikasi dari sebuah group Facebook yang saya ikuti, dalam post tersebut (sekarang di hapus) berisi sebuah screenshot seperti gambar di atas, lengkap dengan caption: <em>&lsquo;Apakah ini berbahaya atau nggak? Kok captchanya aneh.&rsquo;&quot;</em></p>
 <p>dalam komentar tersebut Thread Starter menambahkan sebuah screenshot gambar lain yang berisi text yang harus dipaste ke program run.exe seperti berikut</p>
-<p><img src="/img/infostealer/2.png" alt="isi clipboard setelah mengakses website"></p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/infostealer/2.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/infostealer/2_hu4369320423183336252.webp" media="(min-width: 1024px)">
+        <source srcset="/img/infostealer/2_hu9975003683118903533.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/infostealer/2_hu10939408452327589809.webp" media="(max-width: 767px)">
+        <img src="/img/infostealer/2_hu10939408452327589809.webp" alt="text" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 <p>Jelas sekali bahwa ini sebuah malware. mshta itu file bawaan Windows yang fungsinya untuk menjalankan command dari aplikasi HTA di environment Windows dan sering sekali dipakai oleh threat actors sebagai salah satu teknik serangan mereka <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
 <p>karena penasaran coba deh untuk buka isi dari link yang telah ter-<em>copy</em> tadi menggunakan curl</p>
-<p><img src="/img/infostealer/3.png" alt="isi dari url yang diambil dari clipboard"></p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/infostealer/3.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/infostealer/3_hu12235078832116206131.webp" media="(min-width: 1024px)">
+        <source srcset="/img/infostealer/3_hu659164084379643357.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/infostealer/3_hu16625669499234415596.webp" media="(max-width: 767px)">
+        <img src="/img/infostealer/3_hu16625669499234415596.webp" alt="isi dari url yang diambil dari clipboard" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 <p>link tersebut menyisipkan script hta untuk menjalankan sebuah powershell yang mana akan menjalankan powershell lain dari sebuah url yang diencode base64, mari kita coba lihat isi file dari url yang di encode tersebut</p>
-<p><img src="/img/infostealer/4.png" alt="isi powershell yang lain"></p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/infostealer/4.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/infostealer/4_hu6197056429714376830.webp" media="(min-width: 1024px)">
+        <source srcset="/img/infostealer/4_hu9754776548548069395.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/infostealer/4_hu15193762010863304968.webp" media="(max-width: 767px)">
+        <img src="/img/infostealer/4_hu15193762010863304968.webp" alt="isi powershell yang lain" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 <p>dari script tersebut kita bisa simpulkan bahwa powershell yang tadi akan menjalankan sebuah executeable yang diambil melalui public github repositories, script powershell itu juga menjalankan PE Windows tersebut secara hidden dan sepertinya lebih ke shellloader sih sepertinya, setelah itu akan mengirimkan informasi yang dibutuhkan ke domain saaadnesss[.]shop dan akan melakukan exfiltration data yang dicuri, mari kita coba cek repo github yang diambil</p>
-<p><img src="/img/infostealer/5.png" alt="repo github dari source powershell"></p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/infostealer/5.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/infostealer/5_hu1261441665773339142.webp" media="(min-width: 1024px)">
+        <source srcset="/img/infostealer/5_hu2452887284308568469.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/infostealer/5_hu6359277046499946187.webp" media="(max-width: 767px)">
+        <img src="/img/infostealer/5_hu6359277046499946187.webp" alt="repo github dari source powershell" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 <p>terlihat repo github ini sangat baru sekali dibuat dan hanya ada 3 commits yang ada</p>
-<p><img src="/img/infostealer/6.png" alt="history repository"></p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/infostealer/6.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/infostealer/6_hu3107084566925958571.webp" media="(min-width: 1024px)">
+        <source srcset="/img/infostealer/6_hu5024893405175876556.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/infostealer/6_hu5132538669196630541.webp" media="(max-width: 767px)">
+        <img src="/img/infostealer/6_hu5132538669196630541.webp" alt="history repository" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 <p>si threat actor ini sepertinya menggunakan repo ini untuk menyimpan data-data shellcode yang akan dieksekusi, pada commit ke 2 terlihat naming yang tidak asing, seperti generate dari sliver atau command and control yang lain.</p>
-<p><img src="/img/infostealer/7.png" alt="akun github"></p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/infostealer/7.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/infostealer/7_hu9570387817650785317.webp" media="(min-width: 1024px)">
+        <source srcset="/img/infostealer/7_hu9875196007102635355.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/infostealer/7_hu3754415861001732917.webp" media="(max-width: 767px)">
+        <img src="/img/infostealer/7_hu3754415861001732917.webp" alt="akun github" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 <p>informasi dari user github ini juga tidak banyak, sepertinya memang akun ini dibuat sebagai host shellcode infostealer yang telah disiapkan</p>
 <p>karena penasaran saya bertanya kepada Thread Starter dan dibalas oleh TS bahwa dia dapat link tersebut melalui sebuah platform chatgpt</p>
-<p><img src="/img/infostealer/8.png" alt="bertanya"></p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/infostealer/8.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/infostealer/8_hu8106444016389923067.webp" media="(min-width: 1024px)">
+        <source srcset="/img/infostealer/8_hu6201869308837969331.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/infostealer/8_hu645033531767051210.webp" media="(max-width: 767px)">
+        <img src="/img/infostealer/8_hu645033531767051210.webp" alt="bertanya thread starter" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 <p>dari jawaban chatgpt itu ternyata memberikan sebuah link referensi ke sebuah web universitas dan benar saja ternyata website itu compromised dan digunakan oleh threat actor untuk menyebarkan malware infostealer</p>
-<p><img src="/img/infostealer/9.png" alt="website yang terkena injeksi"></p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/infostealer/9.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/infostealer/9_hu15767728853082498218.webp" media="(min-width: 1024px)">
+        <source srcset="/img/infostealer/9_hu16355709771022807220.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/infostealer/9_hu9504714326299402699.webp" media="(max-width: 767px)">
+        <img src="/img/infostealer/9_hu9504714326299402699.webp" alt="website yang terkena injeksi" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 <p>awal loading web akan tampil seperti biasa, namun setelah beberapa saat akan berubah menjadi tampilan google reCAPTCHA dan ketika CAPTCHA akan selesai maka error akan terjadi (exptected), user lalu disuruh untuk menjalankan scirpt mshta tadi ke run.exe</p>
-<p><img src="/img/infostealer/1.png" alt="website yang terkena injeksi"></p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/infostealer/9.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/infostealer/9_hu15767728853082498218.webp" media="(min-width: 1024px)">
+        <source srcset="/img/infostealer/9_hu16355709771022807220.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/infostealer/9_hu9504714326299402699.webp" media="(max-width: 767px)">
+        <img src="/img/infostealer/9_hu9504714326299402699.webp" alt="website yang terkena injeksi" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 <p>sebenarnya praktik ini cukup rame beberapa waktu lalu ketika John Hammond memposting sebuah attack vector serupa <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> , yaitu fake recaptcha yang mengarahkan calon korban untuk menjalankan mshta pada sistem mereka <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup>, karena penasaran coba kita cek isi dari website tersebut</p>
-<p><img src="/img/infostealer/10.png" alt="source web yang kena injeksi"></p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/infostealer/10.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/infostealer/10_hu7255331179449971445.webp" media="(min-width: 1024px)">
+        <source srcset="/img/infostealer/10_hu17655440993345694186.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/infostealer/10_hu18061369198078720352.webp" media="(max-width: 767px)">
+        <img src="/img/infostealer/10_hu18061369198078720352.webp" alt="source web yang kena injeksi" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 <p>ternyata web ini sudah banyak terinjeksi script js, saya kurang tau bagaimana iframe recaptcha tersebut muncul namun kurang lebih pada script web3 js tersebut kemungkinan besar mengambil sebuah kontrak dan menjalankan iframe tersebut</p>
-<p><img src="/img/infostealer/11.png" alt="suspicious js file"></p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/infostealer/11.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/infostealer/11_hu719234179202094006.webp" media="(min-width: 1024px)">
+        <source srcset="/img/infostealer/11_hu17074363228414181709.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/infostealer/11_hu1756320323831729395.webp" media="(max-width: 767px)">
+        <img src="/img/infostealer/11_hu1756320323831729395.webp" alt="suspicious js file" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 <p>di web itu juga banyak encrytped string dan pastinya diobfuscated sehingga tidak mudah dilakukan debugging, ya pada intinya website akademi tersebut telah diretas oleh seseorang dan dipasang sebuah script untuk menghasilkan cuan dengan menjalankan script web3 namun entah dari pemilik project web3 tersebut atau pihak lain yang menyebabkan munculnya halaman fake recaptcha tersebut</p>
 <p>FYI ketika kita melakukan paste pada run.exe seperti tidak ada yang aneh karena string tersebut sudah dihitung jumlahnya sehingga script mshta tersebut tidak tampil dan yang tampil pada box run.exe hanya comment yang sudah dipersiapkan oleh threat actor dan membuat user percaya bahwa command tersebut seolah-olah akan melakukan aksi reset DNS Service</p>
-<p><img src="/img/infostealer/12.png" alt="tampilan run saat di paste"></p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/infostealer/12.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/infostealer/12_hu9409605043429717746.webp" media="(min-width: 1024px)">
+        <source srcset="/img/infostealer/12_hu15717946592560319986.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/infostealer/12_hu4235658088933058430.webp" media="(max-width: 767px)">
+        <img src="/img/infostealer/12_hu4235658088933058430.webp" alt="tampilan run saat di paste" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 <p>Berikut Indicator of Compromises yang bisa kita tambahan pada SIEM kita agar tidak ada user kita yang secara tidak sadar menjalankan malicious command tersebut
 IOC:</p>
 <ul>
