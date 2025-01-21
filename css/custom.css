@@ -4,11 +4,15 @@
   text-decoration: none;
 }
 
+a.image-link {
+  color: #000;
+}
+
 .hover-effect {
   transition: opacity 0.3s ease;
   cursor: zoom-in;
 }
 
 .hover-effect:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }
