@@ -13,7 +13,7 @@
   <meta property="og:title" content="Surabaya Hacker Link Underground Write Up">
   <meta property="og:description" content="Information
 Challenges Information Ini adalah write-up challenges dari Surabaya Hacker Link untuk mesin Underground, mesin ini dibuat dengan menggunakan salah satu Vulnerable Web yang biasa SHL gunakan untuk demo session dengan beberapa vulnerability yang telah diperbaiki agar challenges ini sedikit menarik.
-Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges baru pengganti Heaven (Write-up Heaven VM ada di sini) informasi pada forum saya rasa cukup jelas seperti jangan merusak, jangan spoil, take the root and read root.txt, di sini saya menggunakan IP 110.93.14.30 ketika kita mengakses IP tersebut hanya terdapat halaman default dari nginx dan tidak ada informasi lainnya yang bisa digunakan untuk melakukan step selanjutanya sehingga kita perlu melakukan gathering information mendalam">
+Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges baru pengganti Heaven (Write-up Heaven VM ada di sini) informasi pada forum saya rasa cukup jelas seperti jangan merusak, jangan spoil, take the root and read root.txt, di sini saya menggunakan IP 110.93.14.30">
   <meta property="og:locale" content="id_ID">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -30,7 +30,7 @@ Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges bar
   <meta name="twitter:title" content="Surabaya Hacker Link Underground Write Up">
   <meta name="twitter:description" content="Information
 Challenges Information Ini adalah write-up challenges dari Surabaya Hacker Link untuk mesin Underground, mesin ini dibuat dengan menggunakan salah satu Vulnerable Web yang biasa SHL gunakan untuk demo session dengan beberapa vulnerability yang telah diperbaiki agar challenges ini sedikit menarik.
-Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges baru pengganti Heaven (Write-up Heaven VM ada di sini) informasi pada forum saya rasa cukup jelas seperti jangan merusak, jangan spoil, take the root and read root.txt, di sini saya menggunakan IP 110.93.14.30 ketika kita mengakses IP tersebut hanya terdapat halaman default dari nginx dan tidak ada informasi lainnya yang bisa digunakan untuk melakukan step selanjutanya sehingga kita perlu melakukan gathering information mendalam">
+Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges baru pengganti Heaven (Write-up Heaven VM ada di sini) informasi pada forum saya rasa cukup jelas seperti jangan merusak, jangan spoil, take the root and read root.txt, di sini saya menggunakan IP 110.93.14.30">
 
 	<link rel="me" href="https://infosec.exchange/@laztname">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -128,124 +128,1174 @@ Challenges Pada web Forum Surabaya Hacker Link terdapat informasi challenges bar
 <h2 id="challenges-information">Challenges Information</h2>
 <p>Ini adalah write-up challenges dari Surabaya Hacker Link untuk mesin Underground, mesin ini dibuat dengan menggunakan salah satu Vulnerable Web yang biasa SHL gunakan untuk demo session dengan beberapa vulnerability yang telah diperbaiki agar challenges ini sedikit menarik.</p>
 <h2 id="challenges">Challenges</h2>
-<p>Pada web <a href="https://forum.surabayahackerlink.org/d/3462-new-challenges-underground">Forum Surabaya Hacker Link</a> terdapat informasi challenges baru pengganti Heaven (<a href="/posts/solution-for-shl-challenges-heaven-vm/">Write-up Heaven VM ada di sini</a>) informasi pada forum saya rasa cukup jelas seperti jangan merusak, jangan spoil, take the root and read root.txt, di sini saya menggunakan IP 110.93.14.30
-<img src="/img/shl-underground/nginx-default.png" alt="default nginx page">
-ketika kita mengakses IP tersebut hanya terdapat halaman default dari nginx dan tidak ada informasi lainnya yang bisa digunakan untuk melakukan step selanjutanya sehingga kita perlu melakukan gathering information mendalam</p>
+<p>Pada web <a href="https://forum.surabayahackerlink.org/d/3462-new-challenges-underground">Forum Surabaya Hacker Link</a> terdapat informasi challenges baru pengganti Heaven (<a href="/posts/solution-for-shl-challenges-heaven-vm/">Write-up Heaven VM ada di sini</a>) informasi pada forum saya rasa cukup jelas seperti jangan merusak, jangan spoil, take the root and read root.txt, di sini saya menggunakan IP 110.93.14.30</p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/nginx-default.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/nginx-default_hu2416236986280513769.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/nginx-default_hu100183404138250983.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/nginx-default_hu4152055843010713349.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/nginx-default_hu4152055843010713349.webp" alt="default nginx page" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>ketika kita mengakses IP tersebut hanya terdapat halaman default dari nginx dan tidak ada informasi lainnya yang bisa digunakan untuk melakukan step selanjutanya sehingga kita perlu melakukan gathering information mendalam</p>
 <h2 id="information-gathering-and-reconnaisance">Information Gathering and Reconnaisance</h2>
 <p>Seperti biasa pada tahap ini kita mencoba mencari tahu informasi lebih dari IP tersebut seperti mencari port dengan nmap, fuzzing directory dan file yang memungkinkan kita menemukan endpoint lain</p>
-<p><img src="/img/shl-underground/nmap-result.png" alt="nmap result">
-Hasil Nmap menampilkan bahwa terdapat 3 port yang terbuka yaitu port 80 yang menjalankan web service nginx seperti pada informasi sebelumnya, port 2222 dan port 31337 yang menjalankan ssh service</p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/nmap-result.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/nmap-result_hu14725728513677916199.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/nmap-result_hu10004235376857423614.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/nmap-result_hu7132822697465778461.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/nmap-result_hu7132822697465778461.webp" alt="nmap result" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Hasil Nmap menampilkan bahwa terdapat 3 port yang terbuka yaitu port 80 yang menjalankan web service nginx seperti pada informasi sebelumnya, port 2222 dan port 31337 yang menjalankan ssh service</p>
 <p>Untuk fuzzing disini menggunakan FFUF dengan wordlist dirb dan dirsearch yang ada pada kali linux</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>ffuf -w /usr/share/wordlists/dirb/big.txt -u http://110.93.14.30/FUZZ
-</span></span></code></pre></div><p>Hasil Fuzzing menunjukan bahwa terdapat file index.html, info.php dan robots.txt
-<img src="/img/shl-underground/ffuf.png" alt="ffuf command">
-<img src="/img/shl-underground/ffuf-result.png" alt="ffuf result">
-<img src="/img/shl-underground/phpinfo.png" alt="phpinfo file">
-Pada file phpinfo.php menampilkan output dari fungsi phpinfo() sehingga kita bisa pahami bahwa mesin ini menjalankan php</p>
-<p><img src="/img/shl-underground/robots-txt.png" alt="robots txt file"><br>
-Pada file robots.txt yang umum digunakan untuk mengatur search engine crawler terdapat disallow pada file x.txt, disini kita coba akses file x.txt juga</p>
-<p><img src="/img/shl-underground/x-txt.png" alt="x txt file">
-Pada file x.txt hanya ada umpatan dan sedikit clue untuk menggunakan open source web vulnerability scanner, di sini langsung kepikiran nikto, kita coba scan juga menggunakan nikto</p>
-<p>Hasil Nikto sebagai berikut
-<img src="/img/shl-underground/nikto-result.png" alt="nikto result">
-Terdapat readme.txt yang tidak terdeteksi ketika dilakukan fuzzing, ini umum terjadi karena wordlist yang kita gunakan kurang</p>
-<p><img src="/img/shl-underground/readme-txt.png" alt="readme txt file">
-Di dalam file readme.txt menjelaskan bahwa pada server ini terdapat aplikasi SVWA yang telah di-patch untuk beberapa vulnerability-nya, berdasarkan informasi tersebut kita coba mencoba mengakses direcotry SVWA/svwa dari web service dengan harapan sesuai dengan informasi yang disampaikan pada readme.txt</p>
+</span></span></code></pre></div><p>Hasil Fuzzing menunjukan bahwa terdapat file index.html, info.php dan robots.txt</p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/ffuf.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/ffuf_hu13331461304018682175.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/ffuf_hu6229367029766446724.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/ffuf_hu8780245443064372573.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/ffuf_hu8780245443064372573.webp" alt="ffuf command" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/ffuf-result.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/ffuf-result_hu9850583214170639326.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/ffuf-result_hu10403930337661569771.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/ffuf-result_hu14951206224144665732.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/ffuf-result_hu14951206224144665732.webp" alt="ffuf result" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/phpinfo.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/phpinfo_hu3690927853448780203.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/phpinfo_hu12140121117391700870.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/phpinfo_hu3871086309915415628.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/phpinfo_hu3871086309915415628.webp" alt="phpinfo file" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Pada file phpinfo.php menampilkan output dari fungsi phpinfo() sehingga kita bisa pahami bahwa mesin ini menjalankan php</p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/robots-txt.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/robots-txt_hu3332299061044384871.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/robots-txt_hu1846067149353259059.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/robots-txt_hu5872075620189824876.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/robots-txt_hu5872075620189824876.webp" alt="robots txt file" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Pada file robots.txt yang umum digunakan untuk mengatur search engine crawler terdapat disallow pada file x.txt, disini kita coba akses file x.txt juga</p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/x-txt.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/x-txt_hu8381775339615804258.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/x-txt_hu14424886194446434908.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/x-txt_hu8738582704239215211.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/x-txt_hu8738582704239215211.webp" alt="x txt file" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Pada file x.txt hanya ada umpatan dan sedikit clue untuk menggunakan open source web vulnerability scanner, di sini langsung kepikiran nikto, kita coba scan juga menggunakan nikto</p>
+<p>Hasil Nikto sebagai berikut</p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/nikto-result.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/nikto-result_hu8516013219111678697.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/nikto-result_hu6384274016236522348.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/nikto-result_hu3127297086374335020.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/nikto-result_hu3127297086374335020.webp" alt="nikto result" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Terdapat readme.txt yang tidak terdeteksi ketika dilakukan fuzzing, ini umum terjadi karena wordlist yang kita gunakan kurang</p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/readme-txt.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/readme-txt_hu14940500610430510834.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/readme-txt_hu10205616912587280377.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/readme-txt_hu7835230128202994226.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/readme-txt_hu7835230128202994226.webp" alt="readme txt file" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Di dalam file readme.txt menjelaskan bahwa pada server ini terdapat aplikasi SVWA yang telah di-patch untuk beberapa vulnerability-nya, berdasarkan informasi tersebut kita coba mencoba mengakses direcotry SVWA/svwa dari web service dengan harapan sesuai dengan informasi yang disampaikan pada readme.txt</p>
 <pre tabindex="0"><code>http://110.93.14.30/svwa/
-</code></pre><p><img src="/img/shl-underground/svwa-home.png" alt="H3llcome">
-Dan ternyata dugaan benar, terdapat aplikasi SVWA yang terinstall pada server, dengan ini kita bisa melanjutkan ke tahap selanjutnya</p>
+</code></pre>
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/svwa-home.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/svwa-home_hu17006736465642839783.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/svwa-home_hu9395670154027014338.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/svwa-home_hu11013854988353362765.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/svwa-home_hu11013854988353362765.webp" alt="H3llcome" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Dan ternyata dugaan benar, terdapat aplikasi SVWA yang terinstall pada server, dengan ini kita bisa melanjutkan ke tahap selanjutnya</p>
 <h2 id="exploitation">Exploitation</h2>
 <p>Setelah mendapatkan tampilan h3llcome, maka di sini kita bisa langsung mencoba fitur yang ada pada web ini dan mencari exploit yang bisa digunakan untuk mendapatkan akses ke dalam server, pada challenges ini terdapat beberapa cara untuk exploitasi untuk mendapatkan credentials dari low user</p>
 <h3 id="exploit-1-sql-injection-to-write-webshell-excellent">Exploit 1 SQL Injection to Write Webshell (Excellent)</h3>
-<p><img src="/img/shl-underground/read-article.png" alt="read acticle feature">
-Pada halaman awal terdapat list artikel yang ada pada website yang bisa kita baca, ketika kita membuka salah satu artikel tersebut kita akan diarahkan pada file read.php, pada file ini terdapat celah sql injection dikarenakan pada parameter id tidak di validasi dengan baik sehingga dapat digunakan oleh penyerang untuk melakukan kontrol query dan mengambil data lain yang ada pada database
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/read-article.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/read-article_hu6354914836446569473.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/read-article_hu13798615247290357491.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/read-article_hu14511803851428650750.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/read-article_hu14511803851428650750.webp" alt="read acticle feature" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Pada halaman awal terdapat list artikel yang ada pada website yang bisa kita baca, ketika kita membuka salah satu artikel tersebut kita akan diarahkan pada file read.php, pada file ini terdapat celah sql injection dikarenakan pada parameter id tidak di validasi dengan baik sehingga dapat digunakan oleh penyerang untuk melakukan kontrol query dan mengambil data lain yang ada pada database
 Berikut adalah payload yang kita gunakan untuk melakukan sql injection dengan union based untuk memunculkan user yang digunakan saat ini data database yang digunakan</p>
 <pre tabindex="0"><code>http://110.93.14.30/svwa/read.php?id=&#39;1&#39; union select 1,concat(user(),0x3a,database()),3,4--+-
-</code></pre><p><img src="/img/shl-underground/sql-injection-user-db.png" alt="extract username and database">
-setelah berhasil mengetahui user dan database yang digunakan, kita akan mencoba melakukan checking, apakah user saat ini memiliki privileges file, seperti yang kita tahu kita dapat melakukan upload webshell menggunakan sql injection dengan syarat user saat ini memiliki privileges files dan memiliki permission pada directory yang dapat diakses melalui service web</p>
+</code></pre>
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/sql-injection-user-db.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/sql-injection-user-db_hu9646315844403676971.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/sql-injection-user-db_hu2899471911633081643.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/sql-injection-user-db_hu9703036425698209082.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/sql-injection-user-db_hu9703036425698209082.webp" alt="extract username and database" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>setelah berhasil mengetahui user dan database yang digunakan, kita akan mencoba melakukan checking, apakah user saat ini memiliki privileges file, seperti yang kita tahu kita dapat melakukan upload webshell menggunakan sql injection dengan syarat user saat ini memiliki privileges files dan memiliki permission pada directory yang dapat diakses melalui service web</p>
 <pre tabindex="0"><code>http://110.93.14.30/svwa/read.php?id=&#39;1&#39; union select 1,file_priv,3,4 from mysql.user--+-
-</code></pre><p><img src="/img/shl-underground/file-priv-check.png" alt="sql injection privileges check">
+</code></pre><p>
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/file-priv-check.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/file-priv-check_hu3197075405853694426.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/file-priv-check_hu6705935993795632506.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/file-priv-check_hu15176667760575022962.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/file-priv-check_hu15176667760575022962.webp" alt="sql injection privileges check" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 pada halaman website menampilkan Y dengan arti kita memiliki privileges file, maka dari itu kita dapat mencoba untuk melakukan write file, namun kondisi saat ini kita tidak tahu path file web server, kembali pada hasil sebelumnya terdapat file phpinfo.php yang juga menampilkan path lokasi path webserver
-<img src="/img/shl-underground/phpinfo-document-root.png" alt="document root from phpinfo">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/phpinfo-document-root.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/phpinfo-document-root_hu6710004698169464803.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/phpinfo-document-root_hu16798271451034754119.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/phpinfo-document-root_hu18201047633509977005.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/phpinfo-document-root_hu18201047633509977005.webp" alt="document root from phpinfo" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 dengan ini kita dapat mengetahui lokai document root dari web server, maka dari itu kita akan coba untuk melakukan write ke directory /webroot dengan nama hehe.php dan isi yang memanggil fungsi phpinfo, hal ini dilakukan sebagai test juga apakah permission pada webroot bisa diwrite oleh sql atau tidak, berikut adalah payload yang digunakan untuk write webshell pada document root server dengan memanfaatkan privileges file pada sql injection</p>
 <pre tabindex="0"><code>http://110.93.14.30/svwa/read.php?id=&#39;1&#39; union select 1,&#34;&lt;?php phpinfo(); ?&gt;&#34;,3,4 into outfile &#34;/webroot/hehe.php&#34;--+-
-</code></pre><p><img src="/img/shl-underground/sql-injection-into-out-file-phpinfo-test.png" alt="write php info to document root">
+</code></pre><p>
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/sql-injection-into-out-file-phpinfo-test.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/sql-injection-into-out-file-phpinfo-test_hu10552104802433400389.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/sql-injection-into-out-file-phpinfo-test_hu17707958618908321510.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/sql-injection-into-out-file-phpinfo-test_hu8799250644633935686.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/sql-injection-into-out-file-phpinfo-test_hu8799250644633935686.webp" alt="write php info to document root" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 setelah kita menjalankan payload tersebut, pada web tidak akan tampil apapun sehingga perlu dilakukan validasi manual dengan cara mengakses langsung file hehe.php
-<img src="/img/shl-underground/phpinfo-from-sql-injection-write.png" alt="phpinfo running well">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/phpinfo-from-sql-injection-write.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/phpinfo-from-sql-injection-write_hu17100118864124586280.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/phpinfo-from-sql-injection-write_hu10887023065455854414.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/phpinfo-from-sql-injection-write_hu206724060487489747.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/phpinfo-from-sql-injection-write_hu206724060487489747.webp" alt="phpinfo running well" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 ketika kita akses file hehe.php muncul php information dari fungsi phpinfo, dengan ini bisa kita simpulkan bahwa kita dapat melakukan write pada document root
 tanpa nunggu lama kita langsung upload saja webshell dengan cara ini</p>
 <pre tabindex="0"><code>http://110.93.14.30/svwa/read.php?id=&#39;-1&#39;union select 1,&#34;&lt;?php system($_GET[&#39;p&#39;]); ?&gt;&#34;,3,4 into outfile &#34;/webroot/hehex.php&#34;--+-
-</code></pre><p><img src="/img/shl-underground/sql-injection-write-webshell.png" alt="sql-injection-upload-web-shell">
+</code></pre><p>
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/sql-injection-write-webshell.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/sql-injection-write-webshell_hu14534750998432906002.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/sql-injection-write-webshell_hu90598755995975201.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/sql-injection-write-webshell_hu6529279997128776266.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/sql-injection-write-webshell_hu6529279997128776266.webp" alt="sql-injection-upload-web-shell" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 seperti sebelumnya, tidak ada yang tampil pada halaman webnya ketika kita jalankan, langsung saja akses webshell yang telah ditulis
-<img src="/img/shl-underground/webshell-sql-injection.png" alt="remote code execution from sql injection">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/webshell-sql-injection.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/webshell-sql-injection_hu6821090875744970025.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/webshell-sql-injection_hu13468965215999091067.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/webshell-sql-injection_hu10228961308521446452.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/webshell-sql-injection_hu10228961308521446452.webp" alt="remote code execution from sql injection" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 dan kita berhasil menjalankan command pada server, di sini kita coba cek id, whoami dan uname -a</p>
 <h3 id="exploit-2-local-file-inclution-php-wrapper-good">Exploit 2 Local File Inclution PHP wrapper (Good)</h3>
 <p>Pada exploit ini kita membutuhkan akses ke dalam panel aplikasi web, maka dari itu kita buat user dulu dari fitur login yang ada pada aplikasi
-<img src="/img/shl-underground/create-user.png" alt="create user on svwa">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/create-user.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/create-user_hu6313205952967891851.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/create-user_hu2408046031731528285.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/create-user_hu13629092606167252327.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/create-user_hu13629092606167252327.webp" alt="create user on svwa" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 setelah berhasil membuat user kita langsung saja login
-<img src="/img/shl-underground/user-logged-in.png" alt="possible local file inclusion">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/user-logged-in.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/user-logged-in_hu11150889941274448378.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/user-logged-in_hu18016379489751347949.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/user-logged-in_hu3342527507310756918.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/user-logged-in_hu3342527507310756918.webp" alt="possible local file inclusion" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 setelah masuk ke dalam panel, bisa dilihat pada URL bahwa halaman panel ini memanggil file page.php, dengan ini kita bisa mencoba untuk melakukan local file inclusion dengan merubah file page.php dengan /etc/paswd seperti yang kita tahu /etc/passwd merupakan file yang ada pada sistem operasi linux yang memuat data user yang ada pada sistem
-<img src="/img/shl-underground/lfi-etc-passwd.png" alt="local-file-inclusion-read-etc-passwd">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/lfi-etc-passwd.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/lfi-etc-passwd_hu746921245961274702.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/lfi-etc-passwd_hu4558622121786650515.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/lfi-etc-passwd_hu1401628482291306970.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/lfi-etc-passwd_hu1401628482291306970.webp" alt="local-file-inclusion-read-etc-passwd" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 ketika dirubah, muncul data dari /etc/passwd dengan ini bisa kita pahami bahwa rentan terhadap local file inclusion, kita coba beberapa payload lfi seperti PHP Wrapper, RFI, LFI, pada saat dicoba payload PHP Wrapper untuk membaca file index.php dan melakukan encode base64</p>
 <pre tabindex="0"><code>http://110.93.14.30/svwa/admin/index.php?file=php://filter/convert.base64-encode/resource=index.php
-</code></pre><p><img src="/img/shl-underground/lfi-php-phar-read-index-php.png" alt="decode base64 cyberchef">
+</code></pre><p>
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/lfi-php-phar-read-index-php.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/lfi-php-phar-read-index-php_hu15474984912847674757.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/lfi-php-phar-read-index-php_hu13313824412147298331.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/lfi-php-phar-read-index-php_hu10342955717359686162.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/lfi-php-phar-read-index-php_hu10342955717359686162.webp" alt="decode base64 cyberchef" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 dengan ini kita bisa melihat source code index.php yang ada pada server namun source tersebut diencode menggunakan base64, kita coba decode menggunakan cyberchef
-<img src="/img/shl-underground/source-base64-lfi-phar.png" alt="read db koneksi.php from lfi">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/source-base64-lfi-phar.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/source-base64-lfi-phar_hu14203177889452456407.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/source-base64-lfi-phar_hu13067772821654234133.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/source-base64-lfi-phar_hu16132356302243424597.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/source-base64-lfi-phar_hu16132356302243424597.webp" alt="read db koneksi.php from lfi" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 pada source tersebut terlihat ada pemanggilan terhadap file db/koneksi.php, kita coba lihat isi file tersebut</p>
 <pre tabindex="0"><code>http://110.93.14.30/svwa/admin/index.php?file=php://filter/convert.base64-encode/resource=../db/koneksi.php
-</code></pre><p><img src="/img/shl-underground/lfi-php-phar-read-koneksi-db-base64.png" alt="LFI responses">
-<img src="/img/shl-underground/lfi-php-phar-read-koneksi-db.png" alt="LFI read database connection">
+</code></pre><p>
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/lfi-php-phar-read-koneksi-db-base64.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/lfi-php-phar-read-koneksi-db-base64_hu2142124074826557700.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/lfi-php-phar-read-koneksi-db-base64_hu11730403055612664441.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/lfi-php-phar-read-koneksi-db-base64_hu15578699388723107399.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/lfi-php-phar-read-koneksi-db-base64_hu15578699388723107399.webp" alt="LFI responses" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/lfi-php-phar-read-koneksi-db.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/lfi-php-phar-read-koneksi-db_hu6416990855371332342.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/lfi-php-phar-read-koneksi-db_hu10159827808549235268.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/lfi-php-phar-read-koneksi-db_hu5349094129650286146.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/lfi-php-phar-read-koneksi-db_hu5349094129650286146.webp" alt="LFI read database connection" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 dan kita berhasil mendapatkan credentials database yang bisa digunakan untuk spraying pada service yang lain</p>
 <h3 id="exploit-3-local-file-inclusion-access-log-poisoning-bad">Exploit 3 Local File Inclusion Access Log Poisoning (Bad)</h3>
 <p>Untuk exploit ini mirip dengan cara sebelumnya, yaitu mengexplorasi celah local file inlcusion, di sini kita akan melakukan inclusion terhadap file access log web server
-<img src="/img/shl-underground/lfi-read-web-access-log.png" alt="LFI read web access log">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/lfi-read-web-access-log.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/lfi-read-web-access-log_hu17737102114863274872.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/lfi-read-web-access-log_hu8439278617717959543.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/lfi-read-web-access-log_hu9287596865017539060.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/lfi-read-web-access-log_hu9287596865017539060.webp" alt="LFI read web access log" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 dengan ini penyerang dapat melakukan poisoning terhadap access log server untuk menjalankan malicious script seperti webshell, kita langsung melakukan request ke server dengan nama user agent yang berisi webshell php, karena jika webshell ditulis pada url field akan terjadi encoding di karakter special sehingga kita menggunakan field user agent yang tidak ada encoding untuk karakter special, jangan lupa escape $ karena pada terminal akan dianggap sebagai variable
-<img src="/img/shl-underground/curl-user-agent-web-shell.png" alt="curl php webshell user agent">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/curl-user-agent-web-shell.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/curl-user-agent-web-shell_hu6060145645422506926.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/curl-user-agent-web-shell_hu1887457370191194225.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/curl-user-agent-web-shell_hu6167807773974285808.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/curl-user-agent-web-shell_hu6167807773974285808.webp" alt="curl php webshell user agent" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 setelah melakukan request tersebut kita coba mengakses kembali LFI yang memuat isi file access log webserver dan ditambah parameter yang digunakan untuk menjalankan command melalui webshell
-<img src="/img/shl-underground/web-shell-from-access-log.png" alt="webshell from access log">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/web-shell-from-access-log.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/web-shell-from-access-log_hu10315844933261247727.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/web-shell-from-access-log_hu1177458452036181818.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/web-shell-from-access-log_hu11294235739363768011.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/web-shell-from-access-log_hu11294235739363768011.webp" alt="webshell from access log" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 kita berhasil menjalankan command, exploit ini tidak direkomendasikan karena ketika kita panggil isi access log akan muncul banyak data sehingga perlu dilakukan filtering serta butuh waktu dan resource yang besar saat ditampilkan pada browser</p>
 <h3 id="exploit-4-local-file-inclution-from-image-upload-excellent">Exploit 4 Local File Inclution from Image Upload (Excellent)</h3>
 <p>Untuk exploit ini masih mirip dengan cara sebelumnya, yaitu mengexplorasi celah local file inclusion lagi, di sini kita dapat melakukan inclusion terhadap file gambar yang kita unggah melalui fitur upload foto yang ada pada halaman utama setelah melakukan autentikasi
-<img src="/img/shl-underground/user-logged-in.png" alt="Upload Feature">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/user-logged-in.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/user-logged-in_hu11150889941274448378.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/user-logged-in_hu18016379489751347949.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/user-logged-in_hu3342527507310756918.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/user-logged-in_hu3342527507310756918.webp" alt="upload feature" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 di sini kita membuat file webshell php, namun untuk tipe filenya kita rubah menjadi png seperti shell.php ke shell.png dan langsung saja kita upload
-<img src="/img/shl-underground/txt-in-png.png" alt="upload webshell rename to png">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/txt-in-png.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/txt-in-png_hu10699352168988644404.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/txt-in-png_hu15282454900994160098.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/txt-in-png_hu14319383923941283440.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/txt-in-png_hu14319383923941283440.webp" alt="upload webshell rename to png" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 file berhasil diunggah namun browser tidak menampilkan data karena memang isi dari file tersebut bukanlah data gambar melainkan script webshell php, kita langsung saja panggil file tersebut melalui file inclusion sebelumnya
-<img src="/img/shl-underground/webshell-from-local-file-inclusion.png" alt="web shell from access log local file inclusion">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/webshell-from-local-file-inclusion.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/webshell-from-local-file-inclusion_hu4768301772638472783.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/webshell-from-local-file-inclusion_hu17997890514015844047.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/webshell-from-local-file-inclusion_hu2305053187391991934.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/webshell-from-local-file-inclusion_hu2305053187391991934.webp" alt="web shell from access log local file inclusion" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 kita berhasil menjalankan command server dengan memanggil parameter yang digunakan untuk menjalankan command</p>
 <h3 id="exploit-5-sql-injection-to-read-koneksiphp--etc-passwd-good">Exploit 5 SQL Injection to Read koneksi.php + etc passwd (Good)</h3>
 <p>Untuk exploit ini seperti pada exploit pada nomor 1, yaitu sql injection namun karena kita mendapatkan privileges file, kita dapat membaca file index.php dari document root yang didapatkan informasinya melalui phpinfo.php dan dengan itu kita bisa membaca dan mengetahui lokasi koneksi database aplikasi
-<img src="/img/shl-underground/sql-injection-load-file-db-koneksi-php.png" alt="sql injection read db koneksi.php"></p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/sql-injection-load-file-db-koneksi-php.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/sql-injection-load-file-db-koneksi-php_hu2675819264039665640.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/sql-injection-load-file-db-koneksi-php_hu6640032174150694575.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/sql-injection-load-file-db-koneksi-php_hu1643235332443053592.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/sql-injection-load-file-db-koneksi-php_hu1643235332443053592.webp" alt="sql injection read db koneksi.php" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+</p>
 <p>Setelah mendapatkan access melalui salah satu dari 5 cara tersebut kita bisa memanfaakan informasi dari koneksi.php dan /etc/passwd, dengan ini kita tahu bahwa pada sistem terdaftar user human pada /etc/passwd dan pada service database lalu terdapat kredential human pada file koneksi.php, mesikpun 2 hal tersebut merupakan service yang berbeda namun hal ini sering dilakukan oleh manusia yang ga mau ribet dengan password maka password disamakan, pada case ini kita mencoba peruntungan dengan memanfaatkan human error ini</p>
 <p>maka kita akan mencoba melakukan login pada service lain yang telah ditemukan melalui nmap sebelumnya dengan credentials dari koneksi.php, hasil recon sebelumnya menunjukan bahwa terdapat port 22 dan 2222 kita akan coba satu-satu
-<img src="/img/shl-underground/ssh-to-human.png" alt="ssh to human from reused cred">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/ssh-to-human.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/ssh-to-human_hu1848062762599646048.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/ssh-to-human_hu13049175051840715246.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/ssh-to-human_hu2654378321255466941.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/ssh-to-human_hu2654378321255466941.webp" alt="ssh to human from reused cred" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 dan kita berhasil masuk sebagai human dengan ssh port 2222
 Human Pwned</p>
 <h2 id="privileges-escalation">Privileges Escalation</h2>
 <p>Setelah mendapatkan akses human kita dapat langsung mencari cara untuk melakukan privileges escalation / menaikan hak akses kita ke hak akses yang lebih tinggi, pada challenges ini tidak dipungkiri bahwa privilges escalation-nya sangat kurang, hanya dengan membaca file backup ssh kita sudah bisa masuk sebagai root, karena kita tidak tau lokasi file backupnya kita bisa menggunakan cheatsheet dari g0tm1lk untuk mencari informasi yang bisa digunakan untuk melakukan privileges escalation</p>
 <p>pada saat mencari writetable directory, kita menemukan sebuah directory yang tidak umum pada /var/backup/, berdasarkan nama directorynya kita bisa asumsikan bahwa file-file yang ada pada directory tersebut merupakan isi .ssh dari user root server
-<img src="/img/shl-underground/find-writeable-directory.png" alt="find writeable directory">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/find-writeable-directory.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/find-writeable-directory_hu14284533989226434616.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/find-writeable-directory_hu2979649329671415622.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/find-writeable-directory_hu1342541898880180834.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/find-writeable-directory_hu1342541898880180834.webp" alt="find writeable directory" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 ternyata isi dari authorized_keys merupakan id_rsa.pub itu sendiri, sedangkan id_rsa adalah private key dari id_rsa.pub, bisa kita simpulkan bahwa user root dapat melakukan ssh ke dalam server dengan menggunakan private key tersebut, langsung saja kita ssh sebagai root dengan menggunakan private key tersebut<br>
-<img src="/img/shl-underground/ssh-key-from-backup-file.png" alt="ssh key from backup file"><br>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/ssh-key-from-backup-file.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/ssh-key-from-backup-file_hu7066330003385097330.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/ssh-key-from-backup-file_hu17352100378606903635.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/ssh-key-from-backup-file_hu2691781383379640318.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/ssh-key-from-backup-file_hu2691781383379640318.webp" alt="ssh key from backup file" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 berikut adalah cara untuk ssh langsung dari server</p>
 <pre tabindex="0"><code>ssh -i id_rsa root@localhost
-</code></pre><p><img src="/img/shl-underground/ssh-to-root-from-server.png" alt="ssh to root from server">
+</code></pre><p>
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/ssh-to-root-from-server.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/ssh-to-root-from-server_hu3742094194317628751.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/ssh-to-root-from-server_hu4784908088997700051.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/ssh-to-root-from-server_hu16024541158884538589.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/ssh-to-root-from-server_hu16024541158884538589.webp" alt="ssh to root from server" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 dan kita berhasil untuk mendapatkan akses root dari challenges ini, untuk koneksi ssh ke root serndiri bisa juga dilakukan dengan cara lain, yaitu meng-copy isi dari id_rsa ke local machine kita dan merubah permissionnya menjadi 400 karena id_rsa tidak akan bisa digunakan jika permissionnya terlalu terbuka
-<img src="/img/shl-underground/ssh-to-root-from-local.png" alt="ssh to root from kali">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/ssh-to-root-from-local.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/ssh-to-root-from-local_hu12857907698581344093.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/ssh-to-root-from-local_hu18153640792990105810.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/ssh-to-root-from-local_hu3213673741324301213.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/ssh-to-root-from-local_hu3213673741324301213.webp" alt="ssh to root from kali" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 dan kita coba intip isi dari root.txt
-<img src="/img/shl-underground/read-root-txt.png" alt="read root.txt">
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/read-root-txt.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/read-root-txt_hu8892330247802781628.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/read-root-txt_hu694945981706561536.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/read-root-txt_hu14233387916074975303.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/read-root-txt_hu14233387916074975303.webp" alt="read root.txt" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 <strong>Challenges Completed</strong></p>
 <h3 id="for-fun-vulnerability">For Fun Vulnerability</h3>
 <p>dari 5 exploit sebelumnya, sebenarnya ada beberapa vulnerability lain yang bisa ditemukan, namun vulnerability ini tidak bisa digunakan untuk melanjutkan perjalanan pwning machine ini</p>
 <h4 id="xss">XSS</h4>
-<p><img src="/img/shl-underground/xss-fun.png" alt="xss for fun">
+<p>
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/xss-fun.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/xss-fun_hu7110635202306541607.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/xss-fun_hu3655546058208289888.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/xss-fun_hu14771613954596346836.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/xss-fun_hu14771613954596346836.webp" alt="xss for fun" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 XSS for fun</p>
 <h4 id="execution-after-redirect">Execution After Redirect</h4>
-<p>Pada halaman admin, ketika kita lakukan intercept menggunakan burp suite, server memberikan respon header Location: login.php dimana kita akan dilakukan redirect ke halaman login, namun body pada response server tersebut tampil, dengan informasi ini kita coba untuk menampilkan isi dari body tersebut ke browser dengan menghilangkan aksi redirect menggunakan burp suite proxy match and replace
-<img src="/img/shl-underground/possible-execution-after-redirect.png" alt="redirect header with server body response">
-konfigurasi burp suite response header match and replace to blank
-<img src="/img/shl-underground/match-replace-burp-header.png" alt="match and replace burp">
-saat kita akses kembali halaman admin, maka pada browser akan muncul dashboard yang akan tampil ketika kita sudah melakukan authentication dengan benar, namun pada dashboard ini tidak ada fitur yang bisa digunakan karena aplikasi web tidak dapat mengetahui sesi user / akses role user yang kita gunakan
-<img src="/img/shl-underground/dashboard-with-ear.png" alt="logged in"></p>
+<p>Pada halaman admin, ketika kita lakukan intercept menggunakan burp suite, server memberikan respon header Location: login.php dimana kita akan dilakukan redirect ke halaman login, namun body pada response server tersebut tampil, dengan informasi ini kita coba untuk menampilkan isi dari body tersebut ke browser dengan menghilangkan aksi redirect menggunakan burp suite proxy match and replace</p>
+<p>
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/possible-execution-after-redirect.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/possible-execution-after-redirect_hu497438243004725646.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/possible-execution-after-redirect_hu13605332622959099295.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/possible-execution-after-redirect_hu18192527543645445776.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/possible-execution-after-redirect_hu18192527543645445776.webp" alt="redirect header with server body response" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+konfigurasi burp suite response header match and replace to blank</p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/match-replace-burp-header.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/match-replace-burp-header_hu10158645628975364330.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/match-replace-burp-header_hu17369031400457650557.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/match-replace-burp-header_hu17450901425775604190.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/match-replace-burp-header_hu17450901425775604190.webp" alt="match and replace burp" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>saat kita akses kembali halaman admin, maka pada browser akan muncul dashboard yang akan tampil ketika kita sudah melakukan authentication dengan benar, namun pada dashboard ini tidak ada fitur yang bisa digunakan karena aplikasi web tidak dapat mengetahui sesi user / akses role user yang kita gunakan</p>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/shl-underground/dashboard-with-ear.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/shl-underground/dashboard-with-ear_hu3519365724228421069.webp" media="(min-width: 1024px)">
+        <source srcset="/img/shl-underground/dashboard-with-ear_hu122548323473187297.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/shl-underground/dashboard-with-ear_hu8151983149899749277.webp" media="(max-width: 767px)">
+        <img src="/img/shl-underground/dashboard-with-ear_hu8151983149899749277.webp" alt="logged in" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
 <p>fin.</p>
 <p>References:
 <a href="http://www.securityidiots.com/Web-Pentest/SQL-Injection/Basic-Union-Based-SQL-Injection.html">http://www.securityidiots.com/Web-Pentest/SQL-Injection/Basic-Union-Based-SQL-Injection.html</a>
