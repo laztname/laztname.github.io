@@ -11,7 +11,7 @@
 		<meta property="og:url" content="https://potato.id/posts/dns-security-maybe/">
   <meta property="og:site_name" content="Jonias Fortuna">
   <meta property="og:title" content="DNS Security, Maybe?">
-  <meta property="og:description" content="Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, dan yang lainnya, hanya beberapa event yang pernah saya alami saja.">
+  <meta property="og:description" content="Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack serta serangan lainnya, hanya beberapa event yang pernah saya alami saja.">
   <meta property="og:locale" content="id_ID">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -20,13 +20,13 @@
     <meta property="article:tag" content="Internet">
     <meta property="article:tag" content="DNS">
     <meta property="article:tag" content="Write Up">
-    <meta property="og:image" content="https://potato.id/img/">
+    <meta property="og:image" content="https://potato.id/img/dnssec/dns.png">
 
 		
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://potato.id/img/">
+  <meta name="twitter:image" content="https://potato.id/img/dnssec/dns.png">
   <meta name="twitter:title" content="DNS Security, Maybe?">
-  <meta name="twitter:description" content="Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, dan yang lainnya, hanya beberapa event yang pernah saya alami saja.">
+  <meta name="twitter:description" content="Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack serta serangan lainnya, hanya beberapa event yang pernah saya alami saja.">
 
 	<link rel="me" href="https://infosec.exchange/@laztname">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -116,11 +116,11 @@
 		
 	<figure class="post__thumbnail thumbnail">
 		
-		<img class="thumbnail__image" src="/img/" alt="DNS Security, Maybe?" loading="lazy">
+		<img class="thumbnail__image" src="/img/dnssec/dns.png" alt="DNS Security, Maybe?" loading="lazy">
 		
 	</figure>
 <div class="content post__content clearfix">
-			<p>Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, dan yang lainnya, hanya beberapa event yang pernah saya alami saja.</p>
+			<p>Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack serta serangan lainnya, hanya beberapa event yang pernah saya alami saja.</p>
 <h2 id="information-leakage">Information Leakage</h2>
 
 
@@ -129,11 +129,27 @@
 
 
 
-  <p>Image not found: alt=</p>
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/dnssec/information-leakage.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/dnssec/information-leakage_hu10333334457692404761.webp" media="(min-width: 1024px)">
+        <source srcset="/img/dnssec/information-leakage_hu17419284245854973011.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/dnssec/information-leakage_hu11121385777171152053.webp" media="(max-width: 767px)">
+        <img src="/img/dnssec/information-leakage_hu11121385777171152053.webp" alt="Information Leakage" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
 
 
 
-<p>Terkadang sysadmin tidak sadar bahwa DNS record yang dimiliki oleh domain tersebut dapat memberikan informasi yang sangat penting bagi attacker, seperti query txt yang digunakan untuk mengecek apakah domain tersebut menggunakan service tertentu, MX record yang digunakan untuk mengetahui service email yang digunakan, contoh terdapat informasi IP address pada mx records, ketika kita melakukan scanning terhadap segment IP tersebut ternyata IP tetangga tersebut digunakan untuk aplikasi lain, sedangkan records DNS yang digunakan untuk aplikasi tersebut menggunakan cloudflare atau sebuah server firewall sehingga secara tidak sengaja attacker dapat melakukan bypass terhadap cloudflare/server firewall tersebut dan mengakses aplikasi secara langsung atau bahkan terdapat aplikasi lain yang tidak terdaftar di records dns tapi bisa diakses dengan IP tetangga dari MX record tersebut dengan menambahkan records pada /etc/hosts atau secara direct ke IP tersebut.</p>
+<p>Terkadang sysadmin tidak sadar bahwa DNS record yang dimiliki oleh domain tersebut dapat memberikan informasi untuk Threat Actor, seperti TXT Recrods yang umunya digunakan untuk melakukan validasi domain pada suatu services, MX record yang digunakan untuk mengetahui service/server email yang digunakan,</p>
+<p>contoh paling sering ketemu adalah terdapat sebuah informasi IP address pada mx records, ketika kita melakukan scanning terhadap segment IP tersebut (/24) ternyata IP tetangga tersebut digunakan untuk aplikasi lain, sedangkan records DNS yang digunakan untuk aplikasi tersebut mengarah ke <a href="https://cloudflare.com/">Cloudflare</a> atau sebuah Firewall sever sehingga secara tidak sengaja Threat Actor dapat melakukan bypass terhadap Cloudflare/Firewall server tersebut dan mengakses aplikasi secara langsung, kadang pula terdapat aplikasi lain yang tidak terdaftar di records dns tapi bisa diakses dengan IP tetangga dari MX record tersebut dengan menambahkan records pada /etc/hosts atau secara direct ke IP tersebut.</p>
 <h2 id="subdomain-takeover">Subdomain Takeover</h2>
 <p>
 
@@ -187,8 +203,8 @@
 
 
 </p>
-<p>Subdomain Takeover atau DNS Takeover adalah sebuah teknik dimana seorang attacker dapat mengambil alih DNS record dari sebuah domain, dengan teknik ini attacker dapat mengarahkan traffic dari domain tersebut ke server yang dimiliki oleh attacker. Umumnya hal ini terjadi pada platform cloud seperti AWS, Azure, Github, Heroku, dan lainya.</p>
-<p>Serangan ini terjadi karena adanya misconfiguration pada konfigurasi platform cloud dan DNS record yang tidak dimonitor dengan baik oleh pemilik domain sehingga terdapat DNS record yang mengarah ke server pihak ketiga (Platform Cloud), namun pada platform pihak ketiga tersebut DNS records tidak diclaim oleh pemilik domain sehingga attacker dapat mengklaim DNS tersebut dan mengarahkan traffic ke server miliknya. tentunya hal ini dapat meneyebabkan kerugian bagi pemilik domain karena data-data yang dikirimkan oleh user dapat diambil oleh attacker.</p>
+<p>Subdomain Takeover atau DNS Takeover adalah sebuah teknik dimana seorang Threat Actor dapat mengambil alih sebuah subdomain, dengan teknik ini Threat Actor dapat mengarahkan traffic dari domain tersebut ke server yang dimiliki oleh Threat Actor. Umumnya hal ini terjadi pada platform cloud seperti AWS, Azure, Github, Heroku, dan lainya.</p>
+<p>Serangan ini terjadi karena adanya misconfiguration pada konfigurasi platform cloud dan DNS record yang tidak dimonitor dengan baik oleh pemilik domain sehingga terdapat DNS record yang mengarah ke server pihak ketiga (Platform Cloud), namun pada platform pihak ketiga tersebut DNS records tidak diclaim oleh pemilik domain sehingga Threat Actor dapat mengklaim DNS tersebut dan mengarahkan traffic ke Platform Cloud yang dikontrol oleh Threat Actor. tentunya hal ini dapat meneyebabkan kerugian bagi pemilik domain karena data-data yang dikirimkan oleh user dapat diambil oleh Threat Actor.</p>
 <p>Umumnya platform cloud sudah mempunyai proteksi tambahan untuk mencegah terjadinya DNS Takeover, namun tidak semua platform cloud mempunyai proteksi tersebut, oleh karena itu pemilik domain harus selalu memonitor DNS record yang dimiliki serta teman-teman dapat melihat services mana saja yang dapat dilakukan DNS Takeover pada <a href="https://github.com/EdOverflow/can-i-take-over-xyz">Github Repo Berikut</a></p>
 <h2 id="old-dns-record">Old DNS Record</h2>
 
@@ -218,7 +234,7 @@
 
 
 <p>Dalam case ini saya pernah menemukan sebuah celah pada suatu aplikasi, setelah dilaporkan ke pemilik asset tersebut mereka mengkonfirmasi adanya celah yang dilaporkan dan melakukan mitigasi dengan menggunakan sebuah web firewall, namun aplikasi tidak dilakukan patch sehingga celah tersebut masih ada, lantas PoC yang saya buat tidak berhasil karena terdeteksi oleh firewall, beberapa hari kemudian setelah saya cek kembali ternyata hanya record DNS saja yang dirubah ke firewall dan ketika dicoba mengakses domain dengan IP lama aplikasi dan celah tersebut masih bisa diekspolitasi kembali</p>
-<p>Tentunya perbaikan yang dilakukan oleh pemilik asset tersebut tidak efektif karena hanya mengarahkan traffic ke firewall server tanpa melakukan patching terhadap aplikasi yang vulnerable, oleh karena itu pemilik asset harus melakukan patch pada aplikasi tersebut agar celah tersebut tidak bisa dimanfaatkan oleh attacker, serta melakukan pembatasan akses ke server sehingga tidak semua IP dapat mengakses server tersebut kecuali IP yang diizinkan oleh pemilik asset dan IP firewall server.</p>
+<p>Tentunya perbaikan yang dilakukan oleh pemilik asset tersebut tidak efektif karena hanya mengarahkan traffic ke firewall server tanpa melakukan patching terhadap aplikasi yang vulnerable, oleh karena itu pemilik asset harus melakukan patch pada aplikasi tersebut agar celah tersebut tidak bisa dimanfaatkan oleh Threat Actor, serta melakukan pembatasan akses ke server sehingga tidak semua IP dapat mengakses server tersebut kecuali IP yang diizinkan oleh pemilik asset dan IP firewall server.</p>
 <h2 id="axfr-attack">AXFR Attack</h2>
 
 
@@ -227,16 +243,65 @@
 
 
 
-  <p>Image not found: alt=</p>
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/dnssec/axfr-zone-transfer-vulnerability.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/dnssec/axfr-zone-transfer-vulnerability_hu13380842573514145251.webp" media="(min-width: 1024px)">
+        <source srcset="/img/dnssec/axfr-zone-transfer-vulnerability_hu6149174746778578046.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/dnssec/axfr-zone-transfer-vulnerability_hu2264136350876816724.webp" media="(max-width: 767px)">
+        <img src="/img/dnssec/axfr-zone-transfer-vulnerability_hu2264136350876816724.webp" alt="DNS AXFR Zone Transfer Vulnerability" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
 
 
 
-<p>AXFR query adalah sebuah query yang digunakan untuk mengambil semua record DNS dari sebuah domain, AXFR query biasanya digunakan oleh DNS server master untuk mengirimkan semua record DNS yang dimiliki oleh domain tersebut ke DNS server slave, namun AXFR query juga dapat digunakan oleh attacker untuk mengambil semua record DNS dari sebuah domain, dengan teknik ini attacker dapat mengetahui semua subdomain yang dimiliki oleh domain tersebut tanpa harus melakukan brute force terhadap subdomain tersebut umumnya celah ini disebut sebagai DNS Zone Transfer Vulnerability.</p>
-<p>Uniknya ccTLD Indonesia .id rentan terhadap AXFR Attack, dimana kita dapat melakukan AXFR query terhadap domain .id dan mendapatkan seluruh daftar domain yang teregistratsi di .id, engga hanya id, beberapa ccTLD juga pernah mengalami vulnerability ini seperti domain ccTLD <a href="https://www.zdnet.com/article/north-koreas-dns-leak/">Korea Utara</a>
-<a href="https://github.com/maaaaz/dnsdumps/wiki/Home-%E2%80%90-Q&amp;A">FAQ</a>
-<a href="https://github.com/maaaaz/dnsdumps/">DNS Dumps</a></p>
+<p>AXFR query adalah sebuah query yang digunakan untuk mengambil semua record DNS dari sebuah domain, AXFR query biasanya digunakan oleh DNS server master untuk mengirimkan semua record DNS yang dimiliki oleh domain tersebut ke DNS server slave, namun AXFR query juga dapat digunakan oleh Threat Actor untuk mengambil semua record DNS dari sebuah domain jika DNS server tidak dikonfigurasikan dengan tepat, dengan teknik ini Threat Actor dapat mengetahui semua subdomain yang dimiliki oleh domain tersebut tanpa harus melakukan brute force terhadap subdomain tersebut umumnya celah ini disebut sebagai DNS Zone Transfer Vulnerability.</p>
+<p>Uniknya beberapa tahun lalu <a href="https://github.com/mandatoryprogrammer/NorthKoreaDNSLeak/blob/master/README.md">ccTLD Korea Utara</a> .kp rentan terhadap AXFR Attack, dimana Threat Actor dapat melakukan AXFR query terhadap domain tersebut dan mendapatkan seluruh daftar domain yang teregistratsi Korea Utara.</p>
+<p>Selain itu Hosting lokal juga ada yang rentan terhadap AXFR Attack ini, sudah pernah saya laporkan namun dianggap sebagai temuan yang tidak valid sehingga sampai saat ini domain yang menggunakan DNS Management dari Hosting tersebut akan rentan terhadap serangan ini.</p>
+<h2 id="dns-zone-walking">DNS Zone Walking</h2>
+
+
+
+
+
+
+
+  
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/dnssec/dns-walking.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/dnssec/dns-walking_hu5624830493885317865.webp" media="(min-width: 1024px)">
+        <source srcset="/img/dnssec/dns-walking_hu9162825454031451832.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/dnssec/dns-walking_hu3647483041387050388.webp" media="(max-width: 767px)">
+        <img src="/img/dnssec/dns-walking_hu3647483041387050388.webp" alt="DNS Zone Walking" class="hover-effect">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>DNS Zone Walking adalah sebuah teknik dimana Threat Actor dapat mengetahui semua subdomain yang dimiliki oleh domain tersebut tanpa harus melakukan brute force, teknik ini memanfaatkan DNS Query NSEC yang digunaka</p>
+<p>Menariknya ccTLD Indonesia .id rentan terhadap DNS Zone Walking ini, dimana kita dapat melakukan NSEC query terhadap domain .id dan mendapatkan domain tetangga dari domain tersebut, tentunya hal ini menyebabkan Threat Actor dapat mengetahui domain-domain .id yang teregistrasi tanpa harus melakukan brute force.</p>
+<p>Berikut Github Repo yang melakukan pengumpulan domain .id yang teregistrasi yang disebabkan oleh DNS Zone Walking dan gabungan dari DNS Zone Transfer Vulnerability terhadap seluruh TLD yang ada di internet</p>
+<ul>
+<li><a href="https://github.com/monoidic/TLDR/">https://github.com/monoidic/TLDR/</a></li>
+<li><a href="https://github.com/monoidic/TLDR2/">https://github.com/monoidic/TLDR2/</a></li>
+<li><a href="https://github.com/maaaaz/dnsdumps/">https://github.com/maaaaz/dnsdumps/</a></li>
+</ul>
 <h1 id="lesson-learned">Lesson Learned</h1>
-<p>Dari beberapa event yang pernah saya alami terkait DNS, saya belajar bahwa DNS adalah sebuah service yang sangat penting dan harus di monitor dengan baik, karena DNS dapat menyebabkan kerentanan keamanan yang tidak kita sadari dan tentunya dapat dimanfaatkan oleh Threat Actor, oleh karena itu sebagai pemilik domain kita harus selalu memonitor DNS record yang dimiliki</p>
+<p>Dari beberapa event yang pernah saya alami terkait DNS, kita dapat belajar bahwa DNS adalah sebuah service yang sangat penting dan harus di monitor dengan baik, karena DNS dapat menyebabkan kerentanan keamanan yang tidak kita sadari dan tentunya dapat dimanfaatkan oleh Threat Actor, oleh karena itu sebagai pemilik domain kita harus selalu memonitor dan memanage DNS record yang dimiliki, <del>kita bisa menggunakan service seperti</del> iklan harusnya masuk disini wkkwkwwk.</p>
 <h1 id="references">References</h1>
 <ul>
 <li><a href="https://www.acunetix.com/blog/web-security/dns-takeover/">DNS Takeover</a></li>
