@@ -9,27 +9,36 @@
     <lastmod>2025-10-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/categories/</loc>
-    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/categories/defensive/</loc>
-    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/categories/development/</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/dns/</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/dns-security-maybe/</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/internet/</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/categories/offensive/</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/tags/write-up/</loc>
+    <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/tags/end-users/</loc>
     <lastmod>2025-01-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/posts/infostealer-spreading-through-fake-google-recaptcha/</loc>
-    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://potato.id/tags/internet/</loc>
-    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://potato.id/categories/offensive/</loc>
-    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://potato.id/tags/</loc>
-    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://potato.id/tags/write-up/</loc>
     <lastmod>2025-01-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/tags/challenges/</loc>
@@ -43,12 +52,6 @@
   </url><url>
     <loc>https://potato.id/categories/web-hacking/</loc>
     <lastmod>2024-06-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://potato.id/categories/development/</loc>
-    <lastmod>2024-05-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://potato.id/tags/dns/</loc>
-    <lastmod>2024-05-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/posts/there-is-no-way-it-is-dns/</loc>
     <lastmod>2024-05-28T00:00:00+00:00</lastmod>
