@@ -148,8 +148,8 @@
 
 
 
-<p>Terkadang sysadmin tidak sadar bahwa DNS record yang dimiliki oleh domain tersebut dapat memberikan informasi untuk Threat Actor, seperti TXT Recrods yang umunya digunakan untuk melakukan validasi domain pada suatu services, MX record yang digunakan untuk mengetahui service/server email yang digunakan,</p>
-<p>contoh paling sering ketemu adalah terdapat sebuah informasi IP address pada mx records, ketika kita melakukan scanning terhadap segment IP tersebut (/24) ternyata IP tetangga tersebut digunakan untuk aplikasi lain, sedangkan records DNS yang digunakan untuk aplikasi tersebut mengarah ke <a href="https://cloudflare.com/">Cloudflare</a> atau sebuah Firewall sever sehingga secara tidak sengaja Threat Actor dapat melakukan bypass terhadap Cloudflare/Firewall server tersebut dan mengakses aplikasi secara langsung, kadang pula terdapat aplikasi lain yang tidak terdaftar di records dns tapi bisa diakses dengan IP tetangga dari MX record tersebut dengan menambahkan records pada /etc/hosts atau secara direct ke IP tersebut.</p>
+<p>Terkadang DNS record yang dimiliki oleh domain tersebut dapat memberikan informasi untuk Threat Actor, seperti TXT Recrods yang umunya digunakan untuk melakukan validasi domain pada suatu services, MX record yang digunakan untuk mengetahui service/server email yang digunakan,</p>
+<p>Contoh yang paling sering terjadi adalah terdapat sebuah informasi IP address pada MX records, ketika kita melakukan scanning terhadap segment IP tersebut (/24) ternyata IP tetangga tersebut digunakan untuk aplikasi lain, sedangkan records DNS yang digunakan untuk aplikasi tersebut mengarah ke <a href="https://cloudflare.com/">Cloudflare</a> atau sebuah Firewall sever sehingga secara tidak sengaja Threat Actor dapat melakukan bypass terhadap Cloudflare/Firewall server tersebut dan mengakses aplikasi secara langsung, kadang pula terdapat aplikasi lain yang tidak terdaftar di records dns tapi bisa diakses dengan IP tetangga dari MX record tersebut dengan menambahkan records pada /etc/hosts atau secara direct ke IP tersebut.</p>
 <h2 id="subdomain-takeover">Subdomain Takeover</h2>
 <p>
 
