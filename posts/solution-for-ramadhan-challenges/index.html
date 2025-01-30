@@ -7,11 +7,11 @@
 	<title>Solution for Ramadhan Challenges - Jonias Fortuna</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script async src="https://fundingchoicesmessages.google.com/i/pub-1926937123072670?ers=1"></script><script>(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
-	<meta name="description" content="">
+	<meta name="description" content="Local File Inclusion web hacking challenges with strict file upload, and some tips and tricks for evasion file upload detection. This challenges created for Surabaya Hacker Link when Ramadhan 2019 where I&#39;m stuck with LFI to RCE via Access Log Posioning, and create file upload feature that only can upload txt file.">
 		<meta property="og:url" content="https://potato.id/posts/solution-for-ramadhan-challenges/">
   <meta property="og:site_name" content="Jonias Fortuna">
   <meta property="og:title" content="Solution for Ramadhan Challenges">
-  <meta property="og:description" content="Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di STTS, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui /self/proc/environ dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.">
+  <meta property="og:description" content="Local File Inclusion web hacking challenges with strict file upload, and some tips and tricks for evasion file upload detection. This challenges created for Surabaya Hacker Link when Ramadhan 2019 where I&#39;m stuck with LFI to RCE via Access Log Posioning, and create file upload feature that only can upload txt file.">
   <meta property="og:locale" content="id_ID">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -29,7 +29,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://potato.id/img/ramadhan/0.webp">
   <meta name="twitter:title" content="Solution for Ramadhan Challenges">
-  <meta name="twitter:description" content="Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di STTS, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui /self/proc/environ dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.">
+  <meta name="twitter:description" content="Local File Inclusion web hacking challenges with strict file upload, and some tips and tricks for evasion file upload detection. This challenges created for Surabaya Hacker Link when Ramadhan 2019 where I&#39;m stuck with LFI to RCE via Access Log Posioning, and create file upload feature that only can upload txt file.">
 
 	<link rel="me" href="https://infosec.exchange/@laztname">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
