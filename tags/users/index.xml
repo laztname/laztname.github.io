@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Users on Jonias Fortuna</title>
+    <link>https://potato.id/tags/users/</link>
+    <description>Recent content in Users on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Mon, 03 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/tags/users/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mshta.exe - Threat Actor&#39;s Favorite Weapon</title>
+      <link>https://potato.id/posts/mshta-exe-threat-actors-favorite-weapon/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/mshta-exe-threat-actors-favorite-weapon/</guid>
+      <description>&lt;h2 id=&#34;apa-itu-mshtaexe&#34;&gt;Apa itu mshta.exe?&lt;/h2&gt;&#xA;&lt;p&gt;mshta.exe adalah utility file system Windows yang digunakan untuk menjalankan file Microsoft HTML Application (.HTA). Program ini memungkinkan untuk melakukan eksekusi script berbasis VBScript atau JScript, menjadikannya sebagai tool yang berguna bagi administrator akan tetapi juga menjadi tool yang sering disalahgunakan oleh threat actors.&lt;/p&gt;&#xA;&lt;h2 id=&#34;mengapa-mshtaexe-sering-digunakan-oleh-threat-actor&#34;&gt;Mengapa mshta.exe sering digunakan oleh Threat Actor?&lt;/h2&gt;&#xA;&lt;p&gt;Threat Actor sering menyalahgunakan mshta.exe untuk menjalankan kode berbahaya untuk tidak terdeteksi oleh antivirus atau solusi keamanan lainnya (EDR). Beberapa alasan mengapa mshta.exe sering digunakan dalam serangan malware antara lain:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
