@@ -28,11 +28,16 @@
   <meta name="twitter:title" content="Retas.io Hellbound VM Write-up">
   <meta name="twitter:description" content="Langsung saja to the point, mesin ini susah titik. Dari awal launching labs sudah ada 3 mesin yaitu Zombie, Hellbound dan Anonymouz maka mesin inillah yang menurut saya cukup hard karena ya mungkin kurangnya pengalaman dalam bereksploitasi dan feeling yang kuat. Hingga write up ini ditulis penulis juga masih belum mendapatkan flag root user, masih nyetuck di www-data. Beruntung saja user flag readable sama si www-data dengan ini sudah bisa submit flag user.">
 
-	<link rel="me" href="https://infosec.exchange/@laztname">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+        <link rel="me" href="https://infosec.exchange/@laztname">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        
+        <link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v40/memvYaGs1.woff2" type="font/woff2" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400;400i;700&amp;display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400;400i;700&amp;display=swap"></noscript>
 
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/custom.css">
@@ -252,7 +257,19 @@
 	<h4 class="widget__title">Information</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><img class="widget__link" src="/img/home.jpg" alt="Di rumah saja" loading="lazy"></li>
+    <li class="widget__item">
+        <picture>
+            <source srcset="/img/home_hu6327386115775240308.webp" media="(min-width: 1024px)">
+            <source srcset="/img/home_hu11330667846344880316.webp" media="(min-width: 768px) and (max-width: 1023px)">
+            <source srcset="/img/home_hu8113130312594461793.webp" media="(max-width: 767px)">
+            <img class="widget__link"
+                 src="/img/home_hu11330667846344880316.webp" 
+                 width="800"
+                 height="694"
+                 alt="Di rumah saja"
+                 loading="lazy">
+        </picture>
+    </li>
 		</ul>
 	</div>
 </div>
