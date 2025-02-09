@@ -117,12 +117,24 @@
 	</span>
 </div></div>
 		</header>
-		
-	<figure class="post__thumbnail thumbnail">
-		
-		<img class="thumbnail__image" src="/img/dns/04-dig-2.jpeg" alt="Yes, It was DNS!" loading="lazy">
-		
-	</figure>
+		       
+
+            <figure class="post__thumbnail thumbnail">
+                
+                <picture>
+                    <source srcset="/img/dns/04-dig-2_hu4733168345766445396.webp" media="(min-width: 1024px)">
+                    <source srcset="/img/dns/04-dig-2_hu4375966564402987735.webp" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="/img/dns/04-dig-2_hu7679336066119930120.webp" media="(max-width: 767px)">
+                    <img class="thumbnail__image"
+                         src="/img/dns/04-dig-2_hu4375966564402987735.webp"
+                         width="800"
+                         height="520"
+                         alt="Yes, It was DNS!"
+                         loading="lazy">
+                </picture>
+                
+            </figure>
+
 <div class="content post__content clearfix">
 			<p>Seperti yang kita tau, DNS atau Domain Name Server adalah service yang bertugas untuk melakukan translate nama domain menjadi IP sehingga user tidak perlu mengingat IP yang cukup ribet/njelimet jika diingat satu-satu, maka dari itu DNS menjadi salah satu service yang cukup krusial dan harus di konfigurasi dengan baik, jika tidak maka dapat berdampak pada domain yang kita miliki akan susah atau bahkan tidak dapat diakses oleh user</p>
 <p>Sebagai contoh, beberapa waktu lalu ada rekan kerja yang komplain ke tim infrastruktur karena tidak bisa membuka web monev.spbe.go.id, singkat cerita saya meminta informasi kepada user tersebut untuk mendapatkan informasi tambahan seperti hasil trace dan screenshot error ketika membuka web yang dimaksud</p>
@@ -649,14 +661,16 @@
 </aside>
 		</div>
 		<footer class="footer">
-	<div class="container footer__container flex">
-		
-		<div class="footer__copyright">
-			&copy; 2025 Ardi Jonias Fortuna.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
-		</div>
-	</div>
+    <div class="container footer__container flex">
+        
+        <div class="footer__copyright">
+            &copy; 2025 
+            <a href="https://potato.id/">Ardi Jonias Fortuna</a>.
+            <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+        </div>
+    </div>
 </footer>
+
 	</div>
 <script async defer src="/js/menu.js"></script>
 <script src="/js/custom.js"></script></body>
