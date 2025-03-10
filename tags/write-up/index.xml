@@ -6,8 +6,15 @@
     <description>Recent content in Write Up on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>id-ID</language>
-    <lastBuildDate>Mon, 03 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 20 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/tags/write-up/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Panduan Konfigurasi Email DNS Security (SPF, DKIM, DMARC)</title>
+      <link>https://potato.id/posts/email-security-spf-dkim-dmarc/</link>
+      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/email-security-spf-dkim-dmarc/</guid>
+      <description>&lt;p&gt;Email adalah salah satu metode komunikasi yang paling banyak digunakan, tetapi juga rentan terhadap serangan seperti &lt;strong&gt;spoofing&lt;/strong&gt;, &lt;strong&gt;phishing&lt;/strong&gt;, dan &lt;strong&gt;spam&lt;/strong&gt;. Oleh karena itu, penerapan &lt;strong&gt;SPF, DKIM, dan DMARC&lt;/strong&gt; sangat penting untuk meningkatkan keamanan email yang kita miliki, berikut adalah panduan konfigurasi SPF, DKIM, dan DMARC untuk meningkatkan keamanan email.&lt;/p&gt;&#xA;&lt;h2 id=&#34;sender-policy-framework-spf&#34;&gt;&lt;strong&gt;Sender Policy Framework (SPF)&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;apa-itu-spf&#34;&gt;&lt;strong&gt;Apa itu SPF?&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Sender Policy Framework atau SPF adalah mekanisme autentikasi email yang memungkinkan domain &lt;strong&gt;menentukan server mana yang diizinkan mengirim email atas nama domain yang dimiliki&lt;/strong&gt;, konfigurasi ini memungkinkan server penerima untuk memverifikasi bahwa email yang diterima berasal dari server yang diizinkan oleh domain pengirim dan konfigurasi ini diterapkan pada record DNS txt dari domain pengirim.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>mshta.exe - Threat Actor&#39;s Favorite Weapon</title>
       <link>https://potato.id/posts/mshta-exe-threat-actors-favorite-weapon/</link>
