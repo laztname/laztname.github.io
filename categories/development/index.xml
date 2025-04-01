@@ -6,8 +6,15 @@
     <description>Recent content in Development on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>id-ID</language>
-    <lastBuildDate>Tue, 28 May 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DNS Security, Maybe?</title>
+      <link>https://potato.id/posts/dns-security-maybe/</link>
+      <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/dns-security-maybe/</guid>
+      <description>&lt;p&gt;Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack serta serangan lainnya, hanya beberapa event yang pernah saya alami saja.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>There is no way it&#39;s DNS</title>
       <link>https://potato.id/posts/there-is-no-way-it-is-dns/</link>

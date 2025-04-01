@@ -7,11 +7,11 @@
 	<title>DNS Security, Maybe? - Jonias Fortuna</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<script async src="https://fundingchoicesmessages.google.com/i/pub-1926937123072670?ers=1"></script><script>(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
-	<meta name="description" content="">
+	<meta name="description" content="Sebuah artikel yang membahas tentang DNS Security, bukan DNS Vulnerability pada umumnya, namun beberapa temuan yang pernah terjadi dan mungkin masih sering terjadi pada DNS">
 		<meta property="og:url" content="https://potato.id/posts/dns-security-maybe/">
   <meta property="og:site_name" content="Jonias Fortuna">
   <meta property="og:title" content="DNS Security, Maybe?">
-  <meta property="og:description" content="Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack serta serangan lainnya, hanya beberapa event yang pernah saya alami saja.">
+  <meta property="og:description" content="Sebuah artikel yang membahas tentang DNS Security, bukan DNS Vulnerability pada umumnya, namun beberapa temuan yang pernah terjadi dan mungkin masih sering terjadi pada DNS">
   <meta property="og:locale" content="id_ID">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -26,13 +26,18 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://potato.id/img/dnssec/dns.png">
   <meta name="twitter:title" content="DNS Security, Maybe?">
-  <meta name="twitter:description" content="Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack serta serangan lainnya, hanya beberapa event yang pernah saya alami saja.">
+  <meta name="twitter:description" content="Sebuah artikel yang membahas tentang DNS Security, bukan DNS Vulnerability pada umumnya, namun beberapa temuan yang pernah terjadi dan mungkin masih sering terjadi pada DNS">
 
-	<link rel="me" href="https://infosec.exchange/@laztname">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="dns-prefetch" href="//fonts.gstatic.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+        <link rel="me" href="https://infosec.exchange/@laztname">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        
+        <link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2" type="font/woff2" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap"></noscript>
 
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/custom.css">
@@ -113,12 +118,24 @@
 	</span>
 </div></div>
 		</header>
-		
-	<figure class="post__thumbnail thumbnail">
-		
-		<img class="thumbnail__image" src="/img/dnssec/dns.png" alt="DNS Security, Maybe?" loading="lazy">
-		
-	</figure>
+		       
+
+            <figure class="post__thumbnail thumbnail">
+                
+                <picture>
+                    <source srcset="/img/dnssec/dns_hu13742790134488871268.webp" media="(min-width: 1024px)">
+                    <source srcset="/img/dnssec/dns_hu12231191474713773735.webp" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="/img/dnssec/dns_hu9977065167897008763.webp" media="(max-width: 767px)">
+                    <img class="thumbnail__image"
+                         src="/img/dnssec/dns_hu12231191474713773735.webp"
+                         width="800"
+                         height="502"
+                         alt="DNS Security, Maybe?"
+                         loading="lazy">
+                </picture>
+                
+            </figure>
+
 <div class="content post__content clearfix">
 			<p>Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack serta serangan lainnya, hanya beberapa event yang pernah saya alami saja.</p>
 <h2 id="information-leakage">Information Leakage</h2>
@@ -139,7 +156,11 @@
         <source srcset="/img/dnssec/information-leakage_hu10333334457692404761.webp" media="(min-width: 1024px)">
         <source srcset="/img/dnssec/information-leakage_hu17419284245854973011.webp" media="(min-width: 768px) and (max-width: 1023px)">
         <source srcset="/img/dnssec/information-leakage_hu11121385777171152053.webp" media="(max-width: 767px)">
-        <img src="/img/dnssec/information-leakage_hu11121385777171152053.webp" alt="Information Leakage" class="hover-effect">
+        <img src="/img/dnssec/information-leakage_hu11121385777171152053.webp" 
+             alt="Information Leakage" 
+             class="hover-effect"
+             width="1068" 
+             height="543">
       </picture>
     </a>
 
@@ -168,7 +189,11 @@
         <source srcset="/img/dnssec/dns-takeover-1_hu2510636531940230263.webp" media="(min-width: 1024px)">
         <source srcset="/img/dnssec/dns-takeover-1_hu12713518229023019909.webp" media="(min-width: 768px) and (max-width: 1023px)">
         <source srcset="/img/dnssec/dns-takeover-1_hu9309166841225119109.webp" media="(max-width: 767px)">
-        <img src="/img/dnssec/dns-takeover-1_hu9309166841225119109.webp" alt="Normal DNS" class="hover-effect">
+        <img src="/img/dnssec/dns-takeover-1_hu9309166841225119109.webp" 
+             alt="Normal DNS" 
+             class="hover-effect"
+             width="1081" 
+             height="361">
       </picture>
     </a>
 
@@ -194,7 +219,11 @@
         <source srcset="/img/dnssec/dns-takeover-2_hu17548687850959312969.webp" media="(min-width: 1024px)">
         <source srcset="/img/dnssec/dns-takeover-2_hu4725722341334463103.webp" media="(min-width: 768px) and (max-width: 1023px)">
         <source srcset="/img/dnssec/dns-takeover-2_hu14322351472754205869.webp" media="(max-width: 767px)">
-        <img src="/img/dnssec/dns-takeover-2_hu14322351472754205869.webp" alt="DNS Takeover" class="hover-effect">
+        <img src="/img/dnssec/dns-takeover-2_hu14322351472754205869.webp" 
+             alt="DNS Takeover" 
+             class="hover-effect"
+             width="1081" 
+             height="361">
       </picture>
     </a>
 
@@ -206,6 +235,20 @@
 <p>Subdomain Takeover atau DNS Takeover adalah sebuah teknik dimana seorang Threat Actor dapat mengambil alih sebuah subdomain, dengan teknik ini Threat Actor dapat mengarahkan traffic dari domain tersebut ke server yang dimiliki oleh Threat Actor. Umumnya hal ini terjadi pada platform cloud seperti AWS, Azure, Github, Heroku, dan lainya.</p>
 <p>Serangan ini terjadi karena adanya misconfiguration pada konfigurasi platform cloud dan DNS record yang tidak dimonitor dengan baik oleh pemilik domain sehingga terdapat DNS record yang mengarah ke server pihak ketiga (Platform Cloud), namun pada platform pihak ketiga tersebut DNS records tidak diclaim oleh pemilik domain sehingga Threat Actor dapat mengklaim DNS tersebut dan mengarahkan traffic ke Platform Cloud yang dikontrol oleh Threat Actor. tentunya hal ini dapat meneyebabkan kerugian bagi pemilik domain karena data-data yang dikirimkan oleh user dapat diambil oleh Threat Actor.</p>
 <p>Umumnya platform cloud sudah mempunyai proteksi tambahan untuk mencegah terjadinya DNS Takeover, namun tidak semua platform cloud mempunyai proteksi tersebut, oleh karena itu pemilik domain harus selalu memonitor DNS record yang dimiliki serta teman-teman dapat melihat services mana saja yang dapat dilakukan DNS Takeover pada <a href="https://github.com/EdOverflow/can-i-take-over-xyz">Github Repo Berikut</a></p>
+
+<div class="ad-container" style="text-align: center; margin: 20px 0;">
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-client="ca-pub-1926937123072670"
+         data-ad-slot="3981468303"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
 <h2 id="old-dns-record">Old DNS Record</h2>
 
 
@@ -224,7 +267,11 @@
         <source srcset="/img/dnssec/dns-records_hu4364293586145350940.webp" media="(min-width: 1024px)">
         <source srcset="/img/dnssec/dns-records_hu16715566234364820142.webp" media="(min-width: 768px) and (max-width: 1023px)">
         <source srcset="/img/dnssec/dns-records_hu16964635762912607773.webp" media="(max-width: 767px)">
-        <img src="/img/dnssec/dns-records_hu16964635762912607773.webp" alt="List DNS Records" class="hover-effect">
+        <img src="/img/dnssec/dns-records_hu16964635762912607773.webp" 
+             alt="List DNS Records" 
+             class="hover-effect"
+             width="609" 
+             height="344">
       </picture>
     </a>
 
@@ -253,7 +300,11 @@
         <source srcset="/img/dnssec/axfr-zone-transfer-vulnerability_hu13380842573514145251.webp" media="(min-width: 1024px)">
         <source srcset="/img/dnssec/axfr-zone-transfer-vulnerability_hu6149174746778578046.webp" media="(min-width: 768px) and (max-width: 1023px)">
         <source srcset="/img/dnssec/axfr-zone-transfer-vulnerability_hu2264136350876816724.webp" media="(max-width: 767px)">
-        <img src="/img/dnssec/axfr-zone-transfer-vulnerability_hu2264136350876816724.webp" alt="DNS AXFR Zone Transfer Vulnerability" class="hover-effect">
+        <img src="/img/dnssec/axfr-zone-transfer-vulnerability_hu2264136350876816724.webp" 
+             alt="DNS AXFR Zone Transfer Vulnerability" 
+             class="hover-effect"
+             width="1638" 
+             height="749">
       </picture>
     </a>
 
@@ -283,7 +334,11 @@
         <source srcset="/img/dnssec/dns-walking_hu5624830493885317865.webp" media="(min-width: 1024px)">
         <source srcset="/img/dnssec/dns-walking_hu9162825454031451832.webp" media="(min-width: 768px) and (max-width: 1023px)">
         <source srcset="/img/dnssec/dns-walking_hu3647483041387050388.webp" media="(max-width: 767px)">
-        <img src="/img/dnssec/dns-walking_hu3647483041387050388.webp" alt="DNS Zone Walking" class="hover-effect">
+        <img src="/img/dnssec/dns-walking_hu3647483041387050388.webp" 
+             alt="DNS Zone Walking" 
+             class="hover-effect"
+             width="1381" 
+             height="669">
       </picture>
     </a>
 
@@ -300,9 +355,9 @@
 <li><a href="https://github.com/monoidic/TLDR2/">https://github.com/monoidic/TLDR2/</a></li>
 <li><a href="https://github.com/maaaaz/dnsdumps/">https://github.com/maaaaz/dnsdumps/</a></li>
 </ul>
-<h1 id="lesson-learned">Lesson Learned</h1>
+<h2 id="lesson-learned">Lesson Learned</h2>
 <p>Dari beberapa event yang pernah saya alami terkait DNS, kita dapat belajar bahwa DNS adalah sebuah service yang sangat penting dan harus di monitor dengan baik, karena DNS dapat menyebabkan kerentanan keamanan yang tidak kita sadari dan tentunya dapat dimanfaatkan oleh Threat Actor, oleh karena itu sebagai pemilik domain kita harus selalu memonitor dan memanage DNS record yang dimiliki, <del>kita bisa menggunakan service seperti</del> iklan harusnya masuk disini wkkwkwwk.</p>
-<h1 id="references">References</h1>
+<h2 id="references">References</h2>
 <ul>
 <li><a href="https://www.acunetix.com/blog/web-security/dns-takeover/">DNS Takeover</a></li>
 <li><a href="https://medium.com/@terjanq/subdomain-takeover-7a9f79f361b8">DNS Takeover</a></li>
@@ -359,6 +414,12 @@
 			<p class="pager__title">Infostealer Spreading Through Fake Google reCAPTCHA</p>
 		</a>
 	</div>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/mshta-exe-threat-actors-favorite-weapon/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">mshta.exe - Threat Actor&#39;s Favorite Weapon</p>
+		</a>
+	</div>
 </nav>
 <div id="disqus-container">
 	<script src="https://giscus.app/client.js"
@@ -393,7 +454,19 @@
 	<h4 class="widget__title">Information</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><img class="widget__link" src="/img/home.jpg" alt="Di rumah saja" loading="lazy"></li>
+    <li class="widget__item">
+        <picture>
+            <source srcset="/img/home_hu6327386115775240308.webp" media="(min-width: 1024px)">
+            <source srcset="/img/home_hu11330667846344880316.webp" media="(min-width: 768px) and (max-width: 1023px)">
+            <source srcset="/img/home_hu8113130312594461793.webp" media="(max-width: 767px)">
+            <img class="widget__link"
+                 src="/img/home_hu11330667846344880316.webp" 
+                 width="800"
+                 height="694"
+                 alt="Di rumah saja"
+                 loading="lazy">
+        </picture>
+    </li>
 		</ul>
 	</div>
 </div>
@@ -402,11 +475,11 @@
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/email-security-spf-dkim-dmarc/">Panduan Konfigurasi Email DNS Security (SPF, DKIM, DMARC)</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/mshta-exe-threat-actors-favorite-weapon/">mshta.exe - Threat Actor&#39;s Favorite Weapon</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/dns-security-maybe/">DNS Security, Maybe?</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/infostealer-spreading-through-fake-google-recaptcha/">Infostealer Spreading Through Fake Google reCAPTCHA</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/surabaya-hacker-link-underground-hack-the-box-write-up-challenges/">Surabaya Hacker Link Underground Write Up</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/there-is-no-way-it-is-dns/">There is no way it&#39;s DNS</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/moving-from-disqus-to-giscus-with-hugo-ssg/">Moving From Disqus to Giscus with Hugo SSG</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/serangan-phishing-dan-pencegahannya/">Serangan Phishing dan Pencegahannya</a></li>
 		</ul>
 	</div>
 </div>
@@ -435,6 +508,7 @@
 		<a class="widget-taglist__link widget__link btn" href="/tags/dns/" title="DNS">DNS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/end-user/" title="End-User">End-User (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/end-users/" title="End-Users">End-Users (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/fail2ban/" title="Fail2ban">Fail2ban (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/file-upload/" title="File Upload">File Upload (1)</a>
@@ -442,7 +516,7 @@
 		<a class="widget-taglist__link widget__link btn" href="/tags/gitdumper/" title="Gitdumper">Gitdumper (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/githack/" title="Githack">Githack (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/incident-response/" title="Incident Response">Incident Response (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (5)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/intrusion-prevention-system/" title="Intrusion Prevention System">Intrusion Prevention System (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/lfi/" title="LFI">LFI (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
@@ -452,9 +526,10 @@
 		<a class="widget-taglist__link widget__link btn" href="/tags/surabaya-hacker-link/" title="Surabaya Hacker Link">Surabaya Hacker Link (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/telegram-bot/" title="Telegram Bot">Telegram Bot (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/users/" title="Users">Users (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (26)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (29)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
 	</div>
@@ -499,14 +574,16 @@
 </aside>
 		</div>
 		<footer class="footer">
-	<div class="container footer__container flex">
-		
-		<div class="footer__copyright">
-			&copy; 2025 Ardi Jonias Fortuna.
-			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
-		</div>
-	</div>
+    <div class="container footer__container flex">
+        
+        <div class="footer__copyright">
+            &copy; 2025 
+            <a href="https://potato.id/">Ardi Jonias Fortuna</a>.
+            <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+        </div>
+    </div>
 </footer>
+
 	</div>
 <script async defer src="/js/menu.js"></script>
 <script src="/js/custom.js"></script></body>

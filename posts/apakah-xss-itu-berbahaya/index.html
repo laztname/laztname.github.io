@@ -125,6 +125,20 @@
 <p>Dalam bahasa indonesianya kurang lebih jadi gini, pada celah keamanan XSS penyerang dapat memasukan atau menginputkan tag html yang dirender oleh client (web browser), nah pada tag html ini ada bahasa yang bisa dijalankan yaitu javascript (tag &lt;script&gt;) (<a href="https://www.xss-payloads.com/">check xss payload</a>), jika tidak bisa menjalankan javascript namun html tag tetap berhasil di-render oleh browser maka bug termasuk ke dalam HTML Injection</p>
 <h2 id="confusion">Confusion</h2>
 <p>Lalu Apakah XSS itu berbahaya?, Jawabannya adalah <strong>Tergantung</strong>, <del>iya kek perasaanku :(</del> jika XSS tersebut hanyalah sebuah self-XSS yang maksudnya adalah XSS tersebut hanya valid terhadap user kita sendiri dan tidak mempunyai impact ke user lain, maka bisa dibilang XSS tersebut tidak valid, Nah namun jika XSS tersebut reflected atau stored apalagi bisa sampai untuk steal cookie maka XSS tersebut cukup berbahaya, kenapa?</p>
+
+<div class="ad-container" style="text-align: center; margin: 20px 0;">
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-client="ca-pub-1926937123072670"
+         data-ad-slot="3981468303"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
 <h2 id="reflected-xss">Reflected XSS</h2>
 <p>Jika reflected pada parameter get (contoh pada fitur search yang menggunakan method get</p>
 <pre tabindex="0"><code>web.com/?cari=&lt;script&gt;alert(1337)&lt;/script&gt;
@@ -254,9 +268,9 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 		<ul class="widget__list">
 			<li class="widget__item"><a class="widget__link" href="/posts/email-security-spf-dkim-dmarc/">Panduan Konfigurasi Email DNS Security (SPF, DKIM, DMARC)</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/mshta-exe-threat-actors-favorite-weapon/">mshta.exe - Threat Actor&#39;s Favorite Weapon</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/dns-security-maybe/">DNS Security, Maybe?</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/infostealer-spreading-through-fake-google-recaptcha/">Infostealer Spreading Through Fake Google reCAPTCHA</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/serangan-phishing-dan-pencegahannya/">Serangan Phishing dan Pencegahannya</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/surabaya-hacker-link-underground-hack-the-box-write-up-challenges/">Surabaya Hacker Link Underground Write Up</a></li>
 		</ul>
 	</div>
 </div>
@@ -282,7 +296,7 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (9)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/dns/" title="DNS">DNS (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/dns/" title="DNS">DNS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/end-user/" title="End-User">End-User (1)</a>
@@ -293,7 +307,7 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 		<a class="widget-taglist__link widget__link btn" href="/tags/gitdumper/" title="Gitdumper">Gitdumper (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/githack/" title="Githack">Githack (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/incident-response/" title="Incident Response">Incident Response (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (5)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/intrusion-prevention-system/" title="Intrusion Prevention System">Intrusion Prevention System (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/lfi/" title="LFI">LFI (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
@@ -306,7 +320,7 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 		<a class="widget-taglist__link widget__link btn" href="/tags/users/" title="Users">Users (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (28)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (29)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
 	</div>
