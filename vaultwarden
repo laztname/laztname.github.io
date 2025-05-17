@@ -1,0 +1,83 @@
+0a9589baca780f79c750d8f0e1eee873488e80f822db46186a9890efdf05f88f
+
+# Install Docker
+# Add Docker's official GPG key:
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+sudo apt-get update
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+# Test docker
+sudo docker run hello-world
+
+# Pull vaultwarden iamges
+docker pull vaultwarden/server:latest
+
+docker run --detach --name vaultwarden \
+  --env DOMAIN="https://vw.potato.id" \
+  --volume /root/vw-data/:/data/ \
+  --restart unless-stopped \
+  --publish 127.0.0.1:1111:80 \
+  vaultwarden/server:latest
+
+sudo apt install certbot python3-certbot-nginx -y
+sudo certbot certonly --nginx -d vw.potato.id
+
+sudo tee /etc/nginx/sites-available/vaultwarden.conf > /dev/null <<'EOF'
+upstream vw {
+    server 127.0.0.1:1111;
+}
+
+server {
+    listen 80;
+    server_name vw.potato.id;
+
+    # Redirect all HTTP to HTTPS
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name vw.potato.id;
+
+    ssl_certificate       /etc/letsencrypt/live/potato.id/fullchain.pem;
+    ssl_certificate_key   /etc/letsencrypt/live/potato.id/privkey.pem;
+
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_ciphers HIGH:!aNULL:!MD5;
+    ssl_prefer_server_ciphers on;
+
+    location / {
+        proxy_pass http://vw;
+
+        # Proxy headers
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Security headers
+        add_header X-Frame-Options "SAMEORIGIN" always;
+        add_header X-XSS-Protection "1; mode=block" always;
+        add_header X-Content-Type-Options "nosniff" always;
+        add_header Referrer-Policy "no-referrer" always;
+        add_header Content-Security-Policy "default-src 'self'; frame-ancestors 'self'; object-src 'none';" always;
+        add_header Permissions-Policy "interest-cohort=()" always;
+    }
+}
+EOF
+
+ln -s /etc/nginx/sites-available/vaultwarden.conf /etc/nginx/sites-enabled/vaultwarden.conf
+
+systemctl restart nginx
