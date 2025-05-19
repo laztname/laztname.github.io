@@ -6,14 +6,28 @@
     <description>Recent content in Offensive on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>id-ID</language>
-    <lastBuildDate>Wed, 16 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/categories/offensive/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web Phishing itu HTTP atau HTTPS?</title>
+      <link>https://potato.id/posts/https-adalah-website-yang-aman/</link>
+      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/https-adalah-website-yang-aman/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Web phishing adalah salah satu metode serangan yang paling sering digunakan oleh para penyerang. Dalam serangan phishing, penyerang membuat situs web palsu yang meniru situs web asli. Situs web palsu ini biasanya digunakan untuk mencuri informasi sensitif dari korban, seperti kredensial login, informasi kartu kredit, dan lain-lain.&lt;/p&gt;&#xA;&lt;p&gt;Presepsi yang umum adalah bahwa situs web phishing selalu menggunakan protokol HTTP. Namun, apakah benar demikian? Apakah situs web phishing tidak pernah menggunakan protokol HTTPS?&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Fake Sponsored Jobposting</title>
       <link>https://potato.id/posts/fake-sponsored-jobposting/</link>
       <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://potato.id/posts/fake-sponsored-jobposting/</guid>
       <description>&lt;p&gt;Sebenarnya ini adalah post lama sempat ramai tahun lalu, saat browsing di Facebook seringkali muncul iklan lowongan kerja dari PT ternama dan pada sektor tertentu seperti sektor tambang, pabrik buruh dan blue collar lainnya, seperti loker yang ada di PT. Epson, PT. Unilever, PT. Indofood dan loker PT lainnya yang mengarahkan kita untuk melakukan pendaftaran secara online dengan mengisi data-data pribadi kita seperti nama, alamat, nomor telepon dan lain-lain.&lt;/p&gt;&#xA;&lt;p&gt;Namun, tidak sedikit yang mengetahui bahwa iklan tersebut adalah iklan palsu yang bertujuan untuk personal-profit pelaku. Kurang lebih seperti ini alur yang dilakukan oleh para penipu tersebut.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Phishing Simulation with GoPhish</title>
+      <link>https://potato.id/posts/phishing-simulation-with-gophish/</link>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/phishing-simulation-with-gophish/</guid>
+      <description>&lt;h2 id=&#34;pendahuluan&#34;&gt;Pendahuluan&lt;/h2&gt;&#xA;&lt;p&gt;Phishing adalah serangan yang dilakukan dengan cara mempengaruhi seseorang untuk memberikan informasi pribadi atau rahasia. Serangan ini biasanya dilakukan dengan cara mengirimkan email palsu yang menyerupai email resmi dari perusahaan atau organisasi tertentu. Dalam serangan phishing, penyerang akan mencoba untuk memperoleh informasi sensitif seperti username, password, hingga informasi kartu kredit.&lt;/p&gt;&#xA;&lt;p&gt;Sebagai organisasi yang sadar akan keamanan informasi, penting bagi kita untuk melakukan simulasi phishing secara berkala. Dengan melakukan simulasi phishing, kita dapat mengukur tingkat keberhasilan user kita dalam mengidentifikasi serangan phishing dan mengambil tindakan yang tepat. Serangan phishing yang berhasil dapat menyebabkan kerugian finansial dan reputasi bagi organisasi.&lt;/p&gt;</description>
     </item>
     <item>
       <title>mshta.exe - Threat Actor&#39;s Favorite Weapon</title>
