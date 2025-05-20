@@ -9,6 +9,13 @@
     <lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/tags/users/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Apa Itu Credential Attack? Kenali dan Cegah Sebelum Terlambat</title>
+      <link>https://potato.id/posts/credential-attack/</link>
+      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/credential-attack/</guid>
+      <description>&lt;h2 id=&#34;apa-itu-credential-attack&#34;&gt;Apa Itu Credential Attack?&lt;/h2&gt;&#xA;&lt;p&gt;Credential attack atau serangan kredensial adalah upaya peretasan untuk mengambil alih akun seseorang dengan cara mencuri username dan password. Biasanya ini dilakukan lewat teknik kayak &lt;strong&gt;phishing&lt;/strong&gt;, &lt;strong&gt;credential stuffing&lt;/strong&gt;, hingga &lt;strong&gt;brute force&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Gampangnya, mereka ngintip, nebak, atau mencoba ribuan kombinasi password buat masuk ke akun kalian, setelah itu mereka bisa ngakses semua data yang ada di dalamnya. seperti akun email, akun media sosial, akun game hingga akun banking.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Web Phishing itu HTTP atau HTTPS?</title>
       <link>https://potato.id/posts/https-adalah-website-yang-aman/</link>
       <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>

@@ -8,13 +8,13 @@
     <loc>https://potato.id/posts/</loc>
     <lastmod>2025-10-25T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://potato.id/posts/credential-attack/</loc>
+    <lastmod>2025-05-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://potato.id/categories/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/categories/defensive/</loc>
-    <lastmod>2025-05-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://potato.id/posts/execution-after-redirect/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/tags/internet/</loc>
@@ -29,17 +29,11 @@
     <loc>https://potato.id/tags/users/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://potato.id/tags/web-hacking/</loc>
-    <lastmod>2025-05-19T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://potato.id/posts/https-adalah-website-yang-aman/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/tags/write-up/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://potato.id/posts/credential-attack/</loc>
-    <lastmod>2025-05-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/posts/validasi-spf-dkim-dmarc/</loc>
     <lastmod>2025-05-18T00:00:00+00:00</lastmod>

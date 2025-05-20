@@ -15,11 +15,16 @@
   <meta property="og:locale" content="id_ID">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-05-18T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-05-18T00:00:00+00:00">
+    <meta property="article:published_time" content="2025-05-19T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-05-19T00:00:00+00:00">
+    <meta property="article:tag" content="Internet">
+    <meta property="article:tag" content="Users">
+    <meta property="article:tag" content="Write Up">
+    <meta property="og:image" content="https://potato.id/img/creds-attacks/thumbnail.png">
 
 		
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://potato.id/img/creds-attacks/thumbnail.png">
   <meta name="twitter:title" content="Apa Itu Credential Attack? Kenali dan Cegah Sebelum Terlambat">
   <meta name="twitter:description" content="Credential attack adalah salah satu serangan siber paling umum yang menyasar username dan password. Yuk, kenali jenis-jenisnya dan cara mencegahnya!">
 
@@ -109,14 +114,32 @@
 			<h1 class="post__title">Apa Itu Credential Attack? Kenali dan Cegah Sebelum Terlambat</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-05-18T00:00:00Z">18-05-2025</time></div></div>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-05-19T00:00:00Z">19-05-2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/offensive/" rel="category">Offensive</a>, <a class="meta__link" href="/categories/defensive/" rel="category">Defensive</a>
+	</span>
+</div></div>
 		</header>
-		
+		       
+
+            <figure class="post__thumbnail thumbnail">
+                
+                <picture>
+                    <source srcset="/img/creds-attacks/thumbnail_hu_af6355106225573e.webp" media="(min-width: 1024px)">
+                    <source srcset="/img/creds-attacks/thumbnail_hu_9b11054a042caf59.webp" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="/img/creds-attacks/thumbnail_hu_a2f759d30391a77e.webp" media="(max-width: 767px)">
+                    <img class="thumbnail__image"
+                         src="/img/creds-attacks/thumbnail_hu_9b11054a042caf59.webp"
+                         width="800"
+                         height="533"
+                         alt="Apa Itu Credential Attack? Kenali dan Cegah Sebelum Terlambat"
+                         loading="lazy">
+                </picture>
+                
+            </figure>
 
 <div class="content post__content clearfix">
 			<h2 id="apa-itu-credential-attack">Apa Itu Credential Attack?</h2>
 <p>Credential attack atau serangan kredensial adalah upaya peretasan untuk mengambil alih akun seseorang dengan cara mencuri username dan password. Biasanya ini dilakukan lewat teknik kayak <strong>phishing</strong>, <strong>credential stuffing</strong>, hingga <strong>brute force</strong>.</p>
-<p>Gampangnya, mereka ngintip, nebak, atau mencoba ribuan kombinasi password buat masuk ke akun kalian, setelah itu mereka bisa ngakses semua data yang ada di dalamnya. Ini bisa jadi email, akun media sosial, akun game hingga akun banking.</p>
+<p>Gampangnya, mereka ngintip, nebak, atau mencoba ribuan kombinasi password buat masuk ke akun kalian, setelah itu mereka bisa ngakses semua data yang ada di dalamnya. seperti akun email, akun media sosial, akun game hingga akun banking.</p>
 <hr>
 <h2 id="kenapa-credential-attack-berbahaya">Kenapa Credential Attack Berbahaya?</h2>
 <p>Karena dari satu akun yang bocor, bisa kebuka semua akses. sebagai contoh:</p>
@@ -125,7 +148,9 @@
 <li>Akun kerja bisa jadi jalan masuk buat serangan ke seluruh sistem kantor.</li>
 <li>Data sensitif kayak nomor KTP, data bank, dan lainnya bisa diambil.</li>
 <li>Asset digital kayak cryptocurrency atau in-game item bisa dicuri/dijual.</li>
+<li>Kadang juga dipakai buat kejahatan lebih lanjut, seperti penipuan menggunakan identitas kita.</li>
 </ul>
+<p>Maka dari itu, penting bagi kita untuk tahu tentang credential attack ini, seperti mengenali cara kerjanya, jenis-jenisnya, dan cara pencegahannya. Dengan begitu, kita bisa lebih waspada dan melindungi data diri kita dari serangan yang dapat merugikan kita.</p>
 <hr>
 <h2 id="jenis-jenis-credential-attack-yang-perlu-diketahui">Jenis-Jenis Credential Attack yang Perlu Diketahui</h2>
 <p>Berikut beberapa tipe yang sering terjadi:</p>
@@ -142,8 +167,22 @@
 <h3 id="6-shoulder-surfing">6. Shoulder Surfing</h3>
 <p>Teknik ini mengintip langsung dari belakang saat korban sedang melakukan login di tempat umum. Bisa di cafe, kantor, atau tempat ramai lainnya.</p>
 <hr>
+
+<div class="ad-container" style="text-align: center; margin: 20px 0;">
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-client="ca-pub-1926937123072670"
+         data-ad-slot="3981468303"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
 <h2 id="bagaimana-cara-mencegah-credential-attack-tersebut">Bagaimana Cara Mencegah Credential Attack Tersebut?</h2>
-<p>Tenang, ada banyak cara sederhana yang bisa lo lakukan:</p>
+<p>Tenang, ada banyak cara sederhana yang bisa kita lakukan untuk melindungi diri dari serangan ini. Berikut beberapa langkah yang bisa kamu terapkan:</p>
 <ul>
 <li>
 <p><strong>Aktifkan Two-Factor Authentication (2FA)</strong><br>
@@ -168,7 +207,7 @@ Ini kesalahan umum user yang sering dimanfaatin peretas.</p>
 </ul>
 <hr>
 <h2 id="kesimpulan">Kesimpulan</h2>
-<p>Credential attack bisa terjadi ke siapa aja, termasuk kita. Tapi dengan langkah pencegahan yang tepat, kita bisa jauh lebih aman. Ingat, kadang satu password bocor bisa jadi awal dari masalah besar.</p>
+<p>Credential attack bisa terjadi ke siapa aja, dan kita adalah target mereka. Tapi dengan langkah pencegahan yang tepat, kita bisa jauh lebih aman. Ingat, kadang satu password bocor bisa jadi awal dari masalah besar.</p>
 <p>Yuk, mulai lebih waspada dan lindungi akun kita dari sekarang.</p>
 <hr>
 <h2 id="faq">FAQ</h2>
@@ -186,6 +225,23 @@ A: Kamu bisa cek di situs <a href="https://haveibeenpwned.com">https://haveibeen
 <p>Semoga artikel ini membantu kamu lebih memahami tentang credential attack dan cara mencegahnya. Terima kasih.</p>
 
 		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/internet/" rel="tag">Internet</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/users/" rel="tag">Users</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/write-up/" rel="tag">Write Up</a>
+		</li>
+	</ul>
+</div>
+		</footer>
 		<hr>
 		<ins class="adsbygoogle"
 		     style="display:block"
@@ -214,14 +270,8 @@ A: Kamu bisa cek di situs <a href="https://haveibeenpwned.com">https://haveibeen
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/posts/validasi-spf-dkim-dmarc/" rel="prev">
+		<a class="pager__link" href="/posts/https-adalah-website-yang-aman/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">Cara Memvalidasi Konfigurasi SPF, DKIM, dan DMARC dengan Mudah</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/posts/https-adalah-website-yang-aman/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
 			<p class="pager__title">Web Phishing itu HTTP atau HTTPS?</p>
 		</a>
 	</div>
@@ -261,11 +311,11 @@ A: Kamu bisa cek di situs <a href="https://haveibeenpwned.com">https://haveibeen
 		<ul class="widget__list">
     <li class="widget__item">
         <picture>
-            <source srcset="/img/home_hu6327386115775240308.webp" media="(min-width: 1024px)">
-            <source srcset="/img/home_hu11330667846344880316.webp" media="(min-width: 768px) and (max-width: 1023px)">
-            <source srcset="/img/home_hu8113130312594461793.webp" media="(max-width: 767px)">
+            <source srcset="/img/home_hu_3b9b5be8487aaba3.webp" media="(min-width: 1024px)">
+            <source srcset="/img/home_hu_173579ac87338ebc.webp" media="(min-width: 768px) and (max-width: 1023px)">
+            <source srcset="/img/home_hu_db8ab209d61d1924.webp" media="(max-width: 767px)">
             <img class="widget__link"
-                 src="/img/home_hu11330667846344880316.webp" 
+                 src="/img/home_hu_173579ac87338ebc.webp" 
                  width="800"
                  height="694"
                  alt="Di rumah saja"
@@ -280,11 +330,11 @@ A: Kamu bisa cek di situs <a href="https://haveibeenpwned.com">https://haveibeen
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/posts/execution-after-redirect/">Execution After Redirect with Burp Suite</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/https-adalah-website-yang-aman/">Web Phishing itu HTTP atau HTTPS?</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/credential-attack/">Apa Itu Credential Attack? Kenali dan Cegah Sebelum Terlambat</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/https-adalah-website-yang-aman/">Web Phishing itu HTTP atau HTTPS?</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/validasi-spf-dkim-dmarc/">Cara Memvalidasi Konfigurasi SPF, DKIM, dan DMARC dengan Mudah</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/fake-sponsored-jobposting/">Fake Sponsored Jobposting</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/email-security-spf-dkim-dmarc/">Panduan Konfigurasi Email DNS Security (SPF, DKIM, DMARC)</a></li>
 		</ul>
 	</div>
 </div>
@@ -321,7 +371,7 @@ A: Kamu bisa cek di situs <a href="https://haveibeenpwned.com">https://haveibeen
 		<a class="widget-taglist__link widget__link btn" href="/tags/gitdumper/" title="Gitdumper">Gitdumper (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/githack/" title="Githack">Githack (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/incident-response/" title="Incident Response">Incident Response (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (9)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/intrusion-prevention-system/" title="Intrusion Prevention System">Intrusion Prevention System (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/lfi/" title="LFI">LFI (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
@@ -331,9 +381,8 @@ A: Kamu bisa cek di situs <a href="https://haveibeenpwned.com">https://haveibeen
 		<a class="widget-taglist__link widget__link btn" href="/tags/surabaya-hacker-link/" title="Surabaya Hacker Link">Surabaya Hacker Link (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/telegram-bot/" title="Telegram Bot">Telegram Bot (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/users/" title="Users">Users (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/users/" title="Users">Users (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/web-hacking/" title="Web Hacking">Web Hacking (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (33)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>

@@ -20,11 +20,11 @@
     <meta property="article:tag" content="Internet">
     <meta property="article:tag" content="Users">
     <meta property="article:tag" content="Write Up">
-    <meta property="og:image" content="https://potato.id/img/email-security/spf-dkim-dmarc.png">
+    <meta property="og:image" content="https://potato.id/img/dig/thumbnail.png">
 
 		
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://potato.id/img/email-security/spf-dkim-dmarc.png">
+  <meta name="twitter:image" content="https://potato.id/img/dig/thumbnail.png">
   <meta name="twitter:title" content="Cara Memvalidasi Konfigurasi SPF, DKIM, dan DMARC dengan Mudah">
   <meta name="twitter:description" content="Panduan mudah untuk memvalidasi konfigurasi SPF, DKIM, dan DMARC menggunakan dig, WhatsMyDNS.net, dan intoDNS. Cocok untuk pemula yang ingin memastikan email tidak masuk spam.">
 
@@ -123,13 +123,13 @@
             <figure class="post__thumbnail thumbnail">
                 
                 <picture>
-                    <source srcset="/img/email-security/spf-dkim-dmarc_hu8099204864788625391.webp" media="(min-width: 1024px)">
-                    <source srcset="/img/email-security/spf-dkim-dmarc_hu9197358868606532744.webp" media="(min-width: 768px) and (max-width: 1023px)">
-                    <source srcset="/img/email-security/spf-dkim-dmarc_hu15826328059133426917.webp" media="(max-width: 767px)">
+                    <source srcset="/img/dig/thumbnail_hu_963323342fc281d0.webp" media="(min-width: 1024px)">
+                    <source srcset="/img/dig/thumbnail_hu_15057cb6d7552041.webp" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="/img/dig/thumbnail_hu_265531e32b5f9c4e.webp" media="(max-width: 767px)">
                     <img class="thumbnail__image"
-                         src="/img/email-security/spf-dkim-dmarc_hu9197358868606532744.webp"
+                         src="/img/dig/thumbnail_hu_15057cb6d7552041.webp"
                          width="800"
-                         height="430"
+                         height="533"
                          alt="Cara Memvalidasi Konfigurasi SPF, DKIM, dan DMARC dengan Mudah"
                          loading="lazy">
                 </picture>
@@ -160,7 +160,46 @@
 <pre tabindex="0"><code>&#34;v=DMARC1; p=reject; rua=mailto:dmarc@namadomainmu.com&#34;
 </code></pre><p>Jika belum yakin, kamu bisa mulai dari <code>p=none</code> untuk tahap pengujian, lalu meningkat ke <code>quarantine</code> atau <code>reject</code>.</p>
 <h2 id="4-cek-propagasi-dns-global-dengan-whatsmydnsnet">4. Cek Propagasi DNS Global dengan WhatsMyDNS.net</h2>
-<p>Setelah melakukan perubahan, kita juga bisa cek apakah record DNS sudah tersebar ke seluruh dunia menggunakan <a href="https://www.whatsmydns.net">https://www.whatsmydns.net</a>, hal ini penting untuk memastikan bahwa perubahan yang kita lakukan sudah diterima oleh server DNS di seluruh dunia, sangat umum jika belum semua server DNS di seluruh dunia mendapatkan update terbaru dari perubahan yang kita lakukan, hal ini bisa terjadi karena TTL yang terlalu lama atau ada masalah di server DNS yang kita gunakan.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/dig/whatsmydns-net.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/dig/whatsmydns-net_hu_9d4598e1c7f5fe54.webp" media="(min-width: 1024px)">
+        <source srcset="/img/dig/whatsmydns-net_hu_1efff123c441aeab.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/dig/whatsmydns-net_hu_2b6ebb8066f0fbd.webp" media="(max-width: 767px)">
+        <img src="/img/dig/whatsmydns-net_hu_2b6ebb8066f0fbd.webp"
+             alt="WhatsMyDNS"
+             class="hover-effect"
+             width="800"
+             height="567">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        WhatsMyDNS.net untuk Cek Propagasi DNS
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Setelah melakukan perubahan, kita juga bisa cek apakah record DNS sudah tersebar ke seluruh dunia menggunakan <a href="https://www.whatsmydns.net">whatsmydns</a>, hal ini penting untuk memastikan bahwa perubahan yang kita lakukan sudah diterima oleh server DNS di seluruh dunia, sangat umum jika belum semua server DNS di seluruh dunia mendapatkan update terbaru dari perubahan yang kita lakukan, hal ini bisa terjadi karena TTL yang terlalu lama atau ada masalah di server DNS yang kita gunakan.</p>
 <p>Langkah-langkahnya:</p>
 <ol>
 <li>Masukkan nama domain atau subdomain TXT record (contoh: <code>_dmarc.namadomainmu.com</code> atau konfigurasi SPF dan DKIM kamu)</li>
@@ -169,7 +208,46 @@
 </ol>
 <p>Jika hasilnya konsisten dan muncul di berbagai lokasi, berarti propagasi DNS berjalan dengan baik. Jika tidak, tunggu beberapa saat dan coba lagi, namun jika sudah lebih dari 24 jam dan masih tidak muncul, ada kemungkinan ada kesalahan dalam konfigurasi DNS kamu yang perlu diperbaiki. Umumnya hal ini terjadi karena DNS server yang kamu gunakan tidak reliable atau ada kesalahan konfigurasi di server DNS, untuk hal ini kita bisa cek konfigurasi DNS menggunakan alat lain seperti intoDNS.</p>
 <h2 id="check-health-dns-dengan-intodns">Check Health DNS dengan intoDNS</h2>
-<p>Untuk pengecekan DNS kita bisa menggunakan <a href="https://intodns.com">https://intodns.com</a> untuk memastikan konfigurasi DNS kamu sehat dan tidak bermasalah.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/dig/intodns-com.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/dig/intodns-com_hu_fff14b69aebe3ab8.webp" media="(min-width: 1024px)">
+        <source srcset="/img/dig/intodns-com_hu_b3eb88a7fde14042.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/dig/intodns-com_hu_7cde5fc64321ad1e.webp" media="(max-width: 767px)">
+        <img src="/img/dig/intodns-com_hu_7cde5fc64321ad1e.webp"
+             alt="Intodns"
+             class="hover-effect"
+             width="800"
+             height="570">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Intodns DNS Server Health Check
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Untuk pengecekan DNS kita bisa menggunakan <a href="https://intodns.com">intodns.com</a> untuk memastikan konfigurasi DNS kamu sehat dan tidak bermasalah.</p>
 <p>Masukkan domain kamu, dan Intodns akan mendapatkan informasi lengkap seperti:</p>
 <ul>
 <li>NS dan SOA record</li>
@@ -183,6 +261,20 @@
 </ul>
 <p>Hal ini pernah saya jumpai dan bisa dibaca di artikel <a href="https://potato.id/posts/it-was-dns/">It&rsquo;s was DNS</a> dan <a href="https://potato.id/posts/there-is-no-way-it-is-dns/">There is no way it&rsquo;s DNS</a> yang menjelaskan bagaimana kesalahan konfigurasi DNS bisa menyebabkan layanan tidak berjalan dengan baik.</p>
 <p>Secara default jika ada kesalahan, intoDNS akan memberikan saran untuk perbaikannya.</p>
+
+<div class="ad-container" style="text-align: center; margin: 20px 0;">
+    <ins class="adsbygoogle"
+         style="display:block; text-align:center;"
+         data-ad-client="ca-pub-1926937123072670"
+         data-ad-slot="3981468303"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
+
+
 <h2 id="tips-tambahan">Tips Tambahan</h2>
 <ul>
 <li>Gunakan hanya satu SPF record per domain.</li>
@@ -254,9 +346,9 @@ A: Sangat disarankan. DMARC memberikan kebijakan tambahan dan membantu kamu tahu
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/posts/credential-attack/" rel="next">
+		<a class="pager__link" href="/posts/https-adalah-website-yang-aman/" rel="next">
 			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">Apa Itu Credential Attack? Kenali dan Cegah Sebelum Terlambat</p>
+			<p class="pager__title">Web Phishing itu HTTP atau HTTPS?</p>
 		</a>
 	</div>
 </nav>
@@ -295,11 +387,11 @@ A: Sangat disarankan. DMARC memberikan kebijakan tambahan dan membantu kamu tahu
 		<ul class="widget__list">
     <li class="widget__item">
         <picture>
-            <source srcset="/img/home_hu6327386115775240308.webp" media="(min-width: 1024px)">
-            <source srcset="/img/home_hu11330667846344880316.webp" media="(min-width: 768px) and (max-width: 1023px)">
-            <source srcset="/img/home_hu8113130312594461793.webp" media="(max-width: 767px)">
+            <source srcset="/img/home_hu_3b9b5be8487aaba3.webp" media="(min-width: 1024px)">
+            <source srcset="/img/home_hu_173579ac87338ebc.webp" media="(min-width: 768px) and (max-width: 1023px)">
+            <source srcset="/img/home_hu_db8ab209d61d1924.webp" media="(max-width: 767px)">
             <img class="widget__link"
-                 src="/img/home_hu11330667846344880316.webp" 
+                 src="/img/home_hu_173579ac87338ebc.webp" 
                  width="800"
                  height="694"
                  alt="Di rumah saja"
@@ -314,11 +406,11 @@ A: Sangat disarankan. DMARC memberikan kebijakan tambahan dan membantu kamu tahu
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/posts/execution-after-redirect/">Execution After Redirect with Burp Suite</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/https-adalah-website-yang-aman/">Web Phishing itu HTTP atau HTTPS?</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/credential-attack/">Apa Itu Credential Attack? Kenali dan Cegah Sebelum Terlambat</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/https-adalah-website-yang-aman/">Web Phishing itu HTTP atau HTTPS?</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/validasi-spf-dkim-dmarc/">Cara Memvalidasi Konfigurasi SPF, DKIM, dan DMARC dengan Mudah</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/fake-sponsored-jobposting/">Fake Sponsored Jobposting</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/email-security-spf-dkim-dmarc/">Panduan Konfigurasi Email DNS Security (SPF, DKIM, DMARC)</a></li>
 		</ul>
 	</div>
 </div>
@@ -355,7 +447,7 @@ A: Sangat disarankan. DMARC memberikan kebijakan tambahan dan membantu kamu tahu
 		<a class="widget-taglist__link widget__link btn" href="/tags/gitdumper/" title="Gitdumper">Gitdumper (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/githack/" title="Githack">Githack (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/incident-response/" title="Incident Response">Incident Response (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (9)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/intrusion-prevention-system/" title="Intrusion Prevention System">Intrusion Prevention System (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/lfi/" title="LFI">LFI (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
@@ -365,9 +457,8 @@ A: Sangat disarankan. DMARC memberikan kebijakan tambahan dan membantu kamu tahu
 		<a class="widget-taglist__link widget__link btn" href="/tags/surabaya-hacker-link/" title="Surabaya Hacker Link">Surabaya Hacker Link (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/telegram-bot/" title="Telegram Bot">Telegram Bot (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/users/" title="Users">Users (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/users/" title="Users">Users (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/web-hacking/" title="Web Hacking">Web Hacking (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (33)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>

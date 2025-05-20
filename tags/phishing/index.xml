@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Phishing on Jonias Fortuna</title>
+    <link>http://192.168.1.163:1313/tags/phishing/</link>
+    <description>Recent content in Phishing on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Mon, 02 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://192.168.1.163:1313/tags/phishing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Clickfix Simulation and Phishing with Gophish</title>
+      <link>http://192.168.1.163:1313/posts/53.clickfix-simulation-and-phishing-with-gophish/</link>
+      <pubDate>Mon, 02 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://192.168.1.163:1313/posts/53.clickfix-simulation-and-phishing-with-gophish/</guid>
+      <description>&lt;h2 id=&#34;clickfix-simulation-and-phishing-with-gophish&#34;&gt;Clickfix Simulation and Phishing with Gophish&lt;/h2&gt;&#xA;&lt;p&gt;Gophish is an open-source phishing framework that allows you to simulate phishing attacks and test your organization&amp;rsquo;s security awareness. In this guide, we will walk through the steps to set up a phishing simulation using Gophish.&lt;/p&gt;&#xA;&lt;p&gt;We can use last post to create a phishing simulation and clickfix test. The goal is to create a fake login page that looks like a legitimate service, such as Google or Microsoft, and then send out phishing emails to users. When users click on the link in the email, they will be directed to the fake login page.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
