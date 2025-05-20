@@ -16,6 +16,13 @@
       <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Web phishing adalah salah satu metode serangan yang paling sering digunakan oleh para penyerang. Dalam serangan phishing, penyerang membuat situs web palsu yang meniru situs web asli. Situs web palsu ini biasanya digunakan untuk mencuri informasi sensitif dari korban, seperti kredensial login, informasi kartu kredit, dan lain-lain.&lt;/p&gt;&#xA;&lt;p&gt;Presepsi yang umum adalah bahwa situs web phishing selalu menggunakan protokol HTTP. Namun, apakah benar demikian? Apakah situs web phishing tidak pernah menggunakan protokol HTTPS?&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Cara Memvalidasi Konfigurasi SPF, DKIM, dan DMARC dengan Mudah</title>
+      <link>https://potato.id/posts/validasi-spf-dkim-dmarc/</link>
+      <pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/validasi-spf-dkim-dmarc/</guid>
+      <description>&lt;h2 id=&#34;mengapa-validasi-spf-dkim-dan-dmarc-itu-penting&#34;&gt;Mengapa Validasi SPF, DKIM, dan DMARC Itu Penting?&lt;/h2&gt;&#xA;&lt;p&gt;Kalau kamu sudah mengatur SPF, DKIM, dan DMARC di DNS, jangan langsung merasa aman dulu. Konfigurasi yang tidak valid bisa membuat email masuk ke folder spam atau bahkan ditolak oleh server penerima. Untuk itu, validasi sangat penting dilakukan agar konfigurasi yang sudah dibuat benar-benar berfungsi.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-cek-spf-dengan-dig&#34;&gt;1. Cek SPF dengan dig&lt;/h2&gt;&#xA;&lt;p&gt;Dig adalah alat yang sangat berguna untuk memeriksa DNS record. Kamu bisa menggunakannya untuk mengecek SPF record dengan cara berikut:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Fake Sponsored Jobposting</title>
       <link>https://potato.id/posts/fake-sponsored-jobposting/</link>
       <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>

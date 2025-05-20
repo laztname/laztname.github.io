@@ -14,6 +14,9 @@
     <loc>https://potato.id/categories/defensive/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://potato.id/posts/execution-after-redirect/</loc>
+    <lastmod>2025-05-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://potato.id/tags/internet/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
@@ -26,11 +29,20 @@
     <loc>https://potato.id/tags/users/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://potato.id/tags/web-hacking/</loc>
+    <lastmod>2025-05-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://potato.id/posts/https-adalah-website-yang-aman/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/tags/write-up/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/credential-attack/</loc>
+    <lastmod>2025-05-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://potato.id/posts/validasi-spf-dkim-dmarc/</loc>
+    <lastmod>2025-05-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/tags/dns/</loc>
     <lastmod>2025-04-16T00:00:00+00:00</lastmod>
@@ -51,10 +63,10 @@
     <lastmod>2025-01-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/tags/end-users/</loc>
-    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/posts/infostealer-spreading-through-fake-google-recaptcha/</loc>
-    <lastmod>2025-01-05T00:00:00+00:00</lastmod>
+    <lastmod>2025-05-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://potato.id/tags/end-user/</loc>
     <lastmod>2024-06-28T00:00:00+00:00</lastmod>

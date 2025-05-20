@@ -9,6 +9,13 @@
     <lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/categories/offensive/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Execution After Redirect with Burp Suite</title>
+      <link>https://potato.id/posts/execution-after-redirect/</link>
+      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/execution-after-redirect/</guid>
+      <description>&lt;p&gt;Execution After Redirect atau EAR adalah teknik yang digunakan untuk mengeksekusi kode setelah proses redirect. Teknik ini biasanya digunakan untuk bypass beberapa fitur keamanan yang ada pada aplikasi web. Pada artikel ini, kita akan membahas bagaimana melakukan exploitasi EAR menggunakan Burp Suite.&lt;/p&gt;&#xA;&lt;h2 id=&#34;apa-itu-execution-after-redirect-ear&#34;&gt;Apa itu Execution After Redirect (EAR)?&lt;/h2&gt;&#xA;&lt;p&gt;Execution After Redirect biasanya ditemui pada aplikasi web dengan style code native yang menggunakan mekanisme redirect untuk mengarahkan user ke halaman lain setelah melakukan proses tertentu, seperti setelah login atau registrasi. Pada beberapa kasus, aplikasi web tidak memanggil fungsi exit() atau die() setelah melakukan proses redirect, sehingga kode yang ada setelah proses redirect tetap dieksekusi.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Web Phishing itu HTTP atau HTTPS?</title>
       <link>https://potato.id/posts/https-adalah-website-yang-aman/</link>
       <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
