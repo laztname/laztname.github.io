@@ -219,6 +219,13 @@
       <description>&lt;p&gt;Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana,&#xA;Challenges ini bertemakan QR Code Generator, namun letak vulnerability-nya tidak pada QR Code tersebut, lalu berikut adalah cara sederhana menyelesaikannya&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Diberikan Challenges&lt;br&gt;&#xA;&lt;img src=&#34;https://potato.id/img/qr/challenges.webp&#34; alt=&#34;telegram&#34;&gt;&lt;br&gt;&#xA;Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Pengecekan Source Code&lt;br&gt;&#xA;&lt;img src=&#34;https://potato.id/img/qr/source.webp&#34; alt=&#34;source-code&#34;&gt;&lt;br&gt;&#xA;Sebelum kita coba fitur dari web ini, kita cek source code-nya, apakah ada yang mencurigakan atau comment info dari pembuat Ternyata tidak ada apa-apa selain comment default dari bootstrap&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Bagaimana saya membuat website ini</title>
+      <link>https://potato.id/posts/how-i-deploy-this-site/</link>
+      <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/how-i-deploy-this-site/</guid>
+      <description>&lt;p&gt;Sudah dari dulu saya ingin mempunyai blog dan e-mail custom sendiri, dan pada akhirnya saya melakukan blogging menggunakan wordpress, namun karena budget mahasiswa saya hanya bisa membeli domain web.id (sekarang sudah bisa sewa .id :D) dan hostingan termurah (100.000 per tahun) di &lt;a href=&#34;https://dracoola.com/&#34;&gt;Dracoola&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Setelah membuat beberapa artikel dengan wordpress, disk usage hosting udah kemakan banyak jadinya saya tidak menambah artikel baru dan terasa berat untuk mengaksesnya, semenjak saat itu saya berhenti sejenak.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Websitemu di Hack?, Lakukan hal berikut</title>
       <link>https://potato.id/posts/my-website-hacked-now-what/</link>
       <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>

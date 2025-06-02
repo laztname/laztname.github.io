@@ -99,5 +99,12 @@
       <guid>https://potato.id/posts/bash-job-management-and-shortcut/</guid>
       <description>&lt;p&gt;Mungkin kita sering ketika sedang berurusan dengan terminal kita diminta untuk kerja cepat, hal ini sudah dibantu dengan bash-completion yang membuat kita dapat mengetikan command secara otomatis dengan menekan tombol &lt;code&gt;[TAB]&lt;/code&gt; sebanyak 2 kali, tapi pada umumnya terminal memiliki shortcuts yang membantu kita bisa bekerja dengan linux secara mudah dan cepat, berikut adalah list umum shortcut pada terminal, list ini saya ambil dari academy hack the box.&lt;/p&gt;&#xA;&lt;p&gt;Auto Completion&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;[TAB]&lt;/code&gt; - Inisiasi auto completion command&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Bagaimana saya membuat website ini</title>
+      <link>https://potato.id/posts/how-i-deploy-this-site/</link>
+      <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/how-i-deploy-this-site/</guid>
+      <description>&lt;p&gt;Sudah dari dulu saya ingin mempunyai blog dan e-mail custom sendiri, dan pada akhirnya saya melakukan blogging menggunakan wordpress, namun karena budget mahasiswa saya hanya bisa membeli domain web.id (sekarang sudah bisa sewa .id :D) dan hostingan termurah (100.000 per tahun) di &lt;a href=&#34;https://dracoola.com/&#34;&gt;Dracoola&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Setelah membuat beberapa artikel dengan wordpress, disk usage hosting udah kemakan banyak jadinya saya tidak menambah artikel baru dan terasa berat untuk mengaksesnya, semenjak saat itu saya berhenti sejenak.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

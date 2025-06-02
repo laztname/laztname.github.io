@@ -71,5 +71,12 @@
       <guid>https://potato.id/posts/secure-surfing-practice/</guid>
       <description>&lt;p&gt;Internet menjadi bagian penting dalam kehidupan sehari-hari, paling umum internet digunakan sebagai media sumber informasi dan hiburan. Namun, penggunaan internet yang tidak bijak dan baik dapat membahayakan keamanan data dan privasi. Berikut adalah beberapa langkah yang dapat diikuti agar tetap aman saat ber-internet:&lt;/p&gt;&#xA;&lt;h2 id=&#34;menambahkan-web-proctection&#34;&gt;Menambahkan web proctection&lt;/h2&gt;&#xA;&lt;p&gt;Install Malwarebytes Browser Guard Extension pada Browser yang digunakan, dengan ini malwarebytes akan melakukan aksi block ketika kita secara tidak sadar membuka sebuah website yang mencurigakan maupun website yang terindikasi malware / trojan&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Bagaimana saya membuat website ini</title>
+      <link>https://potato.id/posts/how-i-deploy-this-site/</link>
+      <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/how-i-deploy-this-site/</guid>
+      <description>&lt;p&gt;Sudah dari dulu saya ingin mempunyai blog dan e-mail custom sendiri, dan pada akhirnya saya melakukan blogging menggunakan wordpress, namun karena budget mahasiswa saya hanya bisa membeli domain web.id (sekarang sudah bisa sewa .id :D) dan hostingan termurah (100.000 per tahun) di &lt;a href=&#34;https://dracoola.com/&#34;&gt;Dracoola&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Setelah membuat beberapa artikel dengan wordpress, disk usage hosting udah kemakan banyak jadinya saya tidak menambah artikel baru dan terasa berat untuk mengaksesnya, semenjak saat itu saya berhenti sejenak.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>
