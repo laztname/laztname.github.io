@@ -1,110 +1,59 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Offensive on Jonias Fortuna</title>
-    <link>https://potato.id/categories/offensive/</link>
-    <description>Recent content in Offensive on Jonias Fortuna</description>
-    <generator>Hugo</generator>
-    <language>id-ID</language>
-    <lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://potato.id/categories/offensive/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Apa Itu Credential Attack? Kenali dan Cegah Sebelum Terlambat</title>
-      <link>https://potato.id/posts/credential-attack/</link>
-      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/credential-attack/</guid>
-      <description>&lt;h2 id=&#34;apa-itu-credential-attack&#34;&gt;Apa Itu Credential Attack?&lt;/h2&gt;&#xA;&lt;p&gt;Credential attack atau serangan kredensial adalah upaya peretasan untuk mengambil alih akun seseorang dengan cara mencuri username dan password. Biasanya ini dilakukan lewat teknik kayak &lt;strong&gt;phishing&lt;/strong&gt;, &lt;strong&gt;credential stuffing&lt;/strong&gt;, hingga &lt;strong&gt;brute force&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Gampangnya, mereka ngintip, nebak, atau mencoba ribuan kombinasi password buat masuk ke akun kalian, setelah itu mereka bisa ngakses semua data yang ada di dalamnya. seperti akun email, akun media sosial, akun game hingga akun banking.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Web Phishing itu HTTP atau HTTPS?</title>
-      <link>https://potato.id/posts/https-adalah-website-yang-aman/</link>
-      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/https-adalah-website-yang-aman/</guid>
-      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Web phishing adalah salah satu metode serangan yang paling sering digunakan oleh para penyerang. Dalam serangan phishing, penyerang membuat situs web palsu yang meniru situs web asli. Situs web palsu ini biasanya digunakan untuk mencuri informasi sensitif dari korban, seperti kredensial login, informasi kartu kredit, dan lain-lain.&lt;/p&gt;&#xA;&lt;p&gt;Presepsi yang umum adalah bahwa situs web phishing selalu menggunakan protokol HTTP. Namun, apakah benar demikian? Apakah situs web phishing tidak pernah menggunakan protokol HTTPS?&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Fake Sponsored Jobposting</title>
-      <link>https://potato.id/posts/fake-sponsored-jobposting/</link>
-      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/fake-sponsored-jobposting/</guid>
-      <description>&lt;p&gt;Sebenarnya ini adalah post lama sempat ramai tahun lalu, saat browsing di Facebook seringkali muncul iklan lowongan kerja dari PT ternama dan pada sektor tertentu seperti sektor tambang, pabrik buruh dan blue collar lainnya, seperti loker yang ada di PT. Epson, PT. Unilever, PT. Indofood dan loker PT lainnya yang mengarahkan kita untuk melakukan pendaftaran secara online dengan mengisi data-data pribadi kita seperti nama, alamat, nomor telepon dan lain-lain.&lt;/p&gt;&#xA;&lt;p&gt;Namun, tidak sedikit yang mengetahui bahwa iklan tersebut adalah iklan palsu yang bertujuan untuk personal-profit pelaku. Kurang lebih seperti ini alur yang dilakukan oleh para penipu tersebut.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>mshta.exe - Threat Actor&#39;s Favorite Weapon</title>
-      <link>https://potato.id/posts/mshta-exe-threat-actors-favorite-weapon/</link>
-      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/mshta-exe-threat-actors-favorite-weapon/</guid>
-      <description>&lt;h2 id=&#34;apa-itu-mshtaexe&#34;&gt;Apa itu mshta.exe?&lt;/h2&gt;&#xA;&lt;p&gt;mshta.exe adalah utility file system Windows yang digunakan untuk menjalankan file Microsoft HTML Application (.HTA). Program ini memungkinkan untuk melakukan eksekusi script berbasis VBScript atau JScript, menjadikannya sebagai tool yang berguna bagi administrator akan tetapi juga menjadi tool yang sering disalahgunakan oleh threat actors.&lt;/p&gt;&#xA;&lt;h2 id=&#34;mengapa-mshtaexe-sering-digunakan-oleh-threat-actor&#34;&gt;Mengapa mshta.exe sering digunakan oleh Threat Actor?&lt;/h2&gt;&#xA;&lt;p&gt;Threat Actor sering menyalahgunakan mshta.exe untuk menjalankan kode berbahaya untuk tidak terdeteksi oleh antivirus atau solusi keamanan lainnya (EDR). Beberapa alasan mengapa mshta.exe sering digunakan dalam serangan malware antara lain:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>DNS Security, Maybe?</title>
-      <link>https://potato.id/posts/dns-security-maybe/</link>
-      <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/dns-security-maybe/</guid>
-      <description>&lt;p&gt;Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack serta serangan lainnya, hanya beberapa event yang pernah saya alami saja.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Infostealer Spreading Through Fake Google reCAPTCHA</title>
-      <link>https://potato.id/posts/infostealer-spreading-through-fake-google-recaptcha/</link>
-      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/infostealer-spreading-through-fake-google-recaptcha/</guid>
-      <description>&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;&#xA;&lt;p&gt;Desember ini saya mendapatkan sebuah notifikasi dari sebuah group Facebook yang saya ikuti, dalam post tersebut (sekarang di hapus) berisi sebuah screenshot seperti gambar di atas, lengkap dengan caption: &lt;em&gt;&amp;lsquo;Apakah ini berbahaya atau nggak? Kok captchanya aneh.&amp;rsquo;&amp;quot;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;dalam komentar tersebut Thread Starter menambahkan sebuah screenshot gambar lain yang berisi text yang harus dipaste ke program run.exe seperti berikut&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;&#xA;  &lt;figure class=&#34;mb-5&#34;&gt;&#xA;    &lt;a href=&#34;https://potato.id/img/infostealer/2.png&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;image-link&#34;&gt;&#xA;      &lt;picture&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/infostealer/2_hu_f9c74d422db37a87.webp&#34; media=&#34;(min-width: 1024px)&#34;&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/infostealer/2_hu_191fafe9e808783c.webp&#34; media=&#34;(min-width: 768px) and (max-width: 1023px)&#34;&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/infostealer/2_hu_de649da62fb1eb20.webp&#34; media=&#34;(max-width: 767px)&#34;&gt;&#xA;        &lt;img src=&#34;https://potato.id/img/infostealer/2_hu_de649da62fb1eb20.webp&#34;&#xA;             alt=&#34;text&#34;&#xA;             class=&#34;hover-effect&#34;&#xA;             width=&#34;800&#34;&#xA;             height=&#34;246&#34;&gt;&#xA;      &lt;/picture&gt;&#xA;    &lt;/a&gt;&#xA;&#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&#xA;&#xA;&lt;p&gt;Jelas sekali bahwa ini sebuah malware. mshta itu file bawaan Windows yang fungsinya untuk menjalankan command dari aplikasi HTA di environment Windows dan sering sekali dipakai oleh threat actors sebagai salah satu teknik serangan mereka &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Surabaya Hacker Link Underground Write Up</title>
-      <link>https://potato.id/posts/surabaya-hacker-link-underground-hack-the-box-write-up-challenges/</link>
-      <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/surabaya-hacker-link-underground-hack-the-box-write-up-challenges/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;&#34;&gt;Information&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;challenges-information&#34;&gt;Challenges Information&lt;/h2&gt;&#xA;&lt;p&gt;Ini adalah write-up challenges dari Surabaya Hacker Link untuk mesin Underground, mesin ini dibuat dengan menggunakan salah satu Vulnerable Web yang biasa SHL gunakan untuk demo session dengan beberapa vulnerability yang telah diperbaiki agar challenges ini sedikit menarik.&lt;/p&gt;&#xA;&lt;h2 id=&#34;challenges&#34;&gt;Challenges&lt;/h2&gt;&#xA;&lt;p&gt;Pada web &lt;a href=&#34;https://forum.surabayahackerlink.org/d/3462-new-challenges-underground&#34;&gt;Forum Surabaya Hacker Link&lt;/a&gt; terdapat informasi challenges baru pengganti Heaven (&lt;a href=&#34;https://potato.id/posts/solution-for-shl-challenges-heaven-vm/&#34;&gt;Write-up Heaven VM ada di sini&lt;/a&gt;) informasi pada forum saya rasa cukup jelas seperti jangan merusak, jangan spoil, take the root and read root.txt, di sini saya menggunakan IP 110.93.14.30&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Retas.io Hellbound VM Write-up</title>
-      <link>https://potato.id/posts/retas-io-hellbound-vm-write-up/</link>
-      <pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/retas-io-hellbound-vm-write-up/</guid>
-      <description>&lt;p&gt;Langsung saja to the point, mesin ini susah titik. Dari awal launching labs sudah ada 3 mesin yaitu Zombie, Hellbound dan Anonymouz maka mesin inillah yang menurut saya cukup hard karena ya mungkin kurangnya pengalaman dalam bereksploitasi dan feeling yang kuat. Hingga write up ini ditulis penulis juga masih belum mendapatkan flag root user, masih nyetuck di www-data. Beruntung saja user flag readable sama si www-data dengan ini sudah bisa submit flag user.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Retas.io Zombie VM Write-up</title>
-      <link>https://potato.id/posts/retas-io-zombie-vm-write-up/</link>
-      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/retas-io-zombie-vm-write-up/</guid>
-      <description>&lt;p&gt;Retas.io merupakan sebuah perusahaan dari PT. Solusi Siber Teknologi yang menawarkan berbagai produk berupa jasa keamanan mulai dari Vulnerability Assesment, Penetration Testing hingga kebutuhan khusus lainnya yang berkaitan dengan IT dan keamanannya.&lt;/p&gt;&#xA;&lt;p&gt;Baru-baru ini retas.io meluncurkan sebuah produk baru berupa labs yang berguna untuk membantu para player baru yang terjun ke dunia Infosec, labs ini sendiri mirip-mirip hackthebox, dengan menggunakan vpn kita diharuskan menyelesaikan tantangan yang diberikan dengan pengetahuan dan kemampuan IT para player, tidak hanya itu mereka juga akan merilis kampus retas yang bertujuan memberikan pendidikan / pelatihan untuk terjun di dunia Infosec, namun pada saat tulisan ini dibuat fitur tersebut masih dalam proses pengerjaan, langsung saja berikut adalah write-up dari Challenges VM Zombie yang ada pada labs retas.io.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Penyelesaian Challenges Malang Hacker Link</title>
-      <link>https://potato.id/posts/solution-for-mhl-challenges/</link>
-      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/solution-for-mhl-challenges/</guid>
-      <description>&lt;p&gt;Setelah lama tidak membuat challenges karena waktu senggang yang makin dikit karena tugas yang makin banyak dan menumpuk karena tidak segera dikerjakan, akhirnya dapat info challenges dari temen di group telegram, challenges ini merupakan challenges buatan dari komunitas lain yaitu Malang Hacker Link, challengesnya cukup unik dan menyenangkan untuk dikerjakan karena ilmu perdukunan  tidak perlu digunakan.&lt;/p&gt;&#xA;&lt;p&gt;Langsung saja dari informasi tersebut langsung buka linknya dan didapatkan form dengan isian first dan last name karena belum menjelajah dan mendapatkan clue, kita mencoba menggunakan fitur ini untuk mengetahui output dari aplikasi web ini, untuk isian firstname diisikan abc dan untuk lastname dengan def&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Penyelesaian Challenges Surabaya Hacker Link VM Heaven</title>
-      <link>https://potato.id/posts/solution-for-shl-challenges-heaven-vm/</link>
-      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/solution-for-shl-challenges-heaven-vm/</guid>
-      <description>&lt;p&gt;Karena mesin ini sudah ditarik dan sudah dirasa tidak relevan untuk sebuah challenges, maka dari itu saya membuat penyelesaian bagaimana menyelesaikan mesin vm heaven dari Surabaya Hacker Link.&lt;/p&gt;&#xA;&lt;p&gt;Sebenarnya untuk menyelesaikan challenges ini hampir tidak dibutuhkan tools hacking khusus seperti sqlmap ataupun metasploit karena challenges ini sangat mudah, tidak diperlukan pengetahuan khusus tentang hacking. cukup terbiasa dengan sistem operasi GNU/Linux dan pengetahuan mendasar tentang bagaimana melakukan pwning (owning) terhadap mesin maka VM dapat diselesaikan dengan mudah.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Solution for Inclusion Challenges</title>
-      <link>https://potato.id/posts/solution-for-inclusion-challenges/</link>
-      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/solution-for-inclusion-challenges/</guid>
-      <description>&lt;p&gt;Seperti biasa di group Surabaya Hacker Link terdapat beragam challenges, tidak hanya dari staff admin saja yang membuat, namun ada member yang mempunyai challenges dan saya ikut membantu deploy soal challenges tersebut, tidak hanya men-deploy tapi tentunya ikut mencoba challenges tersebut :3&lt;/p&gt;&#xA;&lt;p&gt;Tanpa basa-basi langsung akses challenges tersebut berada di challshl.com&lt;/p&gt;&#xA;&lt;p&gt;Karena ikut campur saat deploy, jadi saya sedikit tahu dimana bug dari challenges tersebut berada, istilah kerennya white-box pentest untuk pentest dengan membaca source code dari website tersebut *cmiiw&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Solution for Ramadhan Challenges</title>
-      <link>https://potato.id/posts/solution-for-ramadhan-challenges/</link>
-      <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/solution-for-ramadhan-challenges/</guid>
-      <description>&lt;p&gt;Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di &lt;a href=&#34;https://stts.edu&#34;&gt;STTS&lt;/a&gt;, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui &lt;code&gt;/self/proc/environ&lt;/code&gt; dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>SQL Injection Into XRDP Account Take Over</title>
-      <link>https://potato.id/posts/sql-injection-into-xrdp-account-take-over/</link>
-      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/sql-injection-into-xrdp-account-take-over/</guid>
-      <description>&lt;p&gt;Well mungkin judulnya agak &lt;em&gt;&lt;strong&gt;click bait&lt;/strong&gt;&lt;/em&gt; sql injection sendiri tidak bisa melakukan injeksi sampai ke RDP Account Take Over xD&lt;/p&gt;&#xA;&lt;p&gt;Sebenarnya tujuan awal cuman ingin download anime di moesubs.com sih, namu saat membuka webnya ada url yang sangat pantas untuk dicurigai yaitu&lt;br&gt;&#xA;&lt;code&gt;https://moesubs.com/?hal=dlrilisan&amp;amp;id=591&lt;/code&gt;&lt;br&gt;&#xA;yaudah deh coba cek pake &lt;code&gt;&#39;&lt;/code&gt; dan hasilnya web tersebut error, setelah error melakukan balancing pakai comment SQL &lt;code&gt;--+-&lt;/code&gt; hasilnya web balik jadi normal lagi, oke lanjut ke order by&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Offensive on Jonias Fortuna</title><link>https://potato.id/categories/offensive/</link><description>Recent content in Offensive on Jonias Fortuna</description><generator>Hugo</generator><language>id-ID</language><lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/categories/offensive/index.xml" rel="self" type="application/rss+xml"/><item><title>Apa Itu Credential Attack? Kenali dan Cegah Sebelum Terlambat</title><link>https://potato.id/posts/credential-attack/</link><pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/credential-attack/</guid><description>&lt;h2 id="apa-itu-credential-attack">Apa Itu Credential Attack?&lt;/h2>
+&lt;p>Credential attack atau serangan kredensial adalah upaya peretasan untuk mengambil alih akun seseorang dengan cara mencuri username dan password. Biasanya ini dilakukan lewat teknik kayak &lt;strong>phishing&lt;/strong>, &lt;strong>credential stuffing&lt;/strong>, hingga &lt;strong>brute force&lt;/strong>.&lt;/p>
+&lt;p>Gampangnya, mereka ngintip, nebak, atau mencoba ribuan kombinasi password buat masuk ke akun kalian, setelah itu mereka bisa ngakses semua data yang ada di dalamnya. seperti akun email, akun media sosial, akun game hingga akun banking.&lt;/p></description></item><item><title>Web Phishing itu HTTP atau HTTPS?</title><link>https://potato.id/posts/https-adalah-website-yang-aman/</link><pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/https-adalah-website-yang-aman/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Web phishing adalah salah satu metode serangan yang paling sering digunakan oleh para penyerang. Dalam serangan phishing, penyerang membuat situs web palsu yang meniru situs web asli. Situs web palsu ini biasanya digunakan untuk mencuri informasi sensitif dari korban, seperti kredensial login, informasi kartu kredit, dan lain-lain.&lt;/p>
+&lt;p>Presepsi yang umum adalah bahwa situs web phishing selalu menggunakan protokol HTTP. Namun, apakah benar demikian? Apakah situs web phishing tidak pernah menggunakan protokol HTTPS?&lt;/p></description></item><item><title>Fake Sponsored Jobposting</title><link>https://potato.id/posts/fake-sponsored-jobposting/</link><pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/fake-sponsored-jobposting/</guid><description>&lt;p>Sebenarnya ini adalah post lama sempat ramai tahun lalu, saat browsing di Facebook seringkali muncul iklan lowongan kerja dari PT ternama dan pada sektor tertentu seperti sektor tambang, pabrik buruh dan blue collar lainnya, seperti loker yang ada di PT. Epson, PT. Unilever, PT. Indofood dan loker PT lainnya yang mengarahkan kita untuk melakukan pendaftaran secara online dengan mengisi data-data pribadi kita seperti nama, alamat, nomor telepon dan lain-lain.&lt;/p>
+&lt;p>Namun, tidak sedikit yang mengetahui bahwa iklan tersebut adalah iklan palsu yang bertujuan untuk personal-profit pelaku. Kurang lebih seperti ini alur yang dilakukan oleh para penipu tersebut.&lt;/p></description></item><item><title>mshta.exe - Threat Actor's Favorite Weapon</title><link>https://potato.id/posts/mshta-exe-threat-actors-favorite-weapon/</link><pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/mshta-exe-threat-actors-favorite-weapon/</guid><description>&lt;h2 id="apa-itu-mshtaexe">Apa itu mshta.exe?&lt;/h2>
+&lt;p>mshta.exe adalah utility file system Windows yang digunakan untuk menjalankan file Microsoft HTML Application (.HTA). Program ini memungkinkan untuk melakukan eksekusi script berbasis VBScript atau JScript, menjadikannya sebagai tool yang berguna bagi administrator akan tetapi juga menjadi tool yang sering disalahgunakan oleh threat actors.&lt;/p>
+&lt;h2 id="mengapa-mshtaexe-sering-digunakan-oleh-threat-actor">Mengapa mshta.exe sering digunakan oleh Threat Actor?&lt;/h2>
+&lt;p>Threat Actor sering menyalahgunakan mshta.exe untuk menjalankan kode berbahaya untuk tidak terdeteksi oleh antivirus atau solusi keamanan lainnya (EDR). Beberapa alasan mengapa mshta.exe sering digunakan dalam serangan malware antara lain:&lt;/p></description></item><item><title>DNS Security, Maybe?</title><link>https://potato.id/posts/dns-security-maybe/</link><pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/dns-security-maybe/</guid><description>&lt;p>Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack serta serangan lainnya, hanya beberapa event yang pernah saya alami saja.&lt;/p></description></item><item><title>Infostealer Spreading Through Fake Google reCAPTCHA</title><link>https://potato.id/posts/infostealer-spreading-through-fake-google-recaptcha/</link><pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/infostealer-spreading-through-fake-google-recaptcha/</guid><description>&lt;h2 id="the-beginning">The Beginning&lt;/h2>
+&lt;p>Desember ini saya mendapatkan sebuah notifikasi dari sebuah group Facebook yang saya ikuti, dalam post tersebut (sekarang di hapus) berisi sebuah screenshot seperti gambar di atas, lengkap dengan caption: &lt;em>&amp;lsquo;Apakah ini berbahaya atau nggak? Kok captchanya aneh.&amp;rsquo;&amp;quot;&lt;/em>&lt;/p>
+&lt;p>dalam komentar tersebut Thread Starter menambahkan sebuah screenshot gambar lain yang berisi text yang harus dipaste ke program run.exe seperti berikut&lt;/p>
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+ 
+ 
+
+ &lt;figure class="mb-5">
+ &lt;a href="https://potato.id/img/infostealer/2.png" target="_blank" rel="noopener noreferrer" class="image-link">
+ &lt;picture>
+ &lt;source srcset="https://potato.id/img/infostealer/2_hu_f9c74d422db37a87.webp" media="(min-width: 1024px)">
+ &lt;source srcset="https://potato.id/img/infostealer/2_hu_191fafe9e808783c.webp" media="(min-width: 768px) and (max-width: 1023px)">
+ &lt;source srcset="https://potato.id/img/infostealer/2_hu_de649da62fb1eb20.webp" media="(max-width: 767px)">
+ &lt;img src="https://potato.id/img/infostealer/2_hu_de649da62fb1eb20.webp"
+ alt="text"
+ class="hover-effect"
+ width="800"
+ height="246">
+ &lt;/picture>
+ &lt;/a>
+
+ 
+ &lt;/figure>
+
+
+
+&lt;p>Jelas sekali bahwa ini sebuah malware. mshta itu file bawaan Windows yang fungsinya untuk menjalankan command dari aplikasi HTA di environment Windows dan sering sekali dipakai oleh threat actors sebagai salah satu teknik serangan mereka &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p></description></item><item><title>Surabaya Hacker Link Underground Write Up</title><link>https://potato.id/posts/surabaya-hacker-link-underground-hack-the-box-write-up-challenges/</link><pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate><guid>https://potato.id/posts/surabaya-hacker-link-underground-hack-the-box-write-up-challenges/</guid><description>&lt;p>&lt;a href="">Information&lt;/a>&lt;/p>
+&lt;h2 id="challenges-information">Challenges Information&lt;/h2>
+&lt;p>Ini adalah write-up challenges dari Surabaya Hacker Link untuk mesin Underground, mesin ini dibuat dengan menggunakan salah satu Vulnerable Web yang biasa SHL gunakan untuk demo session dengan beberapa vulnerability yang telah diperbaiki agar challenges ini sedikit menarik.&lt;/p>
+&lt;h2 id="challenges">Challenges&lt;/h2>
+&lt;p>Pada web &lt;a href="https://forum.surabayahackerlink.org/d/3462-new-challenges-underground">Forum Surabaya Hacker Link&lt;/a> terdapat informasi challenges baru pengganti Heaven (&lt;a href="https://potato.id/posts/solution-for-shl-challenges-heaven-vm/">Write-up Heaven VM ada di sini&lt;/a>) informasi pada forum saya rasa cukup jelas seperti jangan merusak, jangan spoil, take the root and read root.txt, di sini saya menggunakan IP 110.93.14.30&lt;/p></description></item><item><title>Retas.io Hellbound VM Write-up</title><link>https://potato.id/posts/retas-io-hellbound-vm-write-up/</link><pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate><guid>https://potato.id/posts/retas-io-hellbound-vm-write-up/</guid><description>&lt;p>Langsung saja to the point, mesin ini susah titik. Dari awal launching labs sudah ada 3 mesin yaitu Zombie, Hellbound dan Anonymouz maka mesin inillah yang menurut saya cukup hard karena ya mungkin kurangnya pengalaman dalam bereksploitasi dan feeling yang kuat. Hingga write up ini ditulis penulis juga masih belum mendapatkan flag root user, masih nyetuck di www-data. Beruntung saja user flag readable sama si www-data dengan ini sudah bisa submit flag user.&lt;/p></description></item><item><title>Retas.io Zombie VM Write-up</title><link>https://potato.id/posts/retas-io-zombie-vm-write-up/</link><pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate><guid>https://potato.id/posts/retas-io-zombie-vm-write-up/</guid><description>&lt;p>Retas.io merupakan sebuah perusahaan dari PT. Solusi Siber Teknologi yang menawarkan berbagai produk berupa jasa keamanan mulai dari Vulnerability Assesment, Penetration Testing hingga kebutuhan khusus lainnya yang berkaitan dengan IT dan keamanannya.&lt;/p>
+&lt;p>Baru-baru ini retas.io meluncurkan sebuah produk baru berupa labs yang berguna untuk membantu para player baru yang terjun ke dunia Infosec, labs ini sendiri mirip-mirip hackthebox, dengan menggunakan vpn kita diharuskan menyelesaikan tantangan yang diberikan dengan pengetahuan dan kemampuan IT para player, tidak hanya itu mereka juga akan merilis kampus retas yang bertujuan memberikan pendidikan / pelatihan untuk terjun di dunia Infosec, namun pada saat tulisan ini dibuat fitur tersebut masih dalam proses pengerjaan, langsung saja berikut adalah write-up dari Challenges VM Zombie yang ada pada labs retas.io.&lt;/p></description></item><item><title>Penyelesaian Challenges Malang Hacker Link</title><link>https://potato.id/posts/solution-for-mhl-challenges/</link><pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate><guid>https://potato.id/posts/solution-for-mhl-challenges/</guid><description>&lt;p>Setelah lama tidak membuat challenges karena waktu senggang yang makin dikit karena tugas yang makin banyak dan menumpuk karena tidak segera dikerjakan, akhirnya dapat info challenges dari temen di group telegram, challenges ini merupakan challenges buatan dari komunitas lain yaitu Malang Hacker Link, challengesnya cukup unik dan menyenangkan untuk dikerjakan karena ilmu perdukunan tidak perlu digunakan.&lt;/p>
+&lt;p>Langsung saja dari informasi tersebut langsung buka linknya dan didapatkan form dengan isian first dan last name karena belum menjelajah dan mendapatkan clue, kita mencoba menggunakan fitur ini untuk mengetahui output dari aplikasi web ini, untuk isian firstname diisikan abc dan untuk lastname dengan def&lt;/p></description></item><item><title>Penyelesaian Challenges Surabaya Hacker Link VM Heaven</title><link>https://potato.id/posts/solution-for-shl-challenges-heaven-vm/</link><pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate><guid>https://potato.id/posts/solution-for-shl-challenges-heaven-vm/</guid><description>&lt;p>Karena mesin ini sudah ditarik dan sudah dirasa tidak relevan untuk sebuah challenges, maka dari itu saya membuat penyelesaian bagaimana menyelesaikan mesin vm heaven dari Surabaya Hacker Link.&lt;/p>
+&lt;p>Sebenarnya untuk menyelesaikan challenges ini hampir tidak dibutuhkan tools hacking khusus seperti sqlmap ataupun metasploit karena challenges ini sangat mudah, tidak diperlukan pengetahuan khusus tentang hacking. cukup terbiasa dengan sistem operasi GNU/Linux dan pengetahuan mendasar tentang bagaimana melakukan pwning (owning) terhadap mesin maka VM dapat diselesaikan dengan mudah.&lt;/p></description></item><item><title>Solution for Inclusion Challenges</title><link>https://potato.id/posts/solution-for-inclusion-challenges/</link><pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate><guid>https://potato.id/posts/solution-for-inclusion-challenges/</guid><description>&lt;p>Seperti biasa di group Surabaya Hacker Link terdapat beragam challenges, tidak hanya dari staff admin saja yang membuat, namun ada member yang mempunyai challenges dan saya ikut membantu deploy soal challenges tersebut, tidak hanya men-deploy tapi tentunya ikut mencoba challenges tersebut :3&lt;/p>
+&lt;p>Tanpa basa-basi langsung akses challenges tersebut berada di challshl.com&lt;/p>
+&lt;p>Karena ikut campur saat deploy, jadi saya sedikit tahu dimana bug dari challenges tersebut berada, istilah kerennya white-box pentest untuk pentest dengan membaca source code dari website tersebut *cmiiw&lt;/p></description></item><item><title>Solution for Ramadhan Challenges</title><link>https://potato.id/posts/solution-for-ramadhan-challenges/</link><pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate><guid>https://potato.id/posts/solution-for-ramadhan-challenges/</guid><description>&lt;p>Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di &lt;a href="https://stts.edu">STTS&lt;/a>, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui &lt;code>/self/proc/environ&lt;/code> dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.&lt;/p></description></item><item><title>SQL Injection Into XRDP Account Take Over</title><link>https://potato.id/posts/sql-injection-into-xrdp-account-take-over/</link><pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate><guid>https://potato.id/posts/sql-injection-into-xrdp-account-take-over/</guid><description>&lt;p>Well mungkin judulnya agak &lt;em>&lt;strong>click bait&lt;/strong>&lt;/em> sql injection sendiri tidak bisa melakukan injeksi sampai ke RDP Account Take Over xD&lt;/p>
+&lt;p>Sebenarnya tujuan awal cuman ingin download anime di moesubs.com sih, namu saat membuka webnya ada url yang sangat pantas untuk dicurigai yaitu&lt;br>
+&lt;code>https://moesubs.com/?hal=dlrilisan&amp;amp;id=591&lt;/code>&lt;br>
+yaudah deh coba cek pake &lt;code>'&lt;/code> dan hasilnya web tersebut error, setelah error melakukan balancing pakai comment SQL &lt;code>--+-&lt;/code> hasilnya web balik jadi normal lagi, oke lanjut ke order by&lt;/p></description></item></channel></rss>

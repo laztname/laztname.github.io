@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Phishing on Jonias Fortuna</title><link>https://potato.id/tags/phishing/</link><description>Recent content in Phishing on Jonias Fortuna</description><generator>Hugo</generator><language>id-ID</language><lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/phishing/index.xml" rel="self" type="application/rss+xml"/><item><title>Web Phishing itu HTTP atau HTTPS?</title><link>https://potato.id/posts/https-adalah-website-yang-aman/</link><pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/https-adalah-website-yang-aman/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Web phishing adalah salah satu metode serangan yang paling sering digunakan oleh para penyerang. Dalam serangan phishing, penyerang membuat situs web palsu yang meniru situs web asli. Situs web palsu ini biasanya digunakan untuk mencuri informasi sensitif dari korban, seperti kredensial login, informasi kartu kredit, dan lain-lain.&lt;/p>
+&lt;p>Presepsi yang umum adalah bahwa situs web phishing selalu menggunakan protokol HTTP. Namun, apakah benar demikian? Apakah situs web phishing tidak pernah menggunakan protokol HTTPS?&lt;/p></description></item><item><title>Infostealer Spreading Through Fake Google reCAPTCHA</title><link>https://potato.id/posts/infostealer-spreading-through-fake-google-recaptcha/</link><pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/infostealer-spreading-through-fake-google-recaptcha/</guid><description>&lt;h2 id="the-beginning">The Beginning&lt;/h2>
+&lt;p>Desember ini saya mendapatkan sebuah notifikasi dari sebuah group Facebook yang saya ikuti, dalam post tersebut (sekarang di hapus) berisi sebuah screenshot seperti gambar di atas, lengkap dengan caption: &lt;em>&amp;lsquo;Apakah ini berbahaya atau nggak? Kok captchanya aneh.&amp;rsquo;&amp;quot;&lt;/em>&lt;/p>
+&lt;p>dalam komentar tersebut Thread Starter menambahkan sebuah screenshot gambar lain yang berisi text yang harus dipaste ke program run.exe seperti berikut&lt;/p>
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+ 
+ 
+
+ &lt;figure class="mb-5">
+ &lt;a href="https://potato.id/img/infostealer/2.png" target="_blank" rel="noopener noreferrer" class="image-link">
+ &lt;picture>
+ &lt;source srcset="https://potato.id/img/infostealer/2_hu_f9c74d422db37a87.webp" media="(min-width: 1024px)">
+ &lt;source srcset="https://potato.id/img/infostealer/2_hu_191fafe9e808783c.webp" media="(min-width: 768px) and (max-width: 1023px)">
+ &lt;source srcset="https://potato.id/img/infostealer/2_hu_de649da62fb1eb20.webp" media="(max-width: 767px)">
+ &lt;img src="https://potato.id/img/infostealer/2_hu_de649da62fb1eb20.webp"
+ alt="text"
+ class="hover-effect"
+ width="800"
+ height="246">
+ &lt;/picture>
+ &lt;/a>
+
+ 
+ &lt;/figure>
+
+
+
+&lt;p>Jelas sekali bahwa ini sebuah malware. mshta itu file bawaan Windows yang fungsinya untuk menjalankan command dari aplikasi HTA di environment Windows dan sering sekali dipakai oleh threat actors sebagai salah satu teknik serangan mereka &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p></description></item><item><title>Serangan Phishing dan Pencegahannya</title><link>https://potato.id/posts/serangan-phishing-dan-pencegahannya/</link><pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate><guid>https://potato.id/posts/serangan-phishing-dan-pencegahannya/</guid><description>&lt;p>Phishing adalah serangan yang dilakukan dengan cara memperoleh informasi pribadi seseorang dengan cara menipu. Serangan ini biasanya dilakukan dengan cara mengirimkan email palsu yang berisi link ke situs palsu yang menyerupai situs asli. Tujuan dari serangan ini adalah untuk mencuri informasi pribadi seperti username, password, dan informasi kartu kredit.&lt;/p>
+&lt;h2 id="cara-kerja-phishing">Cara Kerja Phishing&lt;/h2>
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+ 
+ 
+
+ &lt;figure class="mb-5">
+ &lt;a href="https://potato.id/img/phishing/phishing-diagram.webp" target="_blank" rel="noopener noreferrer" class="image-link">
+ &lt;picture>
+ &lt;source srcset="https://potato.id/img/phishing/phishing-diagram_hu_48db634183066547.webp" media="(min-width: 1024px)">
+ &lt;source srcset="https://potato.id/img/phishing/phishing-diagram_hu_599f04821a561b8d.webp" media="(min-width: 768px) and (max-width: 1023px)">
+ &lt;source srcset="https://potato.id/img/phishing/phishing-diagram_hu_f8841e244a81fa87.webp" media="(max-width: 767px)">
+ &lt;img src="https://potato.id/img/phishing/phishing-diagram_hu_f8841e244a81fa87.webp"
+ alt="Phishing Diagram"
+ class="hover-effect"
+ width="800"
+ height="399">
+ &lt;/picture>
+ &lt;/a>
+
+ 
+ &lt;figcaption class="text-left">
+ Ilustrasi Serangan Phishing
+ &lt;/figcaption>
+ 
+ &lt;/figure>
+
+
+
+&lt;p>Serangan phishing biasanya dimulai dengan pengiriman email palsu maupun iklan dari social media (Facebook, Instagram maupun X) yang mengiming-imingi user sebuah hadiah sebuah item game, promo menarik hingga sebuah video viral terbaru namun sebenarnya link tersebut mengarah ke sebuah situs palsu.&lt;/p></description></item><item><title>Hacking Phishing-as-a-Service</title><link>https://potato.id/posts/hacking-phishing-as-a-service/</link><pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate><guid>https://potato.id/posts/hacking-phishing-as-a-service/</guid><description>&lt;h3 id="you-may-have-just-clicked-on-a-phishing-ad">You may have just clicked on a Phishing Ad&lt;/h3>
+&lt;p>Saya muak terhadap iklan yang bertebar ketika membuka reels di facebook, selain iklan malware, iklan judol, banyak juga iklan phishing game (Free Fire, Mobile Legends) dan juga iklan yang mengundang untuk join ke group 18+ karena pastinya iklan-iklan tersebut adalah iklan yang hanya menginginkan credentials akun social media kita dan pastinya dapat merugikan diri kita sendiri.&lt;/p>
+&lt;p>Phishing atau &lt;em>password fishing&lt;/em> sendiri adalah salah satu cara yang banyak digunakan oleh Threat actor untuk mendapatkan akses / credentials terhadap salah satu service seperti akses ke sosial media (Facebook, TikTok, Instagram, WhatApp, dll) setelah mendapatkan akses ke service tersebut umumnya akun kita akan digunakan untuk hal-hal merugikan lainnya.&lt;/p></description></item></channel></rss>

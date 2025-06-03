@@ -1,103 +1,103 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Defensive on Jonias Fortuna</title>
-    <link>https://potato.id/categories/defensive/</link>
-    <description>Recent content in Defensive on Jonias Fortuna</description>
-    <generator>Hugo</generator>
-    <language>id-ID</language>
-    <lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://potato.id/categories/defensive/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Apa Itu Credential Attack? Kenali dan Cegah Sebelum Terlambat</title>
-      <link>https://potato.id/posts/credential-attack/</link>
-      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/credential-attack/</guid>
-      <description>&lt;h2 id=&#34;apa-itu-credential-attack&#34;&gt;Apa Itu Credential Attack?&lt;/h2&gt;&#xA;&lt;p&gt;Credential attack atau serangan kredensial adalah upaya peretasan untuk mengambil alih akun seseorang dengan cara mencuri username dan password. Biasanya ini dilakukan lewat teknik kayak &lt;strong&gt;phishing&lt;/strong&gt;, &lt;strong&gt;credential stuffing&lt;/strong&gt;, hingga &lt;strong&gt;brute force&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Gampangnya, mereka ngintip, nebak, atau mencoba ribuan kombinasi password buat masuk ke akun kalian, setelah itu mereka bisa ngakses semua data yang ada di dalamnya. seperti akun email, akun media sosial, akun game hingga akun banking.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Web Phishing itu HTTP atau HTTPS?</title>
-      <link>https://potato.id/posts/https-adalah-website-yang-aman/</link>
-      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/https-adalah-website-yang-aman/</guid>
-      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Web phishing adalah salah satu metode serangan yang paling sering digunakan oleh para penyerang. Dalam serangan phishing, penyerang membuat situs web palsu yang meniru situs web asli. Situs web palsu ini biasanya digunakan untuk mencuri informasi sensitif dari korban, seperti kredensial login, informasi kartu kredit, dan lain-lain.&lt;/p&gt;&#xA;&lt;p&gt;Presepsi yang umum adalah bahwa situs web phishing selalu menggunakan protokol HTTP. Namun, apakah benar demikian? Apakah situs web phishing tidak pernah menggunakan protokol HTTPS?&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Cara Memvalidasi Konfigurasi SPF, DKIM, dan DMARC dengan Mudah</title>
-      <link>https://potato.id/posts/validasi-spf-dkim-dmarc/</link>
-      <pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/validasi-spf-dkim-dmarc/</guid>
-      <description>&lt;h2 id=&#34;mengapa-validasi-spf-dkim-dan-dmarc-itu-penting&#34;&gt;Mengapa Validasi SPF, DKIM, dan DMARC Itu Penting?&lt;/h2&gt;&#xA;&lt;p&gt;Kalau kamu sudah mengatur SPF, DKIM, dan DMARC di DNS, jangan langsung merasa aman dulu. Konfigurasi yang tidak valid bisa membuat email masuk ke folder spam atau bahkan ditolak oleh server penerima. Untuk itu, validasi sangat penting dilakukan agar konfigurasi yang sudah dibuat benar-benar berfungsi.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-cek-spf-dengan-dig&#34;&gt;1. Cek SPF dengan dig&lt;/h2&gt;&#xA;&lt;p&gt;Dig adalah alat yang sangat berguna untuk memeriksa DNS record. Kamu bisa menggunakannya untuk mengecek SPF record dengan cara berikut:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Fake Sponsored Jobposting</title>
-      <link>https://potato.id/posts/fake-sponsored-jobposting/</link>
-      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/fake-sponsored-jobposting/</guid>
-      <description>&lt;p&gt;Sebenarnya ini adalah post lama sempat ramai tahun lalu, saat browsing di Facebook seringkali muncul iklan lowongan kerja dari PT ternama dan pada sektor tertentu seperti sektor tambang, pabrik buruh dan blue collar lainnya, seperti loker yang ada di PT. Epson, PT. Unilever, PT. Indofood dan loker PT lainnya yang mengarahkan kita untuk melakukan pendaftaran secara online dengan mengisi data-data pribadi kita seperti nama, alamat, nomor telepon dan lain-lain.&lt;/p&gt;&#xA;&lt;p&gt;Namun, tidak sedikit yang mengetahui bahwa iklan tersebut adalah iklan palsu yang bertujuan untuk personal-profit pelaku. Kurang lebih seperti ini alur yang dilakukan oleh para penipu tersebut.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Panduan Konfigurasi Email DNS Security (SPF, DKIM, DMARC)</title>
-      <link>https://potato.id/posts/email-security-spf-dkim-dmarc/</link>
-      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/email-security-spf-dkim-dmarc/</guid>
-      <description>&lt;p&gt;Email adalah salah satu metode komunikasi yang paling banyak digunakan, tetapi juga rentan terhadap serangan seperti &lt;strong&gt;spoofing&lt;/strong&gt;, &lt;strong&gt;phishing&lt;/strong&gt;, dan &lt;strong&gt;spam&lt;/strong&gt;. Oleh karena itu, penerapan &lt;strong&gt;SPF, DKIM, dan DMARC&lt;/strong&gt; sangat penting untuk meningkatkan keamanan email yang kita miliki, berikut adalah panduan konfigurasi SPF, DKIM, dan DMARC untuk meningkatkan keamanan email.&lt;/p&gt;&#xA;&lt;h2 id=&#34;sender-policy-framework-spf&#34;&gt;&lt;strong&gt;Sender Policy Framework (SPF)&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;apa-itu-spf&#34;&gt;&lt;strong&gt;Apa itu SPF?&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Sender Policy Framework atau SPF adalah mekanisme autentikasi email yang memungkinkan domain &lt;strong&gt;menentukan server mana yang diizinkan mengirim email atas nama domain yang dimiliki&lt;/strong&gt;, konfigurasi ini memungkinkan server penerima untuk memverifikasi bahwa email yang diterima berasal dari server yang diizinkan oleh domain pengirim dan konfigurasi ini diterapkan pada record DNS txt dari domain pengirim.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>mshta.exe - Threat Actor&#39;s Favorite Weapon</title>
-      <link>https://potato.id/posts/mshta-exe-threat-actors-favorite-weapon/</link>
-      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/mshta-exe-threat-actors-favorite-weapon/</guid>
-      <description>&lt;h2 id=&#34;apa-itu-mshtaexe&#34;&gt;Apa itu mshta.exe?&lt;/h2&gt;&#xA;&lt;p&gt;mshta.exe adalah utility file system Windows yang digunakan untuk menjalankan file Microsoft HTML Application (.HTA). Program ini memungkinkan untuk melakukan eksekusi script berbasis VBScript atau JScript, menjadikannya sebagai tool yang berguna bagi administrator akan tetapi juga menjadi tool yang sering disalahgunakan oleh threat actors.&lt;/p&gt;&#xA;&lt;h2 id=&#34;mengapa-mshtaexe-sering-digunakan-oleh-threat-actor&#34;&gt;Mengapa mshta.exe sering digunakan oleh Threat Actor?&lt;/h2&gt;&#xA;&lt;p&gt;Threat Actor sering menyalahgunakan mshta.exe untuk menjalankan kode berbahaya untuk tidak terdeteksi oleh antivirus atau solusi keamanan lainnya (EDR). Beberapa alasan mengapa mshta.exe sering digunakan dalam serangan malware antara lain:&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>DNS Security, Maybe?</title>
-      <link>https://potato.id/posts/dns-security-maybe/</link>
-      <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/dns-security-maybe/</guid>
-      <description>&lt;p&gt;Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack serta serangan lainnya, hanya beberapa event yang pernah saya alami saja.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Infostealer Spreading Through Fake Google reCAPTCHA</title>
-      <link>https://potato.id/posts/infostealer-spreading-through-fake-google-recaptcha/</link>
-      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/infostealer-spreading-through-fake-google-recaptcha/</guid>
-      <description>&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;&#xA;&lt;p&gt;Desember ini saya mendapatkan sebuah notifikasi dari sebuah group Facebook yang saya ikuti, dalam post tersebut (sekarang di hapus) berisi sebuah screenshot seperti gambar di atas, lengkap dengan caption: &lt;em&gt;&amp;lsquo;Apakah ini berbahaya atau nggak? Kok captchanya aneh.&amp;rsquo;&amp;quot;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;dalam komentar tersebut Thread Starter menambahkan sebuah screenshot gambar lain yang berisi text yang harus dipaste ke program run.exe seperti berikut&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;&#xA;  &lt;figure class=&#34;mb-5&#34;&gt;&#xA;    &lt;a href=&#34;https://potato.id/img/infostealer/2.png&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;image-link&#34;&gt;&#xA;      &lt;picture&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/infostealer/2_hu_f9c74d422db37a87.webp&#34; media=&#34;(min-width: 1024px)&#34;&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/infostealer/2_hu_191fafe9e808783c.webp&#34; media=&#34;(min-width: 768px) and (max-width: 1023px)&#34;&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/infostealer/2_hu_de649da62fb1eb20.webp&#34; media=&#34;(max-width: 767px)&#34;&gt;&#xA;        &lt;img src=&#34;https://potato.id/img/infostealer/2_hu_de649da62fb1eb20.webp&#34;&#xA;             alt=&#34;text&#34;&#xA;             class=&#34;hover-effect&#34;&#xA;             width=&#34;800&#34;&#xA;             height=&#34;246&#34;&gt;&#xA;      &lt;/picture&gt;&#xA;    &lt;/a&gt;&#xA;&#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&#xA;&#xA;&lt;p&gt;Jelas sekali bahwa ini sebuah malware. mshta itu file bawaan Windows yang fungsinya untuk menjalankan command dari aplikasi HTA di environment Windows dan sering sekali dipakai oleh threat actors sebagai salah satu teknik serangan mereka &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Serangan Phishing dan Pencegahannya</title>
-      <link>https://potato.id/posts/serangan-phishing-dan-pencegahannya/</link>
-      <pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/serangan-phishing-dan-pencegahannya/</guid>
-      <description>&lt;p&gt;Phishing adalah serangan yang dilakukan dengan cara memperoleh informasi pribadi seseorang dengan cara menipu. Serangan ini biasanya dilakukan dengan cara mengirimkan email palsu yang berisi link ke situs palsu yang menyerupai situs asli. Tujuan dari serangan ini adalah untuk mencuri informasi pribadi seperti username, password, dan informasi kartu kredit.&lt;/p&gt;&#xA;&lt;h2 id=&#34;cara-kerja-phishing&#34;&gt;Cara Kerja Phishing&lt;/h2&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;&#xA;  &lt;figure class=&#34;mb-5&#34;&gt;&#xA;    &lt;a href=&#34;https://potato.id/img/phishing/phishing-diagram.webp&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;image-link&#34;&gt;&#xA;      &lt;picture&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/phishing/phishing-diagram_hu_48db634183066547.webp&#34; media=&#34;(min-width: 1024px)&#34;&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/phishing/phishing-diagram_hu_599f04821a561b8d.webp&#34; media=&#34;(min-width: 768px) and (max-width: 1023px)&#34;&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/phishing/phishing-diagram_hu_f8841e244a81fa87.webp&#34; media=&#34;(max-width: 767px)&#34;&gt;&#xA;        &lt;img src=&#34;https://potato.id/img/phishing/phishing-diagram_hu_f8841e244a81fa87.webp&#34;&#xA;             alt=&#34;Phishing Diagram&#34;&#xA;             class=&#34;hover-effect&#34;&#xA;             width=&#34;800&#34;&#xA;             height=&#34;399&#34;&gt;&#xA;      &lt;/picture&gt;&#xA;    &lt;/a&gt;&#xA;&#xA;    &#xA;      &lt;figcaption class=&#34;text-left&#34;&gt;&#xA;        Ilustrasi Serangan Phishing&#xA;      &lt;/figcaption&gt;&#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&#xA;&#xA;&lt;p&gt;Serangan phishing biasanya dimulai dengan pengiriman email palsu maupun iklan dari social media (Facebook, Instagram maupun X) yang mengiming-imingi user sebuah hadiah sebuah item game, promo menarik hingga sebuah video viral terbaru namun sebenarnya link tersebut mengarah ke sebuah situs palsu.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Harderning Server with Fail2ban and Reporting to Telegram</title>
-      <link>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</link>
-      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://potato.id/img/fail2ban/thumb.webp&#34; alt=&#34;fail2ban-logs&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Setelah cukup sibuk sehingga tidak sempat membuat challenges dan menuliskan bagaimana cara menyelesaikan challenges tersebut pada blog ini, kali ini kita akan membahas sedikit tentang fail2ban dan cara melakukan konfigurasinya&lt;/p&gt;&#xA;&lt;p&gt;Umumnya fail2ban digunakan untuk melakukan ban terhadap IP yang gagal melakukan authentikasi sebanyak batas maksimal yang disebutkan pada konfigurasi dan IPS ini sangat ampuh mencekal serangan yang akan terjadi pada server, seperti serangan bruteforce pada port ssh (22), ftp (21), smtp (25) dsb, bahkan serangan lainnya yang melalui web server (80/443), lalu sebelum mengetahui bagaimana konfigurasi fail2ban kita akan belajar sedikit tentang bagaimana fail2ban bekerja.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Menulis Laporan Vulnerability Findings dengan Baik</title>
-      <link>https://potato.id/posts/menulis-laporan-bug/</link>
-      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/menulis-laporan-bug/</guid>
-      <description>&lt;p&gt;Sebelumnya saya ucapkan selamat hari raya idul fitri 1440 H, mohon maaf lahir dan batin.&lt;br&gt;&#xA;Tidak ada yang sempurna di dunia ini, begitupun tulisan ini.&lt;/p&gt;&#xA;&lt;p&gt;Semenjak ada program dari BSSN yang berjudul V2DP atau Voluntary Vulnerability Disclosure Program, banyak sekali yang bertanya di forum diskusi maupun grup sosial media tentang bagimana menulis laporan bug yang telah ditemukan dengan baik.&lt;br&gt;&#xA;Sedikit tips dari saya untuk menulis laporan dengan baik&lt;/p&gt;&#xA;&lt;h3 id=&#34;berikanlah-judul-yang-sesuai&#34;&gt;Berikanlah judul yang sesuai.&lt;/h3&gt;&#xA;&lt;p&gt;Judul merupakan tulisan yang dibaca pertama kali, maka dari itu tuliskan judul yang mewakilkan seluruh temuan yang telah ditemukan, contoh Stored XSS in Contact Admin, Unrestricted File Upload on Profile Picture Feature, dsb.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Websitemu di Hack?, Lakukan hal berikut</title>
-      <link>https://potato.id/posts/my-website-hacked-now-what/</link>
-      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/my-website-hacked-now-what/</guid>
-      <description>&lt;p&gt;Di dalam group Telegram Surabaya Hacker Link saya dan &lt;code&gt;@ytyao&lt;/code&gt; sering membuat challenges seperti web hacking, reversing dan lain sebagainya, namun pada challenges sebelumnya ada sedikit insiden, yaitu web di hack (well memang sih web dibuat sedemikian rupa untuk di hack), namun si hacker ini melakukan sabun masal alias menghapus semua file dan folder yang ada. Namun dari hal tersebut saya mendapatkan ilmu baru yaitu penanganan setelah insiden atau istilah kerennya Incident Response&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>XSS Prevention</title>
-      <link>https://potato.id/posts/xss-prevention/</link>
-      <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/xss-prevention/</guid>
-      <description>&lt;p&gt;setelah sedikit membahas XSS di &lt;a href=&#34;https://potato.id/posts/apakah-xss-itu-berbahaya/&#34;&gt;sini&lt;/a&gt;, ya meskipun agak ngawur saatnya kita bahas cara mencegah bug ini ada pada web kita&lt;/p&gt;&#xA;&lt;p&gt;XSS bisa berjalan / dijalankan karena tag &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; yang lepas dan berjalan / terender oleh browser maka dari itu kita manipulasi browser agar tidak menjalankan tag html yang di &lt;em&gt;&lt;strong&gt;input&lt;/strong&gt;&lt;/em&gt; kan user, eitsss kita ga akan bongkar-bongkar browser kok, cuman sedikit permainan sebelum input user di munculkan pada website&lt;/p&gt;&#xA;&lt;p&gt;example:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Defensive on Jonias Fortuna</title><link>https://potato.id/categories/defensive/</link><description>Recent content in Defensive on Jonias Fortuna</description><generator>Hugo</generator><language>id-ID</language><lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/categories/defensive/index.xml" rel="self" type="application/rss+xml"/><item><title>Apa Itu Credential Attack? Kenali dan Cegah Sebelum Terlambat</title><link>https://potato.id/posts/credential-attack/</link><pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/credential-attack/</guid><description>&lt;h2 id="apa-itu-credential-attack">Apa Itu Credential Attack?&lt;/h2>
+&lt;p>Credential attack atau serangan kredensial adalah upaya peretasan untuk mengambil alih akun seseorang dengan cara mencuri username dan password. Biasanya ini dilakukan lewat teknik kayak &lt;strong>phishing&lt;/strong>, &lt;strong>credential stuffing&lt;/strong>, hingga &lt;strong>brute force&lt;/strong>.&lt;/p>
+&lt;p>Gampangnya, mereka ngintip, nebak, atau mencoba ribuan kombinasi password buat masuk ke akun kalian, setelah itu mereka bisa ngakses semua data yang ada di dalamnya. seperti akun email, akun media sosial, akun game hingga akun banking.&lt;/p></description></item><item><title>Web Phishing itu HTTP atau HTTPS?</title><link>https://potato.id/posts/https-adalah-website-yang-aman/</link><pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/https-adalah-website-yang-aman/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Web phishing adalah salah satu metode serangan yang paling sering digunakan oleh para penyerang. Dalam serangan phishing, penyerang membuat situs web palsu yang meniru situs web asli. Situs web palsu ini biasanya digunakan untuk mencuri informasi sensitif dari korban, seperti kredensial login, informasi kartu kredit, dan lain-lain.&lt;/p>
+&lt;p>Presepsi yang umum adalah bahwa situs web phishing selalu menggunakan protokol HTTP. Namun, apakah benar demikian? Apakah situs web phishing tidak pernah menggunakan protokol HTTPS?&lt;/p></description></item><item><title>Cara Memvalidasi Konfigurasi SPF, DKIM, dan DMARC dengan Mudah</title><link>https://potato.id/posts/validasi-spf-dkim-dmarc/</link><pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/validasi-spf-dkim-dmarc/</guid><description>&lt;h2 id="mengapa-validasi-spf-dkim-dan-dmarc-itu-penting">Mengapa Validasi SPF, DKIM, dan DMARC Itu Penting?&lt;/h2>
+&lt;p>Kalau kamu sudah mengatur SPF, DKIM, dan DMARC di DNS, jangan langsung merasa aman dulu. Konfigurasi yang tidak valid bisa membuat email masuk ke folder spam atau bahkan ditolak oleh server penerima. Untuk itu, validasi sangat penting dilakukan agar konfigurasi yang sudah dibuat benar-benar berfungsi.&lt;/p>
+&lt;h2 id="1-cek-spf-dengan-dig">1. Cek SPF dengan dig&lt;/h2>
+&lt;p>Dig adalah alat yang sangat berguna untuk memeriksa DNS record. Kamu bisa menggunakannya untuk mengecek SPF record dengan cara berikut:&lt;/p></description></item><item><title>Fake Sponsored Jobposting</title><link>https://potato.id/posts/fake-sponsored-jobposting/</link><pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/fake-sponsored-jobposting/</guid><description>&lt;p>Sebenarnya ini adalah post lama sempat ramai tahun lalu, saat browsing di Facebook seringkali muncul iklan lowongan kerja dari PT ternama dan pada sektor tertentu seperti sektor tambang, pabrik buruh dan blue collar lainnya, seperti loker yang ada di PT. Epson, PT. Unilever, PT. Indofood dan loker PT lainnya yang mengarahkan kita untuk melakukan pendaftaran secara online dengan mengisi data-data pribadi kita seperti nama, alamat, nomor telepon dan lain-lain.&lt;/p>
+&lt;p>Namun, tidak sedikit yang mengetahui bahwa iklan tersebut adalah iklan palsu yang bertujuan untuk personal-profit pelaku. Kurang lebih seperti ini alur yang dilakukan oleh para penipu tersebut.&lt;/p></description></item><item><title>Panduan Konfigurasi Email DNS Security (SPF, DKIM, DMARC)</title><link>https://potato.id/posts/email-security-spf-dkim-dmarc/</link><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/email-security-spf-dkim-dmarc/</guid><description>&lt;p>Email adalah salah satu metode komunikasi yang paling banyak digunakan, tetapi juga rentan terhadap serangan seperti &lt;strong>spoofing&lt;/strong>, &lt;strong>phishing&lt;/strong>, dan &lt;strong>spam&lt;/strong>. Oleh karena itu, penerapan &lt;strong>SPF, DKIM, dan DMARC&lt;/strong> sangat penting untuk meningkatkan keamanan email yang kita miliki, berikut adalah panduan konfigurasi SPF, DKIM, dan DMARC untuk meningkatkan keamanan email.&lt;/p>
+&lt;h2 id="sender-policy-framework-spf">&lt;strong>Sender Policy Framework (SPF)&lt;/strong>&lt;/h2>
+&lt;h3 id="apa-itu-spf">&lt;strong>Apa itu SPF?&lt;/strong>&lt;/h3>
+&lt;p>Sender Policy Framework atau SPF adalah mekanisme autentikasi email yang memungkinkan domain &lt;strong>menentukan server mana yang diizinkan mengirim email atas nama domain yang dimiliki&lt;/strong>, konfigurasi ini memungkinkan server penerima untuk memverifikasi bahwa email yang diterima berasal dari server yang diizinkan oleh domain pengirim dan konfigurasi ini diterapkan pada record DNS txt dari domain pengirim.&lt;/p></description></item><item><title>mshta.exe - Threat Actor's Favorite Weapon</title><link>https://potato.id/posts/mshta-exe-threat-actors-favorite-weapon/</link><pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/mshta-exe-threat-actors-favorite-weapon/</guid><description>&lt;h2 id="apa-itu-mshtaexe">Apa itu mshta.exe?&lt;/h2>
+&lt;p>mshta.exe adalah utility file system Windows yang digunakan untuk menjalankan file Microsoft HTML Application (.HTA). Program ini memungkinkan untuk melakukan eksekusi script berbasis VBScript atau JScript, menjadikannya sebagai tool yang berguna bagi administrator akan tetapi juga menjadi tool yang sering disalahgunakan oleh threat actors.&lt;/p>
+&lt;h2 id="mengapa-mshtaexe-sering-digunakan-oleh-threat-actor">Mengapa mshta.exe sering digunakan oleh Threat Actor?&lt;/h2>
+&lt;p>Threat Actor sering menyalahgunakan mshta.exe untuk menjalankan kode berbahaya untuk tidak terdeteksi oleh antivirus atau solusi keamanan lainnya (EDR). Beberapa alasan mengapa mshta.exe sering digunakan dalam serangan malware antara lain:&lt;/p></description></item><item><title>DNS Security, Maybe?</title><link>https://potato.id/posts/dns-security-maybe/</link><pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/dns-security-maybe/</guid><description>&lt;p>Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack serta serangan lainnya, hanya beberapa event yang pernah saya alami saja.&lt;/p></description></item><item><title>Infostealer Spreading Through Fake Google reCAPTCHA</title><link>https://potato.id/posts/infostealer-spreading-through-fake-google-recaptcha/</link><pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/infostealer-spreading-through-fake-google-recaptcha/</guid><description>&lt;h2 id="the-beginning">The Beginning&lt;/h2>
+&lt;p>Desember ini saya mendapatkan sebuah notifikasi dari sebuah group Facebook yang saya ikuti, dalam post tersebut (sekarang di hapus) berisi sebuah screenshot seperti gambar di atas, lengkap dengan caption: &lt;em>&amp;lsquo;Apakah ini berbahaya atau nggak? Kok captchanya aneh.&amp;rsquo;&amp;quot;&lt;/em>&lt;/p>
+&lt;p>dalam komentar tersebut Thread Starter menambahkan sebuah screenshot gambar lain yang berisi text yang harus dipaste ke program run.exe seperti berikut&lt;/p>
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+ 
+ 
+
+ &lt;figure class="mb-5">
+ &lt;a href="https://potato.id/img/infostealer/2.png" target="_blank" rel="noopener noreferrer" class="image-link">
+ &lt;picture>
+ &lt;source srcset="https://potato.id/img/infostealer/2_hu_f9c74d422db37a87.webp" media="(min-width: 1024px)">
+ &lt;source srcset="https://potato.id/img/infostealer/2_hu_191fafe9e808783c.webp" media="(min-width: 768px) and (max-width: 1023px)">
+ &lt;source srcset="https://potato.id/img/infostealer/2_hu_de649da62fb1eb20.webp" media="(max-width: 767px)">
+ &lt;img src="https://potato.id/img/infostealer/2_hu_de649da62fb1eb20.webp"
+ alt="text"
+ class="hover-effect"
+ width="800"
+ height="246">
+ &lt;/picture>
+ &lt;/a>
+
+ 
+ &lt;/figure>
+
+
+
+&lt;p>Jelas sekali bahwa ini sebuah malware. mshta itu file bawaan Windows yang fungsinya untuk menjalankan command dari aplikasi HTA di environment Windows dan sering sekali dipakai oleh threat actors sebagai salah satu teknik serangan mereka &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p></description></item><item><title>Serangan Phishing dan Pencegahannya</title><link>https://potato.id/posts/serangan-phishing-dan-pencegahannya/</link><pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate><guid>https://potato.id/posts/serangan-phishing-dan-pencegahannya/</guid><description>&lt;p>Phishing adalah serangan yang dilakukan dengan cara memperoleh informasi pribadi seseorang dengan cara menipu. Serangan ini biasanya dilakukan dengan cara mengirimkan email palsu yang berisi link ke situs palsu yang menyerupai situs asli. Tujuan dari serangan ini adalah untuk mencuri informasi pribadi seperti username, password, dan informasi kartu kredit.&lt;/p>
+&lt;h2 id="cara-kerja-phishing">Cara Kerja Phishing&lt;/h2>
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+ 
+ 
+
+ &lt;figure class="mb-5">
+ &lt;a href="https://potato.id/img/phishing/phishing-diagram.webp" target="_blank" rel="noopener noreferrer" class="image-link">
+ &lt;picture>
+ &lt;source srcset="https://potato.id/img/phishing/phishing-diagram_hu_48db634183066547.webp" media="(min-width: 1024px)">
+ &lt;source srcset="https://potato.id/img/phishing/phishing-diagram_hu_599f04821a561b8d.webp" media="(min-width: 768px) and (max-width: 1023px)">
+ &lt;source srcset="https://potato.id/img/phishing/phishing-diagram_hu_f8841e244a81fa87.webp" media="(max-width: 767px)">
+ &lt;img src="https://potato.id/img/phishing/phishing-diagram_hu_f8841e244a81fa87.webp"
+ alt="Phishing Diagram"
+ class="hover-effect"
+ width="800"
+ height="399">
+ &lt;/picture>
+ &lt;/a>
+
+ 
+ &lt;figcaption class="text-left">
+ Ilustrasi Serangan Phishing
+ &lt;/figcaption>
+ 
+ &lt;/figure>
+
+
+
+&lt;p>Serangan phishing biasanya dimulai dengan pengiriman email palsu maupun iklan dari social media (Facebook, Instagram maupun X) yang mengiming-imingi user sebuah hadiah sebuah item game, promo menarik hingga sebuah video viral terbaru namun sebenarnya link tersebut mengarah ke sebuah situs palsu.&lt;/p></description></item><item><title>Harderning Server with Fail2ban and Reporting to Telegram</title><link>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</link><pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate><guid>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</guid><description>&lt;p>&lt;img src="https://potato.id/img/fail2ban/thumb.webp" alt="fail2ban-logs">&lt;/p>
+&lt;p>Setelah cukup sibuk sehingga tidak sempat membuat challenges dan menuliskan bagaimana cara menyelesaikan challenges tersebut pada blog ini, kali ini kita akan membahas sedikit tentang fail2ban dan cara melakukan konfigurasinya&lt;/p>
+&lt;p>Umumnya fail2ban digunakan untuk melakukan ban terhadap IP yang gagal melakukan authentikasi sebanyak batas maksimal yang disebutkan pada konfigurasi dan IPS ini sangat ampuh mencekal serangan yang akan terjadi pada server, seperti serangan bruteforce pada port ssh (22), ftp (21), smtp (25) dsb, bahkan serangan lainnya yang melalui web server (80/443), lalu sebelum mengetahui bagaimana konfigurasi fail2ban kita akan belajar sedikit tentang bagaimana fail2ban bekerja.&lt;/p></description></item><item><title>Menulis Laporan Vulnerability Findings dengan Baik</title><link>https://potato.id/posts/menulis-laporan-bug/</link><pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate><guid>https://potato.id/posts/menulis-laporan-bug/</guid><description>&lt;p>Sebelumnya saya ucapkan selamat hari raya idul fitri 1440 H, mohon maaf lahir dan batin.&lt;br>
+Tidak ada yang sempurna di dunia ini, begitupun tulisan ini.&lt;/p>
+&lt;p>Semenjak ada program dari BSSN yang berjudul V2DP atau Voluntary Vulnerability Disclosure Program, banyak sekali yang bertanya di forum diskusi maupun grup sosial media tentang bagimana menulis laporan bug yang telah ditemukan dengan baik.&lt;br>
+Sedikit tips dari saya untuk menulis laporan dengan baik&lt;/p>
+&lt;h3 id="berikanlah-judul-yang-sesuai">Berikanlah judul yang sesuai.&lt;/h3>
+&lt;p>Judul merupakan tulisan yang dibaca pertama kali, maka dari itu tuliskan judul yang mewakilkan seluruh temuan yang telah ditemukan, contoh Stored XSS in Contact Admin, Unrestricted File Upload on Profile Picture Feature, dsb.&lt;/p></description></item><item><title>Websitemu di Hack?, Lakukan hal berikut</title><link>https://potato.id/posts/my-website-hacked-now-what/</link><pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate><guid>https://potato.id/posts/my-website-hacked-now-what/</guid><description>&lt;p>Di dalam group Telegram Surabaya Hacker Link saya dan &lt;code>@ytyao&lt;/code> sering membuat challenges seperti web hacking, reversing dan lain sebagainya, namun pada challenges sebelumnya ada sedikit insiden, yaitu web di hack (well memang sih web dibuat sedemikian rupa untuk di hack), namun si hacker ini melakukan sabun masal alias menghapus semua file dan folder yang ada. Namun dari hal tersebut saya mendapatkan ilmu baru yaitu penanganan setelah insiden atau istilah kerennya Incident Response&lt;/p></description></item><item><title>XSS Prevention</title><link>https://potato.id/posts/xss-prevention/</link><pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate><guid>https://potato.id/posts/xss-prevention/</guid><description>&lt;p>setelah sedikit membahas XSS di &lt;a href="https://potato.id/posts/apakah-xss-itu-berbahaya/">sini&lt;/a>, ya meskipun agak ngawur saatnya kita bahas cara mencegah bug ini ada pada web kita&lt;/p>
+&lt;p>XSS bisa berjalan / dijalankan karena tag &lt;code>&amp;lt;script&amp;gt;&lt;/code> yang lepas dan berjalan / terender oleh browser maka dari itu kita manipulasi browser agar tidak menjalankan tag html yang di &lt;em>&lt;strong>input&lt;/strong>&lt;/em> kan user, eitsss kita ga akan bongkar-bongkar browser kok, cuman sedikit permainan sebelum input user di munculkan pada website&lt;/p>
+&lt;p>example:&lt;/p></description></item></channel></rss>

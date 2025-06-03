@@ -1,40 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>DNS on Jonias Fortuna</title>
-    <link>https://potato.id/tags/dns/</link>
-    <description>Recent content in DNS on Jonias Fortuna</description>
-    <generator>Hugo</generator>
-    <language>id-ID</language>
-    <lastBuildDate>Wed, 16 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://potato.id/tags/dns/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Fake Sponsored Jobposting</title>
-      <link>https://potato.id/posts/fake-sponsored-jobposting/</link>
-      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/fake-sponsored-jobposting/</guid>
-      <description>&lt;p&gt;Sebenarnya ini adalah post lama sempat ramai tahun lalu, saat browsing di Facebook seringkali muncul iklan lowongan kerja dari PT ternama dan pada sektor tertentu seperti sektor tambang, pabrik buruh dan blue collar lainnya, seperti loker yang ada di PT. Epson, PT. Unilever, PT. Indofood dan loker PT lainnya yang mengarahkan kita untuk melakukan pendaftaran secara online dengan mengisi data-data pribadi kita seperti nama, alamat, nomor telepon dan lain-lain.&lt;/p&gt;&#xA;&lt;p&gt;Namun, tidak sedikit yang mengetahui bahwa iklan tersebut adalah iklan palsu yang bertujuan untuk personal-profit pelaku. Kurang lebih seperti ini alur yang dilakukan oleh para penipu tersebut.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>DNS Security, Maybe?</title>
-      <link>https://potato.id/posts/dns-security-maybe/</link>
-      <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/dns-security-maybe/</guid>
-      <description>&lt;p&gt;Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack serta serangan lainnya, hanya beberapa event yang pernah saya alami saja.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>There is no way it&#39;s DNS</title>
-      <link>https://potato.id/posts/there-is-no-way-it-is-dns/</link>
-      <pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/there-is-no-way-it-is-dns/</guid>
-      <description>&lt;h2 id=&#34;preambule&#34;&gt;Preambule&lt;/h2&gt;&#xA;&lt;p&gt;Beberapa waktu lalu di kantor sedikit ramai terkait kebijakan baru di Pemerintah Provinsi DKI Jakarta terkait penonaktifan KTP Jakarta yang sudah tidak berdomisili di Jakarta, beberapa rekan kantor terkena hal tersebut, sontak rekan kerja yang lain dan masih ber-KTP Jakarta segera melakukan pemeriksaan terhadap NIK mereka masing-masing,&lt;/p&gt;&#xA;&lt;p&gt;Namun seperti yang kita tau tidak sedikit kita dari masyarakat yang mendapatkan pengalaman buruk terkait akses digital pada Pemerintahan entah keluhan lola (loading lama alias lemot) hingga tidak bisa diakses sama sekali dan tentu saja rekan kerjaku juga merasakan hal tersebut serta terdapat keanehan ketika web yang dimaksud akan diakses kadang bisa kadang tampil maintenance, entah tidak ada angin ataupun badai terbesit dipikiranku adalah &amp;ldquo;ini pasti DNS-nya&amp;rdquo;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Yes, It was DNS!</title>
-      <link>https://potato.id/posts/it-was-dns/</link>
-      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/it-was-dns/</guid>
-      <description>&lt;p&gt;Seperti yang kita tau, DNS atau Domain Name Server adalah service yang bertugas untuk melakukan translate nama domain menjadi IP sehingga user tidak perlu mengingat IP yang cukup ribet/njelimet jika diingat satu-satu, maka dari itu DNS menjadi salah satu service yang cukup krusial dan harus di konfigurasi dengan baik, jika tidak maka dapat berdampak pada domain yang kita miliki akan susah atau bahkan tidak dapat diakses oleh user&lt;/p&gt;&#xA;&lt;p&gt;Sebagai contoh, beberapa waktu lalu ada rekan kerja yang komplain ke tim infrastruktur karena tidak bisa membuka web monev.spbe.go.id, singkat cerita saya meminta informasi kepada user tersebut untuk mendapatkan informasi tambahan seperti hasil trace dan screenshot error ketika membuka web yang dimaksud&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DNS on Jonias Fortuna</title><link>https://potato.id/tags/dns/</link><description>Recent content in DNS on Jonias Fortuna</description><generator>Hugo</generator><language>id-ID</language><lastBuildDate>Wed, 16 Apr 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/dns/index.xml" rel="self" type="application/rss+xml"/><item><title>Fake Sponsored Jobposting</title><link>https://potato.id/posts/fake-sponsored-jobposting/</link><pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/fake-sponsored-jobposting/</guid><description>&lt;p>Sebenarnya ini adalah post lama sempat ramai tahun lalu, saat browsing di Facebook seringkali muncul iklan lowongan kerja dari PT ternama dan pada sektor tertentu seperti sektor tambang, pabrik buruh dan blue collar lainnya, seperti loker yang ada di PT. Epson, PT. Unilever, PT. Indofood dan loker PT lainnya yang mengarahkan kita untuk melakukan pendaftaran secara online dengan mengisi data-data pribadi kita seperti nama, alamat, nomor telepon dan lain-lain.&lt;/p>
+&lt;p>Namun, tidak sedikit yang mengetahui bahwa iklan tersebut adalah iklan palsu yang bertujuan untuk personal-profit pelaku. Kurang lebih seperti ini alur yang dilakukan oleh para penipu tersebut.&lt;/p></description></item><item><title>DNS Security, Maybe?</title><link>https://potato.id/posts/dns-security-maybe/</link><pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/dns-security-maybe/</guid><description>&lt;p>Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack serta serangan lainnya, hanya beberapa event yang pernah saya alami saja.&lt;/p></description></item><item><title>There is no way it's DNS</title><link>https://potato.id/posts/there-is-no-way-it-is-dns/</link><pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate><guid>https://potato.id/posts/there-is-no-way-it-is-dns/</guid><description>&lt;h2 id="preambule">Preambule&lt;/h2>
+&lt;p>Beberapa waktu lalu di kantor sedikit ramai terkait kebijakan baru di Pemerintah Provinsi DKI Jakarta terkait penonaktifan KTP Jakarta yang sudah tidak berdomisili di Jakarta, beberapa rekan kantor terkena hal tersebut, sontak rekan kerja yang lain dan masih ber-KTP Jakarta segera melakukan pemeriksaan terhadap NIK mereka masing-masing,&lt;/p>
+&lt;p>Namun seperti yang kita tau tidak sedikit kita dari masyarakat yang mendapatkan pengalaman buruk terkait akses digital pada Pemerintahan entah keluhan lola (loading lama alias lemot) hingga tidak bisa diakses sama sekali dan tentu saja rekan kerjaku juga merasakan hal tersebut serta terdapat keanehan ketika web yang dimaksud akan diakses kadang bisa kadang tampil maintenance, entah tidak ada angin ataupun badai terbesit dipikiranku adalah &amp;ldquo;ini pasti DNS-nya&amp;rdquo;&lt;/p></description></item><item><title>Yes, It was DNS!</title><link>https://potato.id/posts/it-was-dns/</link><pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate><guid>https://potato.id/posts/it-was-dns/</guid><description>&lt;p>Seperti yang kita tau, DNS atau Domain Name Server adalah service yang bertugas untuk melakukan translate nama domain menjadi IP sehingga user tidak perlu mengingat IP yang cukup ribet/njelimet jika diingat satu-satu, maka dari itu DNS menjadi salah satu service yang cukup krusial dan harus di konfigurasi dengan baik, jika tidak maka dapat berdampak pada domain yang kita miliki akan susah atau bahkan tidak dapat diakses oleh user&lt;/p>
+&lt;p>Sebagai contoh, beberapa waktu lalu ada rekan kerja yang komplain ke tim infrastruktur karena tidak bisa membuka web monev.spbe.go.id, singkat cerita saya meminta informasi kepada user tersebut untuk mendapatkan informasi tambahan seperti hasil trace dan screenshot error ketika membuka web yang dimaksud&lt;/p></description></item></channel></rss>

@@ -1,33 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Dvcs-Ripper on Jonias Fortuna</title>
-    <link>https://potato.id/tags/dvcs-ripper/</link>
-    <description>Recent content in Dvcs-Ripper on Jonias Fortuna</description>
-    <generator>Hugo</generator>
-    <language>id-ID</language>
-    <lastBuildDate>Wed, 04 Sep 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://potato.id/tags/dvcs-ripper/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Solution for QR Generator Challenges</title>
-      <link>https://potato.id/posts/solution-for-qr-generator-challenges/</link>
-      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/solution-for-qr-generator-challenges/</guid>
-      <description>&lt;p&gt;Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana,&#xA;Challenges ini bertemakan QR Code Generator, namun letak vulnerability-nya tidak pada QR Code tersebut, lalu berikut adalah cara sederhana menyelesaikannya&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Diberikan Challenges&lt;br&gt;&#xA;&lt;img src=&#34;https://potato.id/img/qr/challenges.webp&#34; alt=&#34;telegram&#34;&gt;&lt;br&gt;&#xA;Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Pengecekan Source Code&lt;br&gt;&#xA;&lt;img src=&#34;https://potato.id/img/qr/source.webp&#34; alt=&#34;source-code&#34;&gt;&lt;br&gt;&#xA;Sebelum kita coba fitur dari web ini, kita cek source code-nya, apakah ada yang mencurigakan atau comment info dari pembuat Ternyata tidak ada apa-apa selain comment default dari bootstrap&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Hey I Found Git Repository</title>
-      <link>https://potato.id/posts/hey-i-found-git-repository/</link>
-      <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/hey-i-found-git-repository/</guid>
-      <description>&lt;h2 id=&#34;prakata&#34;&gt;PRAKATA&lt;/h2&gt;&#xA;&lt;p&gt;Hanya sebuah catatan kecil ketika menemukan sebuah git repository yang terekspose pada sebuah website&lt;/p&gt;&#xA;&lt;h2 id=&#34;kata&#34;&gt;KATA&lt;/h2&gt;&#xA;&lt;p&gt;Git adalah version control system yang digunakan para developer untuk mengembangkan software secara bersama-bersama. Fungsi utama git yaitu mengatur versi dari source code program anda dengan mengasih tanda baris dan code mana yang ditambah atau diganti. Git akan membuat sebuah dotfiles (.git), yang berisikan semua datanya termasuk source code yang sudah di commit, maka dari itu lebih baik git repository lebih baik dirouting atau ditutup aksesnya dari luar, kenapa ? jika tidak maka hal buruk kemungkinan terjadi&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Penyelesaian Untuk Web &#39;Simple&#39; Challenges</title>
-      <link>https://potato.id/posts/solution-for-my-simple-web-challenges/</link>
-      <pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/posts/solution-for-my-simple-web-challenges/</guid>
-      <description>&lt;h2 id=&#34;pra-kata&#34;&gt;Pra Kata&lt;/h2&gt;&#xA;&lt;p&gt;Sebelumnya terima kasih buat &lt;a href=&#34;https://ctf.slashrootctf.id/&#34;&gt;slashroot ctf&lt;/a&gt; karena tanpa slashroot ctf mungkin saya tidak bisa memprovide challenges ini melalui dewaweb.com, Terima kasih buat teman-teman yang sudah meluangkan waktunya untuk challenges &amp;lsquo;simple&amp;rsquo; ini,&lt;/p&gt;&#xA;&lt;h2 id=&#34;kata&#34;&gt;Kata&lt;/h2&gt;&#xA;&lt;p&gt;clue &amp;ldquo;recon, tools, sign-in, submit&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;recon ini sangat mudah, sebenarnya tidak perlu menggunakan tools atau scanner, banyak kok website yang masih menyimpan sesuatu yang penting itu pada comment html&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://potato.id/img/simplewebchall/htmlcomment.webp&#34; alt=&#34;html comment sensitive information&#34;&gt;&lt;br&gt;&#xA;terlihat jelas ada info bahwa git repositori (/.git/) dipindahkan pada direktori /git/ kita coba akses dulu&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Dvcs-Ripper on Jonias Fortuna</title><link>https://potato.id/tags/dvcs-ripper/</link><description>Recent content in Dvcs-Ripper on Jonias Fortuna</description><generator>Hugo</generator><language>id-ID</language><lastBuildDate>Wed, 04 Sep 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/dvcs-ripper/index.xml" rel="self" type="application/rss+xml"/><item><title>Solution for QR Generator Challenges</title><link>https://potato.id/posts/solution-for-qr-generator-challenges/</link><pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate><guid>https://potato.id/posts/solution-for-qr-generator-challenges/</guid><description>&lt;p>Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana,
+Challenges ini bertemakan QR Code Generator, namun letak vulnerability-nya tidak pada QR Code tersebut, lalu berikut adalah cara sederhana menyelesaikannya&lt;/p>
+&lt;ol>
+&lt;li>
+&lt;p>Diberikan Challenges&lt;br>
+&lt;img src="https://potato.id/img/qr/challenges.webp" alt="telegram">&lt;br>
+Seperti biasa, challenges dipost di group Surabaya Hacker Link, ternyata tidak ada clue dari challenges ini, langung tancap gas kita akses web tersebut. Ternyata sebuah page QR Generator dengan inputan nama dan instagram.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Pengecekan Source Code&lt;br>
+&lt;img src="https://potato.id/img/qr/source.webp" alt="source-code">&lt;br>
+Sebelum kita coba fitur dari web ini, kita cek source code-nya, apakah ada yang mencurigakan atau comment info dari pembuat Ternyata tidak ada apa-apa selain comment default dari bootstrap&lt;/p></description></item><item><title>Hey I Found Git Repository</title><link>https://potato.id/posts/hey-i-found-git-repository/</link><pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate><guid>https://potato.id/posts/hey-i-found-git-repository/</guid><description>&lt;h2 id="prakata">PRAKATA&lt;/h2>
+&lt;p>Hanya sebuah catatan kecil ketika menemukan sebuah git repository yang terekspose pada sebuah website&lt;/p>
+&lt;h2 id="kata">KATA&lt;/h2>
+&lt;p>Git adalah version control system yang digunakan para developer untuk mengembangkan software secara bersama-bersama. Fungsi utama git yaitu mengatur versi dari source code program anda dengan mengasih tanda baris dan code mana yang ditambah atau diganti. Git akan membuat sebuah dotfiles (.git), yang berisikan semua datanya termasuk source code yang sudah di commit, maka dari itu lebih baik git repository lebih baik dirouting atau ditutup aksesnya dari luar, kenapa ? jika tidak maka hal buruk kemungkinan terjadi&lt;/p></description></item><item><title>Penyelesaian Untuk Web 'Simple' Challenges</title><link>https://potato.id/posts/solution-for-my-simple-web-challenges/</link><pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate><guid>https://potato.id/posts/solution-for-my-simple-web-challenges/</guid><description>&lt;h2 id="pra-kata">Pra Kata&lt;/h2>
+&lt;p>Sebelumnya terima kasih buat &lt;a href="https://ctf.slashrootctf.id/">slashroot ctf&lt;/a> karena tanpa slashroot ctf mungkin saya tidak bisa memprovide challenges ini melalui dewaweb.com, Terima kasih buat teman-teman yang sudah meluangkan waktunya untuk challenges &amp;lsquo;simple&amp;rsquo; ini,&lt;/p>
+&lt;h2 id="kata">Kata&lt;/h2>
+&lt;p>clue &amp;ldquo;recon, tools, sign-in, submit&amp;rdquo;&lt;/p>
+&lt;p>recon ini sangat mudah, sebenarnya tidak perlu menggunakan tools atau scanner, banyak kok website yang masih menyimpan sesuatu yang penting itu pada comment html&lt;/p>
+&lt;p>&lt;img src="https://potato.id/img/simplewebchall/htmlcomment.webp" alt="html comment sensitive information">&lt;br>
+terlihat jelas ada info bahwa git repositori (/.git/) dipindahkan pada direktori /git/ kita coba akses dulu&lt;/p></description></item></channel></rss>
