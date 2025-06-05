@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+SITEMAP: https://potato.id/sitemap.xml

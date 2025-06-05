@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Internet on Jonias Fortuna</title><link>https://potato.id/tags/internet/</link><description>Recent content in Internet on Jonias Fortuna</description><generator>Hugo</generator><language>id-ID</language><lastBuildDate>Mon, 19 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/internet/index.xml" rel="self" type="application/rss+xml"/><item><title>Apa Itu Credential Attack? Kenali dan Cegah Sebelum Terlambat</title><link>https://potato.id/posts/credential-attack/</link><pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/credential-attack/</guid><description>&lt;h2 id="apa-itu-credential-attack">Apa Itu Credential Attack?&lt;/h2>
+&lt;p>Credential attack atau serangan kredensial adalah upaya peretasan untuk mengambil alih akun seseorang dengan cara mencuri username dan password. Biasanya ini dilakukan lewat teknik kayak &lt;strong>phishing&lt;/strong>, &lt;strong>credential stuffing&lt;/strong>, hingga &lt;strong>brute force&lt;/strong>.&lt;/p>
+&lt;p>Gampangnya, mereka ngintip, nebak, atau mencoba ribuan kombinasi password buat masuk ke akun kalian, setelah itu mereka bisa ngakses semua data yang ada di dalamnya. seperti akun email, akun media sosial, akun game hingga akun banking.&lt;/p></description></item><item><title>Web Phishing itu HTTP atau HTTPS?</title><link>https://potato.id/posts/https-adalah-website-yang-aman/</link><pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/https-adalah-website-yang-aman/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
+&lt;p>Web phishing adalah salah satu metode serangan yang paling sering digunakan oleh para penyerang. Dalam serangan phishing, penyerang membuat situs web palsu yang meniru situs web asli. Situs web palsu ini biasanya digunakan untuk mencuri informasi sensitif dari korban, seperti kredensial login, informasi kartu kredit, dan lain-lain.&lt;/p>
+&lt;p>Presepsi yang umum adalah bahwa situs web phishing selalu menggunakan protokol HTTP. Namun, apakah benar demikian? Apakah situs web phishing tidak pernah menggunakan protokol HTTPS?&lt;/p></description></item><item><title>Cara Memvalidasi Konfigurasi SPF, DKIM, dan DMARC dengan Mudah</title><link>https://potato.id/posts/validasi-spf-dkim-dmarc/</link><pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/validasi-spf-dkim-dmarc/</guid><description>&lt;h2 id="mengapa-validasi-spf-dkim-dan-dmarc-itu-penting">Mengapa Validasi SPF, DKIM, dan DMARC Itu Penting?&lt;/h2>
+&lt;p>Kalau kamu sudah mengatur SPF, DKIM, dan DMARC di DNS, jangan langsung merasa aman dulu. Konfigurasi yang tidak valid bisa membuat email masuk ke folder spam atau bahkan ditolak oleh server penerima. Untuk itu, validasi sangat penting dilakukan agar konfigurasi yang sudah dibuat benar-benar berfungsi.&lt;/p>
+&lt;h2 id="1-cek-spf-dengan-dig">1. Cek SPF dengan dig&lt;/h2>
+&lt;p>Dig adalah alat yang sangat berguna untuk memeriksa DNS record. Kamu bisa menggunakannya untuk mengecek SPF record dengan cara berikut:&lt;/p></description></item><item><title>Fake Sponsored Jobposting</title><link>https://potato.id/posts/fake-sponsored-jobposting/</link><pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/fake-sponsored-jobposting/</guid><description>&lt;p>Sebenarnya ini adalah post lama sempat ramai tahun lalu, saat browsing di Facebook seringkali muncul iklan lowongan kerja dari PT ternama dan pada sektor tertentu seperti sektor tambang, pabrik buruh dan blue collar lainnya, seperti loker yang ada di PT. Epson, PT. Unilever, PT. Indofood dan loker PT lainnya yang mengarahkan kita untuk melakukan pendaftaran secara online dengan mengisi data-data pribadi kita seperti nama, alamat, nomor telepon dan lain-lain.&lt;/p>
+&lt;p>Namun, tidak sedikit yang mengetahui bahwa iklan tersebut adalah iklan palsu yang bertujuan untuk personal-profit pelaku. Kurang lebih seperti ini alur yang dilakukan oleh para penipu tersebut.&lt;/p></description></item><item><title>Panduan Konfigurasi Email DNS Security (SPF, DKIM, DMARC)</title><link>https://potato.id/posts/email-security-spf-dkim-dmarc/</link><pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/email-security-spf-dkim-dmarc/</guid><description>&lt;p>Email adalah salah satu metode komunikasi yang paling banyak digunakan, tetapi juga rentan terhadap serangan seperti &lt;strong>spoofing&lt;/strong>, &lt;strong>phishing&lt;/strong>, dan &lt;strong>spam&lt;/strong>. Oleh karena itu, penerapan &lt;strong>SPF, DKIM, dan DMARC&lt;/strong> sangat penting untuk meningkatkan keamanan email yang kita miliki, berikut adalah panduan konfigurasi SPF, DKIM, dan DMARC untuk meningkatkan keamanan email.&lt;/p>
+&lt;h2 id="sender-policy-framework-spf">&lt;strong>Sender Policy Framework (SPF)&lt;/strong>&lt;/h2>
+&lt;h3 id="apa-itu-spf">&lt;strong>Apa itu SPF?&lt;/strong>&lt;/h3>
+&lt;p>Sender Policy Framework atau SPF adalah mekanisme autentikasi email yang memungkinkan domain &lt;strong>menentukan server mana yang diizinkan mengirim email atas nama domain yang dimiliki&lt;/strong>, konfigurasi ini memungkinkan server penerima untuk memverifikasi bahwa email yang diterima berasal dari server yang diizinkan oleh domain pengirim dan konfigurasi ini diterapkan pada record DNS txt dari domain pengirim.&lt;/p></description></item><item><title>mshta.exe - Threat Actor's Favorite Weapon</title><link>https://potato.id/posts/mshta-exe-threat-actors-favorite-weapon/</link><pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/mshta-exe-threat-actors-favorite-weapon/</guid><description>&lt;h2 id="apa-itu-mshtaexe">Apa itu mshta.exe?&lt;/h2>
+&lt;p>mshta.exe adalah utility file system Windows yang digunakan untuk menjalankan file Microsoft HTML Application (.HTA). Program ini memungkinkan untuk melakukan eksekusi script berbasis VBScript atau JScript, menjadikannya sebagai tool yang berguna bagi administrator akan tetapi juga menjadi tool yang sering disalahgunakan oleh threat actors.&lt;/p>
+&lt;h2 id="mengapa-mshtaexe-sering-digunakan-oleh-threat-actor">Mengapa mshta.exe sering digunakan oleh Threat Actor?&lt;/h2>
+&lt;p>Threat Actor sering menyalahgunakan mshta.exe untuk menjalankan kode berbahaya untuk tidak terdeteksi oleh antivirus atau solusi keamanan lainnya (EDR). Beberapa alasan mengapa mshta.exe sering digunakan dalam serangan malware antara lain:&lt;/p></description></item><item><title>DNS Security, Maybe?</title><link>https://potato.id/posts/dns-security-maybe/</link><pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/dns-security-maybe/</guid><description>&lt;p>Seperti yang kita tahu, DNS adalah sebuah service yang bertanggung jawab untuk merubah hostname menjadi IP, kedengarannya sederhana tapi beberapa orang tidak menyadari bahwa service DNS ini juga dapat menyebabkan kerentanan keamanan. Berikut adalah beberapa event yang pernah saya alami terkait DNS dan keamanannya, perlu diingat ini tidak mengcover semua kerentanan yang ada pada DNS, seperti DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack serta serangan lainnya, hanya beberapa event yang pernah saya alami saja.&lt;/p></description></item><item><title>Infostealer Spreading Through Fake Google reCAPTCHA</title><link>https://potato.id/posts/infostealer-spreading-through-fake-google-recaptcha/</link><pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/infostealer-spreading-through-fake-google-recaptcha/</guid><description>&lt;h2 id="the-beginning">The Beginning&lt;/h2>
+&lt;p>Desember ini saya mendapatkan sebuah notifikasi dari sebuah group Facebook yang saya ikuti, dalam post tersebut (sekarang di hapus) berisi sebuah screenshot seperti gambar di atas, lengkap dengan caption: &lt;em>&amp;lsquo;Apakah ini berbahaya atau nggak? Kok captchanya aneh.&amp;rsquo;&amp;quot;&lt;/em>&lt;/p>
+&lt;p>dalam komentar tersebut Thread Starter menambahkan sebuah screenshot gambar lain yang berisi text yang harus dipaste ke program run.exe seperti berikut&lt;/p>
+
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+ 
+ 
+
+ &lt;figure class="mb-5">
+ &lt;a href="https://potato.id/img/infostealer/2.png" target="_blank" rel="noopener noreferrer" class="image-link">
+ &lt;picture>
+ &lt;source srcset="https://potato.id/img/infostealer/2_hu_f9c74d422db37a87.webp" media="(min-width: 1024px)">
+ &lt;source srcset="https://potato.id/img/infostealer/2_hu_191fafe9e808783c.webp" media="(min-width: 768px) and (max-width: 1023px)">
+ &lt;source srcset="https://potato.id/img/infostealer/2_hu_de649da62fb1eb20.webp" media="(max-width: 767px)">
+ &lt;img src="https://potato.id/img/infostealer/2_hu_de649da62fb1eb20.webp"
+ alt="text"
+ class="hover-effect"
+ width="800"
+ height="246">
+ &lt;/picture>
+ &lt;/a>
+
+ 
+ &lt;/figure>
+
+
+
+&lt;p>Jelas sekali bahwa ini sebuah malware. mshta itu file bawaan Windows yang fungsinya untuk menjalankan command dari aplikasi HTA di environment Windows dan sering sekali dipakai oleh threat actors sebagai salah satu teknik serangan mereka &lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>&lt;/p></description></item><item><title>Secure Surfing Practice</title><link>https://potato.id/posts/secure-surfing-practice/</link><pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate><guid>https://potato.id/posts/secure-surfing-practice/</guid><description>&lt;p>Internet menjadi bagian penting dalam kehidupan sehari-hari, paling umum internet digunakan sebagai media sumber informasi dan hiburan. Namun, penggunaan internet yang tidak bijak dan baik dapat membahayakan keamanan data dan privasi. Berikut adalah beberapa langkah yang dapat diikuti agar tetap aman saat ber-internet:&lt;/p>
+&lt;h2 id="menambahkan-web-proctection">Menambahkan web proctection&lt;/h2>
+&lt;p>Install Malwarebytes Browser Guard Extension pada Browser yang digunakan, dengan ini malwarebytes akan melakukan aksi block ketika kita secara tidak sadar membuka sebuah website yang mencurigakan maupun website yang terindikasi malware / trojan&lt;/p></description></item><item><title>Bagaimana saya membuat website ini</title><link>https://potato.id/posts/how-i-deploy-this-site/</link><pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate><guid>https://potato.id/posts/how-i-deploy-this-site/</guid><description>&lt;p>Sudah dari dulu saya ingin mempunyai blog dan e-mail custom sendiri, dan pada akhirnya saya melakukan blogging menggunakan wordpress, namun karena budget mahasiswa saya hanya bisa membeli domain web.id (sekarang sudah bisa sewa .id :D) dan hostingan termurah (100.000 per tahun) di &lt;a href="https://dracoola.com/">Dracoola&lt;/a>.&lt;/p>
+&lt;p>Setelah membuat beberapa artikel dengan wordpress, disk usage hosting udah kemakan banyak jadinya saya tidak menambah artikel baru dan terasa berat untuk mengaksesnya, semenjak saat itu saya berhenti sejenak.&lt;/p></description></item></channel></rss>

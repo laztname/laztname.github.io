@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1.0">
+	<head>
+		<title>Feedpushr exports</title>
+		<dateCreated>Fri, 03 May 2024 04:05:41 UTC</dateCreated>
+		<dateModified>Fri, 03 May 2024 04:05:41 UTC</dateModified>
+	</head>
+	<body>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:45:27 UTC" category="news" xmlUrl="http://feeds.feedburner.com/akamai/blog" htmlUrl="https://www.akamai.com/blog" title="akamai"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:21:08 UTC" category="news" xmlUrl="https://krebsonsecurity.com/feed/" htmlUrl="https://krebsonsecurity.com" title="krebsonsec"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:13:56 UTC" category="news" xmlUrl="https://www.zerodayinitiative.com/rss/published/" htmlUrl="http://www.zerodayinitiative.com/advisories/published/" title="zdi-published"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:13:57 UTC" category="news" xmlUrl="https://blog.projectdiscovery.io/rss" htmlUrl="https://blog.projectdiscovery.io/" title="projectdiscover"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:13:57 UTC" category="news" xmlUrl="https://unit42.paloaltonetworks.com/feed" htmlUrl="https://unit42.paloaltonetworks.com/" title="unit42paloalto"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:13:57 UTC" category="news" xmlUrl="https://www.microsoft.com/en-us/security/blog/feed/" htmlUrl="https://www.microsoft.com/en-us/security/blog/" title="microsoft-sec"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 10:08:07 UTC" category="news" xmlUrl="https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml" htmlUrl="https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml" title="ukfeeds"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:13:58 UTC" category="news" xmlUrl="https://www.exploitalert.com/feed/" htmlUrl="http://exploitalert.com" title="exploitalert"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:13:58 UTC" category="news" xmlUrl="https://www.cisa.gov/cisa/blog.xml" htmlUrl="https://www.cisa.gov/" title="cisa"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:14:00 UTC" category="news" xmlUrl="https://www.nist.gov/blogs/cybersecurity-insights/rss.xml" htmlUrl="https://www.nist.gov/" title="nist"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:14:01 UTC" category="news" xmlUrl="https://www.zerodayinitiative.com/blog/?format=rss" htmlUrl="https://www.thezdi.com/blog/" title="zdi"></outline>
+		<outline text="" type="rss" created="Thu, 25 Apr 2024 04:00:42 UTC" category="news" xmlUrl="https://www.helpnetsecurity.com/rss" htmlUrl="https://www.helpnetsecurity.com/" title="helpnetsec"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 10:16:59 UTC" category="news" xmlUrl="https://ics-cert.kaspersky.com/feed/" htmlUrl="https://ics-cert.kaspersky.com/feed/" title="kaspersky"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:14:07 UTC" category="news" xmlUrl="https://threatpost.com/feed" htmlUrl="https://threatpost.com" title="threatpost"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:14:07 UTC" category="news" xmlUrl="https://www.cisa.gov/cybersecurity-advisories/ics-advisories.xml" htmlUrl="https://www.cisa.gov/" title="cisa-adver"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:14:09 UTC" category="news" xmlUrl="https://thedfirreport.com/rss" htmlUrl="https://thedfirreport.com/" title="DFIR"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:14:12 UTC" category="news" xmlUrl="https://news.sophos.com/feed/" htmlUrl="https://news.sophos.com/en-us/" title="sophos"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:14:09 UTC" category="news" xmlUrl="https://www.bleepingcomputer.com/feed/" htmlUrl="https://www.bleepingcomputer.com/" title="bleeping"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:14:10 UTC" category="news" xmlUrl="https://www.cyberdefenseinsight.com/feeds/posts/default" htmlUrl="https://www.cyberdefenseinsight.com/" title="cyberdefenseinsight"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 10:08:40 UTC" category="news" xmlUrl="https://redsiege.com/rss" htmlUrl="https://redsiege.com" title="redsiege"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:14:11 UTC" category="ransom" xmlUrl="https://www.ransomware.live/rss.xml" htmlUrl="https://www.ransomware.live/rss.xml" title="Ransomwathc"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 10:14:04 UTC" category="news" xmlUrl="https://cert.europa.eu/publications/security-advisories-rss" htmlUrl="https://cert.europa.eu/publications/security-advisories/" title="eufeed"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:25:40 UTC" category="thn" xmlUrl="https://feeds.feedburner.com/TheHackersNews" htmlUrl="https://thehackernews.com" title="thehackernews"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:14:15 UTC" category="news" xmlUrl="https://securelist.com/all/rss" htmlUrl="https://securelist.com" title="securelist"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:14:15 UTC" category="news" xmlUrl="https://www.exploit-db.com/rss.xml" htmlUrl="https://www.exploit-db.com" title="EXDB"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:14:16 UTC" category="news" xmlUrl="https://blog.talosintelligence.com/rss/" htmlUrl="https://blog.talosintelligence.com/" title="talos"></outline>
+		<outline text="" type="rss" created="Thu, 18 Apr 2024 09:14:16 UTC" category="news" xmlUrl="https://jfrog.com/blog/rss" htmlUrl="https://jfrog.com" title="jfrog"></outline>
+	</body>
+</opml>
