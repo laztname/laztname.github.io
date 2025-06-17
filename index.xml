@@ -1,4 +1,116 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Main - Ardi Jonias Fortuna on Jonias Fortuna</title><link>https://potato.id/</link><description>Recent content in Main - Ardi Jonias Fortuna on Jonias Fortuna</description><generator>Hugo</generator><language>id-ID</language><lastBuildDate>Thu, 12 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/index.xml" rel="self" type="application/rss+xml"/><item><title>Apa Itu Credential Attack? Kenali dan Cegah Sebelum Terlambat</title><link>https://potato.id/posts/credential-attack/</link><pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/credential-attack/</guid><description>&lt;h2 id="apa-itu-credential-attack">Apa Itu Credential Attack?&lt;/h2>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Main - Ardi Jonias Fortuna on Jonias Fortuna</title><link>https://potato.id/</link><description>Recent content in Main - Ardi Jonias Fortuna on Jonias Fortuna</description><generator>Hugo</generator><language>id-ID</language><lastBuildDate>Mon, 16 Jun 2025 23:00:00 +0700</lastBuildDate><atom:link href="https://potato.id/index.xml" rel="self" type="application/rss+xml"/><item><title>Active Directory Pentesting Checklist</title><link>https://potato.id/active-directory-pentesting-checklist/</link><pubDate>Mon, 16 Jun 2025 23:00:00 +0700</pubDate><guid>https://potato.id/active-directory-pentesting-checklist/</guid><description>&lt;p>&lt;img src="https://orange-cyberdefense.github.io/ocd-mindmaps/img/mindmap_ad_dark_classic_2025.03.excalidraw.svg" alt="AD Attack Paths">&lt;/p>
+&lt;h2 id="-active-directory-pentesting-checklist">✅ Active Directory Pentesting Checklist&lt;/h2>
+&lt;p>A structured guide to learning every major technique and path in AD exploitation, based on the visual map by &lt;a href="https://github.com/Orange-Cyberdefense/ocd-mindmaps">Orange Cyberdefense&lt;/a>&lt;/p>
+&lt;hr>
+&lt;h2 id="-active-directory-pentesting-checklist-1">✅ Active Directory Pentesting Checklist&lt;/h2>
+&lt;h3 id="-initial-access">🧭 Initial Access&lt;/h3>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Spearphishing Attachment&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Spearphishing Link&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Valid Accounts (default/reused creds)&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Exploit Public-Facing App&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Drive-by Compromise&lt;/li>
+&lt;/ul>
+&lt;h3 id="-execution">⚙️ Execution&lt;/h3>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> PowerShell&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Cmd Shell&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Scheduled Task/Job&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Malicious Service&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Office Macros&lt;/li>
+&lt;/ul>
+&lt;h3 id="-discovery">🗺️ Discovery&lt;/h3>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Account Enumeration&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Group Enumeration&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Domain Trust Enumeration&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> GPO &amp;amp; ACL Enumeration&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> DNS Enumeration&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> SPN Enumeration / Kerberoasting&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> AS-REP Roasting&lt;/li>
+&lt;/ul>
+&lt;h3 id="-lateral-movement">📡 Lateral Movement&lt;/h3>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> SMB / PSExec&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> WinRM / WMI&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> RDP&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Token Impersonation&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Kerberos Delegation&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> RBCD (Resource-Based Constrained Delegation)&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> DCOM Abuse&lt;/li>
+&lt;/ul>
+&lt;h3 id="-privilege-escalation">🛑 Privilege Escalation&lt;/h3>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> UAC Bypass&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Abuse SeDebug / SeImpersonate&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Credential Theft &amp;amp; Reuse&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> GPO Misconfiguration Abuse&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> DLL Hijacking&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> AlwaysInstallElevated&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Unquoted Service Path&lt;/li>
+&lt;/ul>
+&lt;h3 id="-credential-access">🔐 Credential Access&lt;/h3>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> LSASS Dumping&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> SAM Dump&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> NTDS.dit Extraction&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> secretsdump.py / DCSync&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> LSA Secret Extraction&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Cleartext Password Discovery&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Credential Manager Theft&lt;/li>
+&lt;/ul>
+&lt;h3 id="-defense-evasion">🧠 Defense Evasion&lt;/h3>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Script Obfuscation&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Timestomping&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Event Log Clearing&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> AMSI Bypass&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Disabling Defender&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> EDR Tampering&lt;/li>
+&lt;/ul>
+&lt;h3 id="-persistence">🏰 Persistence&lt;/h3>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Golden Ticket&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Silver Ticket&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Skeleton Key&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> AdminSDHolder Abuse&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> DCShadow&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Create Shadow Admin Account&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> WMI Event Subscription&lt;/li>
+&lt;/ul>
+&lt;h3 id="-domain-dominance">🧨 Domain Dominance&lt;/h3>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> Full Domain Hash Dump&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> KRBTGT Account Compromise&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Rogue Domain Controller (backdoor)&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Trust Path Abuse (forest/domain trust manipulation)&lt;/li>
+&lt;/ul>
+&lt;h3 id="-collection">🔎 Collection&lt;/h3>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> File Share Harvesting&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Email Harvesting&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Clipboard Monitoring&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Keylogging&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Screenshot / Webcam Capture&lt;/li>
+&lt;/ul>
+&lt;h3 id="-hybrid--azure-ad">☁️ Hybrid / Azure AD&lt;/h3>
+&lt;ul>
+&lt;li>&lt;input disabled="" type="checkbox"> AzureAD Token Theft&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> AzureAD Enumeration&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Conditional Access Bypass&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> AzureAD Privilege Escalation&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Hybrid Join Attack Paths&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> AAD Connect Abuse&lt;/li>
+&lt;/ul>
+&lt;h2 id="-tool-recommendations">🛠 Tool Recommendations&lt;/h2>
+&lt;ul>
+&lt;li>BloodHound / SharpHound&lt;/li>
+&lt;li>Mimikatz / Rubeus / Kekeo&lt;/li>
+&lt;li>CrackMapExec / Evil-WinRM&lt;/li>
+&lt;li>Impacket (secretsdump.py, wmiexec)&lt;/li>
+&lt;li>AADInternals / Roadtools&lt;/li>
+&lt;/ul></description></item><item><title>Memahami Lifecycle Serangan Ransomware: Dari Awal Hingga Enkripsi Data</title><link>https://potato.id/posts/ransomware-lifecycle-dan-cara-memutusnya/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/ransomware-lifecycle-dan-cara-memutusnya/</guid><description>&lt;p>Dalam beberapa tahun terakhir, ransomware telah menjadi salah satu ancaman paling serius di dunia keamanan siber. Tidak hanya menyerang perusahaan besar, pelaku kejahatan siber kini juga menargetkan UKM, instansi pendidikan, hingga sektor kesehatan. Dampaknya bisa sangat fatal—mulai dari gangguan operasional, kehilangan data penting, hingga kerugian finansial akibat pembayaran tebusan.&lt;/p>
+&lt;p>Pembaca bisa melihat korban Ransomware selalu update dan terjadi setiap hari di &lt;a href="https://ransomware.live/">Ransomware Live&lt;/a>, bisa kita lihat bahwa serangan ransomware ini tidak mengenal waktu dan hampir seluruh sektor industri menjadi target empuk bagi para pelaku kejahatan siber ini.&lt;/p></description></item><item><title>Apa Itu Credential Attack? Kenali dan Cegah Sebelum Terlambat</title><link>https://potato.id/posts/credential-attack/</link><pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/credential-attack/</guid><description>&lt;h2 id="apa-itu-credential-attack">Apa Itu Credential Attack?&lt;/h2>
 &lt;p>Credential attack atau serangan kredensial adalah upaya peretasan untuk mengambil alih akun seseorang dengan cara mencuri username dan password. Biasanya ini dilakukan lewat teknik kayak &lt;strong>phishing&lt;/strong>, &lt;strong>credential stuffing&lt;/strong>, hingga &lt;strong>brute force&lt;/strong>.&lt;/p>
 &lt;p>Gampangnya, mereka ngintip, nebak, atau mencoba ribuan kombinasi password buat masuk ke akun kalian, setelah itu mereka bisa ngakses semua data yang ada di dalamnya. seperti akun email, akun media sosial, akun game hingga akun banking.&lt;/p></description></item><item><title>Web Phishing itu HTTP atau HTTPS?</title><link>https://potato.id/posts/https-adalah-website-yang-aman/</link><pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/https-adalah-website-yang-aman/</guid><description>&lt;h2 id="overview">Overview&lt;/h2>
 &lt;p>Web phishing adalah salah satu metode serangan yang paling sering digunakan oleh para penyerang. Dalam serangan phishing, penyerang membuat situs web palsu yang meniru situs web asli. Situs web palsu ini biasanya digunakan untuk mencuri informasi sensitif dari korban, seperti kredensial login, informasi kartu kredit, dan lain-lain.&lt;/p>
