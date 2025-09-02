@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reset Indonesia</title>
+  <meta name="description" content="Tunjukkan kepedulianmu terhadap Indonesia dengan foto perjuanganmu. Upload foto, tambahkan filter pink perjuangan, atur intensitas, lalu unduh dalam kualitas HD.">
+  <meta name="keywords" content="#resetindonesia, reset indonesia, pink filter, photo editor, image overlay, free tool, hd image filter, download filtered image, aesthetic filter, online editor">
+  <meta name="author" content="Jonias Fortuna">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Reset Indonesia">
+  <meta property="og:description" content="Tunjukkan kepedulianmu terhadap Indonesia dengan foto perjuanganmu. Upload foto, tambahkan filter pink perjuangan, atur intensitas, lalu unduh dalam kualitas HD.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://potato.id/">
+  <meta property="og:image" content="https://potato.id/img/resetid.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Reset Indonesia">
+  <meta name="twitter:description" content="Tunjukkan kepedulianmu terhadap Indonesia dengan foto perjuanganmu. Upload foto, tambahkan filter pink perjuangan, atur intensitas, lalu unduh dalam kualitas HD.">
+  <meta name="twitter:image" content="https://potato.id/img/resetid.png">
+  <link rel="canonical" href="https://potato.id/">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 min-h-screen flex flex-col items-center justify-center text-white p-6">
+
+  <h1 class="text-2xl font-bold mb-6">#RESETINDONESIA</h1>
+
+  <!-- Upload Input -->
+  <input id="upload" type="file" accept="image/*" 
+    class="mb-6 p-2 border border-gray-700 rounded-lg bg-gray-800 text-sm" />
+
+  <!-- Image Preview -->
+  <div id="image-container" class="relative max-w-md w-full hidden">
+    <img id="preview" src="" alt="Uploaded" class="w-full rounded-lg shadow-lg" />
+    <!-- Overlay -->
+    <div id="overlay" class="absolute inset-0 bg-pink-500 mix-blend-multiply rounded-lg"></div>
+  </div>
+
+  <!-- Controls -->
+  <div id="controls" class="hidden flex flex-col items-center mt-6 space-y-4">
+    <!-- Opacity Slider -->
+    <div class="flex flex-col items-center">
+      <label for="opacityRange" class="text-sm mb-2">Filter Intensity</label>
+      <input id="opacityRange" type="range" min="0" max="100" value="60" 
+        class="w-64 accent-pink-500" />
+    </div>
+
+    <!-- Save Button -->
+    <button id="saveBtn" 
+      class="px-6 py-2 bg-pink-600 hover:bg-pink-700 rounded-lg shadow-lg font-semibold">
+      Save / Download HD
+    </button>
+  </div>
+
+  <script>
+    const upload = document.getElementById('upload');
+    const preview = document.getElementById('preview');
+    const container = document.getElementById('image-container');
+    const overlay = document.getElementById('overlay');
+    const controls = document.getElementById('controls');
+    const saveBtn = document.getElementById('saveBtn');
+    const opacityRange = document.getElementById('opacityRange');
+
+    let originalImage = null;
+    let currentOpacity = 0.6; // default 60%
+
+    upload.addEventListener('change', (e) => {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = (event) => {
+          originalImage = new Image();
+          originalImage.onload = () => {
+            preview.src = originalImage.src;
+            container.classList.remove('hidden');
+            controls.classList.remove('hidden');
+          };
+          originalImage.src = event.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Update overlay opacity live
+    opacityRange.addEventListener('input', (e) => {
+      currentOpacity = e.target.value / 100;
+      overlay.style.opacity = currentOpacity;
+    });
+
+    // Save HD image
+    saveBtn.addEventListener('click', () => {
+      if (!originalImage) return;
+
+      const canvas = document.createElement('canvas');
+      canvas.width = originalImage.naturalWidth;
+      canvas.height = originalImage.naturalHeight;
+      const ctx = canvas.getContext('2d');
+
+      // Draw the original image
+      ctx.drawImage(originalImage, 0, 0);
+
+      // Apply pink overlay with chosen opacity
+      ctx.fillStyle = `rgba(236, 72, 153, ${currentOpacity})`; 
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Save as PNG
+      const link = document.createElement('a');
+      link.download = 'pink-filter.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    });
+  </script>
+</body>
+</html>
+
