@@ -51,7 +51,7 @@
     </button>
   </div>
 
-  <script>
+    <script>
     const upload = document.getElementById('upload');
     const preview = document.getElementById('preview');
     const container = document.getElementById('image-container');
@@ -73,6 +73,7 @@
             preview.src = originalImage.src;
             container.classList.remove('hidden');
             controls.classList.remove('hidden');
+            overlay.style.opacity = currentOpacity; // sync preview
           };
           originalImage.src = event.target.result;
         };
@@ -98,9 +99,13 @@
       // Draw the original image
       ctx.drawImage(originalImage, 0, 0);
 
-      // Apply pink overlay with chosen opacity
-      ctx.fillStyle = `rgba(236, 72, 153, ${currentOpacity})`; 
+      // Apply pink overlay with multiply blend mode
+      ctx.globalCompositeOperation = "multiply";
+      ctx.fillStyle = `rgba(236, 72, 153, ${currentOpacity})`;
       ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Reset to default composite mode
+      ctx.globalCompositeOperation = "source-over";
 
       // Save as PNG
       const link = document.createElement('a');
@@ -109,6 +114,8 @@
       link.click();
     });
   </script>
+
+
 </body>
 </html>
 
