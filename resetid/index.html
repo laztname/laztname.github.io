@@ -51,69 +51,94 @@
     </button>
   </div>
 
-    <script>
-    const upload = document.getElementById('upload');
-    const preview = document.getElementById('preview');
-    const container = document.getElementById('image-container');
-    const overlay = document.getElementById('overlay');
-    const controls = document.getElementById('controls');
-    const saveBtn = document.getElementById('saveBtn');
-    const opacityRange = document.getElementById('opacityRange');
+<script>
+  const upload = document.getElementById('upload');
+  const preview = document.getElementById('preview');
+  const container = document.getElementById('image-container');
+  const overlay = document.getElementById('overlay');
+  const controls = document.getElementById('controls');
+  const saveBtn = document.getElementById('saveBtn');
+  const opacityRange = document.getElementById('opacityRange');
 
-    let originalImage = null;
-    let currentOpacity = 0.6; // default 60%
+  let originalImage = null;
+  let currentOpacity = 0.6; // default 60%
+  let currentStyle = "brave"; // default style
 
-    upload.addEventListener('change', (e) => {
-      const file = e.target.files[0];
-      if (file) {
-        const reader = new FileReader();
-        reader.onload = (event) => {
-          originalImage = new Image();
-          originalImage.onload = () => {
-            preview.src = originalImage.src;
-            container.classList.remove('hidden');
-            controls.classList.remove('hidden');
-            overlay.style.opacity = currentOpacity; // sync preview
-          };
-          originalImage.src = event.target.result;
+  // Style presets
+  const styles = {
+    brave: { color: "rgba(236, 72, 153,", tailwind: "bg-pink-500" }, // pink
+    hero: { color: "rgba(34, 197, 94,", tailwind: "bg-green-500" }   // green
+  };
+
+  upload.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        originalImage = new Image();
+        originalImage.onload = () => {
+          preview.src = originalImage.src;
+          container.classList.remove('hidden');
+          controls.classList.remove('hidden');
+          applyOverlay(); // sync preview
         };
-        reader.readAsDataURL(file);
-      }
-    });
+        originalImage.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
 
-    // Update overlay opacity live
-    opacityRange.addEventListener('input', (e) => {
-      currentOpacity = e.target.value / 100;
-      overlay.style.opacity = currentOpacity;
-    });
+  // Update overlay opacity live
+  opacityRange.addEventListener('input', (e) => {
+    currentOpacity = e.target.value / 100;
+    applyOverlay();
+  });
 
-    // Save HD image
-    saveBtn.addEventListener('click', () => {
-      if (!originalImage) return;
+  // Apply overlay style to preview
+  function applyOverlay() {
+    overlay.className = `absolute inset-0 ${styles[currentStyle].tailwind} mix-blend-multiply rounded-lg`;
+    overlay.style.opacity = currentOpacity;
+  }
 
-      const canvas = document.createElement('canvas');
-      canvas.width = originalImage.naturalWidth;
-      canvas.height = originalImage.naturalHeight;
-      const ctx = canvas.getContext('2d');
+  // Save HD image
+  saveBtn.addEventListener('click', () => {
+    if (!originalImage) return;
 
-      // Draw the original image
-      ctx.drawImage(originalImage, 0, 0);
+    const canvas = document.createElement('canvas');
+    canvas.width = originalImage.naturalWidth;
+    canvas.height = originalImage.naturalHeight;
+    const ctx = canvas.getContext('2d');
 
-      // Apply pink overlay with multiply blend mode
-      ctx.globalCompositeOperation = "multiply";
-      ctx.fillStyle = `rgba(236, 72, 153, ${currentOpacity})`;
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    // Draw the original image
+    ctx.drawImage(originalImage, 0, 0);
 
-      // Reset to default composite mode
-      ctx.globalCompositeOperation = "source-over";
+    // Apply overlay with multiply blend mode
+    ctx.globalCompositeOperation = "multiply";
+    ctx.fillStyle = `${styles[currentStyle].color} ${currentOpacity})`; 
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-      // Save as PNG
-      const link = document.createElement('a');
-      link.download = 'pink-filter.png';
-      link.href = canvas.toDataURL('image/png');
-      link.click();
-    });
-  </script>
+    // Reset to default composite mode
+    ctx.globalCompositeOperation = "source-over";
+
+    // Save as PNG
+    const link = document.createElement('a');
+    link.download = `${currentStyle}-filter.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  });
+
+  // Example: switch style (you can trigger from a button/dropdown)
+  function setStyle(style) {
+    if (styles[style]) {
+      currentStyle = style;
+      applyOverlay();
+    }
+  }
+
+  // expose for HTML buttons
+  window.setStyle = setStyle;
+</script>
+
 
 
 </body>
