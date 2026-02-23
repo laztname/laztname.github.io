@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Incident Response on Jonias Fortuna</title><link>https://potato.id/tags/incident-response/</link><description>Recent content in Incident Response on Jonias Fortuna</description><generator>Hugo</generator><language>id-ID</language><lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/incident-response/index.xml" rel="self" type="application/rss+xml"/><item><title>Websitemu di Hack?, Lakukan hal berikut</title><link>https://potato.id/posts/my-website-hacked-now-what/</link><pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate><guid>https://potato.id/posts/my-website-hacked-now-what/</guid><description>&lt;p>Di dalam group Telegram Surabaya Hacker Link saya dan &lt;code>@ytyao&lt;/code> sering membuat challenges seperti web hacking, reversing dan lain sebagainya, namun pada challenges sebelumnya ada sedikit insiden, yaitu web di hack (well memang sih web dibuat sedemikian rupa untuk di hack), namun si hacker ini melakukan sabun masal alias menghapus semua file dan folder yang ada. Namun dari hal tersebut saya mendapatkan ilmu baru yaitu penanganan setelah insiden atau istilah kerennya Incident Response&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Incident Response on Jonias Fortuna</title>
+    <link>https://potato.id/tags/incident-response/</link>
+    <description>Recent content in Incident Response on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/tags/incident-response/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Websitemu di Hack?, Lakukan hal berikut</title>
+      <link>https://potato.id/posts/my-website-hacked-now-what/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/my-website-hacked-now-what/</guid>
+      <description>&lt;p&gt;Di dalam group Telegram Surabaya Hacker Link saya dan &lt;code&gt;@ytyao&lt;/code&gt; sering membuat challenges seperti web hacking, reversing dan lain sebagainya, namun pada challenges sebelumnya ada sedikit insiden, yaitu web di hack (well memang sih web dibuat sedemikian rupa untuk di hack), namun si hacker ini melakukan sabun masal alias menghapus semua file dan folder yang ada. Namun dari hal tersebut saya mendapatkan ilmu baru yaitu penanganan setelah insiden atau istilah kerennya Incident Response&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

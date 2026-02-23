@@ -1,8 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Cyber Hygiene on Jonias Fortuna</title><link>https://potato.id/tags/cyber-hygiene/</link><description>Recent content in Cyber Hygiene on Jonias Fortuna</description><generator>Hugo</generator><language>id-ID</language><lastBuildDate>Fri, 13 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/cyber-hygiene/index.xml" rel="self" type="application/rss+xml"/><item><title>Critical RCE pada Plugin WordPress (900K+ Instalasi): Detektsi &amp; Mitigasi</title><link>https://potato.id/posts/kerentanan-rce-kritis-plugin-wordpress-900k-instalasi-deteksi-mitigasi/</link><pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate><guid>https://potato.id/posts/kerentanan-rce-kritis-plugin-wordpress-900k-instalasi-deteksi-mitigasi/</guid><description>&lt;h2 id="ringkasan">Ringkasan&lt;/h2>
-&lt;p>Sebuah plugin WordPress dengan lebih dari &lt;strong>900.000 instalasi aktif&lt;/strong> dilaporkan memiliki kerentanan &lt;strong>Remote Code Execution (RCE)&lt;/strong> dengan tingkat keparahan kritis.&lt;/p>
-&lt;p>Kerentanan ini memungkinkan penyerang menjalankan kode arbitrer di server target dalam kondisi tertentu. Mengingat skala instalasi yang besar, potensi eksploitasi massal sangat tinggi.&lt;/p>
-&lt;hr>
-&lt;h2 id="dampak-teknis">Dampak Teknis&lt;/h2>
-&lt;p>Kerentanan Remote Code Execution (RCE) pada instalasi WordPress merupakan salah satu kategori kerentanan paling kritis karena memungkinkan penyerang menjalankan command pada server di wordpress yang memiliki vulnerability ini. Dampak yang ditimbulkan tidak hanya terbatas pada aplikasi web, tetapi juga dapat meluas ke seluruh lingkungan server tergantung pada konfigurasi dan hak akses yang tersedia.&lt;/p></description></item><item><title>Cyber Hygiene: Tips Aman Sehari-hari</title><link>https://potato.id/posts/cyber-hygiene-kebiasaan-kecil-yang-menyelamatkan-dari-serangan-siber/</link><pubDate>Fri, 11 Jul 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/cyber-hygiene-kebiasaan-kecil-yang-menyelamatkan-dari-serangan-siber/</guid><description>&lt;p>Kita hidup di era digital di mana hampir semua aktivitas terhubung ke internet — dari belanja, perbankan, bekerja, hingga hiburan. Tapi banyak orang masih lalai dalam menjaga keamanan data pribadinya sehingga secara tidak sadar membuka celah bagi serangan siber. Di sinilah pentingnya &lt;strong>cyber hygiene&lt;/strong>, yaitu kebiasaan digital yang baik untuk mencegah serangan siber.&lt;/p>
-&lt;h2 id="apa-itu-cyber-hygiene">Apa Itu Cyber Hygiene?&lt;/h2>
-&lt;p>&lt;strong>Cyber hygiene&lt;/strong> adalah serangkaian praktik atau rutinitas harian yang membantu menjaga keamanan informasi dan perangkat digital kamu dari ancaman siber. Sama seperti kamu rutin mencuci tangan untuk mencegah penyakit, cyber hygiene membantu kamu mencegah malware, phishing, dan pencurian data.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cyber Hygiene on Jonias Fortuna</title>
+    <link>https://potato.id/tags/cyber-hygiene/</link>
+    <description>Recent content in Cyber Hygiene on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Fri, 13 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/tags/cyber-hygiene/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Critical RCE pada Plugin WordPress (900K&#43; Instalasi): Detektsi &amp; Mitigasi</title>
+      <link>https://potato.id/posts/kerentanan-rce-kritis-plugin-wordpress-900k-instalasi-deteksi-mitigasi/</link>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/kerentanan-rce-kritis-plugin-wordpress-900k-instalasi-deteksi-mitigasi/</guid>
+      <description>&lt;h2 id=&#34;ringkasan&#34;&gt;Ringkasan&lt;/h2&gt;&#xA;&lt;p&gt;Sebuah plugin WordPress dengan lebih dari &lt;strong&gt;900.000 instalasi aktif&lt;/strong&gt; dilaporkan memiliki kerentanan &lt;strong&gt;Remote Code Execution (RCE)&lt;/strong&gt; dengan tingkat keparahan kritis.&lt;/p&gt;&#xA;&lt;p&gt;Kerentanan ini memungkinkan penyerang menjalankan kode arbitrer di server target dalam kondisi tertentu. Mengingat skala instalasi yang besar, potensi eksploitasi massal sangat tinggi.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;dampak-teknis&#34;&gt;Dampak Teknis&lt;/h2&gt;&#xA;&lt;p&gt;Kerentanan Remote Code Execution (RCE) pada instalasi WordPress merupakan salah satu kategori kerentanan paling kritis karena memungkinkan penyerang menjalankan command pada server di wordpress yang memiliki vulnerability ini. Dampak yang ditimbulkan tidak hanya terbatas pada aplikasi web, tetapi juga dapat meluas ke seluruh lingkungan server tergantung pada konfigurasi dan hak akses yang tersedia.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cyber Hygiene: Tips Aman Sehari-hari</title>
+      <link>https://potato.id/posts/cyber-hygiene-kebiasaan-kecil-yang-menyelamatkan-dari-serangan-siber/</link>
+      <pubDate>Fri, 11 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/cyber-hygiene-kebiasaan-kecil-yang-menyelamatkan-dari-serangan-siber/</guid>
+      <description>&lt;p&gt;Kita hidup di era digital di mana hampir semua aktivitas terhubung ke internet — dari belanja, perbankan, bekerja, hingga hiburan. Tapi banyak orang masih lalai dalam menjaga keamanan data pribadinya sehingga secara tidak sadar membuka celah bagi serangan siber. Di sinilah pentingnya &lt;strong&gt;cyber hygiene&lt;/strong&gt;, yaitu kebiasaan digital yang baik untuk mencegah serangan siber.&lt;/p&gt;&#xA;&lt;h2 id=&#34;apa-itu-cyber-hygiene&#34;&gt;Apa Itu Cyber Hygiene?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Cyber hygiene&lt;/strong&gt; adalah serangkaian praktik atau rutinitas harian yang membantu menjaga keamanan informasi dan perangkat digital kamu dari ancaman siber. Sama seperti kamu rutin mencuci tangan untuk mencegah penyakit, cyber hygiene membantu kamu mencegah malware, phishing, dan pencurian data.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Intrusion Prevention System on Jonias Fortuna</title><link>https://potato.id/tags/intrusion-prevention-system/</link><description>Recent content in Intrusion Prevention System on Jonias Fortuna</description><generator>Hugo</generator><language>id-ID</language><lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/intrusion-prevention-system/index.xml" rel="self" type="application/rss+xml"/><item><title>Memahami Lifecycle Serangan Ransomware: Dari Awal Hingga Enkripsi Data</title><link>https://potato.id/posts/ransomware-lifecycle-dan-cara-memutusnya/</link><pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate><guid>https://potato.id/posts/ransomware-lifecycle-dan-cara-memutusnya/</guid><description>&lt;p>Dalam beberapa tahun terakhir, ransomware telah menjadi salah satu ancaman paling serius di dunia keamanan siber. Tidak hanya menyerang perusahaan besar, pelaku kejahatan siber kini juga menargetkan UKM, instansi pendidikan, hingga sektor kesehatan. Dampaknya bisa sangat fatal—mulai dari gangguan operasional, kehilangan data penting, hingga kerugian finansial akibat pembayaran tebusan.&lt;/p>
-&lt;p>Pembaca bisa melihat korban Ransomware selalu update dan terjadi setiap hari di &lt;a href="https://ransomware.live/">Ransomware Live&lt;/a>, bisa kita lihat bahwa serangan ransomware ini tidak mengenal waktu dan hampir seluruh sektor industri menjadi target empuk bagi para pelaku kejahatan siber ini.&lt;/p></description></item><item><title>Harderning Server with Fail2ban and Reporting to Telegram</title><link>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</link><pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate><guid>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</guid><description>&lt;p>&lt;img src="https://potato.id/img/fail2ban/thumb.webp" alt="fail2ban-logs">&lt;/p>
-&lt;p>Setelah cukup sibuk sehingga tidak sempat membuat challenges dan menuliskan bagaimana cara menyelesaikan challenges tersebut pada blog ini, kali ini kita akan membahas sedikit tentang fail2ban dan cara melakukan konfigurasinya&lt;/p>
-&lt;p>Umumnya fail2ban digunakan untuk melakukan ban terhadap IP yang gagal melakukan authentikasi sebanyak batas maksimal yang disebutkan pada konfigurasi dan IPS ini sangat ampuh mencekal serangan yang akan terjadi pada server, seperti serangan bruteforce pada port ssh (22), ftp (21), smtp (25) dsb, bahkan serangan lainnya yang melalui web server (80/443), lalu sebelum mengetahui bagaimana konfigurasi fail2ban kita akan belajar sedikit tentang bagaimana fail2ban bekerja.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Intrusion Prevention System on Jonias Fortuna</title>
+    <link>https://potato.id/tags/intrusion-prevention-system/</link>
+    <description>Recent content in Intrusion Prevention System on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/tags/intrusion-prevention-system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Memahami Lifecycle Serangan Ransomware: Dari Awal Hingga Enkripsi Data</title>
+      <link>https://potato.id/posts/ransomware-lifecycle-dan-cara-memutusnya/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/ransomware-lifecycle-dan-cara-memutusnya/</guid>
+      <description>&lt;p&gt;Dalam beberapa tahun terakhir, ransomware telah menjadi salah satu ancaman paling serius di dunia keamanan siber. Tidak hanya menyerang perusahaan besar, pelaku kejahatan siber kini juga menargetkan UKM, instansi pendidikan, hingga sektor kesehatan. Dampaknya bisa sangat fatal—mulai dari gangguan operasional, kehilangan data penting, hingga kerugian finansial akibat pembayaran tebusan.&lt;/p&gt;&#xA;&lt;p&gt;Pembaca bisa melihat korban Ransomware selalu update dan terjadi setiap hari di &lt;a href=&#34;https://ransomware.live/&#34;&gt;Ransomware Live&lt;/a&gt;, bisa kita lihat bahwa serangan ransomware ini tidak mengenal waktu dan hampir seluruh sektor industri menjadi target empuk bagi para pelaku kejahatan siber ini.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Harderning Server with Fail2ban and Reporting to Telegram</title>
+      <link>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://potato.id/img/fail2ban/thumb.webp&#34; alt=&#34;fail2ban-logs&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Setelah cukup sibuk sehingga tidak sempat membuat challenges dan menuliskan bagaimana cara menyelesaikan challenges tersebut pada blog ini, kali ini kita akan membahas sedikit tentang fail2ban dan cara melakukan konfigurasinya&lt;/p&gt;&#xA;&lt;p&gt;Umumnya fail2ban digunakan untuk melakukan ban terhadap IP yang gagal melakukan authentikasi sebanyak batas maksimal yang disebutkan pada konfigurasi dan IPS ini sangat ampuh mencekal serangan yang akan terjadi pada server, seperti serangan bruteforce pada port ssh (22), ftp (21), smtp (25) dsb, bahkan serangan lainnya yang melalui web server (80/443), lalu sebelum mengetahui bagaimana konfigurasi fail2ban kita akan belajar sedikit tentang bagaimana fail2ban bekerja.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,3 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Text Editor on Jonias Fortuna</title><link>https://potato.id/tags/text-editor/</link><description>Recent content in Text Editor on Jonias Fortuna</description><generator>Hugo</generator><language>id-ID</language><lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://potato.id/tags/text-editor/index.xml" rel="self" type="application/rss+xml"/><item><title>My Daily VIM</title><link>https://potato.id/posts/my-daily-vim/</link><pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate><guid>https://potato.id/posts/my-daily-vim/</guid><description>&lt;h2 id="vim---text-editor">VIM - Text Editor&lt;/h2>
-&lt;p>Mungkin kalian sudah tidak asing lagi dengan text editor satu ini, yup VIM atau Vi Improved. Vim adalah text editor berbasis terminal yang sangat mudah digunakan dan mempercepat pekerjaan, vim selalu diibaratkan text editor yang susah karena penggunanya belum terbiasa akan bind-key defaultnya.&lt;/p>
-&lt;p>VIM sendiri adalah text editor yang sudah ada sejak tahun 1991, dan sampai saat ini masih banyak digunakan oleh para developer, sysadmin, dan lainnya. VIM juga merupakan text editor yang sangat ringan, cepat, dan dapat diakses melalui terminal, VIM merupakan versi yang lebih baik dari Vi, yang merupakan text editor bawaan dari sistem operasi UNIX, umumnya VIM/Vi sudah terinstall di sistem operasi berbasis UNIX seperti Linux, MacOS, dan BSD.&lt;/p></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Text Editor on Jonias Fortuna</title>
+    <link>https://potato.id/tags/text-editor/</link>
+    <description>Recent content in Text Editor on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/tags/text-editor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Daily VIM</title>
+      <link>https://potato.id/posts/my-daily-vim/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/my-daily-vim/</guid>
+      <description>&lt;h2 id=&#34;vim---text-editor&#34;&gt;VIM - Text Editor&lt;/h2&gt;&#xA;&lt;p&gt;Mungkin kalian sudah tidak asing lagi dengan text editor satu ini, yup VIM atau Vi Improved. Vim adalah text editor berbasis terminal yang sangat mudah digunakan dan mempercepat pekerjaan, vim selalu diibaratkan text editor yang susah karena penggunanya belum terbiasa akan bind-key defaultnya.&lt;/p&gt;&#xA;&lt;p&gt;VIM sendiri adalah text editor yang sudah ada sejak tahun 1991, dan sampai saat ini masih banyak digunakan oleh para developer, sysadmin, dan lainnya. VIM juga merupakan text editor yang sangat ringan, cepat, dan dapat diakses melalui terminal, VIM merupakan versi yang lebih baik dari Vi, yang merupakan text editor bawaan dari sistem operasi UNIX, umumnya VIM/Vi sudah terinstall di sistem operasi berbasis UNIX seperti Linux, MacOS, dan BSD.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
