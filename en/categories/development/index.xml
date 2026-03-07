@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Development on Jonias Fortuna</title>
+    <link>https://potato.id/en/categories/development/</link>
+    <description>Recent content in Development on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTTP: Hyper Text Transfer Protocol How HTTP Works Behind the Browser</title>
+      <link>https://potato.id/en/posts/http-web-behind-the-browser/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/http-web-behind-the-browser/</guid>
+      <description>&lt;p&gt;In this post you will understand &lt;strong&gt;what HTTP is&lt;/strong&gt; examples of HTTP request and response and how it works behind your browser. This is an important foundation to understand how the web works which will be very useful for web hacking bug bounty and pentesting.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;what-is-http&#34;&gt;What Is HTTP?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;HTTP Hypertext Transfer Protocol&lt;/strong&gt; is the main protocol used to send data between &lt;strong&gt;client browser&lt;/strong&gt; and &lt;strong&gt;server web server&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Every time we access a website the browser sends an &lt;strong&gt;HTTP request&lt;/strong&gt; and the server responds with an &lt;strong&gt;HTTP response&lt;/strong&gt;. This process is not directly visible in the browser and what we usually see is &lt;strong&gt;HTML&lt;/strong&gt; rendered into a web page where the HTML is the result of the HTTP response sent by the server.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Understanding the Ransomware Attack Lifecycle: From Initial Access to Data Encryption</title>
+      <link>https://potato.id/en/posts/ransomware-lifecycle-and-how-to-break-it/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/ransomware-lifecycle-and-how-to-break-it/</guid>
+      <description>&lt;p&gt;In recent years, ransomware has become one of the most serious threats in the cybersecurity landscape. It no longer targets large enterprises only; cybercriminals now also target SMEs, educational institutions, and even the healthcare sector. The impact can be severe, ranging from operational disruption and loss of critical data to financial losses due to ransom payments.&lt;/p&gt;&#xA;&lt;p&gt;Readers can see continuously updated ransomware victims on &lt;a href=&#34;https://ransomware.live/&#34;&gt;Ransomware Live&lt;/a&gt;. From there, we can observe that ransomware attacks happen every day, do not recognize time, and almost every industry sector has become a target for cybercriminals.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Convert PFX, CRT, and PEM Azure SSL/TLS Certificates</title>
+      <link>https://potato.id/en/posts/convert-pfx-crt-and-pem-ssl-tls-certificates/</link>
+      <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/convert-pfx-crt-and-pem-ssl-tls-certificates/</guid>
+      <description>&lt;h2 id=&#34;what-is-ssltls&#34;&gt;What is SSL/TLS?&lt;/h2&gt;&#xA;&lt;p&gt;SSL/TLS (Secure Sockets Layer/Transport Layer Security) is a security protocol used to secure communication between a server and a client. In the web context, SSL/TLS is used to encrypt data transmitted between a browser and a web server, so that sensitive information such as passwords and credit card numbers cannot be accessed by third parties.&lt;/p&gt;&#xA;&lt;p&gt;SSL is the earlier version of the protocol, while TLS is the newer and more secure version. Although the term SSL is still commonly used, most websites today actually use TLS, often referred to as SSL/TLS.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DNS Security, Maybe?</title>
+      <link>https://potato.id/en/posts/dns-security-maybe/</link>
+      <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/dns-security-maybe/</guid>
+      <description>&lt;p&gt;As we know, DNS is a service responsible for converting hostnames into IP addresses. It sounds simple, but some people do not realize that this DNS service can also cause security vulnerabilities. The following are several events I have experienced related to DNS and its security. Keep in mind this does not cover all vulnerabilities that exist in DNS, such as DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack, and other attacks, only several events that I have personally experienced.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>There is no way it&#39;s DNS</title>
+      <link>https://potato.id/en/posts/there-is-no-way-it-is-dns/</link>
+      <pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/there-is-no-way-it-is-dns/</guid>
+      <description>&lt;h2 id=&#34;preamble&#34;&gt;Preamble&lt;/h2&gt;&#xA;&lt;p&gt;Some time ago, there was a bit of discussion at the office regarding a new policy from the DKI Jakarta Provincial Government about deactivating Jakarta ID cards for residents who are no longer domiciled in Jakarta. Several colleagues were affected, so others who still had Jakarta ID cards immediately checked their NIK status.&lt;/p&gt;&#xA;&lt;p&gt;However, as we know, many people have had bad experiences accessing digital government services, ranging from slow loading to being completely inaccessible. My colleagues experienced the same thing. There was also something strange when accessing the website in question, sometimes it worked, sometimes it showed a maintenance page. Out of nowhere, a thought crossed my mind: this must be DNS.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Moving From Disqus to Giscus with Hugo SSG</title>
+      <link>https://potato.id/en/posts/moving-from-disqus-to-giscus-with-hugo-ssg/</link>
+      <pubDate>Sat, 18 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/moving-from-disqus-to-giscus-with-hugo-ssg/</guid>
+      <description>&lt;h2 id=&#34;goodbye-disqus-hello-giscus&#34;&gt;Goodbye Disqus, Hello Giscus&lt;/h2&gt;&#xA;&lt;p&gt;After using Disqus for a long time as a comment platform, also known as Comment-as-a-service, this website has finally switched to giscus after considering another similar platform that also uses GitHub, namely utterances.&lt;/p&gt;&#xA;&lt;h2 id=&#34;starting&#34;&gt;Starting&lt;/h2&gt;&#xA;&lt;p&gt;When I first built this website, I was confused about which comment system to use. Since this site is an SSG (Static Site Generator) and does not have a database connection, using a third party comment platform was the best option. In Hugo, there is a default template for Disqus comments, so Disqus was chosen as the comment platform for this blog.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Update Newsfeed RSS to Discord</title>
+      <link>https://potato.id/en/posts/update-newsfeed-rss-to-discord-webhook/</link>
+      <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/update-newsfeed-rss-to-discord-webhook/</guid>
+      <description>&lt;p&gt;As a Cybersecurity worker, we must stay up-to-date with any news, alerts, advisories and others also in the IT field everything is new and growing so fast, especially in cybersecurity&lt;/p&gt;&#xA;&lt;p&gt;To fill this gap I use a RSS aggregator to send the latest update from my favorite blog/news to notify me&lt;/p&gt;&#xA;&lt;p&gt;If you join SHL Discord you’ll be familiar with feeds and feeds-ransom text channel, this is how I configure it&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hacking Phishing-as-a-Service</title>
+      <link>https://potato.id/en/posts/hacking-phishing-as-a-service/</link>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/hacking-phishing-as-a-service/</guid>
+      <description>&lt;h3 id=&#34;you-may-have-just-clicked-on-a-phishing-ad&#34;&gt;You may have just clicked on a Phishing Ad&lt;/h3&gt;&#xA;&lt;p&gt;I am tired of the ads that appear while watching reels on Facebook. Besides malware ads and online gambling ads, there are also many phishing ads targeting games like Free Fire and Mobile Legends, as well as ads inviting users to join 18+ groups. These ads are designed to steal social media account credentials and can seriously harm users.&lt;/p&gt;&#xA;&lt;p&gt;Phishing, or password fishing, is a method widely used by threat actors to obtain access or credentials to services such as social media platforms like Facebook, TikTok, Instagram, WhatsApp, and others. After gaining access, accounts are often used for other malicious activities.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Interesting or Suspicious Ads Continued</title>
+      <link>https://potato.id/en/posts/malwared-ads-continued/</link>
+      <pubDate>Tue, 29 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/malwared-ads-continued/</guid>
+      <description>&lt;p&gt;After writing about malware ads using the &lt;a href=&#34;https://potato.id/en/posts/malwared-ads/&#34;&gt;Google Bard&lt;/a&gt; lure, now there is another malware ad that is slightly different, both in terms of the lure and the malware being delivered. This ad promotes a custom Windows taskbar to make it look more attractive. However, the file downloaded is actually malware and there is no custom taskbar installation as advertised. So what does the downloaded file install? Of course, malware. Below is roughly what the installer does.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dictionary Attack</title>
+      <link>https://potato.id/en/posts/dictionary-attack/</link>
+      <pubDate>Mon, 28 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/dictionary-attack/</guid>
+      <description>&lt;h2 id=&#34;understanding-what-a-dictionary-attack-is&#34;&gt;Understanding What a Dictionary Attack Is&lt;/h2&gt;&#xA;&lt;p&gt;A dictionary attack is one of the common techniques used in hacking or pentesting. This attack uses a collection of commonly used passwords (wordlists) or passwords that have been leaked on the internet, such as rockyou.txt, ignis, and others.&lt;/p&gt;&#xA;&lt;p&gt;The difference between a brute force attack and a dictionary attack lies in the use of a wordlist. A brute force attack attempts all possible character combinations, which usually takes much longer. A dictionary attack also requires time, depending on the password complexity, the quality of the wordlist used, and the server response time.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Interesting or Suspicious Ads?</title>
+      <link>https://potato.id/en/posts/malwared-ads/</link>
+      <pubDate>Sat, 15 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/malwared-ads/</guid>
+      <description>&lt;p&gt;Last June, on the 14th to be exact, I was scrolling Facebook and found an interesting ad about Google&amp;rsquo;s AI called Bard. What made it even more interesting was the comment section, so I immediately checked the comments.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://potato.id/img/iklan/verified-accounts.jpeg&#34; alt=&#34;verified accounts&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Why were all the commenters verified blue check accounts? Why were Indonesian politicians commenting on it? What does politics have to do with Google Bard? The comments also showed mostly positive sentiment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Secure Surfing Practice</title>
+      <link>https://potato.id/en/posts/secure-surfing-practice/</link>
+      <pubDate>Sat, 20 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/secure-surfing-practice/</guid>
+      <description>&lt;p&gt;The internet has become an important part of daily life. Most commonly, it is used as a source of information and entertainment. However, unwise and improper use of the internet can endanger data security and privacy. Below are several steps you can follow to stay safe while browsing the internet:&lt;/p&gt;&#xA;&lt;h2 id=&#34;add-web-protection&#34;&gt;Add Web Protection&lt;/h2&gt;&#xA;&lt;p&gt;Install the Malwarebytes Browser Guard extension in your browser. With this extension, Malwarebytes will block access when you accidentally open a suspicious website or a site indicated as malware or trojan.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Lesson Learned from Ransomware</title>
+      <link>https://potato.id/en/posts/lesson-learned-from-ransomware/</link>
+      <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/lesson-learned-from-ransomware/</guid>
+      <description>&lt;h2 id=&#34;ransomware&#34;&gt;Ransomware&lt;/h2&gt;&#xA;&lt;p&gt;Ransomware is a type of malware (malicious software) that encrypts victims&amp;rsquo; files, causing them to lose access to their data. The malware will decrypt the files if the ransom has been paid by the victim, but there is no guarantee that all data will be restored. If the victim refuses to pay, some ransomware variants will expose the victim&amp;rsquo;s files to the internet. Ransomware spreads through fake installers, phishing, exploit kits, remote desktop access, and other methods.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Yes, It was DNS!</title>
+      <link>https://potato.id/en/posts/it-was-dns/</link>
+      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/it-was-dns/</guid>
+      <description>&lt;p&gt;As we know, DNS or Domain Name Server is a service responsible for translating domain names into IP addresses so users do not need to remember complicated IP addresses one by one. Therefore, DNS is a crucial service and must be configured properly. Otherwise, it may cause a domain to become difficult or even impossible for users to access.&lt;/p&gt;&#xA;&lt;p&gt;For example, some time ago a colleague complained to the infrastructure team because they could not access monev.spbe.go.id. Long story short, I asked the user for additional information such as traceroute results and a screenshot of the error when accessing the website.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Download Wordlist Password Indonesia</title>
+      <link>https://potato.id/en/posts/download-wordlist-password-indonesia/</link>
+      <pubDate>Sun, 28 Aug 2022 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/download-wordlist-password-indonesia/</guid>
+      <description>&lt;p&gt;In this digital era, protecting personal data is becoming increasingly important, especially in Indonesia. Many internet users still use weak passwords, which can easily be exploited by cybercriminals. If you are looking for information about &lt;strong&gt;downloading Indonesian password wordlists&lt;/strong&gt;, this article will discuss it, including their usage, risks, and how to protect yourself.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;what-is-a-password-wordlist&#34;&gt;What Is a Password Wordlist?&lt;/h2&gt;&#xA;&lt;p&gt;A &lt;strong&gt;password wordlist&lt;/strong&gt; is a collection of passwords commonly used by internet users. This list is usually used by cybersecurity professionals for:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Job and Shortcut Management in Terminal</title>
+      <link>https://potato.id/en/posts/bash-job-management-and-shortcut/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/bash-job-management-and-shortcut/</guid>
+      <description>&lt;p&gt;We often find ourselves needing to work quickly when dealing with the terminal. This is already helped by bash-completion, which allows us to type commands automatically by pressing the &lt;code&gt;[TAB]&lt;/code&gt; key twice. However, in general the terminal also has shortcuts that help us work with Linux more easily and quickly. Below is a list of common terminal shortcuts. This list was taken from Hack The Box Academy.&lt;/p&gt;&#xA;&lt;p&gt;Auto Completion&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;[TAB]&lt;/code&gt; - Initiates command auto completion.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Daily VIM</title>
+      <link>https://potato.id/en/posts/my-daily-vim/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/my-daily-vim/</guid>
+      <description>&lt;h2 id=&#34;vim---text-editor&#34;&gt;VIM - Text Editor&lt;/h2&gt;&#xA;&lt;p&gt;You might already be familiar with this text editor, it&amp;rsquo;s  &lt;strong&gt;VIM&lt;/strong&gt; or &lt;strong&gt;Vi Improved&lt;/strong&gt;. Vim is a terminal-based text editor that is very efficient and can significantly speed up work. Vim is often considered difficult because many users are not yet familiar with its default key bindings.&lt;/p&gt;&#xA;&lt;p&gt;VIM itself has existed since &lt;strong&gt;1991&lt;/strong&gt;, and it is still widely used by developers, system administrators, and many others. VIM is also a very lightweight and fast editor that can be accessed directly through the terminal. VIM is an improved version of &lt;strong&gt;Vi&lt;/strong&gt;, which was the default text editor in UNIX operating systems. Usually &lt;strong&gt;VIM/Vi is already installed&lt;/strong&gt; on UNIX-based operating systems such as &lt;strong&gt;Linux, macOS, and BSD&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GitHub Pages Custom Domain with E-mail Service</title>
+      <link>https://potato.id/en/posts/github-pages-custom-domain-with-email-service/</link>
+      <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/github-pages-custom-domain-with-email-service/</guid>
+      <description>&lt;p&gt;After using a custom domain with GitHub Pages, I was quite happy to host on GitHub for free and use a unique workflow. However, after some time I noticed that no emails were coming from the custom domain. It turned out the mail server was not connected.&lt;/p&gt;&#xA;&lt;p&gt;I searched the internet using the DuckDuckGo search engine but found no clear answers even after going through several pages. On GitHub Pages itself, there is no explanation about how to keep email working properly. After digging deeper, I found a trick to keep email working while the domain still points to GitHub Pages, which is by configuring the DNS zone properly.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How I Built This Website</title>
+      <link>https://potato.id/en/posts/how-i-deploy-this-site/</link>
+      <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/how-i-deploy-this-site/</guid>
+      <description>&lt;p&gt;I have wanted to have my own blog and custom email for a long time. Eventually, I started blogging using WordPress. However, as a student with a limited budget, I could only afford a web.id domain which now can use .id and the cheapest hosting plan 100,000 per year at &lt;a href=&#34;https://dracoola.com/&#34;&gt;Dracoola&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;After publishing several articles with WordPress, the hosting disk usage became quite large, so I stopped adding new articles and the site felt heavy to access. Since then, I took a break.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

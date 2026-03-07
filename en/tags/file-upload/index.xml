@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>File Upload on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/file-upload/</link>
+    <description>Recent content in File Upload on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 09 May 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/file-upload/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solution for Ramadhan Challenges</title>
+      <link>https://potato.id/en/posts/solution-for-ramadhan-challenges/</link>
+      <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-ramadhan-challenges/</guid>
+      <description>&lt;p&gt;This challenge was created when I was confused about how to explain the LFI bug Local File Inclusion during a secure coding session at &lt;a href=&#34;https://stts.edu&#34;&gt;STTS&lt;/a&gt;. Since I was quite bored with LFI to Local File Read via wrapper, I searched for LFI to RCE methods other than through &lt;code&gt;self/proc/environ&lt;/code&gt; and found LFI to RCE via Access Log Poisoning. However, because hosting environments could not read log files in txt format, a file upload feature was created that only allows txt files. Below is the Write Up.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

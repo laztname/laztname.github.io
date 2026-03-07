@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Hacking on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/web-hacking/</link>
+    <description>Recent content in Web Hacking on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/web-hacking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTTP: Hyper Text Transfer Protocol How HTTP Works Behind the Browser</title>
+      <link>https://potato.id/en/posts/http-web-behind-the-browser/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/http-web-behind-the-browser/</guid>
+      <description>&lt;p&gt;In this post you will understand &lt;strong&gt;what HTTP is&lt;/strong&gt; examples of HTTP request and response and how it works behind your browser. This is an important foundation to understand how the web works which will be very useful for web hacking bug bounty and pentesting.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;what-is-http&#34;&gt;What Is HTTP?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;HTTP Hypertext Transfer Protocol&lt;/strong&gt; is the main protocol used to send data between &lt;strong&gt;client browser&lt;/strong&gt; and &lt;strong&gt;server web server&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Every time we access a website the browser sends an &lt;strong&gt;HTTP request&lt;/strong&gt; and the server responds with an &lt;strong&gt;HTTP response&lt;/strong&gt;. This process is not directly visible in the browser and what we usually see is &lt;strong&gt;HTML&lt;/strong&gt; rendered into a web page where the HTML is the result of the HTTP response sent by the server.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Execution After Redirect with Burp Suite</title>
+      <link>https://potato.id/en/posts/execution-after-redirect/</link>
+      <pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/execution-after-redirect/</guid>
+      <description>&lt;p&gt;Execution After Redirect or EAR is a technique used to execute code after the redirect process. This technique is usually used to bypass several security features that exist in web applications. In this article, we will discuss how to exploit EAR using Burp Suite.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-execution-after-redirect-ear&#34;&gt;What is Execution After Redirect (EAR)?&lt;/h2&gt;&#xA;&lt;p&gt;Execution After Redirect is usually found in web applications with native style code that use a redirect mechanism to direct users to another page after performing a certain process, such as after login or registration. In some cases, the web application does not call the exit() or die() function after performing the redirect process, so the code after the redirect process continues to be executed.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

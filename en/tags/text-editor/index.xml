@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Text Editor on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/text-editor/</link>
+    <description>Recent content in Text Editor on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 12 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/text-editor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Daily VIM</title>
+      <link>https://potato.id/en/posts/my-daily-vim/</link>
+      <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/my-daily-vim/</guid>
+      <description>&lt;h2 id=&#34;vim---text-editor&#34;&gt;VIM - Text Editor&lt;/h2&gt;&#xA;&lt;p&gt;You might already be familiar with this text editor, it&amp;rsquo;s  &lt;strong&gt;VIM&lt;/strong&gt; or &lt;strong&gt;Vi Improved&lt;/strong&gt;. Vim is a terminal-based text editor that is very efficient and can significantly speed up work. Vim is often considered difficult because many users are not yet familiar with its default key bindings.&lt;/p&gt;&#xA;&lt;p&gt;VIM itself has existed since &lt;strong&gt;1991&lt;/strong&gt;, and it is still widely used by developers, system administrators, and many others. VIM is also a very lightweight and fast editor that can be accessed directly through the terminal. VIM is an improved version of &lt;strong&gt;Vi&lt;/strong&gt;, which was the default text editor in UNIX operating systems. Usually &lt;strong&gt;VIM/Vi is already installed&lt;/strong&gt; on UNIX-based operating systems such as &lt;strong&gt;Linux, macOS, and BSD&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

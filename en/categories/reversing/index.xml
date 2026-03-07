@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reversing on Jonias Fortuna</title>
+    <link>https://potato.id/en/categories/reversing/</link>
+    <description>Recent content in Reversing on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 03 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/categories/reversing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solution for Surabaya Hacker Link Challenges</title>
+      <link>https://potato.id/en/posts/solution-for-surabaya-hacker-link-challenges/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-surabaya-hacker-link-challenges/</guid>
+      <description>&lt;p&gt;Well, this post was made because the Surabaya Hacker Link challenges have been updated and many people were curious about this challenge but hadn&amp;rsquo;t solved it yet and suggested making a video tutorial, but since I can&amp;rsquo;t make a video, I&amp;rsquo;ll just write it here instead, &lt;a href=&#34;https://forum.surabayahackerlink.org/d/3142-update-challenges-shl&#34;&gt;updated challenges&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;It explains that we have to save John&amp;rsquo;s website and then we will be given a Telegram group link (flag).&lt;br&gt;&#xA;&lt;img src=&#34;https://potato.id/img/shl-johnpeperikus/awal.webp&#34; alt=&#34;awal&#34;&gt;&lt;br&gt;&#xA;initial appearance of the shl challenge page&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Solution for &#39;Simple&#39; Web Challenges</title>
+      <link>https://potato.id/en/posts/solution-for-my-simple-web-challenges/</link>
+      <pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-my-simple-web-challenges/</guid>
+      <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;&#xA;&lt;p&gt;First of all, thanks to &lt;a href=&#34;https://ctf.slashrootctf.id/&#34;&gt;slashroot ctf&lt;/a&gt; because without slashroot ctf I might not have been able to provide these challenges through &lt;a href=&#34;https://dewaweb.com/&#34;&gt;dewaweb.com&lt;/a&gt;. Thanks to all player who took the time to try this &amp;lsquo;simple&amp;rsquo; challenge.&lt;/p&gt;&#xA;&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;&#xA;&lt;p&gt;clue &amp;ldquo;recon, tools, sign-in, submit&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;This recon is very easy, actually you don’t need to use tools or scanners. There are still many websites that store important things in HTML comments.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://potato.id/img/simplewebchall/htmlcomment.webp&#34; alt=&#34;html comment sensitive information&#34;&gt;&#xA;It clearly shows info that the git repository (/.git/) was moved to the /git/ directory. Let&amp;rsquo;s try accessing it first.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LFI on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/lfi/</link>
+    <description>Recent content in LFI on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/lfi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solution for Inclusion Challenges</title>
+      <link>https://potato.id/en/posts/solution-for-inclusion-challenges/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-inclusion-challenges/</guid>
+      <description>&lt;p&gt;As usual, in the Surabaya Hacker Link group there are various challenges. Not only admins create them, but members also submit challenges, and I helped deploy this one. Not only deploying it, of course I also tried solving it :3&lt;/p&gt;&#xA;&lt;p&gt;Without further ado, we accessed the challenge at challshl.com.&lt;/p&gt;&#xA;&lt;p&gt;Since I was involved during deployment, I had a slight idea where the bug was located. The cool term would be white box pentest, meaning testing by reading the website source code &lt;em&gt;cmiiw.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Solution for Ramadhan Challenges</title>
+      <link>https://potato.id/en/posts/solution-for-ramadhan-challenges/</link>
+      <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-ramadhan-challenges/</guid>
+      <description>&lt;p&gt;This challenge was created when I was confused about how to explain the LFI bug Local File Inclusion during a secure coding session at &lt;a href=&#34;https://stts.edu&#34;&gt;STTS&lt;/a&gt;. Since I was quite bored with LFI to Local File Read via wrapper, I searched for LFI to RCE methods other than through &lt;code&gt;self/proc/environ&lt;/code&gt; and found LFI to RCE via Access Log Poisoning. However, because hosting environments could not read log files in txt format, a file upload feature was created that only allows txt files. Below is the Write Up.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

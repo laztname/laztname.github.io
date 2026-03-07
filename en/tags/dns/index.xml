@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DNS on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/dns/</link>
+    <description>Recent content in DNS on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 16 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fake Sponsored Job Posting Scam</title>
+      <link>https://potato.id/en/posts/fake-sponsored-jobposting/</link>
+      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/fake-sponsored-jobposting/</guid>
+      <description>&lt;p&gt;This is actually an old case that went viral last year. While browsing Facebook, I frequently encountered sponsored job advertisements claiming to be from well-known companies — especially in mining, factory, and other blue-collar sectors — such as PT Epson, PT Unilever, PT Indofood, and other major corporations.&lt;/p&gt;&#xA;&lt;p&gt;These ads direct applicants to register online by filling out personal information such as:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Full name&lt;/li&gt;&#xA;&lt;li&gt;Address&lt;/li&gt;&#xA;&lt;li&gt;Phone number&lt;/li&gt;&#xA;&lt;li&gt;National ID number&lt;/li&gt;&#xA;&lt;li&gt;And other personal details&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Unfortunately, many people do not realize that these advertisements are &lt;strong&gt;fake&lt;/strong&gt; and are created purely for the scammer&amp;rsquo;s personal profit.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DNS Security, Maybe?</title>
+      <link>https://potato.id/en/posts/dns-security-maybe/</link>
+      <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/dns-security-maybe/</guid>
+      <description>&lt;p&gt;As we know, DNS is a service responsible for converting hostnames into IP addresses. It sounds simple, but some people do not realize that this DNS service can also cause security vulnerabilities. The following are several events I have experienced related to DNS and its security. Keep in mind this does not cover all vulnerabilities that exist in DNS, such as DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack, and other attacks, only several events that I have personally experienced.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>There is no way it&#39;s DNS</title>
+      <link>https://potato.id/en/posts/there-is-no-way-it-is-dns/</link>
+      <pubDate>Tue, 28 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/there-is-no-way-it-is-dns/</guid>
+      <description>&lt;h2 id=&#34;preamble&#34;&gt;Preamble&lt;/h2&gt;&#xA;&lt;p&gt;Some time ago, there was a bit of discussion at the office regarding a new policy from the DKI Jakarta Provincial Government about deactivating Jakarta ID cards for residents who are no longer domiciled in Jakarta. Several colleagues were affected, so others who still had Jakarta ID cards immediately checked their NIK status.&lt;/p&gt;&#xA;&lt;p&gt;However, as we know, many people have had bad experiences accessing digital government services, ranging from slow loading to being completely inaccessible. My colleagues experienced the same thing. There was also something strange when accessing the website in question, sometimes it worked, sometimes it showed a maintenance page. Out of nowhere, a thought crossed my mind: this must be DNS.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Yes, It was DNS!</title>
+      <link>https://potato.id/en/posts/it-was-dns/</link>
+      <pubDate>Thu, 06 Oct 2022 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/it-was-dns/</guid>
+      <description>&lt;p&gt;As we know, DNS or Domain Name Server is a service responsible for translating domain names into IP addresses so users do not need to remember complicated IP addresses one by one. Therefore, DNS is a crucial service and must be configured properly. Otherwise, it may cause a domain to become difficult or even impossible for users to access.&lt;/p&gt;&#xA;&lt;p&gt;For example, some time ago a colleague complained to the infrastructure team because they could not access monev.spbe.go.id. Long story short, I asked the user for additional information such as traceroute results and a screenshot of the error when accessing the website.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

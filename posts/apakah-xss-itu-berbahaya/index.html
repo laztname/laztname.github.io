@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html class="no-js" lang="id-ID">
+<html class="no-js" lang="id">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="robots" content="index, follow">
+	<meta name="robots" content="index, follow, max-image-preview:large">
 	<meta name="theme-color" content="#efe6dd">
+	<meta http-equiv="content-language" content="id">
+	<meta name="author" content="Ardi Jonias Fortuna">
 	<title>Apakah XSS Itu Berbahaya ? - Jonias Fortuna</title>
-	<link rel="canonical" href="https://potato.id/posts/apakah-xss-itu-berbahaya/" />
+	<link rel="canonical" href="https://potato.id/posts/apakah-xss-itu-berbahaya/">
+	
+	
+	<link rel="alternate" hreflang="x-default" href="https://potato.id/posts/apakah-xss-itu-berbahaya/">
+	<link rel="alternate" hreflang="id" href="https://potato.id/posts/apakah-xss-itu-berbahaya/">
+	
+	<link rel="alternate" hreflang="en" href="https://potato.id/en/posts/is-xss-dangerous/">
+	
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="Sedikit pembahasan tentang cross site scripting mulai dari reflected xss, stored xss hingga upload webshell melalui xss dengan skenario tertentu serta pembahasan apakah xss itu berbahaya atau tidak">
 		<meta property="og:url" content="https://potato.id/posts/apakah-xss-itu-berbahaya/">
   <meta property="og:site_name" content="Jonias Fortuna">
   <meta property="og:title" content="Apakah XSS Itu Berbahaya ?">
   <meta property="og:description" content="Sedikit pembahasan tentang cross site scripting mulai dari reflected xss, stored xss hingga upload webshell melalui xss dengan skenario tertentu serta pembahasan apakah xss itu berbahaya atau tidak">
-  <meta property="og:locale" content="id_ID">
+  <meta property="og:locale" content="id">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2018-12-20T00:00:00+00:00">
@@ -50,13 +59,18 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
+  "@id": "https:\/\/potato.id\/posts\/apakah-xss-itu-berbahaya\/#article",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https:\/\/potato.id\/posts\/apakah-xss-itu-berbahaya\/"
   },
   "headline": "Apakah XSS Itu Berbahaya ?",
   "description": "Sedikit pembahasan tentang cross site scripting mulai dari reflected xss, stored xss hingga upload webshell melalui xss dengan skenario tertentu serta pembahasan apakah xss itu berbahaya atau tidak",
-  "image": ["https:\/\/potato.id\/default-image.jpg"],
+  "inLanguage": "id",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/potato.id\/default-image.jpg"
+  },
   "author": {
     "@type": "Person",
     "name": "Ardi Jonias Fortuna",
@@ -70,6 +84,9 @@
       "url": "https:\/\/potato.id\/favicon.ico"
     }
   },
+  "articleSection": "posts",
+  "keywords": ["XSS","Write Up"],
+  "wordCount":  586 ,
   "datePublished": "2018-12-20T00:00:00Z",
   "dateModified": "2018-12-20T00:00:00Z"
 }
@@ -99,39 +116,53 @@
                 </div>
                 
 <nav class="menu">
-	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
-		<span class="menu__btn-title" tabindex="-1">Menu</span>
-	</button>
-	<ul class="menu__list">
-		<li class="menu__item">
-			<a class="menu__link" href="/">
-				
-				<span class="menu__text">Home</span>
-				
-			</a>
+        <button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                <span class="menu__btn-title" tabindex="-1">Menu</span>
+        </button>
+
+        <ul class="menu__list">
+                <li class="menu__item">
+                        <a class="menu__link" href="/">
+                                
+                                <span class="menu__text">Home</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/about/">
+                                
+                                <span class="menu__text">About Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/contact/">
+                                
+                                <span class="menu__text">Contact Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/privacy-policy/">
+                                
+                                <span class="menu__text">Privacy Policy</span>
+                                
+                        </a>
+                </li>
+
+		
+		<li class="menu__item menu__item--lang">
+		  
+		    <a class="menu__link"
+		       href="/en/posts/is-xss-dangerous/"
+		       lang="en">
+		       English
+		    </a>
+		  
 		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/about/">
-				
-				<span class="menu__text">About Me</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/contact/">
-				
-				<span class="menu__text">Contact Me</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/privacy-policy/">
-				
-				<span class="menu__text">Privacy Policy</span>
-				
-			</a>
-		</li>
-	</ul>
+		
+
+        </ul>
 </nav>
 
 
@@ -192,6 +223,7 @@
 <li>Nah tinggal recon aja mungkin nemu fitur upload file yang tidak terfilter dengan baik</li>
 </ol>
 <p>Lalu kenapa kok Bug XSS jarang ditanggepi? <del>karena kamu kurang ganteng</del> mungkin sih laporan yang kamu buat belum bisa memberikan gambaran ke admin/developer bagaimana berbahayanya XSS itu, kalo bisa dalam laporan vulnerability itu di beri cara untuk mereprocodure, menjelaskan detail terhadap dampak (ini yang sangat penting), lalu rekomendasi yang harus dilakukan, banyak kok writeup laporan vulnerability yang mungkin bisa kamu gunakan sebagai referensi</p>
+<p>Baca Juga: <a href="/posts/menulis-laporan-bug/">Menulis Laporan Vulnerability Findings dengan Baik</a></p>
 <p>Mungkin ini saja sih tanggapan dari seorang yang mengandalkan keberuntungan ini, jika ada salah kata atau apalah, mohon dikoreksi, kita sama-sama belajar kok ;) <del>ccciiieeeeee</del></p>
 <p><del>yes there in no image for this article</del> <br>
 untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-prevention/">sini</a></p>
@@ -232,7 +264,7 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
-		<span class="authorbox__name">About Ardi Jonias Fortuna</span>
+		<span class="authorbox__name">Tentang Ardi Jonias Fortuna</span>
 	</div>
 	<div class="authorbox__description">
 		Roses are red, violets are blue. There is nothing can&rsquo;t to do
@@ -243,7 +275,7 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 <nav class="pager flex">
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/posts/solution-for-my-simple-web-challenges/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
+			<span class="pager__subtitle">Selanjutnya&thinsp;»</span>
 			<p class="pager__title">Penyelesaian Untuk Web &#39;Simple&#39; Challenges</p>
 		</a>
 	</div>
@@ -272,7 +304,7 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 			<aside class="sidebar sidebar--left"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
+			<input class="widget-search__field" type="search" placeholder="CARI…" value="" name="q" aria-label="CARI…">
 		</label>
 		<input class="widget-search__submit" type="submit" value="Search">
 		<input type="hidden" name="sitesearch" value="https://potato.id/">
@@ -299,7 +331,7 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 </div>
 
 <div class="widget-recent widget">
-	<h3 class="widget__title">Recent Posts</h3>
+	<h3 class="widget__title">Postingan Terbaru</h3>
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item"><a class="widget__link" href="/posts/apa-itu-infatica-p2b-network/">Apa Itu Infatica P2B Network? Cara Menghapus Infatica dari Windows</a></li>
@@ -312,7 +344,7 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 </div>
 
 <div class="widget-categories widget">
-	<h3 class="widget__title">Categories</h3>
+	<h3 class="widget__title">Kategori</h3>
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
@@ -330,7 +362,7 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 </div>
 
 <div class="widget-taglist widget">
-	<h3 class="widget__title">Tags</h3>
+	<h3 class="widget__title">Tag</h3>
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (9)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/cyber-hygiene/" title="Cyber Hygiene">Cyber Hygiene (2)</a>
@@ -379,7 +411,7 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
 </div>
 
 <div class="widget-social widget">
-	<h3 class="widget-social__title widget__title">Social</h3>
+	<h3 class="widget-social__title widget__title">Sosmed</h3>
 	<div class="widget-social__content widget__content">
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="Instagram" rel="noopener noreferrer" href="https://www.instagram.com/joniasfortuna" target="_blank">
@@ -424,7 +456,7 @@ untuk pencegahan dari serangan XSS ini bisa dilihat di <a href="/posts/xss-preve
         <div class="footer__copyright">
             &copy; 2026 
             <a href="https://potato.id/">Ardi Jonias Fortuna</a>.
-            <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+            <span class="footer__copyright-credits">Dibuat dengan <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> dan Tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
         </div>
     </div>
 </footer>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Incident Response on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/incident-response/</link>
+    <description>Recent content in Incident Response on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 01 Aug 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/incident-response/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Your Website Hacked?, Do the Following</title>
+      <link>https://potato.id/en/posts/my-website-hacked-now-what/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/my-website-hacked-now-what/</guid>
+      <description>&lt;p&gt;In the Surabaya Hacker Link Telegram group, I and &lt;code&gt;@ytyao&lt;/code&gt; often create challenges such as web hacking, reversing, and others. However, in a previous challenge there was a small incident, the website was hacked. Well, the website was intentionally built to be hacked, but this hacker performed a mass wipe by deleting all files and folders. From that incident I learned something new, post incident handling, or commonly called Incident Response.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

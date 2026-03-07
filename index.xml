@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Main - Ardi Jonias Fortuna on Jonias Fortuna</title>
+    <title>Jonias Fortuna</title>
     <link>https://potato.id/</link>
-    <description>Recent content in Main - Ardi Jonias Fortuna on Jonias Fortuna</description>
+    <description>Recent content on Jonias Fortuna</description>
     <generator>Hugo</generator>
-    <language>id-ID</language>
+    <language>id</language>
     <lastBuildDate>Sat, 21 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -174,7 +174,7 @@
       <link>https://potato.id/posts/update-newsfeed-rss-to-discord-webhook/</link>
       <pubDate>Wed, 01 May 2024 00:00:00 +0000</pubDate>
       <guid>https://potato.id/posts/update-newsfeed-rss-to-discord-webhook/</guid>
-      <description>&lt;p&gt;As a Cybersecurity worker, we must stay up-to-date with any news, alerts, advisories and others also in the IT field everything is new and growing so fast, especially in cybersecurity&lt;/p&gt;&#xA;&lt;p&gt;To fill this gap I use a RSS aggregator to send the latest update from my favorite blog/news to notify me&lt;/p&gt;&#xA;&lt;p&gt;If you join SHL Discord you’ll be familiar with feeds and feeds-ransom text channel, this is how I configure it&lt;/p&gt;</description>
+      <description>&lt;p&gt;Sebagai seorang pekerja Cybersecurity, kita harus selalu up-to-date dengan berbagai berita, alert, advisory, dan hal lainnya di bidang IT yang selalu baru dan berkembang sangat cepat, terutama di dunia cybersecurity.&lt;/p&gt;&#xA;&lt;p&gt;Untuk mengisi kebutuhan ini saya menggunakan RSS aggregator untuk mengirimkan update terbaru dari blog/berita favorit agar bisa memberi notifikasi kepada saya.&lt;/p&gt;&#xA;&lt;p&gt;Jika kamu bergabung di Discord SHL, kamu pasti familiar dengan channel feeds dan feeds-ransom, berikut adalah cara saya mengonfigurasinya.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hacking Phishing-as-a-Service</title>
@@ -384,7 +384,7 @@
       <link>https://potato.id/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://potato.id/about/</guid>
-      <description>&lt;p&gt;Hello there, my name is Ardi Jonias Fortuna, you can call me Jonias but some people call me Jo, it&amp;rsquo;s OK. I am interested in Information Technology, there I know that we have to create a secure system from anyone or any hacker cannot access because of the security, that&amp;rsquo;s the way I learned some cyber security besides my studies, then I joined a non-profit community called Surabaya Hacker Link. I am lucky to know them because I learned something new about security from the community. I learned more about how to attack someone&amp;rsquo;s website and how to defend the website from hackers and the website that I made to take note of any challenges or training I have ever done and sharing purpose.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Halo, nama saya Ardi Jonias Fortuna, kamu bisa memanggil saya Jonias tetapi beberapa orang memanggil saya Jo, tidak masalah. Saya tertarik pada Teknologi Informasi, dari sana saya memahami bahwa kita harus membuat sistem yang aman agar tidak dapat diakses oleh siapa pun yang tidak tidak memiliki kewenangan atau hacker karena keamanan, itulah cara saya mempelajari cyber security selain melalui studi saya, kemudian saya bergabung dengan komunitas non-profit bernama Surabaya Hacker Link. Saya beruntung mengenal mereka karena saya belajar hal baru tentang keamanan dari komunitas tersebut. Saya juga belajar lebih banyak tentang bagaimana menyerang sebuah website dan bagaimana mempertahankan website atau sistem dari serangan hacker, serta website yang saya buat untuk mencatat berbagai tantangan atau pelatihan yang pernah saya lakukan dan untuk tujuan berbagi.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Contact</title>
@@ -398,7 +398,7 @@
       <link>https://potato.id/privacy-policy/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://potato.id/privacy-policy/</guid>
-      <description>&lt;p&gt;At Potato, accessible from potato.id, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Potato and how we use it.&lt;/p&gt;&#xA;&lt;p&gt;If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.&lt;/p&gt;&#xA;&lt;h2 id=&#34;log-files&#34;&gt;Log Files&lt;/h2&gt;&#xA;&lt;p&gt;Potato follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services&amp;rsquo; analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users&amp;rsquo; movement on the website, and gathering demographic information.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Di Potato, yang dapat diakses dari potato.id, salah satu prioritas utama kami adalah privasi pengunjung kami. Dokumen Kebijakan Privasi ini berisi jenis informasi yang dikumpulkan dan dicatat oleh Potato serta bagaimana kami menggunakannya.&lt;/p&gt;&#xA;&lt;p&gt;Jika Anda memiliki pertanyaan tambahan atau memerlukan informasi lebih lanjut tentang Kebijakan Privasi kami, jangan ragu untuk menghubungi kami.&lt;/p&gt;&#xA;&lt;h2 id=&#34;file-log&#34;&gt;File Log&lt;/h2&gt;&#xA;&lt;p&gt;Potato mengikuti prosedur standar dalam menggunakan file log. File-file ini mencatat pengunjung saat mereka mengunjungi website. Semua perusahaan hosting melakukan hal ini sebagai bagian dari layanan analitik hosting. Informasi yang dikumpulkan oleh file log meliputi alamat Internet Protocol (IP), jenis browser, Internet Service Provider (ISP), tanggal dan waktu, halaman rujukan/keluar, dan kemungkinan jumlah klik. Informasi ini tidak terkait dengan informasi apa pun yang dapat mengidentifikasi seseorang secara pribadi. Tujuan informasi ini adalah untuk menganalisis tren, mengelola situs, melacak pergerakan pengguna di website, dan mengumpulkan informasi demografis.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

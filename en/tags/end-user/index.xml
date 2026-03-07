@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>End User on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/end-user/</link>
+    <description>Recent content in End User on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 13 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/end-user/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Critical RCE in WordPress Plugin (900K&#43; Installations): Detection &amp; Mitigation</title>
+      <link>https://potato.id/en/posts/critical-rce-vulnerability-wordpress-plugin-900k-installations-detection-mitigation/</link>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/critical-rce-vulnerability-wordpress-plugin-900k-installations-detection-mitigation/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;A WordPress plugin with more than &lt;strong&gt;900,000 active installations&lt;/strong&gt; is reported to have a &lt;strong&gt;Remote Code Execution (RCE)&lt;/strong&gt; vulnerability with critical severity.&lt;/p&gt;&#xA;&lt;p&gt;This vulnerability allows attackers to execute arbitrary code on the target server under certain conditions. Given the large installation scale, the potential for mass exploitation is very high.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;technical-impact&#34;&gt;Technical Impact&lt;/h2&gt;&#xA;&lt;p&gt;A Remote Code Execution (RCE) vulnerability in a WordPress installation is one of the most critical vulnerability categories because it allows attackers to run commands on the server running WordPress that has this vulnerability. The impact is not limited to the web application but can also extend to the entire server environment depending on configuration and available access rights.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Passwords Alone Are Not Enough!</title>
+      <link>https://potato.id/en/posts/passwords-alone-are-not-enough/</link>
+      <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/passwords-alone-are-not-enough/</guid>
+      <description>&lt;p&gt;Every 39 seconds, one cyber attack occurs somewhere in the world&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Many internet users still rely on passwords as the only protection for their accounts, even though this is very risky. Therefore passwords alone are not enough and &lt;strong&gt;Two Factor Authentication (2FA)&lt;/strong&gt; can save you from account theft.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-passwords-alone-are-not-enough&#34;&gt;Why Passwords Alone Are Not Enough?&lt;/h2&gt;&#xA;&lt;p&gt;Passwords are often easy to guess, reused across many sites, or even leaked through phishing attacks and major data breaches such as those that happened at Facebook, Tokopedia, and through infostealers. If someone gets your password through these methods, they can easily access your account if there is no additional security layer like 2FA.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cyber Hygiene: Everyday Safety Tips</title>
+      <link>https://potato.id/en/posts/cyber-hygiene-small-habits-that-protect-you-from-cyber-attacks/</link>
+      <pubDate>Fri, 11 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/cyber-hygiene-small-habits-that-protect-you-from-cyber-attacks/</guid>
+      <description>&lt;p&gt;We live in a digital era where almost all activities are connected to the internet — from shopping, banking, working, to entertainment. But many people are still careless about protecting their personal data and unknowingly open gaps for cyber attacks. This is where &lt;strong&gt;cyber hygiene&lt;/strong&gt; becomes important, which refers to good digital habits to prevent cyber attacks.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-cyber-hygiene&#34;&gt;What Is Cyber Hygiene?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Cyber hygiene&lt;/strong&gt; is a set of practices or daily routines that help maintain the security of your information and digital devices from cyber threats. Just like you regularly wash your hands to prevent illness, cyber hygiene helps prevent malware, phishing, and data theft.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Understanding the Ransomware Attack Lifecycle: From Initial Access to Data Encryption</title>
+      <link>https://potato.id/en/posts/ransomware-lifecycle-and-how-to-break-it/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/ransomware-lifecycle-and-how-to-break-it/</guid>
+      <description>&lt;p&gt;In recent years, ransomware has become one of the most serious threats in the cybersecurity landscape. It no longer targets large enterprises only; cybercriminals now also target SMEs, educational institutions, and even the healthcare sector. The impact can be severe, ranging from operational disruption and loss of critical data to financial losses due to ransom payments.&lt;/p&gt;&#xA;&lt;p&gt;Readers can see continuously updated ransomware victims on &lt;a href=&#34;https://ransomware.live/&#34;&gt;Ransomware Live&lt;/a&gt;. From there, we can observe that ransomware attacks happen every day, do not recognize time, and almost every industry sector has become a target for cybercriminals.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Phishing Attacks and Prevention</title>
+      <link>https://potato.id/en/posts/phishing-attacks-and-prevention/</link>
+      <pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/phishing-attacks-and-prevention/</guid>
+      <description>&lt;p&gt;Phishing is an attack carried out by obtaining someone&amp;rsquo;s personal information through deception. This attack is usually performed by sending fake emails containing links to fraudulent websites that resemble legitimate ones. The goal of this attack is to steal personal information such as usernames, passwords, and credit card details.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-phishing-works&#34;&gt;How Phishing Works&lt;/h2&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;&#xA;  &lt;figure class=&#34;mb-5&#34;&gt;&#xA;    &lt;a href=&#34;https://potato.id/img/phishing/phishing-diagram.webp&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;image-link&#34;&gt;&#xA;      &lt;picture&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/phishing/phishing-diagram_hu_48db634183066547.webp&#34; media=&#34;(min-width: 1024px)&#34;&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/phishing/phishing-diagram_hu_599f04821a561b8d.webp&#34; media=&#34;(min-width: 768px) and (max-width: 1023px)&#34;&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/phishing/phishing-diagram_hu_f8841e244a81fa87.webp&#34; media=&#34;(max-width: 767px)&#34;&gt;&#xA;        &lt;img src=&#34;https://potato.id/img/phishing/phishing-diagram_hu_f8841e244a81fa87.webp&#34;&#xA;             alt=&#34;Phishing Diagram&#34;&#xA;             class=&#34;hover-effect&#34;&#xA;             width=&#34;800&#34;&#xA;             height=&#34;399&#34;&gt;&#xA;      &lt;/picture&gt;&#xA;    &lt;/a&gt;&#xA;&#xA;    &#xA;      &lt;figcaption class=&#34;text-left&#34;&gt;&#xA;        Illustration of a Phishing Attack&#xA;      &lt;/figcaption&gt;&#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&#xA;&#xA;&lt;p&gt;Phishing attacks usually begin with the distribution of fake emails or social media ads such as those on Facebook, Instagram, or X that promise users rewards like free in-game items, attractive promotions, or even access to a trending viral video. In reality, the link directs victims to a fraudulent website.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

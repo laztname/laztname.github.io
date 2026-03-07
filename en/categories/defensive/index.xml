@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Defensive on Jonias Fortuna</title>
+    <link>https://potato.id/en/categories/defensive/</link>
+    <description>Recent content in Defensive on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 21 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/categories/defensive/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Is Infatica P2B Network? How to Remove Infatica from Windows</title>
+      <link>https://potato.id/en/posts/what-is-infatica-p2b-network/</link>
+      <pubDate>Sat, 21 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/what-is-infatica-p2b-network/</guid>
+      <description>&lt;h2 id=&#34;what-is-infatica-p2b-network&#34;&gt;What Is Infatica P2B Network?&lt;/h2&gt;&#xA;&lt;p&gt;Infatica P2B Network is a service from the Infatica company that operates using a peer-to-business (P2B) model.&lt;/p&gt;&#xA;&lt;p&gt;This means:&#xA;your device can be used as a proxy network node, where a small portion of your internet bandwidth is “shared” with the Infatica network or users of the service.&lt;/p&gt;&#xA;&lt;p&gt;It is commonly used for:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Web scraping&lt;/li&gt;&#xA;&lt;li&gt;Market research&lt;/li&gt;&#xA;&lt;li&gt;Testing website access from various locations&lt;/li&gt;&#xA;&lt;li&gt;Data collection by companies&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;is-infatica-dangerous&#34;&gt;Is Infatica Dangerous?&lt;/h2&gt;&#xA;&lt;p&gt;Infatica is known as part of a proxy network (P2B Network). This means your computer can be used as part of a global internet network.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Generate Wildcard SSL Let&#39;s Encrypt with Certbot DNS Challenge (Complete Guide)</title>
+      <link>https://potato.id/en/posts/generate-wildcard-ssl-tls-certificate-lets-encrypt-certbot-with-dns-challenge/</link>
+      <pubDate>Fri, 20 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/generate-wildcard-ssl-tls-certificate-lets-encrypt-certbot-with-dns-challenge/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;A wildcard SSL certificate allows you to secure all subdomains with just one certificate, for example &amp;ldquo;*.example.com&amp;rdquo;, &amp;ldquo;subdomain.example.com&amp;rdquo;. With the help of Let&amp;rsquo;s Encrypt, we can obtain a free and automated SSL/TLS Certificate using Certbot through the DNS challenge method. However, keep in mind that the certificate is not valid for domain names using sub-subdomains such as sub.sub.example.com.&lt;/p&gt;&#xA;&lt;p&gt;This method is very suitable if you have setups like:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Public-facing HTTP infrastructure&lt;/li&gt;&#xA;&lt;li&gt;Internal server or private network&lt;/li&gt;&#xA;&lt;li&gt;Reverse proxy or load balancer&lt;/li&gt;&#xA;&lt;li&gt;Production environment with many subdomains&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;An SSL/TLS certificate functions to encrypt data sent between client and server so it cannot be intercepted (Man in the middle attack), maintain data integrity so it is not altered during transmission, increase user trust because the service appears more secure, and support modern protocols such as HTTP/2 and various API services that require secure connections.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Critical RCE in WordPress Plugin (900K&#43; Installations): Detection &amp; Mitigation</title>
+      <link>https://potato.id/en/posts/critical-rce-vulnerability-wordpress-plugin-900k-installations-detection-mitigation/</link>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/critical-rce-vulnerability-wordpress-plugin-900k-installations-detection-mitigation/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;A WordPress plugin with more than &lt;strong&gt;900,000 active installations&lt;/strong&gt; is reported to have a &lt;strong&gt;Remote Code Execution (RCE)&lt;/strong&gt; vulnerability with critical severity.&lt;/p&gt;&#xA;&lt;p&gt;This vulnerability allows attackers to execute arbitrary code on the target server under certain conditions. Given the large installation scale, the potential for mass exploitation is very high.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;technical-impact&#34;&gt;Technical Impact&lt;/h2&gt;&#xA;&lt;p&gt;A Remote Code Execution (RCE) vulnerability in a WordPress installation is one of the most critical vulnerability categories because it allows attackers to run commands on the server running WordPress that has this vulnerability. The impact is not limited to the web application but can also extend to the entire server environment depending on configuration and available access rights.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Passwords Alone Are Not Enough!</title>
+      <link>https://potato.id/en/posts/passwords-alone-are-not-enough/</link>
+      <pubDate>Sat, 12 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/passwords-alone-are-not-enough/</guid>
+      <description>&lt;p&gt;Every 39 seconds, one cyber attack occurs somewhere in the world&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;. Many internet users still rely on passwords as the only protection for their accounts, even though this is very risky. Therefore passwords alone are not enough and &lt;strong&gt;Two Factor Authentication (2FA)&lt;/strong&gt; can save you from account theft.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-passwords-alone-are-not-enough&#34;&gt;Why Passwords Alone Are Not Enough?&lt;/h2&gt;&#xA;&lt;p&gt;Passwords are often easy to guess, reused across many sites, or even leaked through phishing attacks and major data breaches such as those that happened at Facebook, Tokopedia, and through infostealers. If someone gets your password through these methods, they can easily access your account if there is no additional security layer like 2FA.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cyber Hygiene: Everyday Safety Tips</title>
+      <link>https://potato.id/en/posts/cyber-hygiene-small-habits-that-protect-you-from-cyber-attacks/</link>
+      <pubDate>Fri, 11 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/cyber-hygiene-small-habits-that-protect-you-from-cyber-attacks/</guid>
+      <description>&lt;p&gt;We live in a digital era where almost all activities are connected to the internet — from shopping, banking, working, to entertainment. But many people are still careless about protecting their personal data and unknowingly open gaps for cyber attacks. This is where &lt;strong&gt;cyber hygiene&lt;/strong&gt; becomes important, which refers to good digital habits to prevent cyber attacks.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-cyber-hygiene&#34;&gt;What Is Cyber Hygiene?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Cyber hygiene&lt;/strong&gt; is a set of practices or daily routines that help maintain the security of your information and digital devices from cyber threats. Just like you regularly wash your hands to prevent illness, cyber hygiene helps prevent malware, phishing, and data theft.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Understanding the Ransomware Attack Lifecycle: From Initial Access to Data Encryption</title>
+      <link>https://potato.id/en/posts/ransomware-lifecycle-and-how-to-break-it/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/ransomware-lifecycle-and-how-to-break-it/</guid>
+      <description>&lt;p&gt;In recent years, ransomware has become one of the most serious threats in the cybersecurity landscape. It no longer targets large enterprises only; cybercriminals now also target SMEs, educational institutions, and even the healthcare sector. The impact can be severe, ranging from operational disruption and loss of critical data to financial losses due to ransom payments.&lt;/p&gt;&#xA;&lt;p&gt;Readers can see continuously updated ransomware victims on &lt;a href=&#34;https://ransomware.live/&#34;&gt;Ransomware Live&lt;/a&gt;. From there, we can observe that ransomware attacks happen every day, do not recognize time, and almost every industry sector has become a target for cybercriminals.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Is web phishing HTTP or HTTPS?</title>
+      <link>https://potato.id/en/posts/https-is-a-secure-web/</link>
+      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/https-is-a-secure-web/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Web phishing is one of the attack methods most frequently used by attackers. In a phishing attack, the attacker creates a fake website that imitates a legitimate website. This fake website is usually used to steal sensitive information from victims, such as login credentials, credit card information, and others.&lt;/p&gt;&#xA;&lt;p&gt;A common perception is that phishing websites always use the HTTP protocol. However, is that really the case? Do phishing websites never use the HTTPS protocol?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What Is a Credential Attack? Recognize and Prevent It Before It&#39;s Too Late</title>
+      <link>https://potato.id/en/posts/credential-attack/</link>
+      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/credential-attack/</guid>
+      <description>&lt;h2 id=&#34;what-is-a-credential-attack&#34;&gt;What Is a Credential Attack?&lt;/h2&gt;&#xA;&lt;p&gt;A credential attack or credential-based attack is a hacking attempt to take over someone&amp;rsquo;s account by stealing a username and password. Usually this is done through techniques like &lt;strong&gt;phishing&lt;/strong&gt;, &lt;strong&gt;credential stuffing&lt;/strong&gt;, and &lt;strong&gt;brute force&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Simply put, attackers spy, guess, or try thousands of password combinations to get into your account. After that, they can access all the data inside it, such as email accounts, social media accounts, game accounts, and even banking accounts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Easily Validate SPF, DKIM, and DMARC Configuration</title>
+      <link>https://potato.id/en/posts/validate-spf-dkim-dmarc/</link>
+      <pubDate>Sun, 18 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/validate-spf-dkim-dmarc/</guid>
+      <description>&lt;h2 id=&#34;why-is-validating-spf-dkim-and-dmarc-important&#34;&gt;Why Is Validating SPF, DKIM, and DMARC Important?&lt;/h2&gt;&#xA;&lt;p&gt;If you have already configured SPF, DKIM, and DMARC in DNS, don&amp;rsquo;t immediately assume everything is secure. An invalid configuration can cause emails to go into the spam folder or even be rejected by the receiving server. That&amp;rsquo;s why validation is very important to ensure the configuration you created actually works.&lt;/p&gt;&#xA;&lt;p&gt;If you are still confused about what SPF, DKIM, and DMARC are, you can read the article &lt;a href=&#34;https://potato.id/en/posts/email-security-spf-dkim-dmarc/&#34;&gt;Email DNS Security Configuration Guide (SPF, DKIM, DMARC)&lt;/a&gt; which briefly explains these three things.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Execution After Redirect with Burp Suite</title>
+      <link>https://potato.id/en/posts/execution-after-redirect/</link>
+      <pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/execution-after-redirect/</guid>
+      <description>&lt;p&gt;Execution After Redirect or EAR is a technique used to execute code after the redirect process. This technique is usually used to bypass several security features that exist in web applications. In this article, we will discuss how to exploit EAR using Burp Suite.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-execution-after-redirect-ear&#34;&gt;What is Execution After Redirect (EAR)?&lt;/h2&gt;&#xA;&lt;p&gt;Execution After Redirect is usually found in web applications with native style code that use a redirect mechanism to direct users to another page after performing a certain process, such as after login or registration. In some cases, the web application does not call the exit() or die() function after performing the redirect process, so the code after the redirect process continues to be executed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fake Sponsored Job Posting Scam</title>
+      <link>https://potato.id/en/posts/fake-sponsored-jobposting/</link>
+      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/fake-sponsored-jobposting/</guid>
+      <description>&lt;p&gt;This is actually an old case that went viral last year. While browsing Facebook, I frequently encountered sponsored job advertisements claiming to be from well-known companies — especially in mining, factory, and other blue-collar sectors — such as PT Epson, PT Unilever, PT Indofood, and other major corporations.&lt;/p&gt;&#xA;&lt;p&gt;These ads direct applicants to register online by filling out personal information such as:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Full name&lt;/li&gt;&#xA;&lt;li&gt;Address&lt;/li&gt;&#xA;&lt;li&gt;Phone number&lt;/li&gt;&#xA;&lt;li&gt;National ID number&lt;/li&gt;&#xA;&lt;li&gt;And other personal details&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Unfortunately, many people do not realize that these advertisements are &lt;strong&gt;fake&lt;/strong&gt; and are created purely for the scammer&amp;rsquo;s personal profit.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Phishing Simulation with GoPhish</title>
+      <link>https://potato.id/en/posts/phishing-simulation-with-gophish/</link>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/phishing-simulation-with-gophish/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Phishing is an attack carried out by influencing someone to provide personal or confidential information. This attack is usually conducted by sending fake emails that resemble official emails from certain companies or organizations. In a phishing attack, the attacker attempts to obtain sensitive information such as username, password, and even credit card information.&lt;/p&gt;&#xA;&lt;p&gt;As an organization that is aware of information security, it is important for us to conduct phishing simulations regularly. By conducting phishing simulations, we can measure the success rate of our users in identifying phishing attacks and taking appropriate action. A successful phishing attack can cause financial and reputational losses for the organization.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Guide to Configuring Email DNS Security (SPF, DKIM, DMARC)</title>
+      <link>https://potato.id/en/posts/email-security-spf-dkim-dmarc/</link>
+      <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/email-security-spf-dkim-dmarc/</guid>
+      <description>&lt;p&gt;Email is one of the most widely used communication methods, but it is also vulnerable to attacks such as &lt;strong&gt;spoofing&lt;/strong&gt;, &lt;strong&gt;phishing&lt;/strong&gt;, and &lt;strong&gt;spam&lt;/strong&gt;. Therefore, implementing &lt;strong&gt;SPF, DKIM, and DMARC&lt;/strong&gt; is very important to improve the security of the email we own. The following is a configuration guide for SPF, DKIM, and DMARC to improve email security.&lt;/p&gt;&#xA;&lt;h2 id=&#34;sender-policy-framework-spf&#34;&gt;&lt;strong&gt;Sender Policy Framework (SPF)&lt;/strong&gt;&lt;/h2&gt;&#xA;&lt;h3 id=&#34;what-is-spf&#34;&gt;&lt;strong&gt;What is SPF?&lt;/strong&gt;&lt;/h3&gt;&#xA;&lt;p&gt;Sender Policy Framework or SPF is an email authentication mechanism that allows a domain &lt;strong&gt;to determine which servers are authorized to send email on behalf of the owned domain&lt;/strong&gt;. This configuration allows the receiving server to verify that the received email originates from a server authorized by the sending domain, and this configuration is applied to the DNS TXT record of the sending domain.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>mshta.exe - Threat Actor&#39;s Favorite Weapon</title>
+      <link>https://potato.id/en/posts/mshta-exe-threat-actors-favorite-weapon/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/mshta-exe-threat-actors-favorite-weapon/</guid>
+      <description>&lt;h2 id=&#34;what-is-mshtaexe&#34;&gt;What is mshta.exe?&lt;/h2&gt;&#xA;&lt;p&gt;mshta.exe is a Windows file system utility used to run Microsoft HTML Application (.HTA) files. This program allows the execution of VBScript or JScript-based scripts, making it a useful tool for administrators but also a tool that is often abused by threat actors.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-is-mshtaexe-often-used-by-threat-actors&#34;&gt;Why is mshta.exe often used by Threat Actors?&lt;/h2&gt;&#xA;&lt;p&gt;Threat Actors frequently abuse mshta.exe to execute malicious code in order to avoid detection by antivirus or other security solutions (EDR). Some reasons why mshta.exe is commonly used in malware attacks include:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DNS Security, Maybe?</title>
+      <link>https://potato.id/en/posts/dns-security-maybe/</link>
+      <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/dns-security-maybe/</guid>
+      <description>&lt;p&gt;As we know, DNS is a service responsible for converting hostnames into IP addresses. It sounds simple, but some people do not realize that this DNS service can also cause security vulnerabilities. The following are several events I have experienced related to DNS and its security. Keep in mind this does not cover all vulnerabilities that exist in DNS, such as DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack, and other attacks, only several events that I have personally experienced.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Infostealer Spreading Through Fake Google reCAPTCHA</title>
+      <link>https://potato.id/en/posts/infostealer-spreading-through-fake-google-recaptcha/</link>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/infostealer-spreading-through-fake-google-recaptcha/</guid>
+      <description>&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;&#xA;&lt;p&gt;This December I received a notification from a Facebook group that I follow. In the post (now deleted), there was a screenshot like the image above, complete with the caption: &lt;em&gt;&amp;ldquo;Is this dangerous or not? Why does the captcha look strange?&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;In the comments, the Thread Starter added another screenshot containing text that had to be pasted into the run.exe program as shown below&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;&#xA;  &lt;figure class=&#34;mb-5&#34;&gt;&#xA;    &lt;a href=&#34;https://potato.id/img/infostealer/2.png&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;image-link&#34;&gt;&#xA;      &lt;picture&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/infostealer/2_hu_f9c74d422db37a87.webp&#34; media=&#34;(min-width: 1024px)&#34;&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/infostealer/2_hu_191fafe9e808783c.webp&#34; media=&#34;(min-width: 768px) and (max-width: 1023px)&#34;&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/infostealer/2_hu_de649da62fb1eb20.webp&#34; media=&#34;(max-width: 767px)&#34;&gt;&#xA;        &lt;img src=&#34;https://potato.id/img/infostealer/2_hu_de649da62fb1eb20.webp&#34;&#xA;             alt=&#34;text&#34;&#xA;             class=&#34;hover-effect&#34;&#xA;             width=&#34;800&#34;&#xA;             height=&#34;246&#34;&gt;&#xA;      &lt;/picture&gt;&#xA;    &lt;/a&gt;&#xA;&#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&#xA;&#xA;&lt;p&gt;It is very clear that this is malware. mshta is a built-in Windows file whose function is to execute commands from HTA applications in the Windows environment and is very often used by threat actors as one of their attack techniques &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Phishing Attacks and Prevention</title>
+      <link>https://potato.id/en/posts/phishing-attacks-and-prevention/</link>
+      <pubDate>Fri, 28 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/phishing-attacks-and-prevention/</guid>
+      <description>&lt;p&gt;Phishing is an attack carried out by obtaining someone&amp;rsquo;s personal information through deception. This attack is usually performed by sending fake emails containing links to fraudulent websites that resemble legitimate ones. The goal of this attack is to steal personal information such as usernames, passwords, and credit card details.&lt;/p&gt;&#xA;&lt;h2 id=&#34;how-phishing-works&#34;&gt;How Phishing Works&lt;/h2&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;&#xA;  &lt;figure class=&#34;mb-5&#34;&gt;&#xA;    &lt;a href=&#34;https://potato.id/img/phishing/phishing-diagram.webp&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;image-link&#34;&gt;&#xA;      &lt;picture&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/phishing/phishing-diagram_hu_48db634183066547.webp&#34; media=&#34;(min-width: 1024px)&#34;&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/phishing/phishing-diagram_hu_599f04821a561b8d.webp&#34; media=&#34;(min-width: 768px) and (max-width: 1023px)&#34;&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/phishing/phishing-diagram_hu_f8841e244a81fa87.webp&#34; media=&#34;(max-width: 767px)&#34;&gt;&#xA;        &lt;img src=&#34;https://potato.id/img/phishing/phishing-diagram_hu_f8841e244a81fa87.webp&#34;&#xA;             alt=&#34;Phishing Diagram&#34;&#xA;             class=&#34;hover-effect&#34;&#xA;             width=&#34;800&#34;&#xA;             height=&#34;399&#34;&gt;&#xA;      &lt;/picture&gt;&#xA;    &lt;/a&gt;&#xA;&#xA;    &#xA;      &lt;figcaption class=&#34;text-left&#34;&gt;&#xA;        Illustration of a Phishing Attack&#xA;      &lt;/figcaption&gt;&#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&#xA;&#xA;&lt;p&gt;Phishing attacks usually begin with the distribution of fake emails or social media ads such as those on Facebook, Instagram, or X that promise users rewards like free in-game items, attractive promotions, or even access to a trending viral video. In reality, the link directs victims to a fraudulent website.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Harderning Server with Fail2ban and Reporting to Telegram</title>
+      <link>https://potato.id/en/posts/harderning-server-with-fail2ban-to-telegram/</link>
+      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/harderning-server-with-fail2ban-to-telegram/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://potato.id/img/fail2ban/thumb.webp&#34; alt=&#34;fail2ban-logs&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;After being busy enough that I didn&amp;rsquo;t have time to create challenges and write down how to complete these challenges on this blog, this time we will discuss a little about fail2ban and how to configure it.&lt;/p&gt;&#xA;&lt;p&gt;Generally fail2ban is used to ban IPs that fail to authenticate up to the maximum limit stated in the configuration and this IPS is very effective in preventing attacks that will occur on the server, such as bruteforce attacks on SSH ports (22), FTP (21), SMTP (25), etc., even other attacks via the web server (80/443), then before knowing how to configure fail2ban, we will learn a little about how fail2ban works.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Write a Good Vulnerability Findings Report</title>
+      <link>https://potato.id/en/posts/writing-a-good-vulnerability-report/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/writing-a-good-vulnerability-report/</guid>
+      <description>&lt;p&gt;First of all, Happy Eid al Fitr 1440 H, please forgive any mistakes.&#xA;Nothing in this world is perfect, including this writing.&lt;/p&gt;&#xA;&lt;p&gt;Since the launch of the BSSN program titled V2DP or Voluntary Vulnerability Disclosure Program, many people have asked in discussion forums and social media groups about how to properly write a bug report after discovering a vulnerability.&#xA;Here are a few tips from me on how to write a good report.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Your Website Hacked?, Do the Following</title>
+      <link>https://potato.id/en/posts/my-website-hacked-now-what/</link>
+      <pubDate>Thu, 01 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/my-website-hacked-now-what/</guid>
+      <description>&lt;p&gt;In the Surabaya Hacker Link Telegram group, I and &lt;code&gt;@ytyao&lt;/code&gt; often create challenges such as web hacking, reversing, and others. However, in a previous challenge there was a small incident, the website was hacked. Well, the website was intentionally built to be hacked, but this hacker performed a mass wipe by deleting all files and folders. From that incident I learned something new, post incident handling, or commonly called Incident Response.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>XSS Prevention</title>
+      <link>https://potato.id/en/posts/xss-prevention/</link>
+      <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/xss-prevention/</guid>
+      <description>&lt;p&gt;after briefly discussing XSS &lt;a href=&#34;https://potato.id/en/posts/is-xss-dangerous/&#34;&gt;here&lt;/a&gt;, even though it was a bit messy, now it&amp;rsquo;s time to discuss how to prevent this bug from existing on our website&lt;/p&gt;&#xA;&lt;p&gt;XSS can run / be executed because of loose &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; tags that are executed / rendered by the browser, therefore we manipulate the browser so it does not execute HTML tags that are &lt;em&gt;&lt;strong&gt;input&lt;/strong&gt;&lt;/em&gt; by users. But don&amp;rsquo;t worry, we&amp;rsquo;re not going to mess with the browser, just a little handling before user input is displayed on the website&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ransomware on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/ransomware/</link>
+    <description>Recent content in Ransomware on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 15 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/ransomware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding the Ransomware Attack Lifecycle: From Initial Access to Data Encryption</title>
+      <link>https://potato.id/en/posts/ransomware-lifecycle-and-how-to-break-it/</link>
+      <pubDate>Sun, 15 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/ransomware-lifecycle-and-how-to-break-it/</guid>
+      <description>&lt;p&gt;In recent years, ransomware has become one of the most serious threats in the cybersecurity landscape. It no longer targets large enterprises only; cybercriminals now also target SMEs, educational institutions, and even the healthcare sector. The impact can be severe, ranging from operational disruption and loss of critical data to financial losses due to ransom payments.&lt;/p&gt;&#xA;&lt;p&gt;Readers can see continuously updated ransomware victims on &lt;a href=&#34;https://ransomware.live/&#34;&gt;Ransomware Live&lt;/a&gt;. From there, we can observe that ransomware attacks happen every day, do not recognize time, and almost every industry sector has become a target for cybercriminals.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

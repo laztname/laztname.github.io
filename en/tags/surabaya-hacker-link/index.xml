@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Surabaya Hacker Link on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/surabaya-hacker-link/</link>
+    <description>Recent content in Surabaya Hacker Link on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/surabaya-hacker-link/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Surabaya Hacker Link Underground Write Up</title>
+      <link>https://potato.id/en/posts/surabaya-hacker-link-underground-hack-the-box-write-up-challenges/</link>
+      <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/surabaya-hacker-link-underground-hack-the-box-write-up-challenges/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;&#34;&gt;Information&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;challenges-information&#34;&gt;Challenges Information&lt;/h2&gt;&#xA;&lt;p&gt;This is a write-up of the Surabaya Hacker Link challenge for the Underground machine. This machine was built using one of the vulnerable web applications that SHL commonly uses during demo sessions, with several vulnerabilities patched to make the challenge slightly more interesting.&lt;/p&gt;&#xA;&lt;h2 id=&#34;challenges&#34;&gt;Challenges&lt;/h2&gt;&#xA;&lt;p&gt;On the &lt;a href=&#34;https://forum.surabayahackerlink.org/d/3462-new-challenges-underground&#34;&gt;Surabaya Hacker Link forum&lt;/a&gt; there is information about a new challenge replacing Heaven challenges (the &lt;a href=&#34;https://potato.id/en/posts/solution-for-shl-challenges-heaven-vm/&#34;&gt;Heaven VM write-up can be found here&lt;/a&gt;). The information on the forum is quite clear: do not destroy anything, do not spoil the challenge, take the root and read root.txt. In this write-up I used the IP 110.93.14.30.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Write up of Challenges Surabaya Hacker Link VM Heaven</title>
+      <link>https://potato.id/en/posts/solution-for-shl-challenges-heaven-vm/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-shl-challenges-heaven-vm/</guid>
+      <description>&lt;p&gt;Since this machine has already been retired and is no longer considered relevant as a challenge, I decided to write a solution explaining how to complete the &lt;strong&gt;VM Heaven&lt;/strong&gt; challenge from Surabaya Hacker Link.&lt;/p&gt;&#xA;&lt;p&gt;In fact, solving this challenge does not require special hacking tools such as &lt;strong&gt;sqlmap&lt;/strong&gt; or &lt;strong&gt;metasploit&lt;/strong&gt; because the challenge is relatively easy. No advanced hacking knowledge is required. As long as you are familiar with the &lt;strong&gt;GNU/Linux operating system&lt;/strong&gt; and understand the basics of &lt;strong&gt;pwning (owning) a machine&lt;/strong&gt;, this VM can be solved quite easily.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Solution for QR Generator Challenges</title>
+      <link>https://potato.id/en/posts/solution-for-qr-generator-challenges/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-qr-generator-challenges/</guid>
+      <description>&lt;p&gt;After a long time without creating a challenge, I finally decided to make a simple one.&lt;br&gt;&#xA;This challenge is themed as a QR Code Generator, but the vulnerability is not in the QR Code itself. Below is a simple way to solve it.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Challenge Given&lt;br&gt;&#xA;&lt;img src=&#34;https://potato.id/img/qr/challenges.webp&#34; alt=&#34;telegram&#34;&gt;&lt;br&gt;&#xA;As usual, the challenge was posted in the Surabaya Hacker Link group. There was no clue at all, so we directly accessed the website. It turned out to be a QR Generator page with name and Instagram input fields.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Solution for Ramadhan Challenges</title>
+      <link>https://potato.id/en/posts/solution-for-ramadhan-challenges/</link>
+      <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-ramadhan-challenges/</guid>
+      <description>&lt;p&gt;This challenge was created when I was confused about how to explain the LFI bug Local File Inclusion during a secure coding session at &lt;a href=&#34;https://stts.edu&#34;&gt;STTS&lt;/a&gt;. Since I was quite bored with LFI to Local File Read via wrapper, I searched for LFI to RCE methods other than through &lt;code&gt;self/proc/environ&lt;/code&gt; and found LFI to RCE via Access Log Poisoning. However, because hosting environments could not read log files in txt format, a file upload feature was created that only allows txt files. Below is the Write Up.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Solution for Surabaya Hacker Link Challenges</title>
+      <link>https://potato.id/en/posts/solution-for-surabaya-hacker-link-challenges/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-surabaya-hacker-link-challenges/</guid>
+      <description>&lt;p&gt;Well, this post was made because the Surabaya Hacker Link challenges have been updated and many people were curious about this challenge but hadn&amp;rsquo;t solved it yet and suggested making a video tutorial, but since I can&amp;rsquo;t make a video, I&amp;rsquo;ll just write it here instead, &lt;a href=&#34;https://forum.surabayahackerlink.org/d/3142-update-challenges-shl&#34;&gt;updated challenges&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;It explains that we have to save John&amp;rsquo;s website and then we will be given a Telegram group link (flag).&lt;br&gt;&#xA;&lt;img src=&#34;https://potato.id/img/shl-johnpeperikus/awal.webp&#34; alt=&#34;awal&#34;&gt;&lt;br&gt;&#xA;initial appearance of the shl challenge page&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Solution for &#39;Simple&#39; Web Challenges</title>
+      <link>https://potato.id/en/posts/solution-for-my-simple-web-challenges/</link>
+      <pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-my-simple-web-challenges/</guid>
+      <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;&#xA;&lt;p&gt;First of all, thanks to &lt;a href=&#34;https://ctf.slashrootctf.id/&#34;&gt;slashroot ctf&lt;/a&gt; because without slashroot ctf I might not have been able to provide these challenges through &lt;a href=&#34;https://dewaweb.com/&#34;&gt;dewaweb.com&lt;/a&gt;. Thanks to all player who took the time to try this &amp;lsquo;simple&amp;rsquo; challenge.&lt;/p&gt;&#xA;&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;&#xA;&lt;p&gt;clue &amp;ldquo;recon, tools, sign-in, submit&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;This recon is very easy, actually you don’t need to use tools or scanners. There are still many websites that store important things in HTML comments.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://potato.id/img/simplewebchall/htmlcomment.webp&#34; alt=&#34;html comment sensitive information&#34;&gt;&#xA;It clearly shows info that the git repository (/.git/) was moved to the /git/ directory. Let&amp;rsquo;s try accessing it first.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

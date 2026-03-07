@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SSL/TLS Certificate on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/ssl/tls-certificate/</link>
+    <description>Recent content in SSL/TLS Certificate on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 20 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/ssl/tls-certificate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Generate Wildcard SSL Let&#39;s Encrypt with Certbot DNS Challenge (Complete Guide)</title>
+      <link>https://potato.id/en/posts/generate-wildcard-ssl-tls-certificate-lets-encrypt-certbot-with-dns-challenge/</link>
+      <pubDate>Fri, 20 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/generate-wildcard-ssl-tls-certificate-lets-encrypt-certbot-with-dns-challenge/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;A wildcard SSL certificate allows you to secure all subdomains with just one certificate, for example &amp;ldquo;*.example.com&amp;rdquo;, &amp;ldquo;subdomain.example.com&amp;rdquo;. With the help of Let&amp;rsquo;s Encrypt, we can obtain a free and automated SSL/TLS Certificate using Certbot through the DNS challenge method. However, keep in mind that the certificate is not valid for domain names using sub-subdomains such as sub.sub.example.com.&lt;/p&gt;&#xA;&lt;p&gt;This method is very suitable if you have setups like:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Public-facing HTTP infrastructure&lt;/li&gt;&#xA;&lt;li&gt;Internal server or private network&lt;/li&gt;&#xA;&lt;li&gt;Reverse proxy or load balancer&lt;/li&gt;&#xA;&lt;li&gt;Production environment with many subdomains&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;An SSL/TLS certificate functions to encrypt data sent between client and server so it cannot be intercepted (Man in the middle attack), maintain data integrity so it is not altered during transmission, increase user trust because the service appears more secure, and support modern protocols such as HTTP/2 and various API services that require secure connections.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

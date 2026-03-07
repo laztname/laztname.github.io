@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html class="no-js" lang="id-ID">
+<html class="no-js" lang="id">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="robots" content="index, follow">
+	<meta name="robots" content="index, follow, max-image-preview:large">
 	<meta name="theme-color" content="#efe6dd">
+	<meta http-equiv="content-language" content="id">
+	<meta name="author" content="Ardi Jonias Fortuna">
 	<title>Update Newsfeed RSS to Discord - Jonias Fortuna</title>
-	<link rel="canonical" href="https://potato.id/posts/update-newsfeed-rss-to-discord-webhook/" />
+	<link rel="canonical" href="https://potato.id/posts/update-newsfeed-rss-to-discord-webhook/">
+	
+	
+	<link rel="alternate" hreflang="x-default" href="https://potato.id/posts/update-newsfeed-rss-to-discord-webhook/">
+	<link rel="alternate" hreflang="id" href="https://potato.id/posts/update-newsfeed-rss-to-discord-webhook/">
+	
+	<link rel="alternate" hreflang="en" href="https://potato.id/en/posts/update-newsfeed-rss-to-discord-webhook/">
+	
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="Integrasikan RSS ke Discord dengan Feedpushr: panduan setup di VPS menggunakan Docker/Portainer, konfigurasi output HTTP, dan tips mengatasi bug newline di deskripsi RSS.">
 		<meta property="og:url" content="https://potato.id/posts/update-newsfeed-rss-to-discord-webhook/">
   <meta property="og:site_name" content="Jonias Fortuna">
   <meta property="og:title" content="Update Newsfeed RSS to Discord">
   <meta property="og:description" content="Integrasikan RSS ke Discord dengan Feedpushr: panduan setup di VPS menggunakan Docker/Portainer, konfigurasi output HTTP, dan tips mengatasi bug newline di deskripsi RSS.">
-  <meta property="og:locale" content="id_ID">
+  <meta property="og:locale" content="id">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-05-01T00:00:00+00:00">
@@ -52,13 +61,18 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
+  "@id": "https:\/\/potato.id\/posts\/update-newsfeed-rss-to-discord-webhook\/#article",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https:\/\/potato.id\/posts\/update-newsfeed-rss-to-discord-webhook\/"
   },
   "headline": "Update Newsfeed RSS to Discord",
-  "description": "Integrasikan RSS ke Discord dengan Feedpushr: panduan setup di VPS menggunakan Docker\/Portainer, konfigurasi output HTTP, dan tips mengatasi bug newline di deskripsi RSS.",
-  "image": ["https:\/\/potato.id\/img\/feedpushr\/discord-feeds.png"],
+  "description": "Integrasikan RSS ke Discord dengan Feedpushr: panduan setup di VPS menggunakan Docker/Portainer, konfigurasi output HTTP, dan tips mengatasi bug newline di deskripsi RSS.",
+  "inLanguage": "id",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/potato.id\/img\/feedpushr\/discord-feeds.png"
+  },
   "author": {
     "@type": "Person",
     "name": "Ardi Jonias Fortuna",
@@ -72,6 +86,9 @@
       "url": "https:\/\/potato.id\/favicon.ico"
     }
   },
+  "articleSection": "posts",
+  "keywords": ["Write Up","Docker"],
+  "wordCount":  350 ,
   "datePublished": "2024-05-01T00:00:00Z",
   "dateModified": "2024-05-01T00:00:00Z"
 }
@@ -101,39 +118,53 @@
                 </div>
                 
 <nav class="menu">
-	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
-		<span class="menu__btn-title" tabindex="-1">Menu</span>
-	</button>
-	<ul class="menu__list">
-		<li class="menu__item">
-			<a class="menu__link" href="/">
-				
-				<span class="menu__text">Home</span>
-				
-			</a>
+        <button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                <span class="menu__btn-title" tabindex="-1">Menu</span>
+        </button>
+
+        <ul class="menu__list">
+                <li class="menu__item">
+                        <a class="menu__link" href="/">
+                                
+                                <span class="menu__text">Home</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/about/">
+                                
+                                <span class="menu__text">About Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/contact/">
+                                
+                                <span class="menu__text">Contact Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/privacy-policy/">
+                                
+                                <span class="menu__text">Privacy Policy</span>
+                                
+                        </a>
+                </li>
+
+		
+		<li class="menu__item menu__item--lang">
+		  
+		    <a class="menu__link"
+		       href="/en/posts/update-newsfeed-rss-to-discord-webhook/"
+		       lang="en">
+		       English
+		    </a>
+		  
 		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/about/">
-				
-				<span class="menu__text">About Me</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/contact/">
-				
-				<span class="menu__text">Contact Me</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/privacy-policy/">
-				
-				<span class="menu__text">Privacy Policy</span>
-				
-			</a>
-		</li>
-	</ul>
+		
+
+        </ul>
 </nav>
 
 
@@ -172,28 +203,300 @@
             </figure>
 
 <div class="content post__content clearfix">
-			<p>As a Cybersecurity worker, we must stay up-to-date with any news, alerts, advisories and others also in the IT field everything is new and growing so fast, especially in cybersecurity</p>
-<p>To fill this gap I use a RSS aggregator to send the latest update from my favorite blog/news to notify me</p>
-<p>If you join SHL Discord you’ll be familiar with feeds and feeds-ransom text channel, this is how I configure it</p>
-<p><img src="/img/feedpushr/github-feedpushr.png" alt="feedpushr-repository"></p>
-<p>I am using feedpushr to run all the activities, thanks to ncarlier you can check the repository <a href="https://github.com/ncarlier/feedpushr">here</a> and you can directly run the container on your VPS with Docker / Portainer for this example I’m using Portainer</p>
-<p><img src="/img/feedpushr/container-setting.png" alt="container-environment"></p>
-<p>I use this ENV configuration due the default feedpushr request is too  short and sometimes resulting ban my IP from crawling again, so you can  configure your preferences</p>
-<p><img src="/img/feedpushr/rss-list.png" alt="rss-list"></p>
-<p>This is the list of RSS that already running on my container, to add new we can use the + button up right but if you want using mine you can download it <a href="/feedpushr.opml">here</a></p>
-<p><img src="/img/feedpushr/rss-add.png" alt="rss-add-new"></p>
-<p>You must add the title name can be the site name, the URL of the RSS file, and tags (optional) after that you can save all the fields and hit the toggle to enable crawl for the new RSS that just registered</p>
-<p><img src="/img/feedpushr/rss-output.png" alt="rss-output"></p>
-<p>In the output setting, we can add new using the same + button on the top right</p>
-<p><img src="/img/feedpushr/set-output.png" alt="output setting"></p>
-<p>The Feedpushr itself has a variety of output, but for Discord or other webhook we can use the HTTP output</p>
-<p><img src="/img/feedpushr/output-discord.png" alt="output discord"></p>
-<p>Based on the repository we can use fields Title, Link and Description  to show as summary, here I use truncate to only show 400 chars of the description due to max input from Discord webhook</p>
-<p><img src="/img/feedpushr/discord-feeds.png" alt="discord"></p>
-<p>And the new notification will be shown on your Discord</p>
-<p>For now, I only found a bug in the RSS source that includes a new line in their Description field (ex:  The Hacker News), this will make the HTTP request send to Discord webhook become broken and return 400, for the  fix we can lowering the number of truncate, if you need further  assistance how to deploy or found any bug we can discuss it here</p>
-<p>What do you do to keep stay updated with the latest cybersecurity news? did you use the same way?</p>
-<p>Cya</p>
+			<p>Sebagai seorang pekerja Cybersecurity, kita harus selalu up-to-date dengan berbagai berita, alert, advisory, dan hal lainnya di bidang IT yang selalu baru dan berkembang sangat cepat, terutama di dunia cybersecurity.</p>
+<p>Untuk mengisi kebutuhan ini saya menggunakan RSS aggregator untuk mengirimkan update terbaru dari blog/berita favorit agar bisa memberi notifikasi kepada saya.</p>
+<p>Jika kamu bergabung di Discord SHL, kamu pasti familiar dengan channel feeds dan feeds-ransom, berikut adalah cara saya mengonfigurasinya.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/feedpushr/github-feedpushr.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/feedpushr/github-feedpushr_hu_a34ab56745e1be15.webp" media="(min-width: 1024px)">
+        <source srcset="/img/feedpushr/github-feedpushr_hu_b85ce0f7b3c27f24.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/feedpushr/github-feedpushr_hu_869b695cc4105743.webp" media="(max-width: 767px)">
+        <img src="/img/feedpushr/github-feedpushr_hu_869b695cc4105743.webp"
+             alt="Repository Github Feedpushr"
+             class="hover-effect"
+             width="800"
+             height="324">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Saya menggunakan feedpushr untuk menjalankan semua aktivitasnya, terima kasih kepada ncarlier kamu bisa melihat repositorinya di sini <a href="https://github.com/ncarlier/feedpushr">https://github.com/ncarlier/feedpushr</a> dan kamu bisa langsung menjalankan container di VPS menggunakan Docker / Portainer, pada contoh ini saya menggunakan Portainer.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/feedpushr/container-setting.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/feedpushr/container-setting_hu_6bfd284ee58dc29b.webp" media="(min-width: 1024px)">
+        <source srcset="/img/feedpushr/container-setting_hu_e93ea0ab9a1466a4.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/feedpushr/container-setting_hu_40b36a8cddeb3fb6.webp" media="(max-width: 767px)">
+        <img src="/img/feedpushr/container-setting_hu_40b36a8cddeb3fb6.webp"
+             alt="Repository Github Feedpushr"
+             class="hover-effect"
+             width="800"
+             height="330">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Saya menggunakan konfigurasi ENV ini karena request default feedpushr terlalu singkat dan kadang membuat IP saya terkena ban saat crawling ulang, jadi kamu bisa menyesuaikan sesuai kebutuhan.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/feedpushr/rss-list.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/feedpushr/rss-list_hu_ec7068da8b0d3893.webp" media="(min-width: 1024px)">
+        <source srcset="/img/feedpushr/rss-list_hu_3dd86f0e55b18be3.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/feedpushr/rss-list_hu_799d7370279c7112.webp" media="(max-width: 767px)">
+        <img src="/img/feedpushr/rss-list_hu_799d7370279c7112.webp"
+             alt="RSS Terdaftar"
+             class="hover-effect"
+             width="800"
+             height="393">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Ini adalah daftar RSS yang sudah berjalan di container saya, untuk menambah baru kita bisa menggunakan tombol + di kanan atas, tetapi jika ingin menggunakan daftar milik saya kamu bisa mengunduhnya <a href="/feedpushr.opml">di sini</a></p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/feedpushr/rss-add.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/feedpushr/rss-add_hu_238a184bbc0245bf.webp" media="(min-width: 1024px)">
+        <source srcset="/img/feedpushr/rss-add_hu_f05eb56e44c709bf.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/feedpushr/rss-add_hu_af63f1c65f9e0085.webp" media="(max-width: 767px)">
+        <img src="/img/feedpushr/rss-add_hu_af63f1c65f9e0085.webp"
+             alt="Penambahan RSS baru"
+             class="hover-effect"
+             width="800"
+             height="313">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Kamu harus menambahkan nama title bisa berupa nama situs, URL file RSS, dan tags (opsional), setelah itu simpan semua field lalu aktifkan toggle untuk mengaktifkan crawl RSS baru yang sudah didaftarkan.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/feedpushr/rss-output.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/feedpushr/rss-output_hu_1cd5d3f0346f0738.webp" media="(min-width: 1024px)">
+        <source srcset="/img/feedpushr/rss-output_hu_9a11e8fdd63bfd40.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/feedpushr/rss-output_hu_b4d517a9f7511672.webp" media="(max-width: 767px)">
+        <img src="/img/feedpushr/rss-output_hu_b4d517a9f7511672.webp"
+             alt="Output RSS"
+             class="hover-effect"
+             width="800"
+             height="322">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Di pengaturan output, kita bisa menambahkan baru menggunakan tombol + yang sama di kanan atas.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/feedpushr/set-output.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/feedpushr/set-output_hu_a68edc792c9f101b.webp" media="(min-width: 1024px)">
+        <source srcset="/img/feedpushr/set-output_hu_7c6f4ca2c5b2a756.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/feedpushr/set-output_hu_b69239b788a0131a.webp" media="(max-width: 767px)">
+        <img src="/img/feedpushr/set-output_hu_b69239b788a0131a.webp"
+             alt="Pengaturan Output"
+             class="hover-effect"
+             width="800"
+             height="393">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Feedpushr sendiri memiliki berbagai jenis output, tetapi untuk Discord atau webhook lainnya kita bisa menggunakan output HTTP.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/feedpushr/set-output.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/feedpushr/set-output_hu_a68edc792c9f101b.webp" media="(min-width: 1024px)">
+        <source srcset="/img/feedpushr/set-output_hu_7c6f4ca2c5b2a756.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/feedpushr/set-output_hu_b69239b788a0131a.webp" media="(max-width: 767px)">
+        <img src="/img/feedpushr/set-output_hu_b69239b788a0131a.webp"
+             alt="Pengaturan Output"
+             class="hover-effect"
+             width="800"
+             height="393">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Berdasarkan repository, kita bisa menggunakan field Title, Link dan Description untuk ditampilkan sebagai ringkasan, di sini saya menggunakan truncate untuk hanya menampilkan 400 karakter dari deskripsi karena batas maksimum input dari Discord webhook.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/feedpushr/discord-feeds.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/feedpushr/discord-feeds_hu_43864ee537d711b5.webp" media="(min-width: 1024px)">
+        <source srcset="/img/feedpushr/discord-feeds_hu_86401f26dffda6aa.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/feedpushr/discord-feeds_hu_b58c1d342dc6cc41.webp" media="(max-width: 767px)">
+        <img src="/img/feedpushr/discord-feeds_hu_b58c1d342dc6cc41.webp"
+             alt="Feed di Discord"
+             class="hover-effect"
+             width="800"
+             height="284">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Dan notifikasi baru akan muncul di Discord kamu.</p>
+<p>Untuk saat ini, saya hanya menemukan bug pada beberapa sumber RSS yang menyertakan baris baru di field Description (contoh: The Hacker News), hal ini membuat HTTP request yang dikirim ke Discord webhook menjadi rusak dan menghasilkan error 400. Untuk memperbaikinya kita bisa menurunkan jumlah truncate, jika kamu membutuhkan bantuan lebih lanjut untuk deploy atau menemukan bug lain kita bisa diskusikan di sini.</p>
+<p>Bagaimana cara kamu agar tetap update dengan berita cybersecurity terbaru? apakah kamu menggunakan cara yang sama?</p>
+<p>Sampai jumpa</p>
 
 		</div>
 		<footer class="post__footer">
@@ -228,7 +531,7 @@
 		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
-		<span class="authorbox__name">About Ardi Jonias Fortuna</span>
+		<span class="authorbox__name">Tentang Ardi Jonias Fortuna</span>
 	</div>
 	<div class="authorbox__description">
 		Roses are red, violets are blue. There is nothing can&rsquo;t to do
@@ -239,13 +542,13 @@
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
 		<a class="pager__link" href="/posts/hacking-phishing-as-a-service/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<span class="pager__subtitle">«&thinsp;Sebelumnya</span>
 			<p class="pager__title">Hacking Phishing-as-a-Service</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/posts/moving-from-disqus-to-giscus-with-hugo-ssg/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
+			<span class="pager__subtitle">Selanjutnya&thinsp;»</span>
 			<p class="pager__title">Moving From Disqus to Giscus with Hugo SSG</p>
 		</a>
 	</div>
@@ -274,7 +577,7 @@
 			<aside class="sidebar sidebar--left"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
+			<input class="widget-search__field" type="search" placeholder="CARI…" value="" name="q" aria-label="CARI…">
 		</label>
 		<input class="widget-search__submit" type="submit" value="Search">
 		<input type="hidden" name="sitesearch" value="https://potato.id/">
@@ -301,7 +604,7 @@
 </div>
 
 <div class="widget-recent widget">
-	<h3 class="widget__title">Recent Posts</h3>
+	<h3 class="widget__title">Postingan Terbaru</h3>
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item"><a class="widget__link" href="/posts/apa-itu-infatica-p2b-network/">Apa Itu Infatica P2B Network? Cara Menghapus Infatica dari Windows</a></li>
@@ -314,7 +617,7 @@
 </div>
 
 <div class="widget-categories widget">
-	<h3 class="widget__title">Categories</h3>
+	<h3 class="widget__title">Kategori</h3>
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
@@ -332,7 +635,7 @@
 </div>
 
 <div class="widget-taglist widget">
-	<h3 class="widget__title">Tags</h3>
+	<h3 class="widget__title">Tag</h3>
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (9)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/cyber-hygiene/" title="Cyber Hygiene">Cyber Hygiene (2)</a>
@@ -381,7 +684,7 @@
 </div>
 
 <div class="widget-social widget">
-	<h3 class="widget-social__title widget__title">Social</h3>
+	<h3 class="widget-social__title widget__title">Sosmed</h3>
 	<div class="widget-social__content widget__content">
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="Instagram" rel="noopener noreferrer" href="https://www.instagram.com/joniasfortuna" target="_blank">
@@ -426,7 +729,7 @@
         <div class="footer__copyright">
             &copy; 2026 
             <a href="https://potato.id/">Ardi Jonias Fortuna</a>.
-            <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+            <span class="footer__copyright-credits">Dibuat dengan <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> dan Tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
         </div>
     </div>
 </footer>

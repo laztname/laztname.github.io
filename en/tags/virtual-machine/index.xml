@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Virtual Machine on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/virtual-machine/</link>
+    <description>Recent content in Virtual Machine on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 17 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/virtual-machine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Write up of Challenges Surabaya Hacker Link VM Heaven</title>
+      <link>https://potato.id/en/posts/solution-for-shl-challenges-heaven-vm/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-shl-challenges-heaven-vm/</guid>
+      <description>&lt;p&gt;Since this machine has already been retired and is no longer considered relevant as a challenge, I decided to write a solution explaining how to complete the &lt;strong&gt;VM Heaven&lt;/strong&gt; challenge from Surabaya Hacker Link.&lt;/p&gt;&#xA;&lt;p&gt;In fact, solving this challenge does not require special hacking tools such as &lt;strong&gt;sqlmap&lt;/strong&gt; or &lt;strong&gt;metasploit&lt;/strong&gt; because the challenge is relatively easy. No advanced hacking knowledge is required. As long as you are familiar with the &lt;strong&gt;GNU/Linux operating system&lt;/strong&gt; and understand the basics of &lt;strong&gt;pwning (owning) a machine&lt;/strong&gt;, this VM can be solved quite easily.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

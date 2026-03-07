@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Offensive on Jonias Fortuna</title>
+    <link>https://potato.id/en/categories/offensive/</link>
+    <description>Recent content in Offensive on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 12 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/categories/offensive/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Is web phishing HTTP or HTTPS?</title>
+      <link>https://potato.id/en/posts/https-is-a-secure-web/</link>
+      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/https-is-a-secure-web/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;p&gt;Web phishing is one of the attack methods most frequently used by attackers. In a phishing attack, the attacker creates a fake website that imitates a legitimate website. This fake website is usually used to steal sensitive information from victims, such as login credentials, credit card information, and others.&lt;/p&gt;&#xA;&lt;p&gt;A common perception is that phishing websites always use the HTTP protocol. However, is that really the case? Do phishing websites never use the HTTPS protocol?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What Is a Credential Attack? Recognize and Prevent It Before It&#39;s Too Late</title>
+      <link>https://potato.id/en/posts/credential-attack/</link>
+      <pubDate>Mon, 19 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/credential-attack/</guid>
+      <description>&lt;h2 id=&#34;what-is-a-credential-attack&#34;&gt;What Is a Credential Attack?&lt;/h2&gt;&#xA;&lt;p&gt;A credential attack or credential-based attack is a hacking attempt to take over someone&amp;rsquo;s account by stealing a username and password. Usually this is done through techniques like &lt;strong&gt;phishing&lt;/strong&gt;, &lt;strong&gt;credential stuffing&lt;/strong&gt;, and &lt;strong&gt;brute force&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Simply put, attackers spy, guess, or try thousands of password combinations to get into your account. After that, they can access all the data inside it, such as email accounts, social media accounts, game accounts, and even banking accounts.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Execution After Redirect with Burp Suite</title>
+      <link>https://potato.id/en/posts/execution-after-redirect/</link>
+      <pubDate>Sat, 19 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/execution-after-redirect/</guid>
+      <description>&lt;p&gt;Execution After Redirect or EAR is a technique used to execute code after the redirect process. This technique is usually used to bypass several security features that exist in web applications. In this article, we will discuss how to exploit EAR using Burp Suite.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-execution-after-redirect-ear&#34;&gt;What is Execution After Redirect (EAR)?&lt;/h2&gt;&#xA;&lt;p&gt;Execution After Redirect is usually found in web applications with native style code that use a redirect mechanism to direct users to another page after performing a certain process, such as after login or registration. In some cases, the web application does not call the exit() or die() function after performing the redirect process, so the code after the redirect process continues to be executed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Fake Sponsored Job Posting Scam</title>
+      <link>https://potato.id/en/posts/fake-sponsored-jobposting/</link>
+      <pubDate>Wed, 16 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/fake-sponsored-jobposting/</guid>
+      <description>&lt;p&gt;This is actually an old case that went viral last year. While browsing Facebook, I frequently encountered sponsored job advertisements claiming to be from well-known companies — especially in mining, factory, and other blue-collar sectors — such as PT Epson, PT Unilever, PT Indofood, and other major corporations.&lt;/p&gt;&#xA;&lt;p&gt;These ads direct applicants to register online by filling out personal information such as:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Full name&lt;/li&gt;&#xA;&lt;li&gt;Address&lt;/li&gt;&#xA;&lt;li&gt;Phone number&lt;/li&gt;&#xA;&lt;li&gt;National ID number&lt;/li&gt;&#xA;&lt;li&gt;And other personal details&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Unfortunately, many people do not realize that these advertisements are &lt;strong&gt;fake&lt;/strong&gt; and are created purely for the scammer&amp;rsquo;s personal profit.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Phishing Simulation with GoPhish</title>
+      <link>https://potato.id/en/posts/phishing-simulation-with-gophish/</link>
+      <pubDate>Mon, 03 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/phishing-simulation-with-gophish/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Phishing is an attack carried out by influencing someone to provide personal or confidential information. This attack is usually conducted by sending fake emails that resemble official emails from certain companies or organizations. In a phishing attack, the attacker attempts to obtain sensitive information such as username, password, and even credit card information.&lt;/p&gt;&#xA;&lt;p&gt;As an organization that is aware of information security, it is important for us to conduct phishing simulations regularly. By conducting phishing simulations, we can measure the success rate of our users in identifying phishing attacks and taking appropriate action. A successful phishing attack can cause financial and reputational losses for the organization.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>mshta.exe - Threat Actor&#39;s Favorite Weapon</title>
+      <link>https://potato.id/en/posts/mshta-exe-threat-actors-favorite-weapon/</link>
+      <pubDate>Mon, 03 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/mshta-exe-threat-actors-favorite-weapon/</guid>
+      <description>&lt;h2 id=&#34;what-is-mshtaexe&#34;&gt;What is mshta.exe?&lt;/h2&gt;&#xA;&lt;p&gt;mshta.exe is a Windows file system utility used to run Microsoft HTML Application (.HTA) files. This program allows the execution of VBScript or JScript-based scripts, making it a useful tool for administrators but also a tool that is often abused by threat actors.&lt;/p&gt;&#xA;&lt;h2 id=&#34;why-is-mshtaexe-often-used-by-threat-actors&#34;&gt;Why is mshta.exe often used by Threat Actors?&lt;/h2&gt;&#xA;&lt;p&gt;Threat Actors frequently abuse mshta.exe to execute malicious code in order to avoid detection by antivirus or other security solutions (EDR). Some reasons why mshta.exe is commonly used in malware attacks include:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DNS Security, Maybe?</title>
+      <link>https://potato.id/en/posts/dns-security-maybe/</link>
+      <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/dns-security-maybe/</guid>
+      <description>&lt;p&gt;As we know, DNS is a service responsible for converting hostnames into IP addresses. It sounds simple, but some people do not realize that this DNS service can also cause security vulnerabilities. The following are several events I have experienced related to DNS and its security. Keep in mind this does not cover all vulnerabilities that exist in DNS, such as DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack, and other attacks, only several events that I have personally experienced.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Infostealer Spreading Through Fake Google reCAPTCHA</title>
+      <link>https://potato.id/en/posts/infostealer-spreading-through-fake-google-recaptcha/</link>
+      <pubDate>Sun, 05 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/infostealer-spreading-through-fake-google-recaptcha/</guid>
+      <description>&lt;h2 id=&#34;the-beginning&#34;&gt;The Beginning&lt;/h2&gt;&#xA;&lt;p&gt;This December I received a notification from a Facebook group that I follow. In the post (now deleted), there was a screenshot like the image above, complete with the caption: &lt;em&gt;&amp;ldquo;Is this dangerous or not? Why does the captcha look strange?&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;In the comments, the Thread Starter added another screenshot containing text that had to be pasted into the run.exe program as shown below&lt;/p&gt;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;&#xA;  &#xA;  &#xA;  &#xA;&#xA;  &#xA;  &#xA;&#xA;  &lt;figure class=&#34;mb-5&#34;&gt;&#xA;    &lt;a href=&#34;https://potato.id/img/infostealer/2.png&#34; target=&#34;_blank&#34; rel=&#34;noopener noreferrer&#34; class=&#34;image-link&#34;&gt;&#xA;      &lt;picture&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/infostealer/2_hu_f9c74d422db37a87.webp&#34; media=&#34;(min-width: 1024px)&#34;&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/infostealer/2_hu_191fafe9e808783c.webp&#34; media=&#34;(min-width: 768px) and (max-width: 1023px)&#34;&gt;&#xA;        &lt;source srcset=&#34;https://potato.id/img/infostealer/2_hu_de649da62fb1eb20.webp&#34; media=&#34;(max-width: 767px)&#34;&gt;&#xA;        &lt;img src=&#34;https://potato.id/img/infostealer/2_hu_de649da62fb1eb20.webp&#34;&#xA;             alt=&#34;text&#34;&#xA;             class=&#34;hover-effect&#34;&#xA;             width=&#34;800&#34;&#xA;             height=&#34;246&#34;&gt;&#xA;      &lt;/picture&gt;&#xA;    &lt;/a&gt;&#xA;&#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&#xA;&#xA;&lt;p&gt;It is very clear that this is malware. mshta is a built-in Windows file whose function is to execute commands from HTA applications in the Windows environment and is very often used by threat actors as one of their attack techniques &lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Surabaya Hacker Link Underground Write Up</title>
+      <link>https://potato.id/en/posts/surabaya-hacker-link-underground-hack-the-box-write-up-challenges/</link>
+      <pubDate>Thu, 13 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/surabaya-hacker-link-underground-hack-the-box-write-up-challenges/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;&#34;&gt;Information&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;challenges-information&#34;&gt;Challenges Information&lt;/h2&gt;&#xA;&lt;p&gt;This is a write-up of the Surabaya Hacker Link challenge for the Underground machine. This machine was built using one of the vulnerable web applications that SHL commonly uses during demo sessions, with several vulnerabilities patched to make the challenge slightly more interesting.&lt;/p&gt;&#xA;&lt;h2 id=&#34;challenges&#34;&gt;Challenges&lt;/h2&gt;&#xA;&lt;p&gt;On the &lt;a href=&#34;https://forum.surabayahackerlink.org/d/3462-new-challenges-underground&#34;&gt;Surabaya Hacker Link forum&lt;/a&gt; there is information about a new challenge replacing Heaven challenges (the &lt;a href=&#34;https://potato.id/en/posts/solution-for-shl-challenges-heaven-vm/&#34;&gt;Heaven VM write-up can be found here&lt;/a&gt;). The information on the forum is quite clear: do not destroy anything, do not spoil the challenge, take the root and read root.txt. In this write-up I used the IP 110.93.14.30.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Retas.io Hellbound VM Write-up</title>
+      <link>https://potato.id/en/posts/retas-io-hellbound-vm-write-up/</link>
+      <pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/retas-io-hellbound-vm-write-up/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s get straight to the point: this machine is hard, period. When the labs were first launched there were three machines: Zombie, Hellbound, and Anonymouz. In my opinion this one is quite difficult, probably due to my lack of experience in exploitation and intuition. Until the time this write-up was written, the author still hadn&amp;rsquo;t obtained the root user flag and was stuck at www-data. Fortunately, the user flag is readable by www-data, so it can still be submitted.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Retas.io Zombie VM Write-up</title>
+      <link>https://potato.id/en/posts/retas-io-zombie-vm-write-up/</link>
+      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/retas-io-zombie-vm-write-up/</guid>
+      <description>&lt;p&gt;Retas.io is a company from PT. Solusi Siber Teknologi that offers various security services ranging from Vulnerability Assessment, Penetration Testing, to other specialized IT and security-related needs.&lt;/p&gt;&#xA;&lt;p&gt;Recently retas.io launched a new product called retas labs which is intended to help new players entering the Infosec world. These labs are somewhat similar to Hack The Box. By using a VPN we are required to solve challenges using our IT knowledge and skills. Not only that, they also plan to release Retas Campus which aims to provide education and training for entering the Infosec field. However, when this article was written the feature was still under development. Below is the write-up for the Zombie VM challenge available in retas.io labs.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Completion of Malang Hacker Link Challenges</title>
+      <link>https://potato.id/en/posts/solution-for-mhl-challenges/</link>
+      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-mhl-challenges/</guid>
+      <description>&lt;p&gt;After a long time without creating or solving challenges due to increasingly limited free time and assignments piling up, I finally received information about a challenge from a friend in a Telegram group. This challenge was created by another community called Malang Hacker Link. The challenge is quite unique and fun to solve because no “magic tricks” are required.&lt;/p&gt;&#xA;&lt;p&gt;From the information provided, I immediately opened the link and found a form with two fields: first name and last name. Since we had not explored the application yet and had no clues, we tried using this feature to observe the output of the web application. For the firstname field we input &lt;strong&gt;abc&lt;/strong&gt; and for lastname &lt;strong&gt;def&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Write up of Challenges Surabaya Hacker Link VM Heaven</title>
+      <link>https://potato.id/en/posts/solution-for-shl-challenges-heaven-vm/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-shl-challenges-heaven-vm/</guid>
+      <description>&lt;p&gt;Since this machine has already been retired and is no longer considered relevant as a challenge, I decided to write a solution explaining how to complete the &lt;strong&gt;VM Heaven&lt;/strong&gt; challenge from Surabaya Hacker Link.&lt;/p&gt;&#xA;&lt;p&gt;In fact, solving this challenge does not require special hacking tools such as &lt;strong&gt;sqlmap&lt;/strong&gt; or &lt;strong&gt;metasploit&lt;/strong&gt; because the challenge is relatively easy. No advanced hacking knowledge is required. As long as you are familiar with the &lt;strong&gt;GNU/Linux operating system&lt;/strong&gt; and understand the basics of &lt;strong&gt;pwning (owning) a machine&lt;/strong&gt;, this VM can be solved quite easily.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Solution for Inclusion Challenges</title>
+      <link>https://potato.id/en/posts/solution-for-inclusion-challenges/</link>
+      <pubDate>Sun, 15 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-inclusion-challenges/</guid>
+      <description>&lt;p&gt;As usual, in the Surabaya Hacker Link group there are various challenges. Not only admins create them, but members also submit challenges, and I helped deploy this one. Not only deploying it, of course I also tried solving it :3&lt;/p&gt;&#xA;&lt;p&gt;Without further ado, we accessed the challenge at challshl.com.&lt;/p&gt;&#xA;&lt;p&gt;Since I was involved during deployment, I had a slight idea where the bug was located. The cool term would be white box pentest, meaning testing by reading the website source code &lt;em&gt;cmiiw.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Solution for Ramadhan Challenges</title>
+      <link>https://potato.id/en/posts/solution-for-ramadhan-challenges/</link>
+      <pubDate>Thu, 09 May 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-ramadhan-challenges/</guid>
+      <description>&lt;p&gt;This challenge was created when I was confused about how to explain the LFI bug Local File Inclusion during a secure coding session at &lt;a href=&#34;https://stts.edu&#34;&gt;STTS&lt;/a&gt;. Since I was quite bored with LFI to Local File Read via wrapper, I searched for LFI to RCE methods other than through &lt;code&gt;self/proc/environ&lt;/code&gt; and found LFI to RCE via Access Log Poisoning. However, because hosting environments could not read log files in txt format, a file upload feature was created that only allows txt files. Below is the Write Up.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SQL Injection Into XRDP Account Take Over</title>
+      <link>https://potato.id/en/posts/sql-injection-into-xrdp-account-take-over/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/sql-injection-into-xrdp-account-take-over/</guid>
+      <description>&lt;p&gt;Well maybe the title is a bit &lt;em&gt;&lt;strong&gt;click bait&lt;/strong&gt;&lt;/em&gt; — SQL injection itself can&amp;rsquo;t directly inject all the way to an RDP account takeover xD&lt;/p&gt;&#xA;&lt;p&gt;Actually the initial goal was just to download anime on moesubs.com, but when opening the website there was a URL that looked very suspicious:&#xA;&lt;code&gt;https://moesubs.com/?hal=dlrilisan&amp;amp;id=591&lt;/code&gt;&#xA;so I tried checking with &lt;code&gt;&#39;&lt;/code&gt; and the site returned an error. After the error I balanced it using an SQL comment &lt;code&gt;--+-&lt;/code&gt; and the page returned to normal, okay let&amp;rsquo;s continue with order by.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

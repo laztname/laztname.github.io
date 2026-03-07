@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Malang Hacker Link on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/malang-hacker-link/</link>
+    <description>Recent content in Malang Hacker Link on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 22 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/malang-hacker-link/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Completion of Malang Hacker Link Challenges</title>
+      <link>https://potato.id/en/posts/solution-for-mhl-challenges/</link>
+      <pubDate>Wed, 22 Apr 2020 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-mhl-challenges/</guid>
+      <description>&lt;p&gt;After a long time without creating or solving challenges due to increasingly limited free time and assignments piling up, I finally received information about a challenge from a friend in a Telegram group. This challenge was created by another community called Malang Hacker Link. The challenge is quite unique and fun to solve because no “magic tricks” are required.&lt;/p&gt;&#xA;&lt;p&gt;From the information provided, I immediately opened the link and found a form with two fields: first name and last name. Since we had not explored the application yet and had no clues, we tried using this feature to observe the output of the web application. For the firstname field we input &lt;strong&gt;abc&lt;/strong&gt; and for lastname &lt;strong&gt;def&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

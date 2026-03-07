@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Retas Labs on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/retas-labs/</link>
+    <description>Recent content in Retas Labs on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 15 Jun 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/retas-labs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Retas.io Hellbound VM Write-up</title>
+      <link>https://potato.id/en/posts/retas-io-hellbound-vm-write-up/</link>
+      <pubDate>Mon, 15 Jun 2020 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/retas-io-hellbound-vm-write-up/</guid>
+      <description>&lt;p&gt;Let&amp;rsquo;s get straight to the point: this machine is hard, period. When the labs were first launched there were three machines: Zombie, Hellbound, and Anonymouz. In my opinion this one is quite difficult, probably due to my lack of experience in exploitation and intuition. Until the time this write-up was written, the author still hadn&amp;rsquo;t obtained the root user flag and was stuck at www-data. Fortunately, the user flag is readable by www-data, so it can still be submitted.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Retas.io Zombie VM Write-up</title>
+      <link>https://potato.id/en/posts/retas-io-zombie-vm-write-up/</link>
+      <pubDate>Mon, 25 May 2020 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/retas-io-zombie-vm-write-up/</guid>
+      <description>&lt;p&gt;Retas.io is a company from PT. Solusi Siber Teknologi that offers various security services ranging from Vulnerability Assessment, Penetration Testing, to other specialized IT and security-related needs.&lt;/p&gt;&#xA;&lt;p&gt;Recently retas.io launched a new product called retas labs which is intended to help new players entering the Infosec world. These labs are somewhat similar to Hack The Box. By using a VPN we are required to solve challenges using our IT knowledge and skills. Not only that, they also plan to release Retas Campus which aims to provide education and training for entering the Infosec field. However, when this article was written the feature was still under development. Below is the write-up for the Zombie VM challenge available in retas.io labs.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

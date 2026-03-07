@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terminal on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/terminal/</link>
+    <description>Recent content in Terminal on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 31 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Job and Shortcut Management in Terminal</title>
+      <link>https://potato.id/en/posts/bash-job-management-and-shortcut/</link>
+      <pubDate>Mon, 31 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/bash-job-management-and-shortcut/</guid>
+      <description>&lt;p&gt;We often find ourselves needing to work quickly when dealing with the terminal. This is already helped by bash-completion, which allows us to type commands automatically by pressing the &lt;code&gt;[TAB]&lt;/code&gt; key twice. However, in general the terminal also has shortcuts that help us work with Linux more easily and quickly. Below is a list of common terminal shortcuts. This list was taken from Hack The Box Academy.&lt;/p&gt;&#xA;&lt;p&gt;Auto Completion&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;[TAB]&lt;/code&gt; - Initiates command auto completion.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

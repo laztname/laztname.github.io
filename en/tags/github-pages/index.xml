@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github Pages on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/github-pages/</link>
+    <description>Recent content in Github Pages on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 21 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Pages Custom Domain with E-mail Service</title>
+      <link>https://potato.id/en/posts/github-pages-custom-domain-with-email-service/</link>
+      <pubDate>Sat, 10 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/github-pages-custom-domain-with-email-service/</guid>
+      <description>&lt;p&gt;After using a custom domain with GitHub Pages, I was quite happy to host on GitHub for free and use a unique workflow. However, after some time I noticed that no emails were coming from the custom domain. It turned out the mail server was not connected.&lt;/p&gt;&#xA;&lt;p&gt;I searched the internet using the DuckDuckGo search engine but found no clear answers even after going through several pages. On GitHub Pages itself, there is no explanation about how to keep email working properly. After digging deeper, I found a trick to keep email working while the domain still points to GitHub Pages, which is by configuring the DNS zone properly.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

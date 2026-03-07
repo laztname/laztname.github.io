@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html class="no-js" lang="id-ID">
+<html class="no-js" lang="id">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="robots" content="index, follow">
+	<meta name="robots" content="index, follow, max-image-preview:large">
 	<meta name="theme-color" content="#efe6dd">
+	<meta http-equiv="content-language" content="id">
+	<meta name="author" content="Ardi Jonias Fortuna">
 	<title>Panduan Konfigurasi Email DNS Security (SPF, DKIM, DMARC) - Jonias Fortuna</title>
-	<link rel="canonical" href="https://potato.id/posts/email-security-spf-dkim-dmarc/" />
+	<link rel="canonical" href="https://potato.id/posts/email-security-spf-dkim-dmarc/">
+	
+	
+	<link rel="alternate" hreflang="x-default" href="https://potato.id/posts/email-security-spf-dkim-dmarc/">
+	<link rel="alternate" hreflang="id" href="https://potato.id/posts/email-security-spf-dkim-dmarc/">
+	
+	<link rel="alternate" hreflang="en" href="https://potato.id/en/posts/email-security-spf-dkim-dmarc/">
+	
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="Pelajari cara mengonfigurasi autentikasi email SPF, DKIM, dan DMARC untuk meningkatkan keamanan email server dan domain yang kita miliki.">
 		<meta property="og:url" content="https://potato.id/posts/email-security-spf-dkim-dmarc/">
   <meta property="og:site_name" content="Jonias Fortuna">
   <meta property="og:title" content="Panduan Konfigurasi Email DNS Security (SPF, DKIM, DMARC)">
   <meta property="og:description" content="Pelajari cara mengonfigurasi autentikasi email SPF, DKIM, dan DMARC untuk meningkatkan keamanan email server dan domain yang kita miliki.">
-  <meta property="og:locale" content="id_ID">
+  <meta property="og:locale" content="id">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-02-20T00:00:00+00:00">
@@ -53,13 +62,18 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
+  "@id": "https:\/\/potato.id\/posts\/email-security-spf-dkim-dmarc\/#article",
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https:\/\/potato.id\/posts\/email-security-spf-dkim-dmarc\/"
   },
   "headline": "Panduan Konfigurasi Email DNS Security (SPF, DKIM, DMARC)",
   "description": "Pelajari cara mengonfigurasi autentikasi email SPF, DKIM, dan DMARC untuk meningkatkan keamanan email server dan domain yang kita miliki.",
-  "image": ["https:\/\/potato.id\/img\/email-security\/spf-dkim-dmarc.png"],
+  "inLanguage": "id",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/potato.id\/img\/email-security\/spf-dkim-dmarc.png"
+  },
   "author": {
     "@type": "Person",
     "name": "Ardi Jonias Fortuna",
@@ -73,6 +87,9 @@
       "url": "https:\/\/potato.id\/favicon.ico"
     }
   },
+  "articleSection": "posts",
+  "keywords": ["Internet","Users","Write Up"],
+  "wordCount":  696 ,
   "datePublished": "2025-02-20T00:00:00Z",
   "dateModified": "2025-02-20T00:00:00Z"
 }
@@ -102,39 +119,53 @@
                 </div>
                 
 <nav class="menu">
-	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
-		<span class="menu__btn-title" tabindex="-1">Menu</span>
-	</button>
-	<ul class="menu__list">
-		<li class="menu__item">
-			<a class="menu__link" href="/">
-				
-				<span class="menu__text">Home</span>
-				
-			</a>
+        <button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                <span class="menu__btn-title" tabindex="-1">Menu</span>
+        </button>
+
+        <ul class="menu__list">
+                <li class="menu__item">
+                        <a class="menu__link" href="/">
+                                
+                                <span class="menu__text">Home</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/about/">
+                                
+                                <span class="menu__text">About Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/contact/">
+                                
+                                <span class="menu__text">Contact Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/privacy-policy/">
+                                
+                                <span class="menu__text">Privacy Policy</span>
+                                
+                        </a>
+                </li>
+
+		
+		<li class="menu__item menu__item--lang">
+		  
+		    <a class="menu__link"
+		       href="/en/posts/email-security-spf-dkim-dmarc/"
+		       lang="en">
+		       English
+		    </a>
+		  
 		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/about/">
-				
-				<span class="menu__text">About Me</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/contact/">
-				
-				<span class="menu__text">Contact Me</span>
-				
-			</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/privacy-policy/">
-				
-				<span class="menu__text">Privacy Policy</span>
-				
-			</a>
-		</li>
-	</ul>
+		
+
+        </ul>
 </nav>
 
 
@@ -353,7 +384,7 @@
 		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
 	</figure>
 	<div class="authorbox__header">
-		<span class="authorbox__name">About Ardi Jonias Fortuna</span>
+		<span class="authorbox__name">Tentang Ardi Jonias Fortuna</span>
 	</div>
 	<div class="authorbox__description">
 		Roses are red, violets are blue. There is nothing can&rsquo;t to do
@@ -364,13 +395,13 @@
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
 		<a class="pager__link" href="/posts/mshta-exe-threat-actors-favorite-weapon/" rel="prev">
-			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<span class="pager__subtitle">«&thinsp;Sebelumnya</span>
 			<p class="pager__title">mshta.exe - Threat Actor&#39;s Favorite Weapon</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
 		<a class="pager__link" href="/posts/phishing-simulation-with-gophish/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
+			<span class="pager__subtitle">Selanjutnya&thinsp;»</span>
 			<p class="pager__title">Phishing Simulation with GoPhish</p>
 		</a>
 	</div>
@@ -399,7 +430,7 @@
 			<aside class="sidebar sidebar--left"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
+			<input class="widget-search__field" type="search" placeholder="CARI…" value="" name="q" aria-label="CARI…">
 		</label>
 		<input class="widget-search__submit" type="submit" value="Search">
 		<input type="hidden" name="sitesearch" value="https://potato.id/">
@@ -426,7 +457,7 @@
 </div>
 
 <div class="widget-recent widget">
-	<h3 class="widget__title">Recent Posts</h3>
+	<h3 class="widget__title">Postingan Terbaru</h3>
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item"><a class="widget__link" href="/posts/apa-itu-infatica-p2b-network/">Apa Itu Infatica P2B Network? Cara Menghapus Infatica dari Windows</a></li>
@@ -439,7 +470,7 @@
 </div>
 
 <div class="widget-categories widget">
-	<h3 class="widget__title">Categories</h3>
+	<h3 class="widget__title">Kategori</h3>
 	<div class="widget__content">
 		<ul class="widget__list">
 			<li class="widget__item">
@@ -457,7 +488,7 @@
 </div>
 
 <div class="widget-taglist widget">
-	<h3 class="widget__title">Tags</h3>
+	<h3 class="widget__title">Tag</h3>
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (9)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/cyber-hygiene/" title="Cyber Hygiene">Cyber Hygiene (2)</a>
@@ -506,7 +537,7 @@
 </div>
 
 <div class="widget-social widget">
-	<h3 class="widget-social__title widget__title">Social</h3>
+	<h3 class="widget-social__title widget__title">Sosmed</h3>
 	<div class="widget-social__content widget__content">
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="Instagram" rel="noopener noreferrer" href="https://www.instagram.com/joniasfortuna" target="_blank">
@@ -551,7 +582,7 @@
         <div class="footer__copyright">
             &copy; 2026 
             <a href="https://potato.id/">Ardi Jonias Fortuna</a>.
-            <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+            <span class="footer__copyright-credits">Dibuat dengan <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> dan Tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
         </div>
     </div>
 </footer>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XSS on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/xss/</link>
+    <description>Recent content in XSS on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 27 Feb 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/xss/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Getting to Know DOM Based XSS More Closely</title>
+      <link>https://potato.id/en/posts/dom-based-xss/</link>
+      <pubDate>Wed, 27 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/dom-based-xss/</guid>
+      <description>&lt;p&gt;Before getting into DOM XSS, let&amp;rsquo;s first get to know DOM, what is DOM?, &lt;del&gt;needle?&lt;/del&gt;&lt;/p&gt;&#xA;&lt;p&gt;DOM stands for Document Object Model, which means a hierarchical structure in an HTML document, so in HTML code there is a kind of family tree&lt;/p&gt;&#xA;&lt;p&gt;for XSS you can read &lt;a href=&#34;https://potato.id/en/posts/is-xss-dangerous/&#34;&gt;here&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;In the case of DOM Based XSS, the XSS payload will change HTML content through this DOM????&lt;/p&gt;&#xA;&lt;p&gt;Example:&#xA;DVWA, DOM XSS, Level:Low&lt;/p&gt;&#xA;&lt;p&gt;There is a language selection feature, let&amp;rsquo;s check the script&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>XSS Prevention</title>
+      <link>https://potato.id/en/posts/xss-prevention/</link>
+      <pubDate>Thu, 21 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/xss-prevention/</guid>
+      <description>&lt;p&gt;after briefly discussing XSS &lt;a href=&#34;https://potato.id/en/posts/is-xss-dangerous/&#34;&gt;here&lt;/a&gt;, even though it was a bit messy, now it&amp;rsquo;s time to discuss how to prevent this bug from existing on our website&lt;/p&gt;&#xA;&lt;p&gt;XSS can run / be executed because of loose &lt;code&gt;&amp;lt;script&amp;gt;&lt;/code&gt; tags that are executed / rendered by the browser, therefore we manipulate the browser so it does not execute HTML tags that are &lt;em&gt;&lt;strong&gt;input&lt;/strong&gt;&lt;/em&gt; by users. But don&amp;rsquo;t worry, we&amp;rsquo;re not going to mess with the browser, just a little handling before user input is displayed on the website&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Is XSS Dangerous?</title>
+      <link>https://potato.id/en/posts/is-xss-dangerous/</link>
+      <pubDate>Thu, 20 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/is-xss-dangerous/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;&#xA;&lt;p&gt;From observing several IT groups that I follow, many people keep asking, Is XSS dangerous?, How to upload a webshell via XSS?, Why is my XSS bug report not responded to? Is it because XSS is not dangerous?, &lt;del&gt;Or maybe because the web admin is already you know what?&lt;/del&gt;, More or less those are the questions that come up, let’s discuss together what the characteristics of XSS are,&lt;/p&gt;&#xA;&lt;h2 id=&#34;definition&#34;&gt;Definition&lt;/h2&gt;&#xA;&lt;p&gt;Cross-site scripting is a type of computer security vulnerability typically found in web applications. XSS enables attackers to inject client side scripts into web pages viewed by other users. A cross-site scripting vulnerability may be used by attackers to bypass access controls such as the same-origin policy. &amp;ndash;Wikipedia&amp;ndash;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

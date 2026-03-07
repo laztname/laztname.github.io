@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQLI on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/sqli/</link>
+    <description>Recent content in SQLI on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 25 Jan 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/sqli/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQL Injection Into XRDP Account Take Over</title>
+      <link>https://potato.id/en/posts/sql-injection-into-xrdp-account-take-over/</link>
+      <pubDate>Fri, 25 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/sql-injection-into-xrdp-account-take-over/</guid>
+      <description>&lt;p&gt;Well maybe the title is a bit &lt;em&gt;&lt;strong&gt;click bait&lt;/strong&gt;&lt;/em&gt; — SQL injection itself can&amp;rsquo;t directly inject all the way to an RDP account takeover xD&lt;/p&gt;&#xA;&lt;p&gt;Actually the initial goal was just to download anime on moesubs.com, but when opening the website there was a URL that looked very suspicious:&#xA;&lt;code&gt;https://moesubs.com/?hal=dlrilisan&amp;amp;id=591&lt;/code&gt;&#xA;so I tried checking with &lt;code&gt;&#39;&lt;/code&gt; and the site returned an error. After the error I balanced it using an SQL comment &lt;code&gt;--+-&lt;/code&gt; and the page returned to normal, okay let&amp;rsquo;s continue with order by.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Solution for Surabaya Hacker Link Challenges</title>
+      <link>https://potato.id/en/posts/solution-for-surabaya-hacker-link-challenges/</link>
+      <pubDate>Thu, 03 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-surabaya-hacker-link-challenges/</guid>
+      <description>&lt;p&gt;Well, this post was made because the Surabaya Hacker Link challenges have been updated and many people were curious about this challenge but hadn&amp;rsquo;t solved it yet and suggested making a video tutorial, but since I can&amp;rsquo;t make a video, I&amp;rsquo;ll just write it here instead, &lt;a href=&#34;https://forum.surabayahackerlink.org/d/3142-update-challenges-shl&#34;&gt;updated challenges&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;It explains that we have to save John&amp;rsquo;s website and then we will be given a Telegram group link (flag).&lt;br&gt;&#xA;&lt;img src=&#34;https://potato.id/img/shl-johnpeperikus/awal.webp&#34; alt=&#34;awal&#34;&gt;&lt;br&gt;&#xA;initial appearance of the shl challenge page&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

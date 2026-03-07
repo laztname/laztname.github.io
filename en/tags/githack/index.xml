@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Githack on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/githack/</link>
+    <description>Recent content in Githack on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 04 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/githack/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Solution for QR Generator Challenges</title>
+      <link>https://potato.id/en/posts/solution-for-qr-generator-challenges/</link>
+      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-qr-generator-challenges/</guid>
+      <description>&lt;p&gt;After a long time without creating a challenge, I finally decided to make a simple one.&lt;br&gt;&#xA;This challenge is themed as a QR Code Generator, but the vulnerability is not in the QR Code itself. Below is a simple way to solve it.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Challenge Given&lt;br&gt;&#xA;&lt;img src=&#34;https://potato.id/img/qr/challenges.webp&#34; alt=&#34;telegram&#34;&gt;&lt;br&gt;&#xA;As usual, the challenge was posted in the Surabaya Hacker Link group. There was no clue at all, so we directly accessed the website. It turned out to be a QR Generator page with name and Instagram input fields.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hey I Found Git Repository</title>
+      <link>https://potato.id/en/posts/hey-i-found-git-repository/</link>
+      <pubDate>Mon, 31 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/hey-i-found-git-repository/</guid>
+      <description>&lt;h2 id=&#34;preface&#34;&gt;PREFACE&lt;/h2&gt;&#xA;&lt;p&gt;Just a small note when finding an exposed git repository on a website&lt;/p&gt;&#xA;&lt;h2 id=&#34;notes&#34;&gt;NOTES&lt;/h2&gt;&#xA;&lt;p&gt;Git is a version control system used by developers to build software collaboratively. The main function of git is to manage versions of your program source code by marking which lines and code were added or changed. Git will create a dotfiles (.git), which contains all its data including committed source code, therefore it’s better to route or restrict access to the git repository from outside. Why? Because otherwise bad things might happen.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Solution for &#39;Simple&#39; Web Challenges</title>
+      <link>https://potato.id/en/posts/solution-for-my-simple-web-challenges/</link>
+      <pubDate>Fri, 21 Dec 2018 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/solution-for-my-simple-web-challenges/</guid>
+      <description>&lt;h2 id=&#34;preface&#34;&gt;Preface&lt;/h2&gt;&#xA;&lt;p&gt;First of all, thanks to &lt;a href=&#34;https://ctf.slashrootctf.id/&#34;&gt;slashroot ctf&lt;/a&gt; because without slashroot ctf I might not have been able to provide these challenges through &lt;a href=&#34;https://dewaweb.com/&#34;&gt;dewaweb.com&lt;/a&gt;. Thanks to all player who took the time to try this &amp;lsquo;simple&amp;rsquo; challenge.&lt;/p&gt;&#xA;&lt;h2 id=&#34;notes&#34;&gt;Notes&lt;/h2&gt;&#xA;&lt;p&gt;clue &amp;ldquo;recon, tools, sign-in, submit&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;This recon is very easy, actually you don’t need to use tools or scanners. There are still many websites that store important things in HTML comments.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://potato.id/img/simplewebchall/htmlcomment.webp&#34; alt=&#34;html comment sensitive information&#34;&gt;&#xA;It clearly shows info that the git repository (/.git/) was moved to the /git/ directory. Let&amp;rsquo;s try accessing it first.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
