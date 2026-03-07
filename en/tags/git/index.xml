@@ -13,7 +13,7 @@
       <link>https://potato.id/en/posts/solution-for-qr-generator-challenges/</link>
       <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
       <guid>https://potato.id/en/posts/solution-for-qr-generator-challenges/</guid>
-      <description>&lt;p&gt;After a long time without creating a challenge, I finally decided to make a simple one.&lt;br&gt;&#xA;This challenge is themed as a QR Code Generator, but the vulnerability is not in the QR Code itself. Below is a simple way to solve it.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Challenge Given&lt;br&gt;&#xA;&lt;img src=&#34;https://potato.id/img/qr/challenges.webp&#34; alt=&#34;telegram&#34;&gt;&lt;br&gt;&#xA;As usual, the challenge was posted in the Surabaya Hacker Link group. There was no clue at all, so we directly accessed the website. It turned out to be a QR Generator page with name and Instagram input fields.&lt;/p&gt;</description>
+      <description>&lt;p&gt;After a long time without creating a challenge, I finally decided to make a simple one.&lt;br&gt;&#xA;This challenge is themed as a QR Code Generator, but the vulnerability is not in the QR Code itself. Below is a simple way to solve it.&lt;/p&gt;&#xA;&lt;h2 id=&#34;gathering-information&#34;&gt;Gathering Information&lt;/h2&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Challenge Given&lt;br&gt;&#xA;&lt;img src=&#34;https://potato.id/img/qr/challenges.webp&#34; alt=&#34;telegram&#34;&gt;&lt;br&gt;&#xA;As usual, the challenge was posted in the Surabaya Hacker Link group. There was no clue at all, so we directly accessed the website. It turned out to be a QR Generator page with name and Instagram input fields.&lt;/p&gt;</description>
     </item>
     <item>
       <title>GitHub Pages Custom Domain with E-mail Service</title>

@@ -6,8 +6,15 @@
     <description>Recent content in Wordpress on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>id</language>
-    <lastBuildDate>Mon, 11 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Critical RCE pada Plugin WordPress (900K&#43; Instalasi): Detektsi &amp; Mitigasi</title>
+      <link>https://potato.id/posts/kerentanan-rce-kritis-plugin-wordpress-900k-instalasi-deteksi-mitigasi/</link>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/kerentanan-rce-kritis-plugin-wordpress-900k-instalasi-deteksi-mitigasi/</guid>
+      <description>&lt;h2 id=&#34;ringkasan&#34;&gt;Ringkasan&lt;/h2&gt;&#xA;&lt;p&gt;Sebuah plugin WordPress dengan lebih dari &lt;strong&gt;900.000 instalasi aktif&lt;/strong&gt; dilaporkan memiliki kerentanan &lt;strong&gt;Remote Code Execution (RCE)&lt;/strong&gt; dengan tingkat keparahan kritis.&lt;/p&gt;&#xA;&lt;p&gt;Kerentanan ini memungkinkan penyerang menjalankan kode arbitrer di server target dalam kondisi tertentu. Mengingat skala instalasi yang besar, potensi eksploitasi massal sangat tinggi.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;dampak-teknis&#34;&gt;Dampak Teknis&lt;/h2&gt;&#xA;&lt;p&gt;Kerentanan Remote Code Execution (RCE) pada instalasi WordPress merupakan salah satu kategori kerentanan paling kritis karena memungkinkan penyerang menjalankan command pada server di wordpress yang memiliki vulnerability ini. Dampak yang ditimbulkan tidak hanya terbatas pada aplikasi web, tetapi juga dapat meluas ke seluruh lingkungan server tergantung pada konfigurasi dan hak akses yang tersedia.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Harderning Server with Fail2ban and Reporting to Telegram</title>
       <link>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</link>

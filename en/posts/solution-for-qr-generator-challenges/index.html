@@ -98,7 +98,7 @@
   },
   "articleSection": "posts",
   "keywords": ["Write Up","Surabaya Hacker Link","Challenges","RCE","Git","Githack","dvcs-ripper","gitdumper"],
-  "wordCount":  793 ,
+  "wordCount":  799 ,
   "datePublished": "2019-09-04T00:00:00Z",
   "dateModified": "2019-09-04T00:00:00Z"
 }
@@ -215,6 +215,7 @@
 <div class="content post__content clearfix">
 			<p>After a long time without creating a challenge, I finally decided to make a simple one.<br>
 This challenge is themed as a QR Code Generator, but the vulnerability is not in the QR Code itself. Below is a simple way to solve it.</p>
+<h2 id="gathering-information">Gathering Information</h2>
 <ol>
 <li>
 <p>Challenge Given<br>
@@ -233,6 +234,9 @@ We tested the feature by filling all fields with random valid data. After submit
 <img src="/img/qr/qrcode.webp" alt="qr"><br>
 After stopping for a moment and looking for vulnerabilities in the QR Code result, nothing was found.</p>
 </li>
+</ol>
+<h2 id="scanning">Scanning</h2>
+<ol start="4">
 <li>
 <p>Checking Common Web Directories<br>
 After thinking hard enough, we tried brute forcing directories using a common web list with gobuster.<br>
@@ -244,6 +248,9 @@ From the gobuster result, there was a 200 OK response for the .git folder and co
 <img src="/img/qr/git-directory.webp" alt="image"><br>
 It turned out there was indeed an exposed git directory.</p>
 </li>
+</ol>
+<h2 id="exploitation">Exploitation</h2>
+<ol start="6">
 <li>
 <p>Dump Git<br>
 Without further delay, we dumped it. If you are unsure how to dump an exposed git directory, you can check <a href="/en/posts/hey-i-found-git-repository/">here</a>.</p>
@@ -306,6 +313,7 @@ Result: id command executed.</p>
 </span></span><span style="display:flex;"><span>uid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span>
 </span></span></code></pre></div><p>Detail: semicolon ; separates commands, and # comments out .jpeg.<br>
 Result: id command executed.</p>
+<h2 id="gaining-access">Gaining Access</h2>
 <ol start="11">
 <li>
 <p>Write Name<br>
@@ -528,9 +536,8 @@ Bash Cheatsheet -&gt; <a href="https://devhints.io/bash">Read more&hellip;</a></
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/web-hacking/" title="Web Hacking">Web Hacking (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/windows/" title="Windows">Windows (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/en/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/wordpress/" title="Wordpress">Wordpress (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/write-up/" title="Write Up">Write Up (35)</a>
-		<a class="widget-taglist__link widget__link btn" href="/en/tags/wrodpress/" title="Wrodpress">Wrodpress (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
 	</div>

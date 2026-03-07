@@ -95,7 +95,7 @@
   },
   "articleSection": "posts",
   "keywords": ["Write Up","Challenges","Retas Labs"],
-  "wordCount":  1077 ,
+  "wordCount":  1084 ,
   "datePublished": "2020-06-15T00:00:00Z",
   "dateModified": "2020-06-15T00:00:00Z"
 }
@@ -213,6 +213,7 @@
 			<p>Let&rsquo;s get straight to the point: this machine is hard, period. When the labs were first launched there were three machines: Zombie, Hellbound, and Anonymouz. In my opinion this one is quite difficult, probably due to my lack of experience in exploitation and intuition. Until the time this write-up was written, the author still hadn&rsquo;t obtained the root user flag and was stuck at www-data. Fortunately, the user flag is readable by www-data, so it can still be submitted.</p>
 <p>As usual, we connect to our OpenVPN account, start our hacking machine, and begin attacking the Hellbound IP.</p>
 <p>The Nmap result was quite concerning because only one port was open: port 80 (web service). Unlike previous machines I worked on where usually at least two ports were open, commonly ports 22 and 80.</p>
+<h2 id="gathering-information-and-scanning">Gathering Information and Scanning</h2>
 <p><img src="/img/hellbound/nmap-response-hellbound.webp" alt="nmap hellbound result"></p>
 <p>Next we open the web service and don&rsquo;t forget to run dirsearch / fuzzing to find additional information that might be useful.</p>
 <p>When accessing the web page directly, there is no response at all except a “forbidden” message. So we wait for the fuzzing results to find common directories that might be exploitable.</p>
@@ -222,6 +223,7 @@
 <p>When opening the login directory, as the name suggests we are presented with a login form for a web application. However, we don&rsquo;t have any credentials to use. The member directory simply redirects us back to the login page. At this point I tried several approaches that seemed promising such as no-redirect tricks, brute force, default username/password, SQL-injection login bypass, etc., but none of them worked. Stuck again.</p>
 <p><img src="/img/hellbound/login-page.webp" alt="login page"></p>
 <p>As usual when stuck we go back to the beginning to check if we missed anything. It turns out that when opening composer.json we get some information about the website. Indeed, the application uses MongoDB as its backend database (I take back what I said earlier about it being uninteresting, lol). Wait a minute, maybe there is an exploit we can use. MongoDB is a NoSQL database, and NoSQL systems are known to have something similar to SQL Injection called NoSQL Injection. I used an internet resource as a guide for exploiting this.</p>
+<h2 id="exploitation">Exploitation</h2>
 <p><img src="/img/hellbound/no-sql-injection.webp" alt="no sql injection"></p>
 <p>And it works. We can log in without knowing the username or password by using a NoSQL Injection technique with invalid credentials and slightly modifying the request sent to the server.</p>
 <p><img src="/img/hellbound/member-index.webp" alt="logged in as member"></p>
@@ -246,6 +248,7 @@
 <p>From the analysis we find that index.php has a GET request parameter called ping which performs a ping to a host. This suggests a potential command injection vulnerability. Now it&rsquo;s time to test common Linux commands. Just like the XSS stage earlier, we open a port to receive responses from commands executed through the injection. If we receive a response, it means the command executed successfully. As a reference, the following resource provides various command injection payloads.</p>
 <p><img src="/img/hellbound/check-wget.webp" alt="pipe rce"></p>
 <p>This confirms we can perform command injection using a pipe (|) followed by another command. Since wget is available, I downloaded a script that executes a reverse shell. The script was generated using shell now sh, saved locally, then downloaded and executed through the command injection.</p>
+<h2 id="gaining-access">Gaining Access</h2>
 <p><img src="/img/hellbound/reverse-shell.webp" alt="reverse shell xss"></p>
 <p>After obtaining the reverse shell, it&rsquo;s time to read the flag in the home directory of user joko. Fortunately the flag is readable by www-data, which is a relief after the long journey to obtain a shell on the server. Next step would be rooting the machine, but for now I took a break because the effort required was already quite exhausting.</p>
 <p><img src="/img/hellbound/user-flaggggggggs.webp" alt="user flag"></p>
@@ -431,9 +434,8 @@
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/web-hacking/" title="Web Hacking">Web Hacking (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/windows/" title="Windows">Windows (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/en/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/wordpress/" title="Wordpress">Wordpress (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/write-up/" title="Write Up">Write Up (35)</a>
-		<a class="widget-taglist__link widget__link btn" href="/en/tags/wrodpress/" title="Wrodpress">Wrodpress (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
 	</div>

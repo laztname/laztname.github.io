@@ -89,7 +89,7 @@
   },
   "articleSection": "posts",
   "keywords": ["Write Up","Challenges","Retas Labs"],
-  "wordCount":  1063 ,
+  "wordCount":  1070 ,
   "datePublished": "2020-06-15T00:00:00Z",
   "dateModified": "2020-06-15T00:00:00Z"
 }
@@ -207,6 +207,7 @@
 			<p>Langsung saja to the point, mesin ini susah titik. Dari awal launching labs sudah ada 3 mesin yaitu Zombie, Hellbound dan Anonymouz maka mesin inillah yang menurut saya cukup hard karena ya mungkin kurangnya pengalaman dalam bereksploitasi dan feeling yang kuat. Hingga write up ini ditulis penulis juga masih belum mendapatkan flag root user, masih nyetuck di www-data. Beruntung saja user flag readable sama si www-data dengan ini sudah bisa submit flag user.</p>
 <p>Seperti biasa kita melakukan koneksi pada akun openvpn kita, starting our hacking machine dan mulai menyerang IP si Hellbound.</p>
 <p>Pada hasil nmap cukup meresahkan karena yang terbuka hanya ada 1 port saja yaitu port 80 / service web saja, tidak seperti pada mesin-mesin sebelumnya yang pernah saya kerjakan minimal ada 2 port, umumnya port 22 dan 80 yang terbuka.</p>
+<h2 id="gathering-information-dan-scanning">Gathering Information dan Scanning</h2>
 <p><img src="/img/hellbound/nmap-response-hellbound.webp" alt="nmap hellbound result"></p>
 <p>Langsung saja kita buka port web service tersebut dan jangan lupa lakukan dirsearch / fuzzing untuk mencari informasi lainnya yang kemungkinan bisa didapatkan.</p>
 <p>Pada saat dibuka tidak ada respons sama sekali, hanya tulisan forbidden / dilarang, lalu kita tunggu saja hasil fuzzing untuk mendapatkan directory umum yang kemungkinan bisa dieksploitasi.</p>
@@ -216,6 +217,7 @@
 <p>Ketika kita membuka directory login sesuai dengan namanya kita diberikan sebuah form untuk login kesebuah aplikasi web, tapi disini kita tidak mendapatkan informasi credential untuk digunakan masuk, lalu untuk directory member kita akan di-redirect ke directory login, di sini sudah mencoba beberapa cara yang sepertinya berhasil seperti no-redirect, bruteforce, default user pass, SQL-Injection bypass login dkk namun hasilnya nihil, oke kita nyetuck lagi.</p>
 <p><img src="/img/hellbound/login-page.webp" alt="login page"></p>
 <p>Seperti biasa jika nyetuck kita kembali ke tahap awal apakah ada yang tertinggal atau tidak, ternyata jika kita membuka file composer.json kita mendapatkan sedikit informasi mengenai website ini dan benar saja kita mengetahui jika web ini menggunakan mongodb sebagai backend databasenya (saya menarik kata-kata sebelumnya yang tidak menarik tadi, lol.). Oke wait, sepertinya ada exploit yang dapat digunakan, yup benar mongodb adalah nosql dan pada nosql sendiri dikenal ada sebuah injeksi kurang lebih sama seperti SQL injection namun karena pada mongodb maka namanya adalah NoSQL Injection, saya menggunakan resource dari internet ini sebagai panduan untuk melakukan exploitasi.</p>
+<h2 id="exploitation">Exploitation</h2>
 <p><img src="/img/hellbound/no-sql-injection.webp" alt="no sql injection"></p>
 <p>Dan benar saja kita dapat masuk tanpa harus mengetahui username / password pada aplikasi web dengan menggunkan NoSQL Injection. Dengan menggunakan credentials yang tidak valid serta sedikit merubah request ke server.</p>
 <p><img src="/img/hellbound/member-index.webp" alt="logged in as member"></p>
@@ -240,6 +242,7 @@
 <p>Dari hasil sedikit analisa, file index.php mempunyai GET request dengan parameter ping untuk melakukan ping pada suatu host, sepertinya ini bisa dilakukan command injection, saatnya kita coba menjalankan command-command umum pada linux server. Tentunya sama seperti XSS tadi, kita melakukan open port untuk menerima hasil dari response command injection yang dijalankan, jika terdapat balasan dari server berarti command tersebut berjalan dengan baik. Sebagai referensi, berikut adalah resource yang cukup menarik untuk mencoba beragam jenis payload command injection.</p>
 <p><img src="/img/hellbound/check-wget.webp" alt="pipe rce"></p>
 <p>Dari sini terbukti bahwa kita dapat melakukan command injection menggunakan pipe (|) dilanjutkan dengan command yang akan dilakukan, kebetulan karena wget dapat dijalankan, saya mendownload sebuah script untuk menjalankan reverse shell dengan menggunakan command yang ada, generate melalui shell now sh, lalu simpan dilocal, pada command injection kita lakukan download file tersebut dan menjalankannya dengan bash.</p>
+<h2 id="gaining-access">Gaining Access</h2>
 <p><img src="/img/hellbound/reverse-shell.webp" alt="reverse shell xss"></p>
 <p>Setelah mendapatkan reverse shell dan saatnya kita baca flag di homedirnya user joko, untungnya flagnya readable oleh www-data sehingga cukup melegakan setelah perjalanan panjang untuk mendapatkan shell dari server, selanjutnya kita melakukan rooting. namun untuk saat ini saya rehat bentar dari mesin ini karena memang effort yang digunakan cukup banyak dan ribet.</p>
 <p><img src="/img/hellbound/user-flaggggggggs.webp" alt="user flag"></p>
@@ -425,9 +428,8 @@
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/web-hacking/" title="Web Hacking">Web Hacking (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/windows/" title="Windows">Windows (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (35)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/wrodpress/" title="Wrodpress">Wrodpress (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
 	</div>

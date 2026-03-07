@@ -92,7 +92,7 @@
   },
   "articleSection": "posts",
   "keywords": ["Write Up","Surabaya Hacker Link","Challenges","RCE","Git","Githack","dvcs-ripper","gitdumper"],
-  "wordCount":  855 ,
+  "wordCount":  861 ,
   "datePublished": "2019-09-04T00:00:00Z",
   "dateModified": "2019-09-04T00:00:00Z"
 }
@@ -209,6 +209,7 @@
 <div class="content post__content clearfix">
 			<p>Setelah sekian lama tidak membuat challenges akhirnya kepikiran juga membuat challenges sederhana,
 Challenges ini bertemakan QR Code Generator, namun letak vulnerability-nya tidak pada QR Code tersebut, lalu berikut adalah cara sederhana menyelesaikannya</p>
+<h2 id="gathering-information">Gathering Information</h2>
 <ol>
 <li>
 <p>Diberikan Challenges<br>
@@ -227,6 +228,9 @@ Kita coba fitur web ini dengan menginputkan semua field yang ada, tentunya denga
 <img src="/img/qr/qrcode.webp" alt="qr"><br>
 Berhenti sejenak dan mencari vulnerability terhadap QR Code hasilnya nihil :(</p>
 </li>
+</ol>
+<h2 id="scanning">Scanning</h2>
+<ol start="4">
 <li>
 <p>Pengecekan Common Web Directory<br>
 Setelah berfikir cukup keras, kita coba brute directory yang ada pada web tersebut dengan common web list menggunakan gobuster<br>
@@ -238,6 +242,9 @@ Dari hasil gobuster ada header 200 OK terhadap folder .git dan common file/folde
 <img src="/img/qr/git-directory.webp" alt="image"><br>
 Ternyata benar ada exposed git directory di sana</p>
 </li>
+</ol>
+<h2 id="exploitation">Exploitation</h2>
+<ol start="6">
 <li>
 <p>Dump Git<br>
 Tanpa basa basi kita dump aja, jika bingung bagaimana melakukan dump exposed git directory bisa cek di <a href="/posts/hey-i-found-git-repository/">sini</a></p>
@@ -304,6 +311,7 @@ Hasil: command id berjalan</p>
 </span></span><span style="display:flex;"><span>uid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span> gid<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span> groups<span style="color:#f92672">=</span>1000<span style="color:#f92672">(</span>lazt<span style="color:#f92672">)</span>
 </span></span></code></pre></div><p>Detail: semicolon (;) berfungsi memisakan command sebelumnya (rm) dan tagar (#) berfungsi melakukan commenting terhadap string .jpeg<br>
 Hasil: command id berjalan</p>
+<h2 id="gaining-access">Gaining Access</h2>
 <ol start="11">
 <li>
 <p>Write Name<br>
@@ -526,9 +534,8 @@ Bash Cheatsheet -&gt; <a href="https://devhints.io/bash">Read more&hellip;</a></
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/web-hacking/" title="Web Hacking">Web Hacking (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/windows/" title="Windows">Windows (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (35)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/wrodpress/" title="Wrodpress">Wrodpress (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
 	</div>

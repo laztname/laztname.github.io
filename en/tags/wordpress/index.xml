@@ -6,8 +6,15 @@
     <description>Recent content in Wordpress on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 11 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/en/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Critical RCE in WordPress Plugin (900K&#43; Installations): Detection &amp; Mitigation</title>
+      <link>https://potato.id/en/posts/critical-rce-vulnerability-wordpress-plugin-900k-installations-detection-mitigation/</link>
+      <pubDate>Fri, 13 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/critical-rce-vulnerability-wordpress-plugin-900k-installations-detection-mitigation/</guid>
+      <description>&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;A WordPress plugin with more than &lt;strong&gt;900,000 active installations&lt;/strong&gt; is reported to have a &lt;strong&gt;Remote Code Execution (RCE)&lt;/strong&gt; vulnerability with critical severity.&lt;/p&gt;&#xA;&lt;p&gt;This vulnerability allows attackers to execute arbitrary code on the target server under certain conditions. Given the large installation scale, the potential for mass exploitation is very high.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;technical-impact&#34;&gt;Technical Impact&lt;/h2&gt;&#xA;&lt;p&gt;A Remote Code Execution (RCE) vulnerability in a WordPress installation is one of the most critical vulnerability categories because it allows attackers to run commands on the server running WordPress that has this vulnerability. The impact is not limited to the web application but can also extend to the entire server environment depending on configuration and available access rights.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Harderning Server with Fail2ban and Reporting to Telegram</title>
       <link>https://potato.id/en/posts/harderning-server-with-fail2ban-to-telegram/</link>

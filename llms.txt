@@ -1,0 +1,578 @@
+# Jonias Fortuna
+
+Base URL: https://potato.id/
+
+> Ardi Jonias Fortuna personal website, berisi tentang pemikiran, pengalaman, dan hal-hal yang mungkin menarik tetapi lebih banyak catatan yang agak random.
+
+# SECTION: CONTENT_INDEX
+
+## What Is Infatica P2B Network? How to Remove Infatica from Windows
+
+[URL](https://potato.id/en/posts/what-is-infatica-p2b-network/)  
+Date: 2026-02-21
+
+Summary:
+What Is Infatica P2B Network? Infatica P2B Network is a service from the Infatica company that operates using a peer-to-business (P2B) model.
+This means: your device can be used as a proxy network node, where a small portion of your internet bandwidth is “shared” with the Infatica network or users of the service.
+It is commonly used for:
+Web scraping Market research Testing website access from various locations Data collection by companies Is Infatica Dangerous? Infatica is known as part of a proxy network (P2B Network). This means your computer can be used as part of a global internet network.
+
+
+## How to Generate Wildcard SSL Let's Encrypt with Certbot DNS Challenge (Complete Guide)
+
+[URL](https://potato.id/en/posts/generate-wildcard-ssl-tls-certificate-lets-encrypt-certbot-with-dns-challenge/)  
+Date: 2026-02-20
+
+Summary:
+Introduction A wildcard SSL certificate allows you to secure all subdomains with just one certificate, for example &ldquo;*.example.com&rdquo;, &ldquo;subdomain.example.com&rdquo;. With the help of Let&rsquo;s Encrypt, we can obtain a free and automated SSL/TLS Certificate using Certbot through the DNS challenge method. However, keep in mind that the certificate is not valid for domain names using sub-subdomains such as sub.sub.example.com.
+This method is very suitable if you have setups like:
+Public-facing HTTP infrastructure Internal server or private network Reverse proxy or load balancer Production environment with many subdomains An SSL/TLS certificate functions to encrypt data sent between client and server so it cannot be intercepted (Man in the middle attack), maintain data integrity so it is not altered during transmission, increase user trust because the service appears more secure, and support modern protocols such as HTTP/2 and various API services that require secure connections.
+
+
+## Critical RCE in WordPress Plugin (900K+ Installations): Detection & Mitigation
+
+[URL](https://potato.id/en/posts/critical-rce-vulnerability-wordpress-plugin-900k-installations-detection-mitigation/)  
+Date: 2026-02-13
+
+Summary:
+Summary A WordPress plugin with more than 900,000 active installations is reported to have a Remote Code Execution (RCE) vulnerability with critical severity.
+This vulnerability allows attackers to execute arbitrary code on the target server under certain conditions. Given the large installation scale, the potential for mass exploitation is very high.
+Technical Impact A Remote Code Execution (RCE) vulnerability in a WordPress installation is one of the most critical vulnerability categories because it allows attackers to run commands on the server running WordPress that has this vulnerability. The impact is not limited to the web application but can also extend to the entire server environment depending on configuration and available access rights.
+
+
+## Passwords Alone Are Not Enough!
+
+[URL](https://potato.id/en/posts/passwords-alone-are-not-enough/)  
+Date: 2025-07-12
+
+Summary:
+Every 39 seconds, one cyber attack occurs somewhere in the world1. Many internet users still rely on passwords as the only protection for their accounts, even though this is very risky. Therefore passwords alone are not enough and Two Factor Authentication (2FA) can save you from account theft.
+Why Passwords Alone Are Not Enough? Passwords are often easy to guess, reused across many sites, or even leaked through phishing attacks and major data breaches such as those that happened at Facebook, Tokopedia, and through infostealers. If someone gets your password through these methods, they can easily access your account if there is no additional security layer like 2FA.
+
+
+## Cyber Hygiene: Everyday Safety Tips
+
+[URL](https://potato.id/en/posts/cyber-hygiene-small-habits-that-protect-you-from-cyber-attacks/)  
+Date: 2025-07-11
+
+Summary:
+We live in a digital era where almost all activities are connected to the internet — from shopping, banking, working, to entertainment. But many people are still careless about protecting their personal data and unknowingly open gaps for cyber attacks. This is where cyber hygiene becomes important, which refers to good digital habits to prevent cyber attacks.
+What Is Cyber Hygiene? Cyber hygiene is a set of practices or daily routines that help maintain the security of your information and digital devices from cyber threats. Just like you regularly wash your hands to prevent illness, cyber hygiene helps prevent malware, phishing, and data theft.
+
+
+## HTTP: Hyper Text Transfer Protocol How HTTP Works Behind the Browser
+
+[URL](https://potato.id/en/posts/http-web-behind-the-browser/)  
+Date: 2025-06-30
+
+Summary:
+In this post you will understand what HTTP is examples of HTTP request and response and how it works behind your browser. This is an important foundation to understand how the web works which will be very useful for web hacking bug bounty and pentesting.
+What Is HTTP? HTTP Hypertext Transfer Protocol is the main protocol used to send data between client browser and server web server.
+Every time we access a website the browser sends an HTTP request and the server responds with an HTTP response. This process is not directly visible in the browser and what we usually see is HTML rendered into a web page where the HTML is the result of the HTTP response sent by the server.
+
+
+## Active Directory Pentesting Checklist
+
+[URL](https://potato.id/en/active-directory-pentesting-checklist/)  
+Date: 2025-06-16
+
+Summary:
+
+✅ Active Directory Pentesting Checklist A structured guide to learning every major technique and path in AD exploitation, based on the visual map by Orange Cyberdefense
+✅ Active Directory Pentesting Checklist 🧭 Initial Access Spearphishing Attachment Spearphishing Link Valid Accounts (default/reused creds) Exploit Public-Facing App Drive-by Compromise ⚙️ Execution PowerShell Cmd Shell Scheduled Task/Job Malicious Service Office Macros 🗺️ Discovery Account Enumeration Group Enumeration Domain Trust Enumeration GPO &amp; ACL Enumeration DNS Enumeration SPN Enumeration / Kerberoasting AS-REP Roasting 📡 Lateral Movement SMB / PSExec WinRM / WMI RDP Token Impersonation Kerberos Delegation RBCD (Resource-Based Constrained Delegation) DCOM Abuse 🛑 Privilege Escalation UAC Bypass Abuse SeDebug / SeImpersonate Credential Theft &amp; Reuse GPO Misconfiguration Abuse DLL Hijacking AlwaysInstallElevated Unquoted Service Path 🔐 Credential Access LSASS Dumping SAM Dump NTDS.dit Extraction secretsdump.py / DCSync LSA Secret Extraction Cleartext Password Discovery Credential Manager Theft 🧠 Defense Evasion Script Obfuscation Timestomping Event Log Clearing AMSI Bypass Disabling Defender EDR Tampering 🏰 Persistence Golden Ticket Silver Ticket Skeleton Key AdminSDHolder Abuse DCShadow Create Shadow Admin Account WMI Event Subscription 🧨 Domain Dominance Full Domain Hash Dump KRBTGT Account Compromise Rogue Domain Controller (backdoor) Trust Path Abuse (forest/domain trust manipulation) 🔎 Collection File Share Harvesting Email Harvesting Clipboard Monitoring Keylogging Screenshot / Webcam Capture ☁️ Hybrid / Azure AD AzureAD Token Theft AzureAD Enumeration Conditional Access Bypass AzureAD Privilege Escalation Hybrid Join Attack Paths AAD Connect Abuse 🛠 Tool Recommendations BloodHound / SharpHound Mimikatz / Rubeus / Kekeo CrackMapExec / Evil-WinRM Impacket (secretsdump.py, wmiexec) AADInternals / Roadtools 
+
+## Understanding the Ransomware Attack Lifecycle: From Initial Access to Data Encryption
+
+[URL](https://potato.id/en/posts/ransomware-lifecycle-and-how-to-break-it/)  
+Date: 2025-06-15
+
+Summary:
+In recent years, ransomware has become one of the most serious threats in the cybersecurity landscape. It no longer targets large enterprises only; cybercriminals now also target SMEs, educational institutions, and even the healthcare sector. The impact can be severe, ranging from operational disruption and loss of critical data to financial losses due to ransom payments.
+Readers can see continuously updated ransomware victims on Ransomware Live. From there, we can observe that ransomware attacks happen every day, do not recognize time, and almost every industry sector has become a target for cybercriminals.
+
+
+## Is web phishing HTTP or HTTPS?
+
+[URL](https://potato.id/en/posts/https-is-a-secure-web/)  
+Date: 2025-05-19
+
+Summary:
+Overview Web phishing is one of the attack methods most frequently used by attackers. In a phishing attack, the attacker creates a fake website that imitates a legitimate website. This fake website is usually used to steal sensitive information from victims, such as login credentials, credit card information, and others.
+A common perception is that phishing websites always use the HTTP protocol. However, is that really the case? Do phishing websites never use the HTTPS protocol?
+
+
+## What Is a Credential Attack? Recognize and Prevent It Before It's Too Late
+
+[URL](https://potato.id/en/posts/credential-attack/)  
+Date: 2025-05-19
+
+Summary:
+What Is a Credential Attack? A credential attack or credential-based attack is a hacking attempt to take over someone&rsquo;s account by stealing a username and password. Usually this is done through techniques like phishing, credential stuffing, and brute force.
+Simply put, attackers spy, guess, or try thousands of password combinations to get into your account. After that, they can access all the data inside it, such as email accounts, social media accounts, game accounts, and even banking accounts.
+
+
+## How to Easily Validate SPF, DKIM, and DMARC Configuration
+
+[URL](https://potato.id/en/posts/validate-spf-dkim-dmarc/)  
+Date: 2025-05-18
+
+Summary:
+Why Is Validating SPF, DKIM, and DMARC Important? If you have already configured SPF, DKIM, and DMARC in DNS, don&rsquo;t immediately assume everything is secure. An invalid configuration can cause emails to go into the spam folder or even be rejected by the receiving server. That&rsquo;s why validation is very important to ensure the configuration you created actually works.
+If you are still confused about what SPF, DKIM, and DMARC are, you can read the article Email DNS Security Configuration Guide (SPF, DKIM, DMARC) which briefly explains these three things.
+
+
+## Convert PFX, CRT, and PEM Azure SSL/TLS Certificates
+
+[URL](https://potato.id/en/posts/convert-pfx-crt-and-pem-ssl-tls-certificates/)  
+Date: 2025-05-01
+
+Summary:
+What is SSL/TLS? SSL/TLS (Secure Sockets Layer/Transport Layer Security) is a security protocol used to secure communication between a server and a client. In the web context, SSL/TLS is used to encrypt data transmitted between a browser and a web server, so that sensitive information such as passwords and credit card numbers cannot be accessed by third parties.
+SSL is the earlier version of the protocol, while TLS is the newer and more secure version. Although the term SSL is still commonly used, most websites today actually use TLS, often referred to as SSL/TLS.
+
+
+## Execution After Redirect with Burp Suite
+
+[URL](https://potato.id/en/posts/execution-after-redirect/)  
+Date: 2025-04-19
+
+Summary:
+Execution After Redirect or EAR is a technique used to execute code after the redirect process. This technique is usually used to bypass several security features that exist in web applications. In this article, we will discuss how to exploit EAR using Burp Suite.
+What is Execution After Redirect (EAR)? Execution After Redirect is usually found in web applications with native style code that use a redirect mechanism to direct users to another page after performing a certain process, such as after login or registration. In some cases, the web application does not call the exit() or die() function after performing the redirect process, so the code after the redirect process continues to be executed.
+
+
+## Fake Sponsored Job Posting Scam
+
+[URL](https://potato.id/en/posts/fake-sponsored-jobposting/)  
+Date: 2025-04-16
+
+Summary:
+This is actually an old case that went viral last year. While browsing Facebook, I frequently encountered sponsored job advertisements claiming to be from well-known companies — especially in mining, factory, and other blue-collar sectors — such as PT Epson, PT Unilever, PT Indofood, and other major corporations.
+These ads direct applicants to register online by filling out personal information such as:
+Full name Address Phone number National ID number And other personal details Unfortunately, many people do not realize that these advertisements are fake and are created purely for the scammer&rsquo;s personal profit.
+
+
+## Phishing Simulation with GoPhish
+
+[URL](https://potato.id/en/posts/phishing-simulation-with-gophish/)  
+Date: 2025-03-03
+
+Summary:
+Introduction Phishing is an attack carried out by influencing someone to provide personal or confidential information. This attack is usually conducted by sending fake emails that resemble official emails from certain companies or organizations. In a phishing attack, the attacker attempts to obtain sensitive information such as username, password, and even credit card information.
+As an organization that is aware of information security, it is important for us to conduct phishing simulations regularly. By conducting phishing simulations, we can measure the success rate of our users in identifying phishing attacks and taking appropriate action. A successful phishing attack can cause financial and reputational losses for the organization.
+
+
+## Guide to Configuring Email DNS Security (SPF, DKIM, DMARC)
+
+[URL](https://potato.id/en/posts/email-security-spf-dkim-dmarc/)  
+Date: 2025-02-20
+
+Summary:
+Email is one of the most widely used communication methods, but it is also vulnerable to attacks such as spoofing, phishing, and spam. Therefore, implementing SPF, DKIM, and DMARC is very important to improve the security of the email we own. The following is a configuration guide for SPF, DKIM, and DMARC to improve email security.
+Sender Policy Framework (SPF) What is SPF? Sender Policy Framework or SPF is an email authentication mechanism that allows a domain to determine which servers are authorized to send email on behalf of the owned domain. This configuration allows the receiving server to verify that the received email originates from a server authorized by the sending domain, and this configuration is applied to the DNS TXT record of the sending domain.
+
+
+## mshta.exe - Threat Actor's Favorite Weapon
+
+[URL](https://potato.id/en/posts/mshta-exe-threat-actors-favorite-weapon/)  
+Date: 2025-02-03
+
+Summary:
+What is mshta.exe? mshta.exe is a Windows file system utility used to run Microsoft HTML Application (.HTA) files. This program allows the execution of VBScript or JScript-based scripts, making it a useful tool for administrators but also a tool that is often abused by threat actors.
+Why is mshta.exe often used by Threat Actors? Threat Actors frequently abuse mshta.exe to execute malicious code in order to avoid detection by antivirus or other security solutions (EDR). Some reasons why mshta.exe is commonly used in malware attacks include:
+
+
+## DNS Security, Maybe?
+
+[URL](https://potato.id/en/posts/dns-security-maybe/)  
+Date: 2025-01-17
+
+Summary:
+As we know, DNS is a service responsible for converting hostnames into IP addresses. It sounds simple, but some people do not realize that this DNS service can also cause security vulnerabilities. The following are several events I have experienced related to DNS and its security. Keep in mind this does not cover all vulnerabilities that exist in DNS, such as DNS Spoofing, DNS Amplification, DNS Hijacking, DNS Rebinding Attack, and other attacks, only several events that I have personally experienced.
+
+
+## Infostealer Spreading Through Fake Google reCAPTCHA
+
+[URL](https://potato.id/en/posts/infostealer-spreading-through-fake-google-recaptcha/)  
+Date: 2025-01-05
+
+Summary:
+The Beginning This December I received a notification from a Facebook group that I follow. In the post (now deleted), there was a screenshot like the image above, complete with the caption: &ldquo;Is this dangerous or not? Why does the captcha look strange?&rdquo;
+In the comments, the Thread Starter added another screenshot containing text that had to be pasted into the run.exe program as shown below
+It is very clear that this is malware. mshta is a built-in Windows file whose function is to execute commands from HTA applications in the Windows environment and is very often used by threat actors as one of their attack techniques 1
+
+
+## Phishing Attacks and Prevention
+
+[URL](https://potato.id/en/posts/phishing-attacks-and-prevention/)  
+Date: 2024-06-28
+
+Summary:
+Phishing is an attack carried out by obtaining someone&rsquo;s personal information through deception. This attack is usually performed by sending fake emails containing links to fraudulent websites that resemble legitimate ones. The goal of this attack is to steal personal information such as usernames, passwords, and credit card details.
+How Phishing Works Illustration of a Phishing Attack Phishing attacks usually begin with the distribution of fake emails or social media ads such as those on Facebook, Instagram, or X that promise users rewards like free in-game items, attractive promotions, or even access to a trending viral video. In reality, the link directs victims to a fraudulent website.
+
+
+## Surabaya Hacker Link Underground Write Up
+
+[URL](https://potato.id/en/posts/surabaya-hacker-link-underground-hack-the-box-write-up-challenges/)  
+Date: 2024-06-13
+
+Summary:
+Information
+Challenges Information This is a write-up of the Surabaya Hacker Link challenge for the Underground machine. This machine was built using one of the vulnerable web applications that SHL commonly uses during demo sessions, with several vulnerabilities patched to make the challenge slightly more interesting.
+Challenges On the Surabaya Hacker Link forum there is information about a new challenge replacing Heaven challenges (the Heaven VM write-up can be found here). The information on the forum is quite clear: do not destroy anything, do not spoil the challenge, take the root and read root.txt. In this write-up I used the IP 110.93.14.30.
+
+
+## There is no way it's DNS
+
+[URL](https://potato.id/en/posts/there-is-no-way-it-is-dns/)  
+Date: 2024-05-28
+
+Summary:
+Preamble Some time ago, there was a bit of discussion at the office regarding a new policy from the DKI Jakarta Provincial Government about deactivating Jakarta ID cards for residents who are no longer domiciled in Jakarta. Several colleagues were affected, so others who still had Jakarta ID cards immediately checked their NIK status.
+However, as we know, many people have had bad experiences accessing digital government services, ranging from slow loading to being completely inaccessible. My colleagues experienced the same thing. There was also something strange when accessing the website in question, sometimes it worked, sometimes it showed a maintenance page. Out of nowhere, a thought crossed my mind: this must be DNS.
+
+
+## Moving From Disqus to Giscus with Hugo SSG
+
+[URL](https://potato.id/en/posts/moving-from-disqus-to-giscus-with-hugo-ssg/)  
+Date: 2024-05-18
+
+Summary:
+Goodbye Disqus, Hello Giscus After using Disqus for a long time as a comment platform, also known as Comment-as-a-service, this website has finally switched to giscus after considering another similar platform that also uses GitHub, namely utterances.
+Starting When I first built this website, I was confused about which comment system to use. Since this site is an SSG (Static Site Generator) and does not have a database connection, using a third party comment platform was the best option. In Hugo, there is a default template for Disqus comments, so Disqus was chosen as the comment platform for this blog.
+
+
+## Update Newsfeed RSS to Discord
+
+[URL](https://potato.id/en/posts/update-newsfeed-rss-to-discord-webhook/)  
+Date: 2024-05-01
+
+Summary:
+As a Cybersecurity worker, we must stay up-to-date with any news, alerts, advisories and others also in the IT field everything is new and growing so fast, especially in cybersecurity
+To fill this gap I use a RSS aggregator to send the latest update from my favorite blog/news to notify me
+If you join SHL Discord you’ll be familiar with feeds and feeds-ransom text channel, this is how I configure it
+
+
+## Hacking Phishing-as-a-Service
+
+[URL](https://potato.id/en/posts/hacking-phishing-as-a-service/)  
+Date: 2024-03-18
+
+Summary:
+You may have just clicked on a Phishing Ad I am tired of the ads that appear while watching reels on Facebook. Besides malware ads and online gambling ads, there are also many phishing ads targeting games like Free Fire and Mobile Legends, as well as ads inviting users to join 18+ groups. These ads are designed to steal social media account credentials and can seriously harm users.
+Phishing, or password fishing, is a method widely used by threat actors to obtain access or credentials to services such as social media platforms like Facebook, TikTok, Instagram, WhatsApp, and others. After gaining access, accounts are often used for other malicious activities.
+
+
+## Interesting or Suspicious Ads Continued
+
+[URL](https://potato.id/en/posts/malwared-ads-continued/)  
+Date: 2023-08-29
+
+Summary:
+After writing about malware ads using the Google Bard lure, now there is another malware ad that is slightly different, both in terms of the lure and the malware being delivered. This ad promotes a custom Windows taskbar to make it look more attractive. However, the file downloaded is actually malware and there is no custom taskbar installation as advertised. So what does the downloaded file install? Of course, malware. Below is roughly what the installer does.
+
+
+## Dictionary Attack
+
+[URL](https://potato.id/en/posts/dictionary-attack/)  
+Date: 2023-08-28
+
+Summary:
+Understanding What a Dictionary Attack Is A dictionary attack is one of the common techniques used in hacking or pentesting. This attack uses a collection of commonly used passwords (wordlists) or passwords that have been leaked on the internet, such as rockyou.txt, ignis, and others.
+The difference between a brute force attack and a dictionary attack lies in the use of a wordlist. A brute force attack attempts all possible character combinations, which usually takes much longer. A dictionary attack also requires time, depending on the password complexity, the quality of the wordlist used, and the server response time.
+
+
+## Interesting or Suspicious Ads?
+
+[URL](https://potato.id/en/posts/malwared-ads/)  
+Date: 2023-07-15
+
+Summary:
+Last June, on the 14th to be exact, I was scrolling Facebook and found an interesting ad about Google&rsquo;s AI called Bard. What made it even more interesting was the comment section, so I immediately checked the comments.
+Why were all the commenters verified blue check accounts? Why were Indonesian politicians commenting on it? What does politics have to do with Google Bard? The comments also showed mostly positive sentiment.
+
+
+## Secure Surfing Practice
+
+[URL](https://potato.id/en/posts/secure-surfing-practice/)  
+Date: 2023-05-20
+
+Summary:
+The internet has become an important part of daily life. Most commonly, it is used as a source of information and entertainment. However, unwise and improper use of the internet can endanger data security and privacy. Below are several steps you can follow to stay safe while browsing the internet:
+Add Web Protection Install the Malwarebytes Browser Guard extension in your browser. With this extension, Malwarebytes will block access when you accidentally open a suspicious website or a site indicated as malware or trojan.
+
+
+## Lesson Learned from Ransomware
+
+[URL](https://potato.id/en/posts/lesson-learned-from-ransomware/)  
+Date: 2023-02-28
+
+Summary:
+Ransomware Ransomware is a type of malware (malicious software) that encrypts victims&rsquo; files, causing them to lose access to their data. The malware will decrypt the files if the ransom has been paid by the victim, but there is no guarantee that all data will be restored. If the victim refuses to pay, some ransomware variants will expose the victim&rsquo;s files to the internet. Ransomware spreads through fake installers, phishing, exploit kits, remote desktop access, and other methods.
+
+
+## Yes, It was DNS!
+
+[URL](https://potato.id/en/posts/it-was-dns/)  
+Date: 2022-10-06
+
+Summary:
+As we know, DNS or Domain Name Server is a service responsible for translating domain names into IP addresses so users do not need to remember complicated IP addresses one by one. Therefore, DNS is a crucial service and must be configured properly. Otherwise, it may cause a domain to become difficult or even impossible for users to access.
+For example, some time ago a colleague complained to the infrastructure team because they could not access monev.spbe.go.id. Long story short, I asked the user for additional information such as traceroute results and a screenshot of the error when accessing the website.
+
+
+## Download Wordlist Password Indonesia
+
+[URL](https://potato.id/en/posts/download-wordlist-password-indonesia/)  
+Date: 2022-08-28
+
+Summary:
+In this digital era, protecting personal data is becoming increasingly important, especially in Indonesia. Many internet users still use weak passwords, which can easily be exploited by cybercriminals. If you are looking for information about downloading Indonesian password wordlists, this article will discuss it, including their usage, risks, and how to protect yourself.
+What Is a Password Wordlist? A password wordlist is a collection of passwords commonly used by internet users. This list is usually used by cybersecurity professionals for:
+
+
+## Job and Shortcut Management in Terminal
+
+[URL](https://potato.id/en/posts/bash-job-management-and-shortcut/)  
+Date: 2020-08-31
+
+Summary:
+We often find ourselves needing to work quickly when dealing with the terminal. This is already helped by bash-completion, which allows us to type commands automatically by pressing the [TAB] key twice. However, in general the terminal also has shortcuts that help us work with Linux more easily and quickly. Below is a list of common terminal shortcuts. This list was taken from Hack The Box Academy.
+Auto Completion
+[TAB] - Initiates command auto completion.
+
+
+## Retas.io Hellbound VM Write-up
+
+[URL](https://potato.id/en/posts/retas-io-hellbound-vm-write-up/)  
+Date: 2020-06-15
+
+Summary:
+Let&rsquo;s get straight to the point: this machine is hard, period. When the labs were first launched there were three machines: Zombie, Hellbound, and Anonymouz. In my opinion this one is quite difficult, probably due to my lack of experience in exploitation and intuition. Until the time this write-up was written, the author still hadn&rsquo;t obtained the root user flag and was stuck at www-data. Fortunately, the user flag is readable by www-data, so it can still be submitted.
+
+
+## Retas.io Zombie VM Write-up
+
+[URL](https://potato.id/en/posts/retas-io-zombie-vm-write-up/)  
+Date: 2020-05-25
+
+Summary:
+Retas.io is a company from PT. Solusi Siber Teknologi that offers various security services ranging from Vulnerability Assessment, Penetration Testing, to other specialized IT and security-related needs.
+Recently retas.io launched a new product called retas labs which is intended to help new players entering the Infosec world. These labs are somewhat similar to Hack The Box. By using a VPN we are required to solve challenges using our IT knowledge and skills. Not only that, they also plan to release Retas Campus which aims to provide education and training for entering the Infosec field. However, when this article was written the feature was still under development. Below is the write-up for the Zombie VM challenge available in retas.io labs.
+
+
+## Completion of Malang Hacker Link Challenges
+
+[URL](https://potato.id/en/posts/solution-for-mhl-challenges/)  
+Date: 2020-04-22
+
+Summary:
+After a long time without creating or solving challenges due to increasingly limited free time and assignments piling up, I finally received information about a challenge from a friend in a Telegram group. This challenge was created by another community called Malang Hacker Link. The challenge is quite unique and fun to solve because no “magic tricks” are required.
+From the information provided, I immediately opened the link and found a form with two fields: first name and last name. Since we had not explored the application yet and had no clues, we tried using this feature to observe the output of the web application. For the firstname field we input abc and for lastname def.
+
+
+## Write up of Challenges Surabaya Hacker Link VM Heaven
+
+[URL](https://potato.id/en/posts/solution-for-shl-challenges-heaven-vm/)  
+Date: 2020-04-17
+
+Summary:
+Since this machine has already been retired and is no longer considered relevant as a challenge, I decided to write a solution explaining how to complete the VM Heaven challenge from Surabaya Hacker Link.
+In fact, solving this challenge does not require special hacking tools such as sqlmap or metasploit because the challenge is relatively easy. No advanced hacking knowledge is required. As long as you are familiar with the GNU/Linux operating system and understand the basics of pwning (owning) a machine, this VM can be solved quite easily.
+
+
+## My Daily VIM
+
+[URL](https://potato.id/en/posts/my-daily-vim/)  
+Date: 2020-02-12
+
+Summary:
+VIM - Text Editor You might already be familiar with this text editor, it&rsquo;s VIM or Vi Improved. Vim is a terminal-based text editor that is very efficient and can significantly speed up work. Vim is often considered difficult because many users are not yet familiar with its default key bindings.
+VIM itself has existed since 1991, and it is still widely used by developers, system administrators, and many others. VIM is also a very lightweight and fast editor that can be accessed directly through the terminal. VIM is an improved version of Vi, which was the default text editor in UNIX operating systems. Usually VIM/Vi is already installed on UNIX-based operating systems such as Linux, macOS, and BSD.
+
+
+## Harderning Server with Fail2ban and Reporting to Telegram
+
+[URL](https://potato.id/en/posts/harderning-server-with-fail2ban-to-telegram/)  
+Date: 2019-11-11
+
+Summary:
+
+After being busy enough that I didn&rsquo;t have time to create challenges and write down how to complete these challenges on this blog, this time we will discuss a little about fail2ban and how to configure it.
+Generally fail2ban is used to ban IPs that fail to authenticate up to the maximum limit stated in the configuration and this IPS is very effective in preventing attacks that will occur on the server, such as bruteforce attacks on SSH ports (22), FTP (21), SMTP (25), etc., even other attacks via the web server (80/443), then before knowing how to configure fail2ban, we will learn a little about how fail2ban works.
+
+
+## Solution for Inclusion Challenges
+
+[URL](https://potato.id/en/posts/solution-for-inclusion-challenges/)  
+Date: 2019-09-15
+
+Summary:
+As usual, in the Surabaya Hacker Link group there are various challenges. Not only admins create them, but members also submit challenges, and I helped deploy this one. Not only deploying it, of course I also tried solving it :3
+Without further ado, we accessed the challenge at challshl.com.
+Since I was involved during deployment, I had a slight idea where the bug was located. The cool term would be white box pentest, meaning testing by reading the website source code cmiiw.
+
+
+## How to Write a Good Vulnerability Findings Report
+
+[URL](https://potato.id/en/posts/writing-a-good-vulnerability-report/)  
+Date: 2019-09-04
+
+Summary:
+First of all, Happy Eid al Fitr 1440 H, please forgive any mistakes. Nothing in this world is perfect, including this writing.
+Since the launch of the BSSN program titled V2DP or Voluntary Vulnerability Disclosure Program, many people have asked in discussion forums and social media groups about how to properly write a bug report after discovering a vulnerability. Here are a few tips from me on how to write a good report.
+
+
+## Solution for QR Generator Challenges
+
+[URL](https://potato.id/en/posts/solution-for-qr-generator-challenges/)  
+Date: 2019-09-04
+
+Summary:
+After a long time without creating a challenge, I finally decided to make a simple one.
+This challenge is themed as a QR Code Generator, but the vulnerability is not in the QR Code itself. Below is a simple way to solve it.
+Gathering Information Challenge Given
+As usual, the challenge was posted in the Surabaya Hacker Link group. There was no clue at all, so we directly accessed the website. It turned out to be a QR Generator page with name and Instagram input fields.
+
+
+## GitHub Pages Custom Domain with E-mail Service
+
+[URL](https://potato.id/en/posts/github-pages-custom-domain-with-email-service/)  
+Date: 2019-08-10
+
+Summary:
+After using a custom domain with GitHub Pages, I was quite happy to host on GitHub for free and use a unique workflow. However, after some time I noticed that no emails were coming from the custom domain. It turned out the mail server was not connected.
+I searched the internet using the DuckDuckGo search engine but found no clear answers even after going through several pages. On GitHub Pages itself, there is no explanation about how to keep email working properly. After digging deeper, I found a trick to keep email working while the domain still points to GitHub Pages, which is by configuring the DNS zone properly.
+
+
+## How I Built This Website
+
+[URL](https://potato.id/en/posts/how-i-deploy-this-site/)  
+Date: 2019-08-10
+
+Summary:
+I have wanted to have my own blog and custom email for a long time. Eventually, I started blogging using WordPress. However, as a student with a limited budget, I could only afford a web.id domain which now can use .id and the cheapest hosting plan 100,000 per year at Dracoola.
+After publishing several articles with WordPress, the hosting disk usage became quite large, so I stopped adding new articles and the site felt heavy to access. Since then, I took a break.
+
+
+## Your Website Hacked?, Do the Following
+
+[URL](https://potato.id/en/posts/my-website-hacked-now-what/)  
+Date: 2019-08-01
+
+Summary:
+In the Surabaya Hacker Link Telegram group, I and @ytyao often create challenges such as web hacking, reversing, and others. However, in a previous challenge there was a small incident, the website was hacked. Well, the website was intentionally built to be hacked, but this hacker performed a mass wipe by deleting all files and folders. From that incident I learned something new, post incident handling, or commonly called Incident Response.
+
+
+## Solution for Ramadhan Challenges
+
+[URL](https://potato.id/en/posts/solution-for-ramadhan-challenges/)  
+Date: 2019-05-09
+
+Summary:
+This challenge was created when I was confused about how to explain the LFI bug Local File Inclusion during a secure coding session at STTS. Since I was quite bored with LFI to Local File Read via wrapper, I searched for LFI to RCE methods other than through self/proc/environ and found LFI to RCE via Access Log Poisoning. However, because hosting environments could not read log files in txt format, a file upload feature was created that only allows txt files. Below is the Write Up.
+
+
+## Getting to Know DOM Based XSS More Closely
+
+[URL](https://potato.id/en/posts/dom-based-xss/)  
+Date: 2019-02-27
+
+Summary:
+Before getting into DOM XSS, let&rsquo;s first get to know DOM, what is DOM?, needle?
+DOM stands for Document Object Model, which means a hierarchical structure in an HTML document, so in HTML code there is a kind of family tree
+for XSS you can read here
+In the case of DOM Based XSS, the XSS payload will change HTML content through this DOM????
+Example: DVWA, DOM XSS, Level:Low
+There is a language selection feature, let&rsquo;s check the script
+
+
+## XSS Prevention
+
+[URL](https://potato.id/en/posts/xss-prevention/)  
+Date: 2019-02-21
+
+Summary:
+after briefly discussing XSS here, even though it was a bit messy, now it&rsquo;s time to discuss how to prevent this bug from existing on our website
+XSS can run / be executed because of loose &lt;script&gt; tags that are executed / rendered by the browser, therefore we manipulate the browser so it does not execute HTML tags that are input by users. But don&rsquo;t worry, we&rsquo;re not going to mess with the browser, just a little handling before user input is displayed on the website
+
+
+## SQL Injection Into XRDP Account Take Over
+
+[URL](https://potato.id/en/posts/sql-injection-into-xrdp-account-take-over/)  
+Date: 2019-01-25
+
+Summary:
+Well maybe the title is a bit click bait — SQL injection itself can&rsquo;t directly inject all the way to an RDP account takeover xD
+Actually the initial goal was just to download anime on moesubs.com, but when opening the website there was a URL that looked very suspicious: https://moesubs.com/?hal=dlrilisan&amp;id=591 so I tried checking with ' and the site returned an error. After the error I balanced it using an SQL comment --+- and the page returned to normal, okay let&rsquo;s continue with order by.
+
+
+## Solution for Surabaya Hacker Link Challenges
+
+[URL](https://potato.id/en/posts/solution-for-surabaya-hacker-link-challenges/)  
+Date: 2019-01-03
+
+Summary:
+Well, this post was made because the Surabaya Hacker Link challenges have been updated and many people were curious about this challenge but hadn&rsquo;t solved it yet and suggested making a video tutorial, but since I can&rsquo;t make a video, I&rsquo;ll just write it here instead, updated challenges
+It explains that we have to save John&rsquo;s website and then we will be given a Telegram group link (flag).
+initial appearance of the shl challenge page
+
+
+## Hey I Found Git Repository
+
+[URL](https://potato.id/en/posts/hey-i-found-git-repository/)  
+Date: 2018-12-31
+
+Summary:
+PREFACE Just a small note when finding an exposed git repository on a website
+NOTES Git is a version control system used by developers to build software collaboratively. The main function of git is to manage versions of your program source code by marking which lines and code were added or changed. Git will create a dotfiles (.git), which contains all its data including committed source code, therefore it’s better to route or restrict access to the git repository from outside. Why? Because otherwise bad things might happen.
+
+
+## Solution for 'Simple' Web Challenges
+
+[URL](https://potato.id/en/posts/solution-for-my-simple-web-challenges/)  
+Date: 2018-12-21
+
+Summary:
+Preface First of all, thanks to slashroot ctf because without slashroot ctf I might not have been able to provide these challenges through dewaweb.com. Thanks to all player who took the time to try this &lsquo;simple&rsquo; challenge.
+Notes clue &ldquo;recon, tools, sign-in, submit&rdquo;
+This recon is very easy, actually you don’t need to use tools or scanners. There are still many websites that store important things in HTML comments.
+It clearly shows info that the git repository (/.git/) was moved to the /git/ directory. Let&rsquo;s try accessing it first.
+
+
+## Is XSS Dangerous?
+
+[URL](https://potato.id/en/posts/is-xss-dangerous/)  
+Date: 2018-12-20
+
+Summary:
+Background From observing several IT groups that I follow, many people keep asking, Is XSS dangerous?, How to upload a webshell via XSS?, Why is my XSS bug report not responded to? Is it because XSS is not dangerous?, Or maybe because the web admin is already you know what?, More or less those are the questions that come up, let’s discuss together what the characteristics of XSS are,
+Definition Cross-site scripting is a type of computer security vulnerability typically found in web applications. XSS enables attackers to inject client side scripts into web pages viewed by other users. A cross-site scripting vulnerability may be used by attackers to bypass access controls such as the same-origin policy. &ndash;Wikipedia&ndash;
+
+
+## About Me
+
+[URL](https://potato.id/en/about/)
+
+Summary:
+Hello there, my name is Ardi Jonias Fortuna, you can call me Jonias but some people call me Jo, it&rsquo;s OK. I am interested in Information Technology, there I know that we have to create a secure system from anyone or any hacker cannot access because of the security, that&rsquo;s the way I learned some cyber security besides my studies, then I joined a non-profit community called Surabaya Hacker Link. I am lucky to know them because I learned something new about security from the community. I learned more about how to attack someone&rsquo;s website and how to defend the website from hackers and the website that I made to take note of any challenges or training I have ever done and sharing purpose.
+
+
+## Contact
+
+[URL](https://potato.id/en/contact/)
+
+Summary:
+Stay in Touch with Me :) Email: jonias@potato.id GPG Public Key: Here Telegram: Here Github: Here RSS: index.xml 
+
+## Privacy Policy for Potato.id
+
+[URL](https://potato.id/en/privacy-policy/)
+
+Summary:
+At Potato, accessible from potato.id, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Potato and how we use it.
+If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.
+Log Files Potato follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this and a part of hosting services&rsquo; analytics. The information collected by log files include internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users&rsquo; movement on the website, and gathering demographic information.
+
+

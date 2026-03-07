@@ -223,17 +223,17 @@
                 href="https://potato.id/tags/end-user/"
                 />
   </url><url>
-    <loc>https://potato.id/tags/wrodpress/</loc>
+    <loc>https://potato.id/tags/wordpress/</loc>
     <lastmod>2026-02-13T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://potato.id/en/tags/wrodpress/"
+                href="https://potato.id/en/tags/wordpress/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="id"
-                href="https://potato.id/tags/wrodpress/"
+                href="https://potato.id/tags/wordpress/"
                 />
   </url><url>
     <loc>https://potato.id/posts/password-saja-tidak-cukup/</loc>
@@ -1001,19 +1001,6 @@
                 rel="alternate"
                 hreflang="id"
                 href="https://potato.id/tags/telegram-bot/"
-                />
-  </url><url>
-    <loc>https://potato.id/tags/wordpress/</loc>
-    <lastmod>2019-11-11T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://potato.id/en/tags/wordpress/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="https://potato.id/tags/wordpress/"
                 />
   </url><url>
     <loc>https://potato.id/tags/zimbra-mail-server/</loc>
