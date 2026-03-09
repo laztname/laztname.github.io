@@ -6,6 +6,16 @@ Base URL: https://potato.id/
 
 # SECTION: CONTENT_INDEX
 
+## Collection of Best and Fastest DNS Servers 2026
+
+[URL](https://potato.id/en/posts/collection-of-best-and-fastest-dns-servers-2026/)  
+Date: 2026-03-04
+
+Summary:
+DNS (Domain Name System) is a system that translates domain names into IP addresses so it becomes one of the foundations of the Internet. Without DNS, we must access websites using IP numbers directly and memorize each IP Addresses we want to visit.
+By using the right DNS we can maximize our Internet connection to become faster, not visible to the eye but the speed difference is usually measured in milliseconds.
+
+
 ## What Is Infatica P2B Network? How to Remove Infatica from Windows
 
 [URL](https://potato.id/en/posts/what-is-infatica-p2b-network/)  

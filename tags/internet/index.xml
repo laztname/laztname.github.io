@@ -6,8 +6,15 @@
     <description>Recent content in Internet on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>id</language>
-    <lastBuildDate>Fri, 20 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 04 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/tags/internet/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kumpulan DNS Server Terbaik dan Tercepat 2026</title>
+      <link>https://potato.id/posts/kumpulan-dns-server-terbaik-dan-tercepat-2026/</link>
+      <pubDate>Wed, 04 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/kumpulan-dns-server-terbaik-dan-tercepat-2026/</guid>
+      <description>&lt;p&gt;DNS (Domain Name System) adalah sistem yang menerjemahkan nama domain menjadi alamat IP sehingga menjadi salah satu pondasi Internet. Tanpa DNS, kita harus mengakses website menggunakan angka IP secara langsung dan menghafal tiap-tiap IP Addresses yang ingin dikunjungi.&lt;/p&gt;&#xA;&lt;p&gt;Dengan menggunakan DNS yang tepat kita bisa memaksimalkan koneksi Internet kita menjadi lebih cepat, tidak kasat mata namun perbedaan kecepatannya bisanya diukuran milliseconds.&lt;/p&gt;&#xA;&lt;p&gt;Di artikel ini, saya rangkum &lt;strong&gt;kumpulan DNS server terbaik dan tercepat 2026&lt;/strong&gt;, termasuk DNS global dan DNS Indonesia.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Cara Generate Wildcard SSL Let&#39;s Encrypt dengan Certbot DNS Challenge (Panduan Lengkap)</title>
       <link>https://potato.id/posts/generate-wildcard-ssl-tls-certificate-lets-encrypt-certbot-with-dns-challenge/</link>
