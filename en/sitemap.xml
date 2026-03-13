@@ -1633,5 +1633,19 @@
                 hreflang="en"
                 href="https://potato.id/en/privacy-policy/"
                 />
+  </url><url>
+    <loc>https://potato.id/en/uses/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://potato.id/uses/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://potato.id/en/uses/"
+                />
   </url>
 </urlset>
