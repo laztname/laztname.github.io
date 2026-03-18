@@ -6,8 +6,15 @@
     <description>Recent content in Fail2ban on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>id</language>
-    <lastBuildDate>Mon, 11 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/tags/fail2ban/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dynamic IP Denylisting dengan NGINX Plus dan fail2ban</title>
+      <link>https://potato.id/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Artikel ini berdasarkan postingan blog NGINX asli oleh Liam Crilly dari F5, diterbitkan 19 September 2017.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;Mungkin kamu tidak menyadarinya, tapi website kamu terus-menerus berada di bawah ancaman. Jika menjalankan WordPress, bot sedang mencoba melakukan spam. Jika ada halaman login, ada serangan brute-force password. Kamu mungkin juga menganggap spider search engine sebagai pengunjung yang tidak diinginkan.&lt;/p&gt;&#xA;&lt;p&gt;Mempertahankan situs dari aktivitas yang tidak diinginkan, mencurigakan, dan berbahaya bukanlah tugas yang mudah. Web application firewall adalah alat yang efektif dan harus dipertimbangkan sebagai bagian dari security stack kamu. Untuk sebagian besar lingkungan, tidak ada yang namanya terlalu banyak keamanan, dan pendekatan berlapis selalu menjadi yang paling efektif.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Harderning Server with Fail2ban and Reporting to Telegram</title>
       <link>https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/</link>

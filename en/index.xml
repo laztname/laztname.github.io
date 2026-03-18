@@ -6,8 +6,15 @@
     <description>Recent content in Main - Ardi Jonias Fortuna on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dynamic IP Denylisting with NGINX Plus and fail2ban</title>
+      <link>https://potato.id/en/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;This article is based on the original NGINX blog post by Liam Crilly of F5, published September 19, 2017.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;p&gt;You may not realize it, but your website is under constant threat. If it&amp;rsquo;s running WordPress, bots are trying to spam you. If it has a login page, there are brute-force password attacks. You may also consider search engine spiders as unwanted visitors.&lt;/p&gt;&#xA;&lt;p&gt;Defending your site from unwanted, suspicious, and malicious activity is no easy task. Web application firewalls are effective tools and must be considered as part of your security stack. For most environments, there&amp;rsquo;s no such thing as too much security, and a multi-layered approach is invariably the most effective.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Collection of Best and Fastest DNS Servers 2026</title>
       <link>https://potato.id/en/posts/collection-of-best-and-fastest-dns-servers-2026/</link>

@@ -6,8 +6,43 @@
     <description>Recent content in Tags on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fail2ban</title>
+      <link>https://potato.id/en/tags/fail2ban/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/tags/fail2ban/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://potato.id/en/tags/linux/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NGINX</title>
+      <link>https://potato.id/en/tags/nginx/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/tags/nginx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://potato.id/en/tags/security/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Server</title>
+      <link>https://potato.id/en/tags/server/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/tags/server/</guid>
+      <description></description>
+    </item>
     <item>
       <title>DNS</title>
       <link>https://potato.id/en/tags/dns/</link>
@@ -55,13 +90,6 @@
       <link>https://potato.id/en/tags/windows/</link>
       <pubDate>Sat, 21 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://potato.id/en/tags/windows/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Linux</title>
-      <link>https://potato.id/en/tags/linux/</link>
-      <pubDate>Fri, 20 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/en/tags/linux/</guid>
       <description></description>
     </item>
     <item>
@@ -202,13 +230,6 @@
       <link>https://potato.id/en/tags/vim/</link>
       <pubDate>Wed, 12 Feb 2020 00:00:00 +0000</pubDate>
       <guid>https://potato.id/en/tags/vim/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Fail2ban</title>
-      <link>https://potato.id/en/tags/fail2ban/</link>
-      <pubDate>Mon, 11 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/en/tags/fail2ban/</guid>
       <description></description>
     </item>
     <item>

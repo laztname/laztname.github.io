@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow, max-image-preview:large">
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="theme-color" content="#efe6dd">
+	<meta http-equiv="content-language" content="en">
+	<meta name="author" content="Ardi Jonias Fortuna">
+	<title>Dynamic IP Denylisting with NGINX Plus and fail2ban - Jonias Fortuna</title>
+	<link rel="canonical" href="https://potato.id/en/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/">
+	
+	
+	  
+	    
+	      
+	    
+	  
+	
+	<link rel="alternate" hreflang="x-default" href="https://potato.id/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/">
+	<link rel="alternate" hreflang="en" href="https://potato.id/en/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/">
+	
+	<link rel="alternate" hreflang="id" href="https://potato.id/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/">
+	
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Learn how to use fail2ban with NGINX Plus key-value store to automatically block brute-force attackers and dynamically manage IP denylists without reloading NGINX.">
+		<meta property="og:url" content="https://potato.id/en/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/">
+  <meta property="og:site_name" content="Jonias Fortuna">
+  <meta property="og:title" content="Dynamic IP Denylisting with NGINX Plus and fail2ban">
+  <meta property="og:description" content="Learn how to use fail2ban with NGINX Plus key-value store to automatically block brute-force attackers and dynamically manage IP denylists without reloading NGINX.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-03-17T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-03-17T00:00:00+00:00">
+    <meta property="article:tag" content="NGINX">
+    <meta property="article:tag" content="Fail2ban">
+    <meta property="article:tag" content="Security">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Server">
+    <meta property="og:image" content="https://potato.id/img/nginx-plus/turnstiles-fail2ban.jpg">
+
+		
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://potato.id/img/nginx-plus/turnstiles-fail2ban.jpg">
+  <meta name="twitter:title" content="Dynamic IP Denylisting with NGINX Plus and fail2ban">
+  <meta name="twitter:description" content="Learn how to use fail2ban with NGINX Plus key-value store to automatically block brute-force attackers and dynamically manage IP denylists without reloading NGINX.">
+
+        <link rel="me" href="https://infosec.exchange/@laztname">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        
+        <link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2" type="font/woff2" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap"></noscript>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+
+	
+          
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https:\/\/potato.id\/en\/posts\/dynamic-ip-denylisting-nginx-plus-fail2ban\/#article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/potato.id\/en\/posts\/dynamic-ip-denylisting-nginx-plus-fail2ban\/"
+  },
+  "headline": "Dynamic IP Denylisting with NGINX Plus and fail2ban",
+  "description": "Learn how to use fail2ban with NGINX Plus key-value store to automatically block brute-force attackers and dynamically manage IP denylists without reloading NGINX.",
+  "inLanguage": "en",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/potato.id\/img\/nginx-plus\/turnstiles-fail2ban.jpg"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Ardi Jonias Fortuna",
+    "url": "https:\/\/potato.id\/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jonias Fortuna",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/potato.id\/favicon.ico"
+    }
+  },
+  "articleSection": "posts",
+  "keywords": ["NGINX","fail2ban","Security","Linux","Server"],
+  "wordCount":  1189 ,
+  "datePublished": "2026-03-17T00:00:00Z",
+  "dateModified": "2026-03-17T00:00:00Z"
+}
+</script>
+
+
+        
+
+<script>
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "ii5leisvaz");
+</script>
+</head>
+<body class="body">
+	<div id="loading"></div>
+	<div class="container container--outer">
+		<header class="header">
+        <div class="container">
+                <div class="logo">
+                        <a class="logo__link" href="/en/" title="Jonias Fortuna" rel="home">
+                                <div class="logo__title">potato</div>
+                                <div class="logo__tagline">Just another potato website.</div>
+                        </a>
+                </div>
+                
+<nav class="menu">
+        <button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                <span class="menu__btn-title" tabindex="-1">Menu</span>
+        </button>
+
+        <ul class="menu__list">
+                <li class="menu__item">
+                        <a class="menu__link" href="/">
+                                
+                                <span class="menu__text">Home</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/en/about/">
+                                
+                                <span class="menu__text">About Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/en/contact/">
+                                
+                                <span class="menu__text">Contact Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/en/privacy-policy/">
+                                
+                                <span class="menu__text">Privacy Policy</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/en/uses/">
+                                
+                                <span class="menu__text">Uses</span>
+                                
+                        </a>
+                </li>
+
+		
+		<li class="menu__item menu__item--lang">
+		  
+		    <a class="menu__link"
+		       href="/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/"
+		       lang="id">
+		       Bahasa Indonesia
+		    </a>
+		  
+		</li>
+		
+
+        </ul>
+</nav>
+
+
+        </div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Dynamic IP Denylisting with NGINX Plus and fail2ban</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-03-17T00:00:00Z">17-03-2026</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/en/categories/security/" rel="category">Security</a>
+	</span>
+</div></div>
+		</header>
+		       
+
+            <figure class="post__thumbnail thumbnail">
+                
+                <picture>
+                    <source srcset="/img/nginx-plus/turnstiles-fail2ban_hu_dd37a0a2daee035c.webp" media="(min-width: 1024px)">
+                    <source srcset="/img/nginx-plus/turnstiles-fail2ban_hu_b435d8be095b35ff.webp" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="/img/nginx-plus/turnstiles-fail2ban_hu_3cbff8cbb58f4f57.webp" media="(max-width: 767px)">
+                    <img class="thumbnail__image"
+                         src="/img/nginx-plus/turnstiles-fail2ban_hu_b435d8be095b35ff.webp"
+                         width="800"
+                         height="533"
+                         alt="Dynamic IP Denylisting with NGINX Plus and fail2ban"
+                         loading="lazy">
+                </picture>
+                
+            </figure>
+
+<div class="content post__content clearfix">
+			<blockquote>
+<p>This article is based on the original NGINX blog post by Liam Crilly of F5, published September 19, 2017.</p></blockquote>
+<p>You may not realize it, but your website is under constant threat. If it&rsquo;s running WordPress, bots are trying to spam you. If it has a login page, there are brute-force password attacks. You may also consider search engine spiders as unwanted visitors.</p>
+<p>Defending your site from unwanted, suspicious, and malicious activity is no easy task. Web application firewalls are effective tools and must be considered as part of your security stack. For most environments, there&rsquo;s no such thing as too much security, and a multi-layered approach is invariably the most effective.</p>
+<p>In this post, we&rsquo;ll discuss the use of <strong>fail2ban</strong> as another layer of the web security stack. Fail2ban is an intrusion detection system (IDS) which continually monitors log files for suspicious activity, and then takes one or more preconfigured actions. Typically fail2ban monitors for failed login attempts and then blocks (bans) the offending IP address for a period of time. This is a simple yet effective defense against brute-force password attacks.</p>
+<p>In <strong>NGINX Plus R13</strong>, a native key-value store and a new NGINX Plus API were introduced. This allows for dynamic configuration solutions in which NGINX Plus behavior can be driven by an external system. We&rsquo;ll show how fail2ban can be used to automatically reconfigure NGINX Plus to ignore requests from IP addresses that have caused multiple failed authentication events.</p>
+<blockquote>
+<p><strong>Note:</strong> In NGINX Plus R16 and later, key-value stores can be synchronized across all NGINX Plus instances in a cluster.</p></blockquote>
+<p>Read Also: <a href="https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/">Harderning Server with Fail2ban and Reporting to Telegram</a></p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/nginx-plus/turnstiles-fail2ban.jpg" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/nginx-plus/turnstiles-fail2ban_hu_ebf3cdaf34be1173.webp" media="(min-width: 1024px)">
+        <source srcset="/img/nginx-plus/turnstiles-fail2ban_hu_dd37a0a2daee035c.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/nginx-plus/turnstiles-fail2ban_hu_b435d8be095b35ff.webp" media="(max-width: 767px)">
+        <img src="/img/nginx-plus/turnstiles-fail2ban_hu_b435d8be095b35ff.webp"
+             alt="Turnstiles representing IP denylisting"
+             class="hover-effect"
+             width="800"
+             height="533">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<hr>
+<h2 id="using-a-key-value-store-for-ip-denylisting">Using a Key-Value Store for IP Denylisting</h2>
+<p>The NGINX Plus key-value store is a native, in-memory store with three primary characteristics:</p>
+<ul>
+<li>Key-value pairs are represented as JSON objects</li>
+<li>Key-value pairs are managed entirely through an API</li>
+<li>The values are available to NGINX Plus as regular configuration variables</li>
+</ul>
+<p>The key-value store is defined by creating a shared memory zone named by the <code>keyval_zone</code> directive. The <code>keyval</code> directive then defines which existing variable will be used as the lookup key (<code>$remote_addr</code> in the example), and the name of a new variable (<code>$num_failures</code>) that will be evaluated from that key&rsquo;s corresponding value.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/nginx-plus/denylist-keyval-mapping.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/nginx-plus/denylist-keyval-mapping_hu_2ce33cc6bb0b11d2.webp" media="(min-width: 1024px)">
+        <source srcset="/img/nginx-plus/denylist-keyval-mapping_hu_d7b0bcb4fc27b2ca.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/nginx-plus/denylist-keyval-mapping_hu_ca2011dcb1a7ae02.webp" media="(max-width: 767px)">
+        <img src="/img/nginx-plus/denylist-keyval-mapping_hu_ca2011dcb1a7ae02.webp"
+             alt="NGINX Plus key-value store configuration and management"
+             class="hover-effect"
+             width="800"
+             height="406">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>The API is enabled by designating a location block as the NGINX Plus API endpoint:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">listen</span> <span style="color:#ae81ff">1111</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">allow</span>  127.0.0.1; <span style="color:#75715e"># Only allow access from localhost,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">deny</span>   <span style="color:#e6db74">all</span>;       <span style="color:#75715e"># and prevent remote access.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">location</span> <span style="color:#e6db74">/api</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">api</span> <span style="color:#e6db74">write=on</span>; <span style="color:#75715e"># The NGINX Plus API endpoint in read/write mode
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Before we add key-value pairs to it, a request for the contents of the denylist store returns an empty JSON object:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl http://localhost:1111/api/6/http/keyvals/denylist
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{}</span>
+</span></span></code></pre></div><p>The key-value store can now be populated with an initial key-value pair using HTTP POST:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -iX POST -d <span style="color:#e6db74">&#39;{&#34;10.0.0.1&#34;:&#34;1&#34;}&#39;</span> http://localhost:1111/api/6/http/keyvals/denylist
+</span></span><span style="display:flex;"><span>HTTP/1.1 <span style="color:#ae81ff">201</span> Created
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>A key-value pair is removed by <code>PATCH</code>-ing the key with a value of <code>null</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -iX PATCH -d <span style="color:#e6db74">&#39;{&#34;10.0.0.1&#34;:null}&#39;</span> http://localhost:1111/api/6/http/keyvals/denylist
+</span></span><span style="display:flex;"><span>HTTP/1.1 <span style="color:#ae81ff">204</span> No Content
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>All key-value pairs can be removed from the store by sending the <code>DELETE</code> method:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -iX DELETE http://localhost:1111/api/6/http/keyvals/denylist
+</span></span><span style="display:flex;"><span>HTTP/1.1 <span style="color:#ae81ff">204</span> No Content
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>A simple implementation of IP denylisting can now be configured:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#66d9ef">keyval_zone</span> <span style="color:#e6db74">zone=denylist:1M</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">keyval</span> $remote_addr $num_failures <span style="color:#e6db74">zone=denylist</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">listen</span> <span style="color:#ae81ff">80</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">location</span> <span style="color:#e6db74">/</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">root</span> <span style="color:#e6db74">/usr/share/nginx/html</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">if</span> <span style="color:#e6db74">(</span>$num_failures<span style="color:#e6db74">)</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">return</span> <span style="color:#ae81ff">403</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This configuration evaluates <code>$num_failures</code> against the denylist key-value store using <code>$remote_addr</code> (client IP) as the key. If the client IP has been POSTed to the store, all requests return <strong>HTTP 403 Forbidden</strong>.</p>
+<p>The advantage of this approach, compared to using a <code>map</code> block, is that the IP denylist can be controlled by an external system without requiring an NGINX reload.</p>
+<hr>
+<h2 id="using-fail2ban-to-dynamically-manage-the-ip-denylist">Using fail2ban to Dynamically Manage the IP Denylist</h2>
+<p>Fail2ban is commonly used to detect malicious activity in log files and then take action. The default action configures <code>iptables</code> to drop all packets from the offending IP — effective, but provides a poor user experience for genuine users who simply forgot their password. To those users, the website appears completely unavailable.</p>
+<p>The following fail2ban action instead submits the offending IP address to the NGINX Plus denylist key-value store. NGINX Plus then displays a helpful error page and applies a rate limit to that IP address, effectively neutralizing the attack.</p>
+<h3 id="fail2ban-action-nginx-plus-denylistconf">fail2ban Action: <code>nginx-plus-denylist.conf</code></h3>
+<p>Place this file in <code>/etc/fail2ban/action.d/</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[Definition]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">actionban</span>   <span style="color:#f92672">=</span> <span style="color:#e6db74">curl -s -o /dev/null -d &#39;{&#34;&lt;ip&gt;&#34;:&#34;&lt;failures&gt;&#34;}&#39; http://localhost:1111/api/6/http/keyvals/denylist</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">actionunban</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">curl -s -o /dev/null -X PATCH -d &#39;{&#34;&lt;ip&gt;&#34;:null}&#39; http://localhost:1111/api/6/http/keyvals/denylist</span>
+</span></span></code></pre></div><h3 id="fail2ban-jail-jaillocal">fail2ban Jail: <code>jail.local</code></h3>
+<p>Enable the built-in filter for NGINX HTTP Basic Auth failures:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[DEFAULT]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">bantime</span>   <span style="color:#f92672">=</span> <span style="color:#e6db74">120</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">banaction</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">nginx-plus-denylist</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[nginx-http-auth]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">enabled</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">true</span>
+</span></span></code></pre></div><h3 id="full-nginx-plus-configuration-password_siteconf">Full NGINX Plus Configuration: <code>password_site.conf</code></h3>
+<p>Place this in <code>/etc/nginx/conf.d/</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">listen</span> <span style="color:#ae81ff">1111</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">allow</span>  127.0.0.1; <span style="color:#75715e"># Only allow access from localhost,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">deny</span>   <span style="color:#e6db74">all</span>;       <span style="color:#75715e"># and prevent remote access.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">location</span> <span style="color:#e6db74">/api</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">api</span> <span style="color:#e6db74">write=on</span>; <span style="color:#75715e"># The NGINX Plus API endpoint in read/write mode
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">keyval_zone</span> <span style="color:#e6db74">zone=denylist:1M</span> <span style="color:#e6db74">state=denylist.json</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">keyval</span> $remote_addr $num_failures <span style="color:#e6db74">zone=denylist</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">limit_req_zone</span> $binary_remote_addr <span style="color:#e6db74">zone=20permin:10M</span> <span style="color:#e6db74">rate=20r/m</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">listen</span> <span style="color:#ae81ff">80</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">root</span> <span style="color:#e6db74">/usr/share/nginx/html</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">location</span> <span style="color:#e6db74">/</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">auth_basic</span> <span style="color:#e6db74">&#34;closed</span> <span style="color:#e6db74">site&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">auth_basic_user_file</span> <span style="color:#e6db74">users.htpasswd</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">if</span> <span style="color:#e6db74">(</span>$num_failures<span style="color:#e6db74">)</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">rewrite</span> <span style="color:#e6db74">^.*</span> <span style="color:#e6db74">/banned.html</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">location</span> = <span style="color:#e6db74">/banned.html</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">limit_req</span> <span style="color:#e6db74">zone=20permin</span> <span style="color:#e6db74">burst=100</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Key points in this configuration:</p>
+<ul>
+<li>The <code>state=denylist.json</code> parameter persists the key-value store across NGINX Plus restarts</li>
+<li><code>limit_req_zone</code> creates a rate limit of 20 requests/minute per IP (<code>20permin</code>)</li>
+<li>When an IP is denylisted, requests are rewritten to <code>/banned.html</code> instead of returning 403</li>
+<li>The <code>/banned.html</code> location applies the rate limit to prevent resource exhaustion from attack traffic</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/nginx-plus/you-have-been-banned.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/nginx-plus/you-have-been-banned_hu_25b804b825afe936.webp" media="(min-width: 1024px)">
+        <source srcset="/img/nginx-plus/you-have-been-banned_hu_716850c351c26956.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/nginx-plus/you-have-been-banned_hu_2064ac1195f9dfdf.webp" media="(max-width: 767px)">
+        <img src="/img/nginx-plus/you-have-been-banned_hu_2064ac1195f9dfdf.webp"
+             alt="Page that users see when their IP address is denylisted"
+             class="hover-effect"
+             width="800"
+             height="362">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<hr>
+<h2 id="testing-the-setup">Testing the Setup</h2>
+<p>Simulate successive failed login attempts:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -i http://admin:wrongpass@www.example.com/
+</span></span><span style="display:flex;"><span>HTTP/1.1 <span style="color:#ae81ff">401</span> Unauthorized
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>$ curl -i http://admin:wrongpass@www.example.com/
+</span></span><span style="display:flex;"><span>HTTP/1.1 <span style="color:#ae81ff">401</span> Unauthorized
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (repeat 5 times)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ curl http://admin:wrongpass@www.example.com/
+</span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
+</span></span><span style="display:flex;"><span>&lt;html&gt;
+</span></span><span style="display:flex;"><span>&lt;head&gt;
+</span></span><span style="display:flex;"><span>&lt;title&gt;Banned&lt;/title&gt;
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ tail -f /var/log/fail2ban.log
+</span></span><span style="display:flex;"><span>2017-09-15 13:55:18,903 fail2ban.filter   <span style="color:#f92672">[</span>28498<span style="color:#f92672">]</span>: INFO    <span style="color:#f92672">[</span>nginx-http-auth<span style="color:#f92672">]</span> Found 172.16.52.1
+</span></span><span style="display:flex;"><span>2017-09-15 13:55:28,836 fail2ban.filter   <span style="color:#f92672">[</span>28498<span style="color:#f92672">]</span>: INFO    <span style="color:#f92672">[</span>nginx-http-auth<span style="color:#f92672">]</span> Found 172.16.52.1
+</span></span><span style="display:flex;"><span>2017-09-15 13:57:49,228 fail2ban.filter   <span style="color:#f92672">[</span>28498<span style="color:#f92672">]</span>: INFO    <span style="color:#f92672">[</span>nginx-http-auth<span style="color:#f92672">]</span> Found 172.16.52.1
+</span></span><span style="display:flex;"><span>2017-09-15 13:57:50,286 fail2ban.filter   <span style="color:#f92672">[</span>28498<span style="color:#f92672">]</span>: INFO    <span style="color:#f92672">[</span>nginx-http-auth<span style="color:#f92672">]</span> Found 172.16.52.1
+</span></span><span style="display:flex;"><span>2017-09-15 13:57:52,015 fail2ban.filter   <span style="color:#f92672">[</span>28498<span style="color:#f92672">]</span>: INFO    <span style="color:#f92672">[</span>nginx-http-auth<span style="color:#f92672">]</span> Found 172.16.52.1
+</span></span><span style="display:flex;"><span>2017-09-15 13:57:52,088 fail2ban.actions  <span style="color:#f92672">[</span>28498<span style="color:#f92672">]</span>: NOTICE  <span style="color:#f92672">[</span>nginx-http-auth<span style="color:#f92672">]</span> Ban 172.16.52.1
+</span></span><span style="display:flex;"><span>2017-09-15 13:59:52,379 fail2ban.actions  <span style="color:#f92672">[</span>28498<span style="color:#f92672">]</span>: NOTICE  <span style="color:#f92672">[</span>nginx-http-auth<span style="color:#f92672">]</span> Unban 172.16.52.1
+</span></span></code></pre></div><p>After 120 seconds (<code>bantime</code> in <code>jail.local</code>), fail2ban automatically removes the IP from the denylist using the NGINX Plus API, and login attempts are accepted again from that address.</p>
+<hr>
+<h2 id="how-it-all-works-together">How It All Works Together</h2>
+<p>This dynamic IP denylisting solution runs without any further configuration changes once set up:</p>
+<ol>
+<li><strong>fail2ban</strong> watches NGINX access/error logs for failed authentication events</li>
+<li>On threshold breach, fail2ban calls the NGINX Plus API to <strong>add</strong> the IP to the key-value store</li>
+<li>NGINX Plus immediately starts serving the <code>/banned.html</code> page to that IP with rate limiting applied</li>
+<li>After <code>bantime</code> expires, fail2ban calls the API again to <strong>remove</strong> the IP from the denylist</li>
+</ol>
+<p>No NGINX configuration file editing. No <code>nginx -s reload</code>. Just a live, dynamic denylist controlled entirely through the API.</p>
+<hr>
+<h2 id="summary">Summary</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Component</th>
+          <th>Role</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>fail2ban</td>
+          <td>Detects brute-force attempts in log files</td>
+      </tr>
+      <tr>
+          <td>NGINX Plus API</td>
+          <td>Receives ban/unban commands from fail2ban</td>
+      </tr>
+      <tr>
+          <td>Key-value store</td>
+          <td>Holds the live denylist in memory</td>
+      </tr>
+      <tr>
+          <td><code>keyval</code> directive</td>
+          <td>Maps client IP to denylist status</td>
+      </tr>
+      <tr>
+          <td><code>limit_req_zone</code></td>
+          <td>Rate-limits banned IPs to protect resources</td>
+      </tr>
+  </tbody>
+</table>
+<p>The NGINX Plus API and key-value store make this type of integration possible — dynamic configuration without reloads, driven entirely by external systems.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/en/tags/nginx/" rel="tag">NGINX</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/en/tags/fail2ban/" rel="tag">fail2ban</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/en/tags/security/" rel="tag">Security</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/en/tags/linux/" rel="tag">Linux</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/en/tags/server/" rel="tag">Server</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+		<hr>
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-format="autorelaxed"
+		     data-ad-client="ca-pub-1926937123072670"
+		     data-ad-slot="1889468337"></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		<hr>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Ardi Jonias Fortuna</span>
+	</div>
+	<div class="authorbox__description">
+		Roses are red, violets are blue. There is nothing can&rsquo;t to do
+	</div>
+</div>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/en/posts/collection-of-best-and-fastest-dns-servers-2026/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Collection of Best and Fastest DNS Servers 2026</p>
+		</a>
+	</div>
+</nav>
+<div id="disqus-container">
+	<script src="https://giscus.app/client.js"
+        data-repo="laztname/laztname"
+        data-repo-id="R_kgDOLULuVg"
+        data-category="General"
+        data-category-id="DIC_kwDOLULuVs4CdT6m"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+			</div>
+			<aside class="sidebar sidebar--left"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://potato.id/">
+	</form>
+</div><div class="widget-recent widget">
+	<h3 class="widget__title">Information</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+    <li class="widget__item">
+        <picture>
+            <source srcset="/img/home_hu_3b9b5be8487aaba3.webp" media="(min-width: 1024px)">
+            <source srcset="/img/home_hu_173579ac87338ebc.webp" media="(min-width: 768px) and (max-width: 1023px)">
+            <source srcset="/img/home_hu_db8ab209d61d1924.webp" media="(max-width: 767px)">
+            <img class="widget__link"
+                 src="/img/home_hu_173579ac87338ebc.webp" 
+                 width="800"
+                 height="694"
+                 alt="Di rumah saja"
+                 loading="lazy">
+        </picture>
+    </li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-recent widget">
+	<h3 class="widget__title">Recent Posts</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/en/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/">Dynamic IP Denylisting with NGINX Plus and fail2ban</a></li>
+			<li class="widget__item"><a class="widget__link" href="/en/posts/collection-of-best-and-fastest-dns-servers-2026/">Collection of Best and Fastest DNS Servers 2026</a></li>
+			<li class="widget__item"><a class="widget__link" href="/en/posts/what-is-infatica-p2b-network/">What Is Infatica P2B Network? How to Remove Infatica from Windows</a></li>
+			<li class="widget__item"><a class="widget__link" href="/en/posts/generate-wildcard-ssl-tls-certificate-lets-encrypt-certbot-with-dns-challenge/">How to Generate Wildcard SSL Let&#39;s Encrypt with Certbot DNS Challenge (Complete Guide)</a></li>
+			<li class="widget__item"><a class="widget__link" href="/en/posts/critical-rce-vulnerability-wordpress-plugin-900k-installations-detection-mitigation/">Critical RCE in WordPress Plugin (900K&#43; Installations): Detection &amp; Mitigation</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-categories widget">
+	<h3 class="widget__title">Categories</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/defensive/">Defensive</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/development/">Development</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/networking/">Networking</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/offensive/">Offensive</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/reversing/">Reversing</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/security/">Security</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/web-hacking/">Web Hacking</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-taglist widget">
+	<h3 class="widget__title">Tags</h3>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/challenges/" title="Challenges">Challenges (9)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/cyber-hygiene/" title="Cyber Hygiene">Cyber Hygiene (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/dns/" title="DNS">DNS (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/docker/" title="Docker">Docker (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/end-user/" title="End User">End User (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/end-users/" title="End-Users">End-Users (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/fail2ban/" title="Fail2ban">Fail2ban (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/file-upload/" title="File Upload">File Upload (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/git/" title="Git">Git (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/gitdumper/" title="Gitdumper">Gitdumper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/githack/" title="Githack">Githack (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/github-pages/" title="Github Pages">Github Pages (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/incident-response/" title="Incident Response">Incident Response (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/infatica/" title="Infatica">Infatica (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/infostealer/" title="Infostealer">Infostealer (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/internet/" title="Internet">Internet (18)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/intrusion-prevention-system/" title="Intrusion Prevention System">Intrusion Prevention System (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/lfi/" title="LFI">LFI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/linux/" title="Linux">Linux (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/malware/" title="Malware">Malware (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/nginx/" title="NGINX">NGINX (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/phishing/" title="Phishing">Phishing (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/proxy/" title="Proxy">Proxy (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/ransomware/" title="Ransomware">Ransomware (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/rce/" title="RCE">RCE (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/retas-labs/" title="Retas Labs">Retas Labs (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/security/" title="Security">Security (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/server/" title="Server">Server (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/sqli/" title="SQLI">SQLI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/ssl/tls-certificate/" title="SSL/TLS Certificate">SSL/TLS Certificate (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/surabaya-hacker-link/" title="Surabaya Hacker Link">Surabaya Hacker Link (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/telegram-bot/" title="Telegram Bot">Telegram Bot (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/terminal/" title="Terminal">Terminal (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/text-editor/" title="Text Editor">Text Editor (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/users/" title="Users">Users (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/vim/" title="VIM">VIM (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/web-hacking/" title="Web Hacking">Web Hacking (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/windows/" title="Windows">Windows (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/wordpress/" title="Wordpress">Wordpress (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/write-up/" title="Write Up">Write Up (35)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/xss/" title="XSS">XSS (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
+	</div>
+</div>
+
+<div class="widget-social widget">
+	<h3 class="widget-social__title widget__title">Social</h3>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Instagram" rel="noopener noreferrer" href="https://www.instagram.com/joniasfortuna" target="_blank">
+				<svg class="widget-social__link-icon icon icon-instagram" width="24" height="24" viewBox="0 0 256 256"><circle cx="193" cy="59" r="15"/><path fill-rule="evenodd" d="M101 0h54c41 0 58.4 3.9 74.5 17C256.2 37.5 256 74.8 256 97.7v60c0 26.7 0 60.4-26.5 81.4-16 13.4-33.5 16.9-74.5 16.9h-54c-41 0-57.5-3.5-74.5-16.9C1 218.9.5 186.3.1 160.5L0 155V97.7c0-23-.2-60.2 26.5-80.7C45 2 60 0 101 0zm4.9 23h44.3c45.8 0 58.3 3.5 70.3 17.5 11.8 13.2 12 30.1 12.5 62.9V156c.2 20.8.3 45.8-12.5 59.5-12 14-24.5 17.5-70.3 17.5h-44.3c-45.9 0-57.3-3.5-70.4-17.5-12.2-13-12.3-36.5-12.4-56.7v-55.6c.4-32.6.7-49.6 12.4-62.7C48 26.5 60 23 105.9 23zm19.6 144.5a42 42 0 1 0 0-84 42 42 0 0 0 0 84zm0 22.5a64.5 64.5 0 1 0 0-129 64.5 64.5 0 0 0 0 129z"/></svg>
+				<span>Instagram</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer" href="https://linkedin.com/in/joniasfortuna" target="_blank">
+				<svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
+				<span>LinkedIn</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Telegram" rel="noopener noreferrer" href="https://t.me/laztname" target="_blank">
+				<svg class="widget-social__link-icon icon icon-telegram" width="24" height="24" viewBox="0 0 132 110"><path fill="#ddd" d="M50 103c-4 0-3-1-5-5L34 60l88-52"/><path fill="#aaa" d="M50 103c3 0 4-1 6-3l16-16-20-12"/><path fill="#fff" d="M52 72l48 36c6 3 10 2 11-5l20-93c2-8-3-11-8-9L7 45c-8 4-8 8-1 10l29 9 69-43c3-2 6-1 4 1"/></svg>
+				<span>Telegram</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/laztname" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:jonias@potato.id">
+				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>jonias@potato.id</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+
+</aside>
+		</div>
+		<footer class="footer">
+    <div class="container footer__container flex">
+        
+        <div class="footer__copyright">
+            &copy; 2026 
+            <a href="https://potato.id/">Ardi Jonias Fortuna</a>.
+            <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+        </div>
+    </div>
+</footer>
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script></body>
+</html>

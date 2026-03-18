@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html class="no-js" lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow, max-image-preview:large">
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="theme-color" content="#efe6dd">
+	<meta http-equiv="content-language" content="id">
+	<meta name="author" content="Ardi Jonias Fortuna">
+	<title>Dynamic IP Denylisting dengan NGINX Plus dan fail2ban - Jonias Fortuna</title>
+	<link rel="canonical" href="https://potato.id/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/">
+	
+	
+	<link rel="alternate" hreflang="x-default" href="https://potato.id/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/">
+	<link rel="alternate" hreflang="id" href="https://potato.id/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/">
+	
+	<link rel="alternate" hreflang="en" href="https://potato.id/en/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/">
+	
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Pelajari cara menggunakan fail2ban bersama key-value store NGINX Plus untuk memblokir penyerang brute-force secara otomatis dan mengelola denylist IP secara dinamis tanpa reload NGINX.">
+		<meta property="og:url" content="https://potato.id/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/">
+  <meta property="og:site_name" content="Jonias Fortuna">
+  <meta property="og:title" content="Dynamic IP Denylisting dengan NGINX Plus dan fail2ban">
+  <meta property="og:description" content="Pelajari cara menggunakan fail2ban bersama key-value store NGINX Plus untuk memblokir penyerang brute-force secara otomatis dan mengelola denylist IP secara dinamis tanpa reload NGINX.">
+  <meta property="og:locale" content="id">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-03-17T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-03-17T00:00:00+00:00">
+    <meta property="article:tag" content="NGINX">
+    <meta property="article:tag" content="Fail2ban">
+    <meta property="article:tag" content="Security">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Server">
+    <meta property="og:image" content="https://potato.id/img/nginx-plus/turnstiles-fail2ban.jpg">
+
+		
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://potato.id/img/nginx-plus/turnstiles-fail2ban.jpg">
+  <meta name="twitter:title" content="Dynamic IP Denylisting dengan NGINX Plus dan fail2ban">
+  <meta name="twitter:description" content="Pelajari cara menggunakan fail2ban bersama key-value store NGINX Plus untuk memblokir penyerang brute-force secara otomatis dan mengelola denylist IP secara dinamis tanpa reload NGINX.">
+
+        <link rel="me" href="https://infosec.exchange/@laztname">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        
+        <link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2" type="font/woff2" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap"></noscript>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+
+	
+          
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https:\/\/potato.id\/posts\/dynamic-ip-denylisting-nginx-plus-fail2ban\/#article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/potato.id\/posts\/dynamic-ip-denylisting-nginx-plus-fail2ban\/"
+  },
+  "headline": "Dynamic IP Denylisting dengan NGINX Plus dan fail2ban",
+  "description": "Pelajari cara menggunakan fail2ban bersama key-value store NGINX Plus untuk memblokir penyerang brute-force secara otomatis dan mengelola denylist IP secara dinamis tanpa reload NGINX.",
+  "inLanguage": "id",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/potato.id\/img\/nginx-plus\/turnstiles-fail2ban.jpg"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Ardi Jonias Fortuna",
+    "url": "https:\/\/potato.id\/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jonias Fortuna",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/potato.id\/favicon.ico"
+    }
+  },
+  "articleSection": "posts",
+  "keywords": ["NGINX","fail2ban","Security","Linux","Server"],
+  "wordCount":  1114 ,
+  "datePublished": "2026-03-17T00:00:00Z",
+  "dateModified": "2026-03-17T00:00:00Z"
+}
+</script>
+
+
+        
+
+<script>
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "ii5leisvaz");
+</script>
+</head>
+<body class="body">
+	<div id="loading"></div>
+	<div class="container container--outer">
+		<header class="header">
+        <div class="container">
+                <div class="logo">
+                        <a class="logo__link" href="/" title="Jonias Fortuna" rel="home">
+                                <div class="logo__title">potato</div>
+                                <div class="logo__tagline">Just another potato website.</div>
+                        </a>
+                </div>
+                
+<nav class="menu">
+        <button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                <span class="menu__btn-title" tabindex="-1">Menu</span>
+        </button>
+
+        <ul class="menu__list">
+                <li class="menu__item">
+                        <a class="menu__link" href="/">
+                                
+                                <span class="menu__text">Home</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/about/">
+                                
+                                <span class="menu__text">About Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/contact/">
+                                
+                                <span class="menu__text">Contact Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/privacy-policy/">
+                                
+                                <span class="menu__text">Privacy Policy</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/uses/">
+                                
+                                <span class="menu__text">Uses</span>
+                                
+                        </a>
+                </li>
+
+		
+		<li class="menu__item menu__item--lang">
+		  
+		    <a class="menu__link"
+		       href="/en/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/"
+		       lang="en">
+		       English
+		    </a>
+		  
+		</li>
+		
+
+        </ul>
+</nav>
+
+
+        </div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Dynamic IP Denylisting dengan NGINX Plus dan fail2ban</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-03-17T00:00:00Z">17-03-2026</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/security/" rel="category">Security</a>
+	</span>
+</div></div>
+		</header>
+		       
+
+            <figure class="post__thumbnail thumbnail">
+                
+                <picture>
+                    <source srcset="/img/nginx-plus/turnstiles-fail2ban_hu_dd37a0a2daee035c.webp" media="(min-width: 1024px)">
+                    <source srcset="/img/nginx-plus/turnstiles-fail2ban_hu_b435d8be095b35ff.webp" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="/img/nginx-plus/turnstiles-fail2ban_hu_3cbff8cbb58f4f57.webp" media="(max-width: 767px)">
+                    <img class="thumbnail__image"
+                         src="/img/nginx-plus/turnstiles-fail2ban_hu_b435d8be095b35ff.webp"
+                         width="800"
+                         height="533"
+                         alt="Dynamic IP Denylisting dengan NGINX Plus dan fail2ban"
+                         loading="lazy">
+                </picture>
+                
+            </figure>
+
+<div class="content post__content clearfix">
+			<blockquote>
+<p>Artikel ini berdasarkan postingan blog NGINX asli oleh Liam Crilly dari F5, diterbitkan 19 September 2017.</p></blockquote>
+<p>Mungkin kamu tidak menyadarinya, tapi website kamu terus-menerus berada di bawah ancaman. Jika menjalankan WordPress, bot sedang mencoba melakukan spam. Jika ada halaman login, ada serangan brute-force password. Kamu mungkin juga menganggap spider search engine sebagai pengunjung yang tidak diinginkan.</p>
+<p>Mempertahankan situs dari aktivitas yang tidak diinginkan, mencurigakan, dan berbahaya bukanlah tugas yang mudah. Web application firewall adalah alat yang efektif dan harus dipertimbangkan sebagai bagian dari security stack kamu. Untuk sebagian besar lingkungan, tidak ada yang namanya terlalu banyak keamanan, dan pendekatan berlapis selalu menjadi yang paling efektif.</p>
+<p>Dalam postingan ini, kita akan membahas penggunaan <strong>fail2ban</strong> sebagai lapisan lain dari web security stack. Fail2ban adalah sistem deteksi intrusi (IDS) yang terus memantau file log untuk aktivitas mencurigakan, lalu mengambil satu atau lebih tindakan yang telah dikonfigurasi. Biasanya fail2ban memantau percobaan login yang gagal kemudian memblokir (ban) alamat IP yang bermasalah untuk jangka waktu tertentu. Ini adalah pertahanan yang sederhana namun efektif terhadap serangan brute-force password.</p>
+<p>Pada <strong>NGINX Plus R13</strong>, sebuah key-value store native dan NGINX Plus API baru diperkenalkan. Ini memungkinkan solusi konfigurasi dinamis di mana perilaku NGINX Plus dapat dikendalikan oleh sistem eksternal. Kita akan menunjukkan bagaimana fail2ban dapat digunakan untuk secara otomatis mengkonfigurasi ulang NGINX Plus agar mengabaikan permintaan dari alamat IP yang telah menyebabkan beberapa kegagalan autentikasi.</p>
+<blockquote>
+<p><strong>Catatan:</strong> Pada NGINX Plus R16 dan yang lebih baru, key-value store dapat disinkronisasi di semua instans NGINX Plus dalam sebuah cluster.</p></blockquote>
+<p>Read Also: <a href="https://potato.id/posts/harderning-server-with-fail2ban-to-telegram/">Harderning Server with Fail2ban and Reporting to Telegram</a></p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/nginx-plus/turnstiles-fail2ban.jpg" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/nginx-plus/turnstiles-fail2ban_hu_ebf3cdaf34be1173.webp" media="(min-width: 1024px)">
+        <source srcset="/img/nginx-plus/turnstiles-fail2ban_hu_dd37a0a2daee035c.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/nginx-plus/turnstiles-fail2ban_hu_b435d8be095b35ff.webp" media="(max-width: 767px)">
+        <img src="/img/nginx-plus/turnstiles-fail2ban_hu_b435d8be095b35ff.webp"
+             alt="Turnstile yang merepresentasikan IP denylisting"
+             class="hover-effect"
+             width="800"
+             height="533">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<hr>
+<h2 id="menggunakan-key-value-store-untuk-ip-denylisting">Menggunakan Key-Value Store untuk IP Denylisting</h2>
+<p>NGINX Plus key-value store adalah penyimpanan native berbasis memori dengan tiga karakteristik utama:</p>
+<ul>
+<li>Pasangan key-value direpresentasikan sebagai objek JSON</li>
+<li>Pasangan key-value dikelola sepenuhnya melalui API</li>
+<li>Nilai tersedia untuk NGINX Plus sebagai variabel konfigurasi biasa</li>
+</ul>
+<p>Key-value store didefinisikan dengan membuat shared memory zone yang dinamai oleh direktif <code>keyval_zone</code>. Direktif <code>keyval</code> kemudian mendefinisikan variabel yang akan digunakan sebagai lookup key (<code>$remote_addr</code> dalam contoh), dan nama variabel baru (<code>$num_failures</code>) yang akan dievaluasi dari nilai pasangan key tersebut.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/nginx-plus/denylist-keyval-mapping.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/nginx-plus/denylist-keyval-mapping_hu_2ce33cc6bb0b11d2.webp" media="(min-width: 1024px)">
+        <source srcset="/img/nginx-plus/denylist-keyval-mapping_hu_d7b0bcb4fc27b2ca.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/nginx-plus/denylist-keyval-mapping_hu_ca2011dcb1a7ae02.webp" media="(max-width: 767px)">
+        <img src="/img/nginx-plus/denylist-keyval-mapping_hu_ca2011dcb1a7ae02.webp"
+             alt="Konfigurasi dan manajemen key-value store NGINX Plus"
+             class="hover-effect"
+             width="800"
+             height="406">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>API diaktifkan dengan menentukan location block sebagai endpoint NGINX Plus API:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">listen</span> <span style="color:#ae81ff">1111</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">allow</span>  127.0.0.1; <span style="color:#75715e"># Hanya izinkan akses dari localhost,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">deny</span>   <span style="color:#e6db74">all</span>;       <span style="color:#75715e"># dan cegah akses remote.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">location</span> <span style="color:#e6db74">/api</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">api</span> <span style="color:#e6db74">write=on</span>; <span style="color:#75715e"># Endpoint NGINX Plus API dalam mode read/write
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Sebelum kita menambahkan pasangan key-value, permintaan untuk isi denylist store mengembalikan objek JSON kosong:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl http://localhost:1111/api/6/http/keyvals/denylist
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{}</span>
+</span></span></code></pre></div><p>Key-value store kini dapat diisi dengan pasangan key-value awal menggunakan HTTP POST:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -iX POST -d <span style="color:#e6db74">&#39;{&#34;10.0.0.1&#34;:&#34;1&#34;}&#39;</span> http://localhost:1111/api/6/http/keyvals/denylist
+</span></span><span style="display:flex;"><span>HTTP/1.1 <span style="color:#ae81ff">201</span> Created
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>Sebuah pasangan key-value dihapus dengan <code>PATCH</code>-ing key dengan nilai <code>null</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -iX PATCH -d <span style="color:#e6db74">&#39;{&#34;10.0.0.1&#34;:null}&#39;</span> http://localhost:1111/api/6/http/keyvals/denylist
+</span></span><span style="display:flex;"><span>HTTP/1.1 <span style="color:#ae81ff">204</span> No Content
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>Semua pasangan key-value dapat dihapus dari store dengan mengirimkan metode <code>DELETE</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -iX DELETE http://localhost:1111/api/6/http/keyvals/denylist
+</span></span><span style="display:flex;"><span>HTTP/1.1 <span style="color:#ae81ff">204</span> No Content
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>Implementasi sederhana IP denylisting kini dapat dikonfigurasi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#66d9ef">keyval_zone</span> <span style="color:#e6db74">zone=denylist:1M</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">keyval</span> $remote_addr $num_failures <span style="color:#e6db74">zone=denylist</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">listen</span> <span style="color:#ae81ff">80</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">location</span> <span style="color:#e6db74">/</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">root</span> <span style="color:#e6db74">/usr/share/nginx/html</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">if</span> <span style="color:#e6db74">(</span>$num_failures<span style="color:#e6db74">)</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">return</span> <span style="color:#ae81ff">403</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Konfigurasi ini mengevaluasi <code>$num_failures</code> terhadap denylist key-value store menggunakan <code>$remote_addr</code> (IP client) sebagai key. Jika IP client telah di-POST ke store, semua permintaan akan mengembalikan <strong>HTTP 403 Forbidden</strong>.</p>
+<p>Keunggulan pendekatan ini dibanding menggunakan blok <code>map</code> adalah denylist IP dapat dikendalikan oleh sistem eksternal tanpa memerlukan reload NGINX.</p>
+<hr>
+<h2 id="menggunakan-fail2ban-untuk-mengelola-ip-denylist-secara-dinamis">Menggunakan fail2ban untuk Mengelola IP Denylist Secara Dinamis</h2>
+<p>Fail2ban umumnya digunakan untuk mendeteksi aktivitas berbahaya dalam file log dan kemudian mengambil tindakan. Tindakan default mengonfigurasi <code>iptables</code> untuk menjatuhkan semua paket dari IP yang bermasalah — efektif, tetapi memberikan pengalaman buruk bagi pengguna asli yang mungkin hanya lupa password mereka. Bagi pengguna tersebut, website terlihat seolah-olah tidak tersedia sama sekali.</p>
+<p>Tindakan fail2ban berikut ini justru mengirimkan IP yang bermasalah ke NGINX Plus denylist key-value store. NGINX Plus kemudian menampilkan halaman error yang informatif dan sekaligus menerapkan rate limit pada IP tersebut, sehingga jika tindakan tersebut merupakan bagian dari serangan, serangan tersebut secara efektif dinetralkan.</p>
+<h3 id="aksi-fail2ban-nginx-plus-denylistconf">Aksi fail2ban: <code>nginx-plus-denylist.conf</code></h3>
+<p>Tempatkan file ini di <code>/etc/fail2ban/action.d/</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[Definition]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">actionban</span>   <span style="color:#f92672">=</span> <span style="color:#e6db74">curl -s -o /dev/null -d &#39;{&#34;&lt;ip&gt;&#34;:&#34;&lt;failures&gt;&#34;}&#39; http://localhost:1111/api/6/http/keyvals/denylist</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">actionunban</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">curl -s -o /dev/null -X PATCH -d &#39;{&#34;&lt;ip&gt;&#34;:null}&#39; http://localhost:1111/api/6/http/keyvals/denylist</span>
+</span></span></code></pre></div><h3 id="jail-fail2ban-jaillocal">Jail fail2ban: <code>jail.local</code></h3>
+<p>Aktifkan filter bawaan untuk kegagalan NGINX HTTP Basic Auth:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[DEFAULT]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">bantime</span>   <span style="color:#f92672">=</span> <span style="color:#e6db74">120</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">banaction</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">nginx-plus-denylist</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[nginx-http-auth]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">enabled</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">true</span>
+</span></span></code></pre></div><h3 id="konfigurasi-lengkap-nginx-plus-password_siteconf">Konfigurasi Lengkap NGINX Plus: <code>password_site.conf</code></h3>
+<p>Tempatkan file ini di <code>/etc/nginx/conf.d/</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">listen</span> <span style="color:#ae81ff">1111</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">allow</span>  127.0.0.1; <span style="color:#75715e"># Hanya izinkan akses dari localhost,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#f92672">deny</span>   <span style="color:#e6db74">all</span>;       <span style="color:#75715e"># dan cegah akses remote.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">location</span> <span style="color:#e6db74">/api</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">api</span> <span style="color:#e6db74">write=on</span>; <span style="color:#75715e"># Endpoint NGINX Plus API dalam mode read/write
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">keyval_zone</span> <span style="color:#e6db74">zone=denylist:1M</span> <span style="color:#e6db74">state=denylist.json</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">keyval</span> $remote_addr $num_failures <span style="color:#e6db74">zone=denylist</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">limit_req_zone</span> $binary_remote_addr <span style="color:#e6db74">zone=20permin:10M</span> <span style="color:#e6db74">rate=20r/m</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">listen</span> <span style="color:#ae81ff">80</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">root</span> <span style="color:#e6db74">/usr/share/nginx/html</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">location</span> <span style="color:#e6db74">/</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">auth_basic</span> <span style="color:#e6db74">&#34;closed</span> <span style="color:#e6db74">site&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">auth_basic_user_file</span> <span style="color:#e6db74">users.htpasswd</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">if</span> <span style="color:#e6db74">(</span>$num_failures<span style="color:#e6db74">)</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">rewrite</span> <span style="color:#e6db74">^.*</span> <span style="color:#e6db74">/banned.html</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">location</span> = <span style="color:#e6db74">/banned.html</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">limit_req</span> <span style="color:#e6db74">zone=20permin</span> <span style="color:#e6db74">burst=100</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Poin penting dalam konfigurasi ini:</p>
+<ul>
+<li>Parameter <code>state=denylist.json</code> menyimpan state key-value store agar bertahan saat NGINX Plus dihentikan dan dijalankan kembali</li>
+<li><code>limit_req_zone</code> membuat rate limit 20 permintaan/menit per IP (<code>20permin</code>)</li>
+<li>Ketika IP masuk denylist, permintaan ditulis ulang ke <code>/banned.html</code> alih-alih mengembalikan 403</li>
+<li>Location <code>/banned.html</code> menerapkan rate limit untuk mencegah konsumsi sumber daya yang berlebihan dari traffic serangan</li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/nginx-plus/you-have-been-banned.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/nginx-plus/you-have-been-banned_hu_25b804b825afe936.webp" media="(min-width: 1024px)">
+        <source srcset="/img/nginx-plus/you-have-been-banned_hu_716850c351c26956.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/nginx-plus/you-have-been-banned_hu_2064ac1195f9dfdf.webp" media="(max-width: 767px)">
+        <img src="/img/nginx-plus/you-have-been-banned_hu_2064ac1195f9dfdf.webp"
+             alt="Halaman yang dilihat pengguna ketika alamat IP mereka masuk denylist"
+             class="hover-effect"
+             width="800"
+             height="362">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<hr>
+<h2 id="menguji-setup">Menguji Setup</h2>
+<p>Simulasikan percobaan login yang gagal secara berulang:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -i http://admin:wrongpass@www.example.com/
+</span></span><span style="display:flex;"><span>HTTP/1.1 <span style="color:#ae81ff">401</span> Unauthorized
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>$ curl -i http://admin:wrongpass@www.example.com/
+</span></span><span style="display:flex;"><span>HTTP/1.1 <span style="color:#ae81ff">401</span> Unauthorized
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># (ulangi 5 kali)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ curl http://admin:wrongpass@www.example.com/
+</span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
+</span></span><span style="display:flex;"><span>&lt;html&gt;
+</span></span><span style="display:flex;"><span>&lt;head&gt;
+</span></span><span style="display:flex;"><span>&lt;title&gt;Banned&lt;/title&gt;
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ tail -f /var/log/fail2ban.log
+</span></span><span style="display:flex;"><span>2017-09-15 13:55:18,903 fail2ban.filter   <span style="color:#f92672">[</span>28498<span style="color:#f92672">]</span>: INFO    <span style="color:#f92672">[</span>nginx-http-auth<span style="color:#f92672">]</span> Found 172.16.52.1
+</span></span><span style="display:flex;"><span>2017-09-15 13:55:28,836 fail2ban.filter   <span style="color:#f92672">[</span>28498<span style="color:#f92672">]</span>: INFO    <span style="color:#f92672">[</span>nginx-http-auth<span style="color:#f92672">]</span> Found 172.16.52.1
+</span></span><span style="display:flex;"><span>2017-09-15 13:57:49,228 fail2ban.filter   <span style="color:#f92672">[</span>28498<span style="color:#f92672">]</span>: INFO    <span style="color:#f92672">[</span>nginx-http-auth<span style="color:#f92672">]</span> Found 172.16.52.1
+</span></span><span style="display:flex;"><span>2017-09-15 13:57:50,286 fail2ban.filter   <span style="color:#f92672">[</span>28498<span style="color:#f92672">]</span>: INFO    <span style="color:#f92672">[</span>nginx-http-auth<span style="color:#f92672">]</span> Found 172.16.52.1
+</span></span><span style="display:flex;"><span>2017-09-15 13:57:52,015 fail2ban.filter   <span style="color:#f92672">[</span>28498<span style="color:#f92672">]</span>: INFO    <span style="color:#f92672">[</span>nginx-http-auth<span style="color:#f92672">]</span> Found 172.16.52.1
+</span></span><span style="display:flex;"><span>2017-09-15 13:57:52,088 fail2ban.actions  <span style="color:#f92672">[</span>28498<span style="color:#f92672">]</span>: NOTICE  <span style="color:#f92672">[</span>nginx-http-auth<span style="color:#f92672">]</span> Ban 172.16.52.1
+</span></span><span style="display:flex;"><span>2017-09-15 13:59:52,379 fail2ban.actions  <span style="color:#f92672">[</span>28498<span style="color:#f92672">]</span>: NOTICE  <span style="color:#f92672">[</span>nginx-http-auth<span style="color:#f92672">]</span> Unban 172.16.52.1
+</span></span></code></pre></div><p>Setelah 120 detik (<code>bantime</code> di <code>jail.local</code>), fail2ban secara otomatis menghapus IP dari denylist menggunakan NGINX Plus API, dan percobaan login kembali diterima dari alamat tersebut.</p>
+<hr>
+<h2 id="cara-kerja-keseluruhan">Cara Kerja Keseluruhan</h2>
+<p>Solusi dynamic IP denylisting ini berjalan tanpa perubahan konfigurasi lebih lanjut setelah setup selesai:</p>
+<ol>
+<li><strong>fail2ban</strong> memantau log NGINX untuk kegagalan autentikasi</li>
+<li>Saat threshold terlampaui, fail2ban memanggil NGINX Plus API untuk <strong>menambahkan</strong> IP ke key-value store</li>
+<li>NGINX Plus langsung mulai menyajikan halaman <code>/banned.html</code> ke IP tersebut dengan rate limiting aktif</li>
+<li>Setelah <code>bantime</code> berakhir, fail2ban memanggil API lagi untuk <strong>menghapus</strong> IP dari denylist</li>
+</ol>
+<p>Tidak perlu mengedit file konfigurasi NGINX. Tidak perlu <code>nginx -s reload</code>. Cukup denylist yang hidup dan dinamis, dikendalikan sepenuhnya melalui API.</p>
+<hr>
+<h2 id="ringkasan">Ringkasan</h2>
+<table>
+  <thead>
+      <tr>
+          <th>Komponen</th>
+          <th>Peran</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>fail2ban</td>
+          <td>Mendeteksi percobaan brute-force di file log</td>
+      </tr>
+      <tr>
+          <td>NGINX Plus API</td>
+          <td>Menerima perintah ban/unban dari fail2ban</td>
+      </tr>
+      <tr>
+          <td>Key-value store</td>
+          <td>Menyimpan denylist aktif di memori</td>
+      </tr>
+      <tr>
+          <td>Direktif <code>keyval</code></td>
+          <td>Memetakan IP client ke status denylist</td>
+      </tr>
+      <tr>
+          <td><code>limit_req_zone</code></td>
+          <td>Membatasi rate IP yang di-ban untuk melindungi sumber daya</td>
+      </tr>
+  </tbody>
+</table>
+<p>NGINX Plus API dan key-value store membuat integrasi seperti ini menjadi mungkin — konfigurasi dinamis tanpa reload, dikendalikan sepenuhnya oleh sistem eksternal.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/nginx/" rel="tag">NGINX</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/fail2ban/" rel="tag">fail2ban</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/security/" rel="tag">Security</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/linux/" rel="tag">Linux</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/server/" rel="tag">Server</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+		<hr>
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-format="autorelaxed"
+		     data-ad-client="ca-pub-1926937123072670"
+		     data-ad-slot="1889468337"></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		<hr>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">Tentang Ardi Jonias Fortuna</span>
+	</div>
+	<div class="authorbox__description">
+		Roses are red, violets are blue. There is nothing can&rsquo;t to do
+	</div>
+</div>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/kumpulan-dns-server-terbaik-dan-tercepat-2026/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Sebelumnya</span>
+			<p class="pager__title">Kumpulan DNS Server Terbaik dan Tercepat 2026</p>
+		</a>
+	</div>
+</nav>
+<div id="disqus-container">
+	<script src="https://giscus.app/client.js"
+        data-repo="laztname/laztname"
+        data-repo-id="R_kgDOLULuVg"
+        data-category="General"
+        data-category-id="DIC_kwDOLULuVs4CdT6m"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+			</div>
+			<aside class="sidebar sidebar--left"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="CARI…" value="" name="q" aria-label="CARI…">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://potato.id/">
+	</form>
+</div><div class="widget-recent widget">
+	<h3 class="widget__title">Information</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+    <li class="widget__item">
+        <picture>
+            <source srcset="/img/home_hu_3b9b5be8487aaba3.webp" media="(min-width: 1024px)">
+            <source srcset="/img/home_hu_173579ac87338ebc.webp" media="(min-width: 768px) and (max-width: 1023px)">
+            <source srcset="/img/home_hu_db8ab209d61d1924.webp" media="(max-width: 767px)">
+            <img class="widget__link"
+                 src="/img/home_hu_173579ac87338ebc.webp" 
+                 width="800"
+                 height="694"
+                 alt="Di rumah saja"
+                 loading="lazy">
+        </picture>
+    </li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-recent widget">
+	<h3 class="widget__title">Postingan Terbaru</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/">Dynamic IP Denylisting dengan NGINX Plus dan fail2ban</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/kumpulan-dns-server-terbaik-dan-tercepat-2026/">Kumpulan DNS Server Terbaik dan Tercepat 2026</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/apa-itu-infatica-p2b-network/">Apa Itu Infatica P2B Network? Cara Menghapus Infatica dari Windows</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/generate-wildcard-ssl-tls-certificate-lets-encrypt-certbot-with-dns-challenge/">Cara Generate Wildcard SSL Let&#39;s Encrypt dengan Certbot DNS Challenge (Panduan Lengkap)</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/kerentanan-rce-kritis-plugin-wordpress-900k-instalasi-deteksi-mitigasi/">Critical RCE pada Plugin WordPress (900K&#43; Instalasi): Detektsi &amp; Mitigasi</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-categories widget">
+	<h3 class="widget__title">Kategori</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/defensive/">Defensive</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/development/">Development</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/networking/">Networking</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/offensive/">Offensive</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/reversing/">Reversing</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/security/">Security</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/web-hacking/">Web Hacking</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-taglist widget">
+	<h3 class="widget__title">Tag</h3>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (9)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cyber-hygiene/" title="Cyber Hygiene">Cyber Hygiene (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/dns/" title="DNS">DNS (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/end-user/" title="End User">End User (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/end-users/" title="End-Users">End-Users (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/fail2ban/" title="Fail2ban">Fail2ban (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/file-upload/" title="File Upload">File Upload (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/git/" title="Git">Git (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitdumper/" title="Gitdumper">Gitdumper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/githack/" title="Githack">Githack (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages/" title="Github Pages">Github Pages (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/incident-response/" title="Incident Response">Incident Response (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/infatica/" title="Infatica">Infatica (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/infostealer/" title="Infostealer">Infostealer (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (18)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/intrusion-prevention-system/" title="Intrusion Prevention System">Intrusion Prevention System (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/lfi/" title="LFI">LFI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/linux/" title="Linux">Linux (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/malware/" title="Malware">Malware (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nginx/" title="NGINX">NGINX (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/phishing/" title="Phishing">Phishing (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/proxy/" title="Proxy">Proxy (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ransomware/" title="Ransomware">Ransomware (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/rce/" title="RCE">RCE (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/retas-labs/" title="Retas Labs">Retas Labs (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/security/" title="Security">Security (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/server/" title="Server">Server (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/sqli/" title="SQLI">SQLI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ssl/tls-certificate/" title="SSL/TLS Certificate">SSL/TLS Certificate (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/surabaya-hacker-link/" title="Surabaya Hacker Link">Surabaya Hacker Link (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/telegram-bot/" title="Telegram Bot">Telegram Bot (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/text-editor/" title="Text Editor">Text Editor (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/users/" title="Users">Users (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/vim/" title="VIM">VIM (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/web-hacking/" title="Web Hacking">Web Hacking (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/windows/" title="Windows">Windows (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (35)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
+	</div>
+</div>
+
+<div class="widget-social widget">
+	<h3 class="widget-social__title widget__title">Sosmed</h3>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Instagram" rel="noopener noreferrer" href="https://www.instagram.com/joniasfortuna" target="_blank">
+				<svg class="widget-social__link-icon icon icon-instagram" width="24" height="24" viewBox="0 0 256 256"><circle cx="193" cy="59" r="15"/><path fill-rule="evenodd" d="M101 0h54c41 0 58.4 3.9 74.5 17C256.2 37.5 256 74.8 256 97.7v60c0 26.7 0 60.4-26.5 81.4-16 13.4-33.5 16.9-74.5 16.9h-54c-41 0-57.5-3.5-74.5-16.9C1 218.9.5 186.3.1 160.5L0 155V97.7c0-23-.2-60.2 26.5-80.7C45 2 60 0 101 0zm4.9 23h44.3c45.8 0 58.3 3.5 70.3 17.5 11.8 13.2 12 30.1 12.5 62.9V156c.2 20.8.3 45.8-12.5 59.5-12 14-24.5 17.5-70.3 17.5h-44.3c-45.9 0-57.3-3.5-70.4-17.5-12.2-13-12.3-36.5-12.4-56.7v-55.6c.4-32.6.7-49.6 12.4-62.7C48 26.5 60 23 105.9 23zm19.6 144.5a42 42 0 1 0 0-84 42 42 0 0 0 0 84zm0 22.5a64.5 64.5 0 1 0 0-129 64.5 64.5 0 0 0 0 129z"/></svg>
+				<span>Instagram</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer" href="https://linkedin.com/in/joniasfortuna" target="_blank">
+				<svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
+				<span>LinkedIn</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Telegram" rel="noopener noreferrer" href="https://t.me/laztname" target="_blank">
+				<svg class="widget-social__link-icon icon icon-telegram" width="24" height="24" viewBox="0 0 132 110"><path fill="#ddd" d="M50 103c-4 0-3-1-5-5L34 60l88-52"/><path fill="#aaa" d="M50 103c3 0 4-1 6-3l16-16-20-12"/><path fill="#fff" d="M52 72l48 36c6 3 10 2 11-5l20-93c2-8-3-11-8-9L7 45c-8 4-8 8-1 10l29 9 69-43c3-2 6-1 4 1"/></svg>
+				<span>Telegram</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/laztname" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:jonias@potato.id">
+				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>jonias@potato.id</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+
+</aside>
+		</div>
+		<footer class="footer">
+    <div class="container footer__container flex">
+        
+        <div class="footer__copyright">
+            &copy; 2026 
+            <a href="https://potato.id/">Ardi Jonias Fortuna</a>.
+            <span class="footer__copyright-credits">Dibuat dengan <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> dan Tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+        </div>
+    </div>
+</footer>
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script></body>
+</html>

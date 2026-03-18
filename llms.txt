@@ -6,6 +6,17 @@ Base URL: https://potato.id/
 
 # SECTION: CONTENT_INDEX
 
+## Dynamic IP Denylisting with NGINX Plus and fail2ban
+
+[URL](https://potato.id/en/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/)  
+Date: 2026-03-17
+
+Summary:
+ This article is based on the original NGINX blog post by Liam Crilly of F5, published September 19, 2017.
+You may not realize it, but your website is under constant threat. If it&rsquo;s running WordPress, bots are trying to spam you. If it has a login page, there are brute-force password attacks. You may also consider search engine spiders as unwanted visitors.
+Defending your site from unwanted, suspicious, and malicious activity is no easy task. Web application firewalls are effective tools and must be considered as part of your security stack. For most environments, there&rsquo;s no such thing as too much security, and a multi-layered approach is invariably the most effective.
+
+
 ## Collection of Best and Fastest DNS Servers 2026
 
 [URL](https://potato.id/en/posts/collection-of-best-and-fastest-dns-servers-2026/)  

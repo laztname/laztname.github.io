@@ -6,8 +6,15 @@
     <description>Recent content in Categories on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 04 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/en/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Security</title>
+      <link>https://potato.id/en/categories/security/</link>
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/categories/security/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Networking</title>
       <link>https://potato.id/en/categories/networking/</link>
