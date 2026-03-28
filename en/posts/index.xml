@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 17 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Anti-Gacor: Prevention and Protection Against Online Gambling Slot Injection on Websites</title>
+      <link>https://potato.id/en/posts/anti-gacor-prevention-and-protection-against-online-gambling-slot-injection/</link>
+      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/anti-gacor-prevention-and-protection-against-online-gambling-slot-injection/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;In recent years, online gambling content injection attacks have surged significantly. Known by some groups as &lt;strong&gt;&amp;ldquo;slot gacor injection&amp;rdquo;&lt;/strong&gt; or &lt;strong&gt;&amp;ldquo;judol (judi online/online gambling) attacks&amp;rdquo;&lt;/strong&gt;, these have become one of the most disruptive threats for website administrators in Indonesia. Countless government agency websites, universities, and trusted institutions have fallen victim.&lt;/p&gt;&#xA;&lt;p&gt;This article provides a comprehensive overview: what slot gacor is, how these attacks work, and how to prevent, detect, and recover from a compromised website.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Dynamic IP Denylisting with NGINX Plus and fail2ban</title>
       <link>https://potato.id/en/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/</link>
