@@ -146,6 +146,46 @@
 	       
 
             <figure class="list__thumbnail thumbnail">
+                <a class="thumbnail__link" href="/posts/my-daily-vim/">
+                <picture>
+                    <source srcset="/img/vim/thumb_hu_3136f759cec522ba.webp" media="(min-width: 1024px)">
+                    <source srcset="/img/vim/thumb_hu_f044d504f61e97ef.webp" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="/img/vim/thumb_hu_f12efb8ab23bb8a0.webp" media="(max-width: 767px)">
+                    <img class="thumbnail__image"
+                         src="/img/vim/thumb_hu_f044d504f61e97ef.webp"
+                         width="800"
+                         height="351"
+                         alt="My Daily VIM"
+                         loading="lazy">
+                </picture>
+                </a>
+            </figure>
+
+
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/my-daily-vim/" rel="bookmark">
+			My Daily VIM
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-02-12T00:00:00Z">12-02-2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/development/" rel="category">Development</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		VIM - Text Editor Mungkin kalian sudah tidak asing lagi dengan text editor satu ini, yup VIM atau Vi Improved. Vim adalah text editor berbasis terminal yang sangat mudah digunakan dan mempercepat pekerjaan, vim selalu diibaratkan text editor yang susah karena penggunanya belum terbiasa akan bind-key defaultnya.
+VIM sendiri adalah text editor yang sudah ada sejak tahun 1991, dan sampai saat ini masih banyak digunakan oleh para developer, sysadmin, dan lainnya. VIM juga merupakan text editor yang …
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/my-daily-vim/">Selanjutnya…</a>
+	</div>
+</article>
+<article class="list__item post">
+	       
+
+            <figure class="list__thumbnail thumbnail">
                 <a class="thumbnail__link" href="/posts/harderning-server-with-fail2ban-to-telegram/">
                 <picture>
                     <source srcset="/img/fail2ban/thumb_hu_fd8a90329f953eab.webp" media="(min-width: 1024px)">
@@ -466,32 +506,6 @@ Ada fitur pilih bahasa, kita cek scriptnya yuk
 		<a class="list__footer-readmore btn" href="/posts/dom-based-xss/">Selanjutnya…</a>
 	</div>
 </article>
-<article class="list__item post">
-	
-
-
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/xss-prevention/" rel="bookmark">
-			XSS Prevention
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-02-21T00:00:00Z">21-02-2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/web-hacking/" rel="category">Web Hacking</a>, <a class="meta__link" href="/categories/defensive/" rel="category">Defensive</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		setelah sedikit membahas XSS di sini, ya meskipun agak ngawur saatnya kita bahas cara mencegah bug ini ada pada web kita
-XSS bisa berjalan / dijalankan karena tag &lt;script&gt; yang lepas dan berjalan / terender oleh browser maka dari itu kita manipulasi browser agar tidak menjalankan tag html yang di input kan user, eitsss kita ga akan bongkar-bongkar browser kok, cuman sedikit permainan sebelum input user di munculkan pada website
-example:
-
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/xss-prevention/">Selanjutnya…</a>
-	</div>
-</article>
 
 </main>
 
@@ -536,11 +550,11 @@ example:
 	<h3 class="widget__title">Postingan Terbaru</h3>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/subdomain-takeover-via-aws-elastic-beanstalk/">Subdomain Takeover via AWS Elastic Beanstalk</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/anti-gacor-pencegahan-dan-perlindungan-website-judol/">Anti-Gacor: Pencegahan dan Perlindungan Injeksi Slot Judi Online pada Website</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/">Dynamic IP Denylisting dengan NGINX Plus dan fail2ban</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/kumpulan-dns-server-terbaik-dan-tercepat-2026/">Kumpulan DNS Server Terbaik dan Tercepat 2026</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/apa-itu-infatica-p2b-network/">Apa Itu Infatica P2B Network? Cara Menghapus Infatica dari Windows</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/generate-wildcard-ssl-tls-certificate-lets-encrypt-certbot-with-dns-challenge/">Cara Generate Wildcard SSL Let&#39;s Encrypt dengan Certbot DNS Challenge (Panduan Lengkap)</a></li>
 		</ul>
 	</div>
 </div>
@@ -573,10 +587,11 @@ example:
 	<h3 class="widget__title">Tag</h3>
 	<div class="widget__content">
 		<a class="widget-taglist__link widget__link btn" href="/tags/anti-judol/" title="Anti-Judol">Anti-Judol (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/bug-bounty/" title="Bug Bounty">Bug Bounty (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (9)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/cyber-hygiene/" title="Cyber Hygiene">Cyber Hygiene (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/cybersecurity/" title="Cybersecurity">Cybersecurity (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/dns/" title="DNS">DNS (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/dns/" title="DNS">DNS (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/end-user/" title="End User">End User (5)</a>
@@ -607,6 +622,7 @@ example:
 		<a class="widget-taglist__link widget__link btn" href="/tags/server/" title="Server">Server (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/sqli/" title="SQLI">SQLI (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/ssl/tls-certificate/" title="SSL/TLS Certificate">SSL/TLS Certificate (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/subdomain-takeover/" title="Subdomain Takeover">Subdomain Takeover (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/surabaya-hacker-link/" title="Surabaya Hacker Link">Surabaya Hacker Link (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/telegram-bot/" title="Telegram Bot">Telegram Bot (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
@@ -618,7 +634,7 @@ example:
 		<a class="widget-taglist__link widget__link btn" href="/tags/web-hacking/" title="Web Hacking">Web Hacking (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/windows/" title="Windows">Windows (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (3)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (35)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (36)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
 	</div>

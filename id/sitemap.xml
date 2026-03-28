@@ -2,6 +2,171 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://potato.id/tags/bug-bounty/</loc>
+    <lastmod>2026-03-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://potato.id/en/tags/bug-bounty/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://potato.id/tags/bug-bounty/"
+                />
+  </url><url>
+    <loc>https://potato.id/categories/</loc>
+    <lastmod>2026-03-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://potato.id/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://potato.id/categories/"
+                />
+  </url><url>
+    <loc>https://potato.id/categories/defensive/</loc>
+    <lastmod>2026-03-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://potato.id/en/categories/defensive/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://potato.id/categories/defensive/"
+                />
+  </url><url>
+    <loc>https://potato.id/tags/dns/</loc>
+    <lastmod>2026-03-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://potato.id/en/tags/dns/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://potato.id/tags/dns/"
+                />
+  </url><url>
+    <loc>https://potato.id/</loc>
+    <lastmod>2026-03-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://potato.id/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://potato.id/"
+                />
+  </url><url>
+    <loc>https://potato.id/categories/offensive/</loc>
+    <lastmod>2026-03-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://potato.id/en/categories/offensive/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://potato.id/categories/offensive/"
+                />
+  </url><url>
+    <loc>https://potato.id/posts/</loc>
+    <lastmod>2026-03-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://potato.id/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://potato.id/posts/"
+                />
+  </url><url>
+    <loc>https://potato.id/tags/subdomain-takeover/</loc>
+    <lastmod>2026-03-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://potato.id/en/tags/subdomain-takeover/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://potato.id/tags/subdomain-takeover/"
+                />
+  </url><url>
+    <loc>https://potato.id/posts/subdomain-takeover-via-aws-elastic-beanstalk/</loc>
+    <lastmod>2026-03-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://potato.id/en/posts/subdomain-takeover-via-aws-elastic-beanstalk/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://potato.id/posts/subdomain-takeover-via-aws-elastic-beanstalk/"
+                />
+  </url><url>
+    <loc>https://potato.id/tags/</loc>
+    <lastmod>2026-03-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://potato.id/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://potato.id/tags/"
+                />
+  </url><url>
+    <loc>https://potato.id/tags/write-up/</loc>
+    <lastmod>2026-03-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://potato.id/en/tags/write-up/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://potato.id/tags/write-up/"
+                />
+  </url><url>
     <loc>https://potato.id/posts/anti-gacor-pencegahan-dan-perlindungan-website-judol/</loc>
     <lastmod>2026-03-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -32,21 +197,6 @@
                 href="https://potato.id/tags/anti-judol/"
                 />
   </url><url>
-    <loc>https://potato.id/categories/</loc>
-    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://potato.id/en/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="https://potato.id/categories/"
-                />
-  </url><url>
     <loc>https://potato.id/tags/cybersecurity/</loc>
     <lastmod>2026-03-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -72,21 +222,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
-    <loc>https://potato.id/</loc>
-    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://potato.id/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="https://potato.id/"
-                />
-  </url><url>
     <loc>https://potato.id/tags/malware/</loc>
     <lastmod>2026-03-23T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -100,36 +235,6 @@
                 rel="alternate"
                 hreflang="id"
                 href="https://potato.id/tags/malware/"
-                />
-  </url><url>
-    <loc>https://potato.id/posts/</loc>
-    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://potato.id/en/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="https://potato.id/posts/"
-                />
-  </url><url>
-    <loc>https://potato.id/tags/</loc>
-    <lastmod>2026-03-23T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://potato.id/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="https://potato.id/tags/"
                 />
   </url><url>
     <loc>https://potato.id/tags/web-defacement/</loc>
@@ -267,21 +372,6 @@
                 href="https://potato.id/tags/server/"
                 />
   </url><url>
-    <loc>https://potato.id/tags/dns/</loc>
-    <lastmod>2026-03-04T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://potato.id/en/tags/dns/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="https://potato.id/tags/dns/"
-                />
-  </url><url>
     <loc>https://potato.id/tags/internet/</loc>
     <lastmod>2026-03-04T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -355,21 +445,6 @@
                 rel="alternate"
                 hreflang="id"
                 href="https://potato.id/posts/apa-itu-infatica-p2b-network/"
-                />
-  </url><url>
-    <loc>https://potato.id/categories/defensive/</loc>
-    <lastmod>2026-02-21T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://potato.id/en/categories/defensive/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="https://potato.id/categories/defensive/"
                 />
   </url><url>
     <loc>https://potato.id/tags/infatica/</loc>
@@ -672,21 +747,6 @@
                 href="https://potato.id/posts/credential-attack/"
                 />
   </url><url>
-    <loc>https://potato.id/categories/offensive/</loc>
-    <lastmod>2025-06-12T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://potato.id/en/categories/offensive/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="https://potato.id/categories/offensive/"
-                />
-  </url><url>
     <loc>https://potato.id/posts/https-adalah-website-yang-aman/</loc>
     <lastmod>2025-05-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -700,21 +760,6 @@
                 rel="alternate"
                 hreflang="id"
                 href="https://potato.id/posts/https-adalah-website-yang-aman/"
-                />
-  </url><url>
-    <loc>https://potato.id/tags/write-up/</loc>
-    <lastmod>2025-06-12T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://potato.id/en/tags/write-up/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="https://potato.id/tags/write-up/"
                 />
   </url><url>
     <loc>https://potato.id/posts/validasi-spf-dkim-dmarc/</loc>

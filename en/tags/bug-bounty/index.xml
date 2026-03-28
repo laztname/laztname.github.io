@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bug Bounty on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/bug-bounty/</link>
+    <description>Recent content in Bug Bounty on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 28 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/bug-bounty/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Subdomain Takeover via AWS Elastic Beanstalk</title>
+      <link>https://potato.id/en/posts/subdomain-takeover-via-aws-elastic-beanstalk/</link>
+      <pubDate>Sat, 28 Mar 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/subdomain-takeover-via-aws-elastic-beanstalk/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Subdomain takeover&lt;/strong&gt; is a vulnerability that&amp;rsquo;s often underestimated, yet carries significant real-world impact. This article covers a real case of subdomain takeover via &lt;strong&gt;AWS Elastic Beanstalk&lt;/strong&gt; - from the core concept and exploitation steps, to detection and prevention.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;what-is-subdomain-takeover&#34;&gt;What Is Subdomain Takeover?&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Subdomain takeover&lt;/strong&gt; (also known as &lt;em&gt;domain takeover&lt;/em&gt; or &lt;em&gt;domain hijacking&lt;/em&gt;) is a vulnerability that occurs when a domain or subdomain has an active DNS record, but the third-party service it points to has been deleted or deprovisioned.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

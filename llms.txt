@@ -6,6 +6,16 @@ Base URL: https://potato.id/
 
 # SECTION: CONTENT_INDEX
 
+## Subdomain Takeover via AWS Elastic Beanstalk
+
+[URL](https://potato.id/en/posts/subdomain-takeover-via-aws-elastic-beanstalk/)  
+Date: 2026-03-28
+
+Summary:
+Subdomain takeover is a vulnerability that&rsquo;s often underestimated, yet carries significant real-world impact. This article covers a real case of subdomain takeover via AWS Elastic Beanstalk - from the core concept and exploitation steps, to detection and prevention.
+What Is Subdomain Takeover? Subdomain takeover (also known as domain takeover or domain hijacking) is a vulnerability that occurs when a domain or subdomain has an active DNS record, but the third-party service it points to has been deleted or deprovisioned.
+
+
 ## Anti-Gacor: Prevention and Protection Against Online Gambling Slot Injection on Websites
 
 [URL](https://potato.id/en/posts/anti-gacor-prevention-and-protection-against-online-gambling-slot-injection/)  
