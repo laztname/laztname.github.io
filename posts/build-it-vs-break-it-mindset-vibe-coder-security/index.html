@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html class="no-js" lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow, max-image-preview:large">
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="theme-color" content="#efe6dd">
+	<meta http-equiv="content-language" content="id">
+	<meta name="author" content="Ardi Jonias Fortuna">
+	<title>Build It vs Break It: Kenapa Vibe Coder Sering Bikin Aplikasi yang Mudah Dibobol - Jonias Fortuna</title>
+	<link rel="canonical" href="https://potato.id/posts/build-it-vs-break-it-mindset-vibe-coder-security/">
+	
+	
+	<link rel="alternate" hreflang="x-default" href="https://potato.id/posts/build-it-vs-break-it-mindset-vibe-coder-security/">
+	<link rel="alternate" hreflang="id" href="https://potato.id/posts/build-it-vs-break-it-mindset-vibe-coder-security/">
+	
+	<link rel="alternate" hreflang="en" href="https://potato.id/en/posts/build-it-vs-break-it-mindset-vibe-coder-security/">
+	
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670" crossorigin="anonymous"></script>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Banyak developer membangun aplikasi cepat tapi lupa soal keamanan. Artikel ini membahas mindset Build It vs Break It dan kenapa ini penting banget di era vibe coding.">
+		<meta property="og:url" content="https://potato.id/posts/build-it-vs-break-it-mindset-vibe-coder-security/">
+  <meta property="og:site_name" content="Jonias Fortuna">
+  <meta property="og:title" content="Build It vs Break It: Kenapa Vibe Coder Sering Bikin Aplikasi yang Mudah Dibobol">
+  <meta property="og:description" content="Banyak developer membangun aplikasi cepat tapi lupa soal keamanan. Artikel ini membahas mindset Build It vs Break It dan kenapa ini penting banget di era vibe coding.">
+  <meta property="og:locale" content="id">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-04-06T00:00:00+00:00">
+    <meta property="article:tag" content="Keamanan Web">
+    <meta property="article:tag" content="Cybersecurity">
+    <meta property="article:tag" content="Secure Coding">
+    <meta property="article:tag" content="Vibe Coding">
+    <meta property="article:tag" content="Web Security">
+    <meta property="og:image" content="https://potato.id/img/vibecode/thumb.png">
+
+		
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://potato.id/img/vibecode/thumb.png">
+  <meta name="twitter:title" content="Build It vs Break It: Kenapa Vibe Coder Sering Bikin Aplikasi yang Mudah Dibobol">
+  <meta name="twitter:description" content="Banyak developer membangun aplikasi cepat tapi lupa soal keamanan. Artikel ini membahas mindset Build It vs Break It dan kenapa ini penting banget di era vibe coding.">
+
+        <link rel="me" href="https://infosec.exchange/@laztname">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://pagead2.googlesyndication.com">
+	<link rel="preconnect" href="https://googleads.g.doubleclick.net">
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        
+        <link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2" type="font/woff2" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap"></noscript>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+
+	
+          
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https:\/\/potato.id\/posts\/build-it-vs-break-it-mindset-vibe-coder-security\/#article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/potato.id\/posts\/build-it-vs-break-it-mindset-vibe-coder-security\/"
+  },
+  "headline": "Build It vs Break It: Kenapa Vibe Coder Sering Bikin Aplikasi yang Mudah Dibobol",
+  "description": "Banyak developer membangun aplikasi cepat tapi lupa soal keamanan. Artikel ini membahas mindset Build It vs Break It dan kenapa ini penting banget di era vibe coding.",
+  "inLanguage": "id",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/potato.id\/img\/vibecode\/thumb.png"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Ardi Jonias Fortuna",
+    "url": "https:\/\/potato.id\/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jonias Fortuna",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/potato.id\/favicon.ico"
+    }
+  },
+  "articleSection": "posts",
+  "keywords": ["keamanan web","cybersecurity","secure coding","vibe coding","web security"],
+  "wordCount":  2168 ,
+  "datePublished": "2026-04-06T00:00:00Z",
+  "dateModified": "2026-04-06T00:00:00Z"
+}
+</script>
+
+
+        
+
+<script>
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "ii5leisvaz");
+</script>
+</head>
+<body class="body">
+	<div id="loading"></div>
+	<div class="container container--outer">
+		<header class="header">
+        <div class="container">
+                <div class="logo">
+                        <a class="logo__link" href="/" title="Jonias Fortuna" rel="home">
+                                <div class="logo__title">potato</div>
+                                <div class="logo__tagline">Just another potato website.</div>
+                        </a>
+                </div>
+                
+<nav class="menu">
+        <button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                <span class="menu__btn-title" tabindex="-1">Menu</span>
+        </button>
+
+        <ul class="menu__list">
+                <li class="menu__item">
+                        <a class="menu__link" href="/">
+                                
+                                <span class="menu__text">Home</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/about/">
+                                
+                                <span class="menu__text">About Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/contact/">
+                                
+                                <span class="menu__text">Contact Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/privacy-policy/">
+                                
+                                <span class="menu__text">Privacy Policy</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/uses/">
+                                
+                                <span class="menu__text">Uses</span>
+                                
+                        </a>
+                </li>
+
+		
+		<li class="menu__item menu__item--lang">
+		  
+		    <a class="menu__link"
+		       href="/en/posts/build-it-vs-break-it-mindset-vibe-coder-security/"
+		       lang="en">
+		       English
+		    </a>
+		  
+		</li>
+		
+
+        </ul>
+</nav>
+
+
+        </div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Build It vs Break It: Kenapa Vibe Coder Sering Bikin Aplikasi yang Mudah Dibobol</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-04-06T00:00:00Z">06-04-2026</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/defensive/" rel="category">Defensive</a>
+	</span>
+</div></div>
+		</header>
+		       
+
+            <figure class="post__thumbnail thumbnail">
+                
+                <picture>
+                    <source srcset="/img/vibecode/thumb_hu_566617890d6ad7a3.webp" media="(min-width: 1024px)">
+                    <source srcset="/img/vibecode/thumb_hu_cc3645bd69724900.webp" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="/img/vibecode/thumb_hu_36b0e1a3347314fa.webp" media="(max-width: 767px)">
+                    <img class="thumbnail__image"
+                         src="/img/vibecode/thumb_hu_cc3645bd69724900.webp"
+                         width="800"
+                         height="542"
+                         alt="Build It vs Break It: Kenapa Vibe Coder Sering Bikin Aplikasi yang Mudah Dibobol"
+                         loading="lazy">
+                </picture>
+                
+            </figure>
+
+<div class="content post__content clearfix">
+			<p>Ada sebuah pola yang sudah sering terjadi belakangan ini. Seorang developer/vibe coder membangun sebuah aplikasi dalam waktu singkat, men-deploy-nya ke publik, mendapat traction di media sosial, lalu beberapa waktu kemudian ada yang reply dengan database-nya bocor.</p>
+<p>Bukan karena developer-nya bodoh. Bukan karena teknologi yang dipakai buruk. Tapi karena ada satu hal yang sering terlewat ketika kita terlalu fokus pada kecepatan: <strong>keamanan</strong>.</p>
+<p>Di artikel ini kita akan membahas mindset <strong>Build It vs Break It</strong>. Why matter?, di mana para vibe coder kurang teliti terhadap keamanan dan hanya fokus dihasil produknya saja, lalu bagaimana cara berpikir yang lebih aman tanpa harus mengorbankan kecepatan development? di sini saya mencoba membahas secara singkat.</p>
+<hr>
+<h2 id="dua-pola-pikir-yang-saling-bertabrakan">Dua Pola Pikir yang Saling Bertabrakan</h2>
+<p>Dalam dunia software development, ada dua ekstrem yang sering bertemu:</p>
+<p>Yang pertama adalah mentalitas &ldquo;yang penting jalan dulu&rdquo;. Fokusnya adalah kecepatan: fitur selesai, demo sukses, deploy done. Ini bukan hal yang salah, terutama ketika sedang di fase awal validasi ide atau MVP. Masalahnya muncul ketika mentalitas ini terbawa terus ke production bahkan setelah aplikasi sudah dipakai orang banyak dan tidak banyak dari level manajerial sering nge-push developer sehingga mereka lebih senang menggunakan cara ini.</p>
+<p>Yang kedua adalah mentalitas &ldquo;harus sempurna dulu&rdquo;. Developer tipe ini butuh waktu lama karena mereka terlalu detail di setiap sudut kode. Ini juga punya masalah sendiri - product tidak pernah selesai, kalah cepat dengan kompetitor.</p>
+<p>Tapi di dimensi lain yang sering luput dari keduanya adalah <strong>apakah aplikasi ini aman?</strong></p>
+<p>Bukan &ldquo;sudah ada login page belum?&rdquo;, tapi aman dalam arti yang sesungguhnya. Aman dari manipulasi input. Aman dari akses tidak sah. Aman dari kebocoran data yang tidak disengaja, pada intinya semua orang ingin aplikasinya aman, namun pada saat proses development sering ketinggalan bahkan banyak ditinggalkan karena dianggap membuat lama proses development.</p>
+<hr>
+<h2 id="apa-itu-build-it-vs-break-it">Apa Itu Build It vs Break It?</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/vibecode/breaking.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/vibecode/breaking_hu_7d47ae9f921fdf98.webp" media="(min-width: 1024px)">
+        <source srcset="/img/vibecode/breaking_hu_c5e514bd356d381e.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/vibecode/breaking_hu_8ba84f77d819583a.webp" media="(max-width: 767px)">
+        <img src="/img/vibecode/breaking_hu_8ba84f77d819583a.webp"
+             alt="Broken Software"
+             class="hover-effect"
+             width="800"
+             height="454">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Konsepnya sederhana. Kamu membangun sesuatu, lalu kamu melakukan analisa atau secara langsung untuk mencoba menghancurkannya sendiri sebelum orang lain yang melakukannya.</p>
+<p><strong>Build It</strong> adalah proses pengembangan dalam Software Development Lifecycle (SDLC), di mana sistem dirancang, diimplementasikan dan diintegrasikan berdasarkan kebutuhan fungsional, mencakup perancangan fitur, penulisan kode, hingga deployment agar aplikasi dapat digunakan sesuai dengan tujuan bisnis.</p>
+<p><strong>Break It</strong> adalah proses berpikir seperti seorang attacker merepresentasikan praktik threat modeling dalam Secure Software Development Lifecycle (Secure SDLC), dimana sistem dianalisis dari perspektif attacker untuk mengidentifikasi potensi misuse, attack surface, kelemahan validasi input, serta celah pada mekanisme authentication dan authorization.</p>
+<p>Ini bukan soal menjadi paranoid. Ini soal memiliki kesadaran bahwa setiap sistem yang kamu buat akan dihadapkan pada pengguna yang sebagian dari mereka akan mencoba hal-hal yang tidak kamu bayangkan sebelumnya.</p>
+<p>Jika kamu yang membangunnya, idealnya kamu juga yang pertama kali menemukannya celahnya - bukan orang lain.</p>
+<hr>
+<h2 id="fenomena-vibe-coding-dan-masalah-di-baliknya">Fenomena Vibe Coding dan Masalah di Baliknya</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/vibecode/vibecoding.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/vibecode/vibecoding_hu_ff3ce9237ce0bad1.webp" media="(min-width: 1024px)">
+        <source srcset="/img/vibecode/vibecoding_hu_edbf5b25b362e89e.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/vibecode/vibecoding_hu_4952d39c394eddb4.webp" media="(max-width: 767px)">
+        <img src="/img/vibecode/vibecoding_hu_4952d39c394eddb4.webp"
+             alt="Meme Vibe Coding Debt"
+             class="hover-effect"
+             width="800"
+             height="379">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Istilah &ldquo;vibe coding&rdquo; mulai populer untuk menggambarkan gaya development yang sangat mengandalkan AI tools seperti Cursor, Copilot, Claude atau ChatGPT untuk menulis hampir semua kode. Developer tinggal mendeskripsikan apa yang diinginkan, AI yang nulis dan hasilnya di-paste begitu saja.</p>
+<p>Ini bukan sesuatu yang buruk secara fundamental. AI tools memang bisa mempercepat development secara signifikan. Masalahnya bukan di tools-nya, masalahnya ada di <strong>cara developer menggunakannya tanpa memahami apa yang dihasilkan</strong>.</p>
+<p>Ketika kamu meng-generate kode tanpa memahami alurnya, kamu tidak akan tahu:</p>
+<ul>
+<li>Apakah kode itu melakukan validasi input dengan benar</li>
+<li>Apakah ada asumsi yang salah tentang siapa yang bisa akses endpoint tertentu</li>
+<li>Apakah ada data sensitif yang ikut ter-expose dalam response API</li>
+<li>Apakah library yang dipakai punya known vulnerability</li>
+</ul>
+<p>Hasilnya adalah aplikasi yang secara visual terlihat profesional, demo-nya mulus, tapi di baliknya penuh dengan celah yang tidak pernah disadari oleh pembuatnya sendiri :)</p>
+<hr>
+<h2 id="dari-viral-ke-kebobolan-pola-yang-berulang">Dari Viral ke Kebobolan: Pola yang Berulang</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/vibecode/hacked.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/vibecode/hacked_hu_2b07275f96e636a4.webp" media="(min-width: 1024px)">
+        <source srcset="/img/vibecode/hacked_hu_d67392f19636f0d3.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/vibecode/hacked_hu_3eead950714bbe00.webp" media="(max-width: 767px)">
+        <img src="/img/vibecode/hacked_hu_3eead950714bbe00.webp"
+             alt="Vibe Coded App Hacked"
+             class="hover-effect"
+             width="800"
+             height="572">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Jika pembaca sering browsing di X (Twitter), pasti pernah lihat pola ini:</p>
+<p>Seseorang post &ldquo;I built this app in 2 hours using AI&rdquo;, dapat ribuan likes dan retweet. Orang-orang mulai mencobanya. Traffic naik drastis. Lalu tidak lama kemudian, ada yang menemukan celah. Database di-dump. Tidak lama kemudian aplikasinya dimatikan.</p>
+<p>Ini bukan kejadian satu atau dua kali, sudah terjadi berulang kali dan frekuensinya makin tinggi seiring semakin populernya vibe coding.</p>
+<p>Kenapa bisa terjadi? Biasanya kombinasi dari beberapa hal:</p>
+<ul>
+<li>Pertama, aplikasi di-deploy langsung ke publik tanpa melalui security review apapun. Tidak ada yang duduk dan bertanya &ldquo;bagaimana kalau ada yang coba inject SQL di sini?&rdquo;</li>
+<li>Kedua, endpoint yang harusnya protected tidak dilindungi dengan benar. Mungkin ada pengecekan login di frontend, tapi tidak ada pengecekan di sisi server.</li>
+<li>Ketiga, API keys atau credentials terkadang ikut ter-push ke repository publik karena developer tidak memahami cara pengelolaan secrets yang benar.</li>
+<li>Keempat, tidak ada rate limiting, sehingga siapa pun bisa melakukan ribuan request per menit untuk brute force atau scraping data.</li>
+<li>Kelima, masih banyak lagi.</li>
+</ul>
+<p>Prinsipnya sederhana: begitu kamu expose sesuatu ke internet, dalam hitungan menit sudah ada bot yang menscan dan mencoba berbagai attack vector. Bukan asumsi, ini fakta. Kalau kamu punya VPS public, coba cek log percobaan login ssh.</p>
+<hr>
+<h2 id="tujuh-masalah-umum-yang-sering-ditemukan">Tujuh Masalah Umum yang Sering Ditemukan</h2>
+<h3 id="security-by-accident">Security by Accident</h3>
+<p>Banyak aplikasi yang &ldquo;belum pernah kena serangan&rdquo; bukan karena aman, tapi karena belum ketahuan atau belum ada yang nyerang. Ini beda jauh dengan &ldquo;secure by design&rdquo;.</p>
+<p>Security by accident artinya kamu beruntung dan keberuntungan bukan sebuah strategi yang bisa diandalkan, terutama ketika aplikasi kamu sudah punya pengguna dan data production.</p>
+<h3 id="over-reliance-on-framework-defaults">Over-Reliance on Framework Defaults</h3>
+<p>Framework modern seperti Laravel, Django, Rails, atau Next.js memang menyediakan banyak fitur keamanan bawaan. Tapi ini sering disalahartikan sebagai &ldquo;framework udah handle semua, aku tinggal pakai&rdquo;.</p>
+<p>Kenyataannya, framework hanya membantumu menghindari kesalahan umum tapi tidak bisa menggantikan pemahaman kamu tentang apa yang sedang terjadi. Ketika kamu tidak paham cara kerja session management, token validation, atau CSRF protection, kamu bisa dengan mudah misconfigure sesuatu yang harusnya aman menjadi vulnerable.</p>
+<p>Semua kembali ke &ldquo;Man behind the gun&rdquo;-nya, karena dengan menggunakan framework, bisa saja kita sebagai developer tidak mengikuti aturan dari Framework itu sendiri.</p>
+<h3 id="copy-paste-driven-development">Copy-Paste Driven Development</h3>
+<p>Stack Overflow, forum Reddit dan AI tools adalah sumber yang sangat berguna. Tapi ada perbedaan antara memahami kode yang kamu ambil dan sekadar menyalinnya.</p>
+<p>Kode dari internet, termasuk yang dihasilkan AI sering ditulis untuk konteks yang berbeda. Contoh yang ditulis untuk mendemonstrasikan suatu konsep biasanya tidak include security considerations. Kalau kamu paste-nya langsung tanpa modifikasi dan tanpa pemahaman, kamu bisa memasukkan vulnerability yang tidak kamu sadari.</p>
+<h3 id="tidak-ada-threat-modeling">Tidak Ada Threat Modeling</h3>
+<p>Threat modeling adalah proses sederhana di mana kamu duduk dan bertanya: siapa yang mungkin menyerang sistem ini, apa yang mereka inginkan, dari mana mereka bisa masuk dan apakah setiap fitur aplikasimu sudah menyiapkannya atau tidak?</p>
+<p>Jarang ada developer, apalagi vibe coder yang melakukan ini. Padahal ini bukan proses yang harus formal atau butuh tool khusus. Cukup dengan pertanyaan-pertanyaan dasar seperti: apakah ada data di sini yang berharga untuk dicuri? Siapa yang seharusnya tidak bisa akses fitur ini? Apa yang terjadi kalau seseorang mengirimkan input yang tidak terduga?</p>
+<p>Tanpa threat model, kamu membangun sistem dengan blind spot yang besar.</p>
+<h3 id="insecure-by-design">Insecure by Design</h3>
+<p>API yang buruk adalah salah satu sumber vulnerability terbesar di aplikasi modern. Beberapa pola umum yang sering ditemukan:</p>
+<p>Endpoint yang mengembalikan lebih banyak data dari yang diperlukan - misalnya, <code>/api/user/123</code> mengembalikan seluruh object user termasuk password hash dan data internal yang harusnya tidak pernah keluar ke client.</p>
+<p>ID yang bisa ditebak. Kalau kamu bisa akses <code>/api/order/1001</code>, coba <code>/api/order/1000</code> - apakah order orang lain ikut kebuka? Ini yang disebut IDOR (Insecure Direct Object Reference) dan merupakan salah satu vulnerability paling umum di OWASP Top 10.</p>
+<p>Tidak ada authorization check yang proper. Mungkin ada autentikasi (membuktikan siapa kamu), tapi tidak ada otorisasi (membuktikan kamu boleh akses resource ini).</p>
+<h3 id="debug-mode-di-production">Debug Mode di Production</h3>
+<p>Ini kesalahan yang lebih sering terjadi dari yang dibayangkan. Developer lupa mematikan debug mode ketika deploy ke production dan hasilnya adalah stack trace yang sangat detail muncul setiap kali ada error.</p>
+<p>Buat attacker, ini seperti peta. Dengan stack trace attacker bisa memetakan nama file, struktur direktori, library yang dipakai beserta versinya dan kadang potongan kode yang sedang dieksekusi. Semua ini bisa digunakan untuk menyusun serangan yang lebih terarah.</p>
+<h3 id="works-on-my-machine-mentality">&ldquo;Works on My Machine&rdquo; Mentality</h3>
+<p>Testing di local development environment saja tidak cukup. Environment production punya karakteristik yang berbeda, konfigurasi yang berbeda, variabel yang berbeda dan yang paling penting pengguna yang tidak terduga.</p>
+<p>Tanpa proper testing terutama tanpa security testing, kamu tidak punya gambaran yang akurat tentang kondisi aplikasi kamu di production env.</p>
+<hr>
+<h2 id="cara-berpikir-break-it-pertanyaan-yang-harus-selalu-ditanya">Cara Berpikir Break It: Pertanyaan yang Harus Selalu Ditanya</h2>
+<p>Setiap kali kamu selesai membangun sebuah fitur, biasakan tanya ke diri sendiri hal-hal berikut:</p>
+<ul>
+<li>Apa yang terjadi kalau input di field ini diisi dengan karakter aneh, script HTML, atau SQL query? Apakah aplikasi kamu menanganinya dengan benar atau crash?</li>
+<li>Apakah endpoint ini bisa diakses oleh user yang tidak login? Kalau tidak bisa, apakah pengecekan dilakukan di server atau cuma di frontend?</li>
+<li>Kalau saya punya akun user biasa, apakah saya bisa akses data atau fungsi yang harusnya cuma untuk admin?</li>
+<li>Apakah response API saya memberikan informasi lebih dari yang dibutuhkan?</li>
+<li>Kalau seseorang mengirim ribuan request ke endpoint ini dalam satu menit, apa yang terjadi?</li>
+<li>Pertanyaan-pertanyaan ini tidak butuh keahlian khusus untuk ditanya. Butuhnya adalah kebiasaan dan disiplin.</li>
+<li>Dan lain lain</li>
+</ul>
+<hr>
+<h2 id="fundamental-yang-sering-diabaikan">Fundamental yang Sering Diabaikan</h2>
+<h3 id="validasi-input">Validasi Input</h3>
+<p>Setiap data yang datang dari user harus dianggap tidak aman sampai terbukti sebaliknya. Ini prinsip paling dasar dalam web security.</p>
+<p>Contoh yang rentan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// INSECURE SQL QUERY
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">query</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM users WHERE username = &#39;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">username</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span>
+</span></span></code></pre></div><p>Kalau ada yang memasukkan <code>' OR '1'='1</code> sebagai username, query di atas bisa mengembalikan semua user di database. Ini SQL Injection 101, salah satu vulnerability tertua di dunia web namun masih eksis sampai sekarang.</p>
+<p>Gunakan parameterized query atau prepared statement:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Secure SQL Query
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">query</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM users WHERE username = ?&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">execute</span>(<span style="color:#a6e22e">query</span>, [<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">username</span>])
+</span></span></code></pre></div><p>Selain SQL Injection, validasi input juga penting untuk mencegah XSS (Cross-Site Scripting), ketika attacker bisa inject script HTML ke dalam halaman yang dibuka user lain.</p>
+<h3 id="autentikasi-dan-otorisasi">Autentikasi dan Otorisasi</h3>
+<p>Autentikasi adalah memastikan kamu tahu siapa yang sedang mengakses sistem. Otorisasi adalah memastikan mereka hanya bisa akses apa yang mereka diizinkan.</p>
+<p>Keduanya harus dilakukan di sisi server, bukan hanya di sisi client. Menyembunyikan tombol di frontend bukan otorisasi, it&rsquo;s just a view dan siapa pun bisa memanipulasi request langsung tanpa melalui UI alias banyak jalan menuju roma.</p>
+<h3 id="password-dan-credential">Password dan Credential</h3>
+<p>Password tidak boleh disimpan dalam bentuk plaintext dan tidak cukup hanya di-hash dengan MD5 atau SHA1. Gunakan algoritma yang dirancang khusus untuk hashing password seperti bcrypt atau Argon2, yang memiliki sistem hash yang kuat.</p>
+<p>Jangan pernah hardcode API key, database credentials, atau secret apapun langsung di dalam kode. Gunakan environment variables dan pastikan file <code>.env</code> tidak pernah masuk ke repository apalagi bisa diakses dari public.</p>
+<h3 id="rate-limiting">Rate Limiting</h3>
+<p>Tanpa rate limiting, endpoint apapun di aplikasimu bisa diserang dengan ribuan request dalam waktu singkat. Login endpoint bisa di-brute force. API endpoint bisa di-scrape habis-habisan. Bahkan endpoint yang &ldquo;tidak penting&rdquo; bisa digunakan untuk distributed denial of service.</p>
+<p>Implementasi rate limiting tidak harus kompleks - sebagian besar framework dan platform sudah menyediakan solusi yang mudah dipakai.</p>
+<h3 id="common-vulnerability---csrf">Common Vulnerability - CSRF</h3>
+<p>Cross-Site Request Forgery adalah serangan di mana attacker membuat korban secara tidak sadar mengirimkan request ke aplikasi kamu dengan menggunakan session korban yang sedang aktif. Tanpa CSRF protection, attacker bisa membuat form di website mereka sendiri yang, ketika diklik oleh korban, akan mengirim request ke aplikasi kamu atas nama korban.</p>
+<hr>
+<h2 id="menyatukan-build-dan-break-dalam-workflow">Menyatukan Build dan Break dalam Workflow</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/vibecode/secure-pipeline.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/vibecode/secure-pipeline_hu_43b4ac3b633721c9.webp" media="(min-width: 1024px)">
+        <source srcset="/img/vibecode/secure-pipeline_hu_399fba4228983c1b.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/vibecode/secure-pipeline_hu_1081d15ffa8aea25.webp" media="(max-width: 767px)">
+        <img src="/img/vibecode/secure-pipeline_hu_1081d15ffa8aea25.webp"
+             alt="Broken Software"
+             class="hover-effect"
+             width="800"
+             height="347">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Mindset ini bukan tentang memperlambat development. Ini tentang memastikan apa yang kamu build tidak harus di-rebuild dari nol setelah terjadi insiden.</p>
+<p>Beberapa hal praktis yang bisa langsung diterapkan:</p>
+<ul>
+<li>Sebelum deploy, luangkan 15-30 menit untuk mencoba &ldquo;menyerang&rdquo; fitur yang baru kamu buat. Coba edge case yang aneh. Coba akses endpoint langsung tanpa melalui UI.</li>
+<li>Gunakan tool seperti OWASP ZAP atau Burp Suite (community edition-nya gratis) untuk basic security scanning. Kamu tidak harus jadi expert untuk menjalankannya.</li>
+<li>Set up logging yang proper. Kamu tidak bisa defend apa yang tidak kamu monitor. Ketahui kapan ada unusual activity di aplikasi kamu.</li>
+<li>Ikuti vulnerability disclosure dari framework dan library yang kamu pakai. Kalau ada security update, jangan tunda-tunda untuk update.</li>
+</ul>
+<hr>
+<h2 id="tentang-trade-off-antara-kecepatan-dan-keamanan">Tentang Trade-off antara Kecepatan dan Keamanan</h2>
+<p>Ada anggapan bahwa keamanan adalah penghalang kecepatan. Ini tidak sepenuhnya salah memang ada memang trade-off di sini. Tapi trade-off itu sering dilebih-lebihkan.</p>
+<p>Security best practices seperti parameterized query, validasi input dan proper authentication tidak membutuhkan waktu extra yang signifikan kalau sudah menjadi kebiasaan. Yang butuh waktu banyak adalah memperbaiki kerusakan setelah terjadi insiden, investigasi, komunikasi ke pengguna, perbaikan sistem dan membangun kembali kepercayaan.</p>
+<p>Kecepatan yang mengorbankan keamanan adalah hutang teknis dan hutang ini bunganya bisa sangat mahal.</p>
+<hr>
+<h2 id="penutup">Penutup</h2>
+<p>Banyak aplikasi tidak gagal karena alasan teknis yang kompleks. Mereka gagal karena mindset yang salah sejak awal.</p>
+<p>Vibe coding bukan masalah. Menggunakan AI untuk mempercepat development bukan masalah. Masalahnya adalah ketika kecepatan menjadi satu-satunya ukuran keberhasilan dan keamanan dianggap sebagai concern yang bisa ditunda.</p>
+<p>Di internet, tidak ada &ldquo;nanti diperbaiki setelah ada masalah&rdquo; karena ketika masalah itu datang, sering sudah terlambat. Data sudah bocor, kepercayaan pengguna sudah hilang.</p>
+<p>Jadikan &ldquo;bagaimana seseorang bisa menyalahgunakan ini?&rdquo; sebagai pertanyaan rutin, bukan afterthought. Bangun cepat tapi bangun dengan sadar dan mata terbuka.</p>
+<p>Karena begitu aplikasi kamu online, seseorang sudah mulai mencoba membobolnya dan lebih baiknya kamu yang menemukan celahnya lebih dulu.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/keamanan-web/" rel="tag">keamanan web</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/cybersecurity/" rel="tag">cybersecurity</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/secure-coding/" rel="tag">secure coding</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/vibe-coding/" rel="tag">vibe coding</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/web-security/" rel="tag">web security</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+		<hr>
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-format="autorelaxed"
+		     data-ad-client="ca-pub-1926937123072670"
+		     data-ad-slot="1889468337"></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		<hr>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">Tentang Ardi Jonias Fortuna</span>
+	</div>
+	<div class="authorbox__description">
+		Roses are red, violets are blue. There is nothing can&rsquo;t to do
+	</div>
+</div>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/subdomain-takeover-via-aws-elastic-beanstalk/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Sebelumnya</span>
+			<p class="pager__title">Subdomain Takeover via AWS Elastic Beanstalk</p>
+		</a>
+	</div>
+</nav>
+<div id="disqus-container">
+	<script src="https://giscus.app/client.js"
+        data-repo="laztname/laztname"
+        data-repo-id="R_kgDOLULuVg"
+        data-category="General"
+        data-category-id="DIC_kwDOLULuVs4CdT6m"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+			</div>
+			<aside class="sidebar sidebar--left"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="CARI…" value="" name="q" aria-label="CARI…">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://potato.id/">
+	</form>
+</div><div class="widget-recent widget">
+	<h3 class="widget__title">Information</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+    <li class="widget__item">
+        <picture>
+            <source srcset="/img/home_hu_3b9b5be8487aaba3.webp" media="(min-width: 1024px)">
+            <source srcset="/img/home_hu_173579ac87338ebc.webp" media="(min-width: 768px) and (max-width: 1023px)">
+            <source srcset="/img/home_hu_db8ab209d61d1924.webp" media="(max-width: 767px)">
+            <img class="widget__link"
+                 src="/img/home_hu_173579ac87338ebc.webp" 
+                 width="800"
+                 height="694"
+                 alt="Di rumah saja"
+                 loading="lazy">
+        </picture>
+    </li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-recent widget">
+	<h3 class="widget__title">Postingan Terbaru</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/build-it-vs-break-it-mindset-vibe-coder-security/">Build It vs Break It: Kenapa Vibe Coder Sering Bikin Aplikasi yang Mudah Dibobol</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/subdomain-takeover-via-aws-elastic-beanstalk/">Subdomain Takeover via AWS Elastic Beanstalk</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/anti-gacor-pencegahan-dan-perlindungan-website-judol/">Anti-Gacor: Pencegahan dan Perlindungan Injeksi Slot Judi Online pada Website</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/">Dynamic IP Denylisting dengan NGINX Plus dan fail2ban</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/kumpulan-dns-server-terbaik-dan-tercepat-2026/">Kumpulan DNS Server Terbaik dan Tercepat 2026</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-categories widget">
+	<h3 class="widget__title">Kategori</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/defensive/">Defensive</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/development/">Development</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/keamanan-siber/">Keamanan Siber</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/networking/">Networking</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/offensive/">Offensive</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/reversing/">Reversing</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/security/">Security</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/web-hacking/">Web Hacking</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-taglist widget">
+	<h3 class="widget__title">Tag</h3>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/anti-judol/" title="Anti-Judol">Anti-Judol (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/bug-bounty/" title="Bug Bounty">Bug Bounty (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (9)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cyber-hygiene/" title="Cyber Hygiene">Cyber Hygiene (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cybersecurity/" title="Cybersecurity">Cybersecurity (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/dns/" title="DNS">DNS (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/end-user/" title="End User">End User (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/end-users/" title="End-Users">End-Users (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/fail2ban/" title="Fail2ban">Fail2ban (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/file-upload/" title="File Upload">File Upload (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/git/" title="Git">Git (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitdumper/" title="Gitdumper">Gitdumper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/githack/" title="Githack">Githack (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages/" title="Github Pages">Github Pages (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/incident-response/" title="Incident Response">Incident Response (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/infatica/" title="Infatica">Infatica (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/infostealer/" title="Infostealer">Infostealer (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (18)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/intrusion-prevention-system/" title="Intrusion Prevention System">Intrusion Prevention System (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/keamanan-web/" title="Keamanan Web">Keamanan Web (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/lfi/" title="LFI">LFI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/linux/" title="Linux">Linux (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/malware/" title="Malware">Malware (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nginx/" title="NGINX">NGINX (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/phishing/" title="Phishing">Phishing (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/proxy/" title="Proxy">Proxy (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ransomware/" title="Ransomware">Ransomware (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/rce/" title="RCE">RCE (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/retas-labs/" title="Retas Labs">Retas Labs (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/secure-coding/" title="Secure Coding">Secure Coding (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/security/" title="Security">Security (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/server/" title="Server">Server (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/sqli/" title="SQLI">SQLI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ssl/tls-certificate/" title="SSL/TLS Certificate">SSL/TLS Certificate (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/subdomain-takeover/" title="Subdomain Takeover">Subdomain Takeover (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/surabaya-hacker-link/" title="Surabaya Hacker Link">Surabaya Hacker Link (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/telegram-bot/" title="Telegram Bot">Telegram Bot (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/text-editor/" title="Text Editor">Text Editor (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/users/" title="Users">Users (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/vibe-coding/" title="Vibe Coding">Vibe Coding (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/vim/" title="VIM">VIM (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/web-defacement/" title="Web Defacement">Web Defacement (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/web-hacking/" title="Web Hacking">Web Hacking (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/web-security/" title="Web Security">Web Security (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/windows/" title="Windows">Windows (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (36)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
+	</div>
+</div>
+
+<div class="widget-social widget">
+	<h3 class="widget-social__title widget__title">Sosmed</h3>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Instagram" rel="noopener noreferrer" href="https://www.instagram.com/joniasfortuna" target="_blank">
+				<svg class="widget-social__link-icon icon icon-instagram" width="24" height="24" viewBox="0 0 256 256"><circle cx="193" cy="59" r="15"/><path fill-rule="evenodd" d="M101 0h54c41 0 58.4 3.9 74.5 17C256.2 37.5 256 74.8 256 97.7v60c0 26.7 0 60.4-26.5 81.4-16 13.4-33.5 16.9-74.5 16.9h-54c-41 0-57.5-3.5-74.5-16.9C1 218.9.5 186.3.1 160.5L0 155V97.7c0-23-.2-60.2 26.5-80.7C45 2 60 0 101 0zm4.9 23h44.3c45.8 0 58.3 3.5 70.3 17.5 11.8 13.2 12 30.1 12.5 62.9V156c.2 20.8.3 45.8-12.5 59.5-12 14-24.5 17.5-70.3 17.5h-44.3c-45.9 0-57.3-3.5-70.4-17.5-12.2-13-12.3-36.5-12.4-56.7v-55.6c.4-32.6.7-49.6 12.4-62.7C48 26.5 60 23 105.9 23zm19.6 144.5a42 42 0 1 0 0-84 42 42 0 0 0 0 84zm0 22.5a64.5 64.5 0 1 0 0-129 64.5 64.5 0 0 0 0 129z"/></svg>
+				<span>Instagram</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer" href="https://linkedin.com/in/joniasfortuna" target="_blank">
+				<svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
+				<span>LinkedIn</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Telegram" rel="noopener noreferrer" href="https://t.me/laztname" target="_blank">
+				<svg class="widget-social__link-icon icon icon-telegram" width="24" height="24" viewBox="0 0 132 110"><path fill="#ddd" d="M50 103c-4 0-3-1-5-5L34 60l88-52"/><path fill="#aaa" d="M50 103c3 0 4-1 6-3l16-16-20-12"/><path fill="#fff" d="M52 72l48 36c6 3 10 2 11-5l20-93c2-8-3-11-8-9L7 45c-8 4-8 8-1 10l29 9 69-43c3-2 6-1 4 1"/></svg>
+				<span>Telegram</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/laztname" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:jonias@potato.id">
+				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>jonias@potato.id</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+
+</aside>
+		</div>
+		<footer class="footer">
+    <div class="container footer__container flex">
+        
+        <div class="footer__copyright">
+            &copy; 2026 
+            <a href="https://potato.id/">Ardi Jonias Fortuna</a>.
+            <span class="footer__copyright-credits">Dibuat dengan <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> dan Tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+        </div>
+    </div>
+</footer>
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script></body>
+</html>

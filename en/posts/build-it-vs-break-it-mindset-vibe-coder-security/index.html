@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow, max-image-preview:large">
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="theme-color" content="#efe6dd">
+	<meta http-equiv="content-language" content="en">
+	<meta name="author" content="Ardi Jonias Fortuna">
+	<title>Build It vs Break It: Why Vibe Coders Keep Shipping Apps That Are Easy to Hack - Jonias Fortuna</title>
+	<link rel="canonical" href="https://potato.id/en/posts/build-it-vs-break-it-mindset-vibe-coder-security/">
+	
+	
+	  
+	    
+	      
+	    
+	  
+	
+	<link rel="alternate" hreflang="x-default" href="https://potato.id/posts/build-it-vs-break-it-mindset-vibe-coder-security/">
+	<link rel="alternate" hreflang="en" href="https://potato.id/en/posts/build-it-vs-break-it-mindset-vibe-coder-security/">
+	
+	<link rel="alternate" hreflang="id" href="https://potato.id/posts/build-it-vs-break-it-mindset-vibe-coder-security/">
+	
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670" crossorigin="anonymous"></script>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Many developers ship applications fast but forget about security. This article covers the Build It vs Break It mindset and why it matters in the age of vibe coding.">
+		<meta property="og:url" content="https://potato.id/en/posts/build-it-vs-break-it-mindset-vibe-coder-security/">
+  <meta property="og:site_name" content="Jonias Fortuna">
+  <meta property="og:title" content="Build It vs Break It: Why Vibe Coders Keep Shipping Apps That Are Easy to Hack">
+  <meta property="og:description" content="Many developers ship applications fast but forget about security. This article covers the Build It vs Break It mindset and why it matters in the age of vibe coding.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-04-06T00:00:00+00:00">
+    <meta property="article:tag" content="Cybersecurity">
+    <meta property="article:tag" content="Secure Coding">
+    <meta property="article:tag" content="Vibe Coding">
+    <meta property="article:tag" content="Web Security">
+    <meta property="og:image" content="https://potato.id/img/vibecode/thumb.png">
+
+		
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://potato.id/img/vibecode/thumb.png">
+  <meta name="twitter:title" content="Build It vs Break It: Why Vibe Coders Keep Shipping Apps That Are Easy to Hack">
+  <meta name="twitter:description" content="Many developers ship applications fast but forget about security. This article covers the Build It vs Break It mindset and why it matters in the age of vibe coding.">
+
+        <link rel="me" href="https://infosec.exchange/@laztname">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://pagead2.googlesyndication.com">
+	<link rel="preconnect" href="https://googleads.g.doubleclick.net">
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        
+        <link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2" type="font/woff2" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap"></noscript>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+
+	
+          
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https:\/\/potato.id\/en\/posts\/build-it-vs-break-it-mindset-vibe-coder-security\/#article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/potato.id\/en\/posts\/build-it-vs-break-it-mindset-vibe-coder-security\/"
+  },
+  "headline": "Build It vs Break It: Why Vibe Coders Keep Shipping Apps That Are Easy to Hack",
+  "description": "Many developers ship applications fast but forget about security. This article covers the Build It vs Break It mindset and why it matters in the age of vibe coding.",
+  "inLanguage": "en",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/potato.id\/img\/vibecode\/thumb.png"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Ardi Jonias Fortuna",
+    "url": "https:\/\/potato.id\/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jonias Fortuna",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/potato.id\/favicon.ico"
+    }
+  },
+  "articleSection": "posts",
+  "keywords": ["web security","cybersecurity","secure coding","vibe coding","web security"],
+  "wordCount":  2425 ,
+  "datePublished": "2026-04-06T00:00:00Z",
+  "dateModified": "2026-04-06T00:00:00Z"
+}
+</script>
+
+
+        
+
+<script>
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "ii5leisvaz");
+</script>
+</head>
+<body class="body">
+	<div id="loading"></div>
+	<div class="container container--outer">
+		<header class="header">
+        <div class="container">
+                <div class="logo">
+                        <a class="logo__link" href="/en/" title="Jonias Fortuna" rel="home">
+                                <div class="logo__title">potato</div>
+                                <div class="logo__tagline">Just another potato website.</div>
+                        </a>
+                </div>
+                
+<nav class="menu">
+        <button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                <span class="menu__btn-title" tabindex="-1">Menu</span>
+        </button>
+
+        <ul class="menu__list">
+                <li class="menu__item">
+                        <a class="menu__link" href="/">
+                                
+                                <span class="menu__text">Home</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/en/about/">
+                                
+                                <span class="menu__text">About Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/en/contact/">
+                                
+                                <span class="menu__text">Contact Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/en/privacy-policy/">
+                                
+                                <span class="menu__text">Privacy Policy</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/en/uses/">
+                                
+                                <span class="menu__text">Uses</span>
+                                
+                        </a>
+                </li>
+
+		
+		<li class="menu__item menu__item--lang">
+		  
+		    <a class="menu__link"
+		       href="/posts/build-it-vs-break-it-mindset-vibe-coder-security/"
+		       lang="id">
+		       Bahasa Indonesia
+		    </a>
+		  
+		</li>
+		
+
+        </ul>
+</nav>
+
+
+        </div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Build It vs Break It: Why Vibe Coders Keep Shipping Apps That Are Easy to Hack</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-04-06T00:00:00Z">06-04-2026</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/en/categories/defensive/" rel="category">Defensive</a>
+	</span>
+</div></div>
+		</header>
+		       
+
+            <figure class="post__thumbnail thumbnail">
+                
+                <picture>
+                    <source srcset="/img/vibecode/thumb_hu_566617890d6ad7a3.webp" media="(min-width: 1024px)">
+                    <source srcset="/img/vibecode/thumb_hu_cc3645bd69724900.webp" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="/img/vibecode/thumb_hu_36b0e1a3347314fa.webp" media="(max-width: 767px)">
+                    <img class="thumbnail__image"
+                         src="/img/vibecode/thumb_hu_cc3645bd69724900.webp"
+                         width="800"
+                         height="542"
+                         alt="Build It vs Break It: Why Vibe Coders Keep Shipping Apps That Are Easy to Hack"
+                         loading="lazy">
+                </picture>
+                
+            </figure>
+
+<div class="content post__content clearfix">
+			<p>There is a pattern that keeps playing out. A developer or vibe coder builds an app in a short amount of time, deploys it publicly, gets traction on social media, and then a while later someone replies - the database got leaked.</p>
+<p>Not because the developer was incompetent. Not because the technology stack was bad. But because one thing kept getting skipped when the focus was entirely on speed: <strong>security</strong>.</p>
+<p>This article is about the <strong>Build It vs Break It</strong> mindset. Why does it matter? Where do vibe coders tend to drop the ball on security while staying focused only on the end product? And how do you shift your thinking to be more security-aware without sacrificing development speed? I&rsquo;ll try to cover it here without going too deep.</p>
+<hr>
+<h2 id="two-mindsets-that-keep-clashing">Two Mindsets That Keep Clashing</h2>
+<p>In software development, two extremes tend to collide:</p>
+<p>The first is the &ldquo;just ship it&rdquo; mentality. The priority is speed: feature done, demo works, deployed. This is not inherently wrong, especially during early-stage idea validation or MVP development. The problem shows up when this mentality carries all the way into production - even after real users are on the platform. And it does not help that many people at the management level keep pushing developers to move faster, which makes this approach feel like the only viable one.</p>
+<p>The second is the &ldquo;it has to be perfect first&rdquo; mentality. This type of developer gets stuck in every corner of the codebase. That creates its own set of problems - the product never ships, and the competition moves faster.</p>
+<p>But there is another dimension that both extremes tend to miss: <strong>is this application actually secure?</strong></p>
+<p>Not &ldquo;does it have a login page?&rdquo; - but secure in the real sense. Secure against input manipulation. Secure against unauthorized access. Secure against unintentional data exposure. Everyone wants their app to be secure, but during the development process it often gets left behind because it is seen as something that slows things down.</p>
+<hr>
+<h2 id="what-is-build-it-vs-break-it">What Is Build It vs Break It?</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/vibecode/breaking.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/vibecode/breaking_hu_7d47ae9f921fdf98.webp" media="(min-width: 1024px)">
+        <source srcset="/img/vibecode/breaking_hu_c5e514bd356d381e.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/vibecode/breaking_hu_8ba84f77d819583a.webp" media="(max-width: 767px)">
+        <img src="/img/vibecode/breaking_hu_8ba84f77d819583a.webp"
+             alt="Broken Software"
+             class="hover-effect"
+             width="800"
+             height="454">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>The concept is straightforward. You build something, then you analyze it or actively try to break it yourself before someone else does.</p>
+<p><strong>Build It</strong> is the standard development process within the Software Development Lifecycle (SDLC), where a system is designed, implemented, and integrated based on functional requirements - covering feature design, writing code, and deployment so the application can be used as intended.</p>
+<p><strong>Break It</strong> represents threat modeling within a Secure Software Development Lifecycle (Secure SDLC), where the system is analyzed from an attacker&rsquo;s perspective to identify potential misuse scenarios, attack surfaces, weak input validation, and gaps in authentication and authorization mechanisms.</p>
+<p>This is not about being paranoid. It is about being aware that every system you build will eventually be used by people - and some of them will try things you never anticipated.</p>
+<p>If you built it, you should ideally be the first one to find the holes - not someone else.</p>
+<hr>
+<h2 id="the-vibe-coding-phenomenon-and-what-hides-behind-it">The Vibe Coding Phenomenon and What Hides Behind It</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/vibecode/vibecoding.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/vibecode/vibecoding_hu_ff3ce9237ce0bad1.webp" media="(min-width: 1024px)">
+        <source srcset="/img/vibecode/vibecoding_hu_edbf5b25b362e89e.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/vibecode/vibecoding_hu_4952d39c394eddb4.webp" media="(max-width: 767px)">
+        <img src="/img/vibecode/vibecoding_hu_4952d39c394eddb4.webp"
+             alt="Meme Vibe Coding Debt"
+             class="hover-effect"
+             width="800"
+             height="379">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>The term &ldquo;vibe coding&rdquo; became popular to describe a development style that relies heavily on AI tools like Cursor, Copilot, Claude, or ChatGPT to write almost all of the code. The developer describes what they want, the AI writes it, and the output gets pasted in directly.</p>
+<p>This is not fundamentally a bad thing. AI tools genuinely do speed up development. The problem is not the tools themselves - the problem is <strong>how developers use them without understanding what gets generated</strong>.</p>
+<p>When you generate code without understanding the flow, you will not know:</p>
+<ul>
+<li>Whether that code validates input correctly</li>
+<li>Whether there are wrong assumptions about who can access a certain endpoint</li>
+<li>Whether sensitive data is leaking through API responses</li>
+<li>Whether a library being used has a known vulnerability</li>
+</ul>
+<p>The result is an application that looks polished, demos smoothly, but underneath is full of gaps the developer never noticed.</p>
+<hr>
+<h2 id="from-viral-to-breached-a-repeating-pattern">From Viral to Breached: A Repeating Pattern</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/vibecode/hacked.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/vibecode/hacked_hu_2b07275f96e636a4.webp" media="(min-width: 1024px)">
+        <source srcset="/img/vibecode/hacked_hu_d67392f19636f0d3.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/vibecode/hacked_hu_3eead950714bbe00.webp" media="(max-width: 767px)">
+        <img src="/img/vibecode/hacked_hu_3eead950714bbe00.webp"
+             alt="Vibe Coded App Hacked"
+             class="hover-effect"
+             width="800"
+             height="572">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>If you spend time on X (Twitter), you have probably seen this pattern:</p>
+<p>Someone posts &ldquo;I built this app in 2 hours using AI&rdquo;, gets thousands of likes and retweets. People start trying it out. Traffic spikes. Then not long after, someone finds a hole. The database gets dumped. Shortly after, the app goes offline.</p>
+<p>This is not a one-off event - it has happened repeatedly, and the frequency keeps climbing as vibe coding grows more popular.</p>
+<p>Why does this happen? Usually a combination of several things:</p>
+<ul>
+<li>First, apps get deployed directly to production with no security review at all. Nobody sat down and asked &ldquo;what happens if someone tries to inject SQL here?&rdquo;</li>
+<li>Second, endpoints that should be protected are not. There might be a login check on the frontend, but nothing on the server side.</li>
+<li>Third, API keys and credentials sometimes get pushed to public repositories because the developer did not understand how to manage secrets properly.</li>
+<li>Fourth, there is no rate limiting, so anyone can fire thousands of requests per minute for brute force or data scraping.</li>
+<li>Fifth, there are plenty more where those came from.</li>
+</ul>
+<p>The principle is simple: the moment you expose something to the internet, bots are scanning and probing it within minutes. This is not an assumption - it is a fact. If you have a public VPS, check your SSH login attempt logs right now.</p>
+<hr>
+<h2 id="seven-common-problems-that-keep-showing-up">Seven Common Problems That Keep Showing Up</h2>
+<h3 id="security-by-accident">Security by Accident</h3>
+<p>Many applications that &ldquo;have never been attacked&rdquo; are not secure - they just have not been found yet, or nobody has bothered targeting them. That is very different from being &ldquo;secure by design&rdquo;.</p>
+<p>Security by accident means you got lucky. And luck is not a strategy you can rely on, especially once your application has real users and real production data.</p>
+<h3 id="over-reliance-on-framework-defaults">Over-Reliance on Framework Defaults</h3>
+<p>Modern frameworks like Laravel, Django, Rails, or Next.js come with a lot of built-in security features. But this often gets misread as &ldquo;the framework handles everything, I just have to use it.&rdquo;</p>
+<p>The reality is that a framework only helps you avoid common mistakes - it cannot replace your own understanding of what is actually happening. When you do not understand how session management, token validation, or CSRF protection works, you can easily misconfigure something that should be safe and turn it into a vulnerability.</p>
+<p>It all comes back to the person behind the tool. Using a framework does not stop you from breaking the rules the framework was built around.</p>
+<h3 id="copy-paste-driven-development">Copy-Paste Driven Development</h3>
+<p>Stack Overflow, Reddit, and AI tools are genuinely useful resources. But there is a difference between understanding code you find and just copying it.</p>
+<p>Code from the internet - including AI-generated code - is often written for a different context. Examples written to demonstrate a concept usually do not include security considerations. If you paste it in directly without modification or understanding, you can unknowingly introduce a vulnerability.</p>
+<h3 id="no-threat-modeling">No Threat Modeling</h3>
+<p>Threat modeling is a simple process where you sit down and ask: who might attack this system, what do they want, where can they get in, and does each part of the application account for that?</p>
+<p>Very few developers do this, and vibe coders rarely do. But it does not have to be formal or require special tools. Basic questions like: is there data here worth stealing? Who should not be able to access this feature? What happens if someone sends unexpected input?</p>
+<p>Without a threat model, you are building a system with a large blind spot.</p>
+<h3 id="insecure-by-design">Insecure by Design</h3>
+<p>A poorly designed API is one of the biggest sources of vulnerabilities in modern applications. A few common patterns:</p>
+<p>Endpoints returning more data than necessary - for example, <code>/api/user/123</code> returning the entire user object, including the password hash and internal fields that should never leave the server.</p>
+<p>Predictable IDs. If you can access <code>/api/order/1001</code>, try <code>/api/order/1000</code> - does someone else&rsquo;s order show up? This is called IDOR (Insecure Direct Object Reference) and it is one of the most common vulnerabilities in the OWASP Top 10.</p>
+<p>No proper authorization check. There might be authentication (proving who you are), but no authorization (proving you are allowed to access this resource).</p>
+<h3 id="debug-mode-in-production">Debug Mode in Production</h3>
+<p>This happens more often than you would think. A developer forgets to turn off debug mode before deploying to production, and the result is highly detailed stack traces appearing on every error.</p>
+<p>To an attacker, this is a roadmap. A stack trace can reveal file names, directory structure, library names and versions, and sometimes pieces of the code being executed. All of that can be used to craft a more targeted attack.</p>
+<h3 id="works-on-my-machine-mentality">&ldquo;Works on My Machine&rdquo; Mentality</h3>
+<p>Testing only in a local development environment is not enough. Production has different characteristics - different configuration, different variables, and most importantly, unpredictable users.</p>
+<p>Without proper testing - and especially without any security testing - you have no accurate picture of what your application looks like in the real world.</p>
+<hr>
+<h2 id="the-break-it-mindset-questions-to-ask-every-time">The Break It Mindset: Questions to Ask Every Time</h2>
+<p>Every time you finish building a feature, get into the habit of asking yourself:</p>
+<ul>
+<li>What happens if someone puts weird characters, HTML script tags, or a SQL query into this input field? Does the application handle it correctly or crash?</li>
+<li>Can this endpoint be accessed by a user who is not logged in? If not, is the check happening on the server or just in the frontend?</li>
+<li>If I have a regular user account, can I access data or functionality that should only be for admins?</li>
+<li>Is my API response returning more information than the client actually needs?</li>
+<li>What happens if someone sends thousands of requests to this endpoint in one minute?</li>
+</ul>
+<p>These questions do not require expert knowledge to ask. They just require habit and discipline.</p>
+<hr>
+<h2 id="fundamentals-that-keep-getting-skipped">Fundamentals That Keep Getting Skipped</h2>
+<h3 id="input-validation">Input Validation</h3>
+<p>Every piece of data coming from a user should be treated as untrusted until proven otherwise. This is the most basic principle in web security.</p>
+<p>A vulnerable example:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// INSECURE SQL QUERY
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">query</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM users WHERE username = &#39;&#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">username</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span>
+</span></span></code></pre></div><p>If someone enters <code>' OR '1'='1</code> as the username, that query returns every user in the database. This is SQL Injection 101 - one of the oldest vulnerabilities on the web, and it still shows up everywhere.</p>
+<p>Use parameterized queries or prepared statements instead:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#75715e">// Secure SQL Query
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">query</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM users WHERE username = ?&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">execute</span>(<span style="color:#a6e22e">query</span>, [<span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">username</span>])
+</span></span></code></pre></div><p>Beyond SQL Injection, input validation also matters for preventing XSS (Cross-Site Scripting), where an attacker injects HTML or script tags into a page that other users will see.</p>
+<h3 id="authentication-and-authorization">Authentication and Authorization</h3>
+<p>Authentication means confirming who is accessing the system. Authorization means confirming they are only allowed to access what they are permitted to access.</p>
+<p>Both need to happen server-side, not just on the client. Hiding a button in the frontend is not authorization - it is just a view. Anyone can send requests directly without touching the UI, and there are many ways to get around frontend-only restrictions.</p>
+<h3 id="passwords-and-credentials">Passwords and Credentials</h3>
+<p>Passwords must never be stored as plaintext, and hashing them with MD5 or SHA1 is not enough. Use an algorithm built specifically for password hashing like bcrypt or Argon2, which are designed to be computationally expensive and resistant to brute force.</p>
+<p>Never hardcode API keys, database credentials, or any secrets directly in the code. Use environment variables and make sure the <code>.env</code> file never ends up in the repository, and especially never accessible from the public internet.</p>
+<h3 id="rate-limiting">Rate Limiting</h3>
+<p>Without rate limiting, any endpoint in your application can be hammered with thousands of requests in a short period. Login endpoints can be brute-forced. API endpoints can be scraped clean. Even endpoints that seem &ldquo;unimportant&rdquo; can be used in a distributed denial of service attack.</p>
+<p>Rate limiting does not have to be complex - most frameworks and platforms already provide easy-to-use solutions.</p>
+<h3 id="csrf">CSRF</h3>
+<p>Cross-Site Request Forgery is an attack where an attacker tricks a victim into unknowingly sending a request to your application using the victim&rsquo;s active session. Without CSRF protection, an attacker can set up a form on their own site that, when the victim clicks it, sends a request to your application on the victim&rsquo;s behalf.</p>
+<hr>
+<h2 id="bringing-build-and-break-together-in-your-workflow">Bringing Build and Break Together in Your Workflow</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/vibecode/secure-pipeline.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/vibecode/secure-pipeline_hu_43b4ac3b633721c9.webp" media="(min-width: 1024px)">
+        <source srcset="/img/vibecode/secure-pipeline_hu_399fba4228983c1b.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/vibecode/secure-pipeline_hu_1081d15ffa8aea25.webp" media="(max-width: 767px)">
+        <img src="/img/vibecode/secure-pipeline_hu_1081d15ffa8aea25.webp"
+             alt="Broken Software"
+             class="hover-effect"
+             width="800"
+             height="347">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>This mindset is not about slowing down development. It is about making sure what you build does not need to be rebuilt from scratch after an incident.</p>
+<p>A few practical things you can start doing right now:</p>
+<ul>
+<li>Before deploying, take 15-30 minutes to try &ldquo;attacking&rdquo; the feature you just built. Try strange edge cases. Try hitting endpoints directly without going through the UI.</li>
+<li>Use a tool like OWASP ZAP or Burp Suite (the community edition is free) for basic security scanning. You do not need to be an expert to run them.</li>
+<li>Set up proper logging. You cannot defend what you do not monitor. Know when there is unusual activity in your application.</li>
+<li>Follow vulnerability disclosures for the frameworks and libraries you use. When a security update comes out, do not put it off.</li>
+</ul>
+<hr>
+<h2 id="on-the-trade-off-between-speed-and-security">On the Trade-off Between Speed and Security</h2>
+<p>There is a common assumption that security slows you down. This is not entirely wrong - there is a real trade-off here. But that trade-off tends to be overstated.</p>
+<p>Security best practices like parameterized queries, input validation, and proper authentication do not add significant time once they become habit. What costs a lot of time is cleaning up after an incident - investigation, communicating with users, fixing the system, and rebuilding trust.</p>
+<p>Speed that sacrifices security is technical debt, and this particular debt comes with a very high interest rate.</p>
+<hr>
+<h2 id="closing">Closing</h2>
+<p>Many applications do not fail because of complex technical reasons. They fail because of the wrong mindset from the very beginning.</p>
+<p>Vibe coding is not the problem. Using AI to speed up development is not the problem. The problem is when speed becomes the only measure of success and security gets treated as something that can be sorted out later.</p>
+<p>On the internet, &ldquo;we&rsquo;ll fix it after something goes wrong&rdquo; is not a viable plan - because when something does go wrong, it is often already too late. The data is already out. The user trust is already gone.</p>
+<p>Make &ldquo;how could someone misuse this?&rdquo; a routine question, not an afterthought. Build fast, but build with intention and with your eyes open.</p>
+<p>Because the moment your application goes online, someone is already trying to break in. Better if you are the one who finds the holes first.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/en/tags/web-security/" rel="tag">web security</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/en/tags/cybersecurity/" rel="tag">cybersecurity</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/en/tags/secure-coding/" rel="tag">secure coding</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/en/tags/vibe-coding/" rel="tag">vibe coding</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/en/tags/web-security/" rel="tag">web security</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+		<hr>
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-format="autorelaxed"
+		     data-ad-client="ca-pub-1926937123072670"
+		     data-ad-slot="1889468337"></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		<hr>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Ardi Jonias Fortuna</span>
+	</div>
+	<div class="authorbox__description">
+		Roses are red, violets are blue. There is nothing can&rsquo;t to do
+	</div>
+</div>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/en/posts/subdomain-takeover-via-aws-elastic-beanstalk/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Subdomain Takeover via AWS Elastic Beanstalk</p>
+		</a>
+	</div>
+</nav>
+<div id="disqus-container">
+	<script src="https://giscus.app/client.js"
+        data-repo="laztname/laztname"
+        data-repo-id="R_kgDOLULuVg"
+        data-category="General"
+        data-category-id="DIC_kwDOLULuVs4CdT6m"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+			</div>
+			<aside class="sidebar sidebar--left"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://potato.id/">
+	</form>
+</div><div class="widget-recent widget">
+	<h3 class="widget__title">Information</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+    <li class="widget__item">
+        <picture>
+            <source srcset="/img/home_hu_3b9b5be8487aaba3.webp" media="(min-width: 1024px)">
+            <source srcset="/img/home_hu_173579ac87338ebc.webp" media="(min-width: 768px) and (max-width: 1023px)">
+            <source srcset="/img/home_hu_db8ab209d61d1924.webp" media="(max-width: 767px)">
+            <img class="widget__link"
+                 src="/img/home_hu_173579ac87338ebc.webp" 
+                 width="800"
+                 height="694"
+                 alt="Di rumah saja"
+                 loading="lazy">
+        </picture>
+    </li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-recent widget">
+	<h3 class="widget__title">Recent Posts</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/en/posts/build-it-vs-break-it-mindset-vibe-coder-security/">Build It vs Break It: Why Vibe Coders Keep Shipping Apps That Are Easy to Hack</a></li>
+			<li class="widget__item"><a class="widget__link" href="/en/posts/subdomain-takeover-via-aws-elastic-beanstalk/">Subdomain Takeover via AWS Elastic Beanstalk</a></li>
+			<li class="widget__item"><a class="widget__link" href="/en/posts/anti-gacor-prevention-and-protection-against-online-gambling-slot-injection/">Anti-Gacor: Prevention and Protection Against Online Gambling Slot Injection on Websites</a></li>
+			<li class="widget__item"><a class="widget__link" href="/en/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/">Dynamic IP Denylisting with NGINX Plus and fail2ban</a></li>
+			<li class="widget__item"><a class="widget__link" href="/en/posts/collection-of-best-and-fastest-dns-servers-2026/">Collection of Best and Fastest DNS Servers 2026</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-categories widget">
+	<h3 class="widget__title">Categories</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/cyber-security/">Cyber Security</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/defensive/">Defensive</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/development/">Development</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/networking/">Networking</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/offensive/">Offensive</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/reversing/">Reversing</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/security/">Security</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/web-hacking/">Web Hacking</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-taglist widget">
+	<h3 class="widget__title">Tags</h3>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/anti-judol/" title="Anti-Judol">Anti-Judol (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/bug-bounty/" title="Bug Bounty">Bug Bounty (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/challenges/" title="Challenges">Challenges (9)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/cyber-hygiene/" title="Cyber Hygiene">Cyber Hygiene (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/cybersecurity/" title="Cybersecurity">Cybersecurity (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/dns/" title="DNS">DNS (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/docker/" title="Docker">Docker (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/end-user/" title="End User">End User (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/end-users/" title="End-Users">End-Users (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/fail2ban/" title="Fail2ban">Fail2ban (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/file-upload/" title="File Upload">File Upload (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/git/" title="Git">Git (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/gitdumper/" title="Gitdumper">Gitdumper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/githack/" title="Githack">Githack (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/github-pages/" title="Github Pages">Github Pages (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/incident-response/" title="Incident Response">Incident Response (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/infatica/" title="Infatica">Infatica (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/infostealer/" title="Infostealer">Infostealer (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/internet/" title="Internet">Internet (18)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/intrusion-prevention-system/" title="Intrusion Prevention System">Intrusion Prevention System (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/lfi/" title="LFI">LFI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/linux/" title="Linux">Linux (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/malware/" title="Malware">Malware (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/nginx/" title="NGINX">NGINX (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/phishing/" title="Phishing">Phishing (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/proxy/" title="Proxy">Proxy (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/ransomware/" title="Ransomware">Ransomware (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/rce/" title="RCE">RCE (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/retas-labs/" title="Retas Labs">Retas Labs (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/secure-coding/" title="Secure Coding">Secure Coding (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/security/" title="Security">Security (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/server/" title="Server">Server (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/sqli/" title="SQLI">SQLI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/ssl/tls-certificate/" title="SSL/TLS Certificate">SSL/TLS Certificate (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/subdomain-takeover/" title="Subdomain Takeover">Subdomain Takeover (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/surabaya-hacker-link/" title="Surabaya Hacker Link">Surabaya Hacker Link (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/telegram-bot/" title="Telegram Bot">Telegram Bot (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/terminal/" title="Terminal">Terminal (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/text-editor/" title="Text Editor">Text Editor (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/users/" title="Users">Users (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/vibe-coding/" title="Vibe Coding">Vibe Coding (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/vim/" title="VIM">VIM (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/web-defacement/" title="Web Defacement">Web Defacement (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/web-hacking/" title="Web Hacking">Web Hacking (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/web-security/" title="Web Security">Web Security (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/windows/" title="Windows">Windows (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/wordpress/" title="Wordpress">Wordpress (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/write-up/" title="Write Up">Write Up (36)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/xss/" title="XSS">XSS (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
+	</div>
+</div>
+
+<div class="widget-social widget">
+	<h3 class="widget-social__title widget__title">Social</h3>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Instagram" rel="noopener noreferrer" href="https://www.instagram.com/joniasfortuna" target="_blank">
+				<svg class="widget-social__link-icon icon icon-instagram" width="24" height="24" viewBox="0 0 256 256"><circle cx="193" cy="59" r="15"/><path fill-rule="evenodd" d="M101 0h54c41 0 58.4 3.9 74.5 17C256.2 37.5 256 74.8 256 97.7v60c0 26.7 0 60.4-26.5 81.4-16 13.4-33.5 16.9-74.5 16.9h-54c-41 0-57.5-3.5-74.5-16.9C1 218.9.5 186.3.1 160.5L0 155V97.7c0-23-.2-60.2 26.5-80.7C45 2 60 0 101 0zm4.9 23h44.3c45.8 0 58.3 3.5 70.3 17.5 11.8 13.2 12 30.1 12.5 62.9V156c.2 20.8.3 45.8-12.5 59.5-12 14-24.5 17.5-70.3 17.5h-44.3c-45.9 0-57.3-3.5-70.4-17.5-12.2-13-12.3-36.5-12.4-56.7v-55.6c.4-32.6.7-49.6 12.4-62.7C48 26.5 60 23 105.9 23zm19.6 144.5a42 42 0 1 0 0-84 42 42 0 0 0 0 84zm0 22.5a64.5 64.5 0 1 0 0-129 64.5 64.5 0 0 0 0 129z"/></svg>
+				<span>Instagram</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer" href="https://linkedin.com/in/joniasfortuna" target="_blank">
+				<svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
+				<span>LinkedIn</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Telegram" rel="noopener noreferrer" href="https://t.me/laztname" target="_blank">
+				<svg class="widget-social__link-icon icon icon-telegram" width="24" height="24" viewBox="0 0 132 110"><path fill="#ddd" d="M50 103c-4 0-3-1-5-5L34 60l88-52"/><path fill="#aaa" d="M50 103c3 0 4-1 6-3l16-16-20-12"/><path fill="#fff" d="M52 72l48 36c6 3 10 2 11-5l20-93c2-8-3-11-8-9L7 45c-8 4-8 8-1 10l29 9 69-43c3-2 6-1 4 1"/></svg>
+				<span>Telegram</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/laztname" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:jonias@potato.id">
+				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>jonias@potato.id</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+
+</aside>
+		</div>
+		<footer class="footer">
+    <div class="container footer__container flex">
+        
+        <div class="footer__copyright">
+            &copy; 2026 
+            <a href="https://potato.id/">Ardi Jonias Fortuna</a>.
+            <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+        </div>
+    </div>
+</footer>
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script></body>
+</html>

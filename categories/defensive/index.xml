@@ -6,8 +6,15 @@
     <description>Recent content in Defensive on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>id</language>
-    <lastBuildDate>Sat, 28 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/categories/defensive/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build It vs Break It: Kenapa Vibe Coder Sering Bikin Aplikasi yang Mudah Dibobol</title>
+      <link>https://potato.id/posts/build-it-vs-break-it-mindset-vibe-coder-security/</link>
+      <pubDate>Mon, 06 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/build-it-vs-break-it-mindset-vibe-coder-security/</guid>
+      <description>&lt;p&gt;Ada sebuah pola yang sudah sering terjadi belakangan ini. Seorang developer/vibe coder membangun sebuah aplikasi dalam waktu singkat, men-deploy-nya ke publik, mendapat traction di media sosial, lalu beberapa waktu kemudian ada yang reply dengan database-nya bocor.&lt;/p&gt;&#xA;&lt;p&gt;Bukan karena developer-nya bodoh. Bukan karena teknologi yang dipakai buruk. Tapi karena ada satu hal yang sering terlewat ketika kita terlalu fokus pada kecepatan: &lt;strong&gt;keamanan&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Di artikel ini kita akan membahas mindset &lt;strong&gt;Build It vs Break It&lt;/strong&gt;. Why matter?, di mana para vibe coder kurang teliti terhadap keamanan dan hanya fokus dihasil produknya saja, lalu bagaimana cara berpikir yang lebih aman tanpa harus mengorbankan kecepatan development? di sini saya mencoba membahas secara singkat.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Subdomain Takeover via AWS Elastic Beanstalk</title>
       <link>https://potato.id/posts/subdomain-takeover-via-aws-elastic-beanstalk/</link>

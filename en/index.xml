@@ -6,8 +6,15 @@
     <description>Recent content in Main - Ardi Jonias Fortuna on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 28 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build It vs Break It: Why Vibe Coders Keep Shipping Apps That Are Easy to Hack</title>
+      <link>https://potato.id/en/posts/build-it-vs-break-it-mindset-vibe-coder-security/</link>
+      <pubDate>Mon, 06 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/build-it-vs-break-it-mindset-vibe-coder-security/</guid>
+      <description>&lt;p&gt;There is a pattern that keeps playing out. A developer or vibe coder builds an app in a short amount of time, deploys it publicly, gets traction on social media, and then a while later someone replies - the database got leaked.&lt;/p&gt;&#xA;&lt;p&gt;Not because the developer was incompetent. Not because the technology stack was bad. But because one thing kept getting skipped when the focus was entirely on speed: &lt;strong&gt;security&lt;/strong&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Subdomain Takeover via AWS Elastic Beanstalk</title>
       <link>https://potato.id/en/posts/subdomain-takeover-via-aws-elastic-beanstalk/</link>

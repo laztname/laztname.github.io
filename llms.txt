@@ -6,6 +6,16 @@ Base URL: https://potato.id/
 
 # SECTION: CONTENT_INDEX
 
+## Build It vs Break It: Why Vibe Coders Keep Shipping Apps That Are Easy to Hack
+
+[URL](https://potato.id/en/posts/build-it-vs-break-it-mindset-vibe-coder-security/)  
+Date: 2026-04-06
+
+Summary:
+There is a pattern that keeps playing out. A developer or vibe coder builds an app in a short amount of time, deploys it publicly, gets traction on social media, and then a while later someone replies - the database got leaked.
+Not because the developer was incompetent. Not because the technology stack was bad. But because one thing kept getting skipped when the focus was entirely on speed: security.
+
+
 ## Subdomain Takeover via AWS Elastic Beanstalk
 
 [URL](https://potato.id/en/posts/subdomain-takeover-via-aws-elastic-beanstalk/)  
