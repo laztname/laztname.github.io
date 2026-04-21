@@ -6,6 +6,16 @@ Base URL: https://potato.id/
 
 # SECTION: CONTENT_INDEX
 
+## How to Improve Your Qualys SSL Server Test Score and Get A+ in SSL Labs
+
+[URL](https://potato.id/en/posts/improve-qualys-ssl-server-test-score/)  
+Date: 2026-04-20
+
+Summary:
+If you are trying to understand how to improve your Qualys SSL Server Test score, you are in the right place. Qualys SSL Server Test, often referred to as SSL Labs, is one of the most widely used public tools for checking how well a website is configured for HTTPS and TLS.
+A lot of admins care about getting an A or A+ because it is an easy, visible way to validate that their SSL/TLS setup is modern, secure, and free from obvious mistakes.
+
+
 ## Build It vs Break It: Why Vibe Coders Keep Shipping Apps That Are Easy to Hack
 
 [URL](https://potato.id/en/posts/build-it-vs-break-it-mindset-vibe-coder-security/)  

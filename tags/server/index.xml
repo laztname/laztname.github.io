@@ -6,8 +6,15 @@
     <description>Recent content in Server on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>id</language>
-    <lastBuildDate>Tue, 17 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/tags/server/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cara Meningkatkan Skor Qualys SSL Server Test dan Mendapatkan A&#43; di SSL Labs</title>
+      <link>https://potato.id/posts/cara-meningkatkan-skor-qualys-ssl-server-test/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/cara-meningkatkan-skor-qualys-ssl-server-test/</guid>
+      <description>&lt;p&gt;Kalau kamu sedang mencari &lt;strong&gt;cara meningkatkan skor Qualys SSL Server Test&lt;/strong&gt;, kamu ada di tempat yang tepat. Qualys SSL Server Test, yang sering juga disebut &lt;strong&gt;SSL Labs&lt;/strong&gt;, adalah salah satu tools publik paling populer untuk mengecek seberapa baik konfigurasi HTTPS dan TLS di sebuah website.&lt;/p&gt;&#xA;&lt;p&gt;Banyak admin server peduli dengan nilai &lt;strong&gt;A&lt;/strong&gt; atau &lt;strong&gt;A+&lt;/strong&gt; karena ini jadi indikator cepat bahwa setup SSL/TLS mereka modern, aman, dan tidak punya kesalahan konfigurasi yang jelas.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Dynamic IP Denylisting dengan NGINX Plus dan fail2ban</title>
       <link>https://potato.id/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/</link>

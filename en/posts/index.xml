@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Improve Your Qualys SSL Server Test Score and Get A&#43; in SSL Labs</title>
+      <link>https://potato.id/en/posts/improve-qualys-ssl-server-test-score/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/improve-qualys-ssl-server-test-score/</guid>
+      <description>&lt;p&gt;If you are trying to understand &lt;strong&gt;how to improve your Qualys SSL Server Test score&lt;/strong&gt;, you are in the right place. Qualys SSL Server Test, often referred to as &lt;strong&gt;SSL Labs&lt;/strong&gt;, is one of the most widely used public tools for checking how well a website is configured for HTTPS and TLS.&lt;/p&gt;&#xA;&lt;p&gt;A lot of admins care about getting an &lt;strong&gt;A&lt;/strong&gt; or &lt;strong&gt;A+&lt;/strong&gt; because it is an easy, visible way to validate that their SSL/TLS setup is modern, secure, and free from obvious mistakes.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Build It vs Break It: Why Vibe Coders Keep Shipping Apps That Are Easy to Hack</title>
       <link>https://potato.id/en/posts/build-it-vs-break-it-mindset-vibe-coder-security/</link>

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html class="no-js" lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow, max-image-preview:large">
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="theme-color" content="#efe6dd">
+	<meta http-equiv="content-language" content="id">
+	<meta name="author" content="Ardi Jonias Fortuna">
+	<title>Cara Meningkatkan Skor Qualys SSL Server Test dan Mendapatkan A&#43; di SSL Labs - Jonias Fortuna</title>
+	<link rel="canonical" href="https://potato.id/posts/cara-meningkatkan-skor-qualys-ssl-server-test/">
+	
+	
+	<link rel="alternate" hreflang="x-default" href="https://potato.id/posts/cara-meningkatkan-skor-qualys-ssl-server-test/">
+	<link rel="alternate" hreflang="id" href="https://potato.id/posts/cara-meningkatkan-skor-qualys-ssl-server-test/">
+	
+	<link rel="alternate" hreflang="en" href="https://potato.id/en/posts/improve-qualys-ssl-server-test-score/">
+	
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670" crossorigin="anonymous"></script>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Cara meningkatkan skor Qualys SSL Server Test dan mendapatkan A&#43; di SSL Labs dengan perbaikan praktis untuk HSTS, versi TLS, certificate chain, redirect, dan konfigurasi HTTPS modern.">
+		<meta property="og:url" content="https://potato.id/posts/cara-meningkatkan-skor-qualys-ssl-server-test/">
+  <meta property="og:site_name" content="Jonias Fortuna">
+  <meta property="og:title" content="Cara Meningkatkan Skor Qualys SSL Server Test dan Mendapatkan A&#43; di SSL Labs">
+  <meta property="og:description" content="Cara meningkatkan skor Qualys SSL Server Test dan mendapatkan A&#43; di SSL Labs dengan perbaikan praktis untuk HSTS, versi TLS, certificate chain, redirect, dan konfigurasi HTTPS modern.">
+  <meta property="og:locale" content="id">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-04-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-04-20T00:00:00+00:00">
+    <meta property="article:tag" content="SSL/TLS Certificate">
+    <meta property="article:tag" content="Server">
+    <meta property="article:tag" content="Web Security">
+    <meta property="article:tag" content="NGINX">
+    <meta property="article:tag" content="Linux">
+    <meta property="og:image" content="https://potato.id/img/ssltest/thumb.png">
+
+		
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://potato.id/img/ssltest/thumb.png">
+  <meta name="twitter:title" content="Cara Meningkatkan Skor Qualys SSL Server Test dan Mendapatkan A&#43; di SSL Labs">
+  <meta name="twitter:description" content="Cara meningkatkan skor Qualys SSL Server Test dan mendapatkan A&#43; di SSL Labs dengan perbaikan praktis untuk HSTS, versi TLS, certificate chain, redirect, dan konfigurasi HTTPS modern.">
+
+        <link rel="me" href="https://infosec.exchange/@laztname">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://pagead2.googlesyndication.com">
+	<link rel="preconnect" href="https://googleads.g.doubleclick.net">
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        
+        <link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2" type="font/woff2" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap"></noscript>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+
+	
+          
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https:\/\/potato.id\/posts\/cara-meningkatkan-skor-qualys-ssl-server-test\/#article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/potato.id\/posts\/cara-meningkatkan-skor-qualys-ssl-server-test\/"
+  },
+  "headline": "Cara Meningkatkan Skor Qualys SSL Server Test dan Mendapatkan A+ di SSL Labs",
+  "description": "Cara meningkatkan skor Qualys SSL Server Test dan mendapatkan A+ di SSL Labs dengan perbaikan praktis untuk HSTS, versi TLS, certificate chain, redirect, dan konfigurasi HTTPS modern.",
+  "inLanguage": "id",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/potato.id\/img\/ssltest\/thumb.png"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Ardi Jonias Fortuna",
+    "url": "https:\/\/potato.id\/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jonias Fortuna",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/potato.id\/favicon.ico"
+    }
+  },
+  "articleSection": "posts",
+  "keywords": ["SSL/TLS Certificate","Server","Web Security","NGINX","Linux"],
+  "wordCount":  1232 ,
+  "datePublished": "2026-04-20T00:00:00Z",
+  "dateModified": "2026-04-20T00:00:00Z"
+}
+</script>
+
+
+        
+
+<script>
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "ii5leisvaz");
+</script>
+</head>
+<body class="body">
+	<div id="loading"></div>
+	<div class="container container--outer">
+		<header class="header">
+        <div class="container">
+                <div class="logo">
+                        <a class="logo__link" href="/" title="Jonias Fortuna" rel="home">
+                                <div class="logo__title">potato</div>
+                                <div class="logo__tagline">Just another potato website.</div>
+                        </a>
+                </div>
+                
+<nav class="menu">
+        <button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                <span class="menu__btn-title" tabindex="-1">Menu</span>
+        </button>
+
+        <ul class="menu__list">
+                <li class="menu__item">
+                        <a class="menu__link" href="/">
+                                
+                                <span class="menu__text">Home</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/about/">
+                                
+                                <span class="menu__text">About Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/contact/">
+                                
+                                <span class="menu__text">Contact Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/privacy-policy/">
+                                
+                                <span class="menu__text">Privacy Policy</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/uses/">
+                                
+                                <span class="menu__text">Uses</span>
+                                
+                        </a>
+                </li>
+
+		
+		<li class="menu__item menu__item--lang">
+		  
+		    <a class="menu__link"
+		       href="/en/posts/improve-qualys-ssl-server-test-score/"
+		       lang="en">
+		       English
+		    </a>
+		  
+		</li>
+		
+
+        </ul>
+</nav>
+
+
+        </div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Cara Meningkatkan Skor Qualys SSL Server Test dan Mendapatkan A&#43; di SSL Labs</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-04-20T00:00:00Z">20-04-2026</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/networking/" rel="category">Networking</a>, <a class="meta__link" href="/categories/security/" rel="category">Security</a>
+	</span>
+</div></div>
+		</header>
+		       
+
+            <figure class="post__thumbnail thumbnail">
+                
+                <picture>
+                    <source srcset="/img/ssltest/thumb_hu_21fdb8b4631267e7.webp" media="(min-width: 1024px)">
+                    <source srcset="/img/ssltest/thumb_hu_fc09413ec76ba008.webp" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="/img/ssltest/thumb_hu_2a51d20d9a5e1177.webp" media="(max-width: 767px)">
+                    <img class="thumbnail__image"
+                         src="/img/ssltest/thumb_hu_fc09413ec76ba008.webp"
+                         width="800"
+                         height="468"
+                         alt="Cara Meningkatkan Skor Qualys SSL Server Test dan Mendapatkan A&#43; di SSL Labs"
+                         loading="lazy">
+                </picture>
+                
+            </figure>
+
+<div class="content post__content clearfix">
+			<p>Kalau kamu sedang mencari <strong>cara meningkatkan skor Qualys SSL Server Test</strong>, kamu ada di tempat yang tepat. Qualys SSL Server Test, yang sering juga disebut <strong>SSL Labs</strong>, adalah salah satu tools publik paling populer untuk mengecek seberapa baik konfigurasi HTTPS dan TLS di sebuah website.</p>
+<p>Banyak admin server peduli dengan nilai <strong>A</strong> atau <strong>A+</strong> karena ini jadi indikator cepat bahwa setup SSL/TLS mereka modern, aman, dan tidak punya kesalahan konfigurasi yang jelas.</p>
+<p>Panduan ini fokus ke <strong>perbaikan yang praktis</strong>, bukan saran yang vague. Kita akan bahas apa saja yang dicek oleh tool ini, apa yang biasanya bikin website gagal dapat A+, dan konfigurasi apa yang membantu sebuah hasil test mencapai A+.</p>
+<hr>
+<h2 id="apa-sebenarnya-yang-dicek-oleh-qualys-ssl-server-test">Apa Sebenarnya yang Dicek oleh Qualys SSL Server Test</h2>
+<p>Qualys SSL Server Test menganalisis konfigurasi HTTPS publik dari server kamu. Secara praktik, biasanya tool ini fokus ke beberapa area berikut:</p>
+<h3 id="1-certificate">1. Certificate</h3>
+<p>Tool ini mengecek apakah certificate valid, trusted, cocok dengan hostname, dan disajikan dengan certificate chain yang lengkap.</p>
+<h3 id="2-protocol-support">2. Protocol Support</h3>
+<p>Tool ini mengecek versi SSL/TLS apa saja yang masih didukung server, seperti TLS 1.0, 1.1, 1.2, dan 1.3.</p>
+<h3 id="3-key-exchange">3. Key Exchange</h3>
+<p>Tool ini menilai apakah proses key exchange aman, termasuk apakah server mendukung mekanisme modern seperti forward secrecy.</p>
+<h3 id="4-cipher-strength">4. Cipher Strength</h3>
+<p>Tool ini mengecek apakah server masih mengizinkan cipher lama yang lemah atau sudah memakai cipher modern yang kuat.</p>
+<h3 id="5-hsts-dan-perilaku-https">5. HSTS dan Perilaku HTTPS</h3>
+<p>Tool ini juga melihat perilaku HTTPS yang memengaruhi trust dan ketahanan terhadap downgrade attack, terutama apakah:</p>
+<ul>
+<li>HTTP melakukan redirect bersih ke HTTPS</li>
+<li>HSTS aktif dengan benar</li>
+<li>website konsisten berjalan di koneksi aman</li>
+</ul>
+<p>Singkatnya, test ini bukan cuma soal punya certificate. Ini juga soal apakah keseluruhan setup HTTPS kamu sudah modern dan aman.</p>
+<hr>
+<h2 id="hal-yang-biasanya-membuat-website-gagal-mendapatkan-a">Hal yang Biasanya Membuat Website Gagal Mendapatkan A+</h2>
+<p>Banyak website sudah pakai HTTPS, tapi tetap mentok di nilai <strong>A</strong> atau bahkan lebih rendah karena satu atau beberapa masalah umum berikut.</p>
+<h3 id="tidak-ada-hsts">Tidak Ada HSTS</h3>
+<p>Ini salah satu alasan paling umum kenapa website gagal dapat A+. Kamu mungkin sudah punya certificate valid, tapi tanpa HSTS browser masih lebih rentan terhadap serangan downgrade.</p>
+<h3 id="tls-10-atau-tls-11-masih-aktif">TLS 1.0 atau TLS 1.1 Masih Aktif</h3>
+<p>Dukungan protokol lama akan menurunkan skor dan membuat server tetap kompatibel dengan client usang yang kurang aman.</p>
+<h3 id="cipher-lemah">Cipher Lemah</h3>
+<p>Kalau server masih mengizinkan cipher lama atau lemah, hasil Qualys akan mencerminkan itu.</p>
+<h3 id="certificate-chain-bermasalah">Certificate Chain Bermasalah</h3>
+<p>Meskipun certificate utama valid, intermediate certificate yang hilang atau tidak lengkap tetap bisa menurunkan hasil test.</p>
+<h3 id="redirect-buruk">Redirect Buruk</h3>
+<p>Kalau HTTP tidak redirect dengan benar ke HTTPS, atau perilaku redirect tidak konsisten, posture HTTPS secara keseluruhan akan terlihat lebih lemah.</p>
+<h3 id="certificate-expired-atau-salah-konfigurasi">Certificate Expired atau Salah Konfigurasi</h3>
+<p>Certificate expired, hostname mismatch, atau kesalahan konfigurasi lain akan langsung menghalangi skor tinggi.</p>
+<hr>
+<h2 id="hal-yang-membantu-mencapai-a-secara-signifikan">Hal yang Membantu Mencapai A+ secara Signifikan</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/ssltest/tls-configuration.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/ssltest/tls-configuration_hu_c2e628c18bab765a.webp" media="(min-width: 1024px)">
+        <source srcset="/img/ssltest/tls-configuration_hu_dab3e052dfcea9b7.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/ssltest/tls-configuration_hu_a0e5a723d0cace01.webp" media="(max-width: 767px)">
+        <img src="/img/ssltest/tls-configuration_hu_a0e5a723d0cace01.webp"
+             alt="Konfigurasi TLS"
+             class="hover-effect"
+             width="800"
+             height="236">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Pada hasil test nyata yang kita lihat, skor A+ didukung oleh beberapa hal penting yang bekerja bersama:</p>
+<ul>
+<li><strong>HTTP redirect ke HTTPS</strong> dengan bersih</li>
+<li><strong>HSTS aktif</strong></li>
+<li>website menggunakan <strong>ECDSA certificate</strong></li>
+<li><strong>TLS 1.3 tersedia</strong></li>
+<li><strong>OCSP stapling berjalan</strong></li>
+<li><strong>certificate chain valid</strong></li>
+</ul>
+<p>Kombinasi ini penting karena menunjukkan server yang bukan cuma terenkripsi, tapi juga dikonfigurasi dengan cara yang modern dan lengkap.</p>
+<p>Beberapa catatan:</p>
+<ul>
+<li><strong>HSTS</strong> sering jadi pembeda antara <strong>A</strong> dan <strong>A+</strong></li>
+<li><strong>TLS 1.3</strong> menunjukkan bahwa server mendukung negosiasi protokol modern</li>
+<li><strong>full certificate chain</strong> mencegah masalah trust dan validasi</li>
+<li><strong>OCSP stapling</strong> membantu validasi status certificate dan biasanya jadi tanda setup TLS yang rapi</li>
+<li><strong>ECDSA certificate</strong> tidak wajib untuk A+, tapi tetap jadi pilihan modern yang bagus kalau stack kamu mendukung</li>
+</ul>
+<hr>
+<h2 id="cara-meningkatkan-skor-qualys-ssl-server-test-dalam-praktik">Cara Meningkatkan Skor Qualys SSL Server Test dalam Praktik</h2>
+<p>Kalau target kamu adalah memperbaiki hasil di SSL Labs, fokus dulu ke fondasi dasarnya.</p>
+<h3 id="perbaikan-inti">Perbaikan Inti</h3>
+<ul>
+<li>set minimum protocol ke <strong>TLS 1.2</strong></li>
+<li>aktifkan <strong>TLS 1.3</strong></li>
+<li>aktifkan <strong>HSTS</strong></li>
+<li>nonaktifkan <strong>TLS 1.0</strong> dan <strong>TLS 1.1</strong></li>
+<li>sajikan <strong>full valid certificate chain</strong></li>
+<li>gunakan <strong>cipher modern yang kuat</strong></li>
+<li>pastikan <strong>HTTP redirect ke HTTPS</strong> secara konsisten</li>
+</ul>
+<h3 id="untuk-cloudflare">Untuk Cloudflare</h3>
+<p>Kalau kamu pakai Cloudflare, cek dulu setting berikut:</p>
+<ul>
+<li>set <strong>Minimum TLS Version</strong> ke <strong>TLS 1.2</strong></li>
+<li>pastikan <strong>TLS 1.3</strong> tetap aktif</li>
+<li>aktifkan <strong>Always Use HTTPS</strong></li>
+<li>aktifkan <strong>HTTP Strict Transport Security (HSTS)</strong> dengan hati-hati</li>
+<li>gunakan certificate origin yang valid kalau kamu memakai mode <strong>Full (strict)</strong></li>
+</ul>
+<p>Penting: jangan aktifkan HSTS sebelum kamu yakin HTTPS berjalan stabil di domain utama dan semua subdomain penting.</p>
+<h3 id="untuk-nginx">Untuk Nginx</h3>
+<p>Baseline yang praktis bisa seperti ini:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#66d9ef">ssl_protocols</span> <span style="color:#e6db74">TLSv1.2</span> <span style="color:#e6db74">TLSv1.3</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ssl_prefer_server_ciphers</span> <span style="color:#66d9ef">off</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ssl_stapling</span> <span style="color:#66d9ef">on</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ssl_stapling_verify</span> <span style="color:#66d9ef">on</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">add_header</span> <span style="color:#e6db74">Strict-Transport-Security</span> <span style="color:#e6db74">&#34;max-age=31536000</span>; <span style="color:#66d9ef">includeSubDomains&#34;</span> <span style="color:#e6db74">always</span>;
+</span></span></code></pre></div><p>Pastikan juga server block HTTP melakukan redirect ke HTTPS:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#66d9ef">server</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">listen</span> <span style="color:#ae81ff">80</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">server_name</span> <span style="color:#e6db74">example.com</span> <span style="color:#e6db74">www.example.com</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">return</span> <span style="color:#ae81ff">301</span> <span style="color:#e6db74">https://</span>$host$request_uri;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Dan pastikan setup certificate menggunakan full chain dari CA yang kamu pakai.</p>
+<h3 id="untuk-apache">Untuk Apache</h3>
+<p>Baseline praktisnya bisa seperti ini:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-apache" data-lang="apache"><span style="display:flex;"><span>SSLProtocol             -all +TLSv1.2 +TLSv1.3
+</span></span><span style="display:flex;"><span>SSLUseStapling          <span style="color:#66d9ef">on</span>
+</span></span><span style="display:flex;"><span>Header always set Strict-Transport-Security <span style="color:#e6db74">&#34;max-age=31536000; includeSubDomains&#34;</span>
+</span></span></code></pre></div><p>Kamu juga harus memastikan bahwa:</p>
+<ul>
+<li>dukungan protokol lama sudah dimatikan</li>
+<li>file certificate yang dipasang benar</li>
+<li>intermediate certificate terpasang dengan benar</li>
+<li>request HTTP redirect bersih ke HTTPS</li>
+</ul>
+<h3 id="tentang-cipher-suites">Tentang Cipher Suites</h3>
+<p>Jangan terlalu sibuk mengejar tuning cipher yang aneh-aneh kalau kamu belum benar-benar butuh. Dalam banyak kasus, langkah yang lebih tepat justru sederhana:</p>
+<ul>
+<li>hapus dukungan legacy yang lemah</li>
+<li>pertahankan default modern</li>
+<li>prioritaskan TLS 1.3 kalau memungkinkan</li>
+<li>hindari setting kompatibilitas untuk client yang sangat tua</li>
+</ul>
+<p>Untuk <strong>TLS 1.2</strong>, contoh cipher modern yang praktis bisa seperti ini.</p>
+<h4 id="contoh-konfigurasi-cipher-nginx">Contoh konfigurasi cipher Nginx</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-nginx" data-lang="nginx"><span style="display:flex;"><span><span style="color:#66d9ef">ssl_ciphers</span> <span style="color:#e6db74">&#39;ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ssl_prefer_server_ciphers</span> <span style="color:#66d9ef">off</span>;
+</span></span></code></pre></div><h4 id="contoh-konfigurasi-cipher-apache">Contoh konfigurasi cipher Apache</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-apache" data-lang="apache"><span style="display:flex;"><span>SSLCipherSuite ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305
+</span></span><span style="display:flex;"><span>SSLHonorCipherOrder <span style="color:#66d9ef">off</span>
+</span></span></code></pre></div><p>Untuk <strong>TLS 1.3</strong>, kebanyakan stack modern menangani pemilihan cipher secara terpisah dan biasanya tidak butuh tuning manual yang agresif. Secara praktik, pilihan paling aman adalah tetap mengaktifkan TLS 1.3 dan menghindari fallback legacy kecuali memang benar-benar dibutuhkan.</p>
+<hr>
+<h2 id="apakah-bisa-lebih-tinggi-dari-a">Apakah Bisa Lebih Tinggi dari A+?</h2>
+<p>Jawaban singkat: <strong>tidak</strong>.</p>
+<p>Di Qualys SSL Server Test, <strong>A+ sudah jadi target tertinggi</strong>. Setelah dapat A+, kamu bukan lagi mengejar nilai yang lebih tinggi, tapi menjaga supaya konfigurasi tetap modern, bersih, dan stabil.</p>
+<p>Artinya:</p>
+<ul>
+<li>renew certificate tepat waktu</li>
+<li>pastikan redirect tetap berjalan</li>
+<li>pastikan HSTS tetap benar dan disengaja</li>
+<li>jangan mengaktifkan lagi protokol lama hanya demi kompatibilitas</li>
+<li>lakukan retest setelah ada perubahan infrastruktur, CDN, atau certificate</li>
+</ul>
+<hr>
+<h2 id="checklist-singkat">Checklist Singkat</h2>
+<p>Gunakan checklist ini sebelum retest di SSL Labs:</p>
+<ul>
+<li>HTTPS redirect berjalan</li>
+<li>HSTS aktif</li>
+<li>minimum protocol TLS 1.2 atau lebih tinggi</li>
+<li>TLS 1.3 aktif</li>
+<li>certificate valid dan modern</li>
+<li>full certificate chain tersaji</li>
+<li>tidak ada dukungan legacy protocol yang lemah</li>
+<li>tidak ada konfigurasi cipher lemah</li>
+<li>OCSP stapling berjalan jika stack kamu mendukung</li>
+</ul>
+<p>Kalau poin-poin itu sudah rapi, peluang kamu mendapatkan <strong>A+</strong> akan jauh lebih besar.</p>
+<hr>
+<h2 id="faq">FAQ</h2>
+<h3 id="apakah-hsts-otomatis-menjamin-skor-a">Apakah HSTS otomatis menjamin skor A+?</h3>
+<p>Tidak. HSTS sangat membantu dan sering dibutuhkan untuk A+, tapi kamu tetap perlu certificate valid, dukungan protokol yang kuat, redirect yang bersih, dan tidak ada konfigurasi legacy yang lemah.</p>
+<h3 id="apakah-bisa-dapat-a-tanpa-tls-13">Apakah bisa dapat A+ tanpa TLS 1.3?</h3>
+<p>Kadang bisa, tergantung konfigurasi lainnya, tapi tetap lebih baik mengaktifkan TLS 1.3 karena itu menunjukkan setup yang lebih modern.</p>
+<h3 id="apakah-cloudflare-otomatis-membuat-skor-jadi-a">Apakah Cloudflare otomatis membuat skor jadi A+?</h3>
+<p>Tidak selalu. Cloudflare bisa membantu banyak hal di sisi edge, tapi kamu tetap harus mengecek perilaku TLS, redirect, HSTS, dan setup certificate secara menyeluruh.</p>
+<h3 id="apakah-hsts-preload-harus-langsung-diaktifkan">Apakah HSTS preload harus langsung diaktifkan?</h3>
+<p>Biasanya tidak. Pastikan dulu HTTPS stabil di semua area yang penting, termasuk subdomain penting, baru aktifkan setting HSTS yang lebih ketat secara bertahap.</p>
+<hr>
+<h2 id="penutup">Penutup</h2>
+<p>Mendapatkan A+ di SSL Labs biasanya bukan soal satu setting ajaib. Hasil itu muncul dari beberapa hal dasar yang dilakukan dengan benar: redirect HTTPS yang bersih, HSTS, dukungan TLS modern, full certificate chain yang valid, dan tidak ada beban legacy yang tidak perlu.</p>
+<p>Kalau website kamu sekarang masih di nilai <strong>A</strong>, sering kali kamu cuma butuh satu atau dua perbaikan lagi untuk naik ke <strong>A+</strong>.</p>
+<hr>
+<h2 id="artikel-terkait">Artikel Terkait</h2>
+<ul>
+<li><a href="/posts/generate-wildcard-ssl-tls-certificate-lets-encrypt-certbot-with-dns-challenge/">Cara Generate Wildcard SSL Let&rsquo;s Encrypt dengan Certbot DNS Challenge</a></li>
+<li><a href="/posts/https-adalah-website-yang-aman/">Web Phishing itu HTTP atau HTTPS?</a></li>
+</ul>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/ssl/tls-certificate/" rel="tag">SSL/TLS Certificate</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/server/" rel="tag">Server</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/web-security/" rel="tag">Web Security</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/nginx/" rel="tag">NGINX</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/linux/" rel="tag">Linux</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+		<hr>
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-format="autorelaxed"
+		     data-ad-client="ca-pub-1926937123072670"
+		     data-ad-slot="1889468337"></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		<hr>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">Tentang Ardi Jonias Fortuna</span>
+	</div>
+	<div class="authorbox__description">
+		Roses are red, violets are blue. There is nothing can&rsquo;t to do
+	</div>
+</div>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/build-it-vs-break-it-mindset-vibe-coder-security/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Sebelumnya</span>
+			<p class="pager__title">Build It vs Break It: Kenapa Vibe Coder Sering Bikin Aplikasi yang Mudah Dibobol</p>
+		</a>
+	</div>
+</nav>
+<div id="disqus-container">
+	<script src="https://giscus.app/client.js"
+        data-repo="laztname/laztname"
+        data-repo-id="R_kgDOLULuVg"
+        data-category="General"
+        data-category-id="DIC_kwDOLULuVs4CdT6m"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+			</div>
+			<aside class="sidebar sidebar--left"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="CARI…" value="" name="q" aria-label="CARI…">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://potato.id/">
+	</form>
+</div><div class="widget-recent widget">
+	<h3 class="widget__title">Information</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+    <li class="widget__item">
+        <picture>
+            <source srcset="/img/home_hu_3b9b5be8487aaba3.webp" media="(min-width: 1024px)">
+            <source srcset="/img/home_hu_173579ac87338ebc.webp" media="(min-width: 768px) and (max-width: 1023px)">
+            <source srcset="/img/home_hu_db8ab209d61d1924.webp" media="(max-width: 767px)">
+            <img class="widget__link"
+                 src="/img/home_hu_173579ac87338ebc.webp" 
+                 width="800"
+                 height="694"
+                 alt="Di rumah saja"
+                 loading="lazy">
+        </picture>
+    </li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-recent widget">
+	<h3 class="widget__title">Postingan Terbaru</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/cara-meningkatkan-skor-qualys-ssl-server-test/">Cara Meningkatkan Skor Qualys SSL Server Test dan Mendapatkan A&#43; di SSL Labs</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/build-it-vs-break-it-mindset-vibe-coder-security/">Build It vs Break It: Kenapa Vibe Coder Sering Bikin Aplikasi yang Mudah Dibobol</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/subdomain-takeover-via-aws-elastic-beanstalk/">Subdomain Takeover via AWS Elastic Beanstalk</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/anti-gacor-pencegahan-dan-perlindungan-website-judol/">Anti-Gacor: Pencegahan dan Perlindungan Injeksi Slot Judi Online pada Website</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/dynamic-ip-denylisting-nginx-plus-fail2ban/">Dynamic IP Denylisting dengan NGINX Plus dan fail2ban</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-categories widget">
+	<h3 class="widget__title">Kategori</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/defensive/">Defensive</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/development/">Development</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/keamanan-siber/">Keamanan Siber</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/networking/">Networking</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/offensive/">Offensive</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/reversing/">Reversing</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/security/">Security</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/web-hacking/">Web Hacking</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-taglist widget">
+	<h3 class="widget__title">Tag</h3>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/anti-judol/" title="Anti-Judol">Anti-Judol (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/bug-bounty/" title="Bug Bounty">Bug Bounty (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (9)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cyber-hygiene/" title="Cyber Hygiene">Cyber Hygiene (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cybersecurity/" title="Cybersecurity">Cybersecurity (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/dns/" title="DNS">DNS (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/end-user/" title="End User">End User (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/end-users/" title="End-Users">End-Users (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/fail2ban/" title="Fail2ban">Fail2ban (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/file-upload/" title="File Upload">File Upload (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/git/" title="Git">Git (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitdumper/" title="Gitdumper">Gitdumper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/githack/" title="Githack">Githack (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages/" title="Github Pages">Github Pages (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/incident-response/" title="Incident Response">Incident Response (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/infatica/" title="Infatica">Infatica (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/infostealer/" title="Infostealer">Infostealer (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (18)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/intrusion-prevention-system/" title="Intrusion Prevention System">Intrusion Prevention System (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/keamanan-web/" title="Keamanan Web">Keamanan Web (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/lfi/" title="LFI">LFI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/linux/" title="Linux">Linux (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/malware/" title="Malware">Malware (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nginx/" title="NGINX">NGINX (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/phishing/" title="Phishing">Phishing (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/proxy/" title="Proxy">Proxy (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ransomware/" title="Ransomware">Ransomware (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/rce/" title="RCE">RCE (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/retas-labs/" title="Retas Labs">Retas Labs (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/secure-coding/" title="Secure Coding">Secure Coding (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/security/" title="Security">Security (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/server/" title="Server">Server (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/sqli/" title="SQLI">SQLI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ssl/tls-certificate/" title="SSL/TLS Certificate">SSL/TLS Certificate (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/subdomain-takeover/" title="Subdomain Takeover">Subdomain Takeover (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/surabaya-hacker-link/" title="Surabaya Hacker Link">Surabaya Hacker Link (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/telegram-bot/" title="Telegram Bot">Telegram Bot (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/text-editor/" title="Text Editor">Text Editor (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/users/" title="Users">Users (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/vibe-coding/" title="Vibe Coding">Vibe Coding (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/vim/" title="VIM">VIM (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/web-defacement/" title="Web Defacement">Web Defacement (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/web-hacking/" title="Web Hacking">Web Hacking (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/web-security/" title="Web Security">Web Security (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/windows/" title="Windows">Windows (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (36)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
+	</div>
+</div>
+
+<div class="widget-social widget">
+	<h3 class="widget-social__title widget__title">Sosmed</h3>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Instagram" rel="noopener noreferrer" href="https://www.instagram.com/joniasfortuna" target="_blank">
+				<svg class="widget-social__link-icon icon icon-instagram" width="24" height="24" viewBox="0 0 256 256"><circle cx="193" cy="59" r="15"/><path fill-rule="evenodd" d="M101 0h54c41 0 58.4 3.9 74.5 17C256.2 37.5 256 74.8 256 97.7v60c0 26.7 0 60.4-26.5 81.4-16 13.4-33.5 16.9-74.5 16.9h-54c-41 0-57.5-3.5-74.5-16.9C1 218.9.5 186.3.1 160.5L0 155V97.7c0-23-.2-60.2 26.5-80.7C45 2 60 0 101 0zm4.9 23h44.3c45.8 0 58.3 3.5 70.3 17.5 11.8 13.2 12 30.1 12.5 62.9V156c.2 20.8.3 45.8-12.5 59.5-12 14-24.5 17.5-70.3 17.5h-44.3c-45.9 0-57.3-3.5-70.4-17.5-12.2-13-12.3-36.5-12.4-56.7v-55.6c.4-32.6.7-49.6 12.4-62.7C48 26.5 60 23 105.9 23zm19.6 144.5a42 42 0 1 0 0-84 42 42 0 0 0 0 84zm0 22.5a64.5 64.5 0 1 0 0-129 64.5 64.5 0 0 0 0 129z"/></svg>
+				<span>Instagram</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer" href="https://linkedin.com/in/joniasfortuna" target="_blank">
+				<svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
+				<span>LinkedIn</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Telegram" rel="noopener noreferrer" href="https://t.me/laztname" target="_blank">
+				<svg class="widget-social__link-icon icon icon-telegram" width="24" height="24" viewBox="0 0 132 110"><path fill="#ddd" d="M50 103c-4 0-3-1-5-5L34 60l88-52"/><path fill="#aaa" d="M50 103c3 0 4-1 6-3l16-16-20-12"/><path fill="#fff" d="M52 72l48 36c6 3 10 2 11-5l20-93c2-8-3-11-8-9L7 45c-8 4-8 8-1 10l29 9 69-43c3-2 6-1 4 1"/></svg>
+				<span>Telegram</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/laztname" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:jonias@potato.id">
+				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>jonias@potato.id</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+
+</aside>
+		</div>
+		<footer class="footer">
+    <div class="container footer__container flex">
+        
+        <div class="footer__copyright">
+            &copy; 2026 
+            <a href="https://potato.id/">Ardi Jonias Fortuna</a>.
+            <span class="footer__copyright-credits">Dibuat dengan <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> dan Tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+        </div>
+    </div>
+</footer>
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script></body>
+</html>
