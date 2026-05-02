@@ -6,8 +6,22 @@
     <description>Recent content in Main - Ardi Jonias Fortuna on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>id</language>
-    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 27 Apr 2026 00:06:00 +0700</lastBuildDate>
     <atom:link href="https://potato.id/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>7 Plugin Keamanan WordPress Terbaik untuk Meningkatkan WordPress Security</title>
+      <link>https://potato.id/posts/plugin-keamanan-wordpress-terbaik/</link>
+      <pubDate>Mon, 27 Apr 2026 00:06:00 +0700</pubDate>
+      <guid>https://potato.id/posts/plugin-keamanan-wordpress-terbaik/</guid>
+      <description>&lt;p&gt;Kalau kamu sedang mencari &lt;strong&gt;plugin keamanan WordPress&lt;/strong&gt; terbaik, tantangan utamanya biasanya bukan menemukan plugin, tetapi memilih yang paling cocok dengan jenis website, budget, dan tingkat risiko yang kamu hadapi.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;WordPress security&lt;/strong&gt; bukan soal memasang semua plugin yang punya label firewall atau malware scanner. Dalam banyak kasus, satu plugin yang kuat ditambah kebiasaan patching yang baik jauh lebih efektif daripada menumpuk beberapa plugin dengan fungsi yang saling tumpang tindih.&lt;/p&gt;&#xA;&lt;p&gt;Di panduan ini, kita akan membandingkan 7 opsi populer dan membahas &lt;strong&gt;kelebihan serta kekurangan tiap plugin&lt;/strong&gt; supaya kamu bisa memilih mana yang benar-benar cocok untuk setup WordPress kamu.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cara Cek HTTP Security Headers dan Apa yang Harus Diperbaiki Terlebih Dahulu</title>
+      <link>https://potato.id/posts/cara-cek-http-security-headers-dan-apa-yang-harus-diperbaiki-terlebih-dahulu/</link>
+      <pubDate>Wed, 22 Apr 2026 23:58:00 +0700</pubDate>
+      <guid>https://potato.id/posts/cara-cek-http-security-headers-dan-apa-yang-harus-diperbaiki-terlebih-dahulu/</guid>
+      <description>&lt;p&gt;Panduan HTTP Security Headers: Cara cek HTTP security headers pada website dan apa yang harus diperbaiki terlebih dahulu. Panduan praktis untuk meningkatkan keamanan website.&lt;/p&gt;&#xA;&lt;p&gt;Kalau kamu sedang melakukan &lt;strong&gt;security headers check&lt;/strong&gt; dengan &lt;a href=&#34;https://securityheaders.com/&#34;&gt;SecurityHeaders.com&lt;/a&gt;, kesalahan terbesar adalah mencoba memperbaiki semuanya sekaligus.&lt;/p&gt;&#xA;&lt;p&gt;Pendekatan yang lebih baik adalah meninjau setiap &lt;strong&gt;HTTP Security Header&lt;/strong&gt;, memisahkan quick wins dari perubahan yang berisiko, lalu memperbaiki header dalam urutan yang tepat.&lt;/p&gt;&#xA;&lt;p&gt;Untuk draft ini, kita menggunakan contoh report SecurityHeaders.com untuk website ini.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Cara Meningkatkan Skor Qualys SSL Server Test dan Mendapatkan A&#43; di SSL Labs</title>
       <link>https://potato.id/posts/cara-meningkatkan-skor-qualys-ssl-server-test/</link>
