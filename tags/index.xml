@@ -6,8 +6,43 @@
     <description>Recent content in Tags on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>id</language>
-    <lastBuildDate>Mon, 27 Apr 2026 00:06:00 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 23:58:00 +0700</lastBuildDate>
     <atom:link href="https://potato.id/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CSP</title>
+      <link>https://potato.id/tags/csp/</link>
+      <pubDate>Fri, 01 May 2026 23:58:00 +0700</pubDate>
+      <guid>https://potato.id/tags/csp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTTP Security Header</title>
+      <link>https://potato.id/tags/http-security-header/</link>
+      <pubDate>Fri, 01 May 2026 23:58:00 +0700</pubDate>
+      <guid>https://potato.id/tags/http-security-header/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTTPS</title>
+      <link>https://potato.id/tags/https/</link>
+      <pubDate>Fri, 01 May 2026 23:58:00 +0700</pubDate>
+      <guid>https://potato.id/tags/https/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security Header</title>
+      <link>https://potato.id/tags/security-header/</link>
+      <pubDate>Fri, 01 May 2026 23:58:00 +0700</pubDate>
+      <guid>https://potato.id/tags/security-header/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Security</title>
+      <link>https://potato.id/tags/web-security/</link>
+      <pubDate>Fri, 01 May 2026 23:58:00 +0700</pubDate>
+      <guid>https://potato.id/tags/web-security/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Keamanan WordPress</title>
       <link>https://potato.id/tags/keamanan-wordpress/</link>
@@ -30,45 +65,10 @@
       <description></description>
     </item>
     <item>
-      <title>Web Security</title>
-      <link>https://potato.id/tags/web-security/</link>
-      <pubDate>Mon, 27 Apr 2026 00:06:00 +0700</pubDate>
-      <guid>https://potato.id/tags/web-security/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Wordpress</title>
       <link>https://potato.id/tags/wordpress/</link>
       <pubDate>Mon, 27 Apr 2026 00:06:00 +0700</pubDate>
       <guid>https://potato.id/tags/wordpress/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>CSP</title>
-      <link>https://potato.id/tags/csp/</link>
-      <pubDate>Wed, 22 Apr 2026 23:58:00 +0700</pubDate>
-      <guid>https://potato.id/tags/csp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>HTTP Security Header</title>
-      <link>https://potato.id/tags/http-security-header/</link>
-      <pubDate>Wed, 22 Apr 2026 23:58:00 +0700</pubDate>
-      <guid>https://potato.id/tags/http-security-header/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>HTTPS</title>
-      <link>https://potato.id/tags/https/</link>
-      <pubDate>Wed, 22 Apr 2026 23:58:00 +0700</pubDate>
-      <guid>https://potato.id/tags/https/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Security Header</title>
-      <link>https://potato.id/tags/security-header/</link>
-      <pubDate>Wed, 22 Apr 2026 23:58:00 +0700</pubDate>
-      <guid>https://potato.id/tags/security-header/</guid>
       <description></description>
     </item>
     <item>

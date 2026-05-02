@@ -6,8 +6,15 @@
     <description>Recent content in Security on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>id</language>
-    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 23:58:00 +0700</lastBuildDate>
     <atom:link href="https://potato.id/categories/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Panduan HTTP Security Headers: Cara Cek Keamanan dan Perbaikan</title>
+      <link>https://potato.id/posts/cara-cek-http-security-headers-dan-apa-yang-harus-diperbaiki-terlebih-dahulu/</link>
+      <pubDate>Fri, 01 May 2026 23:58:00 +0700</pubDate>
+      <guid>https://potato.id/posts/cara-cek-http-security-headers-dan-apa-yang-harus-diperbaiki-terlebih-dahulu/</guid>
+      <description>&lt;p&gt;Jika kamu sedang melakukan &lt;strong&gt;security headers check&lt;/strong&gt; menggunakan free service dari &lt;a href=&#34;https://securityheaders.com/&#34;&gt;SecurityHeaders.com&lt;/a&gt;, kesalahan terbesar saat ingin menerapkan HTTP Security Header adalah mengaktifkan semua header sekaligus, pasti ada saja error saat semuanya diaktifkan secara bersamaan.&lt;/p&gt;&#xA;&lt;p&gt;Maka dari itu pendekatan yang lebih baik adalah meninjau setiap &lt;strong&gt;HTTP Security Header&lt;/strong&gt;, menerapkan quick wins terlebih dahulu lalu dilanjutkan ke trial perubahan yang berisiko, memperbaiki header dalam urutan yang tepat akan memudahkan dalam penerapan HTTP Security Header.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Cara Meningkatkan Skor Qualys SSL Server Test dan Mendapatkan A&#43; di SSL Labs</title>
       <link>https://potato.id/posts/cara-meningkatkan-skor-qualys-ssl-server-test/</link>

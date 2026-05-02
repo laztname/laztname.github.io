@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security Header on Jonias Fortuna</title>
+    <link>https://potato.id/en/tags/security-header/</link>
+    <description>Recent content in Security Header on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 01 May 2026 23:58:00 +0700</lastBuildDate>
+    <atom:link href="https://potato.id/en/tags/security-header/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTTP Security Headers Guide: What to Fix First</title>
+      <link>https://potato.id/en/posts/security-headers-check-what-to-fix-first-on-your-website/</link>
+      <pubDate>Fri, 01 May 2026 23:58:00 +0700</pubDate>
+      <guid>https://potato.id/en/posts/security-headers-check-what-to-fix-first-on-your-website/</guid>
+      <description>&lt;p&gt;If you are running a &lt;strong&gt;security headers check&lt;/strong&gt; with &lt;a href=&#34;https://securityheaders.com/&#34;&gt;SecurityHeaders.com&lt;/a&gt;, the biggest mistake is trying to fix everything at once.&lt;/p&gt;&#xA;&lt;p&gt;A better approach is to review each &lt;strong&gt;HTTP Security Header&lt;/strong&gt;, separate the easy wins from the risky changes and then fix the headers in the right order.&lt;/p&gt;&#xA;&lt;p&gt;For this draft, we use the sample SecurityHeaders.com report for this website.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Site: https://potato.id/&#xA;IP Address: 172.67.219.34&#xA;Report Time: 22 Apr 2026 16:50:39 UTC&#xA;Headers:&#xA;- Referrer-Policy&#xA;- Content-Security-Policy&#xA;- X-Frame-Options&#xA;- Strict-Transport-Security&#xA;- X-Content-Type-Options&#xA;- Permissions-Policy&#xA;&#xA;Warning: Grade capped at A, please see warnings below.&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The interesting part here is not just the grade. It is the warning. A site can already look &amp;ldquo;good&amp;rdquo; or A Grade in SecurityHeaders.com but still have a few settings that should be tightened first.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

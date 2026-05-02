@@ -6,8 +6,22 @@
     <description>Recent content in Development on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 23:58:00 +0700</lastBuildDate>
     <atom:link href="https://potato.id/en/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTTP Security Headers Guide: What to Fix First</title>
+      <link>https://potato.id/en/posts/security-headers-check-what-to-fix-first-on-your-website/</link>
+      <pubDate>Fri, 01 May 2026 23:58:00 +0700</pubDate>
+      <guid>https://potato.id/en/posts/security-headers-check-what-to-fix-first-on-your-website/</guid>
+      <description>&lt;p&gt;If you are running a &lt;strong&gt;security headers check&lt;/strong&gt; with &lt;a href=&#34;https://securityheaders.com/&#34;&gt;SecurityHeaders.com&lt;/a&gt;, the biggest mistake is trying to fix everything at once.&lt;/p&gt;&#xA;&lt;p&gt;A better approach is to review each &lt;strong&gt;HTTP Security Header&lt;/strong&gt;, separate the easy wins from the risky changes and then fix the headers in the right order.&lt;/p&gt;&#xA;&lt;p&gt;For this draft, we use the sample SecurityHeaders.com report for this website.&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Site: https://potato.id/&#xA;IP Address: 172.67.219.34&#xA;Report Time: 22 Apr 2026 16:50:39 UTC&#xA;Headers:&#xA;- Referrer-Policy&#xA;- Content-Security-Policy&#xA;- X-Frame-Options&#xA;- Strict-Transport-Security&#xA;- X-Content-Type-Options&#xA;- Permissions-Policy&#xA;&#xA;Warning: Grade capped at A, please see warnings below.&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The interesting part here is not just the grade. It is the warning. A site can already look &amp;ldquo;good&amp;rdquo; or A Grade in SecurityHeaders.com but still have a few settings that should be tightened first.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WordPress Security Plugin Guide: 7 Best Picks for Better WordPress Security</title>
+      <link>https://potato.id/en/posts/best-wordpress-security-plugins/</link>
+      <pubDate>Mon, 27 Apr 2026 00:06:00 +0700</pubDate>
+      <guid>https://potato.id/en/posts/best-wordpress-security-plugins/</guid>
+      <description>&lt;p&gt;If you are looking for the best &lt;strong&gt;WordPress Security Plugin&lt;/strong&gt;, the real challenge is not finding one, it is choosing one that matches your site, your budget, and your risk level.&lt;/p&gt;&#xA;&lt;p&gt;Good &lt;strong&gt;WordPress Security&lt;/strong&gt; is not about installing every plugin that says &amp;ldquo;firewall&amp;rdquo; or &amp;ldquo;malware scanner.&amp;rdquo; In most cases, one strong plugin plus good patching habits is far better than stacking multiple overlapping tools.&lt;/p&gt;&#xA;&lt;p&gt;This guide compares 7 popular options and gives the &lt;strong&gt;pros and cons of each plugin&lt;/strong&gt; so you can decide what actually fits your WordPress setup.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HTTP: Hyper Text Transfer Protocol How HTTP Works Behind the Browser</title>
       <link>https://potato.id/en/posts/http-web-behind-the-browser/</link>

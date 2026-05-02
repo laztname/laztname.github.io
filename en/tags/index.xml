@@ -6,20 +6,90 @@
     <description>Recent content in Tags on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2026 23:58:00 +0700</lastBuildDate>
     <atom:link href="https://potato.id/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Linux</title>
-      <link>https://potato.id/en/tags/linux/</link>
-      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/en/tags/linux/</guid>
+      <title>CSP</title>
+      <link>https://potato.id/en/tags/csp/</link>
+      <pubDate>Fri, 01 May 2026 23:58:00 +0700</pubDate>
+      <guid>https://potato.id/en/tags/csp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTTP Security Header</title>
+      <link>https://potato.id/en/tags/http-security-header/</link>
+      <pubDate>Fri, 01 May 2026 23:58:00 +0700</pubDate>
+      <guid>https://potato.id/en/tags/http-security-header/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTTPS</title>
+      <link>https://potato.id/en/tags/https/</link>
+      <pubDate>Fri, 01 May 2026 23:58:00 +0700</pubDate>
+      <guid>https://potato.id/en/tags/https/</guid>
       <description></description>
     </item>
     <item>
       <title>NGINX</title>
       <link>https://potato.id/en/tags/nginx/</link>
-      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 01 May 2026 23:58:00 +0700</pubDate>
       <guid>https://potato.id/en/tags/nginx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security Header</title>
+      <link>https://potato.id/en/tags/security-header/</link>
+      <pubDate>Fri, 01 May 2026 23:58:00 +0700</pubDate>
+      <guid>https://potato.id/en/tags/security-header/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Security</title>
+      <link>https://potato.id/en/tags/web-security/</link>
+      <pubDate>Fri, 01 May 2026 23:58:00 +0700</pubDate>
+      <guid>https://potato.id/en/tags/web-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Write Up</title>
+      <link>https://potato.id/en/tags/write-up/</link>
+      <pubDate>Fri, 01 May 2026 23:58:00 +0700</pubDate>
+      <guid>https://potato.id/en/tags/write-up/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Plugin</title>
+      <link>https://potato.id/en/tags/plugin/</link>
+      <pubDate>Mon, 27 Apr 2026 00:06:00 +0700</pubDate>
+      <guid>https://potato.id/en/tags/plugin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wordpress</title>
+      <link>https://potato.id/en/tags/wordpress/</link>
+      <pubDate>Mon, 27 Apr 2026 00:06:00 +0700</pubDate>
+      <guid>https://potato.id/en/tags/wordpress/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WordPress Security</title>
+      <link>https://potato.id/en/tags/wordpress-security/</link>
+      <pubDate>Mon, 27 Apr 2026 00:06:00 +0700</pubDate>
+      <guid>https://potato.id/en/tags/wordpress-security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WordPress Security Plugin</title>
+      <link>https://potato.id/en/tags/wordpress-security-plugin/</link>
+      <pubDate>Mon, 27 Apr 2026 00:06:00 +0700</pubDate>
+      <guid>https://potato.id/en/tags/wordpress-security-plugin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://potato.id/en/tags/linux/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/tags/linux/</guid>
       <description></description>
     </item>
     <item>
@@ -34,13 +104,6 @@
       <link>https://potato.id/en/tags/ssl/tls-certificate/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <guid>https://potato.id/en/tags/ssl/tls-certificate/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Web Security</title>
-      <link>https://potato.id/en/tags/web-security/</link>
-      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/en/tags/web-security/</guid>
       <description></description>
     </item>
     <item>
@@ -86,13 +149,6 @@
       <description></description>
     </item>
     <item>
-      <title>Write Up</title>
-      <link>https://potato.id/en/tags/write-up/</link>
-      <pubDate>Sat, 28 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/en/tags/write-up/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Anti-Judol</title>
       <link>https://potato.id/en/tags/anti-judol/</link>
       <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
@@ -111,13 +167,6 @@
       <link>https://potato.id/en/tags/web-defacement/</link>
       <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
       <guid>https://potato.id/en/tags/web-defacement/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Wordpress</title>
-      <link>https://potato.id/en/tags/wordpress/</link>
-      <pubDate>Mon, 23 Mar 2026 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/en/tags/wordpress/</guid>
       <description></description>
     </item>
     <item>

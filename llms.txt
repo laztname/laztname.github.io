@@ -6,6 +6,29 @@ Base URL: https://potato.id/
 
 # SECTION: CONTENT_INDEX
 
+## HTTP Security Headers Guide: What to Fix First
+
+[URL](https://potato.id/en/posts/security-headers-check-what-to-fix-first-on-your-website/)  
+Date: 2026-05-01
+
+Summary:
+If you are running a security headers check with SecurityHeaders.com, the biggest mistake is trying to fix everything at once.
+A better approach is to review each HTTP Security Header, separate the easy wins from the risky changes and then fix the headers in the right order.
+For this draft, we use the sample SecurityHeaders.com report for this website.
+Site: https://potato.id/ IP Address: 172.67.219.34 Report Time: 22 Apr 2026 16:50:39 UTC Headers: - Referrer-Policy - Content-Security-Policy - X-Frame-Options - Strict-Transport-Security - X-Content-Type-Options - Permissions-Policy Warning: Grade capped at A, please see warnings below. The interesting part here is not just the grade. It is the warning. A site can already look &ldquo;good&rdquo; or A Grade in SecurityHeaders.com but still have a few settings that should be tightened first.
+
+
+## WordPress Security Plugin Guide: 7 Best Picks for Better WordPress Security
+
+[URL](https://potato.id/en/posts/best-wordpress-security-plugins/)  
+Date: 2026-04-27
+
+Summary:
+If you are looking for the best WordPress Security Plugin, the real challenge is not finding one, it is choosing one that matches your site, your budget, and your risk level.
+Good WordPress Security is not about installing every plugin that says &ldquo;firewall&rdquo; or &ldquo;malware scanner.&rdquo; In most cases, one strong plugin plus good patching habits is far better than stacking multiple overlapping tools.
+This guide compares 7 popular options and gives the pros and cons of each plugin so you can decide what actually fits your WordPress setup.
+
+
 ## How to Improve Your Qualys SSL Server Test Score and Get A+ in SSL Labs
 
 [URL](https://potato.id/en/posts/improve-qualys-ssl-server-test-score/)  
