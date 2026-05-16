@@ -151,6 +151,46 @@
 	       
 
             <figure class="list__thumbnail thumbnail">
+                <a class="thumbnail__link" href="/posts/execution-after-redirect/">
+                <picture>
+                    <source srcset="/img/ear/thumbnail_hu_7ec24ea7eddb4e4b.webp" media="(min-width: 1024px)">
+                    <source srcset="/img/ear/thumbnail_hu_1c308e3f7ee6e760.webp" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="/img/ear/thumbnail_hu_b4ca596c841069f4.webp" media="(max-width: 767px)">
+                    <img class="thumbnail__image"
+                         src="/img/ear/thumbnail_hu_1c308e3f7ee6e760.webp"
+                         width="800"
+                         height="533"
+                         alt="Execution After Redirect with Burp Suite"
+                         loading="lazy">
+                </picture>
+                </a>
+            </figure>
+
+
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/posts/execution-after-redirect/" rel="bookmark">
+			Execution After Redirect with Burp Suite
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-04-19T00:00:00Z">19-04-2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/offensive/" rel="category">Offensive</a>, <a class="meta__link" href="/categories/defensive/" rel="category">Defensive</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		Execution After Redirect atau EAR adalah teknik yang digunakan untuk mengeksekusi kode setelah proses redirect. Teknik ini biasanya digunakan untuk bypass beberapa fitur keamanan yang ada pada aplikasi web. Pada artikel ini, kita akan membahas bagaimana melakukan exploitasi EAR menggunakan Burp Suite.
+Apa itu Execution After Redirect (EAR)? Execution After Redirect biasanya ditemui pada aplikasi web dengan style code native yang menggunakan mekanisme redirect untuk mengarahkan user ke halaman …
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/execution-after-redirect/">Selanjutnya…</a>
+	</div>
+</article>
+<article class="list__item post">
+	       
+
+            <figure class="list__thumbnail thumbnail">
                 <a class="thumbnail__link" href="/posts/fake-sponsored-jobposting/">
                 <picture>
                     <source srcset="/img/loker/a_hu_9e9d9298b82a4908.webp" media="(min-width: 1024px)">
@@ -510,52 +550,12 @@ Namun seperti yang kita tau tidak sedikit kita dari masyarakat yang mendapatkan 
 		<a class="list__footer-readmore btn" href="/posts/there-is-no-way-it-is-dns/">Selanjutnya…</a>
 	</div>
 </article>
-<article class="list__item post">
-	       
-
-            <figure class="list__thumbnail thumbnail">
-                <a class="thumbnail__link" href="/posts/moving-from-disqus-to-giscus-with-hugo-ssg/">
-                <picture>
-                    <source srcset="/img/giscus_hu_3033b780cc26c443.webp" media="(min-width: 1024px)">
-                    <source srcset="/img/giscus_hu_5349410f44562f5e.webp" media="(min-width: 768px) and (max-width: 1023px)">
-                    <source srcset="/img/giscus_hu_1cf4c10afecb2cbf.webp" media="(max-width: 767px)">
-                    <img class="thumbnail__image"
-                         src="/img/giscus_hu_5349410f44562f5e.webp"
-                         width="800"
-                         height="405"
-                         alt="Moving From Disqus to Giscus with Hugo SSG"
-                         loading="lazy">
-                </picture>
-                </a>
-            </figure>
-
-
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/moving-from-disqus-to-giscus-with-hugo-ssg/" rel="bookmark">
-			Moving From Disqus to Giscus with Hugo SSG
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2024-05-18T00:00:00Z">18-05-2024</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/development/" rel="category">Development</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Goodbye Discus, Hello Giscus Setelah sekian lama menggunakan Disqus sebagai platform komentar atau biasa disebut sebagai Comment-as-a-service, akhirnya web ini beralih ke giscus setelah pertimbangan dengan platform komentar yang sama-sama menggunakan github yaitu utterances
-Starting Dari awal buat web ini bingung mau pake metode komen apa, karena web ini adalah SSG (Static Site Generator) yang mana tidak ada koneksi database maka diperlukan platofrm komentar pihak ketiga adalah pilihan, …
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/moving-from-disqus-to-giscus-with-hugo-ssg/">Selanjutnya…</a>
-	</div>
-</article>
 
 </main>
 
 <div class="pagination">
 	<a class="pagination__item pagination__item--prev btn" href="/page/2/">«</a>
-	<span class="pagination__item pagination__item--current">3/6</span>
+	<span class="pagination__item pagination__item--current">3/7</span>
 	<a class="pagination__item pagination__item--next btn" href="/page/4/">»</a>
 </div>
 
@@ -593,11 +593,11 @@ Starting Dari awal buat web ini bingung mau pake metode komen apa, karena web in
 	<h3 class="widget__title">Postingan Terbaru</h3>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/weak-secops-exposed-clickfix-dashboard/">How I Get Access ClickFix Dashboard Due to Bad SecOps</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/cara-cek-http-security-headers-dan-apa-yang-harus-diperbaiki-terlebih-dahulu/">Panduan HTTP Security Headers: Cara Cek Keamanan dan Perbaikan</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/plugin-keamanan-wordpress-terbaik/">7 Plugin Keamanan WordPress Terbaik untuk Meningkatkan WordPress Security</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/cara-meningkatkan-skor-qualys-ssl-server-test/">Cara Meningkatkan Skor Qualys SSL Server Test dan Mendapatkan A&#43; di SSL Labs</a></li>
 			<li class="widget__item"><a class="widget__link" href="/posts/build-it-vs-break-it-mindset-vibe-coder-security/">Build It vs Break It: Kenapa Vibe Coder Sering Bikin Aplikasi yang Mudah Dibobol</a></li>
-			<li class="widget__item"><a class="widget__link" href="/posts/subdomain-takeover-via-aws-elastic-beanstalk/">Subdomain Takeover via AWS Elastic Beanstalk</a></li>
 		</ul>
 	</div>
 </div>
@@ -606,6 +606,8 @@ Starting Dari awal buat web ini bingung mau pake metode komen apa, karena web in
 	<h3 class="widget__title">Kategori</h3>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/cyber-security/">Cyber Security</a></li>
 			<li class="widget__item">
 				<a class="widget__link" href="/categories/defensive/">Defensive</a></li>
 			<li class="widget__item">
@@ -634,7 +636,7 @@ Starting Dari awal buat web ini bingung mau pake metode komen apa, karena web in
 		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (9)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/csp/" title="CSP">CSP (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/cyber-hygiene/" title="Cyber Hygiene">Cyber Hygiene (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/cybersecurity/" title="Cybersecurity">Cybersecurity (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cybersecurity/" title="Cybersecurity">Cybersecurity (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/dns/" title="DNS">DNS (6)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
@@ -658,7 +660,7 @@ Starting Dari awal buat web ini bingung mau pake metode komen apa, karena web in
 		<a class="widget-taglist__link widget__link btn" href="/tags/lfi/" title="LFI">LFI (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/linux/" title="Linux">Linux (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/malware/" title="Malware">Malware (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/malware/" title="Malware">Malware (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/nginx/" title="NGINX">NGINX (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/phishing/" title="Phishing">Phishing (7)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/plugin/" title="Plugin">Plugin (1)</a>
@@ -678,6 +680,7 @@ Starting Dari awal buat web ini bingung mau pake metode komen apa, karena web in
 		<a class="widget-taglist__link widget__link btn" href="/tags/telegram-bot/" title="Telegram Bot">Telegram Bot (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/text-editor/" title="Text Editor">Text Editor (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/threat-hunting/" title="Threat Hunting">Threat Hunting (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/users/" title="Users">Users (8)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/vibe-coding/" title="Vibe Coding">Vibe Coding (1)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/vim/" title="VIM">VIM (1)</a>
@@ -686,7 +689,7 @@ Starting Dari awal buat web ini bingung mau pake metode komen apa, karena web in
 		<a class="widget-taglist__link widget__link btn" href="/tags/web-hacking/" title="Web Hacking">Web Hacking (2)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/web-security/" title="Web Security">Web Security (4)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/windows/" title="Windows">Windows (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (5)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (36)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>

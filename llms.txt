@@ -6,6 +6,16 @@ Base URL: https://potato.id/
 
 # SECTION: CONTENT_INDEX
 
+## How I Get Access ClickFix Dashboard Due to Bad SecOps
+
+[URL](https://potato.id/en/posts/weak-secops-exposed-clickfix-dashboard/)  
+Date: 2026-05-16
+
+Summary:
+Introduction That afternoon, one of my monitoring teammates casually mentioned a new alert: “Why is this user opening a Polygon crypto website?” That immediately caught my attention and I suspected the user had accessed a website infected with ClickFix.
+The suspicion became stronger because the user was not from the IT team and had no known involvement with cryptocurrency or Web3-related activities. In addition, a few days earlier we had investigated another incident where a user accidentally visited a ClickFix-infected website, which led to several IoCs, including connections to Web3 Polygon infrastructure used by the threat actor to host malware payloads.
+
+
 ## HTTP Security Headers Guide: What to Fix First
 
 [URL](https://potato.id/en/posts/security-headers-check-what-to-fix-first-on-your-website/)  
