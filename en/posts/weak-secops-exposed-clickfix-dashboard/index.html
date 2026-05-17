@@ -35,7 +35,7 @@
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2026-05-16T00:00:00+00:00">
-    <meta property="article:modified_time" content="2026-05-16T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-05-17T00:00:00+00:00">
     <meta property="article:tag" content="Cybersecurity">
     <meta property="article:tag" content="Wordpress">
     <meta property="article:tag" content="Malware">
@@ -100,9 +100,9 @@
   },
   "articleSection": "posts",
   "keywords": ["cybersecurity","wordpress","malware","threat hunting"],
-  "wordCount":  1121 ,
+  "wordCount":  1133 ,
   "datePublished": "2026-05-16T00:00:00Z",
-  "dateModified": "2026-05-16T00:00:00Z"
+  "dateModified": "2026-05-17T00:00:00Z"
 }
 </script>
 
@@ -199,7 +199,8 @@
 			<h1 class="post__title">How I Get Access ClickFix Dashboard Due to Bad SecOps</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-05-16T00:00:00Z">16-05-2026</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/en/categories/cyber-security/" rel="category">Cyber Security</a>, <a class="meta__link" href="/en/categories/offensive/" rel="category">Offensive</a>, <a class="meta__link" href="/en/categories/defensive/" rel="category">Defensive</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-05-16T00:00:00Z">16-05-2026</time>
+	<time class="meta__text" datetime="2026-05-17T00:00:00Z">(Last Modified: 17-05-2026)</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/en/categories/cyber-security/" rel="category">Cyber Security</a>, <a class="meta__link" href="/en/categories/offensive/" rel="category">Offensive</a>, <a class="meta__link" href="/en/categories/defensive/" rel="category">Defensive</a>
 	</span>
 </div></div>
 		</header>
@@ -703,21 +704,27 @@
 <p>Previously, I was able to identify the server’s IP address through an access point that has since been removed. I then investigated the ASN associated with that server, along with other IP addresses within the same network range. The results suggested that many IPs in that ASN are linked to suspicious activities, including malware hosting, C2 panels, phishing pages, payload distribution, and credential stealer infrastructure.</p>
 <h2 id="indicator-of-compromised">Indicator Of Compromised</h2>
 <p>Below are several indicators identified during the investigation. The list includes domains used in the campaign as well as sample payload hashes retrieved from the related server infrastructure.</p>
-<p>URL<br>
-anakondabob[.]club<br>
-babybon[.]cfd<br>
-betalegenda[.]cfd<br>
-bulletpop[.]cyou<br>
-chubrik[.]sbs<br>
-corppop[.]shop<br>
-gdedengikarlos[.]cfd<br>
-nowfoods[.]my<br>
-spartanec[.]lat</p>
-<p>sha256sum<br>
-e6185efd48faf9336f0d1e8b1ba0f5716a247767c60088e438a86f8bbf0cfe81  payload.exe</p>
-<p>email
-adminbackup[@]wordpress[.]org</p>
-<h2 id="final-thoughts">Final Thoughts</h2>
+<p>Domain</p>
+<pre tabindex="0"><code>anakondabob[.]club  
+babybon[.]cfd  
+betalegenda[.]cfd  
+bulletpop[.]cyou  
+chubrik[.]sbs  
+corppop[.]shop  
+gdedengikarlos[.]cfd  
+nowfoods[.]my  
+spartanec[.]lat  
+</code></pre><p>SHA256</p>
+<pre tabindex="0"><code>7158035cfc3cffc8aa23c9ba614a3ad512b30f4c18e60506a7057bed97eaf055  SettingSync.dll
+ecd69b4afd4c1034972ac51ad08dd44824ac39fe5ce6c1d03fff1694d3cf2b80  cscript2.dll
+3a6b7d2082763e9581fa59fb9e7f94a044ed1ef0fb073afdf0fd72f1c1a29b99  edputil.dll
+e6185efd48faf9336f0d1e8b1ba0f5716a247767c60088e438a86f8bbf0cfe81  payload.exe
+2a17bb42829c3dd3259a5471a5f26b1d51db281f5da7bf9ba3402acf12781185  swprv2.dll
+4687ebe922ad8e87a624deabbb08cfda8ea515b29b301e3c0c3f44570117f171  vpncli.dll
+64e54058d9cae020b51850d49e4b0365dd0a6d4d0aea877bd804ea8c02f899e5  wsqmcons.dll
+</code></pre><p>Email</p>
+<pre tabindex="0"><code>adminbackup[@]wordpress[.]org
+</code></pre><h2 id="final-thoughts">Final Thoughts</h2>
 <p>This investigation shows that the ClickFix campaign does more than just steal credentials. It also abuses gained access to aggressively spread infections in a worm-like manner. When the threat actors obtain valid WordPress credentials, they immediately create a new administrator account silently, typically following a pattern such as adminbackup[random], and then inject the ClickFix script into the compromised website to continue malware distribution.</p>
 <p>This case also highlights how poor security operations practices such as exposed backup files, hardcoded API keys, and weak file upload validation can significantly expand access to both the attacker’s infrastructure and victim environments.</p>
 <p>For mitigation, organizations are strongly advised to take immediate action:</p>
