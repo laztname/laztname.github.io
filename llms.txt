@@ -59,6 +59,17 @@ There is a pattern that keeps playing out. A developer or vibe coder builds an a
 Not because the developer was incompetent. Not because the technology stack was bad. But because one thing kept getting skipped when the focus was entirely on speed: security.
 
 
+## New Hire Cyber Security Engineer? Start With These Priorities
+
+[URL](https://potato.id/en/posts/first-cyber-security-hire-guide/)  
+Date: 2026-03-28
+
+Summary:
+First Cyber Security Hire? What to do as Cyber Security? Just got hired as a cybersecurity professional but confused about where to start because the job description is unclear? Or are you the first person recruited to handle cybersecurity in the company and the only one who truly understands cyber security there?
+If so, you’re not alone.
+I’ve been in the same situation before. At the time, I worked at a government institution that already used the term “cybersecurity,” but the implementation was still far from mature. Not because they didn’t care, but because of the lack of cybersecurity talent, experience and understanding of how cyber security should actually be implemented within an organization.
+
+
 ## Subdomain Takeover via AWS Elastic Beanstalk
 
 [URL](https://potato.id/en/posts/subdomain-takeover-via-aws-elastic-beanstalk/)  
