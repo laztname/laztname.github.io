@@ -1,0 +1,74 @@
+==================================================================
+https://keybase.io/laztname
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://potato.id
+  * I am laztname (https://keybase.io/laztname) on keybase.
+  * I have a public key with fingerprint F8A9 BB63 6D06 5BCA 90AE  B23F E652 7B0F FD57 6400
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120963163b8756e626acdf3bac891bb0df59c3013c8451f89c64f229b344e267aa30a",
+      "fingerprint": "f8a9bb636d065bca90aeb23fe6527b0ffd576400",
+      "host": "keybase.io",
+      "key_id": "e6527b0ffd576400",
+      "kid": "010190702e4f974391b15f32d092f46464535b25fb56ca792e8a1f64ada17a7cf6bc0a",
+      "uid": "d35f51c99cf87a7f62ad9782ed1e4d19",
+      "username": "laztname"
+    },
+    "service": {
+      "hostname": "potato.id",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1779803220,
+  "expire_in": 157680000,
+  "prev": "93d0ed421a02d1c9b63efdf983dae3caf4f4d81b919e70b7a85f1802894b8eb4",
+  "seqno": 8,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owFtUm1QVUUYBiQcsEAGgWlIqQOBJcn5/riRTgFOg0UgCRLhZfecPXAE7r3ce7mI
+fASmEhEfgyHZjMRQGDiASAbxoQZDhUgjMjRMDWKOEAJpEs3wcQM6l9F/7f7Y3Xef
+99nnefeteGaTnYv9Hwdy3FbjJDv7GzPQ7ojnV4k5GNRL2ZgmB0tFGwtKk5DJrE1V
+JEyD4QSJCyxFsBTkOYZFLMkCUZIpCEReICDEJZkRRAonKJGnGULmBZGlZZIUIEXT
+iGQ5ACgcYEGYrOiSkdFgVHRmlVbmgQAhS7ESzjJQBAIOECQpGbEMyUFcliWGY2kc
+VxNT9CZbhioOAhParejVmHrQbsj7H/wT3Tgh4BxOIloWOJpStRKMTJESLpAyzaqT
+oRhIMjJkWBFwAol4QMgsDSRAcIATZRaKG7ozN+gkipEZQhQEUebVa5klgSRwPIkk
+AtESIdiAJmTUgXSkotPAMfPGNi8IU6MWRUS2wtqcPEYY9GZg1u9WuYMwg1Fv1ov6
+NDWcYjYbTBpbmjnbYMNlIah9zKCFik5Si6hmWJDRpOh1mIZQkaJZsVESHCfwOEWS
+eBCGjhoUI9IqNoRaFx5Xh+0dZFEpBUrCkUSTBDiIk5LqSf0GJEuywFMSQJQIZFqm
+JZ6AAiEgDocc4BmZ4HGSF2jII0hjNlMZOj2m4VWdIFnlNCnJOmDONKqOXYodKEc7
+exe77V4vOC41dovpTgmDFS1te5803lMOtq6zc3He+iTyXZ3b6taa0TsxWWf31lm2
+1566H6MdDgnzeX3lxmR5nqf3vdhHkUUP2vuyrg96LBZE9TiOE0Hf00OrwT9knHip
+r39hX1X8Zu1z+0KsSWess6/dHP7t6WN+LzZ2rs+6L52ojf58z/NOu64U5842nKx0
+j0gI7SX+Ma5/UN9YlO0VJfgWvbm25ZMKp+Km0JYG15PpQ+mr2+5fD/StinFrhTM1
+D3+pI0eXS6cKrPXl83HtwSAy6t6WqrPrXUM1InjFa/Fy259NXkrgwdZDsb3DXUkB
+mm/i/bFz5TPBRXf/cgjMnQp3PnQ63T6BoX3aVw4P3PrVvboh+ssrnX6ny/IPr0fO
+d0S8A0ce9dX1O4eMEg9zU1zfmvaMcPo6Or2nuTS+GEuMLzH5TwRU9bftn7hNjCx8
+uqegqe18V2allb607F8ruvq8f7yjbcV78KeBTZkdc8MlLT2lE41z14bDm+Uy8nKd
+Ydd4pSW88sPuad8la5dfkkf/zvzo6bX3Uj+L7Ygpua25qtRPvnv+YoHu1YqdEle8
+MLY2ebPiUnMrkXFxhHQ7gzncKk8KySsIqE0uDOwc+zZ/R9zRsdKr4p3aqWVLwQFr
+xu9vv7Hy937w4zj0ntt2t3+pvveLC/ll16JW/Vbmxz2awo73FXsZH8SyP493fhTo
+svnlsLXCxAvV5z7eMXDEUE3+K465d4R2Fj672L0+hP8H
+=Lf5l
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/laztname
+
+==================================================================
+
