@@ -2,6 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://potato.id/en/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://potato.id/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://potato.id/en/"
+                />
+  </url><url>
+    <loc>https://potato.id/en/posts/</loc>
+    <lastmod>2026-05-27T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://potato.id/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://potato.id/en/posts/"
+                />
+  </url><url>
     <loc>https://potato.id/en/tags/blue-team/</loc>
     <lastmod>2026-05-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -77,21 +107,6 @@
                 href="https://potato.id/en/tags/defensive/"
                 />
   </url><url>
-    <loc>https://potato.id/en/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="https://potato.id/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://potato.id/en/"
-                />
-  </url><url>
     <loc>https://potato.id/en/posts/first-cyber-security-hire-guide/</loc>
     <lastmod>2026-05-26T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -105,21 +120,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://potato.id/en/posts/first-cyber-security-hire-guide/"
-                />
-  </url><url>
-    <loc>https://potato.id/en/posts/</loc>
-    <lastmod>2026-05-26T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="https://potato.id/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://potato.id/en/posts/"
                 />
   </url><url>
     <loc>https://potato.id/en/tags/</loc>
