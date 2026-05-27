@@ -6,8 +6,29 @@
     <description>Recent content in Tags on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>id</language>
-    <lastBuildDate>Tue, 26 May 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Server</title>
+      <link>https://potato.id/tags/server/</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/tags/server/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SSL/TLS Certificate</title>
+      <link>https://potato.id/tags/ssl/tls-certificate/</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/tags/ssl/tls-certificate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Security</title>
+      <link>https://potato.id/tags/web-security/</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/tags/web-security/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Blue Team</title>
       <link>https://potato.id/tags/blue-team/</link>
@@ -86,13 +107,6 @@
       <description></description>
     </item>
     <item>
-      <title>Web Security</title>
-      <link>https://potato.id/tags/web-security/</link>
-      <pubDate>Fri, 01 May 2026 23:58:00 +0700</pubDate>
-      <guid>https://potato.id/tags/web-security/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Keamanan WordPress</title>
       <link>https://potato.id/tags/keamanan-wordpress/</link>
       <pubDate>Mon, 27 Apr 2026 00:06:00 +0700</pubDate>
@@ -125,20 +139,6 @@
       <link>https://potato.id/tags/nginx/</link>
       <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
       <guid>https://potato.id/tags/nginx/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Server</title>
-      <link>https://potato.id/tags/server/</link>
-      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/tags/server/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SSL/TLS Certificate</title>
-      <link>https://potato.id/tags/ssl/tls-certificate/</link>
-      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/tags/ssl/tls-certificate/</guid>
       <description></description>
     </item>
     <item>

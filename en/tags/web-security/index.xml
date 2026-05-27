@@ -6,8 +6,15 @@
     <description>Recent content in Web Security on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 01 May 2026 23:58:00 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/en/tags/web-security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why TLS Certificates Are Shrinking to 47 Days</title>
+      <link>https://potato.id/en/posts/tls-certificate-validity-47-days/</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/tls-certificate-validity-47-days/</guid>
+      <description>&lt;p&gt;Today I was renewing one of my DigiCert TLS certificates, something I’ve done countless times before without really thinking much about it. Just another routine task sitting in the middle of emails, deployments, dashboards, and all the usual infrastructure work.&lt;/p&gt;&#xA;&lt;p&gt;But this time, something felt off.&lt;/p&gt;&#xA;&lt;p&gt;After the certificate was issued, I glanced at the expiration date and immediately noticed the validity period looked shorter than usual. At first I assumed I misread it, or maybe selected the wrong product during checkout. For years, getting a one-year TLS/SSL certificate had become normal. Even after the industry reduced TLS certificate validity to 398 days, most people had already adjusted to that change.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>HTTP Security Headers Guide: What to Fix First</title>
       <link>https://potato.id/en/posts/security-headers-check-what-to-fix-first-on-your-website/</link>

@@ -6,8 +6,15 @@
     <description>Recent content in Security on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>id</language>
-    <lastBuildDate>Fri, 01 May 2026 23:58:00 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/categories/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kenapa Umur Sertifikat SSL/TLS Berkurang Menjadi 47 Hari?</title>
+      <link>https://potato.id/posts/tls-certificate-validity-47-days/</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/tls-certificate-validity-47-days/</guid>
+      <description>&lt;p&gt;Hari ini saya sedang melakukan renewal salah satu sertifikat SSL/TLS dari DigiCert, hal ini sudah berkali-kali saya lakukan sampai rasanya agak jenuh karena setiap tahun harus melakukan renewal.&lt;/p&gt;&#xA;&lt;p&gt;Tapi ada sesuatau yang sedikit berbeda.&lt;/p&gt;&#xA;&lt;p&gt;Setelah sertifikat selesai diterbitkan, saya sempat melihat tanggal expired-nya dan langsung merasa ada yang aneh. Masa berlakunya lebih pendek dari biasanya. Awalnya saya pikir mungkin salah lihat, atau mungkin saya salah melakukan order paket sertifikat. Selama melakukan renewal, sertifikat SSL/TLS biasanya berlaku satu tahun atau 365 hari. Bahkan ketika ada perubahan yang menurunkan masa berlaku sertifikat menjadi 398 hari (sebelumnya bisa sampai 2 tahunan).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Panduan HTTP Security Headers: Cara Cek Keamanan dan Perbaikan</title>
       <link>https://potato.id/posts/cara-cek-http-security-headers-dan-apa-yang-harus-diperbaiki-terlebih-dahulu/</link>
