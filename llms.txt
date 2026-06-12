@@ -6,6 +6,19 @@ Base URL: https://potato.id/
 
 # SECTION: CONTENT_INDEX
 
+## I Accidentally Logged as Admin Into a Threat Actor Website
+
+[URL](https://potato.id/en/posts/i-accidentally-logged-into-threat-actor-website/)  
+Date: 2026-06-11
+
+Summary:
+Introduction Most cybersecurity investigations start with an alert.
+This one started with curiosity.
+While scrolling through X (formerly Twitter), I came across a post discussing a suspicious website that appeared to be distributing software downloads. At first glance, it looked like another fake download portal. But after spending several hours investigating it, I found myself doing something I never expected:
+I accidentally logged into the threat actor&rsquo;s dashboard.
+This article documents the investigation, infrastructure analysis and lessons learned from interacting with a live threat actor website.
+
+
 ## Why TLS Certificates Are Shrinking to 47 Days
 
 [URL](https://potato.id/en/posts/tls-certificate-validity-47-days/)  

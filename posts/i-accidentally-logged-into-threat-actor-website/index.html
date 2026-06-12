@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html class="no-js" lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow, max-image-preview:large">
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="theme-color" content="#efe6dd">
+	<meta http-equiv="content-language" content="id">
+	<meta name="author" content="Ardi Jonias Fortuna">
+	<title>I Accidentally Logged as Admin Into a Threat Actor Website - Jonias Fortuna</title>
+	<link rel="canonical" href="https://potato.id/posts/i-accidentally-logged-into-threat-actor-website/">
+	
+	
+	<link rel="alternate" hreflang="x-default" href="https://potato.id/posts/i-accidentally-logged-into-threat-actor-website/">
+	<link rel="alternate" hreflang="id" href="https://potato.id/posts/i-accidentally-logged-into-threat-actor-website/">
+	
+	<link rel="alternate" hreflang="en" href="https://potato.id/en/posts/i-accidentally-logged-into-threat-actor-website/">
+	
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670" crossorigin="anonymous"></script>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Saya tidak sengaja masuk ke situs web jahat yang dioperasikan oleh Threat Actor setelah scrolling di X. Berikut cara saya melakukannya.">
+		<meta property="og:url" content="https://potato.id/posts/i-accidentally-logged-into-threat-actor-website/">
+  <meta property="og:site_name" content="Jonias Fortuna">
+  <meta property="og:title" content="I Accidentally Logged as Admin Into a Threat Actor Website">
+  <meta property="og:description" content="Saya tidak sengaja masuk ke situs web jahat yang dioperasikan oleh Threat Actor setelah scrolling di X. Berikut cara saya melakukannya.">
+  <meta property="og:locale" content="id">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-06-11T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-06-11T00:00:00+00:00">
+    <meta property="article:tag" content="Cybersecurity">
+    <meta property="article:tag" content="Malware">
+    <meta property="article:tag" content="Threat Hunting">
+    <meta property="og:image" content="https://potato.id/img/admin-threat-actor/thumb.png">
+
+		
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://potato.id/img/admin-threat-actor/thumb.png">
+  <meta name="twitter:title" content="I Accidentally Logged as Admin Into a Threat Actor Website">
+  <meta name="twitter:description" content="Saya tidak sengaja masuk ke situs web jahat yang dioperasikan oleh Threat Actor setelah scrolling di X. Berikut cara saya melakukannya.">
+
+        <link rel="me" href="https://infosec.exchange/@laztname">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://pagead2.googlesyndication.com">
+	<link rel="preconnect" href="https://googleads.g.doubleclick.net">
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        
+        <link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2" type="font/woff2" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap"></noscript>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+
+	
+          
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https:\/\/potato.id\/posts\/i-accidentally-logged-into-threat-actor-website\/#article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/potato.id\/posts\/i-accidentally-logged-into-threat-actor-website\/"
+  },
+  "headline": "I Accidentally Logged as Admin Into a Threat Actor Website",
+  "description": "Saya tidak sengaja masuk ke situs web jahat yang dioperasikan oleh Threat Actor setelah scrolling di X. Berikut cara saya melakukannya.",
+  "inLanguage": "id",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/potato.id\/img\/admin-threat-actor\/thumb.png"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Ardi Jonias Fortuna",
+    "url": "https:\/\/potato.id\/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jonias Fortuna",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/potato.id\/favicon.ico"
+    }
+  },
+  "articleSection": "posts",
+  "keywords": ["cybersecurity","malware","threat hunting"],
+  "wordCount":  1100 ,
+  "datePublished": "2026-06-11T00:00:00Z",
+  "dateModified": "2026-06-11T00:00:00Z"
+}
+</script>
+
+
+        
+
+<script>
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "ii5leisvaz");
+</script>
+</head>
+<body class="body">
+	<div id="loading"></div>
+	<div class="container container--outer">
+		<header class="header">
+        <div class="container">
+                <div class="logo">
+                        <a class="logo__link" href="/" title="Jonias Fortuna" rel="home">
+                                <div class="logo__title">potato</div>
+                                <div class="logo__tagline">Just another potato website.</div>
+                        </a>
+                </div>
+                
+<nav class="menu">
+        <button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                <span class="menu__btn-title" tabindex="-1">Menu</span>
+        </button>
+
+        <ul class="menu__list">
+                <li class="menu__item">
+                        <a class="menu__link" href="/">
+                                
+                                <span class="menu__text">Home</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/about/">
+                                
+                                <span class="menu__text">About Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/contact/">
+                                
+                                <span class="menu__text">Contact Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/privacy-policy/">
+                                
+                                <span class="menu__text">Privacy Policy</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/uses/">
+                                
+                                <span class="menu__text">Uses</span>
+                                
+                        </a>
+                </li>
+
+		
+		<li class="menu__item menu__item--lang">
+		  
+		    <a class="menu__link"
+		       href="/en/posts/i-accidentally-logged-into-threat-actor-website/"
+		       lang="en">
+		       English
+		    </a>
+		  
+		</li>
+		
+
+        </ul>
+</nav>
+
+
+        </div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">I Accidentally Logged as Admin Into a Threat Actor Website</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-06-11T00:00:00Z">11-06-2026</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/defensive/" rel="category">Defensive</a>, <a class="meta__link" href="/categories/offensive/" rel="category">Offensive</a>, <a class="meta__link" href="/categories/cyber-security/" rel="category">Cyber Security</a>
+	</span>
+</div></div>
+		</header>
+		       
+
+            <figure class="post__thumbnail thumbnail">
+                
+                <picture>
+                    <source srcset="/img/admin-threat-actor/thumb_hu_cdeb0317cd659148.webp" media="(min-width: 1024px)">
+                    <source srcset="/img/admin-threat-actor/thumb_hu_e78fc088ae054781.webp" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="/img/admin-threat-actor/thumb_hu_6f57f0ad97476c30.webp" media="(max-width: 767px)">
+                    <img class="thumbnail__image"
+                         src="/img/admin-threat-actor/thumb_hu_e78fc088ae054781.webp"
+                         width="800"
+                         height="413"
+                         alt="I Accidentally Logged as Admin Into a Threat Actor Website"
+                         loading="lazy">
+                </picture>
+                
+            </figure>
+
+<div class="content post__content clearfix">
+			<h2 id="pendahuluan">Pendahuluan</h2>
+<p>Kebanyakan investigasi keamanan siber dimulai dari sebuah alert.</p>
+<p>Yang satu ini dimulai dari rasa penasaran.</p>
+<p>Saat sedang scroll X (dulunya Twitter), saya menemukan sebuah postingan yang membahas website mencurigakan yang terlihat seperti web download software crack tapi isinya malware. Awalnya saya mengira ini hanya portal download biasa. Tapi setelah beberapa jam melakukan investigasi, saya malah berakhir melakukan sesuatu yang sama sekali tidak saya duga:</p>
+<p>Saya tidak sengaja login ke dashboard ini yang dimiliki threat actor.</p>
+<p>Artikel ini menulis secara singkat terhadap proses investigasi, analisis infrastruktur dan pelajaran yang saya dapat dari interaksi dengan website milik threat actor yang masih aktif.</p>
+<h2 id="berawal-dari-x">Berawal dari X</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/admin-threat-actor/x-post.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/admin-threat-actor/x-post_hu_264fd9c5d13779bb.webp" media="(min-width: 1024px)">
+        <source srcset="/img/admin-threat-actor/x-post_hu_aac27cecdac6bda0.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/admin-threat-actor/x-post_hu_a5c27d5196aef221.webp" media="(max-width: 767px)">
+        <img src="/img/admin-threat-actor/x-post_hu_a5c27d5196aef221.webp"
+             alt="Image"
+             class="hover-effect"
+             width="800"
+             height="800">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Saat scroll X, saya menemukan sebuah postingan cyber intelligence yang muncul di timeline. Karena saya mengikuti banyak akun yang fokus di bidang cybersecurity dan threat intelligence, timeline saya sering merekomendasikan konten seputar ancaman siber, analisis malware dan indicator of compromise (IOC).</p>
+<p>Sebagai bagian dari rutinitas, saya biasanya mereview postingan seperti itu dan menganalisis IOC yang dibagikan. Jika menemukan indikator yang relevan, saya memasukkannya ke environment saya untuk investigasi dan kebutuhan deteksi lebih lanjut.</p>
+<p>Dalam kasus ini, postingannya menarik perhatian karena visualnya cukup menarik dan penyampaian threat intelligence yang jelas. Tanpa melakukan validasi lebih dalam, saya mengambil IOC tersebut dan mulai menyelidiki domain yang terkait. Dari analisis yang dilakukan, saya menemukan bahwa domain tersebut masih aktif dan kemungkinan besar dibuat secara vibecoding.</p>
+<h2 id="rasa-penasaran-mulai-mengambil-alih">Rasa Penasaran Mulai Mengambil Alih</h2>
+<p>Alih alih berhenti di upload IOC, saya mulai melakukan enumerasi terhadap web application tersebut menggunakan ffuf.</p>
+<p>Directory brute forcing dengan cepat menemukan beberapa path menarik:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/admin/login.php
+</span></span><span style="display:flex;"><span>/config/database.php
+</span></span><span style="display:flex;"><span>/install/install.php
+</span></span></code></pre></div><p>Hasil enumerasi menggunakan ffuf menunjukkan beberapa path menarik, tetapi <code>/install/install.php</code> langsung mencuri perhatian. Walaupun aplikasinya sudah berjalan dan aktif melayani traffic, halaman instalasinya masih bisa diakses.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/admin-threat-actor/init-form.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/admin-threat-actor/init-form_hu_726c8752c3e3f51e.webp" media="(min-width: 1024px)">
+        <source srcset="/img/admin-threat-actor/init-form_hu_5d75ee09e7ec9a86.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/admin-threat-actor/init-form_hu_ec5e483a60bc3cdb.webp" media="(max-width: 767px)">
+        <img src="/img/admin-threat-actor/init-form_hu_ec5e483a60bc3cdb.webp"
+             alt="Image"
+             class="hover-effect"
+             width="800"
+             height="742">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Hal ini memunculkan pertanyaan yang cukup jelas: apakah installer ada validasinya setelah deployment dilakuakn?</p>
+<p>Untuk menjawabnya, saya memutuskan mencoba keberuntungan dan melakukan reinstall. Sebelum lanjut, saya perlu memahami proses setup aplikasinya dan mengumpulkan informasi yang dibutuhkan agar tidak merusak deployment yang sudah ada.</p>
+<h2 id="menyiapkan-mysql-dan-mengambil-alih-database">Menyiapkan MySQL dan Mengambil Alih Database</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/admin-threat-actor/db-setup.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/admin-threat-actor/db-setup_hu_138c0bcb6389b2b9.webp" media="(min-width: 1024px)">
+        <source srcset="/img/admin-threat-actor/db-setup_hu_c18ae0ef0266fe61.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/admin-threat-actor/db-setup_hu_456f0d921d71c068.webp" media="(max-width: 767px)">
+        <img src="/img/admin-threat-actor/db-setup_hu_456f0d921d71c068.webp"
+             alt="Image"
+             class="hover-effect"
+             width="800"
+             height="261">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Berdasarkan direktori yang ditemukan melalui ffuf, saya melihat lebih dekat halaman instalasinya. Form tersebut meminta koneksi database MySQL, persis seperti proses onboarding saat aplikasi pertama kali dipasang.</p>
+<p>Karena penasaran dengan apa yang akan terjadi, saya menjalankan instance MySQL Docker dan mengeksposnya ke Internet melalui ngrok agar aplikasi target bisa mengaksesnya. Setelah mengisi semua field yang diperlukan, saya menjalankan proses instalasi.</p>
+<p>Yang mengejutkan, proses tersebut berhasil.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/admin-threat-actor/success-init.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/admin-threat-actor/success-init_hu_f90bb85a8fb5d1d7.webp" media="(min-width: 1024px)">
+        <source srcset="/img/admin-threat-actor/success-init_hu_25b2f69c0f8f0dd5.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/admin-threat-actor/success-init_hu_6f91e1edafb8e0b4.webp" media="(max-width: 767px)">
+        <img src="/img/admin-threat-actor/success-init_hu_6f91e1edafb8e0b4.webp"
+             alt="Image"
+             class="hover-effect"
+             width="800"
+             height="535">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Walaupun aplikasi sudah berjalan, tidak ada mekanisme yang mencegah installer dijalankan ulang. Tidak ada pengecekan apakah aplikasi sudah pernah diinisialisasi sebelumnya.</p>
+<p>Sebagai bagian dari proses setup, terdapat form untuk melakukan setup password account administrator. Setelah instalasi selesai, saya memeriksa instance MySQL saya dan melihat aplikasi mulai membuat tabel serta mengisi skema database.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/admin-threat-actor/settings.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/admin-threat-actor/settings_hu_4a23b9e46dee3e89.webp" media="(min-width: 1024px)">
+        <source srcset="/img/admin-threat-actor/settings_hu_c23f2a0d526a7e85.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/admin-threat-actor/settings_hu_b2d66ce4d1b08ab6.webp" media="(max-width: 767px)">
+        <img src="/img/admin-threat-actor/settings_hu_b2d66ce4d1b08ab6.webp"
+             alt="Image"
+             class="hover-effect"
+             width="800"
+             height="372">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/admin-threat-actor/tables.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/admin-threat-actor/tables_hu_2304b0c10a912754.webp" media="(min-width: 1024px)">
+        <source srcset="/img/admin-threat-actor/tables_hu_c224f1b4465dcfda.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/admin-threat-actor/tables_hu_7c324575da4575b.webp" media="(max-width: 767px)">
+        <img src="/img/admin-threat-actor/tables_hu_7c324575da4575b.webp"
+             alt="Image"
+             class="hover-effect"
+             width="800"
+             height="519">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Pada titik ini, aplikasi sudah terhubung ke infrastruktur yang saya kontrol dan saya memiliki kredensial administrator yang dibuat langsung melalui alur instalasi.</p>
+<p>Lalu sesuatu yang aneh terjadi.</p>
+<p>Saya bisa login menggunakan akun administrator yang baru dibuat, tetapi dashboard langsung muncul error 500 Internal Server Error.</p>
+<p>Asumsi awal saya adalah ada masalah sinkronisasi database dan file aplikasi di server. Instalasinya berhasil, tetapi ada sesuatu yang tidak sesuai di sisi backend.</p>
+<p>Karena tidak bisa mengakses dashboard secara leluasa, saya akhirnya mematikan tunnel ngrok dan instance MySQL. Tidak lama setelah itu, domain tersebut mulai mengembalikan error 500 juga. Kemungkinan besar aplikasi masih mencoba terhubung ke database yang saya berikan saat proses reinstall.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/admin-threat-actor/500.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/admin-threat-actor/500_hu_dcec57350a3d4138.webp" media="(min-width: 1024px)">
+        <source srcset="/img/admin-threat-actor/500_hu_f69868ccace28ea7.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/admin-threat-actor/500_hu_760c311a3c8a7da0.webp" media="(max-width: 767px)">
+        <img src="/img/admin-threat-actor/500_hu_760c311a3c8a7da0.webp"
+             alt="Image"
+             class="hover-effect"
+             width="800"
+             height="488">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<h2 id="dashboard-tiba-tiba-muncul">Dashboard Tiba Tiba Muncul</h2>
+<p>Setelah kembali dari beristirahat sejenak, saya kembali mengakses domain tersebut dan melihat bahwa website sudah online kembali.</p>
+<p>Threat actor tersebut jelas sudah memperbaiki masalah databasenya dan memulihkan aplikasi.</p>
+<p>Saya kembali membuka tab terakhir yang sebelumnya menampilkan error 500 lalu melakukan refresh. dan tiba-tiba dashboard kali ini berhasil muncul tanpa error 500.</p>
+<p>Lalu saya teringat satu hal penting: ini adalah aplikasi PHP.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/admin-threat-actor/dashboard-admin.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/admin-threat-actor/dashboard-admin_hu_2bddf35032d3fde4.webp" media="(min-width: 1024px)">
+        <source srcset="/img/admin-threat-actor/dashboard-admin_hu_c37e16101555434.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/admin-threat-actor/dashboard-admin_hu_9e287daa67626610.webp" media="(max-width: 767px)">
+        <img src="/img/admin-threat-actor/dashboard-admin_hu_9e287daa67626610.webp"
+             alt="Image"
+             class="hover-effect"
+             width="800"
+             height="410">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Session login saya sebelumnya ternyata masih valid.</p>
+<p>Aplikasi tersebut tampaknya menyimpan session di server, bukan di database. Jadi walaupun backend sudah dikonfigurasi ulang, cookie session saya masih dikenali.</p>
+<p>Saya mengirim token session valid yang saya gunakan saat Database saya kontrol dan aplikasi langsung merespons seolah tidak pernah terjadi apa apa.</p>
+<p>Tidak ada login ulang.</p>
+<p>Tidak ada invalidasi session.</p>
+<p>Hanya session yang masih valid dan dashboard admin yang berfungsi penuh.</p>
+<h2 id="evidences">Evidences</h2>
+<p>Berikut tampilan dashboard yang saya akses. Bahasa aslinya menggunakan bahasa Rusia. Untuk mempermudah analisis, beberapa screenshot diterjemahkan menggunakan fitur terjemahan bawaan Firefox.</p>
+<ul>
+<li><a href="/img/admin-threat-actor/Main%20panel%20%E2%80%94%20Admin.png">Main panel</a></li>
+<li><a href="/img/admin-threat-actor/Keywords%20%E2%80%93%20Admin.png">Keywords</a></li>
+<li><a href="/img/admin-threat-actor/Settings%20%E2%80%93%20Admin.png">Settings</a></li>
+<li><a href="/img/admin-threat-actor/Visitors%20%E2%80%93%20Admin.png">Visitors</a></li>
+<li><a href="/img/admin-threat-actor/%D0%9D%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B8%20%E2%80%94%20%D0%90%D0%B4%D0%BC%D0%B8%D0%BD.png">Настройки</a></li>
+<li><a href="/img/admin-threat-actor/%D0%A1%D0%BA%D0%B0%D1%87%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%20%E2%80%94%20%D0%90%D0%B4%D0%BC%D0%B8%D0%BD.png">Скачивания</a></li>
+</ul>
+<h2 id="what-the-infrastructure-revealed">What the Infrastructure Revealed</h2>
+<p>Analisis lebih lanjut menunjukkan arsitektur yang cukup sederhana tetapi memiliki banyak kelemahan keamanan.</p>
+<p>Platform ini terdiri dari aplikasi PHP yang menggunakan MySQL sebagai backend, dengan penyimpanan file untuk menampung payload malware yang menangani proses download.</p>
+<p>Salah satu hal menarik adalah alur traffic yang digunakan.</p>
+<p>Alih alih mengarahkan korban langsung ke domain yang menyimpan malware, threat actor menggunakan redirector sebagai perantara.</p>
+<p>Dalam beberapa kasus, halaman Google Colab digunakan sebagai bagian dari rantai redirect sebelum pengguna diarahkan ke website download utama.</p>
+<p>
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-55-19.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-55-19_hu_fd4713967d0b0381.webp" media="(min-width: 1024px)">
+        <source srcset="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-55-19_hu_28eb2ede68924ae2.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-55-19_hu_9e85d73fb1c87d97.webp" media="(max-width: 767px)">
+        <img src="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-55-19_hu_9e85d73fb1c87d97.webp"
+             alt="Image"
+             class="hover-effect"
+             width="800"
+             height="322">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-55-31.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-55-31_hu_ac6d457e07816e2e.webp" media="(min-width: 1024px)">
+        <source srcset="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-55-31_hu_c23267c90525aaa3.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-55-31_hu_a0c58ebe67810104.webp" media="(max-width: 767px)">
+        <img src="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-55-31_hu_a0c58ebe67810104.webp"
+             alt="Image"
+             class="hover-effect"
+             width="800"
+             height="322">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-55-43.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-55-43_hu_3550cd1e109a9156.webp" media="(min-width: 1024px)">
+        <source srcset="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-55-43_hu_43da978c66a51885.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-55-43_hu_8bea0e7a273cb69a.webp" media="(max-width: 767px)">
+        <img src="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-55-43_hu_8bea0e7a273cb69a.webp"
+             alt="Image"
+             class="hover-effect"
+             width="800"
+             height="322">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-58-19.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-58-19_hu_3b44ed13f81192.webp" media="(min-width: 1024px)">
+        <source srcset="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-58-19_hu_8dd6878a6a5a05b4.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-58-19_hu_18f691418310d673.webp" media="(max-width: 767px)">
+        <img src="/img/admin-threat-actor/Screenshot%20From%202026-06-12%2022-58-19_hu_18f691418310d673.webp"
+             alt="Image"
+             class="hover-effect"
+             width="800"
+             height="471">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+</p>
+<p>Halaman download dibuat secara dinamis berdasarkan parameter URL, sementara aplikasi dan file yang digunakan sebenarnya tetap sama.</p>
+<p>Bergantung pada URL yang diakses, pengguna akan melihat konten download yang berbeda, tetapi semuanya mengarah ke tujuan yang sama.</p>
+<p>Tujuannya sederhana:</p>
+<p>Mengarahkan pengunjung ke halaman download yang menampilkan download file yang berisi payload malware.</p>
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>Berawal hanya sekadar meninjau IOC dari sebuah postingan di X berubah menjadi investigasi terhadap platform distribusi malware yang masih aktif.</p>
+<p>Beberapa hal yang bisa dipetik dari rasa penasaran ini:</p>
+<ul>
+<li>Infrastruktur malware sering kali jauh lebih mudah diretas daripada yang terlihat.</li>
+<li>Halaman instalasi yang terbuka dapat menjadi initial access ke dalam dashboard.</li>
+<li>Kesalahan deployment sederhana bisa menimbulkan dampak keamanan yang besar.</li>
+<li>Banyak infrastruktur milik threat actor dibangun menggunakan aplikasi PHP hasil vibecoding.</li>
+<li>Kadang rasa penasaran saja sudah cukup untuk mengubah threat hunting pasif menjadi analisis langsung terhadap operasi yang masih berjalan.</li>
+</ul>
+<h2 id="indicator-of-compromised">Indicator of Compromised</h2>
+<p>Berikut beberapa indikator yang ditemukan selama proses investigasi. Daftar ini mencakup domain yang digunakan dalam campaign serta sample hash payload yang berhasil diperoleh dari server terkait.</p>
+<p>Domain</p>
+<pre tabindex="0"><code>micronsoftwares[.]com
+wetransfer[.]icu
+</code></pre><p>SHA256</p>
+<pre tabindex="0"><code>7b03fb383a5ce784a3cb9b0f8a76a84e984d14e553de5d98faff3d07d9793085  payload.exe
+</code></pre><h2 id="penutup">Penutup</h2>
+<p>Saat artikel ini ditulis, domain tersebut masih aktif dan masih mendistribusikan malware.</p>
+<p>Walaupun sempat mendapatkan akses ke dalam halaman dashboard administrator, saya pada akhirnya tidak berhasil melakukan take down infrastrukturnya.</p>
+<p>Berdasarkan akses sebelumnya, kemungkinan masih ada jalur serangan lain yang bisa memberikan akses lebih dalam seperti RCE. Namun session saya keburu kedaluwarsa sebelum sempat melakukan investigasi lebih lanjut.</p>
+<p>Tidak lama kemudian, threat actor tampaknya menyadari bagaimana akses tersebut diperoleh dan memperbaiki celah pada proses inisialisasi yang memungkinkan reinstall dilakukan.</p>
+<p>Setelah celah itu ditutup, akses saya pun ikut hilang.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/admin-threat-actor/fixed-init.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/admin-threat-actor/fixed-init_hu_dea1e8bb3e48b92.webp" media="(min-width: 1024px)">
+        <source srcset="/img/admin-threat-actor/fixed-init_hu_28a4a19c5d7553c2.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/admin-threat-actor/fixed-init_hu_7af41d55f03c5aa5.webp" media="(max-width: 767px)">
+        <img src="/img/admin-threat-actor/fixed-init_hu_7af41d55f03c5aa5.webp"
+             alt="Image"
+             class="hover-effect"
+             width="800"
+             height="243">
+      </picture>
+    </a>
+
+    
+  </figure>
+
+
+
+<p>Pada akhirnya infrastrukturnya tetap aktif, tetapi investigasi ini memberikan kesempatan langka untuk melihat bagaimana sebuah platform distribusi malware dibangun, dioperasikan dan dipelihara di dunia nyata.</p>
+<p>Sampai jumpa.</p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/cybersecurity/" rel="tag">cybersecurity</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/malware/" rel="tag">malware</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/threat-hunting/" rel="tag">threat hunting</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+		<hr>
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-format="autorelaxed"
+		     data-ad-client="ca-pub-1926937123072670"
+		     data-ad-slot="1889468337"></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		<hr>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">Tentang Ardi Jonias Fortuna</span>
+	</div>
+	<div class="authorbox__description">
+		Roses are red, violets are blue. There is nothing can&rsquo;t to do
+	</div>
+</div>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/tls-certificate-validity-47-days/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Sebelumnya</span>
+			<p class="pager__title">Kenapa Umur Sertifikat SSL/TLS Berkurang Menjadi 47 Hari?</p>
+		</a>
+	</div>
+</nav>
+<div id="disqus-container">
+	<script src="https://giscus.app/client.js"
+        data-repo="laztname/laztname"
+        data-repo-id="R_kgDOLULuVg"
+        data-category="General"
+        data-category-id="DIC_kwDOLULuVs4CdT6m"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+			</div>
+			<aside class="sidebar sidebar--left"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="CARI…" value="" name="q" aria-label="CARI…">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://potato.id/">
+	</form>
+</div><div class="widget-recent widget">
+	<h3 class="widget__title">Information</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+    <li class="widget__item">
+        <picture>
+            <source srcset="/img/home_hu_3b9b5be8487aaba3.webp" media="(min-width: 1024px)">
+            <source srcset="/img/home_hu_173579ac87338ebc.webp" media="(min-width: 768px) and (max-width: 1023px)">
+            <source srcset="/img/home_hu_db8ab209d61d1924.webp" media="(max-width: 767px)">
+            <img class="widget__link"
+                 src="/img/home_hu_173579ac87338ebc.webp" 
+                 width="800"
+                 height="694"
+                 alt="Di rumah saja"
+                 loading="lazy">
+        </picture>
+    </li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-recent widget">
+	<h3 class="widget__title">Postingan Terbaru</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/i-accidentally-logged-into-threat-actor-website/">I Accidentally Logged as Admin Into a Threat Actor Website</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/tls-certificate-validity-47-days/">Kenapa Umur Sertifikat SSL/TLS Berkurang Menjadi 47 Hari?</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/first-cyber-security-hire-guide/">Bekerja Sebagai Cyber Security di Perusahaan? Mulai dari Mana?</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/weak-secops-exposed-clickfix-dashboard/">How I Get Access ClickFix Dashboard Due to Bad SecOps</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/cara-cek-http-security-headers-dan-apa-yang-harus-diperbaiki-terlebih-dahulu/">Panduan HTTP Security Headers: Cara Cek Keamanan dan Perbaikan</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-categories widget">
+	<h3 class="widget__title">Kategori</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/cyber-security/">Cyber Security</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/defensive/">Defensive</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/development/">Development</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/keamanan-siber/">Keamanan Siber</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/networking/">Networking</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/offensive/">Offensive</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/reversing/">Reversing</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/security/">Security</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/web-hacking/">Web Hacking</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-taglist widget">
+	<h3 class="widget__title">Tag</h3>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/anti-judol/" title="Anti-Judol">Anti-Judol (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/blue-team/" title="Blue Team">Blue Team (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/bug-bounty/" title="Bug Bounty">Bug Bounty (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/career/" title="Career">Career (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (9)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/csp/" title="CSP">CSP (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cyber-hygiene/" title="Cyber Hygiene">Cyber Hygiene (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cybersecurity/" title="Cybersecurity">Cybersecurity (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/defensive/" title="Defensive">Defensive (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/dns/" title="DNS">DNS (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/end-user/" title="End User">End User (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/end-users/" title="End-Users">End-Users (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/fail2ban/" title="Fail2ban">Fail2ban (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/file-upload/" title="File Upload">File Upload (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/git/" title="Git">Git (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitdumper/" title="Gitdumper">Gitdumper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/githack/" title="Githack">Githack (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages/" title="Github Pages">Github Pages (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/http-security-header/" title="HTTP Security Header">HTTP Security Header (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/https/" title="HTTPS">HTTPS (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/incident-response/" title="Incident Response">Incident Response (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/infatica/" title="Infatica">Infatica (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/infostealer/" title="Infostealer">Infostealer (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (18)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/intrusion-prevention-system/" title="Intrusion Prevention System">Intrusion Prevention System (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/keamanan-web/" title="Keamanan Web">Keamanan Web (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/keamanan-wordpress/" title="Keamanan WordPress">Keamanan WordPress (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/lfi/" title="LFI">LFI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/linux/" title="Linux">Linux (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/malware/" title="Malware">Malware (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nginx/" title="NGINX">NGINX (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/phishing/" title="Phishing">Phishing (7)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/plugin/" title="Plugin">Plugin (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/plugin-keamanan-wordpress/" title="Plugin Keamanan WordPress">Plugin Keamanan WordPress (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/proxy/" title="Proxy">Proxy (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ransomware/" title="Ransomware">Ransomware (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/rce/" title="RCE">RCE (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/retas-labs/" title="Retas Labs">Retas Labs (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/secure-coding/" title="Secure Coding">Secure Coding (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/security/" title="Security">Security (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/security-header/" title="Security Header">Security Header (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/server/" title="Server">Server (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/sqli/" title="SQLI">SQLI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ssl/tls-certificate/" title="SSL/TLS Certificate">SSL/TLS Certificate (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/subdomain-takeover/" title="Subdomain Takeover">Subdomain Takeover (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/surabaya-hacker-link/" title="Surabaya Hacker Link">Surabaya Hacker Link (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/telegram-bot/" title="Telegram Bot">Telegram Bot (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/text-editor/" title="Text Editor">Text Editor (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/threat-hunting/" title="Threat Hunting">Threat Hunting (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/users/" title="Users">Users (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/vibe-coding/" title="Vibe Coding">Vibe Coding (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/vim/" title="VIM">VIM (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/web-defacement/" title="Web Defacement">Web Defacement (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/web-hacking/" title="Web Hacking">Web Hacking (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/web-security/" title="Web Security">Web Security (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/windows/" title="Windows">Windows (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (36)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
+	</div>
+</div>
+
+<div class="widget-social widget">
+	<h3 class="widget-social__title widget__title">Sosmed</h3>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Instagram" rel="noopener noreferrer" href="https://www.instagram.com/joniasfortuna" target="_blank">
+				<svg class="widget-social__link-icon icon icon-instagram" width="24" height="24" viewBox="0 0 256 256"><circle cx="193" cy="59" r="15"/><path fill-rule="evenodd" d="M101 0h54c41 0 58.4 3.9 74.5 17C256.2 37.5 256 74.8 256 97.7v60c0 26.7 0 60.4-26.5 81.4-16 13.4-33.5 16.9-74.5 16.9h-54c-41 0-57.5-3.5-74.5-16.9C1 218.9.5 186.3.1 160.5L0 155V97.7c0-23-.2-60.2 26.5-80.7C45 2 60 0 101 0zm4.9 23h44.3c45.8 0 58.3 3.5 70.3 17.5 11.8 13.2 12 30.1 12.5 62.9V156c.2 20.8.3 45.8-12.5 59.5-12 14-24.5 17.5-70.3 17.5h-44.3c-45.9 0-57.3-3.5-70.4-17.5-12.2-13-12.3-36.5-12.4-56.7v-55.6c.4-32.6.7-49.6 12.4-62.7C48 26.5 60 23 105.9 23zm19.6 144.5a42 42 0 1 0 0-84 42 42 0 0 0 0 84zm0 22.5a64.5 64.5 0 1 0 0-129 64.5 64.5 0 0 0 0 129z"/></svg>
+				<span>Instagram</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer" href="https://linkedin.com/in/joniasfortuna" target="_blank">
+				<svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
+				<span>LinkedIn</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Telegram" rel="noopener noreferrer" href="https://t.me/laztname" target="_blank">
+				<svg class="widget-social__link-icon icon icon-telegram" width="24" height="24" viewBox="0 0 132 110"><path fill="#ddd" d="M50 103c-4 0-3-1-5-5L34 60l88-52"/><path fill="#aaa" d="M50 103c3 0 4-1 6-3l16-16-20-12"/><path fill="#fff" d="M52 72l48 36c6 3 10 2 11-5l20-93c2-8-3-11-8-9L7 45c-8 4-8 8-1 10l29 9 69-43c3-2 6-1 4 1"/></svg>
+				<span>Telegram</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/laztname" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:jonias@potato.id">
+				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>jonias@potato.id</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+
+</aside>
+		</div>
+		<footer class="footer">
+    <div class="container footer__container flex">
+        
+        <div class="footer__copyright">
+            &copy; 2026 
+            <a href="https://potato.id/">Ardi Jonias Fortuna</a>.
+            <span class="footer__copyright-credits">Dibuat dengan <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> dan Tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+        </div>
+    </div>
+</footer>
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script></body>
+</html>
