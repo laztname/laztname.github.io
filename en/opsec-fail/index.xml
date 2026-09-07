@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OPSEC Fail on Jonias Fortuna</title>
+    <link>https://potato.id/en/opsec-fail/</link>
+    <description>Recent content in OPSEC Fail on Jonias Fortuna</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 07 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://potato.id/en/opsec-fail/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The 500ms Delay That Exposed the XZ Backdoor</title>
+      <link>https://potato.id/en/opsec-fail/xz-backdoor-500ms-delay/</link>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/opsec-fail/xz-backdoor-500ms-delay/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;You can hide the code, but you still have to execute it.&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;In March 2024, the XZ Utils backdoor was discovered after Andres Freund noticed something that looked like a performance problem rather than a security incident.&lt;/p&gt;&#xA;&lt;p&gt;While investigating PostgreSQL performance on Debian Sid, Freund noticed that SSH logins were taking roughly 500 milliseconds longer than expected and that sshd was consuming unusual CPU time.&lt;/p&gt;&#xA;&lt;p&gt;That small anomaly led him to investigate further.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Archive That Exposed the Operator</title>
+      <link>https://potato.id/en/opsec-fail/archive-exposed-the-operator/</link>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/opsec-fail/archive-exposed-the-operator/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;The attacker didn&amp;rsquo;t get caught because Tor failed. He got caught because he uploaded too much.&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;In 2020, the Vastaamo psychotherapy center in Finland suffered a major data breach affecting tens of thousands of patients.&lt;/p&gt;&#xA;&lt;p&gt;The attacker, operating under the name &lt;strong&gt;Ransom Man&lt;/strong&gt;, attempted to extort Vastaamo and later began publishing stolen patient records.&lt;/p&gt;&#xA;&lt;p&gt;One of the major OPSEC failures occurred when the attacker attempted to make the stolen data easier to distribute.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Backup File That Exposed the ClickFix Operation</title>
+      <link>https://potato.id/en/opsec-fail/case-006/</link>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/opsec-fail/case-006/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;A forgotten backup file exposed the source code and internal infrastructure of a ClickFix operation.&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;The ClickFix campaign was using its own web infrastructure to distribute malware and track infections.&lt;/p&gt;&#xA;&lt;p&gt;From the outside, the infrastructure looked like another suspicious ClickFix domain.&lt;/p&gt;&#xA;&lt;p&gt;Then a simple enumeration revealed something that should never have been publicly accessible: An old PHP backup file.&lt;/p&gt;&#xA;&lt;p&gt;The file was:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/api/index.php.bak&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It contained part of the application&amp;rsquo;s source code.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Bug Bounty Account That Exposed the Persona</title>
+      <link>https://potato.id/en/opsec-fail/bug-bounty-account-exposed-persona/</link>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/opsec-fail/bug-bounty-account-exposed-persona/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;The alias was supposed to hide the person. The same alias helped investigators find him.&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;TeamPCP operated through several online aliases, including &lt;code&gt;DeadCatx3&lt;/code&gt;.&lt;/p&gt;&#xA;&lt;p&gt;One of those aliases wasn&amp;rsquo;t only used in the group&amp;rsquo;s criminal activity.&lt;/p&gt;&#xA;&lt;p&gt;It also appeared on &lt;strong&gt;HackerOne&lt;/strong&gt;, a legitimate bug bounty platform.&lt;/p&gt;&#xA;&lt;p&gt;That gave investigators something valuable: a place where the same username existed outside the criminal ecosystem.&lt;/p&gt;&#xA;&lt;p&gt;From there, the investigation moved from an alias to a real name, then to other accounts and eventually to a real-world persona. Flare assessed with high confidence that the operator behind &lt;code&gt;DeadCatx3&lt;/code&gt; was Ruben Thomson and said the findings were confirmed with law enforcement.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Default Cobalt Strike Setup That Exposed the Team Server</title>
+      <link>https://potato.id/en/opsec-fail/cobalt-strike-default-team-server-opsec/</link>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/opsec-fail/cobalt-strike-default-team-server-opsec/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;em&gt;The operator thought about hiding the Beacon. The defender looked at the server.&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Cobalt Strike is designed to provide operators with a flexible command-and-control infrastructure.&lt;/p&gt;&#xA;&lt;p&gt;Its Malleable C2 functionality allows Beacon traffic to be customized so that malicious communications can resemble normal web traffic.&lt;/p&gt;&#xA;&lt;p&gt;But customization is only useful if the operator actually changes the defaults.&lt;/p&gt;&#xA;&lt;p&gt;Palo Alto Networks Unit 42 demonstrated that Cobalt Strike Team Servers using default or recognizable configurations could be identified remotely through active network probing.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Email Address That Led Back to the Administrator</title>
+      <link>https://potato.id/en/opsec-fail/email-that-led-back-to-the-administrator/</link>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/opsec-fail/email-that-led-back-to-the-administrator/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;The administrator had a pseudonym. His email history didn&amp;rsquo;t.&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Conor Brian Fitzpatrick was the administrator of BreachForums, operating online under the name &lt;strong&gt;pompompurin&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;He used VPNs and different online identities to separate himself from the forum.&lt;/p&gt;&#xA;&lt;p&gt;But investigators eventually found connections between those identities and Fitzpatrick&amp;rsquo;s real-world identity.&lt;/p&gt;&#xA;&lt;p&gt;One of the important starting points was an email address.&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-opsec-failure&#34;&gt;The OPSEC Failure&lt;/h2&gt;&#xA;&lt;p&gt;While communicating with the administrator of RaidForums, the person behind pompompurin mentioned his real name and an email address:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Metadata Threat Actor Forgot to Remove</title>
+      <link>https://potato.id/en/opsec-fail/metadata-left-behind/</link>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/opsec-fail/metadata-left-behind/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;You removed what people could see. You forgot what the file could reveal.&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Metadata is information stored inside or alongside a file that may not be visible when the file is opened normally.&lt;/p&gt;&#xA;&lt;p&gt;A document can contain an author&amp;rsquo;s name. An image can contain GPS coordinates. A file can contain timestamps, software information, usernames, device information, revision history, or other details about how it was created.&lt;/p&gt;&#xA;&lt;p&gt;The information may not appear in the content itself, but anyone who obtains the original file may be able to extract it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Open Directory That Exposed the Operator&#39;s Toolbox</title>
+      <link>https://potato.id/en/opsec-fail/open-directory-exposed-operator-toolbox/</link>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/opsec-fail/open-directory-exposed-operator-toolbox/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;The server was supposed to deliver files. Instead, it delivered the operation.&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;A threat actor exposed an internet-facing server with directory listing enabled, this happen when the threat actor want to infiltrate tools/data/etc, but lazy to setup a secure environment so they just use pyhton http.server&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;h2 id=&#34;the-opsec-failure&#34;&gt;The OPSEC Failure&lt;/h2&gt;&#xA;&lt;p&gt;The server looked like a normal file server. It was running a Python HTTP server on port 8000, 8080, 8081, 8181 or other common http-alt ports, as default Python http.server will enable the directory listing, if not use correctly the /home/user/ exposed leaving .bash_history, .config, and other sensitive files&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Phishing CDN That Became a Backdoor</title>
+      <link>https://potato.id/en/opsec-fail/case-008/</link>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/opsec-fail/case-008/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;OPSEC Failure:&lt;/strong&gt; The phishing infrastructure exposed a CDN component that could mirror files and write PHP, leaving the operator&amp;rsquo;s own server vulnerable to takeover.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;The investigation started with a phishing-as-a-service operation.&lt;/p&gt;&#xA;&lt;p&gt;The service allowed customers to create phishing pages and use them to collect credentials from victims. The infrastructure included a separate CDN/API component hosted at api.gifan.id.&lt;/p&gt;&#xA;&lt;p&gt;At first, the CDN looked like supporting infrastructure.&lt;/p&gt;&#xA;&lt;p&gt;Then its functionality became interesting.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Scam APK That Led Back to Its Developer</title>
+      <link>https://potato.id/en/opsec-fail/case-007/</link>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/opsec-fail/case-007/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;The malware infrastructure was connected to the operator through reused identity and infrastructure clues.&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;The investigation started with an Android application called &lt;strong&gt;&amp;ldquo;LIHAT Foto Paket&amp;rdquo;&lt;/strong&gt;, distributed through a package-delivery scam.&lt;/p&gt;&#xA;&lt;p&gt;The application looked like a simple package-tracking application, but It wasn&amp;rsquo;t.&lt;/p&gt;&#xA;&lt;p&gt;Analysis showed that the APK requested SMS permissions and communicated with infrastructure controlled through &lt;code&gt;randiramli.com&lt;/code&gt;. When an SMS arrived on the infected device, the application sent the message contents back to the remote server.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Threat Actor Who Infected Himself</title>
+      <link>https://potato.id/en/opsec-fail/the-threat-actor-who-infected-himself/</link>
+      <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/opsec-fail/the-threat-actor-who-infected-himself/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;He spent his time stealing information from victims. Then an info-stealer stole his.&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;Threat actors often rely on information stealers to collect credentials, cookies, browser data, and other information from victims.&lt;/p&gt;&#xA;&lt;p&gt;In this case, the same type of malware ended up on the threat actor&amp;rsquo;s own computer.&lt;/p&gt;&#xA;&lt;p&gt;Hudson Rock reported that a prominent threat actor accidentally infected his own machine with an information stealer.&lt;/p&gt;&#xA;&lt;p&gt;Instead of becoming another anonymous victim, the infection exposed information connected to the actor and his operations.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
