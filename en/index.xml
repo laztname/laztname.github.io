@@ -24,9 +24,9 @@
     </item>
     <item>
       <title>The Backup File That Exposed the ClickFix Operation</title>
-      <link>https://potato.id/en/opsec-fail/case-006/</link>
+      <link>https://potato.id/en/opsec-fail/clickfix-operation-exposed-by-backup-file/</link>
       <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/en/opsec-fail/case-006/</guid>
+      <guid>https://potato.id/en/opsec-fail/clickfix-operation-exposed-by-backup-file/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;A forgotten backup file exposed the source code and internal infrastructure of a ClickFix operation.&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;The ClickFix campaign was using its own web infrastructure to distribute malware and track infections.&lt;/p&gt;&#xA;&lt;p&gt;From the outside, the infrastructure looked like another suspicious ClickFix domain.&lt;/p&gt;&#xA;&lt;p&gt;Then a simple enumeration revealed something that should never have been publicly accessible: An old PHP backup file.&lt;/p&gt;&#xA;&lt;p&gt;The file was:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/api/index.php.bak&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;It contained part of the application&amp;rsquo;s source code.&lt;/p&gt;</description>
     </item>
     <item>
@@ -66,16 +66,16 @@
     </item>
     <item>
       <title>The Phishing CDN That Became a Backdoor</title>
-      <link>https://potato.id/en/opsec-fail/case-008/</link>
+      <link>https://potato.id/en/opsec-fail/phishing-infrastructure-backdoor/</link>
       <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/en/opsec-fail/case-008/</guid>
+      <guid>https://potato.id/en/opsec-fail/phishing-infrastructure-backdoor/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;OPSEC Failure:&lt;/strong&gt; The phishing infrastructure exposed a CDN component that could mirror files and write PHP, leaving the operator&amp;rsquo;s own server vulnerable to takeover.&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;The investigation started with a phishing-as-a-service operation.&lt;/p&gt;&#xA;&lt;p&gt;The service allowed customers to create phishing pages and use them to collect credentials from victims. The infrastructure included a separate CDN/API component hosted at api.gifan.id.&lt;/p&gt;&#xA;&lt;p&gt;At first, the CDN looked like supporting infrastructure.&lt;/p&gt;&#xA;&lt;p&gt;Then its functionality became interesting.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The Scam APK That Led Back to Its Developer</title>
-      <link>https://potato.id/en/opsec-fail/case-007/</link>
+      <link>https://potato.id/en/opsec-fail/scam-apk-leads-back-to-developer/</link>
       <pubDate>Mon, 07 Sep 2026 00:00:00 +0000</pubDate>
-      <guid>https://potato.id/en/opsec-fail/case-007/</guid>
+      <guid>https://potato.id/en/opsec-fail/scam-apk-leads-back-to-developer/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;&lt;strong&gt;The malware infrastructure was connected to the operator through reused identity and infrastructure clues.&lt;/strong&gt;&lt;/p&gt;&lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;&#xA;&lt;p&gt;The investigation started with an Android application called &lt;strong&gt;&amp;ldquo;LIHAT Foto Paket&amp;rdquo;&lt;/strong&gt;, distributed through a package-delivery scam.&lt;/p&gt;&#xA;&lt;p&gt;The application looked like a simple package-tracking application, but It wasn&amp;rsquo;t.&lt;/p&gt;&#xA;&lt;p&gt;Analysis showed that the APK requested SMS permissions and communicated with infrastructure controlled through &lt;code&gt;randiramli.com&lt;/code&gt;. When an SMS arrived on the infected device, the application sent the message contents back to the remote server.&lt;/p&gt;</description>
     </item>
     <item>

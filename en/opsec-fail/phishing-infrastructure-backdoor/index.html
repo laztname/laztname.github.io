@@ -9,22 +9,22 @@
 	<meta name="theme-color" content="#efe6dd">
 	<meta http-equiv="content-language" content="en">
 	<meta name="author" content="Ardi Jonias Fortuna">
-	<title>The Backup File That Exposed the ClickFix Operation - Jonias Fortuna</title>
-	<link rel="canonical" href="https://potato.id/en/opsec-fail/case-006/">
+	<title>The Phishing CDN That Became a Backdoor - Jonias Fortuna</title>
+	<link rel="canonical" href="https://potato.id/en/opsec-fail/phishing-infrastructure-backdoor/">
 	
 	
 	  
 	
-	<link rel="alternate" hreflang="x-default" href="https://potato.id/en/opsec-fail/case-006/">
-	<link rel="alternate" hreflang="en" href="https://potato.id/en/opsec-fail/case-006/">
+	<link rel="alternate" hreflang="x-default" href="https://potato.id/en/opsec-fail/phishing-infrastructure-backdoor/">
+	<link rel="alternate" hreflang="en" href="https://potato.id/en/opsec-fail/phishing-infrastructure-backdoor/">
 	
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670" crossorigin="anonymous"></script>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="A ClickFix campaign left a backup file exposed on its own infrastructure, revealing source code, hardcoded credentials, internal functionality, and access to its campaign dashboard.">
-		<meta property="og:url" content="https://potato.id/en/opsec-fail/case-006/">
+	<meta name="description" content="A phishing-as-a-service operation exposed supporting infrastructure that could be abused to write server-side files, turning the operator&#39;s own infrastructure into an attack surface.">
+		<meta property="og:url" content="https://potato.id/en/opsec-fail/phishing-infrastructure-backdoor/">
   <meta property="og:site_name" content="Jonias Fortuna">
-  <meta property="og:title" content="The Backup File That Exposed the ClickFix Operation">
-  <meta property="og:description" content="A ClickFix campaign left a backup file exposed on its own infrastructure, revealing source code, hardcoded credentials, internal functionality, and access to its campaign dashboard.">
+  <meta property="og:title" content="The Phishing CDN That Became a Backdoor">
+  <meta property="og:description" content="A phishing-as-a-service operation exposed supporting infrastructure that could be abused to write server-side files, turning the operator&#39;s own infrastructure into an attack surface.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="opsec-fail">
@@ -33,8 +33,8 @@
 
 		
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="The Backup File That Exposed the ClickFix Operation">
-  <meta name="twitter:description" content="A ClickFix campaign left a backup file exposed on its own infrastructure, revealing source code, hardcoded credentials, internal functionality, and access to its campaign dashboard.">
+  <meta name="twitter:title" content="The Phishing CDN That Became a Backdoor">
+  <meta name="twitter:description" content="A phishing-as-a-service operation exposed supporting infrastructure that could be abused to write server-side files, turning the operator&#39;s own infrastructure into an attack surface.">
 
         <link rel="me" href="https://infosec.exchange/@laztname">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,13 +61,13 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "@id": "https:\/\/potato.id\/en\/opsec-fail\/case-006\/#article",
+  "@id": "https:\/\/potato.id\/en\/opsec-fail\/phishing-infrastructure-backdoor\/#article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https:\/\/potato.id\/en\/opsec-fail\/case-006\/"
+    "@id": "https:\/\/potato.id\/en\/opsec-fail\/phishing-infrastructure-backdoor\/"
   },
-  "headline": "The Backup File That Exposed the ClickFix Operation",
-  "description": "A ClickFix campaign left a backup file exposed on its own infrastructure, revealing source code, hardcoded credentials, internal functionality, and access to its campaign dashboard.",
+  "headline": "The Phishing CDN That Became a Backdoor",
+  "description": "A phishing-as-a-service operation exposed supporting infrastructure that could be abused to write server-side files, turning the operator's own infrastructure into an attack surface.",
   "inLanguage": "en",
   "image": {
     "@type": "ImageObject",
@@ -88,7 +88,7 @@
   },
   "articleSection": "opsec-fail",
   "keywords": [],
-  "wordCount":  782 ,
+  "wordCount":  866 ,
   "datePublished": "2026-09-07T00:00:00Z",
   "dateModified": "2026-09-07T00:00:00Z"
 }
@@ -174,7 +174,7 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">The Backup File That Exposed the ClickFix Operation</h1>
+			<h1 class="post__title">The Phishing CDN That Became a Backdoor</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-09-07T00:00:00Z">07-09-2026</time></div></div>
@@ -183,135 +183,147 @@
 
 <div class="content post__content clearfix">
 			<blockquote>
-<p><strong>A forgotten backup file exposed the source code and internal infrastructure of a ClickFix operation.</strong></p></blockquote>
+<p><strong>OPSEC Failure:</strong> The phishing infrastructure exposed a CDN component that could mirror files and write PHP, leaving the operator&rsquo;s own server vulnerable to takeover.</p></blockquote>
 <h2 id="summary">Summary</h2>
-<p>The ClickFix campaign was using its own web infrastructure to distribute malware and track infections.</p>
-<p>From the outside, the infrastructure looked like another suspicious ClickFix domain.</p>
-<p>Then a simple enumeration revealed something that should never have been publicly accessible: An old PHP backup file.</p>
-<p>The file was:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/api/index.php.bak
-</span></span></code></pre></div><p>It contained part of the application&rsquo;s source code.</p>
-<p>That source code exposed an upload function, a hardcoded API key, and other details about how the infrastructure worked.</p>
-<p>What started as a single forgotten backup file eventually provided a path into the campaign&rsquo;s internal dashboard and exposed additional operational information.</p>
-<p>The interesting part of this case was not just that the application was vulnerable.</p>
-<p>It was that the threat actor had left <strong>their own operational artifacts sitting on an internet-facing server</strong>.</p>
+<p>The investigation started with a phishing-as-a-service operation.</p>
+<p>The service allowed customers to create phishing pages and use them to collect credentials from victims. The infrastructure included a separate CDN/API component hosted at api.gifan.id.</p>
+<p>At first, the CDN looked like supporting infrastructure.</p>
+<p>Then its functionality became interesting.</p>
+<p>The API had a file-mirroring feature. It could retrieve a file from another location and place it onto the server.</p>
+<p>The problem was that the functionality was exposed without sufficient security controls.</p>
+<p>A PHP file could be written to the server and processed by the web server.</p>
+<p>That changed the situation completely.</p>
+<p>A component intended to support the phishing operation had become an attack surface against the operation itself.</p>
 <hr>
 <h2 id="the-opsec-failure">The OPSEC Failure</h2>
-<p>During an investigation into a ClickFix infection, the campaign infrastructure was identified and enumerated.</p>
-<p>A endpoint was visible.</p>
-<p>More importantly, an exposed backup file was found:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/api/index.php.bak
-</span></span></code></pre></div><p>Backup files are often forgotten because they are not part of the application&rsquo;s normal functionality.</p>
-<p>But they can contain exactly what an attacker does not want outsiders to see:</p>
+<p>The phishing service was not a single website.</p>
+<p>It consisted of multiple components working together:</p>
 <ul>
-<li>Source code.</li>
-<li>Configuration.</li>
-<li>Credentials.</li>
-<li>Internal endpoints.</li>
-<li>Debugging logic.</li>
+<li>A phishing storefront</li>
+<li>Phishing templates</li>
+<li>Customer-generated phishing pages</li>
+<li>A CDN/API</li>
+<li>Backend infrastructure</li>
+<li>Hosting servers</li>
+<li>Management functionality</li>
 </ul>
-<p>In this case, the backup file revealed an API implementation containing a file-upload feature.</p>
-<p>The upload function required an API key.</p>
-<p>That sounds like a useful security control.</p>
-<p>Except the API key was hardcoded directly in the source code.</p>
-<p>So the backup file effectively contained both the <strong>door</strong> and the <strong>key</strong>.</p>
+<p>The CDN was particularly interesting because it exposed a file-mirroring feature.</p>
+<p>Its purpose was to retrieve remote content and store it on the server.</p>
+<p>The problem was what the application allowed that functionality to write.</p>
+<p>The server could be made to accept a PHP file.</p>
+<p>Because the file was placed within the web-accessible environment, it could then be interpreted by the web server.</p>
+<p>This turned a file-mirroring feature into a path toward server-side code execution.</p>
+<p>The operator had effectively exposed a mechanism that could be used against their own infrastructure.</p>
 <hr>
 <h2 id="what-was-exposed">What Was Exposed?</h2>
-<p>The exposed source code provided information about the campaign&rsquo;s internal application.</p>
-<p>Among the exposed artifacts were:</p>
+<p>The investigation moved beyond the phishing page and into the infrastructure supporting the operation.</p>
+<p>The exposed functionality revealed information about:</p>
 <ul>
-<li>Source code</li>
-<li>An API key</li>
-<li>File-upload functionality</li>
-<li>Internal application logic</li>
-<li>Campaign dashboard functionality</li>
-<li>Analytics data</li>
-<li>Telegram bot credentials</li>
-<li>Telegram chat ID</li>
-<li>Campaign infrastructure information</li>
-<li>Malware distribution information</li>
+<li>CDN/API functionality</li>
+<li>File-mirroring behavior</li>
+<li>Server-side file handling</li>
+<li>PHP execution</li>
+<li>Backend infrastructure</li>
+<li>Phishing application components</li>
+<li>Related domains</li>
+<li>Hosting infrastructure</li>
+<li>The architecture behind the phishing service</li>
 </ul>
-<p>The upload functionality also lacked proper file-type validation.</p>
-<p>This meant the exposed API key could be used against the upload functionality, turning what initially looked like a source-code disclosure into deeper access to the server.</p>
-<p>From there, the investigation reached the campaign&rsquo;s dashboard.</p>
-<p>The dashboard contained operational information about the campaign, including download activity, source domains, infection flows, and distribution performance.</p>
-<p>This is where the OPSEC failure became much more valuable than the original vulnerability.</p>
-<p>The dashboard provided a view into <strong>how the operation was actually being run</strong>.</p>
+<p>The original investigation also identified the phishing storefront and multiple domains involved in the operation, including infrastructure hosted across different providers.</p>
+<p>The important part was the relationship between the components.</p>
+<p>The phishing page led to supporting infrastructure.</p>
+<p>The supporting infrastructure exposed functionality.</p>
+<p>That functionality provided access to another layer of the operation.</p>
+<hr>
+<h2 id="the-facepalm">The Facepalm</h2>
+<p>The phishing operation was designed to compromise other people&rsquo;s accounts.</p>
+<p>But one of its own supporting services could be abused to compromise the server hosting the operation.</p>
+<p>No complicated exploit chain was required to discover that the infrastructure had a problem.</p>
+<p>The operator had simply exposed functionality that should have been restricted.</p>
+<p>The CDN was supposed to deliver files.</p>
+<p>Instead, it became a mechanism for placing executable server-side content on the same infrastructure.</p>
+<p>The operation had created its own attack surface.</p>
+<p><strong>The infrastructure built to attack victims could itself be attacked.</strong></p>
+<hr>
+<h2 id="from-phishing-page-to-infrastructure">From Phishing Page to Infrastructure</h2>
+<p>This case demonstrates why infrastructure investigations should not stop at the first domain.</p>
+<p>The investigation followed a chain:</p>
+<p>Phishing page</p>
+<p>→ supporting CDN</p>
+<p>→ API functionality</p>
+<p>→ file mirroring</p>
+<p>→ server-side file handling</p>
+<p>→ backend infrastructure</p>
+<p>→ related domains</p>
+<p>→ phishing service</p>
+<p>The phishing page was only the visible layer.</p>
+<p>The supporting infrastructure revealed how the service was built and how its components were connected.</p>
 <hr>
 <h2 id="why-this-matters-for-red-teams">Why This Matters for Red Teams</h2>
-<p>This case is a useful reminder that infrastructure review should not stop at the application&rsquo;s intended functionality.</p>
-<p>When assessing an internet-facing target, forgotten artifacts can reveal much more than the live application.</p>
-<p>Look for things such as:</p>
+<p>For red teams, this is a useful reminder to map the entire external attack surface.</p>
+<p>Do not only test the primary application.</p>
+<p>Look for supporting services such as:</p>
 <ul>
+<li>CDN endpoints</li>
+<li>API subdomains</li>
+<li>Upload functionality</li>
+<li>File-mirroring functionality</li>
+<li>Debug endpoints</li>
+<li>Development servers</li>
+<li>Staging environments</li>
 <li>Backup files</li>
-<li>Old source files</li>
-<li>Temporary files</li>
-<li>Debug files</li>
-<li>Configuration files</li>
-<li>Logs</li>
-<li>Archives</li>
-<li>Deployment leftovers</li>
-<li>Old domains</li>
-<li>Development endpoints</li>
-<li>Hardcoded credentials</li>
-<li>API keys</li>
-<li>Bot tokens</li>
-<li>Internal hostnames</li>
+<li>Management panels</li>
+<li>Old subdomains</li>
+<li>Server-side file handling</li>
 </ul>
-<p>For threat intelligence, these artifacts can also reveal the relationship between different parts of an operation.</p>
-<p>A dashboard can reveal campaign activity.</p>
-<p>A source file can reveal infrastructure.</p>
-<p>A bot token can reveal communications.</p>
-<p>A configuration file can reveal another server.</p>
-<p>An old backup can connect all of them.</p>
+<p>A service that appears to be a simple CDN may have access to the same filesystem or infrastructure as the main application.</p>
+<p>The question should not only be:</p>
+<blockquote>
+<p>&ldquo;Is the phishing page vulnerable?&rdquo;</p></blockquote>
+<p>It should also be:</p>
+<blockquote>
+<p>&ldquo;What other services are connected to it?&rdquo;</p></blockquote>
 <hr>
 <h2 id="defensive-lesson">Defensive Lesson</h2>
-<p>Operational infrastructure should be treated as sensitive infrastructure.</p>
-<p>Before deploying a campaign management application or any internet-facing service:</p>
+<p>Supporting infrastructure should have a clearly defined security boundary.</p>
+<p>A public CDN should not automatically have the ability to write executable files.</p>
+<p>File-mirroring functionality should enforce:</p>
 <ul>
-<li>Remove backup files from the web root.</li>
-<li>Never store secrets directly in source code.</li>
-<li>Keep secrets in environment variables or a proper secret manager.</li>
-<li>Restrict administrative interfaces.</li>
-<li>Validate uploaded files server-side.</li>
-<li>Separate the management dashboard from public infrastructure.</li>
-<li>Review deployed files rather than only the source repository.</li>
-<li>Scan for forgotten backups and temporary files.</li>
-<li>Rotate credentials immediately if source code is exposed.</li>
-<li>Perform an external attack-surface review before deployment.</li>
+<li>Strict URL validation</li>
+<li>Destination allowlists</li>
+<li>Safe file extensions</li>
+<li>Non-executable storage locations</li>
+<li>Authentication and authorization</li>
+<li>Server-side content validation</li>
+<li>Appropriate filesystem permissions</li>
+<li>Logging and monitoring</li>
 </ul>
-<p>A secure application can still become an OPSEC failure because of the files surrounding it.</p>
+<p>Internal management functionality should also be separated from public-facing services wherever possible.</p>
 <hr>
 <h2 id="opsec-takeaway">OPSEC Takeaway</h2>
-<p>The ClickFix case demonstrates a simple rule:</p>
-<p><strong>Your backup files are part of your attack surface.</strong></p>
-<p>It does not matter that the file was never intended to be public.</p>
-<p>If the server can serve it, someone can eventually find it.</p>
-<p>The most damaging information may not be inside the application&rsquo;s normal interface.</p>
-<p>It may be sitting beside it as:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>index.php.bak
-</span></span><span style="display:flex;"><span>backup.zip
-</span></span><span style="display:flex;"><span>old.php
-</span></span><span style="display:flex;"><span>config.php.old
-</span></span><span style="display:flex;"><span>debug.log
-</span></span></code></pre></div><p>For threat actors, forgotten files can become intelligence packages.</p>
-<p>For defenders and red teams, they are often some of the first places worth checking.</p>
+<p><strong>The supporting infrastructure is part of the operation.</strong></p>
+<p>A threat actor may protect the main phishing page while forgetting about the API behind it.</p>
+<p>They may secure the dashboard while leaving the CDN exposed.</p>
+<p>They may protect their credentials while exposing a file-writing function.</p>
+<p>They may separate their phishing domains while keeping everything connected through the same backend infrastructure.</p>
+<p>OPSEC is not only about hiding the main operation.</p>
+<p>It is about understanding and protecting everything connected to it.</p>
 <hr>
 <h2 id="lesson-learned">Lesson Learned</h2>
-<p>For red-team and CTI work, don&rsquo;t only ask:</p>
-<p><strong>&ldquo;What vulnerability does this application have?&rdquo;</strong></p>
-<p>Also ask:</p>
-<p><strong>&ldquo;What did the operator forget to remove?&rdquo;</strong></p>
-<p>A backup file can reveal source code.</p>
-<p>Source code can reveal credentials.</p>
-<p>Credentials can reveal internal functionality.</p>
-<p>Internal functionality can reveal infrastructure.</p>
-<p>Infrastructure can reveal the operation.</p>
-<p>That chain is the real OPSEC failure.</p>
+<p>For red teams and threat intelligence investigations, map the entire infrastructure instead of focusing only on the obvious target.</p>
+<p>Start with:</p>
+<p>Phishing page → DNS → subdomains → APIs → CDN → file handling → backend → related infrastructure</p>
+<p>Then ask:</p>
+<blockquote>
+<p><strong>&ldquo;If this supporting component is compromised, what else can I reach?&rdquo;</strong></p></blockquote>
+<p>For defenders, ask the opposite:</p>
+<blockquote>
+<p><strong>&ldquo;If this public component is compromised, what should it absolutely not be able to access?&rdquo;</strong></p></blockquote>
+<p>In this case, the separation was weak.</p>
+<p>The phishing infrastructure became an attack surface against itself.</p>
 <hr>
 <h2 id="sources">Sources</h2>
-<p>Jonias Fortuna - <a href="https://potato.id/en/posts/weak-secops-exposed-clickfix-dashboard/">How I Get Access ClickFix Dashboard Due to Bad SecOps</a></p>
-<hr>
+<p>Jonias Fortuna - <a href="https://potato.id/en/posts/hacking-phishing-as-a-service/">Hacking Phishing-as-a-Service</a></p>
 
 		</div>
 		<hr>
@@ -342,15 +354,15 @@
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/en/opsec-fail/bug-bounty-account-exposed-persona/" rel="prev">
+		<a class="pager__link" href="/en/opsec-fail/scam-apk-leads-back-to-developer/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">The Bug Bounty Account That Exposed the Persona</p>
+			<p class="pager__title">The Scam APK That Led Back to Its Developer</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/en/opsec-fail/archive-exposed-the-operator/" rel="next">
+		<a class="pager__link" href="/en/opsec-fail/open-directory-exposed-operator-toolbox/" rel="next">
 			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">The Archive That Exposed the Operator</p>
+			<p class="pager__title">The Open Directory That Exposed the Operator&#39;s Toolbox</p>
 		</a>
 	</div>
 </nav>

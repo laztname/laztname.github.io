@@ -32,7 +32,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
-    <loc>https://potato.id/en/opsec-fail/case-006/</loc>
+    <loc>https://potato.id/en/opsec-fail/clickfix-operation-exposed-by-backup-file/</loc>
     <lastmod>2026-09-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -62,12 +62,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
-    <loc>https://potato.id/en/opsec-fail/case-008/</loc>
+    <loc>https://potato.id/en/opsec-fail/phishing-infrastructure-backdoor/</loc>
     <lastmod>2026-09-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url><url>
-    <loc>https://potato.id/en/opsec-fail/case-007/</loc>
+    <loc>https://potato.id/en/opsec-fail/scam-apk-leads-back-to-developer/</loc>
     <lastmod>2026-09-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

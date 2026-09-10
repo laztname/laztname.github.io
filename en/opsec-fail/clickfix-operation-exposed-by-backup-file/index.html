@@ -9,22 +9,22 @@
 	<meta name="theme-color" content="#efe6dd">
 	<meta http-equiv="content-language" content="en">
 	<meta name="author" content="Ardi Jonias Fortuna">
-	<title>The Scam APK That Led Back to Its Developer - Jonias Fortuna</title>
-	<link rel="canonical" href="https://potato.id/en/opsec-fail/case-007/">
+	<title>The Backup File That Exposed the ClickFix Operation - Jonias Fortuna</title>
+	<link rel="canonical" href="https://potato.id/en/opsec-fail/clickfix-operation-exposed-by-backup-file/">
 	
 	
 	  
 	
-	<link rel="alternate" hreflang="x-default" href="https://potato.id/en/opsec-fail/case-007/">
-	<link rel="alternate" hreflang="en" href="https://potato.id/en/opsec-fail/case-007/">
+	<link rel="alternate" hreflang="x-default" href="https://potato.id/en/opsec-fail/clickfix-operation-exposed-by-backup-file/">
+	<link rel="alternate" hreflang="en" href="https://potato.id/en/opsec-fail/clickfix-operation-exposed-by-backup-file/">
 	
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670" crossorigin="anonymous"></script>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="A malicious Android APK investigation followed its infrastructure through domains, exposed paths, registration data, and social accounts until the operator&#39;s identity began to emerge.">
-		<meta property="og:url" content="https://potato.id/en/opsec-fail/case-007/">
+	<meta name="description" content="A ClickFix campaign left a backup file exposed on its own infrastructure, revealing source code, hardcoded credentials, internal functionality, and access to its campaign dashboard.">
+		<meta property="og:url" content="https://potato.id/en/opsec-fail/clickfix-operation-exposed-by-backup-file/">
   <meta property="og:site_name" content="Jonias Fortuna">
-  <meta property="og:title" content="The Scam APK That Led Back to Its Developer">
-  <meta property="og:description" content="A malicious Android APK investigation followed its infrastructure through domains, exposed paths, registration data, and social accounts until the operator&#39;s identity began to emerge.">
+  <meta property="og:title" content="The Backup File That Exposed the ClickFix Operation">
+  <meta property="og:description" content="A ClickFix campaign left a backup file exposed on its own infrastructure, revealing source code, hardcoded credentials, internal functionality, and access to its campaign dashboard.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="opsec-fail">
@@ -33,8 +33,8 @@
 
 		
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="The Scam APK That Led Back to Its Developer">
-  <meta name="twitter:description" content="A malicious Android APK investigation followed its infrastructure through domains, exposed paths, registration data, and social accounts until the operator&#39;s identity began to emerge.">
+  <meta name="twitter:title" content="The Backup File That Exposed the ClickFix Operation">
+  <meta name="twitter:description" content="A ClickFix campaign left a backup file exposed on its own infrastructure, revealing source code, hardcoded credentials, internal functionality, and access to its campaign dashboard.">
 
         <link rel="me" href="https://infosec.exchange/@laztname">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,13 +61,13 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "@id": "https:\/\/potato.id\/en\/opsec-fail\/case-007\/#article",
+  "@id": "https:\/\/potato.id\/en\/opsec-fail\/clickfix-operation-exposed-by-backup-file\/#article",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https:\/\/potato.id\/en\/opsec-fail\/case-007\/"
+    "@id": "https:\/\/potato.id\/en\/opsec-fail\/clickfix-operation-exposed-by-backup-file\/"
   },
-  "headline": "The Scam APK That Led Back to Its Developer",
-  "description": "A malicious Android APK investigation followed its infrastructure through domains, exposed paths, registration data, and social accounts until the operator's identity began to emerge.",
+  "headline": "The Backup File That Exposed the ClickFix Operation",
+  "description": "A ClickFix campaign left a backup file exposed on its own infrastructure, revealing source code, hardcoded credentials, internal functionality, and access to its campaign dashboard.",
   "inLanguage": "en",
   "image": {
     "@type": "ImageObject",
@@ -88,7 +88,7 @@
   },
   "articleSection": "opsec-fail",
   "keywords": [],
-  "wordCount":  946 ,
+  "wordCount":  782 ,
   "datePublished": "2026-09-07T00:00:00Z",
   "dateModified": "2026-09-07T00:00:00Z"
 }
@@ -174,7 +174,7 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">The Scam APK That Led Back to Its Developer</h1>
+			<h1 class="post__title">The Backup File That Exposed the ClickFix Operation</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-09-07T00:00:00Z">07-09-2026</time></div></div>
@@ -183,138 +183,135 @@
 
 <div class="content post__content clearfix">
 			<blockquote>
-<p><strong>The malware infrastructure was connected to the operator through reused identity and infrastructure clues.</strong></p></blockquote>
+<p><strong>A forgotten backup file exposed the source code and internal infrastructure of a ClickFix operation.</strong></p></blockquote>
 <h2 id="summary">Summary</h2>
-<p>The investigation started with an Android application called <strong>&ldquo;LIHAT Foto Paket&rdquo;</strong>, distributed through a package-delivery scam.</p>
-<p>The application looked like a simple package-tracking application, but It wasn&rsquo;t.</p>
-<p>Analysis showed that the APK requested SMS permissions and communicated with infrastructure controlled through <code>randiramli.com</code>. When an SMS arrived on the infected device, the application sent the message contents back to the remote server.</p>
-<p>But the malware was only the beginning of the investigation.</p>
-<p>Once the infrastructure was examined, the domain revealed additional paths and subdomains. One of them, <code>kumpulanscript.randiramli.com</code>, provided another pivot.</p>
-<p>From there, publicly available domain information exposed a name, phone number, and email address associated with the infrastructure.</p>
-<p>Those details could then be correlated with social-media and other online accounts.</p>
-<p>The investigation had moved from:</p>
-<p><strong>APK → infrastructure → domain → identity → social accounts</strong></p>
-<p>The bigger OPSEC problem was that the infrastructure surrounding it was connected too closely to the operator&rsquo;s real identity.</p>
+<p>The ClickFix campaign was using its own web infrastructure to distribute malware and track infections.</p>
+<p>From the outside, the infrastructure looked like another suspicious ClickFix domain.</p>
+<p>Then a simple enumeration revealed something that should never have been publicly accessible: An old PHP backup file.</p>
+<p>The file was:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/api/index.php.bak
+</span></span></code></pre></div><p>It contained part of the application&rsquo;s source code.</p>
+<p>That source code exposed an upload function, a hardcoded API key, and other details about how the infrastructure worked.</p>
+<p>What started as a single forgotten backup file eventually provided a path into the campaign&rsquo;s internal dashboard and exposed additional operational information.</p>
+<p>The interesting part of this case was not just that the application was vulnerable.</p>
+<p>It was that the threat actor had left <strong>their own operational artifacts sitting on an internet-facing server</strong>.</p>
 <hr>
 <h2 id="the-opsec-failure">The OPSEC Failure</h2>
-<p>The APK itself contained several useful clues.</p>
-<p>Its package name was:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>com.rndytech.smstest
-</span></span></code></pre></div><p>The application loaded the legitimate JET tracking website through a WebView, but also requested SMS permissions.</p>
-<p>During analysis, requests were observed going to:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>randiramli.com
-</span></span></code></pre></div><p>The application sent device information to the server and, when an SMS arrived, transmitted the sender and message contents through the application&rsquo;s REST API. :contentReference[oaicite:0]{index=0}</p>
-<p>That gave investigators an infrastructure starting point.</p>
-<p>The next mistake was much simpler.</p>
-<p>The server exposed several paths and subdomains.</p>
-<p>One particularly interesting subdomain was:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>kumpulanscript.randiramli.com
-</span></span></code></pre></div><p>The investigation then followed the domain ownership information.</p>
-<p>According to the original investigation, the domain registration contained a real name together with a phone number and email address. Those details were then correlated with publicly available information and social-media accounts. :contentReference[oaicite:1]{index=1}</p>
-<p>The operator had effectively connected the malicious infrastructure to an identity.</p>
+<p>During an investigation into a ClickFix infection, the campaign infrastructure was identified and enumerated.</p>
+<p>A endpoint was visible.</p>
+<p>More importantly, an exposed backup file was found:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/api/index.php.bak
+</span></span></code></pre></div><p>Backup files are often forgotten because they are not part of the application&rsquo;s normal functionality.</p>
+<p>But they can contain exactly what an attacker does not want outsiders to see:</p>
+<ul>
+<li>Source code.</li>
+<li>Configuration.</li>
+<li>Credentials.</li>
+<li>Internal endpoints.</li>
+<li>Debugging logic.</li>
+</ul>
+<p>In this case, the backup file revealed an API implementation containing a file-upload feature.</p>
+<p>The upload function required an API key.</p>
+<p>That sounds like a useful security control.</p>
+<p>Except the API key was hardcoded directly in the source code.</p>
+<p>So the backup file effectively contained both the <strong>door</strong> and the <strong>key</strong>.</p>
 <hr>
 <h2 id="what-was-exposed">What Was Exposed?</h2>
-<p>The investigation produced several useful correlation points:</p>
+<p>The exposed source code provided information about the campaign&rsquo;s internal application.</p>
+<p>Among the exposed artifacts were:</p>
 <ul>
-<li>Android package name</li>
-<li>Malware infrastructure</li>
-<li>REST API endpoints</li>
-<li>Domain name</li>
-<li>Multiple subdomains</li>
-<li>Domain registration information</li>
-<li>Name associated with the domain</li>
-<li>Phone number</li>
-<li>Email address</li>
-<li>Social-media account</li>
-<li>Additional domain using the same naming pattern</li>
-<li>Telegram account</li>
+<li>Source code</li>
+<li>An API key</li>
+<li>File-upload functionality</li>
+<li>Internal application logic</li>
+<li>Campaign dashboard functionality</li>
+<li>Analytics data</li>
+<li>Telegram bot credentials</li>
+<li>Telegram chat ID</li>
+<li>Campaign infrastructure information</li>
+<li>Malware distribution information</li>
 </ul>
-<p>The individual clues were not necessarily enough on their own.</p>
-<p>The problem was that they all pointed in the same direction.</p>
-<p>The domain contained the operator&rsquo;s apparent name.</p>
-<p>The same naming pattern appeared elsewhere.</p>
-<p>The social account used a related identity.</p>
-<p>Another domain reused the same name.</p>
-<p>A Telegram account provided another potential connection.</p>
-<p>This is the important part of the case:</p>
-<p><strong>The infrastructure was not sufficiently separated from the operator&rsquo;s public identity.</strong></p>
-<hr>
-<h2 id="the-facepalm">The Facepalm</h2>
-<p>The malware developer had already created a useful pivot for investigators.</p>
-<p>It was called:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>randiramli.com
-</span></span></code></pre></div><p>That domain became the starting point.</p>
-<p>From there, investigators could enumerate related infrastructure and eventually reach information associated with the person behind the domain.</p>
-<p>There was no need for a dramatic technical exploit.</p>
-<p>No zero-day.</p>
-<p>No sophisticated attack against the operator.</p>
-<p>Just publicly accessible information connected together.</p>
-<p>The malware led to the server.</p>
-<p>The server led to the domain.</p>
-<p>The domain led to the registration information.</p>
-<p>The identity led to social accounts.</p>
-<p>And the social accounts provided more correlation points.</p>
-<p><strong>The infrastructure itself became the breadcrumb trail.</strong></p>
+<p>The upload functionality also lacked proper file-type validation.</p>
+<p>This meant the exposed API key could be used against the upload functionality, turning what initially looked like a source-code disclosure into deeper access to the server.</p>
+<p>From there, the investigation reached the campaign&rsquo;s dashboard.</p>
+<p>The dashboard contained operational information about the campaign, including download activity, source domains, infection flows, and distribution performance.</p>
+<p>This is where the OPSEC failure became much more valuable than the original vulnerability.</p>
+<p>The dashboard provided a view into <strong>how the operation was actually being run</strong>.</p>
 <hr>
 <h2 id="why-this-matters-for-red-teams">Why This Matters for Red Teams</h2>
-<p>This case demonstrates why infrastructure OPSEC matters even when the application itself is technically sophisticated.</p>
-<p>A red-team operation can use:</p>
+<p>This case is a useful reminder that infrastructure review should not stop at the application&rsquo;s intended functionality.</p>
+<p>When assessing an internet-facing target, forgotten artifacts can reveal much more than the live application.</p>
+<p>Look for things such as:</p>
 <ul>
-<li>Malware</li>
-<li>C2 infrastructure</li>
-<li>Phishing domains</li>
-<li>Redirectors</li>
-<li>VPS instances</li>
-<li>Tracking servers</li>
-<li>Cloud services</li>
-<li>Testing domains</li>
+<li>Backup files</li>
+<li>Old source files</li>
+<li>Temporary files</li>
+<li>Debug files</li>
+<li>Configuration files</li>
+<li>Logs</li>
+<li>Archives</li>
+<li>Deployment leftovers</li>
+<li>Old domains</li>
+<li>Development endpoints</li>
+<li>Hardcoded credentials</li>
+<li>API keys</li>
+<li>Bot tokens</li>
+<li>Internal hostnames</li>
 </ul>
-<p>But if those resources are registered, named, configured, or reused in a way that connects them to the operator, the technical separation does not matter much.</p>
-<p>Before deploying infrastructure, ask:</p>
-<ul>
-<li>Does the domain name reveal my identity?</li>
-<li>Is the registration information separated from my personal identity?</li>
-<li>Am I reusing a username?</li>
-<li>Am I reusing a phone number?</li>
-<li>Am I reusing an email address?</li>
-<li>Does another domain use the same naming convention?</li>
-<li>Are subdomains revealing internal projects?</li>
-<li>Does the infrastructure share identifiers with my public accounts?</li>
-<li>Have I accidentally connected operational infrastructure to a personal account?</li>
-</ul>
-<p>One weak link can become the pivot for the entire investigation.</p>
+<p>For threat intelligence, these artifacts can also reveal the relationship between different parts of an operation.</p>
+<p>A dashboard can reveal campaign activity.</p>
+<p>A source file can reveal infrastructure.</p>
+<p>A bot token can reveal communications.</p>
+<p>A configuration file can reveal another server.</p>
+<p>An old backup can connect all of them.</p>
 <hr>
 <h2 id="defensive-lesson">Defensive Lesson</h2>
-<p>Threat actors are not the only ones who should learn from this.</p>
-<p>Organizations investigating malicious infrastructure can use the same methodology defensively.</p>
-<p>When a suspicious application or domain is discovered, don&rsquo;t stop at the malware sample.</p>
-<p>Pivot through:</p>
-<p><strong>Application → package name → domains → subdomains → DNS → registration → infrastructure → public accounts</strong></p>
-<p>Each step can provide another correlation point.</p>
-<p>The important thing is to distinguish between <strong>evidence</strong> and <strong>assumption</strong>.</p>
-<p>A domain name that resembles a person&rsquo;s name is a clue.</p>
-<p>A registration record is stronger evidence.</p>
-<p>A matching email, phone number, social account, and infrastructure pattern provides additional correlation.</p>
-<p>Attribution should come from the combination of evidence rather than from a single clue.</p>
+<p>Operational infrastructure should be treated as sensitive infrastructure.</p>
+<p>Before deploying a campaign management application or any internet-facing service:</p>
+<ul>
+<li>Remove backup files from the web root.</li>
+<li>Never store secrets directly in source code.</li>
+<li>Keep secrets in environment variables or a proper secret manager.</li>
+<li>Restrict administrative interfaces.</li>
+<li>Validate uploaded files server-side.</li>
+<li>Separate the management dashboard from public infrastructure.</li>
+<li>Review deployed files rather than only the source repository.</li>
+<li>Scan for forgotten backups and temporary files.</li>
+<li>Rotate credentials immediately if source code is exposed.</li>
+<li>Perform an external attack-surface review before deployment.</li>
+</ul>
+<p>A secure application can still become an OPSEC failure because of the files surrounding it.</p>
 <hr>
 <h2 id="opsec-takeaway">OPSEC Takeaway</h2>
-<p><strong>Your infrastructure can identify you even when your malware doesn&rsquo;t.</strong></p>
-<p>Separating an operation from a real identity requires more than hiding the malware.</p>
-<p>Domains, accounts, registrations, usernames, email addresses, phone numbers, and naming conventions can all become correlation points.</p>
-<p>If several of them point to the same person, the anonymity layer starts to disappear.</p>
+<p>The ClickFix case demonstrates a simple rule:</p>
+<p><strong>Your backup files are part of your attack surface.</strong></p>
+<p>It does not matter that the file was never intended to be public.</p>
+<p>If the server can serve it, someone can eventually find it.</p>
+<p>The most damaging information may not be inside the application&rsquo;s normal interface.</p>
+<p>It may be sitting beside it as:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>index.php.bak
+</span></span><span style="display:flex;"><span>backup.zip
+</span></span><span style="display:flex;"><span>old.php
+</span></span><span style="display:flex;"><span>config.php.old
+</span></span><span style="display:flex;"><span>debug.log
+</span></span></code></pre></div><p>For threat actors, forgotten files can become intelligence packages.</p>
+<p>For defenders and red teams, they are often some of the first places worth checking.</p>
 <hr>
 <h2 id="lesson-learned">Lesson Learned</h2>
-<p>For red teams, infrastructure should be treated as part of the operation&rsquo;s identity.</p>
-<p>Before going live, perform an external OPSEC review.</p>
-<p>Start with the same question an investigator would ask:</p>
-<blockquote>
-<p><strong>&ldquo;If I discovered this infrastructure today, what could I learn about the person who created it?&rdquo;</strong></p></blockquote>
-<p>Then follow the chain.</p>
-<p><strong>Domain → DNS → subdomain → registration → username → email → social account → identity.</strong></p>
-<p>If that chain reaches you, your OPSEC has already failed.</p>
+<p>For red-team and CTI work, don&rsquo;t only ask:</p>
+<p><strong>&ldquo;What vulnerability does this application have?&rdquo;</strong></p>
+<p>Also ask:</p>
+<p><strong>&ldquo;What did the operator forget to remove?&rdquo;</strong></p>
+<p>A backup file can reveal source code.</p>
+<p>Source code can reveal credentials.</p>
+<p>Credentials can reveal internal functionality.</p>
+<p>Internal functionality can reveal infrastructure.</p>
+<p>Infrastructure can reveal the operation.</p>
+<p>That chain is the real OPSEC failure.</p>
 <hr>
 <h2 id="sources">Sources</h2>
-<p>Nikko Enggaliano - <a href="https://nikko.id/read.php?id=7">Dive Deeper into “LIHAT Foto Paket” an evil apk to scam</a></p>
+<p>Jonias Fortuna - <a href="https://potato.id/en/posts/weak-secops-exposed-clickfix-dashboard/">How I Get Access ClickFix Dashboard Due to Bad SecOps</a></p>
+<hr>
 
 		</div>
 		<hr>
@@ -345,15 +342,15 @@
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/en/opsec-fail/the-threat-actor-who-infected-himself/" rel="prev">
+		<a class="pager__link" href="/en/opsec-fail/bug-bounty-account-exposed-persona/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">The Threat Actor Who Infected Himself</p>
+			<p class="pager__title">The Bug Bounty Account That Exposed the Persona</p>
 		</a>
 	</div>
 	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/en/opsec-fail/case-008/" rel="next">
+		<a class="pager__link" href="/en/opsec-fail/archive-exposed-the-operator/" rel="next">
 			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">The Phishing CDN That Became a Backdoor</p>
+			<p class="pager__title">The Archive That Exposed the Operator</p>
 		</a>
 	</div>
 </nav>
