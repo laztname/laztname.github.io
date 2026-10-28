@@ -88,7 +88,7 @@
   },
   "articleSection": "opsec-fail",
   "keywords": [],
-  "wordCount":  538 ,
+  "wordCount":  530 ,
   "datePublished": "2026-09-07T00:00:00Z",
   "dateModified": "2026-09-07T00:00:00Z"
 }
@@ -207,22 +207,18 @@
 <blockquote>
 <p><strong>They exposed the directory instead of exposing only the files they intended to serve.</strong></p></blockquote>
 <p>An attacker may think:</p>
-<p>///text
-http://server/payload.exe
-///</p>
-<p>is the only thing researchers can access.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>http://server/payload.exe
+</span></span></code></pre></div><p>is the only thing researchers can access.</p>
 <p>But a misconfigured directory can effectively become:</p>
-<p>///text
-http://server/
-├── payload.exe
-├── tool/
-├── config/
-├── scripts/
-├── loader/
-├── proxy/
-└── everything-else/
-///</p>
-<p>The difference is enormous.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>http://server/
+</span></span><span style="display:flex;"><span>├── payload.exe
+</span></span><span style="display:flex;"><span>├── tool/
+</span></span><span style="display:flex;"><span>├── config/
+</span></span><span style="display:flex;"><span>├── scripts/
+</span></span><span style="display:flex;"><span>├── loader/
+</span></span><span style="display:flex;"><span>├── proxy/
+</span></span><span style="display:flex;"><span>└── everything-else/
+</span></span></code></pre></div><p>The difference is enormous.</p>
 <hr>
 <h2 id="why-it-matters">Why It Matters</h2>
 <p>An open directory can reveal much more than the intended payload.</p>
@@ -249,22 +245,20 @@ http://server/
 <p>The important OPSEC lesson is that the directory did not need to contain the operator&rsquo;s real name.</p>
 <p>Attribution rarely depends on a single magical artifact.</p>
 <p>Instead, investigators can build a chain:</p>
-<p>///text
-Open Directory
-↓
-Tooling
-↓
-Malware / Loader
-↓
-Configuration
-↓
-Infrastructure
-↓
-Related Campaigns
-↓
-Actor Attribution
-///</p>
-<p>This is where a simple configuration mistake becomes an intelligence problem.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Open Directory
+</span></span><span style="display:flex;"><span>       ↓
+</span></span><span style="display:flex;"><span>Tooling
+</span></span><span style="display:flex;"><span>       ↓
+</span></span><span style="display:flex;"><span>Malware / Loader
+</span></span><span style="display:flex;"><span>       ↓
+</span></span><span style="display:flex;"><span>Configuration
+</span></span><span style="display:flex;"><span>       ↓
+</span></span><span style="display:flex;"><span>Infrastructure
+</span></span><span style="display:flex;"><span>       ↓
+</span></span><span style="display:flex;"><span>Related Campaigns
+</span></span><span style="display:flex;"><span>       ↓
+</span></span><span style="display:flex;"><span>Actor Attribution
+</span></span></code></pre></div><p>This is where a simple configuration mistake becomes an intelligence problem.</p>
 <hr>
 <h2 id="what-they-forgot">What They Forgot</h2>
 <p>The operator apparently remembered to deploy offensive tooling.</p>
@@ -299,10 +293,8 @@ Actor Attribution
 <p>You can encrypt communications.</p>
 <p>You can carefully manage your infrastructure.</p>
 <p>And then accidentally leave:</p>
-<p>///text
-Index of /
-///</p>
-<p>enabled.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Index of /
+</span></span></code></pre></div><p>enabled.</p>
 <blockquote>
 <p><strong>Sometimes the biggest OPSEC failure isn&rsquo;t what you uploaded. It&rsquo;s what you forgot was already there.</strong></p></blockquote>
 <hr>

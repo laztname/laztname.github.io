@@ -2,6 +2,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://potato.id/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://potato.id/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://potato.id/"
+                />
+  </url><url>
+    <loc>https://potato.id/posts/</loc>
+    <lastmod>2026-10-28T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://potato.id/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="id"
+                href="https://potato.id/posts/"
+                />
+  </url><url>
     <loc>https://potato.id/categories/</loc>
     <lastmod>2026-07-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -77,21 +107,6 @@
                 href="https://potato.id/posts/i-accidentally-logged-into-threat-actor-website/"
                 />
   </url><url>
-    <loc>https://potato.id/</loc>
-    <lastmod>2026-07-13T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://potato.id/en/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="https://potato.id/"
-                />
-  </url><url>
     <loc>https://potato.id/tags/malware/</loc>
     <lastmod>2026-07-13T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -120,21 +135,6 @@
                 rel="alternate"
                 hreflang="id"
                 href="https://potato.id/categories/offensive/"
-                />
-  </url><url>
-    <loc>https://potato.id/posts/</loc>
-    <lastmod>2026-07-13T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://potato.id/en/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="id"
-                href="https://potato.id/posts/"
                 />
   </url><url>
     <loc>https://potato.id/tags/</loc>
