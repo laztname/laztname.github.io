@@ -6,6 +6,16 @@ Base URL: https://potato.id/
 
 # SECTION: CONTENT_INDEX
 
+## Microsoft 365 Phishing Kit: Source Code Exposed by an OPSEC Failure
+
+[URL](https://potato.id/en/posts/microsoft-365-phishing-kit-opsec-failure/)  
+Date: 2026-10-28
+
+Summary:
+Introduction That morning, as usual, I started working through incoming Security Operations tickets. One of them was related to a suspected phishing email that had just been moved to quarantine by Microsoft Defender for Office 365 (MDO).
+MDO already has built-in mechanisms to detect and remediate malicious emails. However, in practice, I have encountered several cases where phishing emails still managed to reach users&rsquo; inboxes before eventually being detected and moved to quarantine.
+
+
 ## The 500ms Delay That Exposed the XZ Backdoor
 
 [URL](https://potato.id/en/opsec-fail/xz-backdoor-500ms-delay/)  

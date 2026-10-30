@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html class="no-js" lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow, max-image-preview:large">
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="theme-color" content="#efe6dd">
+	<meta http-equiv="content-language" content="id">
+	<meta name="author" content="Ardi Jonias Fortuna">
+	<title>Microsoft 365 Phishing Kit: Source Code Terbongkar akibat OPSEC Failure - Jonias Fortuna</title>
+	<link rel="canonical" href="https://potato.id/posts/microsoft-365-phishing-kit-opsec-failure/">
+	
+	
+	<link rel="alternate" hreflang="x-default" href="https://potato.id/posts/microsoft-365-phishing-kit-opsec-failure/">
+	<link rel="alternate" hreflang="id" href="https://potato.id/posts/microsoft-365-phishing-kit-opsec-failure/">
+	
+	<link rel="alternate" hreflang="en" href="https://potato.id/en/posts/microsoft-365-phishing-kit-opsec-failure/">
+	
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670" crossorigin="anonymous"></script>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="Investigasi phishing Microsoft 365 mengungkap source code yang terekspos, kredensial default, kesalahan konfigurasi API, serta kelemahan OPSEC pada infrastruktur Threat Actor.">
+		<meta property="og:url" content="https://potato.id/posts/microsoft-365-phishing-kit-opsec-failure/">
+  <meta property="og:site_name" content="Jonias Fortuna">
+  <meta property="og:title" content="Microsoft 365 Phishing Kit: Source Code Terbongkar akibat OPSEC Failure">
+  <meta property="og:description" content="Investigasi phishing Microsoft 365 mengungkap source code yang terekspos, kredensial default, kesalahan konfigurasi API, serta kelemahan OPSEC pada infrastruktur Threat Actor.">
+  <meta property="og:locale" content="id">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-10-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-10-28T00:00:00+00:00">
+    <meta property="article:tag" content="Microsoft 365">
+    <meta property="article:tag" content="Phishing">
+    <meta property="article:tag" content="Threat Intelligence">
+    <meta property="article:tag" content="Write Up">
+    <meta property="article:tag" content="Internet">
+    <meta property="og:image" content="https://potato.id/img/microsoft-phishing/dashboard.png">
+
+		
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://potato.id/img/microsoft-phishing/dashboard.png">
+  <meta name="twitter:title" content="Microsoft 365 Phishing Kit: Source Code Terbongkar akibat OPSEC Failure">
+  <meta name="twitter:description" content="Investigasi phishing Microsoft 365 mengungkap source code yang terekspos, kredensial default, kesalahan konfigurasi API, serta kelemahan OPSEC pada infrastruktur Threat Actor.">
+
+        <link rel="me" href="https://infosec.exchange/@laztname">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://pagead2.googlesyndication.com">
+	<link rel="preconnect" href="https://googleads.g.doubleclick.net">
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        
+        <link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2" type="font/woff2" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap"></noscript>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+
+	
+          
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https:\/\/potato.id\/posts\/microsoft-365-phishing-kit-opsec-failure\/#article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/potato.id\/posts\/microsoft-365-phishing-kit-opsec-failure\/"
+  },
+  "headline": "Microsoft 365 Phishing Kit: Source Code Terbongkar akibat OPSEC Failure",
+  "description": "Investigasi phishing Microsoft 365 mengungkap source code yang terekspos, kredensial default, kesalahan konfigurasi API, serta kelemahan OPSEC pada infrastruktur Threat Actor.",
+  "inLanguage": "id",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/potato.id\/img\/microsoft-phishing\/dashboard.png"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Ardi Jonias Fortuna",
+    "url": "https:\/\/potato.id\/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jonias Fortuna",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/potato.id\/favicon.ico"
+    }
+  },
+  "articleSection": "posts",
+  "keywords": ["Microsoft 365","Phishing","Threat Intelligence","Write Up","Internet"],
+  "wordCount":  1972 ,
+  "datePublished": "2026-10-28T00:00:00Z",
+  "dateModified": "2026-10-28T00:00:00Z"
+}
+</script>
+
+
+        
+
+<script>
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "ii5leisvaz");
+</script>
+</head>
+<body class="body">
+	<div id="loading"></div>
+	<div class="container container--outer">
+		<header class="header">
+        <div class="container">
+                <div class="logo">
+                        <a class="logo__link" href="/" title="Jonias Fortuna" rel="home">
+                                <div class="logo__title">potato</div>
+                                <div class="logo__tagline">Just another potato website.</div>
+                        </a>
+                </div>
+                
+<nav class="menu">
+        <button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                <span class="menu__btn-title" tabindex="-1">Menu</span>
+        </button>
+
+        <ul class="menu__list">
+                <li class="menu__item">
+                        <a class="menu__link" href="/">
+                                
+                                <span class="menu__text">Home</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/about/">
+                                
+                                <span class="menu__text">About Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/contact/">
+                                
+                                <span class="menu__text">Contact Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/privacy-policy/">
+                                
+                                <span class="menu__text">Privacy Policy</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/uses/">
+                                
+                                <span class="menu__text">Uses</span>
+                                
+                        </a>
+                </li>
+
+		
+		<li class="menu__item menu__item--lang">
+		  
+		    <a class="menu__link"
+		       href="/en/posts/microsoft-365-phishing-kit-opsec-failure/"
+		       lang="en">
+		       English
+		    </a>
+		  
+		</li>
+		
+
+        </ul>
+</nav>
+
+
+        </div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Microsoft 365 Phishing Kit: Source Code Terbongkar akibat OPSEC Failure</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-10-28T00:00:00Z">28-10-2026</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/cyber-security/" rel="category">Cyber Security</a>, <a class="meta__link" href="/categories/offensive/" rel="category">Offensive</a>, <a class="meta__link" href="/categories/defensive/" rel="category">Defensive</a>
+	</span>
+</div></div>
+		</header>
+		       
+
+            <figure class="post__thumbnail thumbnail">
+                
+                <picture>
+                    <source srcset="/img/microsoft-phishing/dashboard_hu_831c118d4218c90d.webp" media="(min-width: 1024px)">
+                    <source srcset="/img/microsoft-phishing/dashboard_hu_ce8fa2d455e9517b.webp" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="/img/microsoft-phishing/dashboard_hu_92de43503f9320ae.webp" media="(max-width: 767px)">
+                    <img class="thumbnail__image"
+                         src="/img/microsoft-phishing/dashboard_hu_ce8fa2d455e9517b.webp"
+                         width="800"
+                         height="412"
+                         alt="Microsoft 365 Phishing Kit: Source Code Terbongkar akibat OPSEC Failure"
+                         loading="lazy">
+                </picture>
+                
+            </figure>
+
+<div class="content post__content clearfix">
+			<h2 id="introduction">Introduction</h2>
+<p>Pagi itu, seperti biasa, saya mulai mengerjakan ticket-ticket Security Operations yang masuk. Salah satunya adalah ticket terkait email yang terindikasi sebagai phishing dan baru saja dipindahkan oleh Microsoft Defender for Office 365 (MDO) ke quarantine.</p>
+<p>MDO sebenarnya sudah punya mekanisme untuk mendeteksi dan melakukan remediasi terhadap email berbahaya. Namun, dalam prakteknya, saya beberapa kali menemukan kasus ketika email phishing masih sempat masuk ke inbox sebelum akhirnya terdeteksi dan dipindahkan.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/phishing.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/phishing_hu_7971df09dabeb193.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/phishing_hu_6aba436a17ac2d79.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/phishing_hu_b0f18b1c6f8d9c53.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/phishing_hu_b0f18b1c6f8d9c53.webp"
+             alt="Halaman phishing yang meniru tampilan login resmi Microsoft"
+             class="hover-effect"
+             width="800"
+             height="402">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Halaman phishing yang dirancang untuk meniru pengalaman login resmi Microsoft.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Yang lebih menarik, hal ini terkadang terjadi pada sekumpulan email dengan pola yang mirip, mulai dari pengirim, subject, hingga indikator ancamannya. Misalnya, dari 20 email phishing yang serupa, 18 email berhasil diblokir, tetapi 2 email terakhir justru masih masuk ke inbox pengguna.</p>
+<p>Saya dan tim pernah membuka ticket ke Microsoft untuk menanyakan behaviour ini. Namun, dari penanganan yang kami alami, mekanisme tersebut tampaknya berkaitan dengan perilaku deteksi dan pemrosesan email yang memang expected, bukan semata-mata kegagalan sistem. Tentu, penyebab pastinya tetap bergantung pada hasil investigasi dan detail masing-masing case.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/phishing-url.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/phishing-url_hu_a1ab6449f18db190.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/phishing-url_hu_94855befd01b5efa.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/phishing-url_hu_af64d4c6bc5677b4.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/phishing-url_hu_af64d4c6bc5677b4.webp"
+             alt="URL mencurigakan yang digunakan dalam kampanye phishing akun Microsoft"
+             class="hover-effect"
+             width="800"
+             height="344">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        URL mencurigakan yang digunakan untuk mendistribusikan halaman phishing Microsoft.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Nah, dari ticket inilah investigasi kali ini dimulai. Awalnya terlihat seperti penanganan email phishing biasa, tetapi setelah saya mencoba menelusuri link di dalamnya, saya justru menemukan sesuatu yang jauh lebih menarik di balik infrastruktur phishing tersebut.</p>
+<p>Setelah memeriksa indikator yang ada, saya yakin ticket tersebut merupakan <em>true positive</em>. Saya kemudian memasukkan IOC (<em>Indicator of Compromise</em>) ke Microsoft Defender for Endpoint (MDE) dan firewall sebagai langkah mitigasi.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/redirector.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/redirector_hu_a734c01a2d864367.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/redirector_hu_a9488e8df193121d.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/redirector_hu_631a1f20c888143f.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/redirector_hu_631a1f20c888143f.webp"
+             alt="Infrastruktur redirector yang mengarahkan pengunjung ke halaman login Microsoft palsu"
+             class="hover-effect"
+             width="800"
+             height="274">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Redirector digunakan untuk mengarahkan pengunjung ke halaman phishing tujuan.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Karena penasaran, saya mencoba membuka link tersebut dan menemukan redirect ke domain lain. Proses ini juga terindikasi mengumpulkan browser fingerprint atau metadata pengunjung, yang kemungkinan digunakan untuk membedakan pengguna asli dari bot atau crawler keamanan.</p>
+<p>Teknik ini umum digunakan untuk menghindari deteksi otomatis, sehingga sistem keamanan bisa saja melihat halaman yang berbeda dari halaman phishing yang sebenarnya.</p>
+<h2 id="domain-lama-yang-dimanfaatkan-kembali">Domain lama yang dimanfaatkan kembali</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/old-domain.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/old-domain_hu_e2487f7d8eff9a46.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/old-domain_hu_fd05f80c6dd6152a.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/old-domain_hu_3f6a2c34f0c7bdf5.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/old-domain_hu_3f6a2c34f0c7bdf5.webp"
+             alt="Domain lama yang teridentifikasi terkait dengan infrastruktur phishing Microsoft"
+             class="hover-effect"
+             width="800"
+             height="365">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Domain lama yang ditemukan selama investigasi infrastruktur phishing.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Setelah menelusuri riwayat domain di archive.org, saya menemukan indikasi bahwa domain yang digunakan dalam email phishing tersebut merupakan domain lama yang kemungkinan tidak diperpanjang oleh pemilik sebelumnya, lalu didaftarkan kembali oleh threat actor.</p>
+<p>Kasus seperti ini menarik karena domain yang terlihat sudah berumur belum tentu masih dimiliki oleh pihak yang sama. Threat actor bisa memanfaatkan domain yang kedaluwarsa untuk membangun reputasi domain yang tampak lebih meyakinkan dibandingkan domain yang baru saja didaftarkan, umunya defender akan melakukan deny by default untuk NRG / New Registered Domain.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/whois.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/whois_hu_e1142f4ef687b0f2.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/whois_hu_7648c0032ae389c5.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/whois_hu_5548300855b420ae.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/whois_hu_5548300855b420ae.webp"
+             alt="Informasi WHOIS yang menampilkan detail registrasi domain mencurigakan"
+             class="hover-effect"
+             width="800"
+             height="419">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Data WHOIS digunakan untuk menelusuri informasi registrasi dan keterkaitan antar-domain.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Model Phishing seperti ini sangat sering dijumpai, untuk mengakali email security gateway link di email mengguankan old domain, sedangkan setelah redirector akan diarahkan ke domain baru, karena halaman phishing seperti ini cukup sering di flag oleh browser sebagai malicious sehingga threat actor juga sering mendaftarkan banyak domain.</p>
+<blockquote>
+<p>Dalam konteks email security, usia domain hanyalah salah satu parameter yang digunakan untuk mendeteksi email tersebut bersih atau tidak. Domain lama yang berpindah kepemilikan berpotensi tidak terdeteksi oleh rule yang hanya berfokus pada domain yang baru terdaftar.</p></blockquote>
+<p>Baca juga: <a href="/posts/infostealer-spreading-through-fake-google-recaptcha/">Infostealer Spreading Through Fake Google reCAPTCHA</a></p>
+<h2 id="mengintip-phishing-login-page">Mengintip phishing login page</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/phishing-login-microsoft.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/phishing-login-microsoft_hu_c59552fb7ffc666d.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/phishing-login-microsoft_hu_d14c71bce4d54e37.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/phishing-login-microsoft_hu_374245d08c63ab4d.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/phishing-login-microsoft_hu_374245d08c63ab4d.webp"
+             alt="Halaman login Microsoft palsu yang meminta kredensial akun pengguna"
+             class="hover-effect"
+             width="800"
+             height="432">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Antarmuka login Microsoft palsu yang dirancang untuk mencuri kredensial pengguna.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Setelah proses redirect, saya sampai di sebuah halaman login yang meniru tampilan Microsoft. Dari sini, saya mulai penasaran dengan cara kerja phishing kit yang digunakan, terutama bagaimana halaman tersebut memproses input username dan password korban.</p>
+<p>Dengan memeriksa kode HTML yang ditampilkan oleh browser, saya menemukan petunjuk bahwa halaman tersebut menggunakan PHP di sisi server dan memiliki direktori bernama api.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/javascripts.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/javascripts_hu_9157028c8da48e31.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/javascripts_hu_76e48cb519991a94.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/javascripts_hu_80627e3b92424aa6.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/javascripts_hu_80627e3b92424aa6.webp"
+             alt="File JavaScript yang digunakan oleh situs phishing Microsoft"
+             class="hover-effect"
+             width="800"
+             height="508">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Resource JavaScript yang ditemukan selama analisis terhadap situs phishing.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Saya kemudian mencoba memeriksa direktori tersebut dan menemukan bahwa directory listing terbuka. Artinya, server menampilkan daftar file dan folder di dalam direktori tersebut, alih-alih membatasi akses atau menampilkan halaman yang sesuai.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/opendir-api.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/opendir-api_hu_14840b547e448e08.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/opendir-api_hu_f9aed84697cb994e.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/opendir-api_hu_d8fcac5eeac56243.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/opendir-api_hu_d8fcac5eeac56243.webp"
+             alt="Endpoint API terbuka yang menampilkan daftar direktori atau file pada server phishing"
+             class="hover-effect"
+             width="800"
+             height="678">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Endpoint API yang terekspos dan memberikan akses terhadap informasi direktori.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Dari daftar file yang terlihat, ada beberapa petunjuk bahwa phishing kit ini tidak hanya menargetkan akun Microsoft 365. Terdapat juga indikasi dukungan untuk GoDaddy, serta mekanisme yang tampaknya digunakan untuk mengenali alamat email perusahaan dan mengidentifikasi organisasi yang menjadi target.</p>
+<p>Baca juga: <a href="/en/opsec-fail/">Curated Opsec Failure</a></p>
+<h2 id="directory-listing-awal-dari-opsec-failure">Directory listing: awal dari OPSEC failure</h2>
+<p>Directory listing yang terbuka membuat saya semakin penasaran dengan seberapa baik threat actor mengamankan infrastrukturnya. Kalau direktori internal saja bisa diakses secara publik, ada kemungkinan file lain yang seharusnya tidak tersedia untuk umum juga ikut terekspos.</p>
+<p>Untuk menguji hipotesis tersebut, saya melakukan pemeriksaan terhadap file dan direktori yang dapat diakses secara publik menggunakan ffuf, sebuah tool untuk web fuzzing. Tujuannya adalah memahami seberapa luas paparan yang terjadi, bukan sekadar mengumpulkan nama direktori.</p>
+<p>Sambil menunggu proses tersebut berjalan, saya mencoba menebak nama file yang mungkin tersedia. Karena direktori api terlihat dari browser, saya menduga mungkin ada arsip bernama api.zip yang tertinggal di server.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/api-zip.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/api-zip_hu_814d1b3298b0c0ac.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/api-zip_hu_4ba337c50161c6a7.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/api-zip_hu_fb07b0ff70827504.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/api-zip_hu_fb07b0ff70827504.webp"
+             alt="Arsip ZIP yang dapat diakses melalui API terbuka pada infrastruktur phishing"
+             class="hover-effect"
+             width="800"
+             height="503">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Arsip ZIP yang dapat diakses secara langsung dan berisi file dari infrastruktur phishing.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Tebakan itu ternyata benar.</p>
+<p>File api.zip dapat diakses tanpa autentikasi. Setelah memeriksa arsip tersebut, saya menemukan bahwa isinya mencakup source code yang digunakan oleh phishing kit tersebut.</p>
+<p>Di sinilah investigasinya menjadi lebih menarik. Kesalahan konfigurasi sederhana ternyata berpotensi membuka lebih banyak informasi daripada yang terlihat dari halaman login phishing itu sendiri.</p>
+<p>Baca juga: <a href="/en/opsec-fail/archive-exposed-the-operator/">The Archive That Exposed the Operator</a></p>
+<h2 id="source-code-panel-admin-dan-default-credentials">Source code, panel admin, dan default credentials</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/full-source-code.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/full-source-code_hu_f3111cc64ad014a2.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/full-source-code_hu_385a182eed0cd296.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/full-source-code_hu_e3896f8db910e9c2.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/full-source-code_hu_e3896f8db910e9c2.webp"
+             alt="Source code aplikasi phishing Microsoft yang terekspos dan dapat diakses publik"
+             class="hover-effect"
+             width="800"
+             height="331">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Source code aplikasi phishing yang terekspos, memperlihatkan detail implementasi sistem.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Dengan membaca source code yang ditemukan, saya bisa memahami lebih jauh struktur aplikasi dan menemukan petunjuk mengenai lokasi panel administrasinya. Salah satu file yang menarik perhatian adalah login.php, yang memberikan informasi tentang mekanisme autentikasi panel tersebut.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/default-creds.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/default-creds_hu_6c8a0af550a621ff.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/default-creds_hu_60b2654b9aeebc92.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/default-creds_hu_14ccaa79a851c232.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/default-creds_hu_14ccaa79a851c232.webp"
+             alt="Kredensial default yang ditemukan dalam konfigurasi aplikasi phishing"
+             class="hover-effect"
+             width="800"
+             height="710">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Kredensial default ditemukan pada file aplikasi dan berpotensi memberikan akses tidak sah ke dashboard.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Dari pemeriksaan tersebut, saya menemukan indikasi penggunaan kredensial default. Ini merupakan masalah keamanan yang cukup mendasar, terutama jika panel administrasi dapat diakses dari internet dan tidak memiliki pembatasan akses tambahan.</p>
+<p>Kombinasi antara source code yang terekspos dan konfigurasi autentikasi yang lemah dapat meningkatkan risiko pengambilalihan panel. Dalam kasus seperti ini, threat actor yang membangun phishing kit justru meninggalkan celah yang bisa dimanfaatkan pihak lain.</p>
+<p>Setelah itu, saya menemukan halaman dashboard yang menampilkan beberapa bagian dari sistem pengelolaan phishing kit.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/dashboard.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/dashboard_hu_c53defee5cdf9082.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/dashboard_hu_831c118d4218c90d.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/dashboard_hu_ce8fa2d455e9517b.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/dashboard_hu_ce8fa2d455e9517b.webp"
+             alt="Dashboard administratif panel pengelolaan kampanye phishing Microsoft"
+             class="hover-effect"
+             width="800"
+             height="412">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Dashboard administratif yang memperlihatkan antarmuka pengelolaan operasional platform phishing.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Dari dashboard, daftar client, log, dan halaman pengaturan tersebut, terlihat bahwa aplikasi ini bukan sekadar halaman login palsu yang berdiri sendiri. Ada komponen pengelolaan di belakangnya untuk mengatur target atau client, mencatat aktivitas, dan mengubah konfigurasi sistem.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/clients.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/clients_hu_6510bbe60091cc4.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/clients_hu_fd96408445494857.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/clients_hu_273a4479ae7552e.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/clients_hu_273a4479ae7552e.webp"
+             alt="Daftar client dan informasi pengguna yang tersimpan dalam panel phishing"
+             class="hover-effect"
+             width="800"
+             height="414">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Halaman manajemen client yang menampilkan data terkait pengguna atau target kampanye phishing.
+      </figcaption>
+    
+  </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/logs.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/logs_hu_67d09aec4935e996.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/logs_hu_d9ab6f47663b4ab1.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/logs_hu_d1c42d0beb0d0b9d.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/logs_hu_d1c42d0beb0d0b9d.webp"
+             alt="Log aktivitas dan riwayat operasional aplikasi phishing"
+             class="hover-effect"
+             width="800"
+             height="417">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Log aktivitas yang memperlihatkan catatan operasional dan interaksi pada aplikasi phishing.
+      </figcaption>
+    
+  </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/settings.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/settings_hu_121b13b7be2ebe1f.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/settings_hu_6ec592b2ffc31853.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/settings_hu_5c4e10221ca4f2d5.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/settings_hu_5c4e10221ca4f2d5.webp"
+             alt="Konfigurasi sistem dan pengaturan pada dashboard aplikasi phishing"
+             class="hover-effect"
+             width="800"
+             height="414">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Halaman konfigurasi yang memperlihatkan pengaturan internal platform phishing.
+      </figcaption>
+    
+  </figure>
+
+
+
+<h2 id="exposed-infrastructure-lead-to-threat-actor-profile">Exposed Infrastructure lead to Threat Actor Profile</h2>
+<p>Ketika melakukan analisis lebih lanjut pada halaman Settings, ditemukan beberapa konfigurasi yang tidak aman. Salah satunya adalah secret value yang ditampilkan melalui placeholder pada halaman konfigurasi. Karena nilai tersebut masih dapat diakses dari sisi browser, informasi sensitif seperti API key berpotensi terekspos.</p>
+<p>Dari konfigurasi tersebut, terlihat beberapa API key yang berkaitan dengan layanan pihak ketiga, termasuk WHM dan Cloudflare.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/test-cf-api.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/test-cf-api_hu_488f7a30e07da2de.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/test-cf-api_hu_8e25f9e61f9975f0.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/test-cf-api_hu_c903cc11bb045410.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/test-cf-api_hu_c903cc11bb045410.webp"
+             alt="Pengujian koneksi Cloudflare API pada panel administrasi aplikasi phishing"
+             class="hover-effect"
+             width="800"
+             height="267">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Fitur pengujian Cloudflare API yang memperlihatkan integrasi aplikasi dengan layanan Cloudflare.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Setelah mendapatkan API key tersebut, saya mencoba melakukan API call untuk melihat sejauh mana akses yang diberikan oleh masing-masing credential. Salah satu yang menarik adalah akses ke Cloudflare API.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/domain-registered-on-cf.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/domain-registered-on-cf_hu_f1a4d45b9c70bee2.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/domain-registered-on-cf_hu_9b3a074807b00d0a.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/domain-registered-on-cf_hu_6b51718356a79ad3.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/domain-registered-on-cf_hu_6b51718356a79ad3.webp"
+             alt="Informasi domain yang terhubung dengan akun Cloudflare dalam investigasi phishing"
+             class="hover-effect"
+             width="800"
+             height="346">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Informasi domain yang ditemukan selama penelusuran infrastruktur Cloudflare.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Dari hasil pengujian, credential tersebut memungkinkan akses ke informasi domain yang terdaftar pada akun Cloudflare, termasuk melihat dan mengelola konfigurasi DNS seperti A record. Selain itu, saya juga menemukan informasi mengenai email yang digunakan sebagai account owner.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/email-cf-register.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/email-cf-register_hu_488dd4100e16ee1f.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/email-cf-register_hu_d4bec776e683666.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/email-cf-register_hu_281261311ca37321.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/email-cf-register_hu_281261311ca37321.webp"
+             alt="Alamat email yang ditemukan pada informasi registrasi akun Cloudflare"
+             class="hover-effect"
+             width="800"
+             height="870">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Alamat email yang teridentifikasi melalui informasi registrasi akun Cloudflare.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Informasi tersebut kemudian saya gunakan sebagai pivot untuk melakukan OSINT terhadap username dan email yang ditemukan. Saya mencoba melakukan pencarian melalui beberapa OSINT platform dan sumber publik lainnya.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/osint-user-email.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/osint-user-email_hu_1efd48a1c1489e68.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/osint-user-email_hu_3bcb6496c2ed6f7.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/osint-user-email_hu_6822b8eec7b77171.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/osint-user-email_hu_6822b8eec7b77171.webp"
+             alt="Hasil investigasi OSINT untuk menelusuri keterkaitan alamat email dengan informasi publik"
+             class="hover-effect"
+             width="800"
+             height="872">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Penelusuran Open Source Intelligence (OSINT) untuk mengidentifikasi jejak digital yang berkaitan dengan alamat email.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Dari proses tersebut, ditemukan sebuah akun GitHub dengan username yang berkaitan dengan identitas tersebut. Namun, akun tersebut saat ini sudah dinonaktifkan. Selain itu, terdapat beberapa indikasi keterkaitan dengan platform lain, meskipun proses verifikasi lebih lanjut masih terbatas karena keterbatasan akses dan API pada layanan yang digunakan.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/email-user-gmail.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/email-user-gmail_hu_650a5a165ecc846b.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/email-user-gmail_hu_1511a56d1f3aa729.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/email-user-gmail_hu_afe2b30aff9a7d15.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/email-user-gmail_hu_afe2b30aff9a7d15.webp"
+             alt="Alamat Gmail yang teridentifikasi dalam investigasi infrastruktur phishing"
+             class="hover-effect"
+             width="800"
+             height="561">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Alamat Gmail yang ditemukan selama proses korelasi informasi dan investigasi OSINT.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Sebagai langkah konfirmasi saya mencoba membuat email draft di Gmail dan melihat response informasi yang ditampilkan oleh gmail.</p>
+<h2 id="whm-api-exposure-and-server-access">WHM API Exposure and Server Access</h2>
+<p>Selain Cloudflare, saya juga menemukan konfigurasi yang berkaitan dengan WHM (WebHost Manager). Dari hasil analisis, API yang terekspos memiliki kemampuan untuk melakukan beberapa operasi administratif pada server.</p>
+<p>Dalam pengujian yang dilakukan pada lingkungan yang terotorisasi, ditemukan bahwa akses tersebut dapat digunakan untuk membuat user baru dengan privilege administratif. Dari akun tersebut, akses lebih lanjut ke server dapat diperoleh, termasuk akses terminal melalui SSH.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/api-whm-file.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/api-whm-file_hu_e384d10f1642bb38.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/api-whm-file_hu_a4a0b44d964fa612.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/api-whm-file_hu_6e0a47379ecff6d7.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/api-whm-file_hu_6e0a47379ecff6d7.webp"
+             alt="File API terekspos yang memperlihatkan informasi integrasi Web Host Manager atau WHM"
+             class="hover-effect"
+             width="800"
+             height="590">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        File API yang terekspos dan mengungkap informasi terkait integrasi sistem manajemen hosting.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Karena valid saya mencoba menambahkan diri saya sebagai administrator melalui api call tersebut dan menambahkan ssh key ke server threat actor tsb.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/ssh-pwned.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/ssh-pwned_hu_8c6ed9cb988dec87.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/ssh-pwned_hu_a926e35625db2019.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/ssh-pwned_hu_4ac0ff755031c6f9.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/ssh-pwned_hu_4ac0ff755031c6f9.webp"
+             alt="Compromised access SSH"
+             class="hover-effect"
+             width="800"
+             height="261">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Compromised SSH access
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Setelah berhasil mengakses server, saya menemukan beberapa database yang menarik untuk dianalisis lebih lanjut.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/db-interest.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/db-interest_hu_888d72725d49e87d.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/db-interest_hu_66b9adde5afb8b47.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/db-interest_hu_b207e7808646b983.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/db-interest_hu_b207e7808646b983.webp"
+             alt="Struktur dan isi database aplikasi phishing yang terekspos"
+             class="hover-effect"
+             width="800"
+             height="393">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Pemeriksaan lanjutan terhadap database yang terekspos untuk mengidentifikasi informasi yang tersimpan di dalamnya.
+      </figcaption>
+    
+  </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/db-interest-w.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/db-interest-w_hu_fa9d7fe4680a0e4b.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/db-interest-w_hu_4908ffde92c2c651.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/db-interest-w_hu_6aa482a8e75bbbb5.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/db-interest-w_hu_6aa482a8e75bbbb5.webp"
+             alt="Tampilan database berisi informasi terkait target dan aktivitas kampanye phishing"
+             class="hover-effect"
+             width="800"
+             height="276">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Salah satu tampilan database yang memperlihatkan informasi terkait operasional kampanye phishing.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Temuan ini memperlihatkan bahwa analisis terhadap sebuah phishing kit tidak harus berhenti pada halaman phishing yang terlihat oleh korban. Dengan melakukan pemeriksaan lebih dalam terhadap konfigurasi, API integration, dan infrastruktur pendukungnya, kita bisa mendapatkan gambaran yang lebih luas mengenai bagaimana phishing campaign tersebut dikelola.</p>
+<p>Selain mengungkap komponen internal dari phishing infrastructure, exposed credential dan informasi akun juga dapat menjadi pivot untuk melakukan threat actor profiling melalui OSINT.</p>
+<p>Pada akhirnya, kasus ini menunjukkan bagaimana kesalahan konfigurasi pada sebuah phishing kit dapat mengekspos lebih dari sekadar halaman login palsu, tetapi juga informasi dan komponen infrastruktur yang berada di belakangnya.</p>
+<h2 id="indicator-of-compromised">Indicator Of Compromised</h2>
+<p>Sebagai bagian dari investigasi infrastruktur, saya melakukan analisis lebih lanjut terhadap informasi yang diperoleh dari akun Cloudflare yang terekspos. Dari hasil analisis tersebut, saya berhasil mengidentifikasi sejumlah domain yang terdaftar dan terasosiasi dengan akun Cloudflare tersebut.</p>
+<p>Domain-domain ini memberikan additional leads untuk memahami infrastruktur yang digunakan dalam aktivitas phishing yang sedang dianalisis.</p>
+<p>Berdasarkan hasil investigasi, berikut adalah daftar domain yang berhasil diidentifikasi dan dapat digunakan sebagai Indicators of Compromise (IoCs) untuk kebutuhan threat hunting, monitoring, maupun korelasi dengan temuan keamanan lainnya.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>1mikan.com
+</span></span><span style="display:flex;"><span>advenccap.com
+</span></span><span style="display:flex;"><span>afwaterheaters.com
+</span></span><span style="display:flex;"><span>allforprojectreply.online
+</span></span><span style="display:flex;"><span>ar-bsci.com
+</span></span><span style="display:flex;"><span>babakrs.icu
+</span></span><span style="display:flex;"><span>biobrian.io
+</span></span><span style="display:flex;"><span>constructionss.top
+</span></span><span style="display:flex;"><span>crm365das.icu
+</span></span><span style="display:flex;"><span>fliterxauth.pro
+</span></span><span style="display:flex;"><span>fyinternationals.com
+</span></span><span style="display:flex;"><span>grldadsbaas.com
+</span></span><span style="display:flex;"><span>hazcoenv.com
+</span></span><span style="display:flex;"><span>hhl-nc.com
+</span></span><span style="display:flex;"><span>industries365-clouds.com
+</span></span><span style="display:flex;"><span>kerexengineerings.com
+</span></span><span style="display:flex;"><span>nanofiibre.co.uk
+</span></span><span style="display:flex;"><span>rnaashansen.com
+</span></span><span style="display:flex;"><span>staiziopomafr.com
+</span></span><span style="display:flex;"><span>uplandtltle.com
+</span></span></code></pre></div><h2 id="final-thoughts">Final Thoughts</h2>
+<p>Dari investigasi ini, ada satu hal yang cukup menarik: threat actor yang membangun infrastruktur phishing ternyata juga bisa melakukan kesalahan OPSEC yang mendasar. Mulai dari directory listing yang terbuka, source code yang bisa diunduh secara publik, penggunaan kredensial default pada panel administrasi, hingga menu setting di dashboard yang menampilkan secret API key. Hal-hal seperti ini menunjukkan bahwa infrastruktur serangan yang terlihat kompleks belum tentu dikelola dengan praktik keamanan yang baik.</p>
+<p><strong>Dari sisi defender</strong>, kasus ini menjadi pengingat bahwa mendeteksi email phishing hanyalah satu bagian dari proses. Kita juga perlu memahami bagaimana link bekerja, mengikuti redirect, mengidentifikasi IOC yang relevan, dan memastikan indikator tersebut ditangani dengan tepat melalui kontrol keamanan yang tersedia. Selain itu, jangan langsung menganggap sebuah domain aman hanya karena usianya sudah lama. Riwayat kepemilikan dan konteks penggunaannya juga perlu diperhatikan.</p>
+<p><strong>Dari sisi red team</strong>, temuan ini bisa menjadi bahan evaluasi yang relevan. OPSEC bukan cuma soal menyembunyikan identitas atau menggunakan infrastruktur yang terlihat meyakinkan. Konfigurasi server, pengelolaan kredensial, pembatasan akses, dan penanganan file sensitif tidak kalah penting. Satu kesalahan kecil dapat membuka informasi yang seharusnya tidak pernah terekspos.</p>
+<p>Pada akhirnya, baik defender maupun red team bisa mengambil pelajaran yang sama: <strong>keamanan tidak hanya ditentukan oleh seberapa kuat sistem menghadapi serangan</strong>, tetapi juga oleh seberapa baik kita mengelola detail-detail kecil yang sering terlewatkan.</p>
+<hr>
+<p>Perlu digarisbawahi, investigasi ini berfokus pada observasi dan analisis terhadap paparan yang ditemukan. Saya tidak melakukan take down terhadap infrastruktur tersebut atau mencoba mengambil alih sistemnya. Tujuannya adalah memahami bagaimana phishing kit tersebut bekerja, mengidentifikasi kelemahan OPSEC yang terlihat, dan mengambil pelajaran yang bisa diterapkan dalam pertahanan maupun pengujian keamanan yang terotorisasi.</p>
+<p><em>Adios</em></p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/microsoft-365/" rel="tag">Microsoft 365</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/phishing/" rel="tag">Phishing</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/threat-intelligence/" rel="tag">Threat Intelligence</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/write-up/" rel="tag">Write Up</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/internet/" rel="tag">Internet</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+		<hr>
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-format="autorelaxed"
+		     data-ad-client="ca-pub-1926937123072670"
+		     data-ad-slot="1889468337"></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		<hr>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">Tentang Ardi Jonias Fortuna</span>
+	</div>
+	<div class="authorbox__description">
+		Roses are red, violets are blue. There is nothing can&rsquo;t to do
+	</div>
+</div>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/i-accidentally-logged-into-threat-actor-website/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Sebelumnya</span>
+			<p class="pager__title">I Accidentally Logged as Admin Into a Threat Actor Website</p>
+		</a>
+	</div>
+</nav>
+<div id="disqus-container">
+	<script src="https://giscus.app/client.js"
+        data-repo="laztname/laztname"
+        data-repo-id="R_kgDOLULuVg"
+        data-category="General"
+        data-category-id="DIC_kwDOLULuVs4CdT6m"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+			</div>
+			<aside class="sidebar sidebar--left"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="CARI…" value="" name="q" aria-label="CARI…">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://potato.id/">
+	</form>
+</div><div class="widget-recent widget">
+	<h3 class="widget__title">Information</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+    <li class="widget__item">
+        <picture>
+            <source srcset="/img/home_hu_3b9b5be8487aaba3.webp" media="(min-width: 1024px)">
+            <source srcset="/img/home_hu_173579ac87338ebc.webp" media="(min-width: 768px) and (max-width: 1023px)">
+            <source srcset="/img/home_hu_db8ab209d61d1924.webp" media="(max-width: 767px)">
+            <img class="widget__link"
+                 src="/img/home_hu_173579ac87338ebc.webp" 
+                 width="800"
+                 height="694"
+                 alt="Di rumah saja"
+                 loading="lazy">
+        </picture>
+    </li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-recent widget">
+	<h3 class="widget__title">Postingan Terbaru</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/posts/microsoft-365-phishing-kit-opsec-failure/">Microsoft 365 Phishing Kit: Source Code Terbongkar akibat OPSEC Failure</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/i-accidentally-logged-into-threat-actor-website/">I Accidentally Logged as Admin Into a Threat Actor Website</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/tls-certificate-validity-47-days/">Kenapa Umur Sertifikat SSL/TLS Berkurang Menjadi 47 Hari?</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/first-cyber-security-hire-guide/">Bekerja Sebagai Cyber Security di Perusahaan? Mulai dari Mana?</a></li>
+			<li class="widget__item"><a class="widget__link" href="/posts/weak-secops-exposed-clickfix-dashboard/">How I Get Access ClickFix Dashboard Due to Bad SecOps</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-categories widget">
+	<h3 class="widget__title">Kategori</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/cyber-security/">Cyber Security</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/defensive/">Defensive</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/development/">Development</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/keamanan-siber/">Keamanan Siber</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/networking/">Networking</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/offensive/">Offensive</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/reversing/">Reversing</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/security/">Security</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/categories/web-hacking/">Web Hacking</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-taglist widget">
+	<h3 class="widget__title">Tag</h3>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/anti-judol/" title="Anti-Judol">Anti-Judol (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/blue-team/" title="Blue Team">Blue Team (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/bug-bounty/" title="Bug Bounty">Bug Bounty (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/career/" title="Career">Career (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/challenges/" title="Challenges">Challenges (9)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/csp/" title="CSP">CSP (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cyber-hygiene/" title="Cyber Hygiene">Cyber Hygiene (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/cybersecurity/" title="Cybersecurity">Cybersecurity (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/defensive/" title="Defensive">Defensive (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/dns/" title="DNS">DNS (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/end-user/" title="End User">End User (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/end-users/" title="End-Users">End-Users (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/fail2ban/" title="Fail2ban">Fail2ban (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/file-upload/" title="File Upload">File Upload (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/git/" title="Git">Git (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitdumper/" title="Gitdumper">Gitdumper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/githack/" title="Githack">Githack (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/github-pages/" title="Github Pages">Github Pages (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/http-security-header/" title="HTTP Security Header">HTTP Security Header (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/https/" title="HTTPS">HTTPS (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/incident-response/" title="Incident Response">Incident Response (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/infatica/" title="Infatica">Infatica (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/infostealer/" title="Infostealer">Infostealer (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/internet/" title="Internet">Internet (19)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/intrusion-prevention-system/" title="Intrusion Prevention System">Intrusion Prevention System (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/keamanan-web/" title="Keamanan Web">Keamanan Web (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/keamanan-wordpress/" title="Keamanan WordPress">Keamanan WordPress (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/lfi/" title="LFI">LFI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/linux/" title="Linux">Linux (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/malware/" title="Malware">Malware (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/microsoft-365/" title="Microsoft 365">Microsoft 365 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/nginx/" title="NGINX">NGINX (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/phishing/" title="Phishing">Phishing (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/plugin/" title="Plugin">Plugin (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/plugin-keamanan-wordpress/" title="Plugin Keamanan WordPress">Plugin Keamanan WordPress (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/proxy/" title="Proxy">Proxy (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ransomware/" title="Ransomware">Ransomware (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/rce/" title="RCE">RCE (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/retas-labs/" title="Retas Labs">Retas Labs (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/secure-coding/" title="Secure Coding">Secure Coding (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/security/" title="Security">Security (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/security-header/" title="Security Header">Security Header (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/server/" title="Server">Server (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/sqli/" title="SQLI">SQLI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/ssl/tls-certificate/" title="SSL/TLS Certificate">SSL/TLS Certificate (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/subdomain-takeover/" title="Subdomain Takeover">Subdomain Takeover (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/surabaya-hacker-link/" title="Surabaya Hacker Link">Surabaya Hacker Link (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/telegram-bot/" title="Telegram Bot">Telegram Bot (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/terminal/" title="Terminal">Terminal (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/text-editor/" title="Text Editor">Text Editor (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/threat-hunting/" title="Threat Hunting">Threat Hunting (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/threat-intelligence/" title="Threat Intelligence">Threat Intelligence (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/users/" title="Users">Users (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/vibe-coding/" title="Vibe Coding">Vibe Coding (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/vim/" title="VIM">VIM (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/web-defacement/" title="Web Defacement">Web Defacement (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/web-hacking/" title="Web Hacking">Web Hacking (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/web-security/" title="Web Security">Web Security (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/windows/" title="Windows">Windows (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/wordpress/" title="Wordpress">Wordpress (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/write-up/" title="Write Up">Write Up (37)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/xss/" title="XSS">XSS (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
+	</div>
+</div>
+
+<div class="widget-social widget">
+	<h3 class="widget-social__title widget__title">Sosmed</h3>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Instagram" rel="noopener noreferrer" href="https://www.instagram.com/joniasfortuna" target="_blank">
+				<svg class="widget-social__link-icon icon icon-instagram" width="24" height="24" viewBox="0 0 256 256"><circle cx="193" cy="59" r="15"/><path fill-rule="evenodd" d="M101 0h54c41 0 58.4 3.9 74.5 17C256.2 37.5 256 74.8 256 97.7v60c0 26.7 0 60.4-26.5 81.4-16 13.4-33.5 16.9-74.5 16.9h-54c-41 0-57.5-3.5-74.5-16.9C1 218.9.5 186.3.1 160.5L0 155V97.7c0-23-.2-60.2 26.5-80.7C45 2 60 0 101 0zm4.9 23h44.3c45.8 0 58.3 3.5 70.3 17.5 11.8 13.2 12 30.1 12.5 62.9V156c.2 20.8.3 45.8-12.5 59.5-12 14-24.5 17.5-70.3 17.5h-44.3c-45.9 0-57.3-3.5-70.4-17.5-12.2-13-12.3-36.5-12.4-56.7v-55.6c.4-32.6.7-49.6 12.4-62.7C48 26.5 60 23 105.9 23zm19.6 144.5a42 42 0 1 0 0-84 42 42 0 0 0 0 84zm0 22.5a64.5 64.5 0 1 0 0-129 64.5 64.5 0 0 0 0 129z"/></svg>
+				<span>Instagram</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer" href="https://linkedin.com/in/joniasfortuna" target="_blank">
+				<svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
+				<span>LinkedIn</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Telegram" rel="noopener noreferrer" href="https://t.me/laztname" target="_blank">
+				<svg class="widget-social__link-icon icon icon-telegram" width="24" height="24" viewBox="0 0 132 110"><path fill="#ddd" d="M50 103c-4 0-3-1-5-5L34 60l88-52"/><path fill="#aaa" d="M50 103c3 0 4-1 6-3l16-16-20-12"/><path fill="#fff" d="M52 72l48 36c6 3 10 2 11-5l20-93c2-8-3-11-8-9L7 45c-8 4-8 8-1 10l29 9 69-43c3-2 6-1 4 1"/></svg>
+				<span>Telegram</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/laztname" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:jonias@potato.id">
+				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>jonias@potato.id</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+
+</aside>
+		</div>
+		<footer class="footer">
+    <div class="container footer__container flex">
+        
+        <div class="footer__copyright">
+            &copy; 2026 
+            <a href="https://potato.id/">Ardi Jonias Fortuna</a>.
+            <span class="footer__copyright-credits">Dibuat dengan <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> dan Tema <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a>.</span>
+        </div>
+    </div>
+</footer>
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script></body>
+</html>

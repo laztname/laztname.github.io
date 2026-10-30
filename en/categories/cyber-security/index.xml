@@ -6,8 +6,15 @@
     <description>Recent content in Cyber Security on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/en/categories/cyber-security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Microsoft 365 Phishing Kit: Source Code Exposed by an OPSEC Failure</title>
+      <link>https://potato.id/en/posts/microsoft-365-phishing-kit-opsec-failure/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/en/posts/microsoft-365-phishing-kit-opsec-failure/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;That morning, as usual, I started working through incoming Security Operations tickets. One of them was related to a suspected phishing email that had just been moved to quarantine by Microsoft Defender for Office 365 (MDO).&lt;/p&gt;&#xA;&lt;p&gt;MDO already has built-in mechanisms to detect and remediate malicious emails. However, in practice, I have encountered several cases where phishing emails still managed to reach users&amp;rsquo; inboxes before eventually being detected and moved to quarantine.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>I Accidentally Logged as Admin Into a Threat Actor Website</title>
       <link>https://potato.id/en/posts/i-accidentally-logged-into-threat-actor-website/</link>

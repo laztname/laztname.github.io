@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Jonias Fortuna</description>
     <generator>Hugo</generator>
     <language>id</language>
-    <lastBuildDate>Mon, 13 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://potato.id/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Microsoft 365 Phishing Kit: Source Code Terbongkar akibat OPSEC Failure</title>
+      <link>https://potato.id/posts/microsoft-365-phishing-kit-opsec-failure/</link>
+      <pubDate>Wed, 28 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://potato.id/posts/microsoft-365-phishing-kit-opsec-failure/</guid>
+      <description>&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;&#xA;&lt;p&gt;Pagi itu, seperti biasa, saya mulai mengerjakan ticket-ticket Security Operations yang masuk. Salah satunya adalah ticket terkait email yang terindikasi sebagai phishing dan baru saja dipindahkan oleh Microsoft Defender for Office 365 (MDO) ke quarantine.&lt;/p&gt;&#xA;&lt;p&gt;MDO sebenarnya sudah punya mekanisme untuk mendeteksi dan melakukan remediasi terhadap email berbahaya. Namun, dalam prakteknya, saya beberapa kali menemukan kasus ketika email phishing masih sempat masuk ke inbox sebelum akhirnya terdeteksi dan dipindahkan.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>I Accidentally Logged as Admin Into a Threat Actor Website</title>
       <link>https://potato.id/posts/i-accidentally-logged-into-threat-actor-website/</link>

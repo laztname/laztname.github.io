@@ -1,0 +1,1520 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index, follow, max-image-preview:large">
+	<meta http-equiv="X-Content-Type-Options" content="nosniff">
+	<meta name="theme-color" content="#efe6dd">
+	<meta http-equiv="content-language" content="en">
+	<meta name="author" content="Ardi Jonias Fortuna">
+	<title>Microsoft 365 Phishing Kit: Source Code Exposed by an OPSEC Failure - Jonias Fortuna</title>
+	<link rel="canonical" href="https://potato.id/en/posts/microsoft-365-phishing-kit-opsec-failure/">
+	
+	
+	  
+	    
+	      
+	    
+	  
+	
+	<link rel="alternate" hreflang="x-default" href="https://potato.id/posts/microsoft-365-phishing-kit-opsec-failure/">
+	<link rel="alternate" hreflang="en" href="https://potato.id/en/posts/microsoft-365-phishing-kit-opsec-failure/">
+	
+	<link rel="alternate" hreflang="id" href="https://potato.id/posts/microsoft-365-phishing-kit-opsec-failure/">
+	
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1926937123072670" crossorigin="anonymous"></script>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="A Microsoft 365 phishing investigation reveals exposed source code, default credentials, API misconfigurations, and operational security failures across attacker infrastructure.">
+		<meta property="og:url" content="https://potato.id/en/posts/microsoft-365-phishing-kit-opsec-failure/">
+  <meta property="og:site_name" content="Jonias Fortuna">
+  <meta property="og:title" content="Microsoft 365 Phishing Kit: Source Code Exposed by an OPSEC Failure">
+  <meta property="og:description" content="A Microsoft 365 phishing investigation reveals exposed source code, default credentials, API misconfigurations, and operational security failures across attacker infrastructure.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-10-28T00:00:00+00:00">
+    <meta property="article:modified_time" content="2026-10-28T00:00:00+00:00">
+    <meta property="article:tag" content="Microsoft 365">
+    <meta property="article:tag" content="Phishing">
+    <meta property="article:tag" content="Threat Intelligence">
+    <meta property="article:tag" content="Write Up">
+    <meta property="article:tag" content="Internet">
+    <meta property="og:image" content="https://potato.id/img/microsoft-phishing/dashboard.png">
+
+		
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://potato.id/img/microsoft-phishing/dashboard.png">
+  <meta name="twitter:title" content="Microsoft 365 Phishing Kit: Source Code Exposed by an OPSEC Failure">
+  <meta name="twitter:description" content="A Microsoft 365 phishing investigation reveals exposed source code, default credentials, API misconfigurations, and operational security failures across attacker infrastructure.">
+
+        <link rel="me" href="https://infosec.exchange/@laztname">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://pagead2.googlesyndication.com">
+	<link rel="preconnect" href="https://googleads.g.doubleclick.net">
+        <link rel="dns-prefetch" href="//fonts.googleapis.com">
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        
+        <link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v40/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTSOmu1aB.woff2" type="font/woff2" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap" media="print" onload="this.onload=null;this.removeAttribute('media');">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open&#43;Sans:wght@400..700&amp;display=swap"></noscript>
+
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+
+	
+          
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "@id": "https:\/\/potato.id\/en\/posts\/microsoft-365-phishing-kit-opsec-failure\/#article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https:\/\/potato.id\/en\/posts\/microsoft-365-phishing-kit-opsec-failure\/"
+  },
+  "headline": "Microsoft 365 Phishing Kit: Source Code Exposed by an OPSEC Failure",
+  "description": "A Microsoft 365 phishing investigation reveals exposed source code, default credentials, API misconfigurations, and operational security failures across attacker infrastructure.",
+  "inLanguage": "en",
+  "image": {
+    "@type": "ImageObject",
+    "url": "https:\/\/potato.id\/img\/microsoft-phishing\/dashboard.png"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Ardi Jonias Fortuna",
+    "url": "https:\/\/potato.id\/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jonias Fortuna",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https:\/\/potato.id\/favicon.ico"
+    }
+  },
+  "articleSection": "posts",
+  "keywords": ["Microsoft 365","Phishing","Threat Intelligence","Write Up","Internet"],
+  "wordCount":  2373 ,
+  "datePublished": "2026-10-28T00:00:00Z",
+  "dateModified": "2026-10-28T00:00:00Z"
+}
+</script>
+
+
+        
+
+<script>
+  (function(c,l,a,r,i,t,y){
+    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "ii5leisvaz");
+</script>
+</head>
+<body class="body">
+	<div id="loading"></div>
+	<div class="container container--outer">
+		<header class="header">
+        <div class="container">
+                <div class="logo">
+                        <a class="logo__link" href="/en/" title="Jonias Fortuna" rel="home">
+                                <div class="logo__title">potato</div>
+                                <div class="logo__tagline">Just another potato website.</div>
+                        </a>
+                </div>
+                
+<nav class="menu">
+        <button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+                <span class="menu__btn-title" tabindex="-1">Menu</span>
+        </button>
+
+        <ul class="menu__list">
+                <li class="menu__item">
+                        <a class="menu__link" href="/">
+                                
+                                <span class="menu__text">Home</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/en/about/">
+                                
+                                <span class="menu__text">About Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/en/contact/">
+                                
+                                <span class="menu__text">Contact Me</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/en/privacy-policy/">
+                                
+                                <span class="menu__text">Privacy Policy</span>
+                                
+                        </a>
+                </li>
+                <li class="menu__item">
+                        <a class="menu__link" href="/en/uses/">
+                                
+                                <span class="menu__text">Uses</span>
+                                
+                        </a>
+                </li>
+
+		
+		<li class="menu__item menu__item--lang">
+		  
+		    <a class="menu__link"
+		       href="/posts/microsoft-365-phishing-kit-opsec-failure/"
+		       lang="id">
+		       Bahasa Indonesia
+		    </a>
+		  
+		</li>
+		
+
+        </ul>
+</nav>
+
+
+        </div>
+</header>
+
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Microsoft 365 Phishing Kit: Source Code Exposed by an OPSEC Failure</h1>
+			<div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2026-10-28T00:00:00Z">28-10-2026</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/en/categories/cyber-security/" rel="category">Cyber Security</a>, <a class="meta__link" href="/en/categories/offensive/" rel="category">Offensive</a>, <a class="meta__link" href="/en/categories/defensive/" rel="category">Defensive</a>
+	</span>
+</div></div>
+		</header>
+		       
+
+            <figure class="post__thumbnail thumbnail">
+                
+                <picture>
+                    <source srcset="/img/microsoft-phishing/dashboard_hu_831c118d4218c90d.webp" media="(min-width: 1024px)">
+                    <source srcset="/img/microsoft-phishing/dashboard_hu_ce8fa2d455e9517b.webp" media="(min-width: 768px) and (max-width: 1023px)">
+                    <source srcset="/img/microsoft-phishing/dashboard_hu_92de43503f9320ae.webp" media="(max-width: 767px)">
+                    <img class="thumbnail__image"
+                         src="/img/microsoft-phishing/dashboard_hu_ce8fa2d455e9517b.webp"
+                         width="800"
+                         height="412"
+                         alt="Microsoft 365 Phishing Kit: Source Code Exposed by an OPSEC Failure"
+                         loading="lazy">
+                </picture>
+                
+            </figure>
+
+<div class="content post__content clearfix">
+			<h2 id="introduction">Introduction</h2>
+<p>That morning, as usual, I started working through incoming Security Operations tickets. One of them was related to a suspected phishing email that had just been moved to quarantine by Microsoft Defender for Office 365 (MDO).</p>
+<p>MDO already has built-in mechanisms to detect and remediate malicious emails. However, in practice, I have encountered several cases where phishing emails still managed to reach users&rsquo; inboxes before eventually being detected and moved to quarantine.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/phishing.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/phishing_hu_7971df09dabeb193.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/phishing_hu_6aba436a17ac2d79.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/phishing_hu_b0f18b1c6f8d9c53.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/phishing_hu_b0f18b1c6f8d9c53.webp"
+             alt="Microsoft 365 phishing email detected by Microsoft Defender for Office 365"
+             class="hover-effect"
+             width="800"
+             height="402">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Microsoft Defender for Office 365 detects a phishing email impersonating Microsoft 365 to deceive users into visiting a malicious login page.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>What&rsquo;s more interesting is that this sometimes happens with a batch of emails sharing similar patterns, from the sender and subject line to their threat indicators. For example, out of 20 similar phishing emails, 18 were successfully blocked, while the remaining 2 somehow managed to reach users&rsquo; inboxes.</p>
+<p>My team and I had previously opened a ticket with Microsoft to ask about this behavior. Based on the response and handling we experienced, this behavior appeared to be related to the expected detection and email processing mechanisms rather than necessarily indicating a system failure. Of course, the exact cause still depends on the investigation results and the details of each case.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/phishing-url.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/phishing-url_hu_a1ab6449f18db190.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/phishing-url_hu_94855befd01b5efa.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/phishing-url_hu_af64d4c6bc5677b4.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/phishing-url_hu_af64d4c6bc5677b4.webp"
+             alt="URL extracted from a suspicious Microsoft 365 phishing email"
+             class="hover-effect"
+             width="800"
+             height="344">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        The suspicious URL extracted from the Microsoft 365 phishing email reveals the initial entry point of the phishing campaign.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>This ticket was where the investigation began. Initially, it looked like a routine phishing email investigation. However, after I started tracing the link embedded in the email, I stumbled upon something much more interesting behind the phishing infrastructure.</p>
+<p>After reviewing the available indicators, I was confident that the ticket was a <em>true positive</em>. I then submitted the IOC (<em>Indicator of Compromise</em>) to Microsoft Defender for Endpoint (MDE) and the firewall as part of the mitigation process.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/redirector.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/redirector_hu_a734c01a2d864367.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/redirector_hu_a9488e8df193121d.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/redirector_hu_631a1f20c888143f.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/redirector_hu_631a1f20c888143f.webp"
+             alt="Redirect chain leading to the Microsoft phishing page"
+             class="hover-effect"
+             width="800"
+             height="274">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Analysis of the phishing redirect chain reveals how victims are forwarded through multiple URLs before reaching the fake Microsoft 365 login page.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Out of curiosity, I decided to open the link and discovered that it redirected to another domain. The redirect process also appeared to collect browser fingerprints or visitor metadata, potentially to distinguish legitimate users from bots and security crawlers.</p>
+<p>This technique is commonly used to evade automated detection, allowing security systems to see a different page from the actual phishing page served to intended victims.</p>
+<h2 id="reusing-an-old-domain-for-phishing-infrastructure">Reusing an Old Domain for Phishing Infrastructure</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/old-domain.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/old-domain_hu_e2487f7d8eff9a46.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/old-domain_hu_fd05f80c6dd6152a.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/old-domain_hu_3f6a2c34f0c7bdf5.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/old-domain_hu_3f6a2c34f0c7bdf5.webp"
+             alt="Historical domain records associated with the phishing campaign"
+             class="hover-effect"
+             width="800"
+             height="365">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Historical domain records provide additional context for tracking previously used domains and identifying connections within the phishing infrastructure.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>After checking the domain history through archive.org, I found indications that the domain used in the phishing email was an old domain that may have been abandoned by its previous owner and later registered again by the threat actor.</p>
+<p>Cases like this are interesting because an old domain does not necessarily mean it is still owned by the same party. Threat actors can take advantage of expired domains to establish infrastructure with an existing domain history, making it appear more trustworthy than a newly registered domain.</p>
+<p>This can be particularly relevant because defenders commonly apply deny-by-default policies or stricter controls to NRDs (<em>Newly Registered Domains</em>).</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/whois.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/whois_hu_e1142f4ef687b0f2.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/whois_hu_7648c0032ae389c5.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/whois_hu_5548300855b420ae.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/whois_hu_5548300855b420ae.webp"
+             alt="WHOIS information showing the domain registration history"
+             class="hover-effect"
+             width="800"
+             height="419">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        WHOIS lookup results reveal domain registration details that support the investigation of the phishing domain and its associated infrastructure.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>This type of phishing technique is quite common. To bypass email security gateways, the link embedded in the email uses an old domain. Once the user accesses it, the redirector forwards them to a newly registered domain hosting the actual phishing page.</p>
+<p>Since phishing pages are frequently flagged as malicious by browsers and security services, threat actors also tend to register multiple domains to maintain their infrastructure.</p>
+<blockquote>
+<p>In the context of email security, domain age is only one of several parameters used to determine whether an email is legitimate or malicious. An old domain that has changed ownership may slip past detection rules that focus primarily on newly registered domains.</p></blockquote>
+<p>Also read: <a href="/posts/infostealer-spreading-through-fake-google-recaptcha/">Infostealer Spreading Through Fake Google reCAPTCHA</a></p>
+<h2 id="taking-a-closer-look-at-the-phishing-login-page">Taking a Closer Look at the Phishing Login Page</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/phishing-login-microsoft.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/phishing-login-microsoft_hu_c59552fb7ffc666d.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/phishing-login-microsoft_hu_d14c71bce4d54e37.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/phishing-login-microsoft_hu_374245d08c63ab4d.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/phishing-login-microsoft_hu_374245d08c63ab4d.webp"
+             alt="Fake Microsoft 365 login page used by the phishing kit"
+             class="hover-effect"
+             width="800"
+             height="432">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        The fraudulent Microsoft 365 login page replicates the legitimate authentication interface to harvest Microsoft account credentials.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>After following the redirect chain, I landed on a login page impersonating Microsoft. At this point, I became curious about how the phishing kit actually worked, particularly how the page processed the victim&rsquo;s username and password.</p>
+<p>By inspecting the HTML source rendered in the browser, I found clues indicating that the application used PHP on the server side and had a directory named <code>api</code>.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/javascripts.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/javascripts_hu_9157028c8da48e31.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/javascripts_hu_76e48cb519991a94.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/javascripts_hu_80627e3b92424aa6.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/javascripts_hu_80627e3b92424aa6.webp"
+             alt="JavaScript files and source code references from the phishing login page"
+             class="hover-effect"
+             width="800"
+             height="508">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        JavaScript resources and source code references expose components used to build and operate the Microsoft 365 phishing page.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>I then tried to inspect that directory and discovered that directory listing was enabled. This meant the server was exposing a list of files and folders inside the directory instead of restricting access or displaying an appropriate page.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/opendir-api.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/opendir-api_hu_14840b547e448e08.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/opendir-api_hu_f9aed84697cb994e.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/opendir-api_hu_d8fcac5eeac56243.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/opendir-api_hu_d8fcac5eeac56243.webp"
+             alt="Exposed API directory listing on the phishing infrastructure"
+             class="hover-effect"
+             width="800"
+             height="678">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        An exposed API directory listing reveals accessible server resources and highlights an operational security failure in the phishing infrastructure.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>From the exposed file listing, I found several clues suggesting that this phishing kit was not exclusively targeting Microsoft 365 accounts. There were also indications of GoDaddy support, along with mechanisms that appeared to identify corporate email addresses and determine which organizations were being targeted.</p>
+<p>Also read: <a href="/en/opsec-fail/">Curated OPSEC Failure</a></p>
+<h2 id="directory-listing-the-beginning-of-an-opsec-failure">Directory Listing: The Beginning of an OPSEC Failure</h2>
+<p>The exposed directory listing made me even more curious about how well the threat actor had secured their infrastructure. If an internal directory could be accessed publicly, there was a possibility that other files that should never have been publicly available were exposed as well.</p>
+<p>To test this hypothesis, I examined publicly accessible files and directories using ffuf, a web fuzzing tool. The goal was to understand the extent of the exposure rather than simply collect directory names.</p>
+<p>While waiting for the process to complete, I also tried guessing filenames that might be available. Since the <code>api</code> directory was already visible in the browser, I suspected there might be an archive named <code>api.zip</code> left behind on the server.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/api-zip.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/api-zip_hu_814d1b3298b0c0ac.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/api-zip_hu_4ba337c50161c6a7.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/api-zip_hu_fb07b0ff70827504.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/api-zip_hu_fb07b0ff70827504.webp"
+             alt="Publicly accessible API ZIP archive on the phishing server"
+             class="hover-effect"
+             width="800"
+             height="503">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        A publicly accessible ZIP archive exposes application files that provide further insight into the phishing kit and its underlying implementation.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>And that guess turned out to be correct.</p>
+<p>The <code>api.zip</code> file was accessible without authentication. After inspecting the archive, I discovered that it contained the source code used by the phishing kit.</p>
+<p>This was where the investigation became much more interesting. A simple configuration mistake had potentially exposed far more information than what was visible from the phishing login page itself.</p>
+<p>Also read: <a href="/en/opsec-fail/archive-exposed-the-operator/">The Archive That Exposed the Operator</a></p>
+<h2 id="source-code-admin-panel-and-default-credentials">Source Code, Admin Panel, and Default Credentials</h2>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/full-source-code.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/full-source-code_hu_f3111cc64ad014a2.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/full-source-code_hu_385a182eed0cd296.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/full-source-code_hu_e3896f8db910e9c2.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/full-source-code_hu_e3896f8db910e9c2.webp"
+             alt="Exposed source code of the Microsoft 365 phishing kit"
+             class="hover-effect"
+             width="800"
+             height="331">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        The exposed phishing kit source code reveals the application&#39;s internal structure, implementation details, and potential security weaknesses.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>By reviewing the exposed source code, I was able to understand more about the application&rsquo;s structure and identify clues about the location of its administrative panel. One file that caught my attention was <code>login.php</code>, which revealed information about the panel&rsquo;s authentication mechanism.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/default-creds.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/default-creds_hu_6c8a0af550a621ff.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/default-creds_hu_60b2654b9aeebc92.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/default-creds_hu_14ccaa79a851c232.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/default-creds_hu_14ccaa79a851c232.webp"
+             alt="Default credentials identified in the phishing kit source code"
+             class="hover-effect"
+             width="800"
+             height="710">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Hardcoded default credentials discovered in the phishing kit source code demonstrate how poor credential management can expose administrative interfaces.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>During the inspection, I found indications of default credentials being used. This is a fairly basic security issue, especially when the administrative panel is accessible from the internet without additional access restrictions.</p>
+<p>The combination of exposed source code and weak authentication configurations can significantly increase the risk of administrative panel compromise. In this case, the threat actor behind the phishing kit had potentially left behind a weakness that could be exploited by someone else.</p>
+<p>After that, I discovered a dashboard displaying several components of the phishing kit&rsquo;s management system.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/dashboard.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/dashboard_hu_c53defee5cdf9082.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/dashboard_hu_831c118d4218c90d.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/dashboard_hu_ce8fa2d455e9517b.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/dashboard_hu_ce8fa2d455e9517b.webp"
+             alt="Microsoft 365 phishing kit administrative dashboard"
+             class="hover-effect"
+             width="800"
+             height="412">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        The phishing kit administrative dashboard exposes the management interface used to monitor and control the phishing application&#39;s operations.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>From the dashboard, client list, activity logs, and settings page, it became clear that this application was not just a standalone fake login page. There was an entire management component behind it, used to manage targets or clients, record activities, and modify system configurations.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/clients.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/clients_hu_6510bbe60091cc4.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/clients_hu_fd96408445494857.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/clients_hu_273a4479ae7552e.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/clients_hu_273a4479ae7552e.webp"
+             alt="Phishing kit client management dashboard"
+             class="hover-effect"
+             width="800"
+             height="414">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        The client management interface provides visibility into records maintained by the phishing platform and its operational data.
+      </figcaption>
+    
+  </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/logs.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/logs_hu_67d09aec4935e996.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/logs_hu_d9ab6f47663b4ab1.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/logs_hu_d1c42d0beb0d0b9d.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/logs_hu_d1c42d0beb0d0b9d.webp"
+             alt="Phishing kit activity logs"
+             class="hover-effect"
+             width="800"
+             height="417">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Application logs reveal operational events and activity records that can help investigators understand how the phishing kit was used.
+      </figcaption>
+    
+  </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/settings.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/settings_hu_121b13b7be2ebe1f.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/settings_hu_6ec592b2ffc31853.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/settings_hu_5c4e10221ca4f2d5.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/settings_hu_5c4e10221ca4f2d5.webp"
+             alt="Phishing kit configuration settings"
+             class="hover-effect"
+             width="800"
+             height="414">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        The exposed configuration settings provide insight into the phishing application&#39;s internal setup, service integrations, and operational parameters.
+      </figcaption>
+    
+  </figure>
+
+
+
+<h2 id="exposed-infrastructure-leads-to-threat-actor-profiling">Exposed Infrastructure Leads to Threat Actor Profiling</h2>
+<p>While examining the Settings page further, I discovered several insecure configurations. One of them involved secret values displayed through placeholders on the configuration page. Since these values were still accessible from the browser side, sensitive information such as API keys could potentially be exposed.</p>
+<p>From the configuration, I identified several API keys associated with third-party services, including WHM and Cloudflare.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/test-cf-api.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/test-cf-api_hu_488f7a30e07da2de.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/test-cf-api_hu_8e25f9e61f9975f0.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/test-cf-api_hu_c903cc11bb045410.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/test-cf-api_hu_c903cc11bb045410.webp"
+             alt="Testing exposed Cloudflare API credentials"
+             class="hover-effect"
+             width="800"
+             height="267">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Cloudflare API integration testing highlights the potential impact of exposed API credentials and inadequate secrets management.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>After identifying the API keys, I attempted to perform API calls to understand the level of access granted by each credential. One particularly interesting finding was the access provided through the Cloudflare API.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/domain-registered-on-cf.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/domain-registered-on-cf_hu_f1a4d45b9c70bee2.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/domain-registered-on-cf_hu_9b3a074807b00d0a.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/domain-registered-on-cf_hu_6b51718356a79ad3.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/domain-registered-on-cf_hu_6b51718356a79ad3.webp"
+             alt="Domains associated with the identified Cloudflare account"
+             class="hover-effect"
+             width="800"
+             height="346">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Cloudflare account information helps correlate registered domains and identify additional infrastructure associated with the phishing operation.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Based on the results, the exposed credentials allowed access to domain information registered under the Cloudflare account, including the ability to view and manage DNS configurations such as A records. I also discovered information about the email address used as the account owner.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/email-cf-register.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/email-cf-register_hu_488dd4100e16ee1f.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/email-cf-register_hu_d4bec776e683666.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/email-cf-register_hu_281261311ca37321.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/email-cf-register_hu_281261311ca37321.webp"
+             alt="Cloudflare account owner email information"
+             class="hover-effect"
+             width="800"
+             height="870">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        The account registration email provides an additional OSINT pivot for investigating the identity and digital footprint associated with the phishing infrastructure.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>I then used this information as a pivot for OSINT investigation into the identified username and email address. I searched across several OSINT platforms and other publicly available sources.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/osint-user-email.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/osint-user-email_hu_1efd48a1c1489e68.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/osint-user-email_hu_3bcb6496c2ed6f7.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/osint-user-email_hu_6822b8eec7b77171.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/osint-user-email_hu_6822b8eec7b77171.webp"
+             alt="OSINT investigation of the identified username and email address"
+             class="hover-effect"
+             width="800"
+             height="872">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Open-source intelligence (OSINT) correlation connects identified usernames and email addresses with publicly available digital footprints.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>During the process, I discovered a GitHub account with a username associated with the identified identity. However, the account had already been disabled. There were also some indications of connections to other platforms, although further verification was limited due to access restrictions and API limitations on the services I used.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/email-user-gmail.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/email-user-gmail_hu_650a5a165ecc846b.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/email-user-gmail_hu_1511a56d1f3aa729.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/email-user-gmail_hu_afe2b30aff9a7d15.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/email-user-gmail_hu_afe2b30aff9a7d15.webp"
+             alt="Gmail address identified during the OSINT investigation"
+             class="hover-effect"
+             width="800"
+             height="561">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        A Gmail address identified during OSINT analysis provides another potential pivot for correlating publicly available information.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>To further validate the finding, I attempted to create an email draft in Gmail and examined the information returned in Gmail&rsquo;s response.</p>
+<h2 id="whm-api-exposure-and-server-access">WHM API Exposure and Server Access</h2>
+<p>Apart from Cloudflare, I also discovered configurations related to WHM (WebHost Manager). Based on the findings, the exposed API provided access to several administrative operations on the server.</p>
+<p>During testing in an authorized environment, I found that this access could be used to create new users with administrative privileges. Through these accounts, further server access could be obtained, including terminal access via SSH.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/api-whm-file.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/api-whm-file_hu_e384d10f1642bb38.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/api-whm-file_hu_a4a0b44d964fa612.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/api-whm-file_hu_6e0a47379ecff6d7.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/api-whm-file_hu_6e0a47379ecff6d7.webp"
+             alt="Exposed WHM API configuration and administrative access"
+             class="hover-effect"
+             width="800"
+             height="590">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        An exposed Web Host Manager (WHM) API file reveals hosting-related configuration details and potential weaknesses in server access management.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>Since the access was valid, I attempted to add myself as an administrator through the API and register an SSH key on the threat actor&rsquo;s server.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/ssh-pwned.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/ssh-pwned_hu_8c6ed9cb988dec87.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/ssh-pwned_hu_a926e35625db2019.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/ssh-pwned_hu_4ac0ff755031c6f9.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/ssh-pwned_hu_4ac0ff755031c6f9.webp"
+             alt="SSH access identified during phishing infrastructure investigation"
+             class="hover-effect"
+             width="800"
+             height="261">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        SSH-related findings reveal potential server access exposure and raise further concerns about the security of the phishing infrastructure.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>After gaining access to the server, I discovered several databases that were interesting enough to investigate further.</p>
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/db-interest-w.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/db-interest-w_hu_fa9d7fe4680a0e4b.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/db-interest-w_hu_4908ffde92c2c651.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/db-interest-w_hu_6aa482a8e75bbbb5.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/db-interest-w_hu_6aa482a8e75bbbb5.webp"
+             alt="Database structure discovered during server investigation"
+             class="hover-effect"
+             width="800"
+             height="276">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Database structure discovered during the investigation provides insight into how the phishing application organizes and stores operational information.
+      </figcaption>
+    
+  </figure>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  <figure class="mb-5">
+    <a href="/img/microsoft-phishing/db-interest.png" target="_blank" rel="noopener noreferrer" class="image-link">
+      <picture>
+        <source srcset="/img/microsoft-phishing/db-interest_hu_888d72725d49e87d.webp" media="(min-width: 1024px)">
+        <source srcset="/img/microsoft-phishing/db-interest_hu_66b9adde5afb8b47.webp" media="(min-width: 768px) and (max-width: 1023px)">
+        <source srcset="/img/microsoft-phishing/db-interest_hu_b207e7808646b983.webp" media="(max-width: 767px)">
+        <img src="/img/microsoft-phishing/db-interest_hu_b207e7808646b983.webp"
+             alt="Database contents identified during infrastructure analysis"
+             class="hover-effect"
+             width="800"
+             height="393">
+      </picture>
+    </a>
+
+    
+      <figcaption class="text-left">
+        Further database analysis reveals stored records and highlights the potential data exposure resulting from inadequate server security.
+      </figcaption>
+    
+  </figure>
+
+
+
+<p>These findings show that investigating a phishing kit does not have to stop at the phishing page visible to victims. By looking deeper into its configurations, API integrations, and supporting infrastructure, we can gain a much broader understanding of how the phishing campaign is managed.</p>
+<p>Beyond revealing the internal components of the phishing infrastructure, exposed credentials and account information can also serve as pivots for threat actor profiling through OSINT.</p>
+<p>Ultimately, this case demonstrates how misconfigurations within a phishing kit can expose more than just a fake login page. They can also reveal sensitive information and internal infrastructure components behind the operation.</p>
+<h2 id="indicators-of-compromise-iocs">Indicators of Compromise (IoCs)</h2>
+<p>As part of the infrastructure investigation, I further analyzed the information obtained from the exposed Cloudflare account. From this analysis, I was able to identify several domains registered under and associated with the Cloudflare account.</p>
+<p>These domains provide additional leads for understanding the infrastructure used in the phishing activity being investigated.</p>
+<p>Based on the findings, the following domains were identified as potential Indicators of Compromise (IoCs). They can be used for threat hunting, monitoring, and correlation with other security findings.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>1mikan.com
+</span></span><span style="display:flex;"><span>advenccap.com
+</span></span><span style="display:flex;"><span>afwaterheaters.com
+</span></span><span style="display:flex;"><span>allforprojectreply.online
+</span></span><span style="display:flex;"><span>ar-bsci.com
+</span></span><span style="display:flex;"><span>babakrs.icu
+</span></span><span style="display:flex;"><span>biobrian.io
+</span></span><span style="display:flex;"><span>constructionss.top
+</span></span><span style="display:flex;"><span>crm365das.icu
+</span></span><span style="display:flex;"><span>fliterxauth.pro
+</span></span><span style="display:flex;"><span>fyinternationals.com
+</span></span><span style="display:flex;"><span>grldadsbaas.com
+</span></span><span style="display:flex;"><span>hazcoenv.com
+</span></span><span style="display:flex;"><span>hhl-nc.com
+</span></span><span style="display:flex;"><span>industries365-clouds.com
+</span></span><span style="display:flex;"><span>kerexengineerings.com
+</span></span><span style="display:flex;"><span>nanofiibre.co.uk
+</span></span><span style="display:flex;"><span>rnaashansen.com
+</span></span><span style="display:flex;"><span>staiziopomafr.com
+</span></span><span style="display:flex;"><span>uplandtltle.com
+</span></span></code></pre></div><h2 id="final-thoughts">Final Thoughts</h2>
+<p>One interesting takeaway from this investigation is that threat actors operating phishing infrastructure can still make fundamental OPSEC mistakes. From exposed directory listings and publicly downloadable source code to default credentials on administrative panels and secret API keys exposed through dashboard settings, these findings show that even seemingly complex attack infrastructure is not necessarily managed with good security practices.</p>
+<p><strong>From a defender&rsquo;s perspective</strong>, this case is a reminder that detecting phishing emails is only one part of the process. We also need to understand how links work, follow redirect chains, identify relevant IOCs, and ensure those indicators are properly handled through available security controls. Additionally, we should never assume that a domain is safe simply because it has existed for a long time. Its ownership history and usage context also need to be considered.</p>
+<p><strong>From a red team perspective</strong>, these findings provide another valuable lesson. OPSEC is not just about hiding identities or building infrastructure that looks convincing. Server configurations, credential management, access restrictions, and sensitive file handling are equally important. A single overlooked mistake can expose information that should never have been publicly accessible.</p>
+<p>Ultimately, both defenders and red teamers can take away the same lesson: <strong>security is not only determined by how well a system withstands attacks</strong>, but also by how carefully we manage the small details that are often overlooked.</p>
+<hr>
+<p>It is worth emphasizing that this investigation focuses on observing and analyzing the exposed infrastructure. I did not take down the infrastructure or attempt to take over the system. The objective was to understand how the phishing kit worked, identify the visible OPSEC weaknesses, and draw lessons that can be applied to defensive security and authorized security testing.</p>
+<p><em>Adios</em></p>
+
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/en/tags/microsoft-365/" rel="tag">Microsoft 365</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/en/tags/phishing/" rel="tag">Phishing</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/en/tags/threat-intelligence/" rel="tag">Threat Intelligence</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/en/tags/write-up/" rel="tag">Write Up</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/en/tags/internet/" rel="tag">Internet</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+		<hr>
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-format="autorelaxed"
+		     data-ad-client="ca-pub-1926937123072670"
+		     data-ad-slot="1889468337"></ins>
+		<script>
+		     (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+		<hr>
+	</article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Ardi Jonias Fortuna avatar" src="/img/avatar.webp" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Ardi Jonias Fortuna</span>
+	</div>
+	<div class="authorbox__description">
+		Roses are red, violets are blue. There is nothing can&rsquo;t to do
+	</div>
+</div>
+
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/en/posts/i-accidentally-logged-into-threat-actor-website/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">I Accidentally Logged as Admin Into a Threat Actor Website</p>
+		</a>
+	</div>
+</nav>
+<div id="disqus-container">
+	<script src="https://giscus.app/client.js"
+        data-repo="laztname/laztname"
+        data-repo-id="R_kgDOLULuVg"
+        data-category="General"
+        data-category-id="DIC_kwDOLULuVs4CdT6m"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+
+
+			</div>
+			<aside class="sidebar sidebar--left"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="https://potato.id/">
+	</form>
+</div><div class="widget-recent widget">
+	<h3 class="widget__title">Information</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+    <li class="widget__item">
+        <picture>
+            <source srcset="/img/home_hu_3b9b5be8487aaba3.webp" media="(min-width: 1024px)">
+            <source srcset="/img/home_hu_173579ac87338ebc.webp" media="(min-width: 768px) and (max-width: 1023px)">
+            <source srcset="/img/home_hu_db8ab209d61d1924.webp" media="(max-width: 767px)">
+            <img class="widget__link"
+                 src="/img/home_hu_173579ac87338ebc.webp" 
+                 width="800"
+                 height="694"
+                 alt="Di rumah saja"
+                 loading="lazy">
+        </picture>
+    </li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-recent widget">
+	<h3 class="widget__title">Recent Posts</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/en/posts/microsoft-365-phishing-kit-opsec-failure/">Microsoft 365 Phishing Kit: Source Code Exposed by an OPSEC Failure</a></li>
+			<li class="widget__item"><a class="widget__link" href="/en/posts/i-accidentally-logged-into-threat-actor-website/">I Accidentally Logged as Admin Into a Threat Actor Website</a></li>
+			<li class="widget__item"><a class="widget__link" href="/en/posts/tls-certificate-validity-47-days/">Why TLS Certificates Are Shrinking to 47 Days</a></li>
+			<li class="widget__item"><a class="widget__link" href="/en/posts/first-cyber-security-hire-guide/">New Hire Cyber Security Engineer? Start With These Priorities</a></li>
+			<li class="widget__item"><a class="widget__link" href="/en/posts/weak-secops-exposed-clickfix-dashboard/">How I Get Access ClickFix Dashboard Due to Bad SecOps</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-categories widget">
+	<h3 class="widget__title">Categories</h3>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/cyber-security/">Cyber Security</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/defensive/">Defensive</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/development/">Development</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/networking/">Networking</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/offensive/">Offensive</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/reversing/">Reversing</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/security/">Security</a></li>
+			<li class="widget__item">
+				<a class="widget__link" href="/en/categories/web-hacking/">Web Hacking</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="widget-taglist widget">
+	<h3 class="widget__title">Tags</h3>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/anti-judol/" title="Anti-Judol">Anti-Judol (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/blue-team/" title="Blue Team">Blue Team (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/bug-bounty/" title="Bug Bounty">Bug Bounty (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/career/" title="Career">Career (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/challenges/" title="Challenges">Challenges (9)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/csp/" title="CSP">CSP (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/cyber-hygiene/" title="Cyber Hygiene">Cyber Hygiene (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/cybersecurity/" title="Cybersecurity">Cybersecurity (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/defensive/" title="Defensive">Defensive (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/dns/" title="DNS">DNS (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/docker/" title="Docker">Docker (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/dvcs-ripper/" title="Dvcs-Ripper">Dvcs-Ripper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/end-user/" title="End User">End User (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/end-users/" title="End-Users">End-Users (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/fail2ban/" title="Fail2ban">Fail2ban (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/file-upload/" title="File Upload">File Upload (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/git/" title="Git">Git (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/gitdumper/" title="Gitdumper">Gitdumper (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/githack/" title="Githack">Githack (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/github-pages/" title="Github Pages">Github Pages (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/http-security-header/" title="HTTP Security Header">HTTP Security Header (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/https/" title="HTTPS">HTTPS (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/incident-response/" title="Incident Response">Incident Response (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/infatica/" title="Infatica">Infatica (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/infostealer/" title="Infostealer">Infostealer (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/internet/" title="Internet">Internet (19)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/intrusion-prevention-system/" title="Intrusion Prevention System">Intrusion Prevention System (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/lfi/" title="LFI">LFI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/linux/" title="Linux">Linux (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/malang-hacker-link/" title="Malang Hacker Link">Malang Hacker Link (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/malware/" title="Malware">Malware (4)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/microsoft-365/" title="Microsoft 365">Microsoft 365 (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/nginx/" title="NGINX">NGINX (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/phishing/" title="Phishing">Phishing (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/plugin/" title="Plugin">Plugin (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/proxy/" title="Proxy">Proxy (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/ransomware/" title="Ransomware">Ransomware (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/rce/" title="RCE">RCE (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/retas-labs/" title="Retas Labs">Retas Labs (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/secure-coding/" title="Secure Coding">Secure Coding (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/security/" title="Security">Security (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/security-header/" title="Security Header">Security Header (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/server/" title="Server">Server (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/sqli/" title="SQLI">SQLI (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/ssl/tls-certificate/" title="SSL/TLS Certificate">SSL/TLS Certificate (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/subdomain-takeover/" title="Subdomain Takeover">Subdomain Takeover (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/surabaya-hacker-link/" title="Surabaya Hacker Link">Surabaya Hacker Link (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/telegram-bot/" title="Telegram Bot">Telegram Bot (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/terminal/" title="Terminal">Terminal (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/text-editor/" title="Text Editor">Text Editor (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/threat-hunting/" title="Threat Hunting">Threat Hunting (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/threat-intelligence/" title="Threat Intelligence">Threat Intelligence (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/users/" title="Users">Users (8)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/vibe-coding/" title="Vibe Coding">Vibe Coding (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/vim/" title="VIM">VIM (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/virtual-machine/" title="Virtual Machine">Virtual Machine (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/web-defacement/" title="Web Defacement">Web Defacement (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/web-hacking/" title="Web Hacking">Web Hacking (2)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/web-security/" title="Web Security">Web Security (6)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/windows/" title="Windows">Windows (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/wordpress/" title="Wordpress">Wordpress (5)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/wordpress-security/" title="WordPress Security">WordPress Security (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/wordpress-security-plugin/" title="WordPress Security Plugin">WordPress Security Plugin (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/write-up/" title="Write Up">Write Up (38)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/xss/" title="XSS">XSS (3)</a>
+		<a class="widget-taglist__link widget__link btn" href="/en/tags/zimbra-mail-server/" title="Zimbra Mail Server">Zimbra Mail Server (1)</a>
+	</div>
+</div>
+
+<div class="widget-social widget">
+	<h3 class="widget-social__title widget__title">Social</h3>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Instagram" rel="noopener noreferrer" href="https://www.instagram.com/joniasfortuna" target="_blank">
+				<svg class="widget-social__link-icon icon icon-instagram" width="24" height="24" viewBox="0 0 256 256"><circle cx="193" cy="59" r="15"/><path fill-rule="evenodd" d="M101 0h54c41 0 58.4 3.9 74.5 17C256.2 37.5 256 74.8 256 97.7v60c0 26.7 0 60.4-26.5 81.4-16 13.4-33.5 16.9-74.5 16.9h-54c-41 0-57.5-3.5-74.5-16.9C1 218.9.5 186.3.1 160.5L0 155V97.7c0-23-.2-60.2 26.5-80.7C45 2 60 0 101 0zm4.9 23h44.3c45.8 0 58.3 3.5 70.3 17.5 11.8 13.2 12 30.1 12.5 62.9V156c.2 20.8.3 45.8-12.5 59.5-12 14-24.5 17.5-70.3 17.5h-44.3c-45.9 0-57.3-3.5-70.4-17.5-12.2-13-12.3-36.5-12.4-56.7v-55.6c.4-32.6.7-49.6 12.4-62.7C48 26.5 60 23 105.9 23zm19.6 144.5a42 42 0 1 0 0-84 42 42 0 0 0 0 84zm0 22.5a64.5 64.5 0 1 0 0-129 64.5 64.5 0 0 0 0 129z"/></svg>
+				<span>Instagram</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer" href="https://linkedin.com/in/joniasfortuna" target="_blank">
+				<svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
+				<span>LinkedIn</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Telegram" rel="noopener noreferrer" href="https://t.me/laztname" target="_blank">
+				<svg class="widget-social__link-icon icon icon-telegram" width="24" height="24" viewBox="0 0 132 110"><path fill="#ddd" d="M50 103c-4 0-3-1-5-5L34 60l88-52"/><path fill="#aaa" d="M50 103c3 0 4-1 6-3l16-16-20-12"/><path fill="#fff" d="M52 72l48 36c6 3 10 2 11-5l20-93c2-8-3-11-8-9L7 45c-8 4-8 8-1 10l29 9 69-43c3-2 6-1 4 1"/></svg>
+				<span>Telegram</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/laztname" target="_blank">
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Email" href="mailto:jonias@potato.id">
+				<svg class="widget-social__link-icon icon icon-mail" width="24" height="24" viewBox="0 0 416 288"><path d="m0 16v256 16h16 384 16v-16-256-16h-16-384-16zm347 16-139 92.5-139-92.5zm-148 125.5 9 5.5 9-5.5 167-111.5v210h-352v-210z"/></svg>
+				<span>jonias@potato.id</span>
+			</a>
+		</div>
+
+		
+	</div>
+</div>
+
+</aside>
+		</div>
+		<footer class="footer">
+    <div class="container footer__container flex">
+        
+        <div class="footer__copyright">
+            &copy; 2026 
+            <a href="https://potato.id/">Ardi Jonias Fortuna</a>.
+            <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+        </div>
+    </div>
+</footer>
+
+	</div>
+<script async defer src="/js/menu.js"></script>
+<script src="/js/custom.js"></script></body>
+</html>
